@@ -82,3 +82,11 @@ License
 -------
 
 GNU AGPLv3 https://www.gnu.org/licenses/agpl-3.0.en.html
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
