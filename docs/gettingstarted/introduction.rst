@@ -1,6 +1,9 @@
 Introduction to NEMS Linux
 ==========================
 
+How NEMS Linux Began
+--------------------
+
 Nagios® Core™–which I’ll simply refer to as “Nagios” throughout this article–is a free, open source server application which monitors hosts and services that you specify, alerting you when things go bad and when they get better. I’ve been using Nagios for many years. If I had to hazard a guess as to when I started using it, I’d say it was around 2006.
 
 My wife and I ran a small computer service company out of our home in those days, and in order to keep track of my customer sites and be as proactive as I could be, I had a beast of a computer in the garage keeping check on my customers’ hard drive space, backup state, CPU load, and antivirus definition updates, as well as various other services.
