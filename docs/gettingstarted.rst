@@ -1,5 +1,5 @@
-NEMS Linux Exercises
-====================
+Getting Started with NEMS Linux
+===============================
 
 Introduction
 ------------
@@ -8,9 +8,9 @@ NEMS Linux documentation, work in progress.
 
 .. toctree::
     :maxdepth: 1
-    :caption: Checks
+    :caption: Deployment
 
-    exercises/check_http
+    gettingstarted/install
     
 Important Links
 ---------------
