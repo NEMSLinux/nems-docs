@@ -1,0 +1,4 @@
+Credits
+-------
+
+* List of people
