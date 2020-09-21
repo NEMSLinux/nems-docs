@@ -15,3 +15,12 @@ When embedding an image, please place the image in /img and use the following fo
 
   Caption goes here
 ```
+### Code Blocks
+
+```
+.. code-block:: console
+
+    Here is some code.
+    Here is the second line of code.
+    If this is the final line of code, simply have a carriage return follwoing it.
+```
