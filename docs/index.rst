@@ -14,6 +14,7 @@ NEMS Linux documentation, work in progress.
     gettingstarted/install
     gettingstarted/initialization
     gettingstarted/connect
+    gettingstarted/smtp
 
 .. toctree::
     :maxdepth: 1
