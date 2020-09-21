@@ -13,6 +13,7 @@ Why reinvent the wheel? Ryan Siegel’s NagiosPi image was out-of-the-box ready 
 
 .. figure:: ../../img/first_nems_server.jpg
   :width: 600
+  :align: center
   :alt: Picture of the first NEMS Server atop the old Nagios server it replaced
 
   This customer Nagios server was replaced with the first ever NEMS server in 2016.
@@ -20,7 +21,8 @@ Why reinvent the wheel? Ryan Siegel’s NagiosPi image was out-of-the-box ready 
 I’m a coder in my professional life. I develop server-side applications, mainly for web. Beyond building on a more current software base, the first thing I’d set out to do was build a responsive browser-based UI for NEMS, bringing all the components of NagiosPi together into a single interface. This later became the NEMS Dashboard, also known by its GitHub repository name, “nems-www.”
 
 .. figure:: ../../img/NEMS-1.4.1-Dashboard.png
-  :scale: 100%
+  :width: 600
+  :align: center
   :alt: Screenshot of NEMS Linux Dashboard in version 1.4.1
 
   An early screenshot of NEMS Linux's Dashboard, circa September 2018.
