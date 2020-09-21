@@ -7,13 +7,13 @@ Introduction
 NEMS Linux documentation, work in progress.
 
 .. toctree::
-    :maxdepth: 0
+    :maxdepth: 1
     :caption: NEMS Linux
     
     index
     
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: Getting started
 
     gettingstarted/introduction
