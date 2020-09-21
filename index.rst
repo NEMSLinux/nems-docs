@@ -12,7 +12,7 @@ NEMS Linux documentation, work in progress.
 
     installation
     quickstart
-    background
+    exercises
 
 Important Links
 ---------------
