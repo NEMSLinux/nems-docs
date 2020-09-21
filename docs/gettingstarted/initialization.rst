@@ -15,3 +15,5 @@ Once connected, type:
     sudo nems-init
 
 You’ll be asked to enter the password again. Follow the prompts. All the complicated stuff is made easy.
+
+Congratulations! Your NEMS Linux server is now online and ready to monitor your network assets.
