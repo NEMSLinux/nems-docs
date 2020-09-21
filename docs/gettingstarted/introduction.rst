@@ -11,6 +11,8 @@ I received my first Raspberry Pi in 2014. After it sat on the shelf for a year, 
 
 Why reinvent the wheel? Ryan Siegel’s NagiosPi image was out-of-the-box ready and gaining popularity. I started using it, but quickly became dismayed by the state of the distro, which appeared to be aging and was not being updated at a pace suitable for business use. It was a wonderful starting point, but felt in some important ways like an incomplete product. I began working on my own rebuild of NagiosPi, calling it NEMS; short for “Nagios Enterprise Monitoring Server”.
 
-.. image:: ../../img/first_nems_server.jpg
+.. figure:: ../../img/first_nems_server.jpg
   :width: 600
-  :alt: This customer Nagios server was replaced with the first ever NEMS server in 2016.
+  :alt: Picture of the first NEMS Server atop the old Nagios server it replaced
+
+  This customer Nagios server was replaced with the first ever NEMS server in 2016.
