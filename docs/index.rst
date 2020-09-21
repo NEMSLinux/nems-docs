@@ -7,13 +7,19 @@ Introduction
 NEMS Linux documentation, work in progress.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :caption: Getting started
 
     installation
     quickstart
     exercises
 
+.. toctree::
+    :maxdepth: 1
+    :caption: Credits
+
+    credits
+    
 Important Links
 ---------------
 
