@@ -11,5 +11,6 @@ Upon booting your NEMS Linux server, your filesystem will be automatically resiz
 .. figure:: ../../img/NEMS-details-displayed-on-a-connected-TV.png
   :width: 600
   :align: center
-  :alt: NEMS Server details as shown on a connected TV circa September 2018.
+  :alt: NEMS Server details
 
+  NEMS Server details as shown on a connected TV circa September 2018.
