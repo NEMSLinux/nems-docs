@@ -8,12 +8,10 @@ NEMS Linux documentation, work in progress.
 
 .. toctree::
     :maxdepth: 1
-    :caption: Getting started
+    :caption: Checks
 
-    installation
-    quickstart
-    exercises
-
+    exercises/check_http
+    
 Important Links
 ---------------
 
