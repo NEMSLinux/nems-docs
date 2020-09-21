@@ -12,6 +12,7 @@ NEMS Linux documentation, work in progress.
 
     gettingstarted/introduction
     gettingstarted/install
+    gettingstarted/initialization
 
 .. toctree::
     :maxdepth: 1
