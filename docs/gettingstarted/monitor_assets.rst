@@ -26,8 +26,13 @@ You’ll see the host we added--server1 in my example--is showing with the statu
   :align: center
   :alt: Expanded Adagios host view
   
-  Expanded view of Host reveals configured service checks
+  Expanded view of Host reveals configured service checks.
 
 I would also like to encourage you to test both NEMS Mobile UI and NEMS TV Dashboard, both of which are also found on the Reporting menu of the NEMS Dashboard. The first is meant to offer you a complete mobile interface for monitoring your assets, and the latter allows you to set up a TV display in your server room that shows a real-time tactical overview of your NEMS host and service checks.
 
-Figure 8 - NEMS TV Dashboard on NEMS Linux 1.4.1
+.. figure:: ../../img/NEMS-TV-Dashboard-on-NEMS-Linux-1.4.1.png
+  :width: 600
+  :align: center
+  :alt: Expanded Adagios host view
+  
+  NEMS TV Dashboard on NEMS Linux 1.4.1.
