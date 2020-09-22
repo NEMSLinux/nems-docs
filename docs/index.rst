@@ -22,14 +22,8 @@ NEMS Linux documentation, work in progress.
     :maxdepth: 1
     :caption: Changelogs
     
-    changelogs/1.6
-    changelogs/1.5
-    changelogs/1.4
-    changelogs/1.3
-    changelogs/1.2
-    changelogs/1.1
-    changelogs/1.0
-
+    changelogs/1_6
+    
 .. toctree::
     :maxdepth: 1
     :caption: Credits
