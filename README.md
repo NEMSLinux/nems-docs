@@ -27,4 +27,6 @@ When embedding an image, please place the image in /img and use the following fo
 
 ### Add a Tip
 
+```
 .. Tip:: Text for the tip is here
+```
