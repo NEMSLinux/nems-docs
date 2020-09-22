@@ -24,3 +24,7 @@ When embedding an image, please place the image in /img and use the following fo
     Here is the second line of code.
     If this is the final line of code, simply have a carriage return follwoing it.
 ```
+
+### Add a Tip
+
+.. Tip:: Text for the tip is here
