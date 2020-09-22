@@ -22,7 +22,7 @@ NEMS Linux documentation, work in progress.
     :maxdepth: 1
     :caption: Changelogs
     
-    changelogs/1_6
+    changelogs/1.6
     
 .. toctree::
     :maxdepth: 1
