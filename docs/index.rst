@@ -16,6 +16,7 @@ NEMS Linux documentation, work in progress.
     gettingstarted/connect
     gettingstarted/smtp
     gettingstarted/generate_config
+    gettingstarted/monitor_first_host
 
 .. toctree::
     :maxdepth: 1
