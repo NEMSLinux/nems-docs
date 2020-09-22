@@ -7,7 +7,7 @@ Introduction
 NEMS Linux documentation, work in progress.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :caption: Getting started
 
     gettingstarted/introduction
@@ -15,6 +15,7 @@ NEMS Linux documentation, work in progress.
     gettingstarted/initialization
     gettingstarted/connect
     gettingstarted/smtp
+    gettingstarted/generate_config
 
 .. toctree::
     :maxdepth: 1
