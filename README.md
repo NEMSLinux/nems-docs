@@ -15,6 +15,9 @@ When embedding an image, please place the image in /img and use the following fo
 
   Caption goes here
 ```
+
+### Blocks
+
 ### Code Blocks
 
 ```
@@ -25,8 +28,15 @@ When embedding an image, please place the image in /img and use the following fo
     If this is the final line of code, simply have a carriage return follwoing it.
 ```
 
-### Add a Tip
+#### Tip Block
 
 ```
 .. Tip:: Text for the tip is here
+```
+
+#### Excercise Block
+
+```
+Exercise::
+Text for the exercise is here
 ```
