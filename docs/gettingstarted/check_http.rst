@@ -21,7 +21,7 @@ Configuration is done in NEMS Configurator (NConf). Open that tool via the Confi
 IPv4 or IPv6
 ------------
 
-#. The *check-host-alive* command, found in *misccommands* in NConf, is used to check hosts to determine if they are up or down. My web site, nemslinux.com, will only respond on IPv4. However, the default *check-host-alive* command will attempt to use IPv6. Rather than editing the sample command, let’s add a new one based upon it, but this one will only use IPv4. That way, we can still use the old command if we need IPv6 for a different host.
+1. The *check-host-alive* command, found in *misccommands* in NConf, is used to check hosts to determine if they are up or down. My web site, nemslinux.com, will only respond on IPv4. However, the default *check-host-alive* command will attempt to use IPv6. Rather than editing the sample command, let’s add a new one based upon it, but this one will only use IPv4. That way, we can still use the old command if we need IPv6 for a different host.
 
   #. Show the misccommands list.
   #. Edit *check-host-alive*
@@ -39,7 +39,7 @@ IPv4 or IPv6
 
   Create New misccommand to check-host-alive Using IPv4
 
-#. Our commands are ready for us, so now it’s time to setup our hostpreset. We want to create one for IPv4 Web Sites. That way, we can reuse the preset for every web site we want to monitor with NEMS Linux.
+2. Our commands are ready for us, so now it’s time to setup our hostpreset. We want to create one for IPv4 Web Sites. That way, we can reuse the preset for every web site we want to monitor with NEMS Linux.
 
   #. Add a new host preset.
   #. Name your preset Web Site IPv4
@@ -53,8 +53,15 @@ IPv4 or IPv6
 
     New Host Preset for IPv4 Web Sites
 
-#. So far, everything we’ve done can be reused for any web site whose hostname resolves to an IPv4 address. From here forward however, we’ll be setting up our host group specifically for a secure (SSL) web site.
+3. So far, everything we’ve done can be reused for any web site whose hostname resolves to an IPv4 address. From here forward however, we’ll be setting up our host group specifically for a secure (SSL) web site.
 
   #. Add a new hostgroup.
   #. Call this web_site_ssl
   #. Leave everything else as is and save your new hostgroup.
+
+  .. figure:: ../../img/New-hostgroup-for-web_site_ssl.png
+    :width: 600
+    :align: center
+    :alt: Create SSL Host
+
+    New hostgroup for web_site_ssl
