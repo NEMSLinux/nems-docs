@@ -15,7 +15,9 @@ When you see `d,u,r,f,s,n`, these are the definitions:
 * **s** Notify if a scheduled service downtime begins or ends,
 * **n** Never notify.
 
-.. Exercise:: The NEMS Server sample host uses the *linux-server* Host Template. So rather than having to set the notification options within the host itself, we set these within the template. Can you determine from the above list what the default notification settings are for *linux-server* devices by looking at the host template? You'll find the *linux-server* Host Template in Configuration -> NEMS Configurator. Press the *Show* button next to *Host templates* on the menu, followed by the edit pencil next to *linux-server*.
+.. admonition:: Exercise
+
+  The NEMS Server sample host uses the *linux-server* Host Template. So rather than having to set the notification options within the host itself, we set these within the template. Can you determine from the above list what the default notification settings are for *linux-server* devices by looking at the host template? You'll find the *linux-server* Host Template in Configuration -> NEMS Configurator. Press the *Show* button next to *Host templates* on the menu, followed by the edit pencil next to *linux-server*.
 
 Service Notification Settings
 -----------------------------
