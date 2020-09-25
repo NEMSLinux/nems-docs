@@ -59,6 +59,20 @@ Contribute to Documentation
 Corporate Sponsors
 ------------------
 
+.. css3image:: /img/sponsor_logos/rnit_logo_full_dark.png
+  :margin: 10px 10px 10px 10px
+  :margin-left: 10px
+  :margin-right: 10px
+  :margin-top: 10px
+  :border-radius: 10px
+  :transform-origin: 10px 10px
+  :translate: 10px 10px
+  :translateY: 10px
+  :translateX: 10px
+  :scaleX: 2.0
+  :scaleY: 2.0
+  :rotate: -10deg
+  
 .. image:: ../img/sponsor_logos/rnit_logo_full_dark.png
     :width: 200px
     :margins: 10px
