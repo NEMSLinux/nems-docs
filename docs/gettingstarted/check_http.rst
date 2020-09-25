@@ -36,8 +36,7 @@ IPv4 or IPv6
     :align: center
     :alt: Create IPv4 Check Command
 
-  Create New misccommand to check-host-alive Using IPv4
-
+    Create New misccommand to check-host-alive Using IPv4
 #. Our commands are ready for us, so now it’s time to setup our hostpreset. We want to create one for IPv4 Web Sites. That way, we can reuse the preset for every web site we want to monitor with NEMS Linux.
   #. Add a new host preset.
   #. Name your preset Web Site IPv4
@@ -50,7 +49,6 @@ IPv4 or IPv6
     :alt: Create IPv4 Host Preset
 
     New Host Preset for IPv4 Web Sites
-
 #. So far, everything we’ve done can be reused for any web site whose hostname resolves to an IPv4 address. From here forward however, we’ll be setting up our host group specifically for a secure (SSL) web site.
   #. Add a new hostgroup.
   #. Call this web_site_ssl
@@ -62,7 +60,6 @@ IPv4 or IPv6
     :alt: Create SSL Host
 
     New hostgroup for web_site_ssl
-
 #. Why would we create a new hostgroup if it has no settings beyond a name? Well, this is where the magic happens. We now have a check command, a check host alive command, a host preset and a hostgroup. Now, we can link them all together, starting with an Advanced Service. Remember, the idea here is that everything we do can be assigned to as many hosts as we like. No having to redo all this for the next web site.
   #. Click Add next to Advanced Services.
   #. Name your service: Web Site (SSL)
@@ -82,7 +79,6 @@ IPv4 or IPv6
     :alt: Create SSL Advanced Service
 
     Creating an Advanced Service to Check SSL Web Sites
-
 #. Finally, let’s add our web site host. From now on, this is the only step you have to take to add more sites to your NEMS Linux server.
   #. Add a new host.
   #. Set the following:
@@ -110,7 +106,6 @@ IPv4 or IPv6
     :alt: Create Host for IPv4 SSL web site
 
     Creating a Host to Monitor IPv4 SSL Web Site
-
 #. Generate your config.
 
 If you followed the steps correctly and my web site is up, Adagios should report all is well. To test what would happen if it were to start failing, change the hostname in the Host to nemslinux.com1 (which obviously will not respond), and then generate your config again. Once you feel ready, change the Host to your own web site. If your site is SSL, you should only need to change the hostname, alias and address of the host (Step 6). If it’s not SSL, repeat Step 4, but this time create a new hostgroup called web_site_no_ssl, and then repeat Step 5, this time, creating a new Advanced Service called Web Site (Non-SSL), assign it (5.e) to Web Site (Non-SSL) and leave off the SSL parameters in 5.h.
