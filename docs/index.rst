@@ -59,7 +59,7 @@ Contribute to Documentation
 Corporate Sponsors
 ------------------
 
-.. |RNIT| image:: ../img/sponsor_logos/rnit_logo_full_dark.png
+.. |RNIT| image:: ../img/sponsor_logos/RNIT_Logo_Full_Dark.png
     :width: 200px
     :alt: Royal Network IT Solutions
     :target: https://www.rnitsolutions.com/
