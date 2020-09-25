@@ -6,3 +6,4 @@ Beginner Exercises
     :caption: Beginner Exercises
 
     check_http
+    check_tcp
