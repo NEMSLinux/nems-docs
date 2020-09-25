@@ -66,14 +66,12 @@ Corporate Sponsors
     :target: https://www.rnitsolutions.com/
 
 ..
-  note the last one is align none to force a clear:both to occur following the final image.
+  note the last one does not align left to force a clear:both to occur following the final image.
 
 .. image:: ../img/sponsor_logos/cat5tv_network_dark.png
     :width: 200px
-    :align: none
     :alt: Category5 TV Network
     :target: https://category5.tv/
-
 
 Patrons
 -------
