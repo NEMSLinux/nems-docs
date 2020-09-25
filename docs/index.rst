@@ -21,6 +21,13 @@ NEMS Linux documentation, work in progress.
     gettingstarted/notification_definitions
     gettingstarted/exercises
 
+
+.. toctree::
+    :maxdepth: 2
+    :caption: NEMS Cloud Services
+
+    nems-cloud-services/checkin
+
 .. toctree::
     :maxdepth: 1
     :caption: Changelogs
