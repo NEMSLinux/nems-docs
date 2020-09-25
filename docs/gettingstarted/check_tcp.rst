@@ -12,7 +12,7 @@ Steps
 -----
 
 #. On the left menu of NConf, you'll see “Services”. Click “Add”.
-#. Set the Service Name to: 9590
+#. Set the Service Name to: `9590`
 #. Leave Service Enabled set to: Yes
 #. Set the Check Command to: check_tcp
 #. Set Assigned to Host to: NEMS (this host comes pre-installed)
