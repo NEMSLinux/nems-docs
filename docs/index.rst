@@ -8,7 +8,7 @@ NEMS Linux documentation, work in progress.
 
 .. toctree::
     :maxdepth: 2
-    :caption: Getting started
+    :caption: Getting Started Guide
 
     gettingstarted/introduction
     gettingstarted/install
