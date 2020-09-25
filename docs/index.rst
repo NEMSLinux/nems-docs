@@ -109,6 +109,15 @@ Here is a list of those Patrons who kicked in that little bit extra to have thei
 
 Want your name on this list? `Become a Patron <https://patreon.com/nems>`__.
 
+Support
+-------
+
+As NEMS Linux continues to grow, our support options are also evolving. At present, there are a few key points to keep in mind when seeking support:
+
+#. NEMS Linux is a community-driven project, so the best place to start is usually the community. We offer an `official Discord server <https://discord.gg/e9xT9mh>`__ and a `Community Forum <https://forum.nemslinux.com>`__ to help you find what you need.
+#. Our lead developer, Robbie Ferguson, is often available via our Discord server. That is the best place to reach him directly.
+#. Users who choose to `support NEMS Linux on Patreon <https://patreon.com/nems>`__ gain access to Patron-exclusive rooms on our Discord server, including #priority-support, which are setup to ding lead developer, Robbie Ferguson, on his phone. So in cases where priority support is required, he's usually quite good to reply promptly.
+
 Contribute to Project
 ---------------------
 
@@ -151,11 +160,6 @@ nems-wmic
 
 - Issue Tracker: https://github.com/cat5tv/nems-wmic/issues/
 - Source Code: https://github.com/cat5tv/nems-wmic/
-
-Support
--------
-
-If you are having issues, please let me know.
 
 License
 -------
