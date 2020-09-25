@@ -1,7 +1,9 @@
 # nems-docs
-Documentation for NEMS Linux
+Documentation for NEMS Linux.
 
 ## Guidelines
+
+As I would like the documentation to have a consistent look throughout, please follow these guidelines for your edits. You are also welcome to add to these guidelines if you have a suggestion for certain layouts.
 
 ### Images
 
