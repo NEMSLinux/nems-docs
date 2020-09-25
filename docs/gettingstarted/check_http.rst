@@ -45,3 +45,16 @@ IPv4 or IPv6
   #. Name your preset Web Site IPv4
   #. Set the host alive check to the new command you created in Step 2: check-host-alive-ipv4
   #. Save your host preset.
+  
+.. figure:: ../../img/New-Host-Preset-for-IPv4-Web-Sites.png
+  :width: 600
+  :align: center
+  :alt: Create IPv4 Host Preset
+
+  New Host Preset for IPv4 Web Sites
+
+#. So far, everything we’ve done can be reused for any web site whose hostname resolves to an IPv4 address. From here forward however, we’ll be setting up our host group specifically for a secure (SSL) web site.
+
+  #. Add a new hostgroup.
+  #. Call this web_site_ssl
+  #. Leave everything else as is and save your new hostgroup.
