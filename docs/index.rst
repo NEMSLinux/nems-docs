@@ -56,6 +56,21 @@ Contribute to Documentation
 
 - Source Code: https://github.com/cat5tv/nems-docs/
 
+Sponsors
+--------
+
+.. image:: ../img/sponsor_logos/rnit_logo_full_dark.png
+    :width: 200px
+    :align: left
+    :alt: Royal Network IT Solutions
+    :target: https://www.rnitsolutions.com/
+
+.. image:: ../img/sponsor_logos/cat5tv_network_dark.png
+    :width: 200px
+    :align: left
+    :alt: Category5 TV Network
+    :target: https://category5.tv/
+
 Contribute to Project
 ---------------------
 
