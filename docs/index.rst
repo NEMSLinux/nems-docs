@@ -19,7 +19,7 @@ NEMS Linux documentation, work in progress.
     gettingstarted/add_first_host
     gettingstarted/monitor_assets
     gettingstarted/notification_definitions
-    gettingstarted/check_http
+    gettingstarted/exercises
 
 .. toctree::
     :maxdepth: 1
