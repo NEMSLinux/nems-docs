@@ -37,6 +37,8 @@ When embedding an image, please place the image in /img and use the following fo
 #### Excercise Block
 
 ```
-Exercise::
-Text for the exercise is here
+.. admonition:: Exercise
+  :class: note
+  
+  Text for the exercise is here
 ```
