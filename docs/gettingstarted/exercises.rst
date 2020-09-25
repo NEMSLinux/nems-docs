@@ -2,7 +2,7 @@ Beginner Exercises
 ==================
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: Beginner Exercises
 
     check_http
