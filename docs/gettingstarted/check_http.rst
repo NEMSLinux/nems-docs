@@ -32,10 +32,10 @@ IPv4 or IPv6
   #. At the very end of the command line, simply add a space, followed by -4 to tell it to use IPv4 for this check.
   #. Save the new command.
 
-.. figure:: ../../img/Create-New-misccommand-to-check-host-alive-Using-IPv4.png
-  :width: 600
-  :align: center
-  :alt: Create IPv4 Check Command
+  .. figure:: ../../img/Create-New-misccommand-to-check-host-alive-Using-IPv4.png
+    :width: 600
+    :align: center
+    :alt: Create IPv4 Check Command
 
   Create New misccommand to check-host-alive Using IPv4
 
@@ -46,12 +46,12 @@ IPv4 or IPv6
   #. Set the host alive check to the new command you created in Step 2: check-host-alive-ipv4
   #. Save your host preset.
   
-.. figure:: ../../img/New-Host-Preset-for-IPv4-Web-Sites.png
-  :width: 600
-  :align: center
-  :alt: Create IPv4 Host Preset
+  .. figure:: ../../img/New-Host-Preset-for-IPv4-Web-Sites.png
+    :width: 600
+    :align: center
+    :alt: Create IPv4 Host Preset
 
-  New Host Preset for IPv4 Web Sites
+    New Host Preset for IPv4 Web Sites
 
 #. So far, everything we’ve done can be reused for any web site whose hostname resolves to an IPv4 address. From here forward however, we’ll be setting up our host group specifically for a secure (SSL) web site.
 
