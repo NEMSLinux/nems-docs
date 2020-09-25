@@ -38,6 +38,9 @@ NEMS Linux documentation, work in progress.
     :caption: Changelogs
     
     changelogs/1.6
+    changelogs/1.2
+    changelogs/1.1
+    changelogs/1.0
     
 .. toctree::
     :maxdepth: 1

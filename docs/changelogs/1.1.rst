@@ -1,0 +1,25 @@
+NEMS Linux 1.1 Changelog
+========================
+
+NEMS Linux 1.1 was released November 13, 2016 and discontinued May 6, 2017. This version of NEMS Linux was downloaded 979 times during its 6-month lifetime.
+
+* NagVis upgraded to 1.8.5. (1.9 is still beta).
+* Check_MK livestatus upgraded to 1.2.8p13.
+* Added Check_MK Multisite 1.2.8p13.
+* Added PNP4Nagios 0.6.16-2.
+* Added a few sample configurations to NConf to help users figure out the initial setup and/or to use as templates. Included samples are: test if an external web site is up via ping, monitor a Linux server, monitor a Windows server.
+* Created NEMS Linux Migrator. New feature allows backing up and restoring your NEMS Linux configuration, making migration or recovery a breeze.
+* Added sendemail 1.56-5 and setup email config in /etc/nagios3/resource.cfg (you’ll need to add your SMTP info as per the instructions above).
+* Added git, htop.
+* raspi-config upgraded to 20161108.
+* Linux kernel upgraded to 4.4.26-v7.
+* Apache2 upgraded to 2.4.10-10+deb8u7.
+* OpenSSL upgraded to 1.0.1t-1+deb8u5.
+* MySQL upgraded to 5.5.52-0+deb8u1.
+* Exim4 upgraded to 4.84.2-2+deb8u1.
+* PHP upgraded to 5.6.27-0+deb8u1.
+* PHPMyAdmin upgraded to 4.2.12-2+deb8u2.
+* Python upgraded to 2.7.9-2+deb8u1.
+* Network and Bluetooth firmwares upgraded.
+* Various system components upgraded.
+* Reduced the amount of memory dedicated to Raspberry Pi graphics adapter.

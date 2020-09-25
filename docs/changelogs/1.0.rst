@@ -1,0 +1,18 @@
+NEMS Linux 1.0 Changelog
+========================
+
+NEMS Linux 1.0 was released May 8, 2016 and discontinued November 13, 2016. This initial version of NEMS Linux was downloaded 409 Times.
+
+* Initial release. Built and tested on Raspberry Pi 3. Based on Raspbian Jessie. Inspired by NagiosPi, which in April 2016 was still running on the old Raspbian Wheezy. I started this new distro since NagiosPi seems to be out of date, and I want to have an easy drop-in Nagios img for the Raspberry Pi. Figured I’d share it with the world while I’m at it since there are probably others (possibly less tech savvy) who might want the same thing. I decided to leave most of the settings the same as NagiosPi (eg., usernames, passwords) so those coming from that distro can seamlessly transition, or so if NagiosPi wants to use our build to bring things up to date, they may do so with minimal effort.
+* This initial build is using default repositories in a lot of cases and is meant to be rock-solid, not bleeding edge (eg., Nagios 3.5.1 instead of Nagios 4.1.1.
+* Using the rpi-4.4.y Linux kernel tree (Currently 4.4.7-v7+ #876 SMP), firmware updated to 1e84c2891c1853a3628aed59c06de0315d13c4f1. Use rpi-update to check for upgrades, if needed.
+* Includes rpi-update tool - an easier way to update the firmware on the Raspberry Pi - See https://github.com/Hexxeh/rpi-update
+* On-board Bluetooth disabled due to potential stability issues. Use rpi-update to check for kernel updates and see if it is fixed, and then edit /boot/config.txt to re-enable. Until they fix it, use USB Bluetooth dongle if needed.
+* Installed and configured: mysql-server mysql-client phpmyadmin apache2 nagios3 nagios-nrpe-plugin
+* To keep things consistent for those coming from NagiosPi, I have used the same passwords. MySQL is: User: root Pass: nagiosadmin
+* Installed w3m web browser to allow local testing in terminal: w3m localhost/phpmyadmin
+* Manually installed NConf 1.3.0-0 “Final”, an Enterprise Nagios configuration tool. This tool was broken on NagiosPi’s instructions due to a missing symlink at /var/www/nconf, so I fixed that in my version. Access NConf via the “Configure Nagios” link on the main menu.
+* Includes `NagVis 1.7 <https://sourceforge.net/projects/nagvis/?source=navbar>`__ - want to do 1.9 but not until out of beta.
+* Built and integrated the first version of our menu system, which includes the first version of a custom Nagios skin to begin integrating a more modern interface. Menu accessible at http://nems/ (or http://IPADDRESS if that doesn’t work for you)
+* Added `a nice little MOTD <http://www.mewbies.com/how_to_customize_your_console_login_message_tutorial.htm|a nice little MOTD>`__.
+* Added a simple cronjob to check our web site for the currently available version and warn you if yours is out of date.
