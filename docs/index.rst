@@ -87,6 +87,8 @@ Corporate Sponsors
 Patrons
 -------
 
+this text is test
+
 I'd like to thank all of our Patrons for your continued support of NEMS Linux development.
 
 Here is a list of those Patrons who kicked in that little bit extra to have their name included in the changlogs:
