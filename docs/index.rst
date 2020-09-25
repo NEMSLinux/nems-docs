@@ -64,9 +64,6 @@ Corporate Sponsors
     :alt: Royal Network IT Solutions
     :target: https://www.rnitsolutions.com/
 
-..
-  note the last one does not align left to force a clear:both to occur following the final image.
-
 .. image:: ../img/sponsor_logos/cat5tv_network_dark.png
     :width: 200px
     :alt: Category5 TV Network
