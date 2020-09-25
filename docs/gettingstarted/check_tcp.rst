@@ -8,7 +8,7 @@ In this exercise you will learn to monitor the state of any TCP/UDP port on a ne
 
 NEMS Linux includes a dummy port listener running on port 9590. The port listener is cleverly called 9590, and does nothing other than reply that it is up. This can be used to simulate a port on another device. While you can create a check for any port on any host, let's start with using this dummy port just to become familiar with how NEMS Linux works. Our goal: To setup a service monitor on the NEMS host which warns us if port 9590 ever goes offline.
 
-Exercise Steps
+Steps to Setup
 --------------
 
 #. On the left menu of NConf, you'll see “Services”. Click “Add”.
@@ -33,8 +33,8 @@ Exercise Steps
 #. Press Submit
 #. Press Generate Nagios Config, followed by pressing the Generate button on the next screen to deploy and activate your new configuration.
 
-Testing Our Service
--------------------
+Conclusion
+----------
 
 Once the new config is running, try failing the service by opening Monit Service Manager under System on the NEMS Dashboard. Click on the Process named 9590, and then click “Stop service”. You'll notice in around 1 minute the status of 9590 will show as a problem in all status views (E.G., NEMS TV Dashboard, NEMS Adagios, Nagios Core), and after roughly 5 minutes you will receive a notification (assuming your notifications settings are configured).
 
