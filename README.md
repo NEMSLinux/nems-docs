@@ -3,6 +3,13 @@ Documentation for NEMS Linux.
 
 This documentation will inevitably replace our tired old wiki. Currently, you can review the live version of this repository at https://docs2.nemslinux.com/
 
+## Helpful Resources
+
+I'm actually new to Restructured Text, though I see similarities to some of the Discord markdown. So having some resources to help find quick syntax forumulae can be helpful. Here are some that I've turned to for help:
+
+- General structure / syntax, a good overall guide: https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
+- Specifically helpful when customizing Admonition Boxes: https://docutils.sourceforge.io/docs/ref/rst/directives.html
+
 ## Guidelines
 
 As I would like the documentation to have a consistent look throughout, please follow these guidelines for your edits. You are also welcome to add to these guidelines if you have a suggestion for certain layouts.
