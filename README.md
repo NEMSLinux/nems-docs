@@ -9,6 +9,7 @@ I'm actually new to Restructured Text, though I see similarities to some of the 
 
 - General structure / syntax, a good overall guide: https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
 - Specifically helpful when customizing Admonition Boxes: https://docutils.sourceforge.io/docs/ref/rst/directives.html
+- Links: https://sublime-and-sphinx-guide.readthedocs.io/en/latest/references.html
 
 ## Guidelines
 
