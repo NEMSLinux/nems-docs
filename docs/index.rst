@@ -71,6 +71,42 @@ Sponsors
     :alt: Category5 TV Network
     :target: https://category5.tv/
 
+Patrons
+-------
+
+I'd like to thank all of our Patrons for your continued support of NEMS Linux development.
+
+Here is a list of those Patrons who kicked in that little bit extra to have their name included in the changlogs:
+
+* Patrick Kersten
+* Marc Dörseln
+* Dave Harman
+* Bill Marshall
+* Aaron Tringle
+* Steve Hudnall
+* IT Cyber Solutions
+* Natacha Norman
+* David Klindt
+* Wolfgang Friedl
+* Jeff Conaway
+* Don Jenkins
+* Marco Antonini
+* Jessica K. Litwin
+* Matthew Mattox
+* Premium | Fischer-ICT
+* Steve Thompson
+* Jiffy
+* Larry Getz
+* Coquille Indian Tribe
+* Jarrod Andrews
+* Dennis Bailey
+* Brian Darnell
+* SystemOfADL
+* Tony Browne
+* Steven Beukes
+
+Want your name on this list? `Become a Patron <https://patreon.com/nems>`__.
+
 Contribute to Project
 ---------------------
 
