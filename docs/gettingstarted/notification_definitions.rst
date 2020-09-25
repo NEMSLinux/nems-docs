@@ -1,7 +1,9 @@
 Understanding Notification Definitions
 ======================================
 
-Before you setup your first check commands, you'll need to understand what the single-character notification options mean. Refer back to this list as needed, as you'll need to understand what commands such as `w,u,c,r,f` mean.
+Before you setup your first check commands, you'll need to understand what the single-character notification options mean. Failure to correctly set notification settings could result in no notifications being generated.
+
+Refer back to this list as needed, as you'll need to understand what commands such as `w,u,c,r,f` mean.
 
 Host Notification Settings
 --------------------------
@@ -31,5 +33,3 @@ When you see `w,u,c,r,f,n`, these are the definitions:
 * **r** Notify if recovered from a previously bad state,
 * **f** Notify if the service is flapping (up/down/up/down),
 * **n** Never notify.
-
-Failure to correctly set notification settings will result in no notifications being generated.
