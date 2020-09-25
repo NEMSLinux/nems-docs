@@ -56,8 +56,8 @@ Contribute to Documentation
 
 - Source Code: https://github.com/cat5tv/nems-docs/
 
-Sponsors
---------
+Corporate Sponsors
+------------------
 
 .. image:: ../img/sponsor_logos/rnit_logo_full_dark.png
     :width: 200px
@@ -70,6 +70,7 @@ Sponsors
     :align: left
     :alt: Category5 TV Network
     :target: https://category5.tv/
+
 
 Patrons
 -------
