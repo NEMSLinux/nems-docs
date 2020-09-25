@@ -18,8 +18,8 @@ It may appear onerous as you glance over the following 6 steps, but keep in mind
 
 Configuration is done in NEMS Configurator (NConf). Open that tool via the Configuration menu on NEMS Dashboard.
 
-IPv4 or IPv6
-------------
+Steps
+-----
 
 1. The *check-host-alive* command, found in *misccommands* in NConf, is used to check hosts to determine if they are up or down. My web site, nemslinux.com, will only respond on IPv4. However, the default *check-host-alive* command will attempt to use IPv6. Rather than editing the sample command, let’s add a new one based upon it, but this one will only use IPv4. That way, we can still use the old command if we need IPv6 for a different host.
   #. Show the misccommands list.
@@ -107,6 +107,9 @@ IPv4 or IPv6
 
     Creating a Host to Monitor IPv4 SSL Web Site
 6. Generate your config.
+
+Conclusion
+----------
 
 If you followed the steps correctly and my web site is up, Adagios should report all is well. To test what would happen if it were to start failing, change the hostname in the Host to nemslinux.com1 (which obviously will not respond), and then generate your config again. Once you feel ready, change the Host to your own web site. If your site is SSL, you should only need to change the hostname, alias and address of the host (Step 6). If it’s not SSL, repeat Step 4, but this time create a new hostgroup called web_site_no_ssl, and then repeat Step 5, this time, creating a new Advanced Service called Web Site (Non-SSL), assign it (5.e) to Web Site (Non-SSL) and leave off the SSL parameters in 5.h.
 
