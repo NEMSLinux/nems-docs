@@ -10,4 +10,4 @@ To make your changes live, press the Generate NEMS Config link on the left navig
   
   Generate NEMS Config with the NEMS Configurator
 
-If everything checks out, press Deploy, and your admin contact email address will instantly be activated in Nagios.
+If everything checks out, press *Deploy Config to NEMS Server* and your changes will instantly be activated with your NEMS Server's implementation of Nagios.
