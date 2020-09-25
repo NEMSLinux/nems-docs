@@ -21,6 +21,11 @@ NEMS Linux documentation, work in progress.
     gettingstarted/notification_definitions
     gettingstarted/exercises
 
+.. toctree::
+    :maxdepth: 1
+    :caption: Applications
+
+    apps/cockpit
 
 .. toctree::
     :maxdepth: 2
