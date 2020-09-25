@@ -1,6 +1,8 @@
 # nems-docs
 Documentation for NEMS Linux.
 
+This documentation will inevitably replace our tired old wiki. Currently, you can review the live version of this repository at https://docs2.nemslinux.com/
+
 ## Guidelines
 
 As I would like the documentation to have a consistent look throughout, please follow these guidelines for your edits. You are also welcome to add to these guidelines if you have a suggestion for certain layouts.
