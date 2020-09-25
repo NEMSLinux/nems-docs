@@ -69,6 +69,9 @@ Corporate Sponsors
     :alt: Category5 TV Network
     :target: https://category5.tv/
 
++---------+---------+-----------+
+| test    | test2   | |longtext||
++---------+---------+-----------+
 
 Patrons
 -------
