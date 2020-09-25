@@ -62,7 +62,7 @@ Support
 As NEMS Linux continues to grow, our support options are also evolving. At present, there are a few key points to keep in mind when seeking support:
 
 #. NEMS Linux is a community-driven project, so the best place to start is usually the community. We offer an `official Discord server <https://discord.gg/e9xT9mh>`__ and a `Community Forum <https://forum.nemslinux.com>`__ to help you find what you need.
-#. Our lead developer, Robbie Ferguson, is often available via our Discord server. That is the best place to reach him directly.
+#. Our lead developer, Robbie Ferguson, is often available via our Discord server. That is the best place to reach him directly. He is *RobbieF#7136*
 #. Users who choose to `support NEMS Linux on Patreon <https://patreon.com/nems>`__ gain access to Patron-exclusive rooms on our Discord server, including #priority-support, which are setup to ding lead developer, Robbie Ferguson, on his phone. So in cases where priority support is required, he's usually quite good to reply promptly.
 
 Corporate Sponsors
