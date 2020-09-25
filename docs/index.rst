@@ -59,19 +59,19 @@ Contribute to Documentation
 Corporate Sponsors
 ------------------
 
-.. image:: ../img/sponsor_logos/rnit_logo_full_dark.png
+.. |RNIT| image:: ../img/sponsor_logos/rnit_logo_full_dark.png
     :width: 200px
     :alt: Royal Network IT Solutions
     :target: https://www.rnitsolutions.com/
 
-.. image:: ../img/sponsor_logos/cat5tv_network_dark.png
+.. |CAT5TV| image:: ../img/sponsor_logos/cat5tv_network_dark.png
     :width: 200px
     :alt: Category5 TV Network
     :target: https://category5.tv/
 
-+---------+---------+-----------+
-| test    | test2   | |longtext||
-+---------+---------+-----------+
++---------+---------+
+| |RNIT|  | |CAT5TV||
++---------+---------+
 
 Patrons
 -------
