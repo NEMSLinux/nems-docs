@@ -21,16 +21,16 @@ Configuration is done in NEMS Configurator (NConf). Open that tool via the Confi
 IPv4 or IPv6
 ------------
 
-- The *check-host-alive* command, found in *misccommands* in NConf, is used to check hosts to determine if they are up or down. My web site, nemslinux.com, will only respond on IPv4. However, the default *check-host-alive* command will attempt to use IPv6. Rather than editing the sample command, let’s add a new one based upon it, but this one will only use IPv4. That way, we can still use the old command if we need IPv6 for a different host.
+#. The *check-host-alive* command, found in *misccommands* in NConf, is used to check hosts to determine if they are up or down. My web site, nemslinux.com, will only respond on IPv4. However, the default *check-host-alive* command will attempt to use IPv6. Rather than editing the sample command, let’s add a new one based upon it, but this one will only use IPv4. That way, we can still use the old command if we need IPv6 for a different host.
 
-  - Show the misccommands list.
-  - Edit *check-host-alive*
-  - Highlight and copy the entire command line to your clipboard.
-  - Click Add next to misccommands to add a new command.
-  - Name your new command `check-host-alive-ipv4`
-  - Paste the command line from your clipboard.
-  - At the very end of the command line, simply add a space, followed by -4 to tell it to use IPv4 for this check.
-  - Save the new command.
+  #. Show the misccommands list.
+  #. Edit *check-host-alive*
+  #. Highlight and copy the entire command line to your clipboard.
+  #. Click Add next to misccommands to add a new command.
+  #. Name your new command `check-host-alive-ipv4`
+  #. Paste the command line from your clipboard.
+  #. At the very end of the command line, simply add a space, followed by -4 to tell it to use IPv4 for this check.
+  #. Save the new command.
 
 .. figure:: ../../img/Create-New-misccommand-to-check-host-alive-Using-IPv4.png
   :width: 600
@@ -39,9 +39,9 @@ IPv4 or IPv6
 
   Create New misccommand to check-host-alive Using IPv4
 
-- Our commands are ready for us, so now it’s time to setup our hostpreset. We want to create one for IPv4 Web Sites. That way, we can reuse the preset for every web site we want to monitor with NEMS Linux.
+#. Our commands are ready for us, so now it’s time to setup our hostpreset. We want to create one for IPv4 Web Sites. That way, we can reuse the preset for every web site we want to monitor with NEMS Linux.
 
-  # Add a new host preset.
-  # Name your preset Web Site IPv4
-  # Set the host alive check to the new command you created in Step 2: check-host-alive-ipv4
-  # Save your host preset.
+  #. Add a new host preset.
+  #. Name your preset Web Site IPv4
+  #. Set the host alive check to the new command you created in Step 2: check-host-alive-ipv4
+  #. Save your host preset.
