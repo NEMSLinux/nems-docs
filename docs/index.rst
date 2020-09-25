@@ -61,7 +61,6 @@ Corporate Sponsors
 
 .. image:: ../img/sponsor_logos/rnit_logo_full_dark.png
     :width: 200px
-    :align: left
     :alt: Royal Network IT Solutions
     :target: https://www.rnitsolutions.com/
 
@@ -72,6 +71,7 @@ Corporate Sponsors
     :width: 200px
     :alt: Category5 TV Network
     :target: https://category5.tv/
+
 
 Patrons
 -------
