@@ -30,6 +30,8 @@ When embedding an image, please place the image in /img and use the following fo
   Caption goes here
 ```
 
+Image files need to be JPG or PNG. Sadly, ReadTheDocs doesn't appear to support WebP (they don't show up).
+
 #### Step-By-Step Instructions
 
 When including step-by-step instructions, please use number lists at the top level and second level in such a way that future readers may refer to the instruction as, for example, 2.3 (the 2nd list, 3rd item). If you desire to include images within the steps, you will need to pay particular attention to how this impacts your automated numbering (#.) and may need to switch to static numbering (1., 2., etc).
