@@ -37,16 +37,16 @@ Support is provided via `temper <https://github.com/urwen/temper>`__.
 
 NEMS Linux includes support for TEMPer temperature and humidity sensor data.
 
-+---------+----+----------+-------------+----------+-----------------+-------+
-| Product | Id | Firmware | Temperature | Humidity | Sensor Location | Notes |
-+=========+====+==========+=============+==========+=================+=======+
-| TEMPer | 0c45:7401 | TEMPerF1.4 | ✔ | ✘ | Internal | Metal |
-| TEMPer | 413d:2107 | TEMPerGold_V3.1 | ✔ | ✘ | Internal | Metal |
-| TEMPerHUM | 413d:2107 | TEMPerX_V3.1 | ✔ | ✔ | Internal | White plastic |
-| TEMPer2 | 413d:2107 | TEMPerX_V3.3 | ✔ | ✘ | Internal or External | White plastic |
-| TEMPer1F | 413d:2107 | TEMPerX_V3.3 | ✔ | ✘ | External | White plastic |
-| TEMPerX232 | 1a86:5523 | TEMPerX232_V2.0 | ✔ | ✔ | Internal or External| White plastic |
-+---------+----+----------+-------------+----------+-----------------+-------+
++------------+-----------+-----------------+------+-----+
+| Product    | Id        | Firmware        | Temp | Hum |
++============+===========+=================+======+=====+
+| TEMPer     | 0c45:7401 | TEMPerF1.4      | ✔    | ✘   |
+| TEMPer     | 413d:2107 | TEMPerGold_V3.1 | ✔    | ✘   |
+| TEMPerHUM  | 413d:2107 | TEMPerX_V3.1    | ✔    | ✔   |
+| TEMPer2    | 413d:2107 | TEMPerX_V3.3    | ✔    | ✘   |
+| TEMPer1F   | 413d:2107 | TEMPerX_V3.3    | ✔    | ✘   |
+| TEMPerX232 | 1a86:5523 | TEMPerX232_V2.0 | ✔    | ✔   |
++------------+-----------+-----------------+------+-----+
 
 Terminal Output
 ---------------
