@@ -82,6 +82,7 @@ As of NEMS Linux 1.5.2, both the temperature and humidity sensors are supported,
 * check_temper_temp
 * check_temper_hum
 
-===Calibration===
+Calibration
+-----------
 
 As of NEMS Linux 1.6, both the thermal sensor and humidity sensor can be calibrated within NEMS SST to ensure the highest level of accuracy.
