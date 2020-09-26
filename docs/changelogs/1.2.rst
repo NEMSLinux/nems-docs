@@ -3,6 +3,8 @@ NEMS Linux 1.2 Changelog
 
 NEMS Linux 1.2 was released May 6, 2017. NEMS Linux 1.2.1 was released May 22, 2017 to fix bugs with the migrator and improve the overall release following significant user feedback. NEMS 1.2.x was discontinued November 7, 2017. This version of NEMS was downloaded 14,765 times during its 6 month life cycle.
 
+.. note:: A great emphasis was placed on documentation during the 1.2 Release Cycle. I launched `the Community Forum <https://forum.nemslinux.com/>`__ to offset the massive onslaught of user comments on the NEMS page of my blog, and `NEMS Documentation <https://docs.nemslinux.com/>`__.
+
 NEMS Linux 1.2.1 Changelog
 --------------------------
 
@@ -37,7 +39,7 @@ Here is a list of the changes I recorded during development.
 * NEMS Linux-Migrator no longer replaces the MySQL database with backup. Instead, it now clears the database completely, reconciles your backup with the current set of available commands and services and then imports everything together into the fresh database and activates the hosts. This way, if you restore your NEMS Linux 1.1 settings to NEMS Linux 1.2.1, you don’t miss out on all the WMIC features (which your 1.1 backup would overwrite), for example.
 * Documentation updated to reflect changes in commands and versioning.
 * I built a quick but lovely interface for Monitorix to make it mobile responsive and a little more dynamic in its functionality.
-* Distribution now available via BitTorrent (thanks to our partnership with `The Category5 TV Network <https://category5.tv/|The Category5 TV Network>.
+* Distribution now available via BitTorrent (thanks to our partnership with `The Category5 TV Network <https://category5.tv/>`__.
 
 Bug fixes
 ---------
@@ -87,6 +89,3 @@ Rolling Updates - NEMS Linux 1.2.3 Changelog
 * Move nems.conf to /usr/local/share/nems/ in preparation for the deprecation of the *pi* user.
 * NEMS 1.3 released. NEMS 1.2.x is now Old Stable. I'll continue to support it until I see its usage numbers drop in the `anonymous stats <https://nemslinux.com/stats/>`__.
 * Patched NEMS 1.2.x to support the new file locations of NEMS 1.3. This fixes "file not found" issues in nems-update and Anonymous Stats as `reported by Digithead <https://forum.category5.tv/thread-101.html>`__.
-
-.. note:: A great emphasis was placed on documentation during the 1.2 Release Cycle. I launched `the Community Forum <https://forum.nemslinux.com/>`__ to offset the massive onslaught of user comments on the NEMS page of my blog, and `NEMS Documentation <https://docs.nemslinux.com/>`__.
-
