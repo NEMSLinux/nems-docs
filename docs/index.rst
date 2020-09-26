@@ -41,6 +41,12 @@ NEMS Linux documentation, work in progress.
     changelogs/1.2
     changelogs/1.1
     changelogs/1.0
+
+.. toctree::
+    :maxdepth: 2
+    :caption: NEMS Accessories
+
+    accessories/index
     
 .. toctree::
     :maxdepth: 1
