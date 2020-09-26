@@ -1,7 +1,7 @@
 TEMPer Thermal Sensor
 =====================
 
-.. figure:: /img/temper.webp
+.. figure:: ../../img/temper.webp
   :width: 300
   :align: right
   :alt: TEMPer USB Thermal Sensor
