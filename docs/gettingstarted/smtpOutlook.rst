@@ -1,5 +1,5 @@
 Using MS Outlook.com SMTP For Nagios Notifications
-=======================================
+======================================================
 
 .. figure:: ../../img/NemsOutlook.png
     :width: 600
