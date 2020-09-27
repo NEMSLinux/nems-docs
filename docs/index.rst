@@ -15,7 +15,7 @@ NEMS Linux documentation, work in progress.
     gettingstarted/initialization
     gettingstarted/connect
     gettingstarted/smtp
-    gettingstatred/smtpOutlook
+    gettingstarted/smtpOutlook
     gettingstarted/generate_config
     gettingstarted/add_first_host
     gettingstarted/monitor_assets
