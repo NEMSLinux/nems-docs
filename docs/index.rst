@@ -131,7 +131,7 @@ A Product Of
     :target: https://category5.tv/
 
 +----------+
-|| CAT5TV ||
+| |CAT5TV| |
 +----------+
 
 NEMS Linux is developed by Robbie Ferguson for `The Category5 TV Network <https://category5.tv>`__.
