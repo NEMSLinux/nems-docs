@@ -74,22 +74,17 @@ As NEMS Linux continues to grow, our support options are also evolving. At prese
 #. Our lead developer, Robbie Ferguson (*RobbieF#7136*), is often available via our Discord server. That is the best place to reach him directly.
 #. Among other perks, users who choose to `support NEMS Linux on Patreon <https://patreon.com/nems>`__ gain access to Patron-exclusive rooms on our Discord server, including #priority-support, which are setup to ding lead developer, Robbie Ferguson, on his phone. So in cases where priority support is required, he's usually quite good to reply promptly.
 
-Corporate Sponsors
-------------------
+Sponsors
+--------
 
 .. |RNIT| image:: ../img/sponsor_logos/RNIT_Logo_Full_Dark.png
     :width: 200px
     :alt: Royal Network IT Solutions
     :target: https://www.rnitsolutions.com/
 
-.. |CAT5TV| image:: ../img/sponsor_logos/cat5tv_network_dark.png
-    :width: 200px
-    :alt: Category5 TV Network
-    :target: https://category5.tv/
-
-+---------+---------+
-| |RNIT|  | |CAT5TV||
-+---------+---------+
++---------+
+| |RNIT|  |
++---------+
 
 Patrons
 -------
@@ -126,6 +121,20 @@ Here is a list of those Patrons who kicked in that little bit extra to have thei
 * Steven Beukes
 
 Want your name on this list? `Become a Patron <https://patreon.com/nems>`__.
+
+A Product Of
+------------
+
+.. |CAT5TV| image:: ../img/sponsor_logos/cat5tv_network_dark.png
+    :width: 200px
+    :alt: Category5 TV Network
+    :target: https://category5.tv/
+
++----------+
+|| CAT5TV ||
++----------+
+
+NEMS Linux is developed by Robbie Ferguson for `The Category5 TV Network <https://category5.tv>`__.
 
 Contribute to Project
 ---------------------
