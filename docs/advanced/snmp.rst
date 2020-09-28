@@ -40,7 +40,7 @@ There are several free MIB browsers available on the internet. Most provide a tr
 snmpwalk will connect to the remote device and retrieve a list of OIDs.  Open a NEMS ssh session.
 The command format is 
 
-snmpwalk -v *snmp version* -c *snmp community* *IP*
+`snmpwalk -v *snmp version* -c *snmp community* *IP*`
 
 A list of OIDs will be returned.  Copy the results to a text document or spreadsheet for easy reference.
 
@@ -54,15 +54,15 @@ Testing with ./check_snmp
 From the NEMS ssh session, navigate to /usr/local/nagios/libexec.  The command is check_snmp and the options are:
 
 Usage:
-check_snmp -H <ip_address> -o  [-w warn_range] [-c crit_range]
+`check_snmp -H <ip_address> -o  [-w warn_range] [-c crit_range]
 [-C community] [-s string] [-r regex] [-R regexi] [-t timeout] [-e retries]
 [-l label] [-u units] [-p port-number] [-d delimiter] [-D output-delimiter]
 [-m miblist] [-P snmp version] [-N context] [-L seclevel] [-U secname]
-[-a authproto] [-A authpasswd] [-x privproto] [-X privpasswd] [-4|6]
+[-a authproto] [-A authpasswd] [-x privproto] [-X privpasswd] [-4|6]`
 
 In this example, uptime will be test using both the OID and Object name using the command format:
 
-*./checksnmp -H remote ip -c SNMP community -o OID or Object*
+`*./checksnmp -H remote ip -c SNMP community -o OID or Object*`
 
 In this example, System Uptime is check using both the OID and the Object name.  Note, the .0 is put on the end of sysUpTime, this denotes to collect child information and is required.
 
@@ -77,7 +77,7 @@ NEMS Check
 
 Follow these steps to configure a basic SNMP check.
 
-- Launch NEMS Configurator (NConf)C
+- Launch NEMS Configurator (NConf)
 - Click on Add for Advanced Services
 - Enter most fields according to environment standards (i.e. name, description, check/notifications periods, etc)
 - Select check_snmp in the check command field
@@ -93,11 +93,15 @@ Follow these steps to configure a basic SNMP check.
   :width: 600
   :align: center
 
+  Note the service parameters.
+
 Launch Adagios and validate the check ran with no issues.
 
 .. figure:: ../../img/snmp_007.png
-  :width: 300
-  :align: right
+  :width: 600
+  :align: center
+
+  Adagios shows our SNMP check is running perfectly.
 
 Links
 -----
