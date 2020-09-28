@@ -38,9 +38,12 @@ There are several free MIB browsers available on the internet. Most provide a tr
 **Method 2 - snmpwalk**
 
 snmpwalk will connect to the remote device and retrieve a list of OIDs.  Open a NEMS ssh session.
+
 The command format is 
 
-`snmpwalk -v *snmp version* -c *snmp community* *IP*`
+.. code-block:: console
+
+  snmpwalk -v *snmp version* -c *snmp community* *IP*
 
 A list of OIDs will be returned.  Copy the results to a text document or spreadsheet for easy reference.
 
@@ -54,6 +57,7 @@ Testing with ./check_snmp
 From the NEMS ssh session, navigate to /usr/local/nagios/libexec.  The command is check_snmp and the options are:
 
 Usage:
+
 .. code-block:: console
 
   check_snmp -H <ip_address> -o  [-w warn_range] [-c crit_range]
@@ -64,7 +68,9 @@ Usage:
 
 In this example, uptime will be test using both the OID and Object name using the command format:
 
-`*./checksnmp -H remote ip -c SNMP community -o OID or Object*`
+.. code-block:: console
+
+  *./checksnmp -H remote ip -c SNMP community -o OID or Object*
 
 In this example, System Uptime is check using both the OID and the Object name.  Note, the .0 is put on the end of sysUpTime, this denotes to collect child information and is required.
 
