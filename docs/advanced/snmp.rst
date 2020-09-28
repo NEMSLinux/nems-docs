@@ -19,8 +19,8 @@ This is the security method SNMP.  The basic types of communities are read-only 
 Ensure that the device to be monitored is SNMP capable and SNMP is configured.
 
 .. figure:: ../../img/snmp_001.png
-  :width: 300
-  :align: right
+  :width: 600
+  :align: center
 
 MIB/OID
 -------
