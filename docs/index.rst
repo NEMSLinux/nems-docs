@@ -15,11 +15,13 @@ NEMS Linux documentation, work in progress.
     gettingstarted/initialization
     gettingstarted/connect
     gettingstarted/smtp
+    gettingstarted/smtpOutlook
     gettingstarted/generate_config
     gettingstarted/add_first_host
     gettingstarted/monitor_assets
     gettingstarted/notification_definitions
     gettingstarted/exercises
+   
 
 .. toctree::
     :maxdepth: 1
