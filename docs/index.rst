@@ -34,6 +34,12 @@ NEMS Linux documentation, work in progress.
     nems-cloud-services/checkin
 
 .. toctree::
+    :maxdepth: 2
+    :caption: Advanced Configuration
+
+    advanced/snmp
+
+.. toctree::
     :maxdepth: 1
     :caption: Changelogs
     
