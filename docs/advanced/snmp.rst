@@ -54,11 +54,13 @@ Testing with ./check_snmp
 From the NEMS ssh session, navigate to /usr/local/nagios/libexec.  The command is check_snmp and the options are:
 
 Usage:
-`check_snmp -H <ip_address> -o  [-w warn_range] [-c crit_range]
-[-C community] [-s string] [-r regex] [-R regexi] [-t timeout] [-e retries]
-[-l label] [-u units] [-p port-number] [-d delimiter] [-D output-delimiter]
-[-m miblist] [-P snmp version] [-N context] [-L seclevel] [-U secname]
-[-a authproto] [-A authpasswd] [-x privproto] [-X privpasswd] [-4|6]`
+.. code-block:: bash
+
+  check_snmp -H <ip_address> -o  [-w warn_range] [-c crit_range]
+  [-C community] [-s string] [-r regex] [-R regexi] [-t timeout] [-e retries]
+  [-l label] [-u units] [-p port-number] [-d delimiter] [-D output-delimiter]
+  [-m miblist] [-P snmp version] [-N context] [-L seclevel] [-U secname]
+  [-a authproto] [-A authpasswd] [-x privproto] [-X privpasswd] [-4|6]
 
 In this example, uptime will be test using both the OID and Object name using the command format:
 
