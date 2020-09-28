@@ -54,7 +54,7 @@ Testing with ./check_snmp
 From the NEMS ssh session, navigate to /usr/local/nagios/libexec.  The command is check_snmp and the options are:
 
 Usage:
-.. code-block:: bash
+.. code-block:: console
 
   check_snmp -H <ip_address> -o  [-w warn_range] [-c crit_range]
   [-C community] [-s string] [-r regex] [-R regexi] [-t timeout] [-e retries]

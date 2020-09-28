@@ -58,7 +58,7 @@ If editing existing step-by-step instructions, please be particularly mindful th
 
     Here is some code.
     Here is the second line of code.
-    If this is the final line of code, simply have a carriage return follwoing it.
+    If this is the final line of code, simply have a carriage return following it.
 ```
 
 #### Tip Block
@@ -67,7 +67,7 @@ If editing existing step-by-step instructions, please be particularly mindful th
 .. Tip:: Text for the tip is here
 ```
 
-#### Excercise Block
+#### Exercise Block
 
 ```
 .. admonition:: Exercise
@@ -75,3 +75,4 @@ If editing existing step-by-step instructions, please be particularly mindful th
   
   Text for the exercise is here
 ```
+
