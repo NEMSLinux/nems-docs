@@ -55,7 +55,6 @@ NEMS Linux documentation, work in progress.
     :caption: Hardware
 
     accessories/index
-    accessories/PiVoyager
         
 .. toctree::
     :maxdepth: 1
