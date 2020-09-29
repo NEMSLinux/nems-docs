@@ -34,7 +34,7 @@ Why does Cockpit have greyed-out features? I can't change anything!
 -------------------------------------------------------------------
 
 -  As per `the Cockpit
-   docs <https://docs.nemslinux.com/features/cockpit>`__: make sure you
+   docs <https://docs2.nemslinux.com/en/latest/apps/cockpit.html>`__: make sure you
    also check the box “use my password for privileged tasks” while
    logging in. Otherwise your level of access will match the
    non-elevated user and all features which require root access will be
