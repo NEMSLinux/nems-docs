@@ -42,7 +42,7 @@ Installation
     pins). *Never* connect power to both.
 
 7.  If the Raspberry Pi does not immediately begin to power itself up,
-    short-tap the power button on your PiVoyager\ |image3|.
+    short-tap the power button on your PiVoyager
 
 8.  Prepare a LiPo or Li-Ion battery that matches the following
     requirements:
@@ -55,9 +55,11 @@ Installation
        solder the battery leads to the two pin header.
 
      .. figure:: ../../img/std_pivoyager-conn-bat.jpg
-  :width: 600
-  :align: center
-  :alt: PiVoyager Battery Connector
+       :width: 600
+       :align: center
+       :alt: PiVoyager Battery Connector
+
+
 9.  Observe the polarity. There are + and - signs on the board that
     serve as polarity indicators. If your battery's polarity is
     incorrect, snip the leads and reverse them with some solder tinning
@@ -108,7 +110,6 @@ To test if your piVoyager watchdog is working, stop the heartbeat and
 wait 2 minutes:
 
 .. code-block:: console
-
 sudo kill -9 $(cat /var/run/nems-pivoyager.pid)
 
 
