@@ -16,7 +16,7 @@ NEMS Linux documentation, work in progress.
     gettingstarted/install
     gettingstarted/initialization
     gettingstarted/connect
-    gettingstartedNetworking
+    gettingstarted/Networking
     gettingstarted/smtp
     gettingstarted/smtpOutlook
     gettingstarted/generate_config
