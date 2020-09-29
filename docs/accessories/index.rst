@@ -7,6 +7,8 @@ NEMS Accessories
 
     temper
 
+.. toctree::
+    :maxdepth: 2
     :caption: Raspberry Pi
 
     PiVoyager
