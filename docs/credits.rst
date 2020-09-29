@@ -9,4 +9,4 @@ The following people have contributed to the NEMS Linux documentation:
 
 * Bill Marshall
 
-Sending a Push Request? Please make sure to also add your name to this list.
+Sending a Pull Request? Please make sure to also add your name to this list.
