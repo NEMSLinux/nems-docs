@@ -14,6 +14,7 @@ NEMS Linux documentation, work in progress.
     gettingstarted/install
     gettingstarted/initialization
     gettingstarted/connect
+    gettingstarted/networking
     gettingstarted/smtp
     gettingstarted/smtpOutlook
     gettingstarted/generate_config
@@ -21,7 +22,7 @@ NEMS Linux documentation, work in progress.
     gettingstarted/monitor_assets
     gettingstarted/notification_definitions
     gettingstarted/exercises
-   
+    gettingstarted/faq
 
 .. toctree::
     :maxdepth: 1
