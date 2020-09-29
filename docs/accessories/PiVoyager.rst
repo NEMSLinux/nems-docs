@@ -1,5 +1,5 @@
-PiVoyager
-=========
+Omzlo PiVoyager Smart UPS and Watchdog for Raspberry Pi
+=======================================================
 
 The `Omzlo PiVoyager <https://cat5.tv/pivoyager>`__ is a pHat for
 Raspberry Pi that allows programmable power events to take place, and
@@ -23,7 +23,6 @@ Installation
   :width: 600
   :align: center
   :alt: PiVoyager Pin out
-
 
 1.  Solder the 40-pin GPIO header to your PiVoyager if required.
 
@@ -116,4 +115,3 @@ wait 2 minutes:
 
 This should not be done on a production server (it is akin to pulling
 the power on a live system).
-
