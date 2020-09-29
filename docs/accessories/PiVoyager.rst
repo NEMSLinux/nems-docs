@@ -55,7 +55,7 @@ Installation
        solder the battery leads to the two pin header.
 
      .. figure:: ../../img/std_pivoyager-conn-bat.jpg
-       :width: 600
+       :width: 100
        :align: center
        :alt: PiVoyager Battery Connector
 
@@ -110,7 +110,8 @@ To test if your piVoyager watchdog is working, stop the heartbeat and
 wait 2 minutes:
 
 .. code-block:: console
-sudo kill -9 $(cat /var/run/nems-pivoyager.pid)
+
+    sudo kill -9 $(cat /var/run/nems-pivoyager.pid)
 
 
 This should not be done on a production server (it is akin to pulling
