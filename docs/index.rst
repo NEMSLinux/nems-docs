@@ -10,10 +10,13 @@ NEMS Linux documentation, work in progress.
     :maxdepth: 2
     :caption: Getting Started Guide
 
+
     gettingstarted/introduction
+    gettingstatred/FAQ
     gettingstarted/install
     gettingstarted/initialization
     gettingstarted/connect
+    gettingstartedNetworking
     gettingstarted/smtp
     gettingstarted/smtpOutlook
     gettingstarted/generate_config
