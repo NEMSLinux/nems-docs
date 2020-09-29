@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 PiVoyager
 =========
+=======
+Omzlo PiVoyager Smart UPS and Watchdog for Raspberry Pi
+=======================================================
+>>>>>>> master
 
 The `Omzlo PiVoyager <https://cat5.tv/pivoyager>`__ is a pHat for
 Raspberry Pi that allows programmable power events to take place, and
@@ -24,7 +29,10 @@ Installation
   :align: center
   :alt: PiVoyager Pin out
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 1.  Solder the 40-pin GPIO header to your PiVoyager if required.
 
 2.  Safely power off your Raspberry Pi-powered NEMS Server.
@@ -116,4 +124,7 @@ wait 2 minutes:
 
 This should not be done on a production server (it is akin to pulling
 the power on a live system).
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
