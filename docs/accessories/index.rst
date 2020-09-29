@@ -2,7 +2,11 @@ NEMS Accessories
 ================
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :caption: Platform Agnostic
 
     temper
+
+    :caption: Raspberry Pi
+
+    PiVoyager

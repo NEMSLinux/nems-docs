@@ -55,7 +55,7 @@ NEMS Linux documentation, work in progress.
     :caption: Hardware
 
     accessories/index
-    
+        
 .. toctree::
     :maxdepth: 1
     :caption: Credits
