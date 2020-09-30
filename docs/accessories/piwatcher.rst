@@ -16,9 +16,10 @@ Server Overview on your NEMS Dashboard.
 
 To test if your piWatcher is working, stop the heartbeat and wait 2
 minutes:
+
 .. code-block:: console
 
-sudo kill -9 $(cat /var/run/nems-piwatcher.pid)
+    sudo kill -9 $(cat /var/run/nems-piwatcher.pid)
 
 This should not be done on a production server (it is akin to pulling
 the power on a live system).
