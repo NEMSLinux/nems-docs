@@ -13,3 +13,4 @@ NEMS Accessories
 
     pivoyager
     piwatcher
+    omzlo-warninglight-phat
