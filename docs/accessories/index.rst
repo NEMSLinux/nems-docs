@@ -12,3 +12,4 @@ NEMS Accessories
     :caption: Raspberry Pi
 
     PiVoyager
+    PiWatcher
