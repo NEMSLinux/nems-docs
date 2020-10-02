@@ -87,7 +87,11 @@ Instrumentation services are running.
 -  Scroll down to the *Remote Registry service*. Verify that the service
    is started and is set to **Automatic**.
 
-|image1|
+.. figure:: ../../img/wmi_windows_01.jpg
+  :width: 600
+  :align: center
+  :alt: Remote Registry
+
 
 By default even if the Remote Registry service is started Windows 7 and
 above systems will deny remote access to the registry.
@@ -95,12 +99,18 @@ above systems will deny remote access to the registry.
 -  Scroll down to the *Server* service. Verify that the service is
    started and set to **Automatic**.
 
-|image2|
+.. figure:: ../../img/wmi_windows_02.jpg
+  :width: 600
+  :align: center
+  :alt: Server
 
 -  Scroll down to the *Windows Management Instrumentation* service.
    Verify that it too is started and set to **Automatic**.
 
-|image3|
+.. figure:: ../../img/wmi_windows_03.jpg
+  :width: 600
+  :align: center
+  :alt: Windows Management Instrumentation
 
 **Grant minimal WMI permissions to the remote user**
 
@@ -300,55 +310,3 @@ Bill, also known as UltimateBugHunter-NitPicker on our Discord server.
 Bill setup a test environment, tested, documented, and screen captured
 the entire setup process and submitted it for inclusion in the official
 docs. Thanks Bill!
-
-.. |image1| image:: Pictures/100000000000032000000249B8523631F012D592.png
-   :width: 8.3335in
-   :height: 6.0937in
-.. |image2| image:: Pictures/10000000000003200000024953448CEFD0573666.png
-   :width: 8.3335in
-   :height: 6.0937in
-.. |image3| image:: Pictures/100000000000026C00000120E775BD5E28780F2E.png
-   :width: 6.4583in
-   :height: 3in
-.. |image4| image:: Pictures/100000000000011C000001ECA3C69F80F358C74F.png
-   :width: 2.9583in
-   :height: 5.1252in
-.. |image5| image:: Pictures/1000000000000192000001C81CDD5F367B7DDD4B.png
-   :width: 4.1874in
-   :height: 4.75in
-.. |image6| image:: Pictures/100000000000016A000001C64C8071EE76AD3F6E.png
-   :width: 3.7709in
-   :height: 4.7291in
-.. |image7| image:: Pictures/10000000000001CB00000100524A25CC3556E426.png
-   :width: 4.7811in
-   :height: 2.6665in
-.. |image8| image:: Pictures/100000000000016C000001C336957345B6C3FDE5.png
-   :width: 3.7917in
-   :height: 4.698in
-.. |image9| image:: Pictures/100000000000016C000001C2977307C363C0D8AD.png
-   :width: 3.7917in
-   :height: 4.6874in
-.. |image10| image:: Pictures/100000000000018E0000022E1F0B0A64FF819A5D.png
-   :width: 4.1457in
-   :height: 5.8126in
-.. |image11| image:: Pictures/1000000000000302000002329741F56574B1F5DC.png
-   :width: 8.0209in
-   :height: 5.8543in
-.. |image12| image:: Pictures/100000000000016D000001C5F9708EBB47876668.png
-   :width: 3.802in
-   :height: 4.7189in
-.. |image13| image:: Pictures/10000000000003F000000232618009E94CA41A0B.png
-   :width: 10.5in
-   :height: 5.8543in
-.. |image14| image:: Pictures/1000000000000200000001FD895D4F23426C4F45.png
-   :width: 5.3335in
-   :height: 5.302in
-.. |image15| image:: Pictures/10000000000001FC00000200D728C781C59A2852.png
-   :width: 5.2917in
-   :height: 5.3335in
-.. |image16| image:: Pictures/100000000000028A000002A80A244B41E498D1AF.png
-   :width: 6.7709in
-   :height: 7.0835in
-.. |image17| image:: Pictures/1000020100000215000001A9D03C14C2F98E4720.png
-   :width: 7.4016in
-   :height: 5.902in
