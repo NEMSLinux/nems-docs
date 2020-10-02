@@ -23,7 +23,6 @@ NEMS Linux documentation, work in progress.
     gettingstarted/notification_definitions
     gettingstarted/exercises
     gettingstarted/faq
-    gettingstarted/WMI
 
 .. toctree::
     :maxdepth: 1
