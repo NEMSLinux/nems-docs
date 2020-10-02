@@ -55,4 +55,4 @@ Developers
 
 NEMS Warninglight is a software component of NEMS Linux developed by `Robbie Ferguson <https://twitter.com/robbieferguson>`__ for `Category5 TV Network <https://category5.tv/>`__.
 
-NEMS Warninglight pHAT is an accessory designed and developed by `Alain Pannetrat <https://twitter.com/alainpannetrat>`__ for `Omzlo <https://omzlo.com/`__.
+NEMS Warninglight pHAT is an accessory designed and developed by `Alain Pannetrat <https://twitter.com/alainpannetrat>`__ for `Omzlo <https://omzlo.com/>`__.
