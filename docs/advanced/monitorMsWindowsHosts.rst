@@ -171,9 +171,15 @@ following check boxes in the Allow column:
 3. Remote Enable
 4. Read Security
 
-|image8|
+.. figure:: ../../img/wmi_windows_08.jpg
+  :width: 600
+  :align: center
+  :alt: Execute Methods and Enable Account
 
-|image9|
+.. figure:: ../../img/wmi_windows_09.jpg
+  :width: 600
+  :align: center
+  :alt: Remote Enable and Read Security
 
 **To grant DCOM permissions to a remote user**
 
@@ -190,7 +196,10 @@ WMI.
    computer* checkbox.
 6. Click **Apply**.
 
-|image10|
+.. figure:: ../../img/wmi_windows_10.jpg
+  :width: 600
+  :align: center
+  :alt: Enable Distributed COM
 
 1. In the My Computer Properties dialog box, click the COM Security tab.
 2. Under Access Permissions, click Edit Limits. Give your chosen user
@@ -202,13 +211,19 @@ WMI.
 5. In the Launch Permission dialog box, add the user or group name
    necessary for the remote user.
 
-|image11|
+.. figure:: ../../img/wmi_windows_11.jpg
+  :width: 600
+  :align: center
+  :alt: COM Security
 
 Grant the remote user all the permissions available in the Permissions
 for Administrators area by enabling all of the check boxes in the Allow
 column.
 
-|image12|
+.. figure:: ../../img/wmi_windows_12.jpg
+  :width: 600
+  :align: center
+  :alt: Permissions
 
 Click **OK** and/or **Yes** to close the dialog boxes.
 
@@ -222,7 +237,10 @@ of a domain.**
 4. Change the value of *Network access: Sharing and security model for
    local accounts.* to **Classic**.
 
-|image13|
+.. figure:: ../../img/wmi_windows_13.jpg
+  :width: 600
+  :align: center
+  :alt: Security Options
 
 **Open the Windows firewall for WMI traffic**
 
