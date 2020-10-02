@@ -1,5 +1,5 @@
-Argon ONE
-=========
+Argon ONE Raspberry Pi 4 Case
+=============================
 
 .. figure:: ../../img/argon_one.jpg
   :width: 600
