@@ -67,6 +67,12 @@ If editing existing step-by-step instructions, please be particularly mindful th
 .. Tip:: Text for the tip is here
 ```
 
+#### Warning Block
+
+```
+.. Warning:: Text for the tip is here
+```
+
 #### Exercise Block
 
 ```
