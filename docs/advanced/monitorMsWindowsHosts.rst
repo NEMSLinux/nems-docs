@@ -134,22 +134,34 @@ for a remote user.**
 On the monitored host machine, right-click on *My Computer*, and
 navigate to Manage \| Services and Applications \| WMI Control.
 
-|image4|
+|.. figure:: ../../img/wmi_windows_04.jpg
+  :width: 600
+  :align: center
+  :alt: WMI Control
 
 1. Right-click WMI Control and click Properties.
 2. In the WMI Control Properties dialog box, click the Security tab.
 3. Expand the Root node and select CIMV2, then click Security.
 
-|image5|
+.. figure:: ../../img/wmi_windows_05.jpg
+  :width: 600
+  :align: center
+  :alt: CIMV2
 
 Select the user in the *Group or user names* box. If not listed
 select **Add**.
 
-|image6|
+.. figure:: ../../img/wmi_windows_06.jpg
+  :width: 600
+  :align: center
+  :alt: Add User to CIMV2
 
 Type in the user name and click **Check Names**.
 
-|image7|
+.. figure:: ../../img/wmi_windows_07.jpg
+  :width: 600
+  :align: center
+  :alt: Check Names
 
 Grant the required permissions to the remote user by enabling the
 following check boxes in the Allow column:
