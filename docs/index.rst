@@ -41,6 +41,7 @@ NEMS Linux documentation, work in progress.
     :caption: Advanced Configuration
 
     advanced/snmp
+    advanced/monitorMsWindowsHosts
 
 .. toctree::
     :maxdepth: 1
