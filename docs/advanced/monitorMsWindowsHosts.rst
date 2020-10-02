@@ -254,7 +254,7 @@ instrumentation (wmi)” new enable=yes
 Enter the username and password of the user created on the Windows
 devices who was granted access to the WMI data.
 
-. figure:: ../../img/nems_sst_windows_domain_credentials.png
+.. figure:: ../../img/nems_sst_windows_domain_credentials.png
   :width: 600
   :align: center
   :alt: SST Domain Credentials
@@ -269,7 +269,7 @@ Then click the drop-down arrow in the *check command* select list, and
 scroll down to the check_win\_\ *xxx* commands to choose the command you
 wish to add.
 
-. figure:: ../../img/nconf_add_advanced_service.png
+.. figure:: ../../img/nconf_add_advanced_service.png
   :width: 600
   :align: center
   :alt: Add advanced service
@@ -330,7 +330,7 @@ WMIC-based check commands.
    .. figure:: ../../img/nsclient-setup.png
     :width: 600
     :align: center
-    :alt: NCClient setup
+    :alt: NSClient setup
 
    -  Add your Windows host to NEMS.
 
