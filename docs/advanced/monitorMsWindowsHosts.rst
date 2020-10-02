@@ -134,7 +134,7 @@ for a remote user.**
 On the monitored host machine, right-click on *My Computer*, and
 navigate to Manage \| Services and Applications \| WMI Control.
 
-|.. figure:: ../../img/_wmi_windows_04.png
+.. figure:: ../../img/_wmi_windows_04.png
   :width: 600
   :align: center
   :alt: WMI Control
@@ -328,9 +328,9 @@ WMIC-based check commands.
    -  Screen should look a little something like this: 
 
    .. figure:: ../../img/_media/usage/_media/usage/nsclient-setup.png
-  :width: 600
-  :align: center
-  :alt: NCClient setup
+    :width: 600
+    :align: center
+    :alt: NCClient setup
 
    -  Add your Windows host to NEMS.
 
