@@ -34,10 +34,10 @@ You will need two separate power sources: one 5V USB input for the pHAT, which p
 Indications
 ~~~~~~~~~~~
 
+- **Red/Orange/Green Flashing** NEMS Linux is loading following boot and the pHAT is awaiting Warninglight state information.
 - **Green Solid** Your hosts and services are in an OK state.
 - **Orange Solid** At least one host or service has entered a Warning state.
-- **Orange Flashing** At least one host or service has entered an unknown state.
-- **Green Solid, Orange Flashing** Your hosts and services are in an OK state, however at least one is flapping.
+- **Green Solid, Orange Flashing** Your hosts and services are in an OK state, however at least one is in Unknown state.
 - **Red Solid** At least one host or service has entered a Critical state.
 
 Manufacture
