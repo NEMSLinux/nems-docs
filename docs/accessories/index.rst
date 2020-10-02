@@ -11,5 +11,5 @@ NEMS Accessories
     :maxdepth: 2
     :caption: Raspberry Pi
 
-    PiVoyager
-    PiWatcher
+    pivoyager
+    piwatcher
