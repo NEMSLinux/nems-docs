@@ -53,6 +53,6 @@ None yet. Working on getting CSA certification.
 Developers
 ~~~~~~~~~~
 
-NEMS Warninglight is a software component of NEMS Linux developed by <a href="https://twitter.com/robbieferguson" target="_blank">Robbie Ferguson</a> for <a href="https://Category5.TV" target="_blank">Category5 TV Network</a>.
+NEMS Warninglight is a software component of NEMS Linux developed by `Robbie Ferguson <https://twitter.com/robbieferguson>`__ for `Category5 TV Network <https://category5.tv/>`__.
 
-NEMS Warninglight pHAT is an accessory designed and developed by <a href="https://twitter.com/alainpannetrat" target="_blank">Alain Pannetrat</a> for <a href="https://omzlo.com/" target="_blank">Omzlo</a>.
+NEMS Warninglight pHAT is an accessory designed and developed by `Alain Pannetrat <https://twitter.com/alainpannetrat>`__ for `Omzlo <https://omzlo.com/`__.
