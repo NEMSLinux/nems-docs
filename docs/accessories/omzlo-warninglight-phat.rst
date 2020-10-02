@@ -1,7 +1,7 @@
 Omzlo NEMS Warninglight pHAT
 ============================
 
-The NEMS Warninglight pHAT from Omzlo is an i2c accessory for Raspberry Pi GPIO that provides visual feedback by way of status lights. For testing or convenience, the pHAT features state LEDs on-board, which, like a connected tower signal light, will indicate the state of your environment.
+The NEMS Warninglight pHAT from Omzlo is an i2c accessory for Raspberry Pi GPIO that provides visual feedback by way of status lights. For testing or convenience, the pHAT features state LEDs on-board, which, like a connected tower signal light, will indicate the state of your environment. In addition to the signal light functionality, a built-in watchdog (based on the :doc:`Omzlo PiWatcher <piwatcher>`) keeps an eye on your NEMS Server and will hard reboot it if it becomes unresponsive.
 
 .. figure:: ../../img/omzlo-warninglight-prototype.jpg
   :width: 600
