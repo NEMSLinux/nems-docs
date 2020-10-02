@@ -24,6 +24,12 @@ NEMS Linux documentation, work in progress.
     gettingstarted/exercises
     gettingstarted/faq
 
+ .. toctree::
+     :maxdepth: 2
+     :caption: Commands
+
+     commands/nems_commands
+
 .. toctree::
     :maxdepth: 1
     :caption: Applications
