@@ -1,7 +1,12 @@
 Argon ONE
 =========
 
-|image1|
+.. figure:: ../../img/argon_one.jpg
+  :width: 600
+  :align: center
+  :alt: Argon1 Case for Raspberry Pi 4
+
+  Argon1 Case for Raspberry Pi 4
 
 The stylish aluminum alloy body, the combination of both passive and
 active cooling, and a power button that safely controls the power state
