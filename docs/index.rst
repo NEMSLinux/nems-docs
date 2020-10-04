@@ -35,6 +35,7 @@ NEMS Linux documentation, work in progress.
     :caption: Applications
 
     apps/cockpit
+    apps/nems-dashboard
 
 .. toctree::
     :maxdepth: 2
