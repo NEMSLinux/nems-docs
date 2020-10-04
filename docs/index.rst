@@ -48,6 +48,7 @@ NEMS Linux documentation, work in progress.
     :caption: Advanced Configuration
 
     advanced/snmp
+    advanced/mrtg
     advanced/monitorMsWindowsHosts
 
 .. toctree::
