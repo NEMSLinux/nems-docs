@@ -25,7 +25,7 @@ This should not be done on a production server (it is akin to pulling
 the power on a live system).
 
 .. figure:: ../../img/piwatcher.png
-  :width: 600
+  :width: 300
   :align: center
   :alt: PiWatcher
 
