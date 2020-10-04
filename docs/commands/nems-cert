@@ -1,6 +1,11 @@
 Command: nems-cert
 ==================
 
+.. figure:: ../../img/screenshot_from_2017-11-09_22-40-23.png
+  :width: 600
+  :align: center
+  :alt: nems-cert
+
 When you
 run `nems-init <https://docs.nemslinux.com/commands/nems-init>`__ NEMS
 generates your SSL certificates. However, if you ever want to update
