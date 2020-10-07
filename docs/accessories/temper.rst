@@ -58,7 +58,7 @@ Terminal Output
 
 To receive the JSON output, type: `nems-info temper`
 
-Sample output from a TEMPer2:
+Sample output from a TEMPer2 with an external sensor attached:
 
 .. code-block:: json
 
