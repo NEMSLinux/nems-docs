@@ -14,7 +14,9 @@ wipe out your configuration.
 
 So *nems-cert* has you covered.
 
-**sudo** nems-cert
+.. code-block:: console
+
+    sudo nems-cert
 
 This will take you through the certificate creation process once again,
 generate your certificates and certificate authority, install them, and
@@ -73,8 +75,10 @@ Viewing Your Certificate Information
 Once you have generated your SSL Certificate, you can view it with the
 following command:
 
-**sudo** nems-info sslcert
+.. code-block:: console
 
+    sudo nems-info sslcert
+    
 Use of nems-cert Outside of NEMS Linux
 --------------------------------------
 
@@ -88,7 +92,9 @@ Code <https://raw.githubusercontent.com/Cat5TV/nems-scripts/master/gen-cert.sh>`
 If using nems-cert (or, gen-cert.sh in this case) outside NEMS, you'll
 simply need to install a few components:
 
-**sudo** apt update && **sudo** apt **install** openssl **dialog**
+.. code-block:: console
 
+    sudo apt update && sudo apt install openssl dialog
+    
 You'll also want to change where the certs are saved to within the
 source code since the NEMS locations won't be relevant.
