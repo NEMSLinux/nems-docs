@@ -56,7 +56,13 @@ NEMS Linux includes support for TEMPer temperature and humidity sensor data.
 Terminal Output
 ---------------
 
-To receive the JSON output, type `nems-info temper`
+To receive the JSON output, type: `nems-info temper`
+
+Sample output:
+
+.. code-block:: json
+
+    {"0":{"vendorid":16701,"productid":8455,"devices":["hidraw0","hidraw1"],"firmware":"TEMPerX_V3.3","internal temperature":30.12,"external temperature":21.68},"sensors":{"thermal":1,"temp_location":"external","humidity":0,"hum_location":"not_present"},"output":{"temperature":21.68,"humidity":0}}
 
 TEMPer devices seem to have an issue on low-powered systems (such as Raspberry Pi) where due to the low power to the USB port, temper.py will respond with errors such as:
 
