@@ -29,7 +29,7 @@ Test the email notification settings of your NEMS Linux server.
 Quickly run all rolling updates and bring in new patches and fixes with
 one quick command.
 
-`nems-restore <https://docs2.nemslinux.com/en/latest/commands/nems-restore.html >`__ -
+`nems-restore <https://docs2.nemslinux.com/en/latest/commands/nems-restore.html>`__ -
 NEMS Migrator's restore component.
 
 `nems-update <https://docs.nemslinux.com/commands/nems-update>`__ -
