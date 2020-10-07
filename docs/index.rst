@@ -35,6 +35,7 @@ NEMS Linux documentation, work in progress.
     :caption: Applications
 
     apps/cockpit
+    apps/nems-dashboard
 
 .. toctree::
     :maxdepth: 2
@@ -47,6 +48,7 @@ NEMS Linux documentation, work in progress.
     :caption: Advanced Configuration
 
     advanced/snmp
+    advanced/mrtg
     advanced/monitorMsWindowsHosts
 
 .. toctree::
