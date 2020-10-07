@@ -13,7 +13,7 @@ Migrator's backup component.
 `nems-benchmark <https://docs.nemslinux.com/commands/nems-benchmark>`__ -
 Benchmark your NEMS Linux server.
 
-`nems-cert <https://docs.nemslinux.com/commands/nems-cert>`__ - Generate
+`nems-cert <https://docs2.nemslinux.com/en/latest/commands/nems-cert.html>`__ - Generate
 or re-generate NEMS SSL Certificates.
 
 `nems-info <https://docs.nemslinux.com/commands/nems-info>`__ - Displays
