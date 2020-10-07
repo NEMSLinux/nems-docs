@@ -35,30 +35,30 @@ Supported Devices
 
 Support is provided via `temper <https://github.com/urwen/temper>`__.
 
-NEMS Linux includes support for TEMPer temperature and humidity sensor data.
+NEMS Linux includes support for TEMPer temperature and humidity sensor data. This table also shows which have internal or external sensors. NEMS Linux will always opt for external sensor data, if present.
 
-+------------+-----------+-----------------+------+-----+
-| Product    | Id        | Firmware        | Temp | Hum |
-+============+===========+=================+======+=====+
-| TEMPer     | 0c45:7401 | TEMPerF1.4      | ✔    | ✘   |
-+------------+-----------+-----------------+------+-----+
-| TEMPer     | 413d:2107 | TEMPerGold_V3.1 | ✔    | ✘   |
-+------------+-----------+-----------------+------+-----+
-| TEMPerHUM  | 413d:2107 | TEMPerX_V3.1    | ✔    | ✔   |
-+------------+-----------+-----------------+------+-----+
-| TEMPer2    | 413d:2107 | TEMPerX_V3.3    | ✔    | ✘   |
-+------------+-----------+-----------------+------+-----+
-| TEMPer1F   | 413d:2107 | TEMPerX_V3.3    | ✔    | ✘   |
-+------------+-----------+-----------------+------+-----+
-| TEMPerX232 | 1a86:5523 | TEMPerX232_V2.0 | ✔    | ✔   |
-+------------+-----------+-----------------+------+-----+
++------------+-----------+-----------------+------+-----+-----+-----+
+| Product    | Id        | Firmware        | Temp | Hum | Int | Ext |
++============+===========+=================+======+=====+=====+=====+
+| TEMPer     | 0c45:7401 | TEMPerF1.4      | ✔    | ✘   | ✔   | ✘   |
++------------+-----------+-----------------+------+-----+-----+-----+
+| TEMPer     | 413d:2107 | TEMPerGold_V3.1 | ✔    | ✘   | ✔   | ✘   |
++------------+-----------+-----------------+------+-----+-----+-----+
+| TEMPerHUM  | 413d:2107 | TEMPerX_V3.1    | ✔    | ✔   | ✔   | ✘   |
++------------+-----------+-----------------+------+-----+-----+-----+
+| TEMPer2    | 413d:2107 | TEMPerX_V3.3    | ✔    | ✘   | ✔   | ✔   |
++------------+-----------+-----------------+------+-----+-----+-----+
+| TEMPer1F   | 413d:2107 | TEMPerX_V3.3    | ✔    | ✘   | ✘   | ✔   |
++------------+-----------+-----------------+------+-----+-----+-----+
+| TEMPerX232 | 1a86:5523 | TEMPerX232_V2.0 | ✔    | ✔   | ✔   | ✔   |
++------------+-----------+-----------------+------+-----+-----+-----+
 
 Terminal Output
 ---------------
 
 To receive the JSON output, type: `nems-info temper`
 
-Sample output:
+Sample output from a TEMPer2:
 
 .. code-block:: json
 
