@@ -61,6 +61,13 @@ NEMS Linux documentation, work in progress.
     changelogs/1.0
 
 .. toctree::
+    :maxdepth: 1
+    :caption: To-Do List and Report Bugs
+
+    todolist/todolist
+    todolist/reportissues
+
+.. toctree::
     :maxdepth: 2
     :caption: Hardware
 
