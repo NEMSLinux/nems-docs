@@ -52,6 +52,12 @@ NEMS Linux documentation, work in progress.
     advanced/monitorMsWindowsHosts
 
 .. toctree::
+    :maxdepth: 2
+    :caption: Hardware
+
+    accessories/index
+  
+.. toctree::
     :maxdepth: 1
     :caption: Changelogs
     
@@ -66,13 +72,22 @@ NEMS Linux documentation, work in progress.
 
     todolist/todolist
     todolist/reportissues
-
+  
 .. toctree::
-    :maxdepth: 2
-    :caption: Hardware
+    :maxdepth: 1
+    :caption: Miscellaneous
 
-    accessories/index
-        
+    misc/selfsignedcertificates
+    misc/backupnemsfile
+    misc/nemszram
+    misc/nemslicensing
+    misc/nemsbranding
+    misc/filefolderlocation
+    misc/anonymousstats
+    misc/linuxsourcecode
+    misc/md5checksums
+    misc/vendorbranding
+     
 .. toctree::
     :maxdepth: 1
     :caption: Credits
