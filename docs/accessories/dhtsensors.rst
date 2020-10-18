@@ -25,7 +25,10 @@ The DHT11 sensor is reasonably accurate, but has a fairly narrow range,
 making it only suitable for indoor use where it is known the room
 temperature and humidity will not fall outside the available thresholds.
 
-|image1|
+.. figure:: ../../img/dht11.jpg
+  :width: 150
+  :align: left
+  :alt: DHT11 Sensor
 
 -  20-80% humidity readings with 5% accuracy
 -  0-50°C temperature readings ±2°C accuracy
@@ -41,7 +44,10 @@ temperatures and humidity. This can be useful if you wish to use NEMS
 Linux to alert you should your pipes be at risk of freezing, or your
 freezer compressor failing.
 
-|image2|
+.. figure:: ../../img/dht22.jpg
+  :width: 150
+  :align: left
+  :alt: DHT22 Sensor
 
 -  0-100% humidity readings with 2-5% accuracy
 -  -40 to 80°C temperature readings ±0.5°C accuracy
@@ -53,7 +59,10 @@ The pinout for the DHT11, DHT22 and AM2302 are the same, so no matter
 which DHT sensor you choose, it is an identical process to making it
 work with your NEMS Server.
 
-|image3|
+.. figure:: ../../img/dht11_dht22_pinout.png
+  :width: 150
+  :align: left
+  :alt: DHT11 DHT22 Pinout
 
 Place a 10k resistor between Pin 1 and Pin 2, which will ensure reliable
 data output from the sensor when it switches from input to output. If
@@ -81,7 +90,7 @@ JSON Output
 NEMS Linux can output JSON temperature and humidity data from the DHT11
 and DHT22/AM2302 device.
 
-nems-info [dht11|dht22]
+``nems-info [dht11|dht22]``
 
 Check Commands
 --------------
