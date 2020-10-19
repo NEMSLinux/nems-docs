@@ -60,6 +60,7 @@ NEMS Linux documentation, work in progress.
     :maxdepth: 2
     :caption: Advanced Configuration
 
+    advanced/nemsupgrade
     advanced/snmp
     advanced/mrtg
     advanced/monitorMsWindowsHosts
