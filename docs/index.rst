@@ -14,6 +14,7 @@ NEMS Linux documentation, work in progress.
     gettingstarted/platforms
     gettingstarted/install
     gettingstarted/initialization
+    gettingstarted/nemsadminpassword
     gettingstarted/connect
     gettingstarted/networking
     gettingstarted/smtp
