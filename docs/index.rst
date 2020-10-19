@@ -11,7 +11,7 @@ NEMS Linux documentation, work in progress.
     :caption: Getting Started Guide
 
     gettingstarted/introduction
-    gettingstatred/platforms
+    gettingstarted/platforms
     gettingstarted/install
     gettingstarted/initialization
     gettingstarted/connect
