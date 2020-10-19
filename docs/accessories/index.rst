@@ -6,6 +6,7 @@ NEMS Accessories
     :caption: Platform Agnostic
 
     temper
+    dhtsensors
 
 .. toctree::
     :maxdepth: 1
