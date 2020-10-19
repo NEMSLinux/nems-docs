@@ -14,6 +14,7 @@ NEMS Linux documentation, work in progress.
     gettingstarted/platforms
     gettingstarted/install
     gettingstarted/initialization
+    gettingstarted/nemsadminpassword
     gettingstarted/connect
     gettingstarted/networking
     gettingstarted/smtp
@@ -46,6 +47,7 @@ NEMS Linux documentation, work in progress.
     :maxdepth: 1
     :caption: Applications
 
+    apps/nemssst
     apps/cockpit
     apps/nems-dashboard
 
@@ -59,6 +61,7 @@ NEMS Linux documentation, work in progress.
     :maxdepth: 2
     :caption: Advanced Configuration
 
+    advanced/nemsupgrade
     advanced/snmp
     advanced/mrtg
     advanced/monitorMsWindowsHosts
