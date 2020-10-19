@@ -11,6 +11,7 @@ NEMS Linux documentation, work in progress.
     :caption: Getting Started Guide
 
     gettingstarted/introduction
+    gettingstarted/platforms
     gettingstarted/install
     gettingstarted/initialization
     gettingstarted/connect
@@ -23,6 +24,17 @@ NEMS Linux documentation, work in progress.
     gettingstarted/notification_definitions
     gettingstarted/exercises
     gettingstarted/faq
+
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Notifications
+
+    notifications/notificationsbysms
+    notifications/notificationsbywebhook
+    notifications/notificationsbytelegram
+    notifications/notificationsbypushover
+    notifications/pushovervstelegram
 
 .. toctree::
     :maxdepth: 2
