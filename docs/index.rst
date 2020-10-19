@@ -24,6 +24,17 @@ NEMS Linux documentation, work in progress.
     gettingstarted/exercises
     gettingstarted/faq
 
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Notifications
+
+    notifications/notificationsbysms
+    notifications/notificationsbywebhook
+    notifications/notificationsbytelegram
+    notifications/notificationsbypushover
+    notifications/pushovervstelegram
+
 .. toctree::
     :maxdepth: 2
     :caption: Commands
