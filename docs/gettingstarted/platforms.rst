@@ -32,34 +32,52 @@ complete list of supported platforms.
 Raspberry Pi
 ------------
 
-|image1|
+.. figure:: ../../img/raspberry_pi_3_b_plus.png
+  :width: 500
+  :align: center
+  :alt: Raspberry Pi 3 B Plus
 
 `BUY NOW <https://cat5.tv/pi/>`__
 
 Pine64
 ------
 
-|image2|
+.. figure:: ../../img/pinea64-plus.png
+  :width: 500
+  :align: center
+  :alt: Pine64 A64 Plus
 
 Hardkernel ODROID XU4
 ---------------------
 
-|image3|
+.. figure:: ../../img/odroid-xu4q.png
+  :width: 500
+  :align: center
+  :alt: Odroid XU4Q
 
 FriendlyElec
 ------------
 
-|image4|
+.. figure:: ../../img/nanopc-t4.png
+  :width: 400
+  :align: center
+  :alt: NanoPC T4
 
 Orange Pi
 ---------
 
-|image5|
+.. figure:: ../../img/orange-pi-3.png
+  :width: 500
+  :align: center
+  :alt: Orange Pi 3
 
 ASUS Tinker Board / S
 ---------------------
 
-|image6|
+.. figure:: ../../img/asus_tinker_board_s.png
+  :width: 500
+  :align: center
+  :alt: Asus Tinkerboard S
 
 ASUS Tinker Board S must be switched to Maskrom boot mode in order to
 boot from SD card. The built-in eMMC is not big enough to run NEMS Linux
@@ -68,15 +86,25 @@ from.
 Khadas VIM3
 -----------
 
-|image7|
+.. figure:: ../../img/khadas_vim3_basic.png
+  :width: 400
+  :align: center
+  :alt: Khadas VIM 3
 
 You can boot from SD or USB, then install NEMS Linux to the integrated
-eMMC storage by typing *sudo nems-install*
+eMMC storage by typing;
 
+.. code-block:: console
+
+    sudo nems-install
+    
 NEMS Linux Appliance
 --------------------
 
-|image8|
+.. figure:: ../../img/nems-fitlet2.png
+  :width: 500
+  :align: center
+  :alt: Fitlet 2
 
 *****************************
 NEMS Linux Virtual Appliance
@@ -297,7 +325,7 @@ With USB Support
 ~~~~~~~~~~~~~~~~
 
 To connect a USB device such
-as `temper <https://docs.nemslinux.com/hardware/temper>`__ to your
+as `temper <https://docs2.nemslinux.com/en/latest/accessories/temper.html>`__ to your
 Docker-based NEMS Server, first determine its /dev assignment on your
 host, and then run NEMS as follows, replacing ttyUSB0 with your actual
 USB device:
@@ -316,7 +344,9 @@ all other platforms.
 
 On the Docker host, simply run:
 
-docker exec -it nemslinux nems-init
+.. code-block:: console
+
+   docker exec -it nemslinux nems-init
 
 Access NEMS Linux CLI
 ---------------------
@@ -324,4 +354,6 @@ Access NEMS Linux CLI
 Should you have need to access the NEMS Linux CLI, you may do so by
 launching *bash* in your container.
 
-docker exec -it nemslinux bash
+.. code-block:: console
+
+   docker exec -it nemslinux bash
