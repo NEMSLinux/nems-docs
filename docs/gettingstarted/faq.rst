@@ -22,13 +22,13 @@ How do I configure WiFi?
 ------------------------
 
 -  See the Wireless Network Interfaces section of the `Networking
-   documentation <https://docs.nemslinux.com/networking#wireless_network_interface>`__.
+   documentation <https://docs2.nemslinux.com/en/latest/gettingstarted/networking.html#wireless-network-interface>`__.
 
 How do I set a static IP address?
 ---------------------------------
 
 -  See the IP Address/ Settings section of the `Networking
-   documentation <https://docs.nemslinux.com/networking#ip_addressdns_settings>`__.
+   documentation <https://docs2.nemslinux.com/en/latest/gettingstarted/networking.html#static-ip-address>`__.
 
 Why does Cockpit have greyed-out features? I can't change anything!
 -------------------------------------------------------------------
