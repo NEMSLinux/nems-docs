@@ -74,7 +74,7 @@ connection. However, this may be the only option in some environments,
 and so great effort has gone into ensuring it will work as well as
 possible.
 
-**Raspberry Pi users:** *Do not* use raspi-config for your WiFi.
+.. Warning:: **Raspberry Pi users:** *Do not* use raspi-config for your WiFi.
 
 In order to be able to activate/deactivate your WiFi connection in
 Cockpit, you must first add the connection information to your NEMS
@@ -84,25 +84,35 @@ to activate WiFi.
 
 Determine if your WiFi radio is enabled or disabled:
 
-sudo nmcli radio wifi
+.. code-block:: console
+
+   sudo nmcli radio wifi
 
 If it is disabled, enable it:
 
-sudo nmcli radio wifi on
+.. code-block:: console
+
+   sudo nmcli radio wifi on
 
 Scan for available wireless networks:
 
-sudo nmcli device wifi list
+.. code-block:: console
+
+   sudo nmcli device wifi list
 
 Determine which is the one you wish to connect to and enter the
 following command:
 
-nmcli device wifi connect [SSID] password [password]
+.. code-block:: console
+
+   nmcli device wifi connect [SSID] password [password]
 
 Eg., if your network SSID is MyWiFi and your WiFi password is MyPass123,
 the command would look like this:
 
-nmcli device wifi connect MyWiFi password MyPass123
+.. code-block:: console
+
+   nmcli device wifi connect MyWiFi password MyPass123
 
 Now, you can enable or disable your wireless connection within
 Cockpit→Networking.
