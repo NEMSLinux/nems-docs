@@ -3,7 +3,7 @@ Notifications by Webhook
 
 .. figure:: ../../img/discord-nems-webhook.png
   :width: 300
-  :align: center
+  :align: right
   :alt: Webhook Notification
 
 Send notifications directly to your webhook. For example, have
