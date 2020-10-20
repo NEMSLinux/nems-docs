@@ -340,7 +340,7 @@ all other platforms.
 
 On the Docker host, simply run:
 
-docker exec -it nemslinux nems-init
+docker exec -it nemslinux nems-init``
 
 Access NEMS Linux CLI
 ---------------------
@@ -348,4 +348,4 @@ Access NEMS Linux CLI
 Should you have need to access the NEMS Linux CLI, you may do so by
 launching *bash* in your container.
 
-docker exec -it nemslinux bash
+``docker exec -it nemslinux bash``
