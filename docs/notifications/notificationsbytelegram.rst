@@ -5,7 +5,7 @@ Telegram is a free chat service with an  supporting Push notifications
 on Android and iOS.
 
 NEMS Linux
-includes *notify\_\ *\ **host**\ *\ \_by_telegram* and *notify\_\ *\ **service**\ *\ \_by_telegram*.
+includes *notify_host_by_telegram* and *notify_service_by_telegram*.
 
 It's fairly simple to setup, as long as you have your device (ie.,
 smartphone) and a computer/laptop handy.
@@ -18,7 +18,10 @@ Telegram account (it's free).
 
 3) Create a new message and search for *botfather*.
 
-|image1|
+.. figure:: ../../img/screenshot_2019-08-19-19-28-48-089_org.telegram.messenger.png
+  :width: 400
+  :align: center
+  :alt: Botfather
 
 4) Click on the BotFather bot result, and then click *Start* at the
 bottom of your app screen.
@@ -36,29 +39,47 @@ username.
 In particular, you'll need to remember your bot name (created in the
 step above) and the  token.
 
-|image2|
+.. figure:: ../../img/screenshot_2019-08-19-19-32-50-622_org.telegram.messenger.png
+  :width: 400
+  :align: center
+  :alt: Botfather 2
 
-8) Click *back*  followed by the hamburger menu  then choose *New
+8) Click *back* |back| followed by the hamburger menu |hamburger| then choose *New
 Group*.
+
+.. |back| image:: ../../img/back.png
+   :height: 2em
+
+.. |hamburger| image:: ../../img/hamburger.png
+   :height: 2em 
 
 9) Search for the bot you just created just as if it was a person, and
 click it to add the bot to your new group.
 
-|image3|
+.. figure:: ../../img/screenshot_2019-08-19-19-41-44-985_org.telegram.messenger.png
+  :width: 400
+  :align: center
+  :alt: New Group 200000
 
 Click your bot's name from the search results, followed by the right
-arrow |image4| to proceed to the next screen.
+arrow |rightarrow| to proceed to the next screen.
+
+.. |rightarrow| image:: ../../img/rightarrow.png
+   :height: 2em
 
 10) Enter a name for your group and click the checkmark to save.
 
-|image5|
+.. figure:: ../../img/screenshot_2019-08-19-19-43-25-138_org.telegram.messenger.png
+  :width: 400
+  :align: center
+  :alt: New Group
 
 11) On a computer, open the  https://web.telegram.org/ and sign in with
 the phone number you used to activate your Telegram account.
 
 12) Click on the group chat you added your bot to and look at the
 address bar. It will have a  such as
-https://web.telegram.org/#/im?p=\ **gXXXXXXXXX** - hold on to that info
+\https://web.telegram.org/#/im?p=\ **gXXXXXXXXX** - hold on to that info
 (Chat ID: **gXXXXXXXXX**)
 
 13) On your NEMS Server, open `NEMS
@@ -70,7 +91,10 @@ the *Notifications* tab.
 Modify). Add notify_host_by_telegram and notify_service_by_telegram
 appropriately. Save, and generate your Nagios Config.
 
-|image6|
+.. figure:: ../../img/telegram.png
+  :width: 400
+  :align: center
+  :alt: Telegram
 
 Thanks
 to `baggins <https://forum.nemslinux.com/viewtopic.php?f=44&t=96&hilit=baggins>`__ for
