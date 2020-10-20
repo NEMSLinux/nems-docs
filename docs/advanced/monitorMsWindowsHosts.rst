@@ -25,13 +25,17 @@ the Command Prompt as Administrator and type the following:
 
 IPv4 Networks:
 
-netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo
-request" protocol=icmpv4:8,any **dir**\ =in action=allow
+.. code-block:: console
+
+   netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo
+   request" protocol=icmpv4:8,any **dir**\ =in action=allow
 
 IPv6 Networks:
 
-netsh advfirewall firewall add rule name="ICMP Allow incoming V6 echo
-request" protocol=icmpv6:8,any **dir**\ =in action=allow
+.. code-block:: console
+
+   netsh advfirewall firewall add rule name="ICMP Allow incoming V6 echo
+   request" protocol=icmpv6:8,any **dir**\ =in action=allow
 
 Third Party Firewall
 --------------------
@@ -135,7 +139,7 @@ On the monitored host machine, right-click on *My Computer*, and
 navigate to Manage \| Services and Applications \| WMI Control.
 
 .. figure:: ../../img/wmi_windows_04.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: WMI Control
 
@@ -246,8 +250,10 @@ of a domain.**
 
 Enter the following in an Administrator Command Prompt:
 
-netsh advfirewall firewall **set** rule **group**\ =”windows management
-instrumentation (wmi)” new enable=yes
+.. code-block:: console
+
+   netsh advfirewall firewall **set** rule **group**\ =”windows management
+   instrumentation (wmi)” new enable=yes
 
 **Add Your Windows User to NEMS SST**
 
@@ -342,7 +348,7 @@ and 12489.
 
 And there we have it! Your NEMS Server can now check your Windows
 machine at a deeper level
-using `check_nrpe <https://docs.nemslinux.com/check_commands/check_nrpe>`__.
+using `check_nrpe <https://docs2.nemslinux.com/en/latest/advanced/monitorMsWindowsHosts.html#monitor-windows-machines-with-nrpe>`__.
 
 Special Thanks
 ==============

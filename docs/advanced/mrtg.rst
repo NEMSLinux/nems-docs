@@ -28,7 +28,9 @@ In time, MRTG configuration will become part of NEMS SST. For the time
 being, a command must be entered in your NEMS Linux terminal in order to
 connect MRTG to your router:
 
-**sudo** mrtgsetup
+.. code-block:: console
+
+    sudo mrtgsetup
 
 Simply enter your router's IP address and your trap community name when
 prompted, and the script will generate your MRTG config, activate it,
@@ -61,7 +63,7 @@ on your monitored device. You may also use this to monitor the amount of
 bandwidth being consumed by users on your guest WiFi, and then notify
 the admin if the set thresholds are exceeded.
 
- figure:: ../../img/mrtg.png
+.. figure:: ../../img/mrtg.png
   :width: 600
   :align: center
   :alt: Multi Router Traffic Grapher (MRTG)
@@ -82,7 +84,3 @@ NConf, using the following arguments:
    thresholds. Available options are gb, mb or kb.
 -  **Warn Up / Warn Down / Critical Up / Critical Down** - Set your
    thresholds. Can be a positive floating point number or integer.
-
-.. |image1| image:: Pictures/10000201000003690000015190C6676A81F526CD.png
-   :width: 2.9098in
-   :height: 1.1228in
