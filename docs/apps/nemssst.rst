@@ -19,6 +19,10 @@ Custom Appearance
 Beginning in NEMS Linux 1.5, NEMS SST features the ability to change the
 background on some NEMS screens.
 
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/Gnh4QrMPodI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 **Background Selection** allows you to select from the following:
 
 -  *Daily Image* (default) - Load a new image every day.
