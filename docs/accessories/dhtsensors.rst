@@ -21,14 +21,14 @@ DHT11
 
 `Buy on Amazon.com <https://amzn.to/31RIjsf>`__
 
+.. figure:: ../../img/dht11.jpg
+  :width: 130
+  :align: left
+  :alt: DHT11 Sensor
+
 The DHT11 sensor is reasonably accurate, but has a fairly narrow range,
 making it only suitable for indoor use where it is known the room
 temperature and humidity will not fall outside the available thresholds.
-
-.. figure:: ../../img/dht11.jpg
-  :width: 150
-  :align: left
-  :alt: DHT11 Sensor
 
 -  20-80% humidity readings with 5% accuracy
 -  0-50°C temperature readings ±2°C accuracy
@@ -38,16 +38,16 @@ DHT22/AM2302
 
 `Buy on Amazon.com <https://amzn.to/3alpeCE>`__
 
+.. figure:: ../../img/dht22.jpg
+  :width: 130
+  :align: left
+  :alt: DHT22 Sensor
+
 The DHT22 (or AM2302 for the wired version) is more accurate, and has a
 significantly wider range, making it suitable for measuring more extreme
 temperatures and humidity. This can be useful if you wish to use NEMS
 Linux to alert you should your pipes be at risk of freezing, or your
 freezer compressor failing.
-
-.. figure:: ../../img/dht22.jpg
-  :width: 150
-  :align: left
-  :alt: DHT22 Sensor
 
 -  0-100% humidity readings with 2-5% accuracy
 -  -40 to 80°C temperature readings ±0.5°C accuracy
@@ -90,7 +90,9 @@ JSON Output
 NEMS Linux can output JSON temperature and humidity data from the DHT11
 and DHT22/AM2302 device.
 
-``nems-info [dht11|dht22]``
+.. code-block:: console
+
+    nems-info [dht11|dht22]
 
 Check Commands
 --------------
