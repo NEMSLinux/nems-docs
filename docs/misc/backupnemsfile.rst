@@ -32,11 +32,7 @@ unencrypted backup set. It contains private information which is very
 helpful in diagnosing and helping resolve issues, but should be treated
 as a very confidential file.
 
-UPDATE: As of February 2, 2018, NEMS Migrator encrypts sensitive
-configuration files before compiling backup.nems if you enter an
-encryption/decryption password in NEMS SST. While the backup itself is
-unencrypted, this prevents access to sensitive data such as your
-passwords.
+.. note:: **UPDATE:** As of February 2, 2018, NEMS Migrator encrypts sensitive configuration files before compiling backup.nems if you enter an encryption/decryption password in NEMS SST. While the backup itself is unencrypted, this prevents access to sensitive data such as your passwords.
 
 Please *do not* share your *backup.nems* file with third parties unless
 you are certain you can trust them. If you have any questions related to
