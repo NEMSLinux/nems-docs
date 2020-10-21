@@ -5,7 +5,7 @@ NEMS Linux sends anonymous, non-confidential usage data to the NEMS
 Linux Stats . This data is aggregated by our system in a non-unique,
 entirely anonymous way.
 
-**GDPR And Other Regulatory Compliance**
+.. Note:: **GDPR And Other Regulatory Compliance** - NEMS stores its data in Canada. This data is protected by Canadian privacy laws. To further ensure the privacy of our users' data, none of the data collected is identifying, nor is it even private information.
 
 NEMS stores its data in Canada. This data is protected by Canadian
 privacy laws. To further ensure the privacy of our users' data, none of
