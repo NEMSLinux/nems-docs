@@ -52,9 +52,9 @@ NEMS Linux documentation, work in progress.
     apps/nconf
     apps/nemssst
     apps/adagios
-    apps/nemsmobileui
+    apps/mobileui
     apps/nems-dashboard
-    apps/nemstactivaloverview
+    apps/tactivaloverview
     apps/nemscloudsevices
     apps/monitorix
     apps/cockpit
