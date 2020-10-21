@@ -40,7 +40,7 @@ NEMS Linux documentation, work in progress.
 
 .. toctree::
     :maxdepth: 2
-    :caption: Commands
+    :caption: NEMS Commands
 
     commands/nems_commands
 
