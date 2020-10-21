@@ -56,8 +56,7 @@ Here are some things to look for:
    those cases, you can simply enable/allow ping replies. It may be
    called “ping”, “incoming ping”, “ICMP Echo Reply”, or similar.
 
-**DO NOT SIMPLY DISABLE YOUR FIREWALL.** Correctly establish a firewall
-rule within your firewall application.
+.. Warning:: **DO NOT SIMPLY DISABLE YOUR FIREWALL.** Correctly establish a firewall rule within your firewall application.
 
 Monitor Windows Machines with Windows Management Instrumentation (WMI)
 ======================================================================
@@ -139,7 +138,7 @@ On the monitored host machine, right-click on *My Computer*, and
 navigate to Manage \| Services and Applications \| WMI Control.
 
 .. figure:: ../../img/wmi_windows_04.png
-  :width: 500
+  :width: 400
   :align: center
   :alt: WMI Control
 
@@ -148,7 +147,7 @@ navigate to Manage \| Services and Applications \| WMI Control.
 3. Expand the Root node and select CIMV2, then click Security.
 
 .. figure:: ../../img/wmi_windows_05.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: CIMV2
 
@@ -156,14 +155,14 @@ Select the user in the *Group or user names* box. If not listed
 select **Add**.
 
 .. figure:: ../../img/wmi_windows_06.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: Add User to CIMV2
 
 Type in the user name and click **Check Names**.
 
 .. figure:: ../../img/wmi_windows_07.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: Check Names
 
@@ -176,12 +175,12 @@ following check boxes in the Allow column:
 4. Read Security
 
 .. figure:: ../../img/wmi_windows_08.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: Execute Methods and Enable Account
 
 .. figure:: ../../img/wmi_windows_09.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: Remote Enable and Read Security
 
@@ -216,7 +215,7 @@ WMI.
    necessary for the remote user.
 
 .. figure:: ../../img/wmi_windows_11.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: COM Security
 
@@ -225,7 +224,7 @@ for Administrators area by enabling all of the check boxes in the Allow
 column.
 
 .. figure:: ../../img/wmi_windows_12.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: Permissions
 
@@ -261,7 +260,7 @@ Enter the username and password of the user created on the Windows
 devices who was granted access to the WMI data.
 
 .. figure:: ../../img/nems_sst_windows_domain_credentials.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: SST Domain Credentials
 
@@ -310,10 +309,7 @@ Monitoring Server to communicate with the Linux machines on your server
 to determine things like free disk space, CPU load, and detect possible
 issues that a simple ping can't determine.
 
-As of NEMS 1.2 NSClient++ is optional for monitoring of Windows
-computers (thanks to the addition of WMIC). If you’d like to use it,
-please follow the directions below, otherwise use the provided
-WMIC-based check commands.
+.. Warning:: As of NEMS 1.2 NSClient++ is optional for monitoring of Windows computers (thanks to the addition of WMIC). If you’d like to use it, please follow the directions below, otherwise use the provided WMIC-based check commands.
 
 1. Grab the latest Windows client at https://www.nsclient.org/download/
 
@@ -340,11 +336,10 @@ WMIC-based check commands.
 
    -  Add your Windows host to NEMS.
 
-**Important Firewall Note**
-
-If you have a software firewall running on your Windows machine, setup
-an exception for your NEMS server IP to gain access through ports 5666
-and 12489.
+.. Tip :: **Important Firewall Note** 
+          If you have a software firewall running on your Windows machine, setup
+          an exception for your NEMS server IP to gain access through ports 5666
+          and 12489.
 
 And there we have it! Your NEMS Server can now check your Windows
 machine at a deeper level
