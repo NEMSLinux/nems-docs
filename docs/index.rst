@@ -27,6 +27,12 @@ NEMS Linux documentation, work in progress.
     gettingstarted/faq
     gettingstarted/rpipinout
 
+.. toctree::
+    :maxdepth: 1
+    :caption: Basic Setup
+
+    basic/checkcommands    
+
 
 .. toctree::
     :maxdepth: 1

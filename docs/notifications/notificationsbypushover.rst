@@ -2,7 +2,7 @@ Notifications Using Pushover
 ============================
 
 .. figure:: ../../img/pushover_notifications.jpg
-  :width: 400
+  :width: 300
   :align: right
   :alt: Pushover Image
 
