@@ -1,8 +1,12 @@
 Notifications Using Pushover
 ============================
 
-**notify-service-by-pushover** and **notify-host-by-pushover** require
-NEMS 1.4+
+.. figure:: ../../img/pushover_notifications.jpg
+  :width: 400
+  :align: right
+  :alt: Pushover Image
+
+.. Warning:: **notify-service-by-pushover** and **notify-host-by-pushover** require NEMS 1.4+
 
 1. Install the `Pushover <https://pushover.net/>`__ app on
    your `iOS <https://pushover.net/clients/ios>`__ or `Android <https://pushover.net/clients/android>`__ Device.

@@ -1,7 +1,7 @@
 NEMS System Settings Tool (SST)
 ===============================
 
-NEMS SST requires NEMS Linux 1.3+
+.. note:: NEMS SST requires NEMS Linux 1.3+
 
 Gone are the days of manually editing your Nagios *resource.cfg* file.
 
@@ -14,7 +14,7 @@ To login, use your NEMS username and password as configured
 during `nems-init <https://docs.nemslinux.com/commands/nems-init>`__.
 
 Custom Appearance
-=================
+------------------
 
 Beginning in NEMS Linux 1.5, NEMS SST features the ability to change the
 background on some NEMS screens.
