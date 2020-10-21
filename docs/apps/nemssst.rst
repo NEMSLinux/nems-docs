@@ -1,7 +1,7 @@
 NEMS System Settings Tool (SST)
 ===============================
 
-NEMS SST requires NEMS Linux 1.3+
+.. note:: NEMS SST requires NEMS Linux 1.3+
 
 Gone are the days of manually editing your Nagios *resource.cfg* file.
 
