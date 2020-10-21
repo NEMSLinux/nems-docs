@@ -49,8 +49,8 @@ NEMS Linux documentation, work in progress.
     :caption: Applications
 
     apps/serveroverview
-    apps/nconf
     apps/nemssst
+    apps/nconf
     apps/adagios
     apps/mobileui
     apps/nems-dashboard
