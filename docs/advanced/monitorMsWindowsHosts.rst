@@ -103,7 +103,7 @@ above systems will deny remote access to the registry.
    started and set to **Automatic**.
 
 .. figure:: ../../img/wmi_windows_02.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Server
 
@@ -111,7 +111,7 @@ above systems will deny remote access to the registry.
    Verify that it too is started and set to **Automatic**.
 
 .. figure:: ../../img/wmi_windows_03.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Windows Management Instrumentation
 
@@ -200,7 +200,7 @@ WMI.
 6. Click **Apply**.
 
 .. figure:: ../../img/wmi_windows_10.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: Enable Distributed COM
 
@@ -275,7 +275,7 @@ scroll down to the check_win\_\ *xxx* commands to choose the command you
 wish to add.
 
 .. figure:: ../../img/nconf_add_advanced_service.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Add advanced service
 
@@ -290,7 +290,7 @@ When complete these commands will now be available in the *Advanced
 Services* list.
 
 .. figure:: ../../img/nconf_advanced_services_check_wmi.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Advanced services list
 
@@ -330,7 +330,7 @@ issues that a simple ping can't determine.
    -  Screen should look a little something like this: 
 
    .. figure:: ../../img/nsclient-setup.png
-    :width: 600
+    :width: 500
     :align: center
     :alt: NSClient setup
 
