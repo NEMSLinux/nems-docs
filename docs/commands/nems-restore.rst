@@ -72,9 +72,13 @@ Restore a Local Backup
 4. Armed with that information, run the following command (use the *full
    path* to your backup.nems file):
 
+.. code-block:: console   
+
    **sudo** nems-restore /mnt/flash/backup.nems
 
    or
+
+.. code-block:: console
 
    **sudo** nems-restore /home/<username>/backup.nems
 
@@ -85,6 +89,8 @@ This requires an active NEMS Migrator Off-Site Backup (NEMS-OSB)
 account.
 
 1. Run the command and choose the date you'd like to restore to:
+
+.. code-block:: console
 
    **sudo** nems-restore osb
 
