@@ -48,9 +48,19 @@ NEMS Linux documentation, work in progress.
     :maxdepth: 1
     :caption: Applications
 
+    apps/serveroverview
+    apps/nconf
     apps/nemssst
-    apps/cockpit
+    apps/adagios
+    apps/nemsmobileui
     apps/nems-dashboard
+    apps/nemstactivaloverview
+    apps/nemscloudsevices
+    apps/monitorix
+    apps/cockpit
+    apps/monitservicemonitor
+    apps/migrator
+    
 
 .. toctree::
     :maxdepth: 2
