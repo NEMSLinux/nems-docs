@@ -55,7 +55,7 @@ NEMS Linux documentation, work in progress.
     apps/mobileui
     apps/nems-dashboard
     apps/tactivaloverview
-    apps/nemscloudsevices
+    apps/nemscloudservices
     apps/monitorix
     apps/cockpit
     apps/monitservicemonitor
