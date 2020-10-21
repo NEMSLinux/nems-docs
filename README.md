@@ -38,6 +38,22 @@ When adding an image inline with the text place the image in /img and use the fo
 
 Image files need to be JPG or PNG. Sadly, ReadTheDocs doesn't appear to support WebP (they don't show up).
 
+#### Embed YouTube Video
+
+To embed a YouTube video, go to YouTube video page and click on **Share** below the video and then select **Embed**. 
+Copy the entire HTML tag with the <iframe> tag.
+In the rst file, type in
+
+```
+.. raw:: html
+   <iframe> code here
+```
+Ensure the iframe code lines up directly below the "r" in raw
+
+For pictorial instructions go here: <https://techwritingmatters.com/documenting-with-sphinx-tutorial-part-3-writing#6_Embedding_a_YouTube_video>
+
+
+
 #### Step-By-Step Instructions
 
 When including step-by-step instructions, please use number lists at the top level and second level in such a way that future readers may refer to the instruction as, for example, 2.3 (the 2nd list, 3rd item). If you desire to include images within the steps, you will need to pay particular attention to how this impacts your automated numbering (#.) and may need to switch to static numbering (1., 2., etc).
