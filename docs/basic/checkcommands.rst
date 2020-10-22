@@ -53,3 +53,6 @@ Check Commands
 -  `custom_check_mem <https://docs.nemslinux.com/check_commands/custom_check_mem>`__ -
    Monitor the percentage of RAM free on either the local NEMS server or
    a remote system via NRPE.
+
+-  `check_internet_speed <https://docs.nemslinux.com/check_commands/check_internet_speed>`__ -
+   Check the speed of your internet connection.

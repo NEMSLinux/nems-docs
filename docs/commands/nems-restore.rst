@@ -21,7 +21,7 @@ Important Note
 
 I am a firm believer in redundancy, and protecting your data. What I'd
 like you to do is, export your migration file, then install NEMS on
-a *new* MicroSD card. Then boot from that and restore your NEMS Migrator
+a **new** MicroSD card. Then boot from that and restore your NEMS Migrator
 backup. Once you've confirmed everything worked well, you can deprecate
 the old one safely. However, if something went wrong, you can contact me
 to fix it for you, and continue running from the old SD card in the
@@ -57,26 +57,32 @@ Restore a Local Backup
    -  Copy your *backup.nems* file to your NEMS Server over Samba
       at *\\\nems.local\home* which will place it in the home folder of
       your NEMS user, which will be accessible on NEMS Linux
-      at */home/\ *\ **username**\ *\ /backup.nems*
+      at */home/<username>/backup.nems*
 
    -  Copy your *backup.nems* file to your NEMS Server via SCP:
 
-      **scp** <path to backup.nems> <username>@<nemsIP>:/home/<username>
+.. code-block:: console
+
+   scp <path to backup.nems> <username>@<nemsIP>:/home/<username>
 
 3. Determine the location of *backup.nems* on your NEMS Server. For
    example, if you mounted the USB flash drive on */mnt/flash* you may
    determine the location to be */mnt/flash/backup.nems*, or if you
    copied it to the home folder, your file will be located
-   at */home/\ *\ **username**\ *\ /backup.nems*
+   at */home/<username>/backup.nems*
 
 4. Armed with that information, run the following command (use the *full
    path* to your backup.nems file):
 
-   **sudo** nems-restore /mnt/flash/backup.nems
+.. code-block:: console
 
-   or
+   sudo nems-restore /mnt/flash/backup.nems
 
-   **sudo** nems-restore /home/<username>/backup.nems
+or
+
+.. code-block:: console
+
+   sudo nems-restore /home/<username>/backup.nems
 
 Restore an Off-Site Backup
 ==========================
@@ -86,13 +92,13 @@ account.
 
 1. Run the command and choose the date you'd like to restore to:
 
-   **sudo** nems-restore osb
+.. code-block:: console
+
+   sudo nems-restore osb
 
 .. raw:: html
 
-    <div style="text-align: center; margin-bottom: 2em;">
-    <iframe width="100%" height="350" src=https://youtu.be/oREK_PUhkAE frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/oREK_PUhkAE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Restore Off-Site Backup from Other Device
 -----------------------------------------
@@ -112,7 +118,9 @@ restore to a new device).
 
 3. Run the command and choose the date you'd like to restore to:
 
-   **sudo** nems-restore osb OLD_HWID
+.. code-block:: console
+
+   sudo nems-restore osb OLD_HWID
 
    (where OLD_HWID is the HWID from your old device)
 
@@ -131,6 +139,4 @@ Final Step
    shut down and replace the SD card with your original deployment.
 
 If you have any problems (or praise) please post in `the NEMS Linux
-community forum <http://forum.category5.tv/forum-8.html>`__.
-
-
+community forum <https://forum.nemslinux.com/>`__.
