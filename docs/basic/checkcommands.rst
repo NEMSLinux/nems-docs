@@ -56,6 +56,6 @@ Check Commands
 
 -  `check_internet_speed <https://docs2.nemslinux.com/en/latest/basic/checkinternetspeed.html>`__ -
    Check the speed of your internet connection.
-
-   `check_esxi_hardware <https://docs2.nemslinux.com/en/latest/basic/checkesxi.html>`__ -
+   
+-  `check_esxi_hardware <https://docs2.nemslinux.com/en/latest/basic/checkesxi.html>`__ -
    Monitor the hardware of ESX and ESXi servers.
