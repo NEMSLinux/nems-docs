@@ -1,0 +1,30 @@
+Features: Port 9590
+===================
+
+Introduction
+------------
+
+Port 9590 is a dummy listener on all NEMS 1.4.1+ servers.
+
+This listener does nothing but reply to TCP requests when it is up. Its
+purpose is to provide a safe port to enable and disable while learning
+how to use the check
+command `check_tcp <https://docs.nemslinux.com/config/nems_nconf/check_commands/check_tcp>`__.
+
+Disable 9590
+------------
+
+To disable 9590 temporarily, open its process in Monit Service Monitor
+and choose “Stop service”. It will however resume normal operation at
+next reboot.
+
+To disable 9590 permanently, first stop it with Monit (otherwise Monit
+will re-run the service once it detects it is not running). Then, open
+an SSH connection to your NEMS server and type:
+
+sudo /usr/sbin/update-rc.d 9590 disable
+
+To see how 9590 works, simply review `the source
+code <https://github.com/Cat5TV/nems-scripts/blob/master/9590.sh>`__.
+
+-  
