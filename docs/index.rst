@@ -82,6 +82,7 @@ NEMS Linux documentation, work in progress.
     advanced/snmp
     advanced/mrtg
     advanced/monitorMsWindowsHosts
+    advanced/nemsicons
 
 .. toctree::
     :maxdepth: 2
