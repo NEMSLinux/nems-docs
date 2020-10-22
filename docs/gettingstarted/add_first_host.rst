@@ -63,10 +63,10 @@ Generate Nagios Config: Make Your Changes Live (In Review)
 
 To make your changes live and begin monitoring your new host, press the Generate Nagios Config link on the left navigation. You should see 0 errors. If you do see errors, press the syntax check bar and review where you went wrong. NConf is very good at showing you where to find the error is so you can go back and fix it.
 
-.. figure:: ../../img/Generate-Nagios-Config.png
+.. figure:: ../../img/generate-nems-config.png
   :width: 600
   :align: center
-  :alt: Generate Nagios Config
+  :alt: Generate NEMS Config
   
   Generate Nagios Config with the NEMS Configurator
 

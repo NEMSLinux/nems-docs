@@ -31,7 +31,13 @@ NEMS Linux documentation, work in progress.
     :maxdepth: 1
     :caption: Basic Setup
 
-    basic/checkcommands    
+    basic/checkcommands
+    basic/backupnems
+    basic/cloudservices
+    basic/cloudservicesapi
+    basic/commandlinetest
+    basic/nemsnavigationmenu
+    basic/resolvednshostnamesonlan    
 
 
 .. toctree::
@@ -82,6 +88,7 @@ NEMS Linux documentation, work in progress.
     advanced/snmp
     advanced/mrtg
     advanced/monitorMsWindowsHosts
+    advanced/nemsicons
 
 .. toctree::
     :maxdepth: 2
