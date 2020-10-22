@@ -66,7 +66,7 @@ To make your changes live and begin monitoring your new host, press the Generate
 .. figure:: ../../img/generate-nems-config.png
   :width: 600
   :align: center
-  :alt: Generate Nagios Config
+  :alt: Generate NEMS Config
   
   Generate Nagios Config with the NEMS Configurator
 
