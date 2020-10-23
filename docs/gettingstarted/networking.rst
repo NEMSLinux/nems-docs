@@ -49,7 +49,7 @@ Important Notes
    be available to you.
 2. You'll find Cockpit in the System menu of your NEMS Dashboard. For
    more details about Cockpit, read the
-   documentation: `Cockpit <https://docs.nemslinux.com/features/cockpit>`__
+   documentation: `Cockpit <https://docs2.nemslinux.com/en/latest/apps/cockpit.html>`__
 3. Network configuration does not persist from board to board: if you
    configure NEMS on one device and then move its storage (ie., SD card)
    to a different device, the new device will revert to the default
