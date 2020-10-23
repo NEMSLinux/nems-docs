@@ -28,7 +28,7 @@ backed up off site every day, and you can revert to any day's snapshot.
 See `NEMS
 Migrator <https://docs.nemslinux.com/features/nems-migrator>`__
 
-`checkin <https://docs.nemslinux.com/_media/features/checkin>`__
+`checkin <https://docs2.nemslinux.com/en/latest/nems-cloud-services/checkin.html>`__
 
 NEMS Cloud Services Dashboard
 -----------------------------

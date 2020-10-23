@@ -1,7 +1,7 @@
 NEMS Cloud Services API
 =======================
 
-NEMS Cloud Services features some basic  functionality to improve the
+NEMS Cloud Services features some basic API functionality to improve the
 NEMS Linux experience. These are more like helper tools to make NEMS
 just a bit better.
 

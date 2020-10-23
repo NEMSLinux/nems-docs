@@ -13,13 +13,13 @@ client site, or if you're building and selling NEMS Linux appliances.
 Currently the NEMS Linux Vendor Branding feature supports:
 
 1. Vendor Logo
-2. Vendor  (optional)
+2. Vendor URL (optional)
 3. Vendor License (optional)
 
 When you add your vendor logo, it will be scaled to a maximum height of
 60 pixels and placed on the NEMS Dashboard above sponsor logos, and the
-sponsor logos will be shrunk to a smaller size. If you include a , the
-logo will be clickable and will open a new tab to your  when clicked.
+sponsor logos will be shrunk to a smaller size. If you include a URL, the
+logo will be clickable and will open a new tab to your URL when clicked.
 
 Add Your Vendor Branding
 ------------------------
@@ -32,7 +32,7 @@ Add Your Vendor Branding
    must be named **logo.png**
 3. If you would like your logo to be clickable (eg., link to your
    company web site), create a file in that same folder
-   called **url.txt** and paste your full  into the file.
+   called **url.txt** and paste your full URL into the file.
 4. A Vendor License may be purchased, if desired. If a valid Vendor
    License is included, all users who share this build will be able to
    utilize your NEMS Cloud Services account. This means you will be able
