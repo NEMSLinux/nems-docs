@@ -71,7 +71,7 @@ Steps
   #. Finally, set your service parameters to: -S --sni
   #. Save your advanced service.
   
-  .. Tip:: The -S tells check_http that this site is using SSL, and the --sni enables SNI (Server Name Indication) since I use CloudFlare for SSL on nemslinux.com, and therefore my resolving IP address is associated with more than one domain name. For your site, if you have any trouble, try removing SNI by simply omitting --sni. For the full documentation surrounding the check_http command, visit the NEMS Linux documentation wiki page at https://docs.nemslinux.com/check_commands/check_http
+  .. Tip:: The -S tells check_http that this site is using SSL, and the --sni enables SNI (Server Name Indication) since I use CloudFlare for SSL on nemslinux.com, and therefore my resolving IP address is associated with more than one domain name. For your site, if you have any trouble, try removing SNI by simply omitting --sni. For the full documentation surrounding the check_http command, visit the NEMS Linux documentation wiki page at https://docs2.nemslinux.com/en/latest/basic/checkhttp.html
   
   .. figure:: ../../img/Creating-an-Advanced-Service-to-Check-SSL-Web-Sites.png
     :width: 600
