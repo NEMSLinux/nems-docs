@@ -86,6 +86,7 @@ NEMS Linux documentation, work in progress.
     :caption: Advanced Configuration
 
     advanced/nemsupgrade
+    advanced/legacyupgrade
     advanced/snmp
     advanced/mrtg
     advanced/monitorMsWindowsHosts
