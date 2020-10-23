@@ -158,7 +158,7 @@ the IP to a second device, causing all kinds of unforeseen issues.
     this NIC next to IPv4.
 7.  Ensure “Manual” is selected in the dropdown.
 8.  Add your new IP settings.
-9.  Make sure you click the + next to  settings and assign at least
+9.  Make sure you click the + next to DNS settings and assign at least
     one  server. 8.8.8.8 will do.
 10. Press “Apply” and wait for it to test the connection.
 11. Click “Change the setting” after the test is complete.
