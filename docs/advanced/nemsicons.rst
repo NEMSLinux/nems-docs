@@ -1,8 +1,8 @@
-Copying OS icons to NEMS
+Copying OS Icons to NEMS
 ========================
 To add additional or custom OS icons to NEMS, perform the following:
 
-From a file browser window, open the Home share on the NEMS server (i.e. \\nems_ip\Home) and log in with your NEMS credentials.
+From a file browser window, open the Home share on the NEMS server (i.e. \\nems_ip\\Home) and log in with your NEMS credentials.
 
 .. figure:: ../../img/icons_02.PNG
   :width: 600
@@ -14,7 +14,7 @@ Create a folder.  In this example, it is "icons"
   :width: 600
   :align: center
   
-Start an SSH session to the NEMS server and login.  The "icons" folder is displayed when ls is ran.
+Start an SSH session to the NEMS server and login.  The "icons" folder is displayed when ls is run.
 Copy the icon images into this new folder.
 
 .. figure:: ../../img/icons_05.PNG
@@ -29,14 +29,15 @@ Copy the icon images into this new folder.
   :align: center
 
 The icon file can be copied or moved into the /var/www/nconf/img/logos/base folder.
--To copy "sudo cp *.* /var/www/nconf/img/logos/base"
--To move "sudo mv *.* /var/www/nconf/img/logos/base"
+To copy "sudo cp *.* /var/www/nconf/img/logos/base"
+|
+To move "sudo mv *.* /var/www/nconf/img/logos/base"
 
 .. figure:: ../../img/icons_07.PNG
   :width: 600
   :align: center
 
-Login the nconf for NEMS.
+Login to nconf for NEMS.
 In this example, the icon for "switch" will be changed.
 
 .. figure:: ../../img/icons_09.PNG
@@ -49,7 +50,7 @@ Click on Show for OS, then click on edit (pencil icon) for the OS to be modified
   :width: 600
   :align: center
 
-Edit the gif name to the new icon name and click submit.
+Edit the gif name to the new icon name and click Submit.
 
 .. figure:: ../../img/icons_11.PNG
   :width: 600
