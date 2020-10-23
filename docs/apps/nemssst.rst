@@ -5,7 +5,7 @@ NEMS System Settings Tool (SST)
 
 Gone are the days of manually editing your Nagios *resource.cfg* file.
 
-NEMS SST provides a web-based  to allow easy configuration of system
+NEMS SST provides a web-based GUI to allow easy configuration of system
 settings such as SMTP server settings.
 
 To access NEMS SST, click Configuration→NEMS System Settings Tool.
