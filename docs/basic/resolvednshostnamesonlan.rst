@@ -8,7 +8,7 @@ hostnames:
 
 2. **libnss-mdns** - This allows NEMS Linux to see other *.local computers on the LAN
 
-In order for NEMS Linux to be able to resolve a  hostname rather than IP address, multicast must be enabled on the client system.
+In order for NEMS Linux to be able to resolve a DNS hostname rather than IP address, multicast must be enabled on the client system.
 
 - **Microsoft Windows Target** - If you already have iTunes installed, you do not need to do anything else (since it's included). Otherwise, you can install `Apple's Bonjour service <https://support.apple.com/kb/DL999?locale=en_US>`__ or you can enable Microsoft's own Link-Local Multicast Name Resolution (LLMNR) service.
 

@@ -7,7 +7,7 @@ Configuration
 NEMS System Settings Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`NEMS SST <https://docs.nemslinux.com/config/nems_sst>`__ is the
+`NEMS SST <https://docs2.nemslinux.com/en/latest/apps/nemssst.html>`__ is the
 configuration tool used to setup variables used by Nagios traditionally
 stored in resource.cfg. An example would be your SMTP settings. This is
 also where you configure various optional components of NEMS Linux.
@@ -15,7 +15,7 @@ also where you configure various optional components of NEMS Linux.
 NEMS Configurator (NConf)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`NEMS NConf <https://docs.nemslinux.com/config/nems_nconf>`__ is NEMS'
+`NEMS NConf <https://docs2.nemslinux.com/en/latest/apps/migrator.html>`__ is NEMS'
 browser-based frontend to your Nagios host and service configs. This is
 where you'll setup all your hosts, services and check commands.
 

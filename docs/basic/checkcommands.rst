@@ -30,19 +30,16 @@ Check Commands
    Check your NEMS SBC temperature with perfdata and warn/crit
    thresholds.
 
--  `check_http <https://docs2.nemslinux.com/en/latest/basic/checkhttp.html>`__ -
-   Check http/s response for a given host with warn/crit thresholds.
-
 -  check_wmi_plus
    (See `this <https://github.com/speartail/checkwmiplus/blob/master/check_wmi_plus.README.txt>`__ and `that <https://github.com/shinken-monitoring/pack-windows/blob/master/libexec/check_wmi_plus.d/check_wmi_plus.ini>`__)
 
 -  `check_win_users <https://docs2.nemslinux.com/en/latest/basic/checkwinusers.html>`__ - Check the count of users on a Windows server based on a query.
 
--  `check_temper <https://docs.nemslinux.com/hardware/temper>`__ - Use a
+-  `check_temper <https://docs2.nemslinux.com/en/latest/accessories/temper.html>`__ - Use a
    TEMPer USB temperature sensor to detect and report the room
    temperature.
 
--  `check_dhtxx <https://docs.nemslinux.com/hardware/dht-sensors>`__ -
+-  `check_dhtxx <https://docs2.nemslinux.com/en/latest/accessories/dhtsensors.html>`__ -
    Use a DHTxx (DHT11 / DHT22 / AM2302) Arduino sensor to report on the
    room temperature and humidity.
 
