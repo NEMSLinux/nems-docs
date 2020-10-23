@@ -22,8 +22,8 @@ Here are some general guidelines.
    perceptively similar reliability to a traditional SSD. NEMS performs
    a lot of read/write operations, as you can imagine, so the more
    reliable your storage medium, the more reliable your NEMS Server.
-2. More RAM means better performance. The minimum recommended RAM is 1 ,
-   though 2  or higher will greatly improve performance and reliability
+2. More RAM means better performance. The minimum recommended RAM is 1GB ,
+   though 2GB or higher will greatly improve performance and reliability
    of your NEMS Server.
 
 Visit `the NEMS Linux web site <https://nemslinux.com/>`__ for a
