@@ -18,6 +18,7 @@ NEMS Linux documentation, work in progress.
     gettingstarted/connect
     gettingstarted/networking
     gettingstarted/smtp
+    gettingstarted/smtpGmail
     gettingstarted/smtpOutlook
     gettingstarted/generate_config
     gettingstarted/add_first_host
@@ -85,6 +86,7 @@ NEMS Linux documentation, work in progress.
     :caption: Advanced Configuration
 
     advanced/nemsupgrade
+    advanced/legacyupgrade
     advanced/snmp
     advanced/mrtg
     advanced/monitorMsWindowsHosts

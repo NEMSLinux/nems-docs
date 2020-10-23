@@ -59,8 +59,5 @@ Defaults
 -  CPU temperature above 85°C, fan will run at 100% speed.
 
 You may adjust the fan speed settings in `NEMS
-SST <https://docs.nemslinux.com/config/nems_sst>`__.
+SST <https://docs2.nemslinux.com/en/latest/apps/nemssst.html>`__.
 
-.. |image1| image:: https://docs.nemslinux.com/_media/hardware/argon_one.jpg?w=400&tok=197e8e
-   :width: 4.1665in
-   :height: 0.3929in

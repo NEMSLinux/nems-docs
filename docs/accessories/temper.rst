@@ -35,7 +35,6 @@ Supported Devices
 
 Support is provided via `temper <https://github.com/urwen/temper>`__.
 
-<<<<<<< HEAD
 NEMS Linux includes support for TEMPer temperature and humidity sensor data. This table also shows which have internal or external sensors. NEMS Linux will always opt for external sensor data, if present.
 
 +------------+-----------+-----------------+------+-----+-----+-----+
@@ -53,30 +52,10 @@ NEMS Linux includes support for TEMPer temperature and humidity sensor data. Thi
 +------------+-----------+-----------------+------+-----+-----+-----+
 | TEMPerX232 | 1a86:5523 | TEMPerX232_V2.0 | ✔    | ✔   | ✔   | ✔   |
 +------------+-----------+-----------------+------+-----+-----+-----+
-=======
-NEMS Linux includes support for TEMPer temperature and humidity sensor data.
-
-+------------+-----------+-----------------+------+-----+
-| Product    | Id        | Firmware        | Temp | Hum |
-+============+===========+=================+======+=====+
-| TEMPer     | 0c45:7401 | TEMPerF1.4      | ✔    | ✘   |
-+------------+-----------+-----------------+------+-----+
-| TEMPer     | 413d:2107 | TEMPerGold_V3.1 | ✔    | ✘   |
-+------------+-----------+-----------------+------+-----+
-| TEMPerHUM  | 413d:2107 | TEMPerX_V3.1    | ✔    | ✔   |
-+------------+-----------+-----------------+------+-----+
-| TEMPer2    | 413d:2107 | TEMPerX_V3.3    | ✔    | ✘   |
-+------------+-----------+-----------------+------+-----+
-| TEMPer1F   | 413d:2107 | TEMPerX_V3.3    | ✔    | ✘   |
-+------------+-----------+-----------------+------+-----+
-| TEMPerX232 | 1a86:5523 | TEMPerX232_V2.0 | ✔    | ✔   |
-+------------+-----------+-----------------+------+-----+
->>>>>>> parent of 57c5a27... Commit
 
 Terminal Output
 ---------------
 
-<<<<<<< HEAD
 To receive the JSON output, type: `nems-info temper`
 
 Sample output from a TEMPer2 with an external sensor attached:
@@ -84,9 +63,9 @@ Sample output from a TEMPer2 with an external sensor attached:
 .. code-block:: json
 
     {"0":{"vendorid":16701,"productid":8455,"devices":["hidraw0","hidraw1"],"firmware":"TEMPerX_V3.3","internal temperature":30.12,"external temperature":21.68},"sensors":{"thermal":1,"temp_location":"external","humidity":0,"hum_location":"not_present"},"output":{"temperature":21.68,"humidity":0}}
-=======
+
 To receive the JSON output, type `nems-info temper`
->>>>>>> parent of 57c5a27... Commit
+
 
 TEMPer devices seem to have an issue on low-powered systems (such as Raspberry Pi) where due to the low power to the USB port, temper.py will respond with errors such as:
 
@@ -121,11 +100,9 @@ Calibration
 -----------
 
 As of NEMS Linux 1.6, both the thermal sensor and humidity sensor can be calibrated within NEMS SST to ensure the highest level of accuracy.
-<<<<<<< HEAD
 
 External vs. Internal Sensors
 -----------------------------
 
 If your TEMPer device supports an external sensor, this will be used if connected. If the external sensor is disconnected, the internal sensor will be selected automatically.
-=======
->>>>>>> parent of 57c5a27... Commit
+

@@ -33,7 +33,7 @@ It can be a bit of a pain for novice users to setup SSL certificates, so
 like many other things with NEMS, I set out to make it easier.
 
 When
-running `nems-init <https://docs.nemslinux.com/commands/nems-init>`__,
+running `nems-init <https://docs2.nemslinux.com/en/latest/commands/nems-init.html>`__,
 your unique SSL certificate is generated, added to your NEMS
 configuration and from then on all services will use your newly-created
 self-signed certificate.
@@ -87,7 +87,7 @@ computer. If either are incorrect, your system will be unable to
 connect.
 
 NEMS has NTP installed, so as long as you set your locale correctly
-during `nems-init <https://docs.nemslinux.com/commands/nems-init>`__,
+during `nems-init <https://docs2.nemslinux.com/en/latest/commands/nems-init.html>`__,
 the time and date should be correct. However, if your date is far
 inaccurate, NTP will reject the update. Therefore you must ensure your
 date and time are correct for NTP to work. See `this helpful
