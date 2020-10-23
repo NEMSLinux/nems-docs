@@ -9,7 +9,7 @@ Quick points
    all your NEMS servers every 60 seconds.
 
 Requirements
-============
+------------
 
 In order to use NEMS Cloud Services, you must be running NEMS Linux 1.5
 or higher. You must also be a Patron of `NEMS Linux on
@@ -17,7 +17,7 @@ Patreon <https://patreon.com/nems/>`__ at a tier that includes NEMS
 Cloud Services.
 
 Included Services
-=================
+-----------------
 
 NEMS Migrator Off Site Backup
 -----------------------------
@@ -28,7 +28,10 @@ backed up off site every day, and you can revert to any day's snapshot.
 See `NEMS
 Migrator <https://docs.nemslinux.com/features/nems-migrator>`__
 
-`checkin <https://docs2.nemslinux.com/en/latest/nems-cloud-services/checkin.html>`__
+NEMS CheckIn
+------------
+See `NEMS
+CheckIn <https://docs2.nemslinux.com/en/latest/nems-cloud-services/checkin.html>`__
 
 NEMS Cloud Services Dashboard
 -----------------------------
