@@ -1,147 +1,48 @@
-Check Command: check_http
-=========================
+Check Command: check_internet_speed
+===================================
 
-Check the status of a HTTP/HTTPS server running on a domain or IP
-address on a remote host.
+Tests the speed of your Internet connection.
 
-The included default check_https command uses the IP address of your
-host, as configured in NEMS Configurator.
+.. note::
 
-check_http Argument Syntax
---------------------------
+   Requires NEMS Linux 1.5+.
 
-+----+-----------------+---------------------------------------------+
-| -H | --hostname      | host name of the server where HTTP (or      |
-|    |                 | HTTPS) daemon is running                    |
-+----+-----------------+---------------------------------------------+
-| -I | --IP-address    | ip address of the HTTP (or HTTPS) server    |
-+----+-----------------+---------------------------------------------+
-| -p | --port          | Port number where HTTP server runs. Default |
-|    |                 | is 80                                       |
-+----+-----------------+---------------------------------------------+
-| -4 | --use-ipv4      | This will use IPv4 connection               |
-+----+-----------------+---------------------------------------------+
-| -6 | --use-ipv6      | This will use IPv6 connection               |
-+----+-----------------+---------------------------------------------+
-| -S | --ssl           | This will use HTTPS using default 443 port  |
-+----+-----------------+---------------------------------------------+
-|    | --sni           | Enable SSL/TLS hostname extension support   |
-|    |                 | (SNI)                                       |
-+----+-----------------+---------------------------------------------+
-| -C | --certificate   | Minimum number of days a SSL certiface must |
-|    |                 | be valid.                                   |
-+----+-----------------+---------------------------------------------+
-| -e | --expect        | Expected response string. Default is HTTP/1 |
-+----+-----------------+---------------------------------------------+
-| -s | --string        | Expected content string.                    |
-+----+-----------------+---------------------------------------------+
-| -u | --url           |  to check                                   |
-+----+-----------------+---------------------------------------------+
-| -P | --post          |  encoded http POST data                     |
-+----+-----------------+---------------------------------------------+
-| -N | --no-body       | Do not wait for whole document body to      |
-|    |                 | download. Stop once the headers are         |
-|    |                 | downloaded.                                 |
-+----+-----------------+---------------------------------------------+
-| -M | --max-age       | Check whether a document is older than x    |
-|    |                 | seconds. Use 5 for 5 seconds, 5m for 5      |
-|    |                 | minutes, 5h for 5 hours, 5d for 5 days.     |
-+----+-----------------+---------------------------------------------+
-| -T | --content-type  | Indicate content type in header for POST    |
-|    |                 | request                                     |
-+----+-----------------+---------------------------------------------+
-| -l | --linespan      | Regular expression can span to new line     |
-|    |                 | (Use this with -r or -R option)             |
-+----+-----------------+---------------------------------------------+
-| -r | --regex, --ereg | Use this regular expression to search for   |
-|    |                 | string in the HTTP page                     |
-+----+-----------------+---------------------------------------------+
-| -R | --eregi         | Same as above, but with ignore case.        |
-+----+-----------------+---------------------------------------------+
-| -a | --authorization | If the site uses basic authentication send  |
-|    |                 | uid, pwd in the format uid:pwd              |
-+----+-----------------+---------------------------------------------+
-| -A | --useragent     | Pass the specified string as “User Agent”   |
-|    |                 | in HTTP header.                             |
-+----+-----------------+---------------------------------------------+
-| -k | --header        | Add additional tags that should be sent in  |
-|    |                 | the HTTP header.                            |
-+----+-----------------+---------------------------------------------+
-| -L | --link          | The output is wrapped as  link              |
-+----+-----------------+---------------------------------------------+
-| -f | --onredirect    | When a  is redirected, use this to either   |
-|    |                 | follow the , or send ok, warning, or        |
-|    |                 | critical notification                       |
-+----+-----------------+---------------------------------------------+
-| -m | --pagesize      | Specify the minimum and maximum page size   |
-|    |                 | expected in bytes. Format is                |
-|    |                 | minimum:maximum                             |
-+----+-----------------+---------------------------------------------+
-| -m | --pagesize      | Specify the minimum and maximum page size   |
-|    |                 | expected in bytes. Format is                |
-|    |                 | minimum:maximum                             |
-+----+-----------------+---------------------------------------------+
-| -w | --warning       | Response time in seconds for warning state  |
-+----+-----------------+---------------------------------------------+
-| -c | --critical      | Response time in seconds for critical state |
-+----+-----------------+---------------------------------------------+
-| -t | --timeout       | Number of seconds to wait before connection |
-|    |                 | times out. Default is 10 seconds            |
-+----+-----------------+---------------------------------------------+
+Demo Data
+---------
 
-NEMS Configurator Service Parameter Examples
---------------------------------------------
+Out of the box, NEMS Linux will check the Internet connectivity speed
+using an automatically selected nearby test server. Warning
+notifications will be generated if your upload or download speed falls
+below 10 Mb/s and Critical warnings if either falls below 7 Mb/s. These
+are just sample thresholds which can (and should) be modified to suit
+your connection speed by modifying the service in NEMS NConf.
 
-Check if a host is responding on the default http port (ie., 80):
+Data Usage Warning
+------------------
 
-[blank]
+**Every time the speedtest runs, anywhere from 100-400 MB of data is
+transferred** (depending on your connection speed). Since the sample
+service is set to check every 30 minutes while in a good state, that
+could be nearly 5GB of data per day. If your Internet is slow, the sample
+service will check (retry) every 5 minutes, increasing the bandwidth
+usage significantly.
 
-Check if a host is responding on the default https port (ie., 443):
+While in most cases this is fine, you *must* modify your thresholds to
+suit your connection, and modify your service schedule if you have
+limited or pay-per-use bandwidth.
 
--S
+Dynamic Server Detection
+-------------------------
 
-Check if a host is responding on an alternate https port (ie., 8080):
+NEMS Linux automatically chooses the best speedtest server for your test
+(generally, the one nearest to you geographically). This may change now
+and again as servers become unresponsive or otherwise go offline. Since
+it is dynamic, the server selection is done behind the scenes by your
+NEMS Server, so you never have to think about it.
 
--S -p 8080
+Logging
+--------
 
-Check the state of the hosts SSL certificate and treat as a problem if
-it expires in 30 days or less:
-
--C 30
-
-Troubleshooting
----------------
-
-**I receive a message “CRITICAL - Cannot make SSL connection. SSL alert
-number 40” when trying to check a secure web site**
-
-Are you using Cloudflare or another SSL redirecting system where your
-certificate might be shared with other hostnames? Try adding --sni to
-your service parameters to enable Server Name Indication (SNI), which
-allows the server to safely host multiple TLS Certificates for multiple
-sites, all under a single IP address.
-
-Test openssl's response by running this command from your NEMS server:
-
-openssl s_client -connect YOURDOMAIN.COM:443 -debug
-
-**I receive a message “CRITICAL - Socket timeout after 10 seconds” on
-NEMS TV Dashboard, Adagios and so-on**
-
-This means the particular board you're using to run NEMS is a bit slow
-for the task. By default, check_http will timeout after 10 seconds. But
-what happens if your board takes 11? It generates the error “CRITICAL -
-Socket timeout after 10 seconds”.
-
-To remedy this, yes, you could move to a faster board. But I'd suggest
-you could also add these two things to your service check ARGS as per
-the syntax above:
-
--N - only download the headers: this will result in a smaller
-transaction, which in turn takes less time.
-
--T 30 - increase the timeout to 30 seconds.
-
-So your ARGS would become:
-
--N -T 30
+A cache log is saved at /var/log/nems/speedtest.log whenever the script
+is run. In NEMS Linux 1.6+, this cache is used by NEMS TV Dashboard to
+display current Internet speed.
