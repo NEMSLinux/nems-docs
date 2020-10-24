@@ -81,7 +81,7 @@ Migrator
 --------
 
 The `NEMS
-Migrator <https://docs.nemslinux.com/features/nems-migrator>`__ tool for
+Migrator <https://docs2.nemslinux.com/en/latest/apps/migrator.html>`__ tool for
 easy backups of your NEMS server.
 
 Backup
