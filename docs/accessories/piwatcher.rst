@@ -1,6 +1,13 @@
 Omzlo PiWatcher Smart Watchdog for Raspberry Pi
 ===============================================
 
+.. figure:: ../../img/piwatcher.png
+  :width: 300
+  :align: center
+  :alt: PiWatcher
+
+  Omzlo PiWatcher
+
 The `Omzlo PiWatcher <https://cat5.tv/piwatcher>`__ is a very
 small hat for Raspberry Pi that allows programmable power events to take
 place.
@@ -24,9 +31,3 @@ minutes:
 This should not be done on a production server (it is akin to pulling
 the power on a live system).
 
-.. figure:: ../../img/piwatcher.png
-  :width: 300
-  :align: center
-  :alt: PiWatcher
-
-Omzlo PiWatcher

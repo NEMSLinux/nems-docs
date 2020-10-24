@@ -67,4 +67,4 @@ NEMS Linux includes a small handful of sample check commands, and one of
 those is an Internet Speedtest which uses Ookla's Speedtest service to
 monitor and report your Internet speed. For more information, please
 read `Check Command:
-check_internet_speed <https://docs.nemslinux.com/check_commands/check_internet_speed>`__.
+check_internet_speed <https://docs2.nemslinux.com/en/latest/basic/checkinternetspeed.html>`__.

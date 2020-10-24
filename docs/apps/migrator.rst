@@ -50,11 +50,11 @@ backup for up to 30 minutes.
 
 To use NEMS Migrator to upgrade from an earlier version of NEMS Linux
 (or even NagiosPi), please read `Upgrade NEMS Linux to Newer
-Version <https://docs.nemslinux.com/upgrade_instructions>`__.
+Version <https://docs2.nemslinux.com/en/latest/advanced/nemsupgrade.html>`__.
 
 To automate your NEMS Migrator backup, please see `Backup Your NEMS
 Configuration
-Automatically <https://docs.nemslinux.com/tips/backup_nems_automatically>`__ for
+Automatically <https://docs2.nemslinux.com/en/latest/basic/backupnems.html>`__ for
 helpful resources and tips.
 
 Restore

@@ -38,7 +38,8 @@ NEMS Linux documentation, work in progress.
     basic/cloudservicesapi
     basic/commandlinetest
     basic/nemsnavigationmenu
-    basic/resolvednshostnamesonlan    
+    basic/resolvednshostnamesonlan
+    basic/port9590
 
 
 .. toctree::

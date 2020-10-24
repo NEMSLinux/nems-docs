@@ -12,7 +12,7 @@ Access the NEMS System Settings Tool (SST) from the Configuration menu of your N
 
   Configuring your SMTP server in NEMS is as simple as configuring a mail client.
 
-.. Tip:: If you’re using Gmail as your SMTP provider, be sure to review the NEMS Documentation found at https://docs.nemslinux.com/usage/nagios-gmail-smtp for the additional steps required.
+.. Tip:: If you’re using Gmail as your SMTP provider, be sure to review the NEMS Documentation found at https://docs2.nemslinux.com/en/latest/gettingstarted/smtpGmail.html for the additional steps required.
 
 Once you are confident your SMTP settings are correctly entered, click Save All Settings and then re-connect over SSH to test your email settings with the following command (replacing youremail@yourdomain.com with your actual recipient email address):
 
