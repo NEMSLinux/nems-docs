@@ -32,6 +32,7 @@ NEMS Linux documentation, work in progress.
     :maxdepth: 1
     :caption: Basic Setup
 
+    basic/contactemail
     basic/checkcommands
     basic/backupnems
     basic/cloudservices
