@@ -13,7 +13,7 @@ Legacy Distro Support
 ---------------------
 
 `Upgrade NagiosPi or NEMS 1.0 to the Latest Version of
-NEMS <https://docs.nemslinux.com/usage/nagiospi-to-nems>`__
+NEMS <https://docs2.nemslinux.com/en/latest/advanced/legacyupgrade.html>`__
 
 Rolling Release Upgrade Instructions
 ------------------------------------
@@ -38,10 +38,10 @@ ensure you have the latest and greatest NEMS Linux has to offer.
 3. Reboot.
 
 **Please Note:** If you receive a notice
-that `nems-upgrade <https://docs.nemslinux.com/commands/nems-upgrade>`__ is
+that `nems-upgrade <https://docs2.nemslinux.com/en/latest/commands/nems-upgrade.html>`__ is
 an unknown program, did you initialize NEMS Linux? Please re-read
-the `Installation
-Instructions <https://docs.nemslinux.com/installation>`__ if that is the
+the `Initialization
+Instructions <https://docs2.nemslinux.com/en/latest/gettingstarted/initialization.html>`__ if that is the
 case.
 
 Major Release Upgrade Instructions
