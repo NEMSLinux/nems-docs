@@ -11,7 +11,7 @@ settings such as SMTP server settings.
 To access NEMS SST, click Configuration→NEMS System Settings Tool.
 
 To login, use your NEMS username and password as configured
-during `nems-init <https://docs.nemslinux.com/commands/nems-init>`__.
+during `nems-init <https://docs2.nemslinux.com/en/latest/commands/nems-init.html>`__.
 
 Custom Appearance
 ------------------
