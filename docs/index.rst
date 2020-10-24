@@ -41,6 +41,7 @@ NEMS Linux documentation, work in progress.
     basic/nemsnavigationmenu
     basic/resolvednshostnamesonlan
     basic/port9590
+    basic/gpioextender
 
 
 .. toctree::
