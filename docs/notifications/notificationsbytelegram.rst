@@ -83,7 +83,7 @@ address bar. It will have a  such as
 (Chat ID: **gXXXXXXXXX**)
 
 13) On your NEMS Server, open `NEMS
-SST <https://docs.nemslinux.com/config/nems_sst>`__ and add your
+SST <https://docs2.nemslinux.com/en/latest/apps/nemssst.html>`__ and add your
 bot  Token and Chat ID to the Telegram Account Info section on
 the *Notifications* tab.
 
