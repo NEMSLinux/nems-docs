@@ -9,7 +9,7 @@ The NEMS Migrator backup and restore options are great for keeping a
 safe backup without having to shutdown your NEMS server. Just download
 the file once in a while, or `back it up automatically with your daily
 backup
-script <https://docs.nemslinux.com/tips/backup_nems_automatically>`__.
+script <https://docs2.nemslinux.com/en/latest/basic/backupnems.html>`__.
 
 NEMS Migrator is also helpful when upgrading from previous versions of
 NEMS, or when moving from one platform to another, saving you having to
