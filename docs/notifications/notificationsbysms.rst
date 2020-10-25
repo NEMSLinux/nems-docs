@@ -20,5 +20,5 @@ How To Configure
 ----------------
 
 Simply `set your contact email
-address <https://docs.nemslinux.com/config/contact-email>`__ in NEMS
+address <https://docs2.nemslinux.com/en/latest/basic/contactemail.html>`__ in NEMS
 NConf to the appropriate SMS Gateway address.
