@@ -12,7 +12,7 @@ Frequently Asked Questions
 **Q:** The plugin is executed fine but then it hangs on a certain CIM
 element on a DELL server. Verbose output:
 
-20111104 18:21:56 Connection to https://esxi-001
+20111104 18:21:56 Connection to \https://esxi-001
 
 20111104 18:21:56 Check classe OMC_SMASHFirmwareIdentity
 
