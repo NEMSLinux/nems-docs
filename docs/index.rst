@@ -32,6 +32,7 @@ NEMS Linux documentation, work in progress.
     :maxdepth: 1
     :caption: Basic Setup
 
+    basic/contactemail
     basic/checkcommands
     basic/backupnems
     basic/cloudservices
@@ -40,6 +41,7 @@ NEMS Linux documentation, work in progress.
     basic/nemsnavigationmenu
     basic/resolvednshostnamesonlan
     basic/port9590
+    basic/gpioextender
 
 
 .. toctree::

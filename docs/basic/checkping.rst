@@ -13,4 +13,6 @@ In this example, we'll warn when the round trip average is 10ms or
 higher, or the packet loss is 2% or more. We'll go critical if the round
 trip average is 20ms or higher, or the packet loss is 5% or more.
 
-10,2% 20,5%
+.. code-block:: console
+
+   10,2% 20,5%

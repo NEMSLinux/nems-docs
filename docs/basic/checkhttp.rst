@@ -94,20 +94,28 @@ NEMS Configurator Service Parameter Examples
 
 Check if a host is responding on the default http port (ie., 80):
 
-[blank]
+.. code-block:: console
+
+   [blank]
 
 Check if a host is responding on the default https port (ie., 443):
 
--S
+.. code-block:: console
+
+   -S
 
 Check if a host is responding on an alternate https port (ie., 8080):
 
--S -p 8080
+.. code-block:: console
+
+   -S -p 8080
 
 Check the state of the hosts SSL certificate and treat as a problem if
 it expires in 30 days or less:
 
--C 30
+.. code-block:: console
+
+   -C 30
 
 Troubleshooting
 ---------------
@@ -123,7 +131,9 @@ sites, all under a single IP address.
 
 Test openssl's response by running this command from your NEMS server:
 
-openssl s_client -connect YOURDOMAIN.COM:443 -debug
+.. code-block:: console
+
+   openssl s_client -connect YOURDOMAIN.COM:443 -debug
 
 **I receive a message “CRITICAL - Socket timeout after 10 seconds” on
 NEMS TV Dashboard, Adagios and so-on**
@@ -144,4 +154,6 @@ transaction, which in turn takes less time.
 
 So your ARGS would become:
 
--N -T 30
+.. code-block:: console
+
+   -N -T 30
