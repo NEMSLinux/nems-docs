@@ -12,35 +12,37 @@ Frequently Asked Questions
 **Q:** The plugin is executed fine but then it hangs on a certain CIM
 element on a DELL server. Verbose output:
 
-20111104 18:21:56 Connection to \https://esxi-001
+.. Code-block:: console
+  
+    18:21:56 Connection to \https://esxi-001
 
-20111104 18:21:56 Check classe OMC_SMASHFirmwareIdentity
+    18:21:56 Check classe OMC_SMASHFirmwareIdentity
 
-20111104 18:21:57 Element Name = System BIOS
+    18:21:57 Element Name = System BIOS
 
-20111104 18:21:57 VersionString = 1.3.6
+    18:21:57 VersionString = 1.3.6
 
-20111104 18:21:57 Check classe CIM_Chassis
+    18:21:57 Check classe CIM_Chassis
 
-20111104 18:21:57 Element Name = Chassis
+    18:21:57 Element Name = Chassis
 
-20111104 18:21:57 Manufacturer = Dell Inc.
+    18:21:57 Manufacturer = Dell Inc.
 
-20111104 18:21:57 SerialNumber = xxxxx
+    18:21:57 SerialNumber = xxxxx
 
-20111104 18:21:57 Model = PowerEdge R710
+    18:21:57 Model = PowerEdge R710
 
-20111104 18:21:57 Element Op Status = 0
+    18:21:57 Element Op Status = 0
 
-20111104 18:21:57 Check classe CIM_Card
+    18:21:57 Check classe CIM_Card
 
-20111104 18:21:58 Element Name = unknown
+    18:21:58 Element Name = unknown
 
-20111104 18:21:58 Element Op Status = 0
+    18:21:58 Element Op Status = 0
 
-20111104 18:21:58 Check classe CIM_ComputerSystem
+    18:21:58 Check classe CIM_ComputerSystem
 
-CRITICAL: Execution time too long!
+    CRITICAL: Execution time too long!
 
 **A:** According to user feedback and lots of tests, such problems are
 related to the Dell OMSA Offline Bundle. Especially OMSA version 6.5
@@ -50,7 +52,9 @@ made problems on ESXi 5.x servers.
 
 **Q:** I get the following error message from the plugin:
 
-(0, 'Socket error: [Errno 111] Connection refused')
+.. Code-block:: console
+
+   (0, 'Socket error: [Errno 111] Connection refused')
 
 **A:** Make sure the Monitoring Server is able to access tcp port 5989
 (cim) on the ESX(i) server. Alternatively you can also set a different
@@ -67,17 +71,21 @@ find the correct element names (they can be pretty long sometimes). Run
 the plugin in verbose mode to have a list of all CIM elements. Here's an
 example how to ignore several elements:
 
-./check_esxi_hardware.py -H myesxi -U root -P mypass -V dell -i "IPMI
-SEL","Power Supply 2 Status 0: Failure status","System Board 1 Riser
-Config Err 0: Config Error"
+.. Code-block:: console
+
+   ./check_esxi_hardware.py -H myesxi -U root -P mypass -V dell -i "IPMI
+   SEL","Power Supply 2 Status 0: Failure status","System Board 1 Riser
+   Config Err 0: Config Error"
 
 —
 
 **Q:** I have the following warning showing up but my server shows all
 sensors green:
 
-WARNING : System Board 1 Riser Config Err 0: Connected - Server: Dell
-Inc. PowerEdge R620 s/n: xxxxxxx System BIOS: 1.1.2 2012-03-08
+.. Code-block:: console
+
+   WARNING : System Board 1 Riser Config Err 0: Connected - Server: Dell
+   Inc. PowerEdge R620 s/n: xxxxxxx System BIOS: 1.1.2 2012-03-08
 
 **A:** It seems that all Dell PowerEdge x620 servers are affected, it
 looks like a BMC firmware bug to me. A workaround for this bugger is in
@@ -89,7 +97,9 @@ post</a> for detailed information.
 
 **Q:** The plugin returns the following output:
 
-Authentication Error! - Server:
+.. Code-block:: console
+
+   Authentication Error! - Server:
 
 **A:** There are several answers to that:
 
@@ -141,7 +151,9 @@ more information.
 **Q:** The plugin suddenly times out, but it was working fine before.
 The plugin returns the following output:
 
-UNKNOWN: (0, 'Socket error: [Errno 110] Connection timed out')
+.. Code-block:: console
+
+   UNKNOWN: (0, 'Socket error: [Errno 110] Connection timed out')
 
 **A:** In rare cases it is possible, that the sfcbd-watchdog service,
 running on the ESXi server, isn't working correctly anymore.
@@ -150,7 +162,9 @@ Follow `VMware KB entry
 restart the service by logging into the ESXi server by ssh and launch
 the following command:
 
-/etc/init.d/sfcbd-watchdog restart
+.. Code-block:: console
+
+   /etc/init.d/sfcbd-watchdog restart
 
 If this still doesn't resolve your issue, a manual restart of the “CIM
 Server” could help. This option is found under the “Configuration” tab →
@@ -161,7 +175,9 @@ Server” could help. This option is found under the “Configuration” tab →
 **Q:** After an update of the pywbem package the plugin doesnt work
 anymore. The following output is shown in verbose mode:
 
-Unknown CIM Error: (0, 'SSL error: certificate verify failed')
+.. Code-block:: console
+
+   Unknown CIM Error: (0, 'SSL error: certificate verify failed')
 
 **A:** This was seen in SLES 11 SP3 after an update of the package
 python-pywbem from 0.7-6.13 to 0.7-6.22. After reverting to the older
@@ -172,19 +188,21 @@ of check_esxi_hardware.py, but it depends on the release of the new
 pywbem upstream version.
 See https://github.com/Napsty/check_esxi_hardware/issues/7.
 
-Update June 26th 2015: This issue was fixed in version 20150626.
+.. note:: Update June 26th 2015: This issue was fixed in version 20150626.
 
 —
 
 **Q:** On an IBM server with the ESXi image from IBM the following error
 appears but works fine with the regular image vom VMware:
 
-Traceback (most recent call last):
+.. Code-block:: console
 
-File "./check_esxi_hardware.py", line 625, in verboseoutput("Element
-Name = "+elementName)
+   Traceback (most recent call last):
 
-TypeError: cannot concatenate 'str' and 'NoneType' objects
+      File "./check_esxi_hardware.py", line 625, in verboseoutput("Element
+   Name = "+elementName)
+
+   TypeError: cannot concatenate 'str' and 'NoneType' objects
 
 **A:** The CIM definition coming from the IBM image seems to be lacking
 some information. Version 20150119 fixes this issue.
@@ -193,45 +211,47 @@ some information. Version 20150119 fixes this issue.
 0.7.0-4ubuntu1~14.04.1 was installed. Since then I get the following
 error when the plugin is run:
 
-Traceback (most recent call last):
+.. Code-block:: console
 
-File "/usr/local/bin/check_esxi_hardware.py", line 619, in
-<module>instance_list = wbemclient.EnumerateInstances(classe)
+   Traceback (most recent call last):
 
-File "/usr/lib/pymodules/python2.7/pywbem/cim_operations.py", line 421,
-in EnumerateInstances
+      File "/usr/local/bin/check_esxi_hardware.py", line 619, in
+   <module>instance_list = wbemclient.EnumerateInstances(classe)
 
-\**params)
+      File "/usr/lib/pymodules/python2.7/pywbem/cim_operations.py", line 421,
+   in EnumerateInstances
 
-File "/usr/lib/pymodules/python2.7/pywbem/cim_operations.py", line 183,
-in imethodcall
+   \**params)
 
-no_verification = self.no_verification)
+      File "/usr/lib/pymodules/python2.7/pywbem/cim_operations.py", line 183,
+   in imethodcall
 
-File "/usr/lib/pymodules/python2.7/pywbem/cim_http.py", line 268, in
-wbem_request
+   no_verification = self.no_verification)
 
-h.endheaders()
+      File "/usr/lib/pymodules/python2.7/pywbem/cim_http.py", line 268, in
+   wbem_request
 
-File "/usr/lib/python2.7/httplib.py", line 969, in endheaders
+   h.endheaders()
 
-self._send_output(message_body)
+   File "/usr/lib/python2.7/httplib.py", line 969, in endheaders
 
-File "/usr/lib/python2.7/httplib.py", line 829, in \_send_output
+   self._send_output(message_body)
 
-self.send(msg)
+   File "/usr/lib/python2.7/httplib.py", line 829, in \_send_output
 
-File "/usr/lib/pymodules/python2.7/pywbem/cim_http.py", line 115, in
-send
+   self.send(msg)
 
-self.connect()
+   File "/usr/lib/pymodules/python2.7/pywbem/cim_http.py", line 115, in
+   send
 
-File "/usr/lib/pymodules/python2.7/pywbem/cim_http.py", line 167, in
-connect
+   self.connect()
 
-except ( Err.SSLError, SSL.SSLError, SSL.SSLTimeoutError
+   File "/usr/lib/pymodules/python2.7/pywbem/cim_http.py", line 167, in
+   connect
 
-AttributeError: 'module' object has no attribute 'SSLTimeoutError'
+   except ( Err.SSLError, SSL.SSLError, SSL.SSLTimeoutError
+
+   AttributeError: 'module' object has no attribute 'SSLTimeoutError'
 
 **A:** It seems that Ubuntu did the same as SUSE, RedHat and Centos in
 the past: The pywbem was patched without changing the upstream version
@@ -239,32 +259,36 @@ number. This goes into the same direction as issue #7
 (https://github.com/Napsty/check_esxi_hardware/issues/7). A temporary
 fix is to manually install the older pywbem package like this:
 
-aptitude install python-pywbem=0.7.0-4
+.. Code-block:: console
 
-Update June 26th 2015: This issue was fixed in version 20150626.
+   aptitude install python-pywbem=0.7.0-4
+
+.. note:: Update June 26th 2015: This issue was fixed in version 20150626.
 
 —
 
 **Q:** I use python3 but the plugin throws an error:
 
-File "./check_esxi_hardware.py3", line 440
+.. Code-block:: console
 
-print "%s %s" % (time.strftime("%Y%m%d %H:%M:%S"), message)
+   File "./check_esxi_hardware.py3", line 440
 
-^
-
-SyntaxError: invalid syntax
+   print "%s %s" % (time.strftime("%Y%m%d %H:%M:%S"), message)
+   ^
+   SyntaxError: invalid syntax
 
 **A:** An issue was opened on github
 (https://github.com/Napsty/check_esxi_hardware/issues/13) to address
 this compatibility issue.
 
-Update: This issue was fixed in version 20181001.
+.. note:: Update: This issue was fixed in version 20181001.
 
 **Q:** I sometimes get the following error on an ESXi host:
 
-CRITICAL: (0, 'Socket error: [Errno 8] \_ssl.c:510: EOF occurred in
-violation of protocol')
+.. Code-block:: console
+
+   CRITICAL: (0, 'Socket error: [Errno 8] \_ssl.c:510: EOF occurred in
+   violation of protocol')
 
 **A:** After a lot of debugging and testing with a plugin user we came
 to the conclusion, that this problem arises from the ESXi host, not the
@@ -272,14 +296,18 @@ plugin. A tcpdump revealed, that the ESXi host sent a TCP Reset packet
 rather then starting to submit data. A reboot of the affected ESXi host
 resolved the problem.
 
-Update October 17th, 2019: Such situations can (sometimes) also be
-confirmed in the vSphere Client UI using the Monitor → Hardware Health
-window. A click on the “REFRESH” button results in an error in the
-recent tasks list:
+.. note::  Update October 17th, 2019: Such situations can (sometimes) also be
+   confirmed in the vSphere Client UI using the Monitor → Hardware Health
+   window. A click on the “REFRESH” button results in an error in the
+   recent tasks list:
 
 “A general system error occurred: Server closed connection after 0
 response bytes read; <SSL…..
 
+.. figure:: ../../img/308-cim-general-system-error.png
+  :width: 600
+  :align: center
+  :alt: General System Error
 —
 
 **Q:** I have several ESXi hosts behind the same IP (NAT). How can I use
@@ -298,13 +326,19 @@ parameter you want in this case is ”-C“ (or –cimport).
 enable the CIM/WBEM services first, as they are disabled by default.
 Refer to https://kb.vmware.com/s/article/2148910.
 
+.. figure:: ../../img/308-cim-server-service.png
+  :width: 600
+  :align: center
+  :alt: CIM Server Service
 —
 
 **Q:** I can't execute the plugin and get the following error message.
 Permissions are correct however (e.g. 755).
 
-execvpe(/usr/lib64/nagios/plugins/check_esxi_hardware.py) failed:
-Permission denied
+.. Code-block:: console
+
+   execvpe(/usr/lib64/nagios/plugins/check_esxi_hardware.py) failed:
+   Permission denied
 
 **A:** This error comes from SELinux. You need to write an allow rule
 for it.
@@ -314,15 +348,19 @@ for it.
 **Q:** The plugin reports the following problem with memory, but no
 memory hardware issues can be found on the server:
 
-CRITICAL : Memory - Server: HP ProLiant DL380p Gen8 s/n....
+.. Code-block:: console
+
+   CRITICAL : Memory - Server: HP ProLiant DL380p Gen8 s/n....
 
 **A:** It is possible that an alert needs to be cleared in the servers
 IPMI log first. To do that, you need to login into your ESXi server with
 SSH and run the following commands:
 
-localcli hardware ipmi sel clear
+.. Code-block:: console
 
-/sbin/services.sh restart
+   localcli hardware ipmi sel clear
+
+   /sbin/services.sh restart
 
 This might affect other CIM entries as well. So it's a wise idea to
 clear the IPMI system event log (sel) first before investigating
@@ -333,25 +371,27 @@ further.
 **Q:** Certain hardware elements show incorrect health/operational
 states, e.g. “Cooling Unit 1 Fans”:
 
-20190205 00:26:26
+.. Code-block:: console
 
-Element Name = Cooling Unit 1 Fans
+   20190205 00:26:26
 
-20190205 00:26:26
+   Element Name = Cooling Unit 1 Fans
 
-Element HealthState = 1020190205 00:26:26
+   20190205 00:26:26
 
-Global exit set to WARNING
+   Element HealthState = 1020190205 00:26:26
+
+   Global exit set to WARNING
 
 **A:** Certain server models might show false hardware alarms when these
 particular hardware elements were disabled in BIOS, are idle or have
 disabled sensors. From the `HP
 FAQ <https://support.hpe.com/hpsc/doc/public/display?docId=emr_na-a00053955en_us>`__:
 
-PR 2157501: You might see false hardware health alarms due to disabled
-or idle Intelligent Platform Management Interface (IPMI) sensors.
-Disabled IPMI sensors, or sensors that do not report any data, might
-generate false hardware health alarms.
+.. note:: PR 2157501: You might see false hardware health alarms due to disabled
+   or idle Intelligent Platform Management Interface (IPMI) sensors.
+   Disabled IPMI sensors, or sensors that do not report any data, might
+   generate false hardware health alarms.
 
 In this case it makes sense to ignore these elements using the -i
 parameter.
@@ -364,16 +404,18 @@ ESXi 6.7 U2/U3 on DELL servers.
 **A:** The issue seems to be the “OpenManage” VIB. This can be verified
 by checking the list of installed VIB's on an ESXi server:
 
-esxcli software vib list
+.. Code-block:: console
+
+   esxcli software vib list
 
 After uninstalling the OpenManage VIB, the plugin works again. According
 to DELL, ESXi 6.7 U2 is `not yet officially
 supported <https://www.dell.com/support/article/ch/de/chdhs1/sln311238/openmanage-integration-for-vmware-vcenter?lang=en>`__ (as
 of July 2019) by OpenManage:
 
-OpenManage Integration for VMware vCenter v4.3.1 (Initial 4.3 Download)
-(4.3.1 Release Notes) (4.3 Manuals)Does not add official 6.7 U2 support
-(support for 6.7 U2 will come in the fall with the next major release)
+.. note:: OpenManage Integration for VMware vCenter v4.3.1 (Initial 4.3 Download)
+   (4.3.1 Release Notes) (4.3 Manuals)Does not add official 6.7 U2 support
+   (support for 6.7 U2 will come in the fall with the next major release)
 
 See also official `VMware KB
 74696 <https://kb.vmware.com/s/article/74696>`__ entry for this.
