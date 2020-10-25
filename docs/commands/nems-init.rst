@@ -29,7 +29,7 @@ examples:
 To initialize NEMS Linux, simply `connect to your NEMS Linux server over
 SSH <https://docs.nemslinux.com/usage/connect_to_nems_ssh>`__ or use the
 in-browser terminal feature
-of `Cockpit <https://docs.nemslinux.com/features/cockpit>`__ on
+of `Cockpit <https://docs2.nemslinux.com/en/latest/apps/cockpit.html>`__ on
 supported platforms and type:
 
 **sudo** nems-init
