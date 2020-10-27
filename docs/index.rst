@@ -94,6 +94,7 @@ NEMS Linux documentation, work in progress.
     advanced/mrtg
     advanced/monitorMsWindowsHosts
     advanced/nemsicons
+    advanced/nems_php_agent
 
 .. toctree::
     :maxdepth: 2
