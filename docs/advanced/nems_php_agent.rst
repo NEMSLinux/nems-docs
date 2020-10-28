@@ -31,19 +31,19 @@ CLI Examples
 
 WARN if 15 minute system load average exceeds 3, CRIT if over 9:
 
-.. code-block console
+.. code-block:: console
 
   ./check_nems_php_agent 3 9 https://currentip.xyz/nems-agent.php load
 
 WARN if / disk usage is over 80%, CRIT if over 90%.
 
-.. code-block console
+.. code-block:: console
 
   ./check_nems_php_agent 80 90 https://currentip.xyz/nems-agent.php disk
 
 WARN if either up or down network usage exceed 1 Mb/s, CRIT if over 2 Mb/s:
 
-.. code-block console
+.. code-block:: console
 
   ./check_nems_php_agent 1 2 https://example.com/nems-agent.php net
 
