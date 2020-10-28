@@ -3,11 +3,6 @@ NEMS PHP Server Agent
 
 Monitor your PHP-enabled web server with the NEMS PHP Server Agent.
 
-Data Security
--------------
-
-All data is encrypted server-side using AES-128-ECB using an encryption/decryption key you provide in NEMS System Settings Tool.
-
 Usage
 -----
 
@@ -27,9 +22,14 @@ Check Command Arguments
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 -  **URL** - The URL to your *nems-agent.php* on the remote server.
--  **Check** - Memory Usage [mem], Disk Usage (/) [disk], Disk Usage (/var) [var], Network Usage [net], System Load Average [load].
+-  **Check** - Percent Memory Usage [mem], Percent Disk Usage (/) [disk], Percent Disk Usage (/var) [var], Network Usage Mb/s [net], 15 Minute System Load Average [load].
 -  **Warn Up / Warn Down / Critical Up / Critical Down** - Set your
    thresholds. Can be a positive floating point number or integer.
+
+Data Security
+-------------
+
+All data is encrypted server-side using AES-128-ECB using an encryption/decryption key you provide in NEMS System Settings Tool.
 
 Under The Hood
 --------------
