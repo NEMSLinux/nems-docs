@@ -44,8 +44,59 @@ That is what a user would see if they were to open the agent in their browser, a
 
 Your NEMS Server knows your decryption key. When decrypted, the data looks like this:
 
-.. code-block:: json
+.. code-block:: php
 
-{"ver":{"nems":"1.6","nemsagent":"1.0"},"data":"{\"cpu\":{\"usage\":0,\"model\":\"Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz\",\"loadaverage\":{\"1\":0,\"5\":0,\"15\":0}},\"mem\":{\"percent\":23.46,\"total\":0.472,\"free\":0.035,\"used\":0.43699999999999994},\"storage\":{\"\\\/\":{\"free\":6.11,\"total\":7.69,\"used\":1.58,\"percent\":0},\"\\\/var\":{\"free\":6.11,\"total\":7.69,\"used\":1.58,\"percent\":0}},\"network\":{\"rx\":0.01,\"tx\":0.01}}","auth":"312433c28349f63c4f387953ff337046e794bea0f9b9ebfcb08e90046ded9c76"}
+Array
+  (
+    [ver] => Array
+        (
+            [nems] => 1.6
+            [nemsagent] => 1.0
+        )
+    [data] => Array
+        (
+            [cpu] => Array
+                (
+                    [usage] => 0
+                    [model] => Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+                    [loadaverage] => Array
+                        (
+                            [1] => 0
+                            [5] => 0
+                            [15] => 0
+                        )
+                )
+            [mem] => Array
+                (
+                    [percent] => 23.5
+                    [total] => 0.472
+                    [free] => 0.032
+                    [used] => 0.44
+                )
+            [storage] => Array
+                (
+                    [/] => Array
+                        (
+                            [free] => 6.11
+                            [total] => 7.69
+                            [used] => 1.58
+                            [percent] => 0
+                        )
+                    [/var] => Array
+                        (
+                            [free] => 6.11
+                            [total] => 7.69
+                            [used] => 1.58
+                            [percent] => 0
+                        )
+                )
+            [network] => Array
+                (
+                    [rx] => 0.01
+                    [tx] => 0.01
+                )
+        )
+    [auth] => 312433c28349f63c4f387953ff337046e794bea0f9b9ebfcb08e90046ded9c76
+  )
 
 This data is used by your NEMS Server's *check_nems_php_agent* check commands.
