@@ -27,7 +27,7 @@ Check Command Arguments
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 -  **URL** - The URL to your *nems-agent.php* on the remote server.
--  **Check** - Memory Usage, Disk Usage (/), Disk Usage (/var), Network Usage.
+-  **Check** - Memory Usage [mem], Disk Usage (/) [disk], Disk Usage (/var) [var], Network Usage [net], System Load Average [load].
 -  **Warn Up / Warn Down / Critical Up / Critical Down** - Set your
    thresholds. Can be a positive floating point number or integer.
 
