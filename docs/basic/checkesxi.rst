@@ -121,14 +121,14 @@ content is handled as string.
 cpu/memory usage?
 
 **A:** No. The plugin makes use of the CIM (Common Infrastructure
-Model) . The so-called CIM elements cover hardware only.
+Model) API . The so-called CIM elements cover hardware only.
 
 —
 
 **Q:** Some hardware is not being monitored by the plugin.
 
 **A:** The plugin can only monitor the hardware which is “shown” by the
-server via the CIM . If the hardware vendor does not include a certain
+server via the CIM API. If the hardware vendor does not include a certain
 hardware element into the CIM elements, then this piece of hardware can
 not be monitored. In all the years I've only seen this on no-name
 machines (and SUN) though.
