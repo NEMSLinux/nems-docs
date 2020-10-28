@@ -1,7 +1,7 @@
 NEMS PHP Server Agent
 =====================
 
-Monitor your PHP-enabled web server with the NEMS PHP Server Agent.
+Monitor your Linux-based PHP-enabled web server with the NEMS PHP Server Agent.
 
 Usage
 -----
@@ -25,6 +25,27 @@ Check Command Arguments
 -  **Check** - Percent Memory Usage [mem], Percent Disk Usage (/) [disk], Percent Disk Usage (/var) [var], Network Usage Mb/s [net], Network Usage Mb/s Download Only [netrx], Network Usage Mb/s Upload Only [nettx], 15 Minute System Load Average [load].
 -  **Warn Up / Warn Down / Critical Up / Critical Down** - Set your
    thresholds. Can be a positive floating point number or integer.
+
+CLI Examples
+~~~~~~~~~~~~
+
+WARN if 15 minute system load average exceeds 3, CRIT if over 9:
+
+.. code-block console
+
+  ./check_nems_php_agent 3 9 https://currentip.xyz/nems-agent.php load
+
+WARN if / disk usage is over 80%, CRIT if over 90%.
+
+.. code-block console
+
+  ./check_nems_php_agent 80 90 https://currentip.xyz/nems-agent.php disk
+
+WARN if either up or down network usage exceed 1 Mb/s, CRIT if over 2 Mb/s:
+
+.. code-block console
+
+  ./check_nems_php_agent 1 2 https://example.com/nems-agent.php net
 
 Data Security
 -------------
