@@ -6,7 +6,7 @@ Monitor your PHP-enabled web server with the NEMS PHP Server Agent.
 Data Security
 -------------
 
-All data is encrypted server-side using AES-128-ECB.
+All data is encrypted server-side using AES-128-ECB using an encryption/decryption key you provide in NEMS System Settings Tool.
 
 Usage
 -----
@@ -17,6 +17,11 @@ Check Command
 -------------
 
 *check_nems_php_agent* is part of NEMS Linux 1.6.
+
+Why Use the NEMS PHP Server Agent
+---------------------------------
+
+The NEMS PHP Server Agent is designed specifically to collect system data from a PHP server. Disk space and usage, memory size and usage, system load, etc. Unlike NRPE, the agent reports very specific data rather than running commands on your server. This makes it easier to use on a public server where firewall rules might be too complex for novice sysadmins to make NRPE a safe option. The NEMS PHP Server Agent is safe out of the box, and incredibly easy to deploy: Just upload it to a public folder on your web server and point your check commands on your NEMS Server to the URL.
 
 Check Command Arguments
 ~~~~~~~~~~~~~~~~~~~~~~~
