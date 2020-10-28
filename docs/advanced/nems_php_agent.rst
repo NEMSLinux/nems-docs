@@ -120,6 +120,6 @@ Your NEMS Server knows your decryption key. When decrypted, the data looks like 
        [auth] => 312433c28349f63c4f387953ff337046e794bea0f9b9ebfcb08e90046ded9c76
      )
 
-The "auth" hash is a cryptographically-safe has of your passphrase, and is what your NEMS Server uses to ensure the NEMS Server passphrase matches that of your NEMS PHP Server Agent. In this way, a third party cannot find a nems-agent.php running on your server and access your data from their NEMS Server. They will receive an error that the auth key does not match. Similarily, it means you can deploy your NEMS PHP Server Agent on as many PHP servers as you like, and even use multiple NEMS Servers to monitor it (as long as you key in the same passphrase on each NEMS Server).
+The "auth" hash is a cryptographically-safe hash of your passphrase, and is what your NEMS Server uses to ensure the NEMS Server passphrase matches that of your NEMS PHP Server Agent. In this way, a third party cannot find a nems-agent.php running on your server and access your data from their NEMS Server. They will receive an error that the auth key does not match. Similarily, it means you can deploy your NEMS PHP Server Agent on as many PHP servers as you like, and even use multiple NEMS Servers to monitor it (as long as you key in the same passphrase on each NEMS Server).
 
 This data output above is used by your NEMS Server's *check_nems_php_agent* check commands.
