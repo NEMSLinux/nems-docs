@@ -69,7 +69,7 @@ Warning Light work in your environment.
 .. _nems-api: /features/nems-api
 .. _NEMS Tools Distro: /features/nems-tools/distro
 
-.. |image1| image:: /img/warninglight.jpg
+.. |image1| image:: ../../img/warninglight.jpg
    :align: right
    :width: 400px
 
