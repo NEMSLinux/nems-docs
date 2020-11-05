@@ -2,3 +2,8 @@
 .rst-content .line-block {
   margin-bottom: 0 !important;
 }
+
+.bolditalic {
+  font-weight: bold;
+  font-style: italic;
+}

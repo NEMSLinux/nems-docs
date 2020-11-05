@@ -1,5 +1,5 @@
-Check Commands: check_nrpe
-==========================
+Check Command: check_nrpe
+=========================
 
 Configuration
 -------------
