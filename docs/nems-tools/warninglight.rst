@@ -66,8 +66,8 @@ lamp.
 Please share what you create. I'd love to see your designs to make NEMS
 Warning Light work in your environment.
 
-.. _nems-api: /features/nems-api
-.. _NEMS Tools Distro: /features/nems-tools/distro
+.. _nems-api: https://docs.nemslinux.com/en/latest/advanced/nems-api.html
+.. _NEMS Tools Distro: https://docs.nemslinux.com/en/latest/nems-tools/distro.html
 
 .. |image1| image:: ../../img/warninglight.jpg
    :align: right
