@@ -19,19 +19,17 @@ check_apc Available Command Arguments
 - ``bat_capacity`` - Return the remaining battery capacity expressed in percent of full
   capacity
 - ``bat_temp`` - Return the current internal UPS temperature expressed in Celsius
-- ``bat_run_remaining`` - Return the UPS battery run time remaining before battery exhaustion
-test note
-**Note:** thresholds must be expressed in minutes
-  test two
+- | ``bat_run_remaining`` - Return the UPS battery run time remaining before battery exhaustion
+  | **Note:** thresholds must be expressed in minutes
 - ``bat_replace`` - Return whether the UPS batteries need replacing
 - ``bat_num_batt`` - Return the number of external battery packs connected to the UPS
 - ``bat_num_bad_batt`` - Return the number of external battery packs connected to the UPS that
-are defective
-- ``bat_act_volt`` - Return the actual battery bus voltage in Volts
-  **NB: thresholds must be expressed in range as nearest values. ex:
-  normal=220, warning=215:225, critical=210:230**
-  **Additionally, the checks will look for Nominal Voltage (as returned
-  by the UPS), and exit as CRITICAL if Actual Voltage is LOWER or Equal**
+  are defective
+- | ``bat_act_volt`` - Return the actual battery bus voltage in Volts
+  | **Note:** thresholds must be expressed in range as nearest values. ex:
+  normal=220, warning=215:225, critical=210:230
+  | Additionally, the checks will look for Nominal Voltage (as returned
+  by the UPS), and exit as CRITICAL if Actual Voltage is LOWER or Equal
 - ``power_modules`` - Return the status of the Power Modules
 - ``in_phase`` - Return the current AC input phase
 - ``in_volt`` - Return the current utility line voltage in VAC
