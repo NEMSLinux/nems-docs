@@ -78,3 +78,11 @@ normal=50, warning=45:55, critical=40:60
 
 If no command is supplied, the script returns OKAY with the UPS model
 information.
+
+
+* This is a bulleted list.
+* | It has two items, the second
+  | item uses two lines.
+* This is a bulleted list.
+* | It has two items, the second
+  | item uses two lines.
