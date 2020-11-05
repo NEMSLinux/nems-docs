@@ -3,6 +3,8 @@ Documentation for NEMS Linux.
 
 You can review the live version of this repository at https://docs.nemslinux.com/
 
+[![Documentation Status](https://readthedocs.org/projects/nemslinux/badge/?version=latest)](https://docs.nemslinux.com/en/latest/?badge=latest)
+
 ## Helpful Resources
 
 I'm actually new to Restructured Text, though I see similarities to some of the Discord markdown. So having some resources to help find quick syntax forumulae can be helpful. Here are some that I've turned to for help:
