@@ -46,7 +46,7 @@ All examples in this document assume that the API is available at
    names along with their current state
 
 Response Format
----------------
+===============
 
 All responses are in JSON and have the following format:
 
@@ -65,7 +65,7 @@ where "code" is the mk-livestatus error code and "message" is a
 human-readable explanation of the error.
 
 Query interface
----------------
+===============
 
 The query interface returns a list of objects in JSON. The available
 endpoints are the same as the tables available from mk-livestatus
@@ -145,7 +145,7 @@ count the number of hosts starting with "api" in state OK:
    http://nems.local/nems-api/hosts?&Stats[]=name ~ ^api&Filter[]=state = 0
 
 Command Interface
------------------
+=================
 
 All calls to ``nems-api`` to execute Nagios commands **must be HTTP POST
 requests**.
