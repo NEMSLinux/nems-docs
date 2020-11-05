@@ -1,7 +1,11 @@
 nems-tools: Warning Light
 -------------------------
 
-|image1|\ *Warning Light* is a lightweight daemon running on NEMS
+.. figure:: ../../img/warninglight.jpg
+   :align: right
+   :width: 400px
+
+*Warning Light* is a lightweight daemon running on NEMS
 1.4.1+. It is a different type of notification system exclusive to NEMS
 Linux.
 
@@ -68,10 +72,6 @@ Warning Light work in your environment.
 
 .. _nems-api: https://docs.nemslinux.com/en/latest/advanced/nems-api.html
 .. _NEMS Tools Distro: https://docs.nemslinux.com/en/latest/nems-tools/distro.html
-
-.. |image1| image:: ../../img/warninglight.jpg
-   :align: right
-   :width: 400px
 
 NEMS Tools GPIO Extender
 ~~~~~~~~~~~~~~~~~~~~~~~~
