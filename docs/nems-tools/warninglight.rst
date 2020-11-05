@@ -25,8 +25,8 @@ via GPIO, for example.
 Linux server.
 
 *Warning Light* can be connected directly to a supported NEMS Linux
-server, or eventually (not yet available) to a supplemental device
-running the `NEMS Tools Distro`_ with network access, even through the
+server, or to a supplemental device
+running the `NEMS Extender OS`_ with network access, even through the
 Internet.
 
 NEMS Warning Light: Pre-Built Hardware
@@ -43,7 +43,7 @@ System Requirements
 Pi-based NEMS Linux server. If your NEMS server is a different platform
 or GPIO to the server is not convenient, you can connect your *Warning
 Light* to a supported device (such as a Raspberry Pi Zero) and install
-NEMS Tools GPIO Extender Receiver OS, which will allow you to add an
+NEMS Extender OS, which will allow you to add an
 unlimited number of GPIO receivers to your NEMS server, regardless of
 platform.
 
@@ -78,7 +78,7 @@ Please share what you create. I'd love to see your designs to make NEMS
 Warning Light work in your environment.
 
 .. _nems-api: https://docs.nemslinux.com/en/latest/advanced/nems-api.html
-.. _NEMS Tools Distro: https://docs.nemslinux.com/en/latest/nems-tools/distro.html
+.. _NEMS Extender OS: https://docs.nemslinux.com/en/latest/nems-tools/extender_os.html
 
 NEMS Tools GPIO Extender
 ~~~~~~~~~~~~~~~~~~~~~~~~
