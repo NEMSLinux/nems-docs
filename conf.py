@@ -159,6 +159,8 @@ html_css_files = [
 ]
 
 rst_prolog = """
+
 .. role:: bolditalic
   :class: bolditalic
+
 """

@@ -26,7 +26,7 @@ Telegram account (it's free).
 4) Click on the BotFather bot result, and then click *Start* at the
 bottom of your app screen.
 
-5) Click \`/newbot\` and then type a name for your bot. *NEMS Linux* is
+5) Click ``newbot`` and then type a name for your bot. *NEMS Linux* is
 one idea.
 
 6) Choose a username for the bot, which must end in the word *bot*. For
