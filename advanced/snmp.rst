@@ -18,7 +18,7 @@ This is the security method SNMP.  The basic types of communities are read-only 
 
 Ensure that the device to be monitored is SNMP capable and SNMP is configured.
 
-.. figure:: ../../img/snmp_001.png
+.. figure:: ../img/snmp_001.png
   :width: 600
   :align: center
 
@@ -31,7 +31,7 @@ Vendor sites and community forums may provide the MIBs and OIDs, but there are w
 
 There are several free MIB browsers available on the internet. Most provide a tree structure of the device.
 
-.. figure:: ../../img/snmp_002.png
+.. figure:: ../img/snmp_002.png
   :width: 600
   :align: center
 
@@ -47,7 +47,7 @@ The command format is
 
 A list of OIDs will be returned.  Copy the results to a text document or spreadsheet for easy reference.
 
-.. figure:: ../../img/snmp_003.png
+.. figure:: ../img/snmp_003.png
   :width: 600
   :align: center
 
@@ -74,7 +74,7 @@ In this example, uptime will be test using both the OID and Object name using th
 
 In this example, System Uptime is check using both the OID and the Object name.  Note, the .0 is put on the end of sysUpTime, this denotes to collect child information and is required.
 
-.. figure:: ../../img/snmp_004.png
+.. figure:: ../img/snmp_004.png
   :width: 600
   :align: center
 
@@ -93,11 +93,11 @@ Follow these steps to configure a basic SNMP check.
 - Add new check to host
 - Generate and deploy Nagios config
 
-.. figure:: ../../img/snmp_005.png
+.. figure:: ../img/snmp_005.png
   :width: 600
   :align: center
 
-.. figure:: ../../img/snmp_006.png
+.. figure:: ../img/snmp_006.png
   :width: 600
   :align: center
 
@@ -105,7 +105,7 @@ Follow these steps to configure a basic SNMP check.
 
 Launch Adagios and validate the check ran with no issues.
 
-.. figure:: ../../img/snmp_007.png
+.. figure:: ../img/snmp_007.png
   :width: 600
   :align: center
 

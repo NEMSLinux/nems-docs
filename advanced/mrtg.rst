@@ -63,7 +63,7 @@ on your monitored device. You may also use this to monitor the amount of
 bandwidth being consumed by users on your guest WiFi, and then notify
 the admin if the set thresholds are exceeded.
 
-.. figure:: ../../img/mrtg.png
+.. figure:: ../img/mrtg.png
   :width: 600
   :align: center
   :alt: Multi Router Traffic Grapher (MRTG)

@@ -18,7 +18,7 @@ Telegram account (it's free).
 
 3) Create a new message and search for *botfather*.
 
-.. figure:: ../../img/screenshot_2019-08-19-19-28-48-089_org.telegram.messenger.png
+.. figure:: ../img/screenshot_2019-08-19-19-28-48-089_org.telegram.messenger.png
   :width: 400
   :align: center
   :alt: Botfather
@@ -39,7 +39,7 @@ username.
 In particular, you'll need to remember your bot name (created in the
 step above) and the  token.
 
-.. figure:: ../../img/screenshot_2019-08-19-19-32-50-622_org.telegram.messenger.png
+.. figure:: ../img/screenshot_2019-08-19-19-32-50-622_org.telegram.messenger.png
   :width: 400
   :align: center
   :alt: Botfather 2
@@ -47,16 +47,16 @@ step above) and the  token.
 8) Click *back* |back| followed by the hamburger menu |hamburger| then choose *New
 Group*.
 
-.. |back| image:: ../../img/back.png
+.. |back| image:: ../img/back.png
    :height: 2em
 
-.. |hamburger| image:: ../../img/hamburger.png
+.. |hamburger| image:: ../img/hamburger.png
    :height: 2em 
 
 9) Search for the bot you just created just as if it was a person, and
 click it to add the bot to your new group.
 
-.. figure:: ../../img/screenshot_2019-08-19-19-41-44-985_org.telegram.messenger.png
+.. figure:: ../img/screenshot_2019-08-19-19-41-44-985_org.telegram.messenger.png
   :width: 400
   :align: center
   :alt: New Group 200000
@@ -64,12 +64,12 @@ click it to add the bot to your new group.
 Click your bot's name from the search results, followed by the right
 arrow |rightarrow| to proceed to the next screen.
 
-.. |rightarrow| image:: ../../img/rightarrow.png
+.. |rightarrow| image:: ../img/rightarrow.png
    :height: 2em
 
 10) Enter a name for your group and click the checkmark to save.
 
-.. figure:: ../../img/screenshot_2019-08-19-19-43-25-138_org.telegram.messenger.png
+.. figure:: ../img/screenshot_2019-08-19-19-43-25-138_org.telegram.messenger.png
   :width: 400
   :align: center
   :alt: New Group
@@ -91,7 +91,7 @@ the *Notifications* tab.
 Modify). Add notify_host_by_telegram and notify_service_by_telegram
 appropriately. Save, and generate your Nagios Config.
 
-.. figure:: ../../img/telegram.png
+.. figure:: ../img/telegram.png
   :width: 400
   :align: center
   :alt: Telegram

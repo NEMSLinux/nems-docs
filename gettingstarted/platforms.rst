@@ -32,7 +32,7 @@ complete list of supported platforms.
 Raspberry Pi
 ------------
 
-.. figure:: ../../img/raspberry_pi_3_b_plus.png
+.. figure:: ../img/raspberry_pi_3_b_plus.png
   :width: 500
   :align: center
   :alt: Raspberry Pi 3 B Plus
@@ -42,7 +42,7 @@ Raspberry Pi
 Pine64
 ------
 
-.. figure:: ../../img/pinea64-plus.png
+.. figure:: ../img/pinea64-plus.png
   :width: 500
   :align: center
   :alt: Pine64 A64 Plus
@@ -50,7 +50,7 @@ Pine64
 Hardkernel ODROID XU4
 ---------------------
 
-.. figure:: ../../img/odroid-xu4q.png
+.. figure:: ../img/odroid-xu4q.png
   :width: 500
   :align: center
   :alt: Odroid XU4Q
@@ -58,7 +58,7 @@ Hardkernel ODROID XU4
 FriendlyElec
 ------------
 
-.. figure:: ../../img/nanopc-t4.png
+.. figure:: ../img/nanopc-t4.png
   :width: 400
   :align: center
   :alt: NanoPC T4
@@ -66,7 +66,7 @@ FriendlyElec
 Orange Pi
 ---------
 
-.. figure:: ../../img/orange-pi-3.png
+.. figure:: ../img/orange-pi-3.png
   :width: 500
   :align: center
   :alt: Orange Pi 3
@@ -74,7 +74,7 @@ Orange Pi
 ASUS Tinker Board / S
 ---------------------
 
-.. figure:: ../../img/asus_tinker_board_s.png
+.. figure:: ../img/asus_tinker_board_s.png
   :width: 500
   :align: center
   :alt: Asus Tinkerboard S
@@ -86,7 +86,7 @@ from.
 Khadas VIM3
 -----------
 
-.. figure:: ../../img/khadas_vim3_basic.png
+.. figure:: ../img/khadas_vim3_basic.png
   :width: 400
   :align: center
   :alt: Khadas VIM 3
@@ -101,7 +101,7 @@ eMMC storage by typing;
 NEMS Linux Appliance
 --------------------
 
-.. figure:: ../../img/nems-fitlet2.png
+.. figure:: ../img/nems-fitlet2.png
   :width: 500
   :align: center
   :alt: Fitlet 2

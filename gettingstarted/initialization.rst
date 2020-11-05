@@ -16,7 +16,7 @@ Once connected, type:
 
 You’ll be asked to enter the password again. Follow the prompts. All the complicated stuff is made easy.
 
-.. figure:: ../../img/NEMS-Initialization.png
+.. figure:: ../img/NEMS-Initialization.png
   :width: 600
   :align: center
   :alt: NEMS Initialization screen

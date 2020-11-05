@@ -14,7 +14,7 @@ I received my first Raspberry Pi in 2014. After it sat on the shelf for a year, 
 
 Why reinvent the wheel? Ryan Siegel’s NagiosPi image was out-of-the-box ready and gaining popularity. I started using it, but quickly became dismayed by the state of the distro, which appeared to be aging and was not being updated at a pace suitable for business use. It was a wonderful starting point, but felt in some important ways like an incomplete product. I began working on my own rebuild of NagiosPi, calling it NEMS; short for “Nagios Enterprise Monitoring Server”.
 
-.. figure:: ../../img/first_nems_server.jpg
+.. figure:: ../img/first_nems_server.jpg
   :width: 600
   :align: center
   :alt: Picture of the first NEMS Server atop the old Nagios server it replaced
@@ -23,7 +23,7 @@ Why reinvent the wheel? Ryan Siegel’s NagiosPi image was out-of-the-box ready 
 
 I’m a coder in my professional life. I develop server-side applications, mainly for web. Beyond building on a more current software base, the first thing I’d set out to do was build a responsive browser-based UI for NEMS, bringing all the components of NagiosPi together into a single interface. This later became the NEMS Dashboard, also known by its GitHub repository name, “nems-www.”
 
-.. figure:: ../../img/NEMS-1.4.1-Dashboard.png
+.. figure:: ../img/NEMS-1.4.1-Dashboard.png
   :width: 600
   :align: center
   :alt: Screenshot of NEMS Linux Dashboard in version 1.4.1

@@ -1,7 +1,7 @@
 Notifications by Webhook
 ========================
 
-.. figure:: ../../img/discord-nems-webhook.png
+.. figure:: ../img/discord-nems-webhook.png
   :width: 300
   :align: right
   :alt: Webhook Notification

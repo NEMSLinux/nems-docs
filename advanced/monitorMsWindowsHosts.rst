@@ -90,7 +90,7 @@ Instrumentation services are running.
 -  Scroll down to the *Remote Registry service*. Verify that the service
    is started and is set to **Automatic**.
 
-.. figure:: ../../img/wmi_windows_01.png
+.. figure:: ../img/wmi_windows_01.png
   :width: 600
   :align: center
   :alt: Remote Registry
@@ -102,7 +102,7 @@ above systems will deny remote access to the registry.
 -  Scroll down to the *Server* service. Verify that the service is
    started and set to **Automatic**.
 
-.. figure:: ../../img/wmi_windows_02.png
+.. figure:: ../img/wmi_windows_02.png
   :width: 500
   :align: center
   :alt: Server
@@ -110,7 +110,7 @@ above systems will deny remote access to the registry.
 -  Scroll down to the *Windows Management Instrumentation* service.
    Verify that it too is started and set to **Automatic**.
 
-.. figure:: ../../img/wmi_windows_03.png
+.. figure:: ../img/wmi_windows_03.png
   :width: 500
   :align: center
   :alt: Windows Management Instrumentation
@@ -137,7 +137,7 @@ for a remote user.**
 On the monitored host machine, right-click on *My Computer*, and
 navigate to Manage \| Services and Applications \| WMI Control.
 
-.. figure:: ../../img/wmi_windows_04.png
+.. figure:: ../img/wmi_windows_04.png
   :width: 400
   :align: center
   :alt: WMI Control
@@ -146,7 +146,7 @@ navigate to Manage \| Services and Applications \| WMI Control.
 2. In the WMI Control Properties dialog box, click the Security tab.
 3. Expand the Root node and select CIMV2, then click Security.
 
-.. figure:: ../../img/wmi_windows_05.png
+.. figure:: ../img/wmi_windows_05.png
   :width: 400
   :align: center
   :alt: CIMV2
@@ -154,14 +154,14 @@ navigate to Manage \| Services and Applications \| WMI Control.
 Select the user in the *Group or user names* box. If not listed
 select **Add**.
 
-.. figure:: ../../img/wmi_windows_06.png
+.. figure:: ../img/wmi_windows_06.png
   :width: 400
   :align: center
   :alt: Add User to CIMV2
 
 Type in the user name and click **Check Names**.
 
-.. figure:: ../../img/wmi_windows_07.png
+.. figure:: ../img/wmi_windows_07.png
   :width: 400
   :align: center
   :alt: Check Names
@@ -174,12 +174,12 @@ following check boxes in the Allow column:
 3. Remote Enable
 4. Read Security
 
-.. figure:: ../../img/wmi_windows_08.png
+.. figure:: ../img/wmi_windows_08.png
   :width: 400
   :align: center
   :alt: Execute Methods and Enable Account
 
-.. figure:: ../../img/wmi_windows_09.png
+.. figure:: ../img/wmi_windows_09.png
   :width: 400
   :align: center
   :alt: Remote Enable and Read Security
@@ -199,7 +199,7 @@ WMI.
    computer* checkbox.
 6. Click **Apply**.
 
-.. figure:: ../../img/wmi_windows_10.png
+.. figure:: ../img/wmi_windows_10.png
   :width: 400
   :align: center
   :alt: Enable Distributed COM
@@ -214,7 +214,7 @@ WMI.
 5. In the Launch Permission dialog box, add the user or group name
    necessary for the remote user.
 
-.. figure:: ../../img/wmi_windows_11.png
+.. figure:: ../img/wmi_windows_11.png
   :width: 500
   :align: center
   :alt: COM Security
@@ -223,7 +223,7 @@ Grant the remote user all the permissions available in the Permissions
 for Administrators area by enabling all of the check boxes in the Allow
 column.
 
-.. figure:: ../../img/wmi_windows_12.png
+.. figure:: ../img/wmi_windows_12.png
   :width: 400
   :align: center
   :alt: Permissions
@@ -240,7 +240,7 @@ of a domain.**
 4. Change the value of *Network access: Sharing and security model for
    local accounts.* to **Classic**.
 
-.. figure:: ../../img/wmi_windows_13.png
+.. figure:: ../img/wmi_windows_13.png
   :width: 600
   :align: center
   :alt: Security Options
@@ -259,7 +259,7 @@ Enter the following in an Administrator Command Prompt:
 Enter the username and password of the user created on the Windows
 devices who was granted access to the WMI data.
 
-.. figure:: ../../img/nems_sst_windows_domain_credentials.png
+.. figure:: ../img/nems_sst_windows_domain_credentials.png
   :width: 500
   :align: center
   :alt: SST Domain Credentials
@@ -274,7 +274,7 @@ Then click the drop-down arrow in the *check command* select list, and
 scroll down to the check_win\_\ *xxx* commands to choose the command you
 wish to add.
 
-.. figure:: ../../img/nconf_add_advanced_service.png
+.. figure:: ../img/nconf_add_advanced_service.png
   :width: 500
   :align: center
   :alt: Add advanced service
@@ -289,7 +289,7 @@ check_win\_\ *xxx* services you require.
 When complete these commands will now be available in the *Advanced
 Services* list.
 
-.. figure:: ../../img/nconf_advanced_services_check_wmi.png
+.. figure:: ../img/nconf_advanced_services_check_wmi.png
   :width: 500
   :align: center
   :alt: Advanced services list
@@ -329,7 +329,7 @@ issues that a simple ping can't determine.
    -  Enable all modules and change the NRPE mode to Legacy.
    -  Screen should look a little something like this: 
 
-   .. figure:: ../../img/nsclient-setup.png
+   .. figure:: ../img/nsclient-setup.png
     :width: 500
     :align: center
     :alt: NSClient setup

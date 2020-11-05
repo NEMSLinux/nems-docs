@@ -21,7 +21,7 @@ DHT11
 
 `Buy on Amazon.com <https://amzn.to/31RIjsf>`__
 
-.. figure:: ../../img/dht11.jpg
+.. figure:: ../img/dht11.jpg
   :width: 130
   :align: left
   :alt: DHT11 Sensor
@@ -38,7 +38,7 @@ DHT22/AM2302
 
 `Buy on Amazon.com <https://amzn.to/3alpeCE>`__
 
-.. figure:: ../../img/dht22.jpg
+.. figure:: ../img/dht22.jpg
   :width: 130
   :align: left
   :alt: DHT22 Sensor
@@ -59,7 +59,7 @@ The pinout for the DHT11, DHT22 and AM2302 are the same, so no matter
 which DHT sensor you choose, it is an identical process to making it
 work with your NEMS Server.
 
-.. figure:: ../../img/dht11_dht22_pinout.png
+.. figure:: ../img/dht11_dht22_pinout.png
   :width: 150
   :align: left
   :alt: DHT11 DHT22 Pinout

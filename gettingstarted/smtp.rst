@@ -5,7 +5,7 @@ The first thing you’ll want to do on your new NEMS Linux server is configure y
 
 Access the NEMS System Settings Tool (SST) from the Configuration menu of your NEMS dashboard. This tool does away with the need to use the traditional Nagios resource.cfg file to configure your email settings. One of the nice things about NEMS Linux is that I really don’t have to go into detail about how to do this. It’s so intuitive that it does not require explanation. So I’ll just provide a screenshot in Figure 5.
 
-.. figure:: ../../img/smtp_nems-sst.png
+.. figure:: ../img/smtp_nems-sst.png
   :width: 600
   :align: center
   :alt: Adding SMTP Credentials in NEMS System Settings Tool

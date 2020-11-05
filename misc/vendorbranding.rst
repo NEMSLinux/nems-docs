@@ -1,7 +1,7 @@
 NEMS Linux Vendor Branding
 ==========================
 
-.. figure:: ../../img/ssvendorbranding.png
+.. figure:: ../img/ssvendorbranding.png
   :width: 600
   :align: center
   :alt: Vendor Branding Image

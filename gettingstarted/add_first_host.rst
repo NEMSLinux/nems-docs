@@ -10,7 +10,7 @@ Adding a Host
 
 Adding a host for monitoring within NEMS is done through the NEMS Configurator (NConf) user interface. You’ll find this tool on the Configuration menu of your NEMS Dashboard. Within NConf, click the “Add” link next to “Hosts” on the left navigation. This will present you with the Add Host screen.
 
-.. figure:: ../../img/Add-a-host.png
+.. figure:: ../img/Add-a-host.png
   :width: 600
   :align: center
   :alt: Add a host in NConf
@@ -23,7 +23,7 @@ Next, in the OS drop-down on the same screen, select your host’s operating sys
 
 A “Host Preset” allows you to add checks that are always used for this type of host. To help us understand what this is actually doing, let us digress for a moment and take a look under the hood. You can see what checks are going to be automatically applied via the selected Host Preset by pressing the “Show” link next to “Host Presets” on the left navigation menu.
 
-.. figure:: ../../img/Host-Preset.png
+.. figure:: ../img/Host-Preset.png
   :width: 600
   :align: center
   :alt: Host Preset in NConf
@@ -32,7 +32,7 @@ A “Host Preset” allows you to add checks that are always used for this type 
 
 Realizing that the linux-server Host Preset initiates the check_host_alive check command, we can review what that actually does by clicking the “Show” link next to “Misccommands.”
 
-.. figure:: ../../img/check_host_alive-check-command-details.png
+.. figure:: ../img/check_host_alive-check-command-details.png
   :width: 600
   :align: center
   :alt: check_host_alive details
@@ -63,7 +63,7 @@ Generate Nagios Config: Make Your Changes Live (In Review)
 
 To make your changes live and begin monitoring your new host, press the Generate Nagios Config link on the left navigation. You should see 0 errors. If you do see errors, press the syntax check bar and review where you went wrong. NConf is very good at showing you where to find the error is so you can go back and fix it.
 
-.. figure:: ../../img/generate-nems-config.png
+.. figure:: ../img/generate-nems-config.png
   :width: 600
   :align: center
   :alt: Generate NEMS Config

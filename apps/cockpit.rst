@@ -3,7 +3,7 @@ Cockpit
 
 NEMS Linux includes `Cockpit from Red Hat <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/getting_started_with_cockpit/index>`__. In its NEMS implementation, Cockpit provides browser-based SSH access, some realtime performance graphs, and basic system administration tools such as the ability to reboot or safely shutdown your NEMS server.
 
-.. figure:: ../../img/Cockpit-terminal.png
+.. figure:: ../img/Cockpit-terminal.png
   :width: 600
   :align: center
   :alt: Cockpit Terminal

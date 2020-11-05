@@ -1,7 +1,7 @@
 nems-tools: Warning Light
 -------------------------
 
-.. figure:: ../../img/warninglight.jpg
+.. figure:: ../img/warninglight.jpg
    :align: right
    :width: 400px
 

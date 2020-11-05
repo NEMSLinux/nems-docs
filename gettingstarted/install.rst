@@ -8,7 +8,7 @@ Download the latest version of NEMS Linux from https://nemslinux.com and “burn
 Upon booting your NEMS Linux server, your filesystem will be automatically resized to the capacity of your storage. You can confirm NEMS is up and running by visiting https://nems.local/ in your web browser. If name resolution doesn’t work, try the IP address of your NEMS device instead, which you can find in your router’s DHCP leases table, or on a TV connected to your NEMS Server's HDMI port.
 
 
-.. figure:: ../../img/NEMS-details-displayed-on-a-connected-TV.png
+.. figure:: ../img/NEMS-details-displayed-on-a-connected-TV.png
   :width: 600
   :align: center
   :alt: NEMS Server details

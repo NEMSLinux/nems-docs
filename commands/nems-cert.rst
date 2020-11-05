@@ -1,7 +1,7 @@
 Command: nems-cert
 ==================
 
-.. figure:: ../../img/screenshot_from_2017-11-09_22-40-23.png
+.. figure:: ../img/screenshot_from_2017-11-09_22-40-23.png
   :width: 600
   :align: center
   :alt: nems-cert

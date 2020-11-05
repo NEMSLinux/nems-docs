@@ -24,7 +24,7 @@ again to restore the window.
 
 Screenshot
 ~~~~~~~~~~
-.. figure:: ../../img/tv_dashboard_1.4.1.png
+.. figure:: ../img/tv_dashboard_1.4.1.png
   :width: 600
   :align: center
   :alt: Nems Dashboard Screenshot

@@ -27,7 +27,7 @@ expand the error message to see where you went wrong.
 Exercise
 ~~~~~~~~
 
-.. figure:: ../../img/pushover-1.4.1.png
+.. figure:: ../img/pushover-1.4.1.png
   :width: 200
   :align: right
   :alt: Pushover Notification

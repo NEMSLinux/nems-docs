@@ -1,7 +1,7 @@
 Omzlo PiWatcher Smart Watchdog for Raspberry Pi
 ===============================================
 
-.. figure:: ../../img/piwatcher.png
+.. figure:: ../img/piwatcher.png
   :width: 300
   :align: center
   :alt: PiWatcher

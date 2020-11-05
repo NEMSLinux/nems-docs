@@ -15,7 +15,7 @@ Colors
 
 Logo Options
 ~~~~~~~~~~~~
-.. figure:: ../../img/nems-fullcolour_sm.png
+.. figure:: ../img/nems-fullcolour_sm.png
   :width: 150
   :align: center
   :alt: NEMS Full Colour Small
@@ -23,14 +23,14 @@ Logo Options
 -  `nems-fullcolour.png <https://docs.nemslinux.com/_detail/nems-fullcolour.png?id=branding>`__
 -  `Nems-01.eps <https://docs.nemslinux.com/_detail/Nems-01.eps?id=branding>`__
 
-.. figure:: ../../img/nems-greyscale_sm.png
+.. figure:: ../img/nems-greyscale_sm.png
   :align: center
   :alt: NEMS Greyscale Small
 
 -  `nems-greyscale.png <https://docs.nemslinux.com/_detail/nems-greyscale.png?id=branding>`__
 -  `Nems-03.eps <https://docs.nemslinux.com/_detail/Nems-03.eps?id=branding>`__
 
-.. figure:: ../../img/nems-secondary-fullcolour_sm.png
+.. figure:: ../img/nems-secondary-fullcolour_sm.png
   :width: 150
   :align: center
   :alt: NEMS Secondary Full Colour Small
@@ -38,7 +38,7 @@ Logo Options
 -  `nems-secondary-fullcolour.png <https://docs.nemslinux.com/_detail/nems-secondary-fullcolour.png?id=branding>`__
 -  `Nems-02.eps <https://docs.nemslinux.com/_detail/Nems-02.eps?id=branding>`__
 
-.. figure:: ../../img/nems-secondary-greyscale_sm.png
+.. figure:: ../img/nems-secondary-greyscale_sm.png
   :width: 150
   :align: center
   :alt: NEMS Secondary Greyscale Small
@@ -46,7 +46,7 @@ Logo Options
 -  `nems-secondary-greyscale.png <https://docs.nemslinux.com/_detail/nems-secondary-greyscale.png?id=branding>`__
 -  `Nems-04.eps <https://docs.nemslinux.com/_detail/Nems-04.eps?id=branding>`__
 
-.. figure:: ../../img/nems-secondary-white_sm.png
+.. figure:: ../img/nems-secondary-white_sm.png
   :width: 150
   :align: center
   :alt: NEMS Secondary White Small
@@ -54,7 +54,7 @@ Logo Options
 -  `nems-secondary-white.png <https://docs.nemslinux.com/_detail/nems-secondary-white.png?id=branding>`__
 -  `Nems-06.eps <https://docs.nemslinux.com/_detail/Nems-06.eps?id=branding>`__
 
-.. figure:: ../../img/nems-white_sm.png
+.. figure:: ../img/nems-white_sm.png
   :width: 150
   :align: center
   :alt: NEMS White Small
@@ -68,7 +68,7 @@ NEMS Configurator
 The NConf logo is an adaptation of the NEMS Linux logo. The adaptation
 was created by Robbie Ferguson.
 
-.. figure:: ../../img/nconf_logo_sm.png
+.. figure:: ../img/nconf_logo_sm.png
   :width: 150
   :align: center
   :alt: NEMS Configurator
@@ -84,7 +84,7 @@ by `Outlndr <https://www.outlndr.com/>`__ and a CC0 stock icon. Because
 it is typically only seen as a 16×16 favicon, the green of the NEMS logo
 was darkened to make it stand out.
 
-.. figure:: ../../img/tv-icon.png
+.. figure:: ../img/tv-icon.png
   :width: 150
   :align: center
   :alt: TV Icon
@@ -97,7 +97,7 @@ NEMS Cloud Services
 An adaptation of the NEMS Linux logo, with the subtext using the
 AnjaliOldLipi font in #699bdf (light blue, representing the sky).
 
-.. figure:: ../../img/ncs_sm.png
+.. figure:: ../img/ncs_sm.png
   :width: 150
   :align: center
   :alt: NEMS Cloud Services

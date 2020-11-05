@@ -6,7 +6,7 @@ Raspberry Pi that allows programmable power events to take place, and
 provides a smart battery backup UPS that keeps your NEMS Server powered
 on even during a power outage.
 
-.. figure:: ../../img/pivoyager.jpg
+.. figure:: ../img/pivoyager.jpg
   :width: 600
   :align: center
   :alt: PiVoyager image
@@ -19,7 +19,7 @@ server.
 Installation
 ------------
 
-.. figure:: ../../img/std_pivoyager-pins.001.jpeg
+.. figure:: ../img/std_pivoyager-pins.001.jpeg
   :width: 600
   :align: center
   :alt: PiVoyager Pin out
@@ -53,7 +53,7 @@ Installation
     -  Has a 2mm JST connector, or if you cannot find one, you can
        solder the battery leads to the two pin header.
 
-     .. figure:: ../../img/std_pivoyager-conn-bat.jpg
+     .. figure:: ../img/std_pivoyager-conn-bat.jpg
        :width: 100
        :align: center
        :alt: PiVoyager Battery Connector

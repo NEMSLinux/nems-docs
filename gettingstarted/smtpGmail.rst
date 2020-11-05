@@ -9,7 +9,7 @@ have an @yourdomain.com email address on their service as opposed to an
 page <https://admin.google.com/AdminHome?pli=1&fral=1#ServiceSettings/emailsettingkey=NewSettingGroupIdPrefix-1574942781&service=email&subtab=filters>`__ and
 configure the SMTP Relay Service like this:
 
-.. figure:: ../../img/admin-ajax.png
+.. figure:: ../img/admin-ajax.png
   :width: 500
   :align: center
   :alt: Gmail Setup

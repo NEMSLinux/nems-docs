@@ -13,7 +13,7 @@ Configuration
 
 NEMS CheckIn can be enabled within NEMS System Settings Tool under NEMS Cloud Services. It is disabled by default.
 
-.. figure:: ../../img/NEMS-SST-CheckIn.png
+.. figure:: ../img/NEMS-SST-CheckIn.png
   :width: 600
   :align: center
   :alt: NEMS CheckIn Settings in NEMS SST
@@ -33,7 +33,7 @@ After 24 hours of downtime.
 After 48 hours of downtime.
 Following recovery.
 
-.. figure:: ../../img/Sample-NEMS-CheckIn-notification.png
+.. figure:: ../img/Sample-NEMS-CheckIn-notification.png
   :width: 600
   :align: center
   :alt: NEMS CheckIn Notification

@@ -1,7 +1,7 @@
 How NEMS Linux Uses ZRAM To Maximize Memory
 ===========================================
 
-.. figure:: ../../img/nemsswap.png
+.. figure:: ../img/nemsswap.png
   :width: 600
   :align: center
   :alt: NEMS Swap Screenshot

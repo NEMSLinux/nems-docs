@@ -1,7 +1,7 @@
 Argon ONE Raspberry Pi 4 Case
 =============================
 
-.. figure:: ../../img/argon_one.jpg
+.. figure:: ../img/argon_one.jpg
   :width: 600
   :align: center
   :alt: Argon ONE Case for Raspberry Pi 4
