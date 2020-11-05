@@ -4,7 +4,11 @@ Welcome to NEMS Linux
 Introduction
 ------------
 
-NEMS Linux documentation, work in progress.
+The NEMS Linux documentation is a work in progress, and we are actively
+going through the pages to find errors, out of date information, and
+missing images since moving to our new documentation system. If you
+find any problems or inconsistencies, please either provide a pull
+request on GitHub, file an issue on GitHub, or contact us on Discord.
 
 Need the old docs? https://olddocs.nemslinux.com
 
