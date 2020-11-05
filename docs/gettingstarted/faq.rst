@@ -22,19 +22,19 @@ How do I configure WiFi?
 ------------------------
 
 -  See the Wireless Network Interfaces section of the `Networking
-   documentation <https://docs2.nemslinux.com/en/latest/gettingstarted/networking.html#wireless-network-interface>`__.
+   documentation <https://docs.nemslinux.com/en/latest/gettingstarted/networking.html#wireless-network-interface>`__.
 
 How do I set a static IP address?
 ---------------------------------
 
 -  See the IP Address/ Settings section of the `Networking
-   documentation <https://docs2.nemslinux.com/en/latest/gettingstarted/networking.html#static-ip-address>`__.
+   documentation <https://docs.nemslinux.com/en/latest/gettingstarted/networking.html#static-ip-address>`__.
 
 Why does Cockpit have greyed-out features? I can't change anything!
 -------------------------------------------------------------------
 
 -  As per `the Cockpit
-   docs <https://docs2.nemslinux.com/en/latest/apps/cockpit.html>`__: make sure you
+   docs <https://docs.nemslinux.com/en/latest/apps/cockpit.html>`__: make sure you
    also check the box “use my password for privileged tasks” while
    logging in. Otherwise your level of access will match the
    non-elevated user and all features which require root access will be
@@ -67,4 +67,4 @@ NEMS Linux includes a small handful of sample check commands, and one of
 those is an Internet Speedtest which uses Ookla's Speedtest service to
 monitor and report your Internet speed. For more information, please
 read `Check Command:
-check_internet_speed <https://docs2.nemslinux.com/en/latest/basic/checkinternetspeed.html>`__.
+check_internet_speed <https://docs.nemslinux.com/en/latest/basic/checkinternetspeed.html>`__.

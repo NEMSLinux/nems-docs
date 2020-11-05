@@ -2,7 +2,7 @@
 NEMS Linux: Raspberry Pi GPIO Pinout
 ======================================
  The pinout diagram is applicable to Raspberry Pi-based NEMS Linux servers, as well as `NEMS Tools GPIO Extender
- receivers <https://docs2.nemslinux.com/en/latest/basic/gpioextender.html>`__.
+ receivers <https://docs.nemslinux.com/en/latest/basic/gpioextender.html>`__.
                                                                                                        
 
 ======= ======================================= ======= =============================== 

@@ -27,7 +27,7 @@ Available Command Options
    your NEMS Linux server.
 -  ``nems-info  country`` - Output the country code of your NEMS
    Linux server, based on the timezone settings you configured
-   during `nems-init <https://docs2.nemslinux.com/en/latest/commands/nems-init.html>`__.
+   during `nems-init <https://docs.nemslinux.com/en/latest/commands/nems-init.html>`__.
 -  ``nems-info  hwver`` - Output the revision of your NEMS Linux
    server hardware.
 -  ``nems-info hwid`` - Output your NEMS Linux server's unique
@@ -55,7 +55,7 @@ Available Command Options
    initialized or not. Returns 0 (not initialized) or 1 (initialized).
 -  ``nems-info username`` - Output the username for this NEMS
    server as
-   per `nems-init <https://docs2.nemslinux.com/en/latest/commands/nems-init.html>`__.
+   per `nems-init <https://docs.nemslinux.com/en/latest/commands/nems-init.html>`__.
 -  ``nems-info online`` - Detect if the NEMS Server is online /
    can communicate with GitHub. Returns 0 for false, 1 for true.
 -  ``nems-info socket``- Provide the location of the livestatus
@@ -68,7 +68,7 @@ Available Command Options
    result of NEMS Benchmark. Will return 0 if test has not yet been run
    via cron task, or if being run on an unsupported version of NEMS
    (requires 1.4+). Generally not for end-users. Used by `NEMS Anonymous
-   Stats <https://docs2.nemslinux.com/en/latest/misc/anonymousstats.html>`__ and `GiggleScore.com <https://gigglescore.com/>`__.
+   Stats <https://docs.nemslinux.com/en/latest/misc/anonymousstats.html>`__ and `GiggleScore.com <https://gigglescore.com/>`__.
    Available tests: cpu io ram mutex 7z-m 7z-s
 -  ``nems-info state`` Output the state information of NEMS hosts
    and services that are in a problem state to JSON format. Honors the
@@ -79,11 +79,11 @@ Available Command Options
 -  ``nems-info alias`` Output the alias of your NEMS Linux server.
 -  ``nems-info cloudauth`` Check if this NEMS server is authorized
    to use `NEMS
-   Cloud <https://docs2.nemslinux.com/en/latest/basic/cloudservices.html>`__. 1 = yes, 0
+   Cloud <https://docs.nemslinux.com/en/latest/basic/cloudservices.html>`__. 1 = yes, 0
    = no.
 -  ``nems-info cloudauthcache`` Output the last status of this
    NEMS server's authorization to use `NEMS
-   Cloud <https://docs2.nemslinux.com/en/latest/basic/cloudservices.html>`__. 1 = yes, 0
+   Cloud <https://docs.nemslinux.com/en/latest/basic/cloudservices.html>`__. 1 = yes, 0
    = no. Loads from a log file rather than realtime result, making this
    a faster way to load the status.
 -  ``nems-info allowupdate`` Show NEMS' automatic update setting.
@@ -132,7 +132,7 @@ Available Command Options
 -  ``nems-info livestatus`` Output JSON result of full livestatus
    query.
 -  ``nems-info temper`` Output JSON response from
-   supported `TEMPer <https://docs2.nemslinux.com/en/latest/accessories/temper.html>`__ hardware.
+   supported `TEMPer <https://docs.nemslinux.com/en/latest/accessories/temper.html>`__ hardware.
 -  ``nems-info frequency`` Output the current CPU operating
    frequency in realtime, averaged across all cores.
 -  ``nems-info perfdata_cutoff`` Output the cutoff (in days) for
@@ -145,4 +145,4 @@ Available Command Options
    1 means the repository is fine and being managed by NEMS Linux.
 -  ``nems-info [dht11|dht22]`` Output JSON
    response from a connected `DHT
-   Sensor <https://docs2.nemslinux.com/en/latest/accessories/dhtsensors.html>`__.
+   Sensor <https://docs.nemslinux.com/en/latest/accessories/dhtsensors.html>`__.

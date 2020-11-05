@@ -15,7 +15,7 @@ require you to manually upgrade with the *nems-upgrade* command, which
 requires root access.
 
 In order to run nems-upgrade your NEMS Server must first
-be `initialized <https://docs2.nemslinux.com/en/latest/gettingstarted/initialization.html>`__.
+be `initialized <https://docs.nemslinux.com/en/latest/gettingstarted/initialization.html>`__.
 
 **Commandline Options**
 

@@ -343,7 +343,7 @@ issues that a simple ping can't determine.
 
 And there we have it! Your NEMS Server can now check your Windows
 machine at a deeper level
-using `check_nrpe <https://docs2.nemslinux.com/en/latest/advanced/monitorMsWindowsHosts.html#monitor-windows-machines-with-nrpe>`__.
+using `check_nrpe <https://docs.nemslinux.com/en/latest/advanced/monitorMsWindowsHosts.html#monitor-windows-machines-with-nrpe>`__.
 
 Special Thanks
 ==============

@@ -65,4 +65,4 @@ If on nagiospi: 
 
 8. Now that you have your backup.nems file, follow `the instructions to
    restore your configuration to a new version of
-   NEMS <https://docs2.nemslinux.com/en/latest/commands/nems-restore.html>`__.
+   NEMS <https://docs.nemslinux.com/en/latest/commands/nems-restore.html>`__.

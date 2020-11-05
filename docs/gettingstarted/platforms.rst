@@ -325,7 +325,7 @@ With USB Support
 ~~~~~~~~~~~~~~~~
 
 To connect a USB device such
-as `temper <https://docs2.nemslinux.com/en/latest/accessories/temper.html>`__ to your
+as `temper <https://docs.nemslinux.com/en/latest/accessories/temper.html>`__ to your
 Docker-based NEMS Server, first determine its /dev assignment on your
 host, and then run NEMS as follows, replacing ttyUSB0 with your actual
 USB device:

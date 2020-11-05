@@ -26,12 +26,12 @@ NEMS Migrator Off Site Backup ensures your NEMS server configuration is
 backed up off site every day, and you can revert to any day's snapshot.
 
 See `NEMS
-Migrator <https://docs2.nemslinux.com/en/latest/apps/migrator.html>`__
+Migrator <https://docs.nemslinux.com/en/latest/apps/migrator.html>`__
 
 NEMS CheckIn
 ------------
 See `NEMS
-CheckIn <https://docs2.nemslinux.com/en/latest/nems-cloud-services/checkin.html>`__
+CheckIn <https://docs.nemslinux.com/en/latest/nems-cloud-services/checkin.html>`__
 
 NEMS Cloud Services Dashboard
 -----------------------------

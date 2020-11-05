@@ -19,7 +19,7 @@ configuration, which can be backed up locally or in NEMS Cloud Services
 back online within minutes.
 
 Combined with `NEMS
-CheckIn <https://docs2.nemslinux.com/en/latest/nems-cloud-services/checkin.html?highlight=checkin>`__ to notify you
+CheckIn <https://docs.nemslinux.com/en/latest/nems-cloud-services/checkin.html?highlight=checkin>`__ to notify you
 in event of failure, NEMS Migrator is an excellent way to ensure your
 NEMS Server is protected against failure.
 
@@ -51,18 +51,18 @@ backup for up to 30 minutes.
 
 To use NEMS Migrator to upgrade from an earlier version of NEMS Linux
 (or even NagiosPi), please read `Upgrade NEMS Linux to Newer
-Version <https://docs2.nemslinux.com/en/latest/advanced/nemsupgrade.html>`__.
+Version <https://docs.nemslinux.com/en/latest/advanced/nemsupgrade.html>`__.
 
 To automate your NEMS Migrator backup, please see `Backup Your NEMS
 Configuration
-Automatically <https://docs2.nemslinux.com/en/latest/basic/backupnems.html>`__ for
+Automatically <https://docs.nemslinux.com/en/latest/basic/backupnems.html>`__ for
 helpful resources and tips.
 
 Restore
 ~~~~~~~
 
 Please
-see `nems-restore <https://docs2.nemslinux.com/en/latest/commands/nems-restore.html?highlight=restore>`__.
+see `nems-restore <https://docs.nemslinux.com/en/latest/commands/nems-restore.html?highlight=restore>`__.
 
 NEMS Cloud Backup
 -----------------

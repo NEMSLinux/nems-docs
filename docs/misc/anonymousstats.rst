@@ -27,7 +27,7 @@ In order to uniquely, but anonymously identify your NEMS Linux server
 cannot pretend to be you) your NEMS Linux server will also provide us
 with your NEMS Linux API Key (which it generates automatically) as well as
 your NEMS Linux Hardware ID, which you can see within `NEMS Server
-Overview <https://docs2.nemslinux.com/en/latest/apps/serveroverview.html>`__.
+Overview <https://docs.nemslinux.com/en/latest/apps/serveroverview.html>`__.
 
 We store this information to give us an idea how many people are using
 NEMS Linux, how many hosts they're using, and how we can better improve

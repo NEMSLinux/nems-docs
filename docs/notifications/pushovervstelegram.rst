@@ -11,7 +11,7 @@ Pushover
 ~~~~~~~~
 
 See: `Notifications Using
-Pushover <https://docs2.nemslinux.com/en/latest/notifications/notificationsbypushover.html>`__
+Pushover <https://docs.nemslinux.com/en/latest/notifications/notificationsbypushover.html>`__
 
 Pros
 ^^^^
@@ -36,7 +36,7 @@ Telegram
 ~~~~~~~~
 
 See: `Push Notifications Using
-Telegram <https://docs2.nemslinux.com/en/latest/notifications/notificationsbytelegram.html>`__
+Telegram <https://docs.nemslinux.com/en/latest/notifications/notificationsbytelegram.html>`__
 
 .. _pros-1:
 
