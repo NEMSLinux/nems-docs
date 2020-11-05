@@ -1,3 +1,5 @@
+.. Load the global roles (bolditalic, for example):
+
 .. include:: ../global.rst
 
 Push Notifications Using Telegram
