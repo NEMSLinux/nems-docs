@@ -9,7 +9,7 @@ Telegram is a free chat service with an  supporting Push notifications
 on Android and iOS.
 
 NEMS Linux
-includes *notify_:bolditalic:`host`_by_telegram* and *notify_:bolditalic:`service`_by_telegram*.
+includes *notify_*:bolditalic:`host`*_by_telegram* and *notify_*:bolditalic:`service`*_by_telegram*.
 
 It's fairly simple to setup, as long as you have your device (ie.,
 smartphone) and a computer/laptop handy.
