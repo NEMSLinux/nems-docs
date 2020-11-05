@@ -38,7 +38,7 @@ Need the old docs? https://olddocs.nemslinux.com
     :maxdepth: 1
     :caption: Basic Setup
 
-    basic/checkcommands
+    check_commands/index
     basic/backupnems
     basic/cloudservices
     basic/cloudservicesapi
