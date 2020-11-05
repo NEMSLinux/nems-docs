@@ -29,7 +29,7 @@ check_apc Available Command Arguments
   | **Note:** thresholds must be expressed in range as nearest values. ex:
   normal=220, warning=215:225, critical=210:230
   | Additionally, the checks will look for Nominal Voltage (as returned
-by the UPS), and exit as CRITICAL if Actual Voltage is LOWER or Equal
+  by the UPS), and exit as CRITICAL if Actual Voltage is LOWER or Equal
 - ``power_modules`` - Return the status of the Power Modules
 - ``in_phase`` - Return the current AC input phase
 - | ``in_volt`` - Return the current utility line voltage in VAC
