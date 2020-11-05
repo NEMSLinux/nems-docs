@@ -174,7 +174,7 @@ As NEMS Linux continues to grow, our support options are also evolving. At prese
 Sponsors
 --------
 
-.. |RNIT| image:: ../img/sponsor_logos/RNIT_Logo_Full_Dark.png
+.. |RNIT| image:: img/sponsor_logos/RNIT_Logo_Full_Dark.png
     :width: 200px
     :alt: Royal Network IT Solutions
     :target: https://www.rnitsolutions.com/
@@ -222,7 +222,7 @@ Want your name on this list? `Become a Patron <https://patreon.com/nems>`__.
 A Product Of
 ------------
 
-.. |CAT5TV| image:: ../img/sponsor_logos/cat5tv_network_dark.png
+.. |CAT5TV| image:: img/sponsor_logos/cat5tv_network_dark.png
     :width: 200px
     :alt: Category5 TV Network
     :target: https://category5.tv/
