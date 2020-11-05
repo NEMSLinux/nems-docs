@@ -146,6 +146,8 @@ NEMS Linux 1.6 is planned for release Q4 2020.
    released.
 -  Added *nems-info [dht11|dht22]* which outputs json
    response from eit
+-  New documentation launched, with the help of Bill Marshall plus
+   submissions from Don Jenkins.
 
 .. _TEMPer: /accessories/temper
 .. _Argon ONE: /hardware/argon_one
