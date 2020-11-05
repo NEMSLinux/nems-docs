@@ -50,6 +50,7 @@ Need the old docs? https://olddocs.nemslinux.com
 
     nems-tools/gpioextender
     nems-tools/warninglight
+    nems-tools/extender_os
 
 .. toctree::
     :maxdepth: 1
