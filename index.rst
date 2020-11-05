@@ -1,6 +1,10 @@
 Welcome to NEMS Linux
 =====================
 
+.. image:: https://readthedocs.org/projects/nemslinux/badge/?version=latest
+:target: https://docs.nemslinux.com/en/latest/?badge=latest
+:alt: Documentation Status
+
 Introduction
 ------------
 
