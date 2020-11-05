@@ -149,12 +149,12 @@ NEMS Linux 1.6 is planned for release Q4 2020.
 -  New documentation launched, with the help of Bill Marshall plus
    submissions from Don Jenkins.
 
-.. _TEMPer: /accessories/temper
-.. _Argon ONE: /hardware/argon_one
-.. _nems-info: /commands/nems-info
-.. _check_apc: /check_commands/check_apc
+.. _TEMPer: https://docs.nemslinux.com/en/latest/accessories/temper.html
+.. _Argon ONE: https://docs.nemslinux.com/en/latest/accessories/argon1case.html
+.. _nems-info: https://docs.nemslinux.com/en/latest/commands/nems-info.html
+.. _check_apc: https://docs.nemslinux.com/en/latest/basic/checkapc.html
 .. _requested by Neptunum: https://discord.com/channels/501816361706717184/654697565937205278/687329215456346257
-.. _nems-mailtest: /usage/nems-mailtest
+.. _nems-mailtest: https://docs.nemslinux.com/en/latest/commands/nems-mailtest.html
 .. _See Video: https://youtu.be/bWj3m6pB8RA
 .. _Issue 2: https://github.com/Cat5TV/nems-admin/issues/2
 .. _NEMS Warning Light: /features/nems-tools/warninglight
