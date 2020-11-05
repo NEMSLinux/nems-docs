@@ -102,6 +102,7 @@ Need the old docs? https://olddocs.nemslinux.com
     advanced/monitorMsWindowsHosts
     advanced/nemsicons
     advanced/nems_php_agent
+    advanced/nems-api
 
 .. toctree::
     :maxdepth: 2
