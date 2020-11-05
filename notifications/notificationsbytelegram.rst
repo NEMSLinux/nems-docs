@@ -1,3 +1,5 @@
+.. include:: ../global.rst
+
 Push Notifications Using Telegram
 =================================
 

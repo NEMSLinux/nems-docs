@@ -1,0 +1,3 @@
+.. role:: bolditalic
+  :class: bolditalic
+
