@@ -38,7 +38,6 @@ Need the old docs? https://olddocs.nemslinux.com
     :maxdepth: 1
     :caption: Basic Setup
 
-    basic/contactemail
     basic/checkcommands
     basic/backupnems
     basic/cloudservices
