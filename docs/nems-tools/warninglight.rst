@@ -5,12 +5,12 @@ nems-tools: Warning Light
    :align: right
    :width: 400px
 
-*Warning Light* is a lightweight daemon running on NEMS
-1.4.1+. It is a different type of notification system exclusive to NEMS
+*Warning Light* is a lightweight daemon running on NEMS Linux
+(1.4.1+). It is a different type of notification system exclusive to NEMS
 Linux.
 
-NEMS Warning Light: Hardware
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NEMS Warning Light: DIY Hardware
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the state of your monitored hosts should change, *Warning Light*
 could be used to trigger a visual response by way of a tower signal lamp
@@ -28,6 +28,13 @@ Linux server.
 server, or eventually (not yet available) to a supplemental device
 running the `NEMS Tools Distro`_ with network access, even through the
 Internet.
+
+NEMS Warning Light: Pre-Built Hardware
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Omzlo (the makers of the PiVoyager and PiWatcher pHATs) have created
+an i2c pHAT that integrates with NEMS Warning Light. Learn more on
+(the Omzlo NEMS Warning Light page)<https://docs.nemslinux.com/en/latest/accessories/omzlo-warninglight-phat.html>__.
 
 System Requirements
 ~~~~~~~~~~~~~~~~~~~
