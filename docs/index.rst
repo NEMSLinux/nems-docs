@@ -6,6 +6,8 @@ Introduction
 
 NEMS Linux documentation, work in progress.
 
+Need the old docs? https://olddocs.nemslinux.com
+
 .. toctree::
     :maxdepth: 2
     :caption: Getting Started Guide
