@@ -1,4 +1,4 @@
-Check Commands: custom_check_mem
+Check Command: custom_check_mem
 ================================
 
 NEMS Linux includes
