@@ -43,8 +43,13 @@ Need the old docs? https://olddocs.nemslinux.com
     basic/nemsnavigationmenu
     basic/resolvednshostnamesonlan
     basic/port9590
-    basic/gpioextender
 
+.. toctree::
+    :maxdepth: 1
+    :caption: nems-tools Components
+
+    nems-tools/gpioextender
+    nems-tools/warninglight
 
 .. toctree::
     :maxdepth: 1
