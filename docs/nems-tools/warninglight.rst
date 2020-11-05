@@ -34,7 +34,7 @@ NEMS Warning Light: Pre-Built Hardware
 
 Omzlo (the makers of the PiVoyager and PiWatcher pHATs) have created
 an i2c pHAT that integrates with NEMS Warning Light. Learn more on
-(the Omzlo NEMS Warning Light page)<https://docs.nemslinux.com/en/latest/accessories/omzlo-warninglight-phat.html>__.
+`the Omzlo NEMS Warning Light page <https://docs.nemslinux.com/en/latest/accessories/omzlo-warninglight-phat.html>`__.
 
 System Requirements
 ~~~~~~~~~~~~~~~~~~~
