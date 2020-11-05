@@ -81,8 +81,8 @@ Need the old docs? https://olddocs.nemslinux.com
     apps/adagios
     apps/mobileui
     apps/nems-dashboard
-    apps/tactivaloverview
-    apps/nemscloudservices
+    apps/tacticaloverview
+    apps/cloudservices
     apps/monitorix
     apps/cockpit
     apps/monitservicemonitor
