@@ -92,7 +92,7 @@ Need the old docs? https://olddocs.nemslinux.com
     nems-cloud-services/checkin
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: Advanced Configuration
 
     advanced/nemsupgrade
