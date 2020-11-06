@@ -220,8 +220,7 @@ Here is a list of those Patrons who kicked in that little bit extra to have thei
 
 Want your name on this list? `Become a Patron <https://patreon.com/nems>`__.
 
-A Product Of
-------------
+**A Product Of**
 
 .. |CAT5TV| image:: img/sponsor_logos/cat5tv_network_dark.png
     :width: 200px
@@ -234,8 +233,8 @@ A Product Of
 
 NEMS Linux is developed by Robbie Ferguson for `The Category5 TV Network <https://category5.tv>`__.
 
-Contribute to Project
----------------------
+Source Code
+-----------
 
 nems-admin
 
@@ -280,4 +279,4 @@ nems-wmic
 License
 -------
 
-GNU AGPLv3 https://www.gnu.org/licenses/agpl-3.0.en.html
+GNU AGPLv3: https://www.gnu.org/licenses/agpl-3.0.en.html
