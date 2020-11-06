@@ -2,17 +2,11 @@
 
 .. include:: ../global.rst
 
-.. role:: bolditalic
-  :class: bolditalic
-
-
 Push Notifications Using Telegram
 =================================
 
 Telegram is a free chat service with an  supporting Push notifications
 on Android and iOS.
-
-:bolditalic:`Test`
 
 NEMS Linux includes *notify_*\ :bolditalic:`host`\ *_by_telegram* and *notify_*\ :bolditalic:`service`\ *_by_telegram*.
 
