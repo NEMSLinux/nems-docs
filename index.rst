@@ -70,12 +70,12 @@ Need the old docs? https://olddocs.nemslinux.com
     :caption: Applications
 
     apps/serveroverview
-    apps/nemssst
+    apps/nems-sst
     apps/nconf
     apps/adagios
     apps/mobileui
     apps/nems-dashboard
-    apps/tacticaloverview
+    apps/tactical_overview
     apps/cloudservices
     apps/monitorix
     apps/cockpit

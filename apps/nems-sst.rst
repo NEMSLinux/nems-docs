@@ -42,3 +42,9 @@ background images:
    image.
 -  *Heavy Blur* will blur the background image so heavily that only the
    color scheme of the image is recognizable.
+
+TV Dashboard
+------------
+
+You can turn it on and off again.
+(Placeholder for a ref in TV Dashboard page)

@@ -4,8 +4,9 @@ NEMS TV Dashboard
 Introduction
 ------------
 
-NEMS TV Dashboard provides a tactical overview designed specifically for
-TV display. Ideal for use on a status monitor in your server room, NEMS
+NEMS TV Dashboard provides a tactical display specifically designed for
+single-screen TV display where a keyboard/mouse are not used. Ideal
+as a status monitor in your server room, NEMS
 TV Dashboard will report all unacknowledged host and service alerts as
 they occur.
 
@@ -13,7 +14,7 @@ Usage
 -----
 
 To use NEMS TV Dashboard, simply connect a computer (eg., Raspberry Pi
-Zero) to your TV display and open the  https://nems.local/tv in the
+Zero) to your TV display and open ``https://nems.local/tv`` in the
 browser.
 
 Fullscreen Mode
@@ -27,7 +28,7 @@ Screenshot
 .. figure:: ../img/tv_dashboard_1.4.1.png
   :width: 600
   :align: center
-  :alt: Nems Dashboard Screenshot
+  :alt: Nems Dashboard Screenshot circa NEMS Linux 1.4.1
 
 
 Security
@@ -36,9 +37,10 @@ Security
 For convenience and usability, NEMS TV Dashboard does not prompt for
 your NEMS username and password by default. If you prefer to keep the
 Dashboard private, please open `NEMS
-SST <https://docs.nemslinux.com/config/nems_sst>`__ and turn off “Allow
+SST <./nems-sst.html#tv-dashboard>`__ and turn off “Allow
 TV Dashboard Without Password” - but make sure you have a keyboard
-connected to your TVs (or something like VNC access).
+connected to the computer connected to your TV (or something like VNC
+access) to login.
 
 Under The Hood
 ~~~~~~~~~~~~~~
@@ -55,3 +57,10 @@ Requirements
 -  NEMS TV Dashboard requires a modern web browser to operate. If you
    experience issues, please test in a different browser.
 -  NEMS Linux 1.6+ to include Internet speedtest at all times.
+
+Source Code
+~~~~~~~~~~~
+
+`nems-tv on Github <https://github.com/cat5tv/nems-tv>`__ is based on
+*merlin-dashboard* by fnordpojk. Licensed under
+`GPL v3 <https://www.gnu.org/licenses/gpl-3.0.en.html>`__.
