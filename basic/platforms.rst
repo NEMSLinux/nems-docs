@@ -268,17 +268,21 @@ server.
 Install NEMS Linux for Docker
 -----------------------------
 
+NEMS Linux for Docker **IS NOT YET AVAILBLE**. Coming soon.
+
 Basic Installation
 ~~~~~~~~~~~~~~~~~~
 
 This command will launch a new Docker container called *nemslinux* using
 default settings:
 
-docker run --hostname nems --mount
-type=tmpfs,destination=/tmp,tmpfs-mode=1777 --mount
-type=tmpfs,destination=/var/www/html/backup/snapshot,tmpfs-mode=1770
---restart=unless-stopped --stop-timeout 120 --name nemslinux -d
-baldnerd/nemslinux:1.6_build1
+.. code-block:: console
+
+  docker run --hostname nems --mount
+  type=tmpfs,destination=/tmp,tmpfs-mode=1777 --mount
+  type=tmpfs,destination=/var/www/html/backup/snapshot,tmpfs-mode=1770
+  --restart=unless-stopped --stop-timeout 120 --name nemslinux -d
+  baldnerd/nemslinux:1.6_build1
 
 Install NEMS Linux Docker Container on a Physical Network
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -300,22 +304,26 @@ DHCP or a Static IP Address:
 Using DHCP
 ^^^^^^^^^^
 
-docker run --network=multi-host-network --hostname nems --mount
-type=tmpfs,destination=/tmp,tmpfs-mode=1777 --mount
-type=tmpfs,destination=/var/www/html/backup/snapshot,tmpfs-mode=1770
---restart=unless-stopped --stop-timeout 120 --name nemslinux -d
-baldnerd/nemslinux:1.6_build1
+.. code-block:: console
+
+  docker run --network=multi-host-network --hostname nems --mount
+  type=tmpfs,destination=/tmp,tmpfs-mode=1777 --mount
+  type=tmpfs,destination=/var/www/html/backup/snapshot,tmpfs-mode=1770
+  --restart=unless-stopped --stop-timeout 120 --name nemslinux -d
+  baldnerd/nemslinux:1.6_build1
 
 Using Static IP
 ^^^^^^^^^^^^^^^
 
 Change the sample 10.0.0.105 IP address to suit your needs.
 
-docker network connect --ip 10.0.0.105 multi-host-network run --hostname
-nems --mount type=tmpfs,destination=/tmp,tmpfs-mode=1777 --mount
-type=tmpfs,destination=/var/www/html/backup/snapshot,tmpfs-mode=1770
---restart=unless-stopped --stop-timeout 120 --name nemslinux -d
-baldnerd/nemslinux:1.6_build1
+.. code-block:: console
+
+  docker network connect --ip 10.0.0.105 multi-host-network run --hostname
+  nems --mount type=tmpfs,destination=/tmp,tmpfs-mode=1777 --mount
+  type=tmpfs,destination=/var/www/html/backup/snapshot,tmpfs-mode=1770
+  --restart=unless-stopped --stop-timeout 120 --name nemslinux -d
+  baldnerd/nemslinux:1.6_build1
 
 Please see `Docker's Network Connections
 documentation <https://docs.docker.com/engine/reference/commandline/network_connect/>`__ for
@@ -330,11 +338,13 @@ Docker-based NEMS Server, first determine its /dev assignment on your
 host, and then run NEMS as follows, replacing ttyUSB0 with your actual
 USB device:
 
-docker run --device=/dev/ttyUSB0 --hostname nems --mount
-type=tmpfs,destination=/tmp,tmpfs-mode=1777 --mount
-type=tmpfs,destination=/var/www/html/backup/snapshot,tmpfs-mode=1770
---restart=unless-stopped --stop-timeout 120 --name nemslinux -d
-baldnerd/nemslinux:1.6_build1
+.. code-block:: console
+
+  docker run --device=/dev/ttyUSB0 --hostname nems --mount
+  type=tmpfs,destination=/tmp,tmpfs-mode=1777 --mount
+  type=tmpfs,destination=/var/www/html/backup/snapshot,tmpfs-mode=1770
+  --restart=unless-stopped --stop-timeout 120 --name nemslinux -d
+  baldnerd/nemslinux:1.6_build1
 
 Initialize Your Docker-Based NEMS Server
 ----------------------------------------
