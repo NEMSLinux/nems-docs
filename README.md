@@ -29,7 +29,7 @@ I've also included some custom css classes to allow doing things that are normal
 
 Just add this to the first line of your .rst file: `.. include:: ../global.rst`
 
-Then, you can do something like this: `**r**\ :bolditalic:\`estructured\` **t**\ :bolditalic:\`ext\``
+Then, you can do something like this: `**r**\ :bolditalic:\`estructured\\` **t**\ :bolditalic:\`ext\``
 
 #### Images
 
