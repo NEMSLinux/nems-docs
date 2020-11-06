@@ -28,14 +28,13 @@ Table of Contents
     basic/default_password
     check_commands/index
     basic/backupnems
-    basic/cloudservices
-    basic/cloudservicesapi
     basic/commandlinetest
     basic/nemsnavigationmenu
     basic/resolvednshostnamesonlan
     basic/9590
     basic/connect_via_ssh
     basic/faq
+    apps/nems-migrator
 
 .. toctree::
     :maxdepth: 1
@@ -80,18 +79,15 @@ Table of Contents
     apps/mobile
     apps/nems-tv
     apps/tactical_overview
-    apps/cloudservices
     apps/monitorix
     apps/cockpit
     apps/monitservicemonitor
-    apps/migrator
-    
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     :caption: NEMS Cloud Services
 
-    nems-cloud-services/checkin
+    nems-cloud-services/index
 
 .. toctree::
     :maxdepth: 2
@@ -123,6 +119,7 @@ Table of Contents
     :caption: Changelogs
     
     changelogs/1.6
+    changelogs/1.5
     changelogs/1.2
     changelogs/1.1
     changelogs/1.0

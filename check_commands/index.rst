@@ -9,7 +9,7 @@ here are some of the available check commands:
 -  `check_dhtxx <https://docs.nemslinux.com/en/latest/accessories/dhtsensors.html>`__ -
    Use a DHTxx (DHT11 / DHT22 / AM2302) Arduino sensor to report on the
    room temperature and humidity.
--  `check_esxi_hardware <https://docs.nemslinux.com/en/latest/check_commands/check_esxi.html>`__ -
+-  `check_esxi_hardware <https://docs.nemslinux.com/en/latest/check_commands/check_esxi_hardware.html>`__ -
    Monitor the hardware of ESX and ESXi servers.
 -  `check_http <https://docs.nemslinux.com/en/latest/check_commands/check_http.html>`__ -
    Check the status of an HTTP/HTTPS server on a remote host.
@@ -50,7 +50,7 @@ here are some of the available check commands:
 
     check_apc
     ../accessories/dhtsensors
-    check_esxi
+    check_esxi_hardware
     check_http
     check_internet_speed
     check_mikrotik

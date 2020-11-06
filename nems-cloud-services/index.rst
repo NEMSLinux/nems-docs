@@ -19,19 +19,13 @@ Cloud Services.
 Included Services
 -----------------
 
-NEMS Migrator Off Site Backup
------------------------------
+.. toctree::
+    :maxdepth: 1
+    :caption: Components
 
-NEMS Migrator Off Site Backup ensures your NEMS server configuration is
-backed up off site every day, and you can revert to any day's snapshot.
-
-See `NEMS
-Migrator <https://docs.nemslinux.com/en/latest/apps/migrator.html>`__
-
-NEMS CheckIn
-------------
-See `NEMS
-CheckIn <https://docs.nemslinux.com/en/latest/nems-cloud-services/checkin.html>`__
+    nems-migrator
+    checkin
+    api
 
 NEMS Cloud Services Dashboard
 -----------------------------

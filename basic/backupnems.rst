@@ -12,15 +12,15 @@ Backup Location
 ---------------
 
 Your NEMS Migrator snapshots are always accessible at
-\https://NEMSIP/backup/backup.nems *or* via Samba at
-\\nems.local\backup\backup.nems - accessing either will automatically
+``https://NEMSIP/backup/backup.nems`` *or* via Samba at
+``\\nems.local\backup\backup.nems`` - accessing either will automatically
 generate and send a *backup.nems* file, which contains all the NEMS
 configuration settings, logs, data, etc. to allow an easy recovery by
 restoring to a new NEMS deployment.
 
 Both locations are protected by your NEMS username and password, as
 created
-during `nems-init <https://docs.nemslinux.com/en/latest/commands/nems-init.html>`__.
+during `nems-init <../commands/nems-init.html>`__.
 
 The *backup.nems* file can also be used to migrate your NEMS Linux
 deployment from one architecture to another. For example, if your
@@ -68,7 +68,7 @@ Download Via wget Without Encryption
 In both of the above examples, replace */backup/backup.nems* with where
 you want nems-migrator to output the download,
 and *YOURUSER* and *YOURPASSWORD* to those you set
-during `nems-init <https://docs.nemslinux.com/en/latest/commands/nems-init.html>`__.
+during `nems-init <../commands/nems-init.html>`__.
 
 Once you have a backup.nems file being backed up to a different system,
 I recommend you have your backup script run an *rdiff-backup* of
@@ -79,5 +79,5 @@ Windows-Based Backup
 
 If you are on a Windows network and would like to include your
 backup.nems file in your nightly backup set, you may access it at
-\\nems.local\backup\backup.nems using your NEMS username and password
-as set in `nems-init <https://docs.nemslinux.com/en/latest/commands/nems-init.html>`__.
+``\\nems.local\backup\backup.nems`` using your NEMS username and password
+as set in `nems-init <../commands/nems-init.html>`__.
