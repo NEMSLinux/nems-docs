@@ -16,6 +16,9 @@ request on GitHub, file an issue on GitHub, or contact us on Discord.
 
 Need the old docs? https://olddocs.nemslinux.com
 
+Table of Contents
+-----------------
+
 .. toctree::
     :maxdepth: 1
     :caption: The Basics
@@ -172,6 +175,12 @@ As NEMS Linux continues to grow, our support options are also evolving. At prese
 #. Our lead developer, Robbie Ferguson (*RobbieF#7136*), is often available via our Discord server. That is the best place to reach him directly.
 #. Among other perks, users who choose to `support NEMS Linux on Patreon <https://patreon.com/nems>`__ gain access to Patron-exclusive rooms on our Discord server, including #priority-support, which are setup to ding lead developer, Robbie Ferguson, on his phone. So in cases where priority support is required, he's usually quite good to reply promptly.
 
+Credits
+-------
+
+Please see the
+`NEMS Linux Credits page <https://nemslinux.com/credits/>`__.
+
 Sponsors
 --------
 
@@ -279,4 +288,13 @@ nems-wmic
 License
 -------
 
-GNU AGPLv3: https://www.gnu.org/licenses/agpl-3.0.en.html
+NEMS Linux and the code written specifically for it are
+licensed under GNU AGPLv3:
+https://www.gnu.org/licenses/agpl-3.0.en.html
+
+Third-party products or features included within NEMS Linux
+may have their own license. Please review their
+project pages for more information.
+
+Background wallpaper contained in NEMS Linux are
+licensed under CC0.

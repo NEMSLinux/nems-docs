@@ -45,6 +45,6 @@ What's Next
 
 - `Become a Patron <https://patreon.com/nems>`__ for additional perks and to support this project
 - `Join the Discord <https://discord.gg/e9xT9mh>`__ to chat with other NEMS Linux users
-- `Keep reading the docs <../>`__ to learn more
+- `Keep reading the docs <../index.html>`__ to learn more
 - `Visit the Community Forum <https://forum.nemslinux.com/>`__ to bounce ideas around
 - Tell everyone you know about Linux, blog about it, screencast on your YouTube channel, talk about it on your podcast. Spread the word.
