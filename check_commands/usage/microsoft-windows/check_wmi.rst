@@ -1,63 +1,3 @@
-Monitor Windows Machines with Ping
-==================================
-
-The simplest type of check in NEMS Linux is to ping a host. The reply is
-binary: Host is up when ping replies, host is down when ping does not
-reply.
-
-**Using a ping check is an excellent starting point for new NEMS Linux
-users to become familiar with an easy-to-administer check command.**
-
-To begin pinging a Windows host, simply add it to the windows-servers
-group. The host check alive command will use check_ping to verify it as
-online or offline.
-
-Most software firewalls, including the Windows [Defender] Firewall,
-block ping (ICMP) requests by default. So NEMS will think your host is
-down unless you create a rule to allow ICMP echo requests and replies
-through your Windows firewall.
-
-Windows Defender Firewall
--------------------------
-
-To enable ICMP response when using Windows Defender Firewall, simply run
-the Command Prompt as Administrator and type the following:
-
-IPv4 Networks:
-
-.. code-block:: console
-
-   netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo
-   request" protocol=icmpv4:8,any **dir**\ =in action=allow
-
-IPv6 Networks:
-
-.. code-block:: console
-
-   netsh advfirewall firewall add rule name="ICMP Allow incoming V6 echo
-   request" protocol=icmpv6:8,any **dir**\ =in action=allow
-
-Third Party Firewall
---------------------
-
-If you are using a different firewall (eg., ESET Endpoint Security) you
-will need to consult that software's documentation to allow ICMP echo
-responses.
-
-Here are some things to look for:
-
--  Many firewalls can exempt certain IP addresses or ranges from being
-   blocked. This is often called a Trusted Zone, or whitelisted IP. You
-   could add your NEMS Server as a trusted device. If you do this, make
-   absolutely certain your NEMS Server is not accessible from the world
-   (ie., do not port forward anything to NEMS Linux), and your NEMS user
-   password is a strong one that only you know.
--  Most firewalls allow exemption of certain protocols or services. In
-   those cases, you can simply enable/allow ping replies. It may be
-   called “ping”, “incoming ping”, “ICMP Echo Reply”, or similar.
-
-.. Warning:: **DO NOT SIMPLY DISABLE YOUR FIREWALL.** Correctly establish a firewall rule within your firewall application.
-
 Monitor Windows Machines with Windows Management Instrumentation (WMI)
 ======================================================================
 
@@ -90,7 +30,7 @@ Instrumentation services are running.
 -  Scroll down to the *Remote Registry service*. Verify that the service
    is started and is set to **Automatic**.
 
-.. figure:: ../img/wmi_windows_01.png
+.. figure:: ../../../img/wmi_windows_01.png
   :width: 600
   :align: center
   :alt: Remote Registry
@@ -102,7 +42,7 @@ above systems will deny remote access to the registry.
 -  Scroll down to the *Server* service. Verify that the service is
    started and set to **Automatic**.
 
-.. figure:: ../img/wmi_windows_02.png
+.. figure:: ../../../img/wmi_windows_02.png
   :width: 500
   :align: center
   :alt: Server
@@ -110,7 +50,7 @@ above systems will deny remote access to the registry.
 -  Scroll down to the *Windows Management Instrumentation* service.
    Verify that it too is started and set to **Automatic**.
 
-.. figure:: ../img/wmi_windows_03.png
+.. figure:: ../../../img/wmi_windows_03.png
   :width: 500
   :align: center
   :alt: Windows Management Instrumentation
@@ -137,7 +77,7 @@ for a remote user.**
 On the monitored host machine, right-click on *My Computer*, and
 navigate to Manage \| Services and Applications \| WMI Control.
 
-.. figure:: ../img/wmi_windows_04.png
+.. figure:: ../../../img/wmi_windows_04.png
   :width: 400
   :align: center
   :alt: WMI Control
@@ -146,7 +86,7 @@ navigate to Manage \| Services and Applications \| WMI Control.
 2. In the WMI Control Properties dialog box, click the Security tab.
 3. Expand the Root node and select CIMV2, then click Security.
 
-.. figure:: ../img/wmi_windows_05.png
+.. figure:: ../../../img/wmi_windows_05.png
   :width: 400
   :align: center
   :alt: CIMV2
@@ -154,14 +94,14 @@ navigate to Manage \| Services and Applications \| WMI Control.
 Select the user in the *Group or user names* box. If not listed
 select **Add**.
 
-.. figure:: ../img/wmi_windows_06.png
+.. figure:: ../../../img/wmi_windows_06.png
   :width: 400
   :align: center
   :alt: Add User to CIMV2
 
 Type in the user name and click **Check Names**.
 
-.. figure:: ../img/wmi_windows_07.png
+.. figure:: ../../../img/wmi_windows_07.png
   :width: 400
   :align: center
   :alt: Check Names
@@ -174,12 +114,12 @@ following check boxes in the Allow column:
 3. Remote Enable
 4. Read Security
 
-.. figure:: ../img/wmi_windows_08.png
+.. figure:: ../../../img/wmi_windows_08.png
   :width: 400
   :align: center
   :alt: Execute Methods and Enable Account
 
-.. figure:: ../img/wmi_windows_09.png
+.. figure:: ../../../img/wmi_windows_09.png
   :width: 400
   :align: center
   :alt: Remote Enable and Read Security
@@ -199,7 +139,7 @@ WMI.
    computer* checkbox.
 6. Click **Apply**.
 
-.. figure:: ../img/wmi_windows_10.png
+.. figure:: ../../../img/wmi_windows_10.png
   :width: 400
   :align: center
   :alt: Enable Distributed COM
@@ -214,7 +154,7 @@ WMI.
 5. In the Launch Permission dialog box, add the user or group name
    necessary for the remote user.
 
-.. figure:: ../img/wmi_windows_11.png
+.. figure:: ../../../img/wmi_windows_11.png
   :width: 500
   :align: center
   :alt: COM Security
@@ -223,7 +163,7 @@ Grant the remote user all the permissions available in the Permissions
 for Administrators area by enabling all of the check boxes in the Allow
 column.
 
-.. figure:: ../img/wmi_windows_12.png
+.. figure:: ../../../img/wmi_windows_12.png
   :width: 400
   :align: center
   :alt: Permissions
@@ -240,7 +180,7 @@ of a domain.**
 4. Change the value of *Network access: Sharing and security model for
    local accounts.* to **Classic**.
 
-.. figure:: ../img/wmi_windows_13.png
+.. figure:: ../../../img/wmi_windows_13.png
   :width: 600
   :align: center
   :alt: Security Options
@@ -259,7 +199,7 @@ Enter the following in an Administrator Command Prompt:
 Enter the username and password of the user created on the Windows
 devices who was granted access to the WMI data.
 
-.. figure:: ../img/nems_sst_windows_domain_credentials.png
+.. figure:: ../../../img/nems_sst_windows_domain_credentials.png
   :width: 500
   :align: center
   :alt: SST Domain Credentials
@@ -274,7 +214,7 @@ Then click the drop-down arrow in the *check command* select list, and
 scroll down to the check_win\_\ *xxx* commands to choose the command you
 wish to add.
 
-.. figure:: ../img/nconf_add_advanced_service.png
+.. figure:: ../../../img/nconf_add_advanced_service.png
   :width: 500
   :align: center
   :alt: Add advanced service
@@ -289,7 +229,7 @@ check_win\_\ *xxx* services you require.
 When complete these commands will now be available in the *Advanced
 Services* list.
 
-.. figure:: ../img/nconf_advanced_services_check_wmi.png
+.. figure:: ../../../img/nconf_advanced_services_check_wmi.png
   :width: 500
   :align: center
   :alt: Advanced services list
@@ -297,59 +237,8 @@ Services* list.
 Configure these Advanced Services as required to meet your needs and
 assign them to one or multiple Windows devices.
 
-Monitor Windows Machines with NRPE
-==================================
-
-**Note:** NRPE is not the recommended way to monitor Windows hosts.
-Please opt for WMI above. This is more for legacy versions of NEMS Linux
-(ie., 1.0-1.3.x).
-
-The Nagios Remote Plugin Executor (NRPE) allows your Nagios Enterprise
-Monitoring Server to communicate with the Linux machines on your server
-to determine things like free disk space, CPU load, and detect possible
-issues that a simple ping can't determine.
-
-.. Warning:: As of NEMS 1.2 NSClient++ is optional for monitoring of Windows computers (thanks to the addition of WMIC). If you’d like to use it, please follow the directions below, otherwise use the provided WMIC-based check commands.
-
-1. Grab the latest Windows client at https://www.nsclient.org/download/
-
-2. Install the client with the following settings:
-
-   -  Select to install the “Generic mode” NSClient++.
-   -  Choose “Complete installation” and if asked, choose to save config
-      to ini file.
-   -  Under “Allowed Hosts” it should read 127.0.0.1,\ *NEMSIP* (where
-      NEMSIP is the IP address of your NEMS server)
-   -  Clear the Password field for ease of deployment. NEMS sample
-      scripts are setup to use NRPE without a password because I’m
-      making the assumption that this is being deployed in a trusted .
-      If you do not blank the password here, you will have to edit all
-      the scripts before NEMS will be able to communicate with this
-      computer.
-   -  Enable all modules and change the NRPE mode to Legacy.
-   -  Screen should look a little something like this: 
-
-   .. figure:: ../img/nsclient-setup.png
-    :width: 500
-    :align: center
-    :alt: NSClient setup
-
-   -  Add your Windows host to NEMS.
-
-.. Tip :: **Important Firewall Note** 
-          If you have a software firewall running on your Windows machine, setup
-          an exception for your NEMS server IP to gain access through ports 5666
-          and 12489.
-
-And there we have it! Your NEMS Server can now check your Windows
-machine at a deeper level
-using `check_nrpe <https://docs.nemslinux.com/en/latest/advanced/monitorMsWindowsHosts.html#monitor-windows-machines-with-nrpe>`__.
-
-Special Thanks
-==============
-
-Bill Marshall
--------------
+Special Thanks to Bill Marshall
+-------------------------------
 
 This documentation would not be possible were it not for the effort of
 Bill, also known as UltimateBugHunter-NitPicker on our Discord server.

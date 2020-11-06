@@ -25,7 +25,7 @@ See:
 
 -  `NRPE For Linux <https://docs.nemslinux.com/usage/nrpe_on_linux>`__
 -  `NRPE For Windows
-   Clients <https://docs.nemslinux.com/usage/nrpe_on_windows>`__
+   Clients <../basic/monitorMsWindowsHosts.html#monitor-windows-machines-with-nrpe>`__
 
 Important Note for Users of NEMS 1.5 and Under
 ----------------------------------------------

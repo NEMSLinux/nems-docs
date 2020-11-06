@@ -94,6 +94,13 @@ Table of Contents
     nems-cloud-services/checkin
 
 .. toctree::
+    :maxdepth: 2
+    :caption: Monitoring Specific Platforms
+
+    check_commands/usage/microsoft-windows/index
+    check_commands/usage/linux/index
+
+.. toctree::
     :maxdepth: 1
     :caption: Advanced Configuration
 
@@ -101,7 +108,6 @@ Table of Contents
     advanced/legacyupgrade
     advanced/snmp
     advanced/mrtg
-    advanced/monitorMsWindowsHosts
     advanced/nemsicons
     advanced/nems_php_agent
     advanced/nems-api
