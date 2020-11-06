@@ -14,7 +14,7 @@ on Android and iOS.
 
 :bolditalic:`Test`
 
-NEMS Linux includes *notify_*:bolditalic:`host`*_by_telegram* and *notify_*:bolditalic:`service`*_by_telegram*.
+NEMS Linux includes *notify_* :bolditalic:`host` *_by_telegram* and *notify_*:bolditalic:`service`*_by_telegram*.
 
 It's fairly simple to setup, as long as you have your device (ie.,
 smartphone) and a computer/laptop handy.
