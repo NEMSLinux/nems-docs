@@ -61,8 +61,8 @@ If on nagiospi: 
 
 7. Download the backup to your computer by opening it in your web
    browser. In your favorite web browser, simply add /backup/ to the end
-   of your NEMS/nagiospi server address. Eg., *http://10.0.0.5/backup/*
+   of your NEMS/nagiospi server address. E.G., *http://10.0.0.5/backup/*
 
 8. Now that you have your backup.nems file, follow `the instructions to
    restore your configuration to a new version of
-   NEMS <https://docs.nemslinux.com/en/latest/commands/nems-restore.html>`__.
+   NEMS <../commands/nems-restore.html>`__.
