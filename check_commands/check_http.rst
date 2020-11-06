@@ -10,84 +10,83 @@ host, as configured in NEMS Configurator.
 check_http Argument Syntax
 --------------------------
 
-+----+-----------------+---------------------------------------------+
-| -H | --hostname      | host name of the server where HTTP (or      |
-|    |                 | HTTPS) daemon is running                    |
-+----+-----------------+---------------------------------------------+
-| -I | --IP-address    | ip address of the HTTP (or HTTPS) server    |
-+----+-----------------+---------------------------------------------+
-| -p | --port          | Port number where HTTP server runs. Default |
-|    |                 | is 80                                       |
-+----+-----------------+---------------------------------------------+
-| -4 | --use-ipv4      | This will use IPv4 connection               |
-+----+-----------------+---------------------------------------------+
-| -6 | --use-ipv6      | This will use IPv6 connection               |
-+----+-----------------+---------------------------------------------+
-| -S | --ssl           | This will use HTTPS using default 443 port  |
-+----+-----------------+---------------------------------------------+
-|    | --sni           | Enable SSL/TLS hostname extension support   |
-|    |                 | (SNI)                                       |
-+----+-----------------+---------------------------------------------+
-| -C | --certificate   | Minimum number of days a SSL certiface must |
-|    |                 | be valid.                                   |
-+----+-----------------+---------------------------------------------+
-| -e | --expect        | Expected response string. Default is HTTP/1 |
-+----+-----------------+---------------------------------------------+
-| -s | --string        | Expected content string.                    |
-+----+-----------------+---------------------------------------------+
-| -u | --url           |  to check                                   |
-+----+-----------------+---------------------------------------------+
-| -P | --post          |  encoded http POST data                     |
-+----+-----------------+---------------------------------------------+
-| -N | --no-body       | Do not wait for whole document body to      |
-|    |                 | download. Stop once the headers are         |
-|    |                 | downloaded.                                 |
-+----+-----------------+---------------------------------------------+
-| -M | --max-age       | Check whether a document is older than x    |
-|    |                 | seconds. Use 5 for 5 seconds, 5m for 5      |
-|    |                 | minutes, 5h for 5 hours, 5d for 5 days.     |
-+----+-----------------+---------------------------------------------+
-| -T | --content-type  | Indicate content type in header for POST    |
-|    |                 | request                                     |
-+----+-----------------+---------------------------------------------+
-| -l | --linespan      | Regular expression can span to new line     |
-|    |                 | (Use this with -r or -R option)             |
-+----+-----------------+---------------------------------------------+
-| -r | --regex, --ereg | Use this regular expression to search for   |
-|    |                 | string in the HTTP page                     |
-+----+-----------------+---------------------------------------------+
-| -R | --eregi         | Same as above, but with ignore case.        |
-+----+-----------------+---------------------------------------------+
-| -a | --authorization | If the site uses basic authentication send  |
-|    |                 | uid, pwd in the format uid:pwd              |
-+----+-----------------+---------------------------------------------+
-| -A | --useragent     | Pass the specified string as “User Agent”   |
-|    |                 | in HTTP header.                             |
-+----+-----------------+---------------------------------------------+
-| -k | --header        | Add additional tags that should be sent in  |
-|    |                 | the HTTP header.                            |
-+----+-----------------+---------------------------------------------+
-| -L | --link          | The output is wrapped as  link              |
-+----+-----------------+---------------------------------------------+
-| -f | --onredirect    | When a  is redirected, use this to either   |
-|    |                 | follow the , or send ok, warning, or        |
-|    |                 | critical notification                       |
-+----+-----------------+---------------------------------------------+
-| -m | --pagesize      | Specify the minimum and maximum page size   |
-|    |                 | expected in bytes. Format is                |
-|    |                 | minimum:maximum                             |
-+----+-----------------+---------------------------------------------+
-| -m | --pagesize      | Specify the minimum and maximum page size   |
-|    |                 | expected in bytes. Format is                |
-|    |                 | minimum:maximum                             |
-+----+-----------------+---------------------------------------------+
-| -w | --warning       | Response time in seconds for warning state  |
-+----+-----------------+---------------------------------------------+
-| -c | --critical      | Response time in seconds for critical state |
-+----+-----------------+---------------------------------------------+
-| -t | --timeout       | Number of seconds to wait before connection |
-|    |                 | times out. Default is 10 seconds            |
-+----+-----------------+---------------------------------------------+
++------+---------------------+---------------------------------------------+
+| `-H` | `-\\-hostname`      | host name of the server where HTTP (or      |
+|      |                     | HTTPS) daemon is running                    |
++------+---------------------+---------------------------------------------+
+| `-I` | `-\\-IP-address`    | ip address of the HTTP (or HTTPS) server    |
++------+---------------------+---------------------------------------------+
+| `-p` | `-\\-port`          | Port number where HTTP server runs. Default |
+|      |                     | is 80                                       |
++------+---------------------+---------------------------------------------+
+| `-4` | `-\\-use-ipv4`      | This will use IPv4 connection               |
++------+---------------------+---------------------------------------------+
+| `-6` | `-\\-use-ipv6`      | This will use IPv6 connection               |
++------+---------------------+---------------------------------------------+
+| `-S` | `-\\-ssl` or        | This will use HTTPS using default 443 port  |
+|      | `-\\-sni`           | Enable SSL/TLS hostname extension support   |
+|      |                     | (SNI)                                       |
++------+---------------------+---------------------------------------------+
+| `-C` | `-\\-certificate`   | Minimum number of days a SSL certiface must |
+|      |                     | be valid.                                   |
++------+---------------------+---------------------------------------------+
+| `-e` | `-\\-expect`        | Expected response string. Default is HTTP/1 |
++------+---------------------+---------------------------------------------+
+| `-s` | `-\\-string`        | Expected content string.                    |
++------+---------------------+---------------------------------------------+
+| `-u` | `-\\-url`           |  to check                                   |
++------+---------------------+---------------------------------------------+
+| `-P` | `-\\-post`          |  encoded http POST data                     |
++------+---------------------+---------------------------------------------+
+| `-N` | `-\\-no-body`       | Do not wait for whole document body to      |
+|      |                     | download. Stop once the headers are         |
+|      |                     | downloaded.                                 |
++------+---------------------+---------------------------------------------+
+| `-M` | `-\\-max-age`       | Check whether a document is older than x    |
+|      |                     | seconds. Use 5 for 5 seconds, 5m for 5      |
+|      |                     | minutes, 5h for 5 hours, 5d for 5 days.     |
++------+---------------------+---------------------------------------------+
+| `-T` | `-\\-content-type`  | Indicate content type in header for POST    |
+|      |                     | request                                     |
++------+---------------------+---------------------------------------------+
+| `-l` | `-\\-linespan`      | Regular expression can span to new line     |
+|      |                     | (Use this with -r or -R option)             |
++------+---------------------+---------------------------------------------+
+| `-r` | `-\\-regex` or      | Use this regular expression to search for   |
+|      | `-\\-ereg`          | string in the HTTP page                     |
++------+---------------------+---------------------------------------------+
+| `-R` | `-\\-eregi`         | Same as above, but with ignore case.        |
++------+---------------------+---------------------------------------------+
+| `-a` | `-\\-authorization` | If the site uses basic authentication send  |
+|      |                     | uid, pwd in the format uid:pwd              |
++------+---------------------+---------------------------------------------+
+| `-A` | `-\\-useragent`     | Pass the specified string as “User Agent”   |
+|      |                     | in HTTP header.                             |
++------+---------------------+---------------------------------------------+
+| `-k` | `-\\-header`        | Add additional tags that should be sent in  |
+|      |                     | the HTTP header.                            |
++------+---------------------+---------------------------------------------+
+| `-L` | `-\\-link`          | The output is wrapped as  link              |
++------+---------------------+---------------------------------------------+
+| `-f` | `-\\-onredirect`    | When a  is redirected, use this to either   |
+|      |                     | follow the , or send ok, warning, or        |
+|      |                     | critical notification                       |
++------+---------------------+---------------------------------------------+
+| `-m` | `-\\-pagesize`      | Specify the minimum and maximum page size   |
+|      |                     | expected in bytes. Format is                |
+|      |                     | minimum:maximum                             |
++------+---------------------+---------------------------------------------+
+| `-m` | `-\\-pagesize`      | Specify the minimum and maximum page size   |
+|      |                     | expected in bytes. Format is                |
+|      |                     | minimum:maximum                             |
++------+---------------------+---------------------------------------------+
+| `-w` | `-\\-warning`       | Response time in seconds for warning state  |
++------+---------------------+---------------------------------------------+
+| `-c` | `-\\-critical`      | Response time in seconds for critical state |
++------+---------------------+---------------------------------------------+
+| `-t` | `-\\-timeout`       | Number of seconds to wait before connection |
+|      |                     | times out. Default is 10 seconds            |
++------+---------------------+---------------------------------------------+
 
 NEMS Configurator Service Parameter Examples
 --------------------------------------------

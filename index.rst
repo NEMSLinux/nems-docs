@@ -73,8 +73,8 @@ Need the old docs? https://olddocs.nemslinux.com
     apps/nems-sst
     apps/nconf
     apps/adagios
-    apps/mobileui
-    apps/nems-dashboard
+    apps/mobile
+    apps/nems-tv
     apps/tactical_overview
     apps/cloudservices
     apps/monitorix

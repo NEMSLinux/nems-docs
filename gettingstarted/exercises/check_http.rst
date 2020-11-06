@@ -12,7 +12,7 @@ In this exercise, we'll learn how to setup NEMS Linux to notify you if your web 
 
 If your site goes offline, or becomes unresponsive or sluggish, NEMS Linux can send you an alert by a number of methods including email, Telegram or Pushover. This capability makes NEMS Linux a fantastic tool for web designers and hosts who want to ensure their customer sites are always up so the customer doesn’t notice any downtime. If your site is hosted over SSL, NEMS can even notify you if your certificate has expired – or is about to expire. There are so many options since NEMS Linux has been built to monitor everything.
 
-For this exercise, we'll use the built-in *check_http* command. For my example, I’ll use https://nemslinux.com/ – I would suggest you do the same for the sake of the lesson, and then try changing the Host to your own domain once you understand how everything is connected.
+For this exercise, we'll use the built-in *check_http* command. For my example, I’ll use ``https://nemslinux.com/`` – I would suggest you do the same for the sake of the lesson, and then try changing the Host to your own domain once you understand how everything is connected.
 
 It may appear onerous as you glance over the following 6 steps, but keep in mind once you create your config, you can reuse it for as many web site hosts as you like by simply assigning your host to the *web_site_ssl* host group, which you’ll learn to create below.
 
@@ -31,7 +31,7 @@ Steps
   #. At the very end of the command line, simply add a space, followed by -4 to tell it to use IPv4 for this check.
   #. Save the new command.
 
-  .. figure:: ../img/Create-New-misccommand-to-check-host-alive-Using-IPv4.png
+  .. figure:: ../../img/Create-New-misccommand-to-check-host-alive-Using-IPv4.png
     :width: 600
     :align: center
     :alt: Create IPv4 Check Command
@@ -43,7 +43,7 @@ Steps
   #. Set the host alive check to the new command you created in Step 2: check-host-alive-ipv4
   #. Save your host preset.
   
-  .. figure:: ../img/New-Host-Preset-for-IPv4-Web-Sites.png
+  .. figure:: ../../img/New-Host-Preset-for-IPv4-Web-Sites.png
     :width: 600
     :align: center
     :alt: Create IPv4 Host Preset
@@ -54,7 +54,7 @@ Steps
   #. Call this web_site_ssl
   #. Leave everything else as is and save your new hostgroup.
 
-  .. figure:: ../img/New-hostgroup-for-web_site_ssl.png
+  .. figure:: ../../img/New-hostgroup-for-web_site_ssl.png
     :width: 600
     :align: center
     :alt: Create SSL Host
@@ -71,9 +71,10 @@ Steps
   #. Finally, set your service parameters to: -S --sni
   #. Save your advanced service.
   
-  .. Tip:: The -S tells check_http that this site is using SSL, and the --sni enables SNI (Server Name Indication) since I use CloudFlare for SSL on nemslinux.com, and therefore my resolving IP address is associated with more than one domain name. For your site, if you have any trouble, try removing SNI by simply omitting --sni. For the full documentation surrounding the check_http command, visit the NEMS Linux documentation wiki page at https://docs.nemslinux.com/en/latest/basic/checkhttp.html
+  .. Tip:: The -S tells check_http that this site is using SSL, and the --sni enables SNI (Server Name Indication) since I use CloudFlare for SSL on nemslinux.com, and therefore my resolving IP address is associated with more than one domain name. For your site, if you have any trouble, try removing SNI by simply omitting --sni. For the full documentation surrounding the check_http command, visit `the check_http documentation <../../check_commands/check_http.html>`__.
+.
   
-  .. figure:: ../img/Creating-an-Advanced-Service-to-Check-SSL-Web-Sites.png
+  .. figure:: ../../img/Creating-an-Advanced-Service-to-Check-SSL-Web-Sites.png
     :width: 600
     :align: center
     :alt: Create SSL Advanced Service
@@ -100,7 +101,7 @@ Steps
   #. assign host to hostgroup (are you ready for this?): web_site_ssl
   #. Save.
   
-  .. figure:: ../img/Creating-a-Host-to-Monitor-IPv4-SSL-Web-Site.png
+  .. figure:: ../../img/Creating-a-Host-to-Monitor-IPv4-SSL-Web-Site.png
     :width: 600
     :align: center
     :alt: Create Host for IPv4 SSL web site
@@ -113,7 +114,7 @@ Conclusion
 
 If you followed the steps correctly and my web site is up, Adagios should report all is well. To test what would happen if it were to start failing, change the hostname in the Host to nemslinux.com1 (which obviously will not respond), and then generate your config again. Once you feel ready, change the Host to your own web site. If your site is SSL, you should only need to change the hostname, alias and address of the host (Step 6). If it’s not SSL, repeat Step 4, but this time create a new hostgroup called web_site_no_ssl, and then repeat Step 5, this time, creating a new Advanced Service called Web Site (Non-SSL), assign it (5.e) to Web Site (Non-SSL) and leave off the SSL parameters in 5.h.
 
-  .. figure:: ../img/NEMS-Adagios-Shows-nemslinux.com-is-UP.png
+  .. figure:: ../../img/NEMS-Adagios-Shows-nemslinux.com-is-UP.png
     :width: 600
     :align: center
     :alt: nemslinux.com is UP

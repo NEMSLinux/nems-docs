@@ -7,5 +7,5 @@ Having made it through the Getting Started Guide, it's time to put your newly le
     :maxdepth: 1
     :caption: Check Commands
 
-    check_http
-    check_tcp
+    exercises/check_http
+    exercises/check_tcp

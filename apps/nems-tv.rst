@@ -10,10 +10,18 @@ as a status monitor in your server room, NEMS
 TV Dashboard will report all unacknowledged host and service alerts as
 they occur.
 
+Screenshot
+~~~~~~~~~~
+
+.. figure:: ../img/tv_dashboard_1.4.1.png
+  :width: 600
+  :align: center
+  :alt: Nems Dashboard Screenshot circa NEMS Linux 1.4.1
+
 Usage
 -----
 
-To use NEMS TV Dashboard, simply connect a computer (eg., Raspberry Pi
+To use NEMS TV Dashboard, simply connect a computer (E.G., Raspberry Pi
 Zero) to your TV display and open ``https://nems.local/tv`` in the
 browser.
 
@@ -23,16 +31,8 @@ Fullscreen Mode
 Ideally, make NEMS TV Dashboard fullscreen by pressing F11. Press it
 again to restore the window.
 
-Screenshot
-~~~~~~~~~~
-.. figure:: ../img/tv_dashboard_1.4.1.png
-  :width: 600
-  :align: center
-  :alt: Nems Dashboard Screenshot circa NEMS Linux 1.4.1
-
-
 Security
-~~~~~~~~
+--------
 
 For convenience and usability, NEMS TV Dashboard does not prompt for
 your NEMS username and password by default. If you prefer to keep the
@@ -43,13 +43,13 @@ connected to the computer connected to your TV (or something like VNC
 access) to login.
 
 Under The Hood
-~~~~~~~~~~~~~~
+--------------
 
 NEMS TV Dashboard uses the Check_MK Livestatus socket in the back-end,
 making it fast, efficient, and lightweight.
 
 Requirements
-~~~~~~~~~~~~
+------------
 
 -  NEMS Linux 1.4.1+
 -  A display of some sort, connected to a computer/SBC with Web Browser
@@ -59,7 +59,7 @@ Requirements
 -  NEMS Linux 1.6+ to include Internet speedtest at all times.
 
 Source Code
-~~~~~~~~~~~
+-----------
 
 `nems-tv on Github <https://github.com/cat5tv/nems-tv>`__ is based on
 *merlin-dashboard* by fnordpojk. Licensed under

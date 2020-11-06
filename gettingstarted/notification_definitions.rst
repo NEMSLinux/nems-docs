@@ -1,7 +1,7 @@
 Understanding Notification Definitions
 ======================================
 
-Before you setup your first check commands, you'll need to understand what the single-character notification options mean. Failure to correctly set notification settings could result in no notifications being generated.
+Before you setup your first check commands, you'll need to understand what the single-character notification options mean. Failure to correctly set notification settings could result in no notifications being generated, or an excess of notifications being sent.
 
 Refer back to this list as needed, as you'll need to understand what commands such as `w,u,c,r,f` mean.
 
