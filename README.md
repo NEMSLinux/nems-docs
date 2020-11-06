@@ -19,18 +19,6 @@ As I would like the documentation to have a consistent look throughout, please f
 
 ### Layout
 
-#### Inline Text Variation
-
-Restructured Text *can* process inline text variations, but as ReST requires a space on either side, escaping is required.
-
-To achieve **r**estructured **t**ext you would type it as follows: `**r**\ estructured **t**\ ext`
-
-I've also included some custom css classes to allow doing things that are normally not possible with ReST, such as bold *and* italic at the same time.
-
-Just add this to the first line of your .rst file: `.. include:: ../global.rst`
-
-Then, you can do something like this: `**r**\ :bolditalic:\`estructured\` **t**\ :bolditalic:\`ext\``
-
 #### Images
 
 When embedding an image, please place the image in /img and use the following format:
@@ -66,7 +54,19 @@ Ensure the iframe code lines up directly below the "r" in raw
 
 For pictorial instructions go here: <https://techwritingmatters.com/documenting-with-sphinx-tutorial-part-3-writing#6_Embedding_a_YouTube_video>
 
+#### Inline Text Variation
 
+Restructured Text *can* process inline text variations, but as ReST requires a space on either side, escaping is required.
+
+To achieve **r**estructured **t**ext you would type it as follows: `**r**\ estructured **t**\ ext`
+
+I've also included some custom css classes to allow doing things that are normally not possible with ReST, such as bold *and* italic at the same time.
+
+Just add this to the first line of your .rst file: `.. include:: ../global.rst`
+
+Then, you can do something like this: ``` **r**\ :bolditalic:`estructured` **t**\ :bolditalic:`ext` ```
+
+Note that \ followed by a space will not actually render a space in the output.
 
 #### Step-By-Step Instructions
 
