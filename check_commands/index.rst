@@ -1,5 +1,5 @@
-Check Commands
---------------
+Included Check Commands
+=======================
 
 While not a comprehensive list of the available check commands in NEMS Linux,
 here are some of the available check commands:

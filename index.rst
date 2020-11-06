@@ -2,8 +2,8 @@ Welcome to NEMS Linux
 =====================
 
 .. image:: https://readthedocs.org/projects/nemslinux/badge/?version=latest
-:target: https://docs.nemslinux.com/en/latest/?badge=latest
-:alt: Documentation Status
+  :target: https://docs.nemslinux.com/en/latest/?badge=latest
+  :alt: Documentation Status
 
 Introduction
 ------------
@@ -17,31 +17,11 @@ request on GitHub, file an issue on GitHub, or contact us on Discord.
 Need the old docs? https://olddocs.nemslinux.com
 
 .. toctree::
-    :maxdepth: 2
-    :caption: Getting Started Guide
-
-    gettingstarted/introduction
-    gettingstarted/platforms
-    gettingstarted/install
-    gettingstarted/initialization
-    gettingstarted/nemsadminpassword
-    gettingstarted/connect
-    gettingstarted/networking
-    gettingstarted/smtp
-    gettingstarted/smtpGmail
-    gettingstarted/smtpOutlook
-    gettingstarted/generate_config
-    gettingstarted/add_first_host
-    gettingstarted/monitor_assets
-    gettingstarted/notification_definitions
-    gettingstarted/exercises
-    gettingstarted/faq
-    gettingstarted/rpipinout
-
-.. toctree::
     :maxdepth: 1
-    :caption: Basic Setup
+    :caption: The Basics
 
+    gettingstarted/index
+    basic/platforms
     check_commands/index
     basic/backupnems
     basic/cloudservices
