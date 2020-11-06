@@ -22,7 +22,6 @@ Need the old docs? https://olddocs.nemslinux.com
 
     gettingstarted/index
     basic/platforms
-    basic/networking
     basic/default_password
     check_commands/index
     basic/backupnems
@@ -62,6 +61,7 @@ Need the old docs? https://olddocs.nemslinux.com
     :maxdepth: 1
     :caption: Configuration
 
+    config/networking
     config/smtp_config_gmail
     config/smtp_config_outlook
 

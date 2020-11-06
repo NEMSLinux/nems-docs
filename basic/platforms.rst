@@ -233,7 +233,7 @@ Deployment Notes
 -  To access NEMS Linux remotely, you will need to configure your
    Security Group for the NEMS Linux instance to allow incoming
    connections on the NEMS Linux ports
-   (See `Networking <https://docs.nemslinux.com/networking>`__ for more
+   (See `Networking <../config/networking.html>`__ for more
    info). It is recommended to make these accessible only from your
    trusted IP addresses.
 
@@ -333,7 +333,7 @@ With USB Support
 ~~~~~~~~~~~~~~~~
 
 To connect a USB device such
-as `temper <https://docs.nemslinux.com/en/latest/accessories/temper.html>`__ to your
+as `temper <../accessories/temper.html>`__ to your
 Docker-based NEMS Server, first determine its /dev assignment on your
 host, and then run NEMS as follows, replacing ttyUSB0 with your actual
 USB device:

@@ -52,7 +52,7 @@ Important Notes
    be available to you.
 2. You'll find Cockpit in the System menu of your NEMS Dashboard. For
    more details about Cockpit, read the
-   documentation: `Cockpit <https://docs.nemslinux.com/en/latest/apps/cockpit.html>`__
+   documentation: `Cockpit <../apps/cockpit.html>`__
 3. Network configuration does not persist from board to board: if you
    configure NEMS on one device and then move its storage (ie., SD card)
    to a different device, the new device will revert to the default
@@ -132,7 +132,7 @@ NEMS server would be to add it as a DHCP reservation within your
 router/DHCP server. To find out what IP address your NEMS server resides
 on, either check your DHCP pool, or connect a TV to your NEMS server.
 You can also try accessing it
-at `https://nems.local <https://nems.local/>`__ from another computer on
+at ``https://nems.local`` from another computer on
 the same network.
 
 Static IP Address

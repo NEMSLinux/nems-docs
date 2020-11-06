@@ -11,7 +11,7 @@ Host Notification Settings
 When you see `d,u,r,f,s,n`, these are the definitions:
 
 * **d** Notify if host is down,
-* **u** Notify if host is unreachable (eg. Internet down),
+* **u** Notify if host is unreachable (E.G. Internet down),
 * **r** Notify upon recovery,
 * **f** Notify if the host is flapping (up/down/up/down),
 * **s** Notify if a scheduled service downtime begins or ends,
