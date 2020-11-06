@@ -123,7 +123,7 @@ Troubleshooting
 number 40” when trying to check a secure web site**
 
 Are you using Cloudflare or another SSL redirecting system where your
-certificate might be shared with other hostnames? Try adding --sni to
+certificate might be shared with other hostnames? Try adding `-\\-sni` to
 your service parameters to enable Server Name Indication (SNI), which
 allows the server to safely host multiple TLS Certificates for multiple
 sites, all under a single IP address.
