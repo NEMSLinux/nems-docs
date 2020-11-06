@@ -31,7 +31,7 @@ Need the old docs? https://olddocs.nemslinux.com
     basic/commandlinetest
     basic/nemsnavigationmenu
     basic/resolvednshostnamesonlan
-    basic/port9590
+    basic/9590
     basic/connect_via_ssh
 
 .. toctree::

@@ -26,5 +26,3 @@ sudo /usr/sbin/update-rc.d 9590 disable
 
 To see how 9590 works, simply review `the source
 code <https://github.com/Cat5TV/nems-scripts/blob/master/9590.sh>`__.
-
--  
