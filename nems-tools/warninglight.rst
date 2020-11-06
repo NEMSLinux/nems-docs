@@ -60,6 +60,8 @@ receiver, the pinout is as follows:
 -  UNKNOWN or WARN state -> Pin 23
 -  CRIT state -> Pin 18
 
+See also, `NEMS Linux: Raspberry Pi GPIO Pinout <../accessories/rpi_pinout.html>`__.
+
 **Please Note:** When the final version is released, it will most likely
 use the I2C protocol (unless I decide to create a USB version instead of
 GPIO-based). However, these GPIO pins will remain functional in order to

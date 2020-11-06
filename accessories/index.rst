@@ -16,3 +16,4 @@ NEMS Accessories
     piwatcher
     omzlo-warninglight-phat
     argon1case
+    rpi_pinout

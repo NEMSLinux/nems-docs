@@ -32,6 +32,7 @@ Need the old docs? https://olddocs.nemslinux.com
     basic/resolvednshostnamesonlan
     basic/9590
     basic/connect_via_ssh
+    basic/faq
 
 .. toctree::
     :maxdepth: 1
