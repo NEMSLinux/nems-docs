@@ -1,9 +1,12 @@
-Networking
-==========
+Network Configuration
+=====================
 
-NEMS requires an Internet connection to obtain updates and patches, and
+NEMS requires an Internet connection to obtain updates and patches,
 to tap into NEMS Cloud Services features such as NEMS Check In, NEMS
-Migrator Off-Site Backup, and NEMS Anonymous Stats.
+Migrator Off-Site Backup, and NEMS Anonymous Stats, and to send
+notifications.
+
+You cannot use NEMS Linux without an Internet connection.
 
 Firewall Ports
 --------------

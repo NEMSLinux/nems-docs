@@ -58,16 +58,9 @@ On the next screen, you will be given the opportunity to add more service checks
 
 .. Tip:: In some cases, you may desire that your host checks occur at different intervals than are specified within the Host Template. For example, you may wish your mission critical server to be pinged every minute rather than every 10 minutes. In these cases, rather than editing the Host Template (and thereby impacting all hosts which use that template) you can specify unique values on the Add Host screen, which will override the Host Template values for this host.
 
-Generate Nagios Config: Make Your Changes Live (In Review)
-----------------------------------------------------------
+Generate NEMS Config: Make Your Changes Live
+--------------------------------------------
 
-To make your changes live and begin monitoring your new host, press the Generate Nagios Config link on the left navigation. You should see 0 errors. If you do see errors, press the syntax check bar and review where you went wrong. NConf is very good at showing you where to find the error is so you can go back and fix it.
+To make your changes live and begin monitoring your new host `Generate your NEMS Config <generate_config.html>`__.
 
-.. figure:: ../img/generate-nems-config.png
-  :width: 600
-  :align: center
-  :alt: Generate NEMS Config
-  
-  Generate Nagios Config with the NEMS Configurator
-
-If everything checks out, press “Deploy,” and your new host will instantly be activated in Nagios.
+If everything checks out, press **Deploy** and your new host will instantly be activated in Nagios.

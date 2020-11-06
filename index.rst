@@ -22,6 +22,8 @@ Need the old docs? https://olddocs.nemslinux.com
 
     gettingstarted/index
     basic/platforms
+    basic/networking
+    basic/default_password
     check_commands/index
     basic/backupnems
     basic/cloudservices
@@ -30,6 +32,7 @@ Need the old docs? https://olddocs.nemslinux.com
     basic/nemsnavigationmenu
     basic/resolvednshostnamesonlan
     basic/port9590
+    basic/connect_via_ssh
 
 .. toctree::
     :maxdepth: 1
@@ -54,6 +57,13 @@ Need the old docs? https://olddocs.nemslinux.com
     :caption: NEMS Commands
 
     commands/nems_commands
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Configuration
+
+    config/smtp_config_gmail
+    config/smtp_config_outlook
 
 .. toctree::
     :maxdepth: 1
@@ -264,11 +274,3 @@ License
 -------
 
 GNU AGPLv3 https://www.gnu.org/licenses/agpl-3.0.en.html
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

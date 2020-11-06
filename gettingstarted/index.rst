@@ -20,14 +20,10 @@ entry level.
     introduction
     install
     initialization
-    nemsadminpassword
     connect
-    networking
     smtp
-    smtpGmail
-    smtpOutlook
-    generate_config
     add_first_host
+    generate_config
     monitor_assets
     notification_definitions
     exercises
