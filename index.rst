@@ -119,6 +119,12 @@ Need the old docs? https://olddocs.nemslinux.com
 
 .. toctree::
     :maxdepth: 1
+    :caption: Upcoming Features
+
+    advanced/nems-mesh
+
+.. toctree::
+    :maxdepth: 1
     :caption: To-Do List and Report Bugs
 
     todolist/todolist
