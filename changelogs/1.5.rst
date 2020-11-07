@@ -1,5 +1,5 @@
-NEMS Linux 1.5
-==============
+NEMS Linux 1.5 Changelogs
+=========================
 
 The NEMS 1.5 release cycle will focus on an enhanced user experience and
 documentation.
