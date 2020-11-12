@@ -1,6 +1,15 @@
 Welcome to NEMS Linux
 =====================
 
+.. |Screenshot| image:: img/2018 12 30 - Dashboard.jpg
+    :width: 600px
+    :alt: NEMS Linux Screenshot
+
++---------------+
+| |Screenshot|  |
++---------------+
+
+
 .. image:: https://readthedocs.org/projects/nemslinux/badge/?version=latest
   :target: https://docs.nemslinux.com/en/latest/?badge=latest
   :alt: Documentation Status
