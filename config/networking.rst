@@ -1,18 +1,29 @@
+.. include:: ../global.rst
+
 Network Configuration
 =====================
 
-NEMS requires an Internet connection to obtain updates and patches,
-to tap into NEMS Cloud Services features such as NEMS Check In, NEMS
-Migrator Off-Site Backup, and NEMS Anonymous Stats, and to send
-notifications.
+NEMS Linux requires an Internet connection to obtain updates and
+patches,
+to tap into `NEMS Cloud Services <../nems-cloud-services/index.html>`__ features such as `NEMS CheckIn <../nems-cloud-services/checkin.html>`__, `NEMS
+Migrator Off-Site Backup <../nems-cloud-services/nems-migrator.html>`__, and `NEMS Anonymous Stats <../misc/anonymousstats.html>`__, and to `send
+notifications <../notifications/index.html>`__.
 
-You cannot use NEMS Linux without an Internet connection.
+**You cannot use NEMS Linux without an Internet connection.**
+
+Security Notice
+---------------
+
+NEMS Linux is intended to be accessible only to your trusted admin
+team. :underline:`Never` open ports to the world. Rather, specifically allow
+your admin IP address(es) access to the needed resources, or use
+a VPN.
 
 Firewall Ports
 --------------
 
-To allow you/others to access your NEMS Server, you will require the
-following ports be opened to your NEMS Server:
+To allow you/others to access your NEMS Server from outside your LAN,
+you will require the following ports be opened to your NEMS Server:
 
 -  **SSH Access:** 22 TCP In
 -  **NEMS Dashboard Web Interface:** 80, 443 TCP In
@@ -20,7 +31,7 @@ following ports be opened to your NEMS Server:
 -  **Cockpit Admin Interface:** 9090 TCP In
 -  **AVAHI / mDNS Name Resolution:** 548, 5353, 5354 TCP In/Out
 
-Most standard network configurations allow running servers to
+Most standard network configurations allow servers to
 communicate with the outside world without any additional setup.
 However, if you have a very restrictive firewall configuration, you may
 need to open additional ports for your NEMS Server to be able to
@@ -31,6 +42,12 @@ servers.
 -  **NRPE Check Commands:** 5666, 12489 TCP Out
 -  **WMI Check Commands:** 135, 445, 1024-1034 Out
 
+You must also ensure your NEMS Server is allowed to communicate with the
+following domains:
+
+-  nemslinux.com
+-  github.com
+
 Docker / Amazon Web Services
 ----------------------------
 
@@ -39,10 +56,10 @@ Docker and Amazon Web Services. This is because on these platforms, you
 should administer your networking from the host, not the appliance.
 
 -  Docker: You must assign the IP upon launching the container.
-   See https://docs.docker.com/engine/reference/run/#network-settings
+   See `this documentation <https://docs.docker.com/engine/reference/run/#network-settings>`__.
 -  Amazon Web Services: You must assign an Elastic IP to your NEMS Linux
    instance.
-   See https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html
+   See `this documentation <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html>`__.
 
 Important Notes
 ---------------

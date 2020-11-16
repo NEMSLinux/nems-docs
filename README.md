@@ -66,6 +66,10 @@ Just add this to the first line of your .rst file: `.. include:: ../global.rst`
 
 Then, you can do something like this: ``` **r**\ :bolditalic:`estructured` **t**\ :bolditalic:`ext` ```
 
+**Other Custom Classes**
+
+``` :underline:`text` ```
+
 Note that \ followed by a space will not actually render a space in the output.
 
 #### Step-By-Step Instructions

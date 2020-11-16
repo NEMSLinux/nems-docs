@@ -1,33 +1,41 @@
-####################
-Available Platforms
-####################
+.. include:: ../global.rst
 
-*************************************
+###################
+Available Platforms
+###################
+
+NEMS Linux is available on many platforms, such as Single Board Computer,
+Virtual Appliance, Cloud Deployment or Docker.
+
+Visit `the NEMS Linux web site <https://nemslinux.com/>`__ for a
+complete list of supported platforms.
+
+************************************
 NEMS Linux on Single Board Computers
-*************************************
+************************************
 
 When choosing your hardware, general SBC comparisons are not necessarily
 relevant since you will be deploying a NEMS Linux server specifically.
 As an example, an ODROID-C2 vs Raspberry Pi 3 comparison will say
 Raspberry Pi 3 has better support for video drivers. Well, that won't
 matter to you; you're using NEMS Linux and we've pre-built the distro
-for you. So because of this, it is helpful to review `the NEMS Linux
-Stats page <https://nemslinux.com/stats/>`__, and `join our Discord
-Server <https://discord.gg/e9xT9mh>`__ to make an educated decision.
+for you, and nothing about it requires good video driver support.
+So because of this, it is helpful to review `the NEMS Linux
+Stats page <https://nemslinux.com/stats/>`__, and even `discuss it on our
+Discord Server <https://discord.gg/e9xT9mh>`__ to make an educated
+decision.
 
 Here are some general guidelines.
 
 1. eMMC storage is better than an SD Card. This is a universal truth. SD
    Cards have a high failure rate whereas eMMC tends to operate with
-   perceptively similar reliability to a traditional SSD. NEMS performs
+   perceptively similar reliability and performance to a traditional SSD.
+   NEMS Linux performs
    a lot of read/write operations, as you can imagine, so the more
    reliable your storage medium, the more reliable your NEMS Server.
-2. More RAM means better performance. The minimum recommended RAM is 1GB ,
+2. More RAM means better performance. The minimum recommended RAM is 1GB,
    though 2GB or higher will greatly improve performance and reliability
    of your NEMS Server.
-
-Visit `the NEMS Linux web site <https://nemslinux.com/>`__ for a
-complete list of supported platforms.
 
 Raspberry Pi
 ------------
@@ -97,18 +105,19 @@ eMMC storage by typing;
 .. code-block:: console
 
     sudo nems-install
-    
+
+********************    
 NEMS Linux Appliance
---------------------
+********************    
 
 .. figure:: ../img/nems-fitlet2.png
   :width: 500
   :align: center
   :alt: Fitlet 2
 
-*****************************
+****************************    
 NEMS Linux Virtual Appliance
-*****************************
+****************************    
 
 The NEMS Linux Virtual Appliance is only available
 to `Patrons <https://patreon.com/nems>`__.
@@ -135,8 +144,8 @@ Host Requirements
 *All Hypervisors*
 
 -  VT-x/AMD-V capable CPU with feature enabled in BIOS/UEFI
--  Minimum 6  free RAM
--  100  hard disk space
+-  Minimum 6 GB free RAM
+-  100 GB hard disk space
 
 *VMware ESXi Only*
 
@@ -146,15 +155,16 @@ Guest Specifications
 --------------------
 
 -  64-Bit
--  80  Virtual Hard Disk (Dynamic / Thin Provisioning)
--  4  RAM
+-  80 GB Virtual Hard Disk (Dynamic / Thin Provisioning where supported)
+-  4 GB RAM
 
 Deployment Notes
 ----------------
 
--  Before booting, you must configure your virtual Network Interface to
-   use your actual  in Bridged mode.
--  While configuring your virtual Network Interface, you must generate a
+-  **Network Bridge** - Before booting, you must configure your virtual
+   Network Interface to use your actual LAN in Bridged mode.
+-  **Unique MAC Address** - While configuring your virtual Network
+   Interface, you must generate a
    new MAC address for the virtual NIC. If your hypervisor does not
    offer a feature to automatically generate a MAC address you can
    visit `nemslinux.com/api/mac <https://nemslinux.com/api/mac>`__ to
@@ -163,17 +173,19 @@ Deployment Notes
    after initializing NEMS. Doing so would result in your HWID changing,
    which will disassociate your Virtual Appliance with NEMS Cloud
    Services.
--  x86 Virtualization must be available and enabled on your physical CPU
+-  **CPU Virtualization Features** - x86 Virtualization must be available
+   and enabled on your physical CPU
    in order to boot the Virtual Appliance. This is found in your host
    machine's BIOS/UEFI settings and will be called VT-x (Intel) or AMD-V
    (AMD), or something similar such as “Virtualization Extensions”.
--  Ensure RAM is not assigned as “dynamic” RAM. ESXi, for example, may
+-  **Static RAM Mode** - Ensure RAM is :underline:`not` assigned as
+   “dynamic” RAM. ESXi, for example, may
    remove all RAM from the appliance if set to dynamic, which will
    result in NEMS Linux not functioning correctly. RAM should be static.
 
-**************************************
+*************************************
 NEMS Linux Amazon Machine Image (AMI)
-**************************************
+*************************************
 
 The NEMS Linux Amazon Machine Image is available in the Amazon EC2
 Community AMIs marketplace. Simply search for *NEMS Linux* when
@@ -192,8 +204,8 @@ Amazon allows me to make it.
 AMI IDs
 -------
 
-The NEMS Linux AMI is found under *Community AMIs* on us-east-1 (N.
-Virginia). If you wish to deploy on a different AWS Service Endpoint and
+The NEMS Linux AMI is found under *Community AMIs* on **us-east-1 (N.
+Virginia)**. If you wish to deploy on a different AWS Service Endpoint and
 are a current Patron supporting the project on Patreon, please let me
 know and I will copy the AMI to your preferred region. Since this costs
 me extra money to do, I only do it by request, and only for those who
@@ -204,7 +216,7 @@ contribute to the project.
 Introduction
 ------------
 
-NEMS Linux AMI leverages Amazon's T2 instance types, dramatically
+The NEMS Linux AMI leverages Amazon's T2 instance types, dramatically
 reducing the cost of running a NEMS Server in the Cloud by bursting to
 full core performance only when required. T2 instances are also
 available to use in the AWS Free Tier, which includes 750 hours of
@@ -219,56 +231,50 @@ The NEMS Linux AMI requires the following:
 
 -  If monitoring 1-20 hosts: t2.micro or higher EC2 instance
 -  If monitoring more than 20 hosts: t2.medium or higher EC2 instance
--  an elastic IP address
--  volume is 16GB by default and may need to be increased in time
+-  An elastic IP address
+-  Volume is 16 GB by default and may need to be increased in time
 
 Deployment Notes
 ----------------
 
 -  **Important:** Before booting, you must configure an elastic IP
    address for your NEMS Linux instance. Failure to do this will break
-   several features, including NEMS Cloud Services, NEMS CheckIn, and
-   your daily backup.
+   several key features, including NEMS Cloud Services, NEMS CheckIn,
+   and your daily backup.
 
 -  To access NEMS Linux remotely, you will need to configure your
    Security Group for the NEMS Linux instance to allow incoming
    connections on the NEMS Linux ports
    (See `Networking <../config/networking.html>`__ for more
-   info). It is recommended to make these accessible only from your
-   trusted IP addresses.
+   info). It is recommended to make these accessible :underline:`only`
+   from your trusted IP address(es).
 
--  NEMS Linux allows you to use either username/password combinations or
+-  NEMS Linux allows you to use either
+   `username/password combinations <default_password.html>`__ or
    username/key pair combinations to login via SSH. As this could pose a
    security issue, please ensure only your own IP address has access to
    NEMS Linux ports (in your EC2 Security Group configuration for the
    instance).
 
-   -  Default username: **nemsadmin**
-   -  Default password: **nemsadmin**
+Re-Initializing
+---------------
 
-Known Issues
-------------
-
--  If you run a *nems-init* on a NEMS Server that has already been
-   initialized, your public key will need to be manually imported. This
-   will be improved in future, but wasn't a high priority as it should
-   not affect many people (if anyone).
+-  If you run `nems-init <../gettingstarted/initialization.html>`__ on a
+   NEMS Server that has already been initialized, the server's public key
+   and all trust relationships will be transferred to the new user prior
+   to the old user being purged.
 
 
 ****************************
 NEMS Linux Docker Container
 ****************************
 
-The NEMS Linux Docker Container is coming soon. It is currently
-in *heavy testing*. If you decide to try it, please do not do so in a
-production environment, and be sure to report any issues on our Discord
-server.
+**The NEMS Linux Docker Container is coming soon.**
 
+NEMS Linux for Docker **IS NOT YET AVAILBLE**.
 
 Install NEMS Linux for Docker
 -----------------------------
-
-NEMS Linux for Docker **IS NOT YET AVAILBLE**. Coming soon.
 
 Basic Installation
 ~~~~~~~~~~~~~~~~~~
