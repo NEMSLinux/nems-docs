@@ -7,7 +7,7 @@ Command: nems-cert
   :alt: nems-cert
 
 When you
-run `nems-init <https://docs.nemslinux.com/commands/nems-init>`__ NEMS
+run `nems-init <nems-init.html>`__ NEMS
 generates your SSL certificates. However, if you ever want to update
 your certs, you definitely don't want to run *nems-init* again - that'd
 wipe out your configuration.
@@ -25,7 +25,7 @@ restart the services which use them.
 If you generate a new certificate for NEMS you may need to delete the
 old one from your browser and restart, and then create a new exception
 for the `self-signed
-certificate <https://docs.nemslinux.com/self-signed-certs>`__.
+certificate <../misc/self-signed-certificates.html>`__.
 
 nems-cert temporarily uses Debian Snakeoil certificates - so all the
 information covered in this doc (other than how to run the program) is

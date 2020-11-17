@@ -11,7 +11,7 @@ your NEMS Linux server post alerts directly to your company Discord
 channel.
 
 To use NEMS Warning Light's webhook feature, simply add your
-webhook  to `NEMS SST <https://docs.nemslinux.com/en/latest/apps/nemssst.html>`__.
+webhook  to `NEMS SST <../apps/nems-sst.html>`__.
 
 Webhook functionality requires NEMS Linux 1.5+. NEMS only sends
 webhooks. It does not receive them.

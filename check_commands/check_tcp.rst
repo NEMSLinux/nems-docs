@@ -20,7 +20,7 @@ Quick Use
 8. Hit submit.
 
 Then go `generate your
-config <https://docs.nemslinux.com/en/latest/gettingstarted/generate_config.html>`__ and
+config <../gettingstarted/generate_config.html>`__ and
 if you set your intervals correctly, all should be a-okay. If not,
 expand the error message to see where you went wrong.
 
@@ -34,7 +34,7 @@ Exercise
 
 NEMS Linux includes a dummy port listener running on port 9590. The port
 listener is cleverly
-called `9590 <https://docs.nemslinux.com/en/latest/basic/port9590.html>`__, and does
+called `9590 <../basic/port9590.html>`__, and does
 nothing other than reply that it is up. This can be used to simulate a
 port on another device.
 
@@ -64,11 +64,11 @@ ever goes offline.
 19. Set *Params for check command* to the port number: 9590
 20. Press *Submit*
 21. `Generate Nagios
-    Config <https://docs.nemslinux.com/en/latest/gettingstarted/generate_config.html>`__
+    Config <../gettingstarted/generate_config.html>`__
 
 Once the new config is running, try failing the service by
 opening `Monit Service
-Manager <https://docs.nemslinux.com/features/monit>`__, click on the
+Manager <../apps/monitservicemonitor.html>`__, click on the
 Process named *9590*, and then click “Stop service”. You'll notice
 within 30 minutes the status of 9590 will show as a problem in all
 status views (Eg., NEMS TV Dashboard, NEMS Adagios, Nagios Core), and

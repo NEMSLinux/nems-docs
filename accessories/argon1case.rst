@@ -59,5 +59,5 @@ Defaults
 -  CPU temperature above 85°C, fan will run at 100% speed.
 
 You may adjust the fan speed settings in `NEMS
-SST <https://docs.nemslinux.com/en/latest/apps/nemssst.html>`__.
+SST <../apps/nems-sst.html>`__.
 

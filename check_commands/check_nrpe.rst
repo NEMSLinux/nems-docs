@@ -23,7 +23,7 @@ monitor the host.
 
 See:
 
--  `NRPE For Linux <https://docs.nemslinux.com/usage/nrpe_on_linux>`__
+-  `NRPE For Linux <../usage/nrpe_on_linux.html>`__
 -  `NRPE For Windows
    Clients <../basic/monitorMsWindowsHosts.html#monitor-windows-machines-with-nrpe>`__
 
@@ -46,7 +46,7 @@ Sample Args for check_nrpe
 
 In order to use these commands, NRPE must be installed on the client
 system using the NEMS Linux installation procedure found here: `NRPE For
-Linux <https://docs.nemslinux.com/usage/nrpe_on_linux>`__
+Linux <../usage/nrpe_on_linux.html>`__
 
 I suggest you always put NRPE in the service titles you create in order
 to prevent accidentally assigning a local service to a host who uses

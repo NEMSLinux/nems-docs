@@ -34,7 +34,7 @@ NEMS Warning Light: Pre-Built Hardware
 
 Omzlo (the makers of the PiVoyager and PiWatcher pHATs) have created
 an i2c pHAT that integrates with NEMS Warning Light. Learn more on
-`the Omzlo NEMS Warning Light page <https://docs.nemslinux.com/en/latest/accessories/omzlo-warninglight-phat.html>`__.
+`the Omzlo NEMS Warning Light page <../accessories/omzlo-warninglight-phat.html>`__.
 
 System Requirements
 ~~~~~~~~~~~~~~~~~~~
@@ -79,8 +79,8 @@ lamp.
 Please share what you create. I'd love to see your designs to make NEMS
 Warning Light work in your environment.
 
-.. _nems-api: https://docs.nemslinux.com/en/latest/advanced/nems-api.html
-.. _NEMS Extender OS: https://docs.nemslinux.com/en/latest/nems-tools/extender_os.html
+.. _nems-api: ../advanced/nems-api.html
+.. _NEMS Extender OS: ../nems-tools/extender_os.html
 
 NEMS Tools GPIO Extender
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -115,7 +115,7 @@ Pi device into a NEMS Tools GPIO Extender.
 NEMS Warning Light: Webhook
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-NEMS Warning Light also provides the ability to notify by webhook. See `notify-by-webhook <https://docs.nemslinux.com/en/latest/notifications/notificationsbywebhook.html>`__ for details.
+NEMS Warning Light also provides the ability to notify by webhook. See `notify-by-webhook <../notifications/webhook.html>`__ for details.
 
 
 NEMS Warning Light: Log Files

@@ -19,6 +19,5 @@ file.
 How To Configure
 ----------------
 
-Simply `set your contact email
-address <https://docs.nemslinux.com/en/latest/basic/contactemail.html>`__ in NEMS
+Simply set your contact email address in NEMS
 NConf to the appropriate SMS Gateway address.

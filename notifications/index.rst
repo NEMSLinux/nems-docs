@@ -5,8 +5,8 @@ NEMS Linux Notifications
     :maxdepth: 1
     :caption: Notifications
 
-    notificationsbypushover
-    notificationsbysms
-    notificationsbytelegram
-    notificationsbywebhook
-    pushovervstelegram
+    pushover
+    telegram
+    pushover-vs-telegram
+    sms
+    webhook

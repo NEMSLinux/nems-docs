@@ -143,7 +143,7 @@ client in the Hardware tab. Click on the “Update” link and then
 
 In ESXi 5.0 Update 1, a bug was causing slow hardware discovery/checks.
 See `this
-article <https://docs.nemslinux.com/blog/242/esxi-5.0-u1-slow-hardware-check_esxi_hardware-cim>`__ for
+article <https://www.claudiokuenzler.com/blog/242/esxi-5.0-u1-slow-hardware-check_esxi_hardware-cim>`__ for
 more information.
 
 —

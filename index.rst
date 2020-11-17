@@ -57,17 +57,13 @@ Table of Contents
     :maxdepth: 1
     :caption: Notifications
 
-    notifications/notificationsbysms
-    notifications/notificationsbywebhook
-    notifications/notificationsbytelegram
-    notifications/notificationsbypushover
-    notifications/pushovervstelegram
+    notifications/index
 
 .. toctree::
     :maxdepth: 2
     :caption: NEMS Commands
 
-    commands/nems_commands
+    commands/index
 
 .. toctree::
     :maxdepth: 1
@@ -150,7 +146,7 @@ Table of Contents
     :maxdepth: 1
     :caption: Miscellaneous
 
-    misc/selfsignedcertificates
+    misc/self-signed-certificates
     misc/backupnemsfile
     misc/nemszram
     misc/nemslicensing
