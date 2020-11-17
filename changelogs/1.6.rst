@@ -24,8 +24,6 @@ peripherals.
    and Google Assistant.
 -  Consistent networking configuration across platform (for setting
    static IPs, for example).
--  NEMS Tools now automatically detects the IP address of the running
-   NEMS Server on the same subnet and creates its configuration file.
 
 **Release Dates:**
 
@@ -150,7 +148,9 @@ NEMS Linux 1.6 is planned for release Q4 2020.
    response from eit
 -  New documentation launched, with the help of Bill Marshall plus
    submissions from Don Jenkins.
-
+-  NEMS Tools now automatically detects the IP address of the running
+   NEMS Server on the same subnet and creates its configuration file.
+   
 .. _TEMPer: https://docs.nemslinux.com/en/latest/accessories/temper.html
 .. _Argon ONE: https://docs.nemslinux.com/en/latest/accessories/argon1case.html
 .. _nems-info: https://docs.nemslinux.com/en/latest/commands/nems-info.html
