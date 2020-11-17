@@ -21,7 +21,8 @@ long as it has network access to your NEMS Linux server (TCP port 9595).
 To top it off, you can use an *unlimited* number of NEMS
 Tools GPIO Extender receivers with a single NEMS Linux Server.
 
-Your NEMS Linux 1.5 server is already running the NEMS
-Tools GPIO Extender server on port 9595.
+NEMS Linux 1.5+ has the NEMS Tools GPIO Extender server running on
+port 9595.
 
-NEMS Tools GPIO Extender Receiver  is coming late July, 2019.
+To connect to the NEMS Linux GPIO Extender, simply boot up a separate
+device running `NEMS Extender OS <extender_os.html>`__.
