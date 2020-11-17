@@ -38,7 +38,7 @@ Table of Contents
     check_commands/index
     basic/backupnems
     basic/commandlinetest
-    basic/nemsnavigationmenu
+    basic/nav
     basic/resolvednshostnamesonlan
     basic/9590
     basic/connect_via_ssh
