@@ -26,8 +26,9 @@ To allow you/others to access your NEMS Server from outside your LAN,
 you will require the following ports be opened to your NEMS Server:
 
 -  **SSH Access:** `22 TCP In`
--  **NEMS Dashboard Web Interface / nems-api / NEMS Tools GPIO Extender:**
+-  **NEMS Dashboard Web Interface / nems-api:**
    `80, 443 TCP In`
+-  **NEMS Tools GPIO Extender:** `9595 TCP In`
 -  **Monit Service Monitor Web Access:** `2812 TCP In`
 -  **Cockpit Admin Interface:** `9090 TCP In`
 -  **AVAHI / mDNS Name Resolution:** `548, 5353, 5354 TCP In/Out`
