@@ -24,6 +24,8 @@ peripherals.
    and Google Assistant.
 -  Consistent networking configuration across platform (for setting
    static IPs, for example).
+-  NEMS Tools now automatically detects the IP address of the running
+   NEMS Server on the same subnet and creates its configuration file.
 
 **Release Dates:**
 
