@@ -99,7 +99,7 @@ Your NEMS server keeps an eye on some of the crucial services it expects
 to be running. If they crash, *monit* will restart them. Using the web
 interface, you can monitor, restart or stop these services.
 
-`NEMS Migrator <../apps/migrator.html>`__
+`NEMS Migrator <../apps/nems-migrator.html>`__
 -------------
 
 Tool for easy backup and restore of your NEMS server configuration.
