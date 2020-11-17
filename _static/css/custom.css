@@ -11,3 +11,9 @@
 .underline {
   text-decoration: underline;
 }
+
+cite {
+  color: #333;
+  font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+  font-size: 0.9em;
+}
