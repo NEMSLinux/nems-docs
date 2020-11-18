@@ -13,7 +13,12 @@ I have tested successfully on Debian 10 with PHP 7.3 as well as Debian 7 with PH
 Usage
 -----
 
+Obtaining your PHP Agent
+~~~~~~~~~~~~~~~~~~~~~~~~
+
 In NEMS SST, download your custom nems-agent.php file. Upload this file to your web server and add the NEMS PHP Agent check command in NEMS NConf.
+
+.. Tip:: You'll notice in the check commands below, the actual script filename is entered. This is intentional, and allows you to add obscurity if desired by naming your NEMS PHP Server Agent anything you like (as long as it has a .php extension).
 
 Check Command
 -------------
