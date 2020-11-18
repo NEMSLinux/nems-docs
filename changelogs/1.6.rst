@@ -157,6 +157,8 @@ NEMS Linux 1.6 is planned for release Q4 2020.
    Extender Receiver.
 -  Fixed a typo in Warning Light that incorrectly determined all platforms
    to be a Raspberry Pi.
+-  Update nems-tools GPIO Extender to detect NEMS Servers via gpioe-server
+   on port 9595 rather than looking for a host reply from nems-api.
    
 .. _TEMPer: https://docs.nemslinux.com/en/latest/accessories/temper.html
 .. _Argon ONE: https://docs.nemslinux.com/en/latest/accessories/argon1case.html
