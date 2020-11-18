@@ -18,3 +18,7 @@ You can even place one at home if you're really that committed to
 uptime.
 
 NEMS Extender OS will be released at the same time as NEMS Linux 1.6.
+
+Following first boot, a file `nems-tools.conf` will be created in the
+/boot partition. If you need to change the configuration, simply shutdown
+NEMS Extender OS and plug the card into a computer to edit the file.
