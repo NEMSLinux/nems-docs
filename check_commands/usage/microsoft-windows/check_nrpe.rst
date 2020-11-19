@@ -1,9 +1,12 @@
 Monitor Windows Machines with NRPE
 ==================================
 
-.. Warning:: NRPE is not the recommended way to monitor Windows hosts.
-  Please opt for `WMI <check_wmi.html>`__ instead. This is more for legacy versions of NEMS Linux
-  (ie., 1.0-1.3.x).
+.. admonition:: Note
+  :class: warning
+  
+  NRPE is not the recommended way to monitor Windows hosts.
+  Please opt for `WMI <check_wmi.html>`__ instead. This is more for
+  legacy versions of NEMS Linux (ie., 1.0-1.3.x).
 
 The Nagios Remote Plugin Executor (NRPE) allows your Nagios Enterprise
 Monitoring Server to communicate with the Linux machines on your server
