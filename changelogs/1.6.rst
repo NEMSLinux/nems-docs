@@ -163,6 +163,9 @@ NEMS Linux 1.6 is planned for release Q4 2020.
    conf on nems-tools Extender OS.
 -  NEMS SST will no longer warn of requirement to add a password for
    the PHP Agent if a password already exists in the config.
+-  NEMS PHP Agent 1.1 released. Now the keyphrase is encrypted (rather than
+   base_64 encoded). Also added "." current folder disk space check and
+   fixed several bugs with `disk` and `var` checks.
    
 .. _TEMPer: https://docs.nemslinux.com/en/latest/accessories/temper.html
 .. _Argon ONE: https://docs.nemslinux.com/en/latest/accessories/argon1case.html
