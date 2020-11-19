@@ -1,16 +1,20 @@
 Monitor Windows Machines with NRPE
 ==================================
 
-**Note:** NRPE is not the recommended way to monitor Windows hosts.
-Please opt for WMI above. This is more for legacy versions of NEMS Linux
-(ie., 1.0-1.3.x).
+.. Warning:: NRPE is not the recommended way to monitor Windows hosts.
+  Please opt for `WMI <check_wmi.html>`__ instead. This is more for legacy versions of NEMS Linux
+  (ie., 1.0-1.3.x).
 
 The Nagios Remote Plugin Executor (NRPE) allows your Nagios Enterprise
 Monitoring Server to communicate with the Linux machines on your server
 to determine things like free disk space, CPU load, and detect possible
 issues that a simple ping can't determine.
 
-.. Warning:: As of NEMS 1.2 NSClient++ is optional for monitoring of Windows computers (thanks to the addition of WMIC). If you’d like to use it, please follow the directions below, otherwise use the provided WMIC-based check commands.
+As of NEMS 1.2 NSClient++ is optional for monitoring of Windows computers
+(thanks to the addition of WMIC). If you’d like to use it, please follow
+the directions below, otherwise use the provided WMIC-based check commands.
+
+**This is not supported on modern NEMS Linux.**
 
 1. Grab the latest Windows client at https://www.nsclient.org/download/
 
