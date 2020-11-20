@@ -19,6 +19,6 @@ If you are a Microsoft Outlook.com email user configure settings as shown above:
 
 **SMTP Authentication Username (Usually an email address):** Must be a valid Microsoft account address
 
-**SMTP Password:** App password created from MS account page - Login to your account, click on your avatar, click My Account, click Security, click More security options, under App Passwords click Create New App Password, copy and paste password into this field
+**SMTP Password:** App password created from MS account page - Login to your account, click on your avatar, click My Account, click Security, click Advanced security options, under App Passwords click Create New App Password, copy and paste password into this field
 
 Click Save All Settings
