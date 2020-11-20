@@ -166,6 +166,10 @@ NEMS Linux 1.6 is planned for release Q4 2020.
 -  NEMS PHP Agent 1.1 released. Now the keyphrase is encrypted (rather than
    base_64 encoded). Also added "." current folder disk space check and
    fixed several bugs with `disk` and `var` checks.
+-  Fixed the directions on NEMS SST which directed a user to add their
+   encypription/decryption passphrase to the "General" tab, since that
+   feature was moved to the NEMS Migrator tab long ago. Pointed out by
+   UltimateBugHunter-NitPicker.
    
 .. _TEMPer: https://docs.nemslinux.com/en/latest/accessories/temper.html
 .. _Argon ONE: https://docs.nemslinux.com/en/latest/accessories/argon1case.html
