@@ -34,7 +34,7 @@ Check Command Arguments
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 -  **URL** - The URL to your *nems-agent.php* on the remote server.
--  **Check** - Percent Memory Usage [mem], Percent Disk Usage (/) [disk], Percent Disk Usage (/var) [var], Network Usage Mb/s [net], Network Usage Mb/s Download Only [netrx], Network Usage Mb/s Upload Only [nettx], 15 Minute System Load Average [load].
+-  **Check** - Percent Memory Usage [mem], Percent Disk Usage (Running Folder) [.], Percent Disk Usage (/) [disk], Percent Disk Usage (/var) [var], Network Usage Mb/s [net], Network Usage Mb/s Download Only [netrx], Network Usage Mb/s Upload Only [nettx], 15 Minute System Load Average [load].
 -  **Warn Up / Warn Down / Critical Up / Critical Down** - Set your
    thresholds. Can be a positive floating point number or integer.
 
@@ -71,11 +71,11 @@ The agent outputs the following JSON string (Sample data):
 
 .. code-block:: JSON
 
-  {"ver":{"nems":"1.6","nemsagent":"1.0"},"data":"pICGwq5UL3O8yNEYdPrQh\/8PGCjsXQUx9mh9VIQloFJ\/K8BsB5AT9L2ixwlsiDAJGjWR1RnhsrCFHVnKD9p3cmRxhQf\/knW6F+EkDS3CnkrlXWLSPJ6p+gfZjIq16NSREvfaaPJZEY93mBrgSFArs+C8advgKL+0jz2a55ItGk0BY6AKvOMuFXfxzwd3i7485tusJaP9X8K9dL5msEvHfPLKdORyTUm7iNt6ssFARMzg4oXoVnebT4okZ6eyG3tjQIBPOFebmNAO78agymi6UEm44u\/wfPmUtkEtU841FVmcfGLxcEIoogzG9vjH8q7urs2RetcBVpVhj5Z+T+v8qa9oQ7Pi1tbf2\/IhF+eLE9cSkmMlmbFbJ70hJqaY2gssiwb9tZ6g0dX+WA8+ujTzmCzBdNJ09HabaLVzXTqR4cGyFM3mXYQl+SdDSdmeZ\/vw\/sG4oSFxxKzhxmOpCM5qBw==","auth":"312433c28349f63c4f387953ff337046e794bea0f9b9ebfcb08e90046ded9c76"}
+  {"ver":{"nems":"1.6","nemsagent":"1.1"},"data":"pICGwq5UL3O8yNEYdPrQh\/8PGCjsXQUx9mh9VIQloFJ\/K8BsB5AT9L2ixwlsiDAJGjWR1RnhsrCFHVnKD9p3cmRxhQf\/knW6F+EkDS3CnkrlXWLSPJ6p+gfZjIq16NSREvfaaPJZEY93mBrgSFArs+C8advgKL+0jz2a55ItGk0BY6AKvOMuFXfxzwd3i7485tusJaP9X8K9dL5msEvHfPLKdORyTUm7iNt6ssFARMzg4oXoVnebT4okZ6eyG3tjQIBPOFebmNAO78agymi6UEm44u\/wfPmUtkEtU841FVmcfGLxcEIoogzG9vjH8q7urs2RetcBVpVhj5Z+T+v8qa9oQ7Pi1tbf2\/IhF+eLE9cSkmMlmbFbJ70hJqaY2gssiwb9tZ6g0dX+WA8+ujTzmCzBdNJ09HabaLVzXTqR4cGyFM3mXYQl+SdDSdmeZ\/vw\/sG4oSFxxKzhxmOpCM5qBw==","auth":"312433c28349f63c4f387953ff337046e794bea0f9b9ebfcb08e90046ded9c76"}
 
 That is what a user would see if they were to open the agent in their browser, and is what is downloaded to your NEMS Server when the check commands run.
 
-Your NEMS Server knows your decryption key. When decrypted, the data looks like this:
+Your NEMS Server knows your decryption key used by the agent to encrypt the data. When decrypted by your NEMS Server, the data looks like this:
 
 .. code-block:: php
 
@@ -84,7 +84,7 @@ Your NEMS Server knows your decryption key. When decrypted, the data looks like 
        [ver] => Array
            (
                [nems] => 1.6
-               [nemsagent] => 1.0
+               [nemsagent] => 1.1
            )
        [data] => Array
            (
@@ -108,6 +108,14 @@ Your NEMS Server knows your decryption key. When decrypted, the data looks like 
                    )
                [storage] => Array
                    (
+                       [.] => Array
+                           (
+                               [path] => /var/www/html
+                               [free] => 6.11
+                               [total] => 7.69
+                               [used] => 1.58
+                               [percent] => 0
+                           )
                        [/] => Array
                            (
                                [free] => 6.11
@@ -132,6 +140,6 @@ Your NEMS Server knows your decryption key. When decrypted, the data looks like 
        [auth] => 312433c28349f63c4f387953ff337046e794bea0f9b9ebfcb08e90046ded9c76
      )
 
-The "auth" hash is a cryptographically-safe hash of your passphrase, and is what your NEMS Server uses to ensure the NEMS Server passphrase matches that of your NEMS PHP Server Agent. In this way, a third party cannot find a nems-agent.php running on your server and access your data from their NEMS Server. They will receive an error that the auth key does not match. Similarily, it means you can deploy your NEMS PHP Server Agent on as many PHP servers as you like, and even use multiple NEMS Servers to monitor it (as long as you key in the same passphrase on each NEMS Server).
+The "auth" hash is a cryptographically-safe hash of your encrypted passphrase, and is what your NEMS Server uses to ensure the NEMS Server passphrase matches that of your NEMS PHP Server Agent. In this way, a third party cannot find a nems-agent.php running on your server and access your data from their NEMS Server. They will receive an error that the auth key does not match. Similarily, it means you can deploy your NEMS PHP Server Agent on as many PHP servers as you like, and even use multiple NEMS Servers to monitor it (as long as you key in the same passphrase on each NEMS Server).
 
 This data output above is used by your NEMS Server's *check_nems_php_agent* check commands.
