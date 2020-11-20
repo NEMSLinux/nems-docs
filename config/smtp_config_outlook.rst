@@ -1,4 +1,4 @@
-pdate to match new wordingUsing MS Outlook.com SMTP For Nagios Notifications
+Using MS Outlook.com SMTP For Nagios Notifications
 ======================================================
 
 .. figure:: ../img/NemsOutlook.png
