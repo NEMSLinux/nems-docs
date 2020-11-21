@@ -4,6 +4,13 @@ nems-tools NEMS Extender OS
 The NEMS Extender OS turns any Raspberry Pi device into a NEMS
 GPIO Extender receiver, complete with NEMS Warning Light connectivity.
 
+.. figure:: ../img/nems-extender-os.png
+  :width: 600
+  :align: center
+  :alt: NEMS Extender OS
+
+  Browser view of NEMS Extender OS
+
 With NEMS Extender OS, your NEMS Server is the transmitter, and
 the Raspberry Pi running NEMS Extender OS is the receiver. In this
 way, you can run your NEMS Server on a different platform, such as
