@@ -1,5 +1,5 @@
-nems-tools NEMS Extender OS
----------------------------
+nems-tools: NEMS Extender OS
+----------------------------
 
 The NEMS Extender OS turns any Raspberry Pi device into a NEMS
 GPIO Extender receiver, complete with NEMS Warning Light connectivity.
