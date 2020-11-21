@@ -172,6 +172,10 @@ NEMS Linux 1.6 is planned for release Q4 2020.
    UltimateBugHunter-NitPicker.
 -  NEMS Extender OS will now illuminate all lights if the NEMS Server goes
    offline or cannot be contacted.
+-  Improve output in nems-init if user tries to initialize with same name
+   as already running user.
+-  Added qemu-guest-agent to improve integration with Proxmox VE
+   `as per UltimateBugHunter-NitPicker <https://discord.com/channels/501816361706717184/654697565937205278/779743783851130880>`__.
    
 .. _TEMPer: https://docs.nemslinux.com/en/latest/accessories/temper.html
 .. _Argon ONE: https://docs.nemslinux.com/en/latest/accessories/argon1case.html
