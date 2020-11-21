@@ -170,6 +170,8 @@ NEMS Linux 1.6 is planned for release Q4 2020.
    encypription/decryption passphrase to the "General" tab, since that
    feature was moved to the NEMS Migrator tab long ago. Pointed out by
    UltimateBugHunter-NitPicker.
+-  NEMS Extender OS will now illuminate all lights if the NEMS Server goes
+   offline or cannot be contacted.
    
 .. _TEMPer: https://docs.nemslinux.com/en/latest/accessories/temper.html
 .. _Argon ONE: https://docs.nemslinux.com/en/latest/accessories/argon1case.html
