@@ -1,5 +1,5 @@
-NEMS Tools GPIO Extender
-========================
+nems-tools: GPIO Extender
+-------------------------
 
 If your NEMS Linux server is not powered by a Raspberry Pi, or if it is
 not located where you'd like your NEMS Warning Light, plugging a NEMS
