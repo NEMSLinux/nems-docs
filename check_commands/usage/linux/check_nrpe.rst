@@ -10,8 +10,8 @@ There are countless instructions online to download tar.gz files and
 install manually, or use a PPA to install via apt-get, but NEMS includes
 a helpful installer that will configure everything for you.
 
-Do not install the NRPE plugin via software repositories as these are
-abandoned and lack some important functionality.
+.. Warning:: Do not install the NRPE plugin via software repositories as
+  these are abandoned and lack some important functionality.
 
 To install the needed NRPE client on Debian / Ubuntu / other
 Debian-based Linux operating systems (as root):
