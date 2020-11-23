@@ -191,7 +191,7 @@ Enter the following in an Administrator Command Prompt:
 
 .. code-block:: console
 
-   netsh advfirewall firewall **set** rule **group**\ =”windows management
+   netsh advfirewall firewall set rule group=”windows management
    instrumentation (wmi)” new enable=yes
 
 **Add Your Windows User to NEMS SST**
