@@ -176,7 +176,10 @@ NEMS Linux 1.6 is planned for release Q4 2020.
    as already running user.
 -  Added qemu-guest-agent to improve integration with Proxmox VE
    `as per UltimateBugHunter-NitPicker <https://discord.com/channels/501816361706717184/654697565937205278/779743783851130880>`__.
-   
+-  Delay for a random amount of time (up to 2 hours) when running offsite backup
+   tasks to prevent 1,000+ NEMS Servers clobbering the API all in the same moment.
+   Issue pointed out by UltimateBugHunter-NitPicker who was seeing errors with his daily backup.
+
 .. _TEMPer: https://docs.nemslinux.com/en/latest/accessories/temper.html
 .. _Argon ONE: https://docs.nemslinux.com/en/latest/accessories/argon1case.html
 .. _nems-info: https://docs.nemslinux.com/en/latest/commands/nems-info.html
