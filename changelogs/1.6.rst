@@ -181,6 +181,8 @@ NEMS Linux 1.6 is planned for release Q4 2020.
    Issue pointed out by UltimateBugHunter-NitPicker who was seeing errors with his daily backup.
 -  NEMS Migrator Off Site Backup will now log if the Internet was down when the backup
    ran. Also added a 'now' cli option that will force it to run without delaying.
+-  Changed Migrator patches failsafe to determine if Quickfix / fixes was running for more
+   than 120 minutes (previous setting was 90) before killing.
 
 .. _TEMPer: https://docs.nemslinux.com/en/latest/accessories/temper.html
 .. _Argon ONE: https://docs.nemslinux.com/en/latest/accessories/argon1case.html
