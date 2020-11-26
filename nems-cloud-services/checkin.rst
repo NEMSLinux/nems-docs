@@ -28,11 +28,11 @@ Notifications
 
 A total of up to 5 notifications will be sent should your NEMS server fail to check in. Notices are sent at intervals of:
 
-* The interval you choose in NEMS SST (Default is after your NEMS server has been offline for 2 hours)
-* After 6 hours of downtime.
-* After 24 hours of downtime.
-* After 48 hours of downtime.
-* Following recovery.
+1. The interval you choose in NEMS SST (Default is after your NEMS server has been offline for 2 hours)
+2. After 6 hours of downtime.
+3. After 24 hours of downtime.
+4. After 48 hours of downtime.
+5. Following recovery.
 
 .. figure:: ../img/Sample-NEMS-CheckIn-notification.png
   :width: 600
