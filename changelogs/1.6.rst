@@ -31,6 +31,8 @@ NEMS Linux 1.6 is planned for release Q4 2020.
 
 **Development Changelogs Since 1.5:**
 
+December 2019
+
 -  Merged `PR 4`_, adding escalations for hosts /
    services / advanced services and fixing various bugs.
 -  Upgrade NEMS NConf jquery code to 3.3.1.
@@ -45,6 +47,9 @@ NEMS Linux 1.6 is planned for release Q4 2020.
    configs.
 -  Upgrade Nagios Core to 4.4.5.
 -  Integrated `NagiosTV`_ as per BastyJuice.
+
+January 2020
+
 -  Upgrade Monit to 5.26.0.
 -  Move build tmpdir out of /tmp/ and into /usr/src/
 -  NEMS NConf 1.6 tooltip font color fixed.
@@ -64,6 +69,9 @@ NEMS Linux 1.6 is planned for release Q4 2020.
 -  NRPE upgraded to 4.0.0.
 -  Fixed NRPE installer script if run on non-NEMS
    system, as per `Issue 2`_ by Xelo.
+   
+February 2020
+
 -  Revert NRPE to 3.2.1 temporarily, until I can
    figure out how to make it talk to older installs (upgrading to 4.0.0
    breaks all existing 3.2.1 installs).
@@ -73,6 +81,9 @@ NEMS Linux 1.6 is planned for release Q4 2020.
    added before public release. As requested by ITManLT.
 -  Replace words "Down" and "Up" in NEMS TV
    Dashboard speedtest stats with font-awesome icons.
+
+March-April 2020
+
 -  Move 1.6 base to Debian 11 (bullseye).
 -  Upgrade Monitorix to 3.12.0.
 -  Added *mod_wsgi* to 1.6, which is no longer
@@ -89,6 +100,9 @@ NEMS Linux 1.6 is planned for release Q4 2020.
 -  Migrate to several experimental branches of Adagios
    components to begin testing support under Python 3.8. Current stable
    only supports Python 2.7 which is EOL this year.
+
+May-June 2020
+
 -  NEMS Linux 1.6 development merged (some would say
    "downgraded") with NEMS Linux 1.5.2 as I wait for Adagios support for
    Python 3.7+. NEMS Linux 1.6 will be buster-based and use Python 2.7.
@@ -117,6 +131,9 @@ NEMS Linux 1.6 is planned for release Q4 2020.
    project (hasn't been updated in > 4 years) I've instead removed the
    repository requirement and installed it manually. Also, fixed the
    distribution name on the template.
+   
+July-August 2020
+
 -  Change logrotate for NEMS logs to rotate logs based on
    log size, not date. Delayed compression added.
 -  *check_mrtgtraf_nems* now rounds the floats of the
@@ -145,9 +162,35 @@ NEMS Linux 1.6 is planned for release Q4 2020.
    *check_apc*. No users impacted by this since 1.6 hasn't yet been
    released.
 -  Added *nems-info [dht11|dht22]* which outputs json
-   response from eit
+   response from either the DHT11 or DHT22 sensors.
+-  Add user to gpio group during initialization. This will allow access to the GPIO pins without root access.
+
+September-October 2020
+
+-  Minor improvements to output of DHTxx check command for Humidity values.
+-  Add nemsadmin user to gpio group, just to ensure the demo check commands work out of the box, before initialization takes place.
+-  Upgrade check_mk Livestatus to 1.6.0p17. This gets the sock working on the NEMS Linux 1.6 AWS development system, which is required for Adagios and NEMS TV Dashboard.
+-  Added phpmyadmin, disabled by default and interface access protected behind NEMS user login/password when enabled.
+-  Change check_local_disk to support unit selection (KB, MB, GB, TB) and set default for NEMS Local disk check sample to GB.
+-  New Feature: NEMS PHP Server Agent can now be configured and downloaded in NEMS System Settings Tool.
 -  New documentation launched, with the help of Bill Marshall plus
    submissions from Don Jenkins.
+
+.. _TEMPer: https://docs.nemslinux.com/en/latest/accessories/temper.html
+.. _Argon ONE: https://docs.nemslinux.com/en/latest/accessories/argon1case.html
+.. _nems-info: https://docs.nemslinux.com/en/latest/commands/nems-info.html
+.. _check_apc: https://docs.nemslinux.com/en/latest/basic/checkapc.html
+.. _requested by Neptunum: https://discord.com/channels/501816361706717184/654697565937205278/687329215456346257
+.. _nems-mailtest: https://docs.nemslinux.com/en/latest/commands/nems-mailtest.html
+.. _See Video: https://youtu.be/bWj3m6pB8RA
+.. _Issue 2: https://github.com/Cat5TV/nems-admin/issues/2
+.. _NEMS Warning Light: /features/nems-tools/warninglight
+.. _ConfigServer Security & Firewall (csf) with Login Failure Daemon (lfd): https://www.configserver.com/cp/csf.html
+.. _PR 4: https://github.com/Cat5TV/nconf/pull/4
+.. _NagiosTV: https://github.com/chriscareycode/nagiostv-react
+
+November-December 2020
+
 -  NEMS Tools now automatically detects the IP address of the running
    NEMS Server on the same subnet and creates its configuration file.
 -  NEMS Tools GPIO Extender client now uses the config file to determine
@@ -183,16 +226,3 @@ NEMS Linux 1.6 is planned for release Q4 2020.
    ran. Also added a 'now' cli option that will force it to run without delaying.
 -  Changed Migrator patches failsafe to determine if Quickfix / fixes was running for more
    than 120 minutes (previous setting was 90) before killing.
-
-.. _TEMPer: https://docs.nemslinux.com/en/latest/accessories/temper.html
-.. _Argon ONE: https://docs.nemslinux.com/en/latest/accessories/argon1case.html
-.. _nems-info: https://docs.nemslinux.com/en/latest/commands/nems-info.html
-.. _check_apc: https://docs.nemslinux.com/en/latest/basic/checkapc.html
-.. _requested by Neptunum: https://discord.com/channels/501816361706717184/654697565937205278/687329215456346257
-.. _nems-mailtest: https://docs.nemslinux.com/en/latest/commands/nems-mailtest.html
-.. _See Video: https://youtu.be/bWj3m6pB8RA
-.. _Issue 2: https://github.com/Cat5TV/nems-admin/issues/2
-.. _NEMS Warning Light: /features/nems-tools/warninglight
-.. _ConfigServer Security & Firewall (csf) with Login Failure Daemon (lfd): https://www.configserver.com/cp/csf.html
-.. _PR 4: https://github.com/Cat5TV/nconf/pull/4
-.. _NagiosTV: https://github.com/chriscareycode/nagiostv-react
