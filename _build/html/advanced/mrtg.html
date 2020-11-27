@@ -1,0 +1,182 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Multi Router Traffic Grapher (MRTG) &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Copying OS Icons to NEMS" href="nemsicons.html" />
+    <link rel="prev" title="SNMP" href="snmp.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="multi-router-traffic-grapher-mrtg">
+<h1>Multi Router Traffic Grapher (MRTG)<a class="headerlink" href="#multi-router-traffic-grapher-mrtg" title="Permalink to this headline">¶</a></h1>
+<p>MRTG generates traffic graphs for your SNMP-enabled router. If your
+router does not support SNMP, take a look at&nbsp;<a class="reference external" href="https://cat5.tv/mikrotik">MikroTik
+devices</a>, which offer enterprise-grade
+routers at consumer prices.</p>
+<p>MRTG is pre-installed in NEMS Linux 1.6+ and is available in NEMS Linux
+1.3.x-1.5.x by way of a NEMS Update.</p>
+<div class="section" id="mikrotik">
+<h2>MikroTik<a class="headerlink" href="#mikrotik" title="Permalink to this headline">¶</a></h2>
+<p>To enable SNMP on MikroTik RouterOS devices:</p>
+<ol class="arabic simple">
+<li>In WinBox, open a new terminal.</li>
+<li>Type&nbsp;<em>/snmp</em></li>
+<li>Type&nbsp;<em>set enabled yes</em></li>
+</ol>
+<p>If desired, you can add your contact name and location to your SNMP Trap
+in the MikroTik WebFig / WinBox under IP → SNMP.</p>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>In time, MRTG configuration will become part of NEMS SST. For the time
+being, a command must be entered in your NEMS Linux terminal in order to
+connect MRTG to your router:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">sudo mrtgsetup</span>
+</pre></div>
+</div>
+<p>Simply enter your router’s IP address and your trap community name when
+prompted, and the script will generate your MRTG config, activate it,
+and provide you with all links for detected SNMP sources on your router.</p>
+<p><strong>Please Note:</strong>&nbsp;<em>mrtgsetup</em>&nbsp;only supports the default&nbsp;<em>public</em>&nbsp;trap
+community at this time.</p>
+</div>
+<div class="section" id="check-command">
+<h2>Check Command<a class="headerlink" href="#check-command" title="Permalink to this headline">¶</a></h2>
+<p>NEMS Linux includes&nbsp;<em>check_mrtgtraf_nems</em>. This is a custom wrapper
+for&nbsp;<em>check_mrtgtraf.py</em>&nbsp;which is itself a reworking of&nbsp;<em>check_mrtgtraf</em>.</p>
+<p>You must first run&nbsp;<em>mrtgsetup</em>, otherwise the check command will have no
+data to work with.</p>
+<p>Beyond the standard graphs that MRTG provides, you may also add
+the&nbsp;<em>check_mrtgtraf_nems</em>&nbsp;check command to your SNMP-capable
+router/switch host(s) and monitor any or all of their ports. For
+example, to monitor the Internet bandwidth usage, you can add a check
+command to monitor your WAN port. Then, if you want to monitor the
+bandwidth usage for a specific Ethernet port (for example, an employee
+or server who is known to use a lot of bandwidth), you can do so by
+adding a second check command to that host which targets the Ethernet
+port that user is connected to. This can also be handy for zoned
+networks where, for example, you may want to monitor the bandwidth usage
+of specific departments by connecting their&nbsp;&nbsp;uplink to a specific port
+on your monitored device. You may also use this to monitor the amount of
+bandwidth being consumed by users on your guest WiFi, and then notify
+the admin if the set thresholds are exceeded.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/mrtg.png"><img alt="Multi Router Traffic Grapher (MRTG)" src="../_images/mrtg.png" style="width: 600px;" /></a>
+</div>
+<div class="section" id="check-command-arguments">
+<h3>Check Command Arguments<a class="headerlink" href="#check-command-arguments" title="Permalink to this headline">¶</a></h3>
+<p>Add the&nbsp;<em>check_mrtgtraf_nems</em>&nbsp;check command to your router host in NEMS
+NConf, using the following arguments:</p>
+<ul class="simple">
+<li><strong>Port</strong>&nbsp;- This is the number associated with the SNMP. This will not
+correspond with traditional conventions, but rather is generated by
+the SNMP OID. You can find the number on the corresponding MRTG page
+following the header “Traffic Analysis for”. The number corresponds
+to the port to use for&nbsp;<em>check_mrtgtraf_nems</em>. You can find the MRTG
+graphs at <a class="reference external" href="https://nems.local/mrtg/">https://nems.local/mrtg/</a></li>
+<li><strong>Multiplier</strong>&nbsp;- What measurement you’d like to use for your
+thresholds. Available options are gb, mb or kb.</li>
+<li><strong>Warn Up / Warn Down / Critical Up / Critical Down</strong>&nbsp;- Set your
+thresholds. Can be a positive floating point number or integer.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Multi Router Traffic Grapher (MRTG)</a><ul>
+<li><a class="reference internal" href="#mikrotik">MikroTik</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#check-command">Check Command</a><ul>
+<li><a class="reference internal" href="#check-command-arguments">Check Command Arguments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="snmp.html" title="previous chapter">SNMP</a></li>
+      <li>Next: <a href="nemsicons.html" title="next chapter">Copying OS Icons to NEMS</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/advanced/mrtg.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/advanced/mrtg.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

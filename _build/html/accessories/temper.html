@@ -1,0 +1,256 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>TEMPer Thermal Sensor &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Check Command: check_sbc_temperature" href="../check_commands/check_sbc_temperature.html" />
+    <link rel="prev" title="Check Command: check_ping" href="../check_commands/check_ping.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="temper-thermal-sensor">
+<h1>TEMPer Thermal Sensor<a class="headerlink" href="#temper-thermal-sensor" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" id="id1">
+<a class="reference internal image-reference" href="../_images/temper.png"><img alt="TEMPer USB Thermal Sensor" src="../_images/temper.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">TEMPer USB Thermal Sensor</span></p>
+</div>
+<p>The TEMPer is an affordable (starting at under $20) USB digital thermometer that accurately senses temperatures from -55 to +125 degrees Celsius / -67 to +257 degrees Fahrenheit. This is an ideal addition to the server room to generate alerts should temperatures fall outside a safe threshold.</p>
+<p>TEMPer devices work on all NEMS Linux hardware platforms. It will also work on the NEMS Linux virtual appliance, however you must connect the hardware to the virtual machine, which is beyond the scope of this documentation (please refer to the documentation for your hypervisor).</p>
+<p>check_temper supports Critical and Warning states for both low (cold) and high (hot) temperatures.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For optimum accuracy, it is recommended to plug your TEMPer device into a short USB extension cord so the thermal data isn’t impacted by the heat pulled from the USB port of your NEMS Server.</p>
+</div>
+<div class="section" id="setting-up-check-temper">
+<h2>Setting up check_temper<a class="headerlink" href="#setting-up-check-temper" title="Permalink to this headline">¶</a></h2>
+<p>Simply add check_temper_temp or check_temper_hum as a service to your NEMS host, having connected the TEMPer device to your NEMS Server’s USB port. You may specify your temperature thresholds in either degrees Celsius or Fahrenheit. NEMS will automatically determine which you are using.</p>
+<p>Sample check commands are already included in NEMS Linux 1.5.2+ in the demo config. If you’re deploying a new NEMS Server, simply plug in your TEMPer device and these checks will automatically detect it and begin registering data.</p>
+</div>
+<div class="section" id="buy-temper-thermal-sensor">
+<h2>Buy TEMPer Thermal Sensor<a class="headerlink" href="#buy-temper-thermal-sensor" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.amazon.com/s/ref=as_li_ss_tl?k=temper+usb+sensor&amp;ref=nb_sb_noss&amp;linkCode=sl2&amp;tag=nems-linux-20&amp;linkId=5a736a3096cfce9a9e27e033115b3080&amp;language=en_US">Amazon.com</a></li>
+<li><a class="reference external" href="https://www.amazon.co.uk/s/ref=as_li_ss_tl?k=temper+usb+sensor&amp;ref=nb_sb_noss&amp;linkCode=sl2&amp;tag=nemslinux-21&amp;linkId=0d3af2c3db4e8e4d27cd6420364bb94b&amp;language=en_GB">Amazon.co.uk</a></li>
+<li><a class="reference external" href="http://www.pcsensor.com/usb-temperature-humidity.html">From the Manufacturer</a></li>
+</ul>
+</div>
+<div class="section" id="supported-devices">
+<h2>Supported Devices<a class="headerlink" href="#supported-devices" title="Permalink to this headline">¶</a></h2>
+<p>Support is provided via <a class="reference external" href="https://github.com/urwen/temper">temper</a>.</p>
+<p>NEMS Linux includes support for TEMPer temperature and humidity sensor data. This table also shows which have internal or external sensors. NEMS Linux will always opt for external sensor data, if present.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="18%" />
+<col width="28%" />
+<col width="10%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Product</th>
+<th class="head">Id</th>
+<th class="head">Firmware</th>
+<th class="head">Temp</th>
+<th class="head">Hum</th>
+<th class="head">Int</th>
+<th class="head">Ext</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>TEMPer</td>
+<td>0c45:7401</td>
+<td>TEMPerF1.4</td>
+<td>✔</td>
+<td>✘</td>
+<td>✔</td>
+<td>✘</td>
+</tr>
+<tr class="row-odd"><td>TEMPer</td>
+<td>413d:2107</td>
+<td>TEMPerGold_V3.1</td>
+<td>✔</td>
+<td>✘</td>
+<td>✔</td>
+<td>✘</td>
+</tr>
+<tr class="row-even"><td>TEMPerHUM</td>
+<td>413d:2107</td>
+<td>TEMPerX_V3.1</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✘</td>
+</tr>
+<tr class="row-odd"><td>TEMPer2</td>
+<td>413d:2107</td>
+<td>TEMPerX_V3.3</td>
+<td>✔</td>
+<td>✘</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr class="row-even"><td>TEMPer1F</td>
+<td>413d:2107</td>
+<td>TEMPerX_V3.3</td>
+<td>✔</td>
+<td>✘</td>
+<td>✘</td>
+<td>✔</td>
+</tr>
+<tr class="row-odd"><td>TEMPerX232</td>
+<td>1a86:5523</td>
+<td>TEMPerX232_V2.0</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="terminal-output">
+<h2>Terminal Output<a class="headerlink" href="#terminal-output" title="Permalink to this headline">¶</a></h2>
+<p>To receive the JSON output, type: <cite>nems-info temper</cite></p>
+<p>Sample output from a TEMPer2 with an external sensor attached:</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;0&quot;</span><span class="p">:{</span><span class="nt">&quot;vendorid&quot;</span><span class="p">:</span><span class="mi">16701</span><span class="p">,</span><span class="nt">&quot;productid&quot;</span><span class="p">:</span><span class="mi">8455</span><span class="p">,</span><span class="nt">&quot;devices&quot;</span><span class="p">:[</span><span class="s2">&quot;hidraw0&quot;</span><span class="p">,</span><span class="s2">&quot;hidraw1&quot;</span><span class="p">],</span><span class="nt">&quot;firmware&quot;</span><span class="p">:</span><span class="s2">&quot;TEMPerX_V3.3&quot;</span><span class="p">,</span><span class="nt">&quot;internal temperature&quot;</span><span class="p">:</span><span class="mf">30.12</span><span class="p">,</span><span class="nt">&quot;external temperature&quot;</span><span class="p">:</span><span class="mf">21.68</span><span class="p">},</span><span class="nt">&quot;sensors&quot;</span><span class="p">:{</span><span class="nt">&quot;thermal&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&quot;temp_location&quot;</span><span class="p">:</span><span class="s2">&quot;external&quot;</span><span class="p">,</span><span class="nt">&quot;humidity&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;hum_location&quot;</span><span class="p">:</span><span class="s2">&quot;not_present&quot;</span><span class="p">},</span><span class="nt">&quot;output&quot;</span><span class="p">:{</span><span class="nt">&quot;temperature&quot;</span><span class="p">:</span><span class="mf">21.68</span><span class="p">,</span><span class="nt">&quot;humidity&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}}</span>
+</pre></div>
+</div>
+<p>To receive the JSON output, type <cite>nems-info temper</cite></p>
+<p>TEMPer devices seem to have an issue on low-powered systems (such as Raspberry Pi) where due to the low power to the USB port, temper.py will respond with errors such as:</p>
+<ul class="simple">
+<li>Cannot read firmware identifier from device</li>
+<li>Unknown firmware ld_V3.1 TEMPerGold_V3.1: b‘80800f874e200000’</li>
+</ul>
+<p>To remedy this, <cite>nems-info</cite> silently loops through the output multiple times until a good thermal reading is obtained. The errors are hidden and only the clean JSON output is generated. This all happens very quickly and transparently, resulting in good output every time, with no errors.</p>
+</div>
+<div class="section" id="adding-to-your-nems-nconf">
+<h2>Adding to your NEMS NConf<a class="headerlink" href="#adding-to-your-nems-nconf" title="Permalink to this headline">¶</a></h2>
+<p>TEMPer check commands are already pre-configured in the NEMS Linux 1.5.2+ demo data. If you have removed them, or are using an older version of NEMS Linux, you can add the checks yourself.</p>
+<p><em>check_temper_temp</em> (temperature check) and <em>check_temper_hum</em> (humidity check) allow you to add TEMPer devices to your NEMS Server. The check has 4 thresholds: Critical Low, Warning Low, Warning High, Critical High. The number you enter may be in <em>either</em> degrees Celsius or Fahrenheit in the case of <em>check_temper_temp</em>. The system will automatically detect which you are using. The OK temperature will be any temperature that falls between Warning Low and Warning High. This way, you can receive alerts from your NEMS Server should the room temperature be either too cold or too hot. For <em>check_temper_hum</em>, the thresholds are in percent (just enter the number, not the percent sign).</p>
+</div>
+<div class="section" id="humidity-sensor-support">
+<h2>Humidity Sensor Support<a class="headerlink" href="#humidity-sensor-support" title="Permalink to this headline">¶</a></h2>
+<p>Sample command line for humidity sensor:</p>
+<p><cite>/usr/lib/nagios/plugins/check_temper 20 35 65 80 hum</cite></p>
+</div>
+<div class="section" id="check-commands">
+<h2>Check Commands<a class="headerlink" href="#check-commands" title="Permalink to this headline">¶</a></h2>
+<p>As of NEMS Linux 1.5.2, both the temperature and humidity sensors are supported, and check commands are included in NEMS NConf.</p>
+<ul class="simple">
+<li>check_temper_temp</li>
+<li>check_temper_hum</li>
+</ul>
+</div>
+<div class="section" id="calibration">
+<h2>Calibration<a class="headerlink" href="#calibration" title="Permalink to this headline">¶</a></h2>
+<p>As of NEMS Linux 1.6, both the thermal sensor and humidity sensor can be calibrated within NEMS SST to ensure the highest level of accuracy.</p>
+</div>
+<div class="section" id="external-vs-internal-sensors">
+<h2>External vs. Internal Sensors<a class="headerlink" href="#external-vs-internal-sensors" title="Permalink to this headline">¶</a></h2>
+<p>If your TEMPer device supports an external sensor, this will be used if connected. If the external sensor is disconnected, the internal sensor will be selected automatically.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">TEMPer Thermal Sensor</a><ul>
+<li><a class="reference internal" href="#setting-up-check-temper">Setting up check_temper</a></li>
+<li><a class="reference internal" href="#buy-temper-thermal-sensor">Buy TEMPer Thermal Sensor</a></li>
+<li><a class="reference internal" href="#supported-devices">Supported Devices</a></li>
+<li><a class="reference internal" href="#terminal-output">Terminal Output</a></li>
+<li><a class="reference internal" href="#adding-to-your-nems-nconf">Adding to your NEMS NConf</a></li>
+<li><a class="reference internal" href="#humidity-sensor-support">Humidity Sensor Support</a></li>
+<li><a class="reference internal" href="#check-commands">Check Commands</a></li>
+<li><a class="reference internal" href="#calibration">Calibration</a></li>
+<li><a class="reference internal" href="#external-vs-internal-sensors">External vs. Internal Sensors</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../check_commands/index.html">Included Check Commands</a><ul>
+      <li>Previous: <a href="../check_commands/check_ping.html" title="previous chapter">Check Command: check_ping</a></li>
+      <li>Next: <a href="../check_commands/check_sbc_temperature.html" title="next chapter">Check Command: check_sbc_temperature</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/accessories/temper.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/accessories/temper.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

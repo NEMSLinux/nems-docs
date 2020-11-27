@@ -1,0 +1,453 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Check Command: check_esxi_hardware &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Check Command: check_http" href="check_http.html" />
+    <link rel="prev" title="DHT Sensors" href="../accessories/dhtsensors.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="check-command-check-esxi-hardware">
+<h1>Check Command: check_esxi_hardware<a class="headerlink" href="#check-command-check-esxi-hardware" title="Permalink to this headline">¶</a></h1>
+<p><em>check_esxi_hardware</em>&nbsp;queries the CIM (Common Information Model) server
+running on the ESXi server to retrieve the current status of all
+discovered hardware. This check command comes
+from&nbsp;<a class="reference external" href="https://www.claudiokuenzler.com/monitoring-plugins/check_esxi_hardware.php">claudiokuenzler.com</a>.</p>
+<div class="section" id="frequently-asked-questions">
+<h2>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h2>
+<p><strong>Q:</strong>&nbsp;The plugin is executed fine but then it hangs on a certain CIM
+element on a DELL server. Verbose output:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">18:21:56 Connection to \https://esxi-001</span>
+
+<span class="go">18:21:56 Check classe OMC_SMASHFirmwareIdentity</span>
+
+<span class="go">18:21:57 Element Name = System BIOS</span>
+
+<span class="go">18:21:57 VersionString = 1.3.6</span>
+
+<span class="go">18:21:57 Check classe CIM_Chassis</span>
+
+<span class="go">18:21:57 Element Name = Chassis</span>
+
+<span class="go">18:21:57 Manufacturer = Dell Inc.</span>
+
+<span class="go">18:21:57 SerialNumber = xxxxx</span>
+
+<span class="go">18:21:57 Model = PowerEdge R710</span>
+
+<span class="go">18:21:57 Element Op Status = 0</span>
+
+<span class="go">18:21:57 Check classe CIM_Card</span>
+
+<span class="go">18:21:58 Element Name = unknown</span>
+
+<span class="go">18:21:58 Element Op Status = 0</span>
+
+<span class="go">18:21:58 Check classe CIM_ComputerSystem</span>
+
+<span class="go">CRITICAL: Execution time too long!</span>
+</pre></div>
+</div>
+<p><strong>A:</strong>&nbsp;According to user feedback and lots of tests, such problems are
+related to the Dell OMSA Offline Bundle. Especially OMSA version 6.5
+made problems on ESXi 5.x servers.</p>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;I get the following error message from the plugin:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">(0, &#39;Socket error: [Errno 111] Connection refused&#39;)</span>
+</pre></div>
+</div>
+<p><strong>A:</strong>&nbsp;Make sure the Monitoring Server is able to access tcp port 5989
+(cim) on the ESX(i) server. Alternatively you can also set a different
+port with the -C parameter if you have a special DNAT or port forwarding
+in place.</p>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;How do I use the -i parameter to ignore certain alarms?</p>
+<p><strong>A:</strong>&nbsp;As written in the documentation, the -i parameter awaits a comma
+separated list of elements to ignore. The &amp;quot;tricky&amp;quot; part is to
+find the correct element names (they can be pretty long sometimes). Run
+the plugin in verbose mode to have a list of all CIM elements. Here’s an
+example how to ignore several elements:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">./check_esxi_hardware.py -H myesxi -U root -P mypass -V dell -i &quot;IPMI</span>
+<span class="go">SEL&quot;,&quot;Power Supply 2 Status 0: Failure status&quot;,&quot;System Board 1 Riser</span>
+<span class="go">Config Err 0: Config Error&quot;</span>
+</pre></div>
+</div>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;I have the following warning showing up but my server shows all
+sensors green:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">WARNING : System Board 1 Riser Config Err 0: Connected - Server: Dell</span>
+<span class="go">Inc. PowerEdge R620 s/n: xxxxxxx System BIOS: 1.1.2 2012-03-08</span>
+</pre></div>
+</div>
+<p><strong>A:</strong>&nbsp;It seems that all Dell PowerEdge x620 servers are affected, it
+looks like a BMC firmware bug to me. A workaround for this bugger is in
+place since version 20121027. Please check &lt;a
+href=“/blog/299/check_esxi_hardware_dell-pe-620-workaround-riser-config-err-connected”&gt;this
+post&lt;/a&gt; for detailed information.</p>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;The plugin returns the following output:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">Authentication Error! - Server:</span>
+</pre></div>
+</div>
+<p><strong>A:</strong>&nbsp;There are several answers to that:</p>
+<ol class="arabic simple">
+<li>Make sure you are either using the ESXi root user or that you create
+a user which is member of the root group. See &lt;a
+href=“/blog/114/check-esxi-wbem-esxi-4.1-user-authorization”&gt;this
+post&lt;/a&gt; for a short description how to do that.</li>
+<li>The password you are using has some special characters like a
+question mark and you need to quote them.</li>
+<li>The password you are using has a Dollar sign ($) which you need to
+single-quote.</li>
+</ol>
+<p>Generally, always put quotes around your password as this assures the
+content is handled as string.</p>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;Can the plugin also monitor other stuff like VMFS disk usage or
+cpu/memory usage?</p>
+<p><strong>A:</strong>&nbsp;No. The plugin makes use of the CIM (Common Infrastructure
+Model) API&nbsp;. The so-called CIM elements cover hardware only.</p>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;Some hardware is not being monitored by the plugin.</p>
+<p><strong>A:</strong>&nbsp;The plugin can only monitor the hardware which is “shown” by the
+server via the CIM&nbsp;API. If the hardware vendor does not include a certain
+hardware element into the CIM elements, then this piece of hardware can
+not be monitored. In all the years I’ve only seen this on no-name
+machines (and SUN) though.</p>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;The plugin is so slow that a timeout occurs.</p>
+<p><strong>A:</strong>&nbsp;In such cases always verify how the behavior is on your vSphere
+client in the Hardware tab. Click on the “Update” link and then
+“Refresh”. Are they fast or do they also take a long time to update?</p>
+<p>In ESXi 5.0 Update 1, a bug was causing slow hardware discovery/checks.
+See&nbsp;<a class="reference external" href="https://www.claudiokuenzler.com/blog/242/esxi-5.0-u1-slow-hardware-check_esxi_hardware-cim">this
+article</a>&nbsp;for
+more information.</p>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;The plugin suddenly times out, but it was working fine before.
+The plugin returns the following output:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">UNKNOWN: (0, &#39;Socket error: [Errno 110] Connection timed out&#39;)</span>
+</pre></div>
+</div>
+<p><strong>A:</strong>&nbsp;In rare cases it is possible, that the sfcbd-watchdog service,
+running on the ESXi server, isn’t working correctly anymore.
+Follow&nbsp;<a class="reference external" href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1013080">VMware KB entry
+1013080</a>&nbsp;and
+restart the service by logging into the ESXi server by ssh and launch
+the following command:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">/etc/init.d/sfcbd-watchdog restart</span>
+</pre></div>
+</div>
+<p>If this still doesn’t resolve your issue, a manual restart of the “CIM
+Server” could help. This option is found under the “Configuration” tab →
+“Security Profile”. Click on “Service … Properties”.</p>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;After an update of the pywbem package the plugin doesnt work
+anymore. The following output is shown in verbose mode:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">Unknown CIM Error: (0, &#39;SSL error: certificate verify failed&#39;)</span>
+</pre></div>
+</div>
+<p><strong>A:</strong>&nbsp;This was seen in SLES 11 SP3 after an update of the package
+python-pywbem from 0.7-6.13 to 0.7-6.22. After reverting to the older
+version, the plugin worked again.</p>
+<p>Update September 9th 2014: This error will be fixed in a future release
+of check_esxi_hardware.py, but it depends on the release of the new
+pywbem upstream version.
+See&nbsp;<a class="reference external" href="https://github.com/Napsty/check_esxi_hardware/issues/7">https://github.com/Napsty/check_esxi_hardware/issues/7</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Update June 26th 2015: This issue was fixed in version 20150626.</p>
+</div>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;On an IBM server with the ESXi image from IBM the following error
+appears but works fine with the regular image vom VMware:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">Traceback (most recent call last):</span>
+
+<span class="go">   File &quot;./check_esxi_hardware.py&quot;, line 625, in verboseoutput(&quot;Element</span>
+<span class="go">Name = &quot;+elementName)</span>
+
+<span class="go">TypeError: cannot concatenate &#39;str&#39; and &#39;NoneType&#39; objects</span>
+</pre></div>
+</div>
+<p><strong>A:</strong>&nbsp;The CIM definition coming from the IBM image seems to be lacking
+some information. Version 20150119 fixes this issue.</p>
+<p><strong>Q:</strong>&nbsp;I updated my Ubuntu 14.04 and pywbem package
+0.7.0-4ubuntu1~14.04.1 was installed. Since then I get the following
+error when the plugin is run:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">Traceback (most recent call last):</span>
+
+<span class="go">   File &quot;/usr/local/bin/check_esxi_hardware.py&quot;, line 619, in</span>
+<span class="go">&lt;module&gt;instance_list = wbemclient.EnumerateInstances(classe)</span>
+
+<span class="go">   File &quot;/usr/lib/pymodules/python2.7/pywbem/cim_operations.py&quot;, line 421,</span>
+<span class="go">in EnumerateInstances</span>
+
+<span class="go">\**params)</span>
+
+<span class="go">   File &quot;/usr/lib/pymodules/python2.7/pywbem/cim_operations.py&quot;, line 183,</span>
+<span class="go">in imethodcall</span>
+
+<span class="go">no_verification = self.no_verification)</span>
+
+<span class="go">   File &quot;/usr/lib/pymodules/python2.7/pywbem/cim_http.py&quot;, line 268, in</span>
+<span class="go">wbem_request</span>
+
+<span class="go">h.endheaders()</span>
+
+<span class="go">File &quot;/usr/lib/python2.7/httplib.py&quot;, line 969, in endheaders</span>
+
+<span class="go">self._send_output(message_body)</span>
+
+<span class="go">File &quot;/usr/lib/python2.7/httplib.py&quot;, line 829, in \_send_output</span>
+
+<span class="go">self.send(msg)</span>
+
+<span class="go">File &quot;/usr/lib/pymodules/python2.7/pywbem/cim_http.py&quot;, line 115, in</span>
+<span class="go">send</span>
+
+<span class="go">self.connect()</span>
+
+<span class="go">File &quot;/usr/lib/pymodules/python2.7/pywbem/cim_http.py&quot;, line 167, in</span>
+<span class="go">connect</span>
+
+<span class="go">except ( Err.SSLError, SSL.SSLError, SSL.SSLTimeoutError</span>
+
+<span class="go">AttributeError: &#39;module&#39; object has no attribute &#39;SSLTimeoutError&#39;</span>
+</pre></div>
+</div>
+<p><strong>A:</strong>&nbsp;It seems that Ubuntu did the same as SUSE, RedHat and Centos in
+the past: The pywbem was patched without changing the upstream version
+number. This goes into the same direction as issue #7
+(<a class="reference external" href="https://github.com/Napsty/check_esxi_hardware/issues/7">https://github.com/Napsty/check_esxi_hardware/issues/7</a>). A temporary
+fix is to manually install the older pywbem package like this:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">aptitude install python-pywbem=0.7.0-4</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Update June 26th 2015: This issue was fixed in version 20150626.</p>
+</div>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;I use python3 but the plugin throws an error:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">File &quot;./check_esxi_hardware.py3&quot;, line 440</span>
+
+<span class="go">print &quot;%s %s&quot; % (time.strftime(&quot;%Y%m%d %H:%M:%S&quot;), message)</span>
+<span class="go">^</span>
+<span class="go">SyntaxError: invalid syntax</span>
+</pre></div>
+</div>
+<p><strong>A:</strong>&nbsp;An issue was opened on github
+(<a class="reference external" href="https://github.com/Napsty/check_esxi_hardware/issues/13">https://github.com/Napsty/check_esxi_hardware/issues/13</a>) to address
+this compatibility issue.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Update: This issue was fixed in version 20181001.</p>
+</div>
+<p><strong>Q:</strong>&nbsp;I sometimes get the following error on an ESXi host:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">CRITICAL: (0, &#39;Socket error: [Errno 8] \_ssl.c:510: EOF occurred in</span>
+<span class="go">violation of protocol&#39;)</span>
+</pre></div>
+</div>
+<p><strong>A:</strong>&nbsp;After a lot of debugging and testing with a plugin user we came
+to the conclusion, that this problem arises from the ESXi host, not the
+plugin. A tcpdump revealed, that the ESXi host sent a TCP Reset packet
+rather then starting to submit data. A reboot of the affected ESXi host
+resolved the problem.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Update October 17th, 2019: Such situations can (sometimes) also be
+confirmed in the vSphere Client UI using the Monitor → Hardware Health
+window. A click on the “REFRESH” button results in an error in the
+recent tasks list:</p>
+</div>
+<p>“A general system error occurred: Server closed connection after 0
+response bytes read; &lt;SSL…..</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/308-cim-general-system-error.png"><img alt="General System Error" src="../_images/308-cim-general-system-error.png" style="width: 600px;" /></a>
+</div>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;I have several ESXi hosts behind the same IP (NAT). How can I use
+the check_esxi_hardware?</p>
+<p><strong>A:</strong>&nbsp;Since version 20160531 it is possible to manually define the CIM
+port (which defaults to 5989). So if you set up port forwarding (DNAT)
+you can now monitor all ESXi servers behind the same NAT-address. The
+parameter you want in this case is ”-C“ (or –cimport).</p>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;Is the plugin compatible with ESXi 6.x?</p>
+<p><strong>A:</strong>&nbsp;Yes. Please note that starting with ESXi 6.5 you might have to
+enable the CIM/WBEM services first, as they are disabled by default.
+Refer to&nbsp;<a class="reference external" href="https://kb.vmware.com/s/article/2148910">https://kb.vmware.com/s/article/2148910</a>.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/308-cim-server-service.png"><img alt="CIM Server Service" src="../_images/308-cim-server-service.png" style="width: 600px;" /></a>
+</div>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;I can’t execute the plugin and get the following error message.
+Permissions are correct however (e.g. 755).</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">execvpe(/usr/lib64/nagios/plugins/check_esxi_hardware.py) failed:</span>
+<span class="go">Permission denied</span>
+</pre></div>
+</div>
+<p><strong>A:</strong>&nbsp;This error comes from SELinux. You need to write an allow rule
+for it.</p>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;The plugin reports the following problem with memory, but no
+memory hardware issues can be found on the server:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">CRITICAL : Memory - Server: HP ProLiant DL380p Gen8 s/n....</span>
+</pre></div>
+</div>
+<p><strong>A:</strong>&nbsp;It is possible that an alert needs to be cleared in the servers
+IPMI log first. To do that, you need to login into your ESXi server with
+SSH and run the following commands:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">localcli hardware ipmi sel clear</span>
+
+<span class="go">/sbin/services.sh restart</span>
+</pre></div>
+</div>
+<p>This might affect other CIM entries as well. So it’s a wise idea to
+clear the IPMI system event log (sel) first before investigating
+further.</p>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;Certain hardware elements show incorrect health/operational
+states, e.g. “Cooling Unit 1 Fans”:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">20190205 00:26:26</span>
+
+<span class="go">Element Name = Cooling Unit 1 Fans</span>
+
+<span class="go">20190205 00:26:26</span>
+
+<span class="go">Element HealthState = 1020190205 00:26:26</span>
+
+<span class="go">Global exit set to WARNING</span>
+</pre></div>
+</div>
+<p><strong>A:</strong>&nbsp;Certain server models might show false hardware alarms when these
+particular hardware elements were disabled in BIOS, are idle or have
+disabled sensors. From the&nbsp;<a class="reference external" href="https://support.hpe.com/hpsc/doc/public/display?docId=emr_na-a00053955en_us">HP
+FAQ</a>:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">PR 2157501: You might see false hardware health alarms due to disabled
+or idle Intelligent Platform Management Interface (IPMI) sensors.
+Disabled IPMI sensors, or sensors that do not report any data, might
+generate false hardware health alarms.</p>
+</div>
+<p>In this case it makes sense to ignore these elements using the -i
+parameter.</p>
+<p>—</p>
+<p><strong>Q:</strong>&nbsp;The&nbsp;<em>check_esxi_hardware</em>&nbsp;plugin is not working (anymore) since
+ESXi 6.7 U2/U3 on DELL servers.</p>
+<p><strong>A:</strong>&nbsp;The issue seems to be the “OpenManage” VIB. This can be verified
+by checking the list of installed VIB’s on an ESXi server:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">esxcli software vib list</span>
+</pre></div>
+</div>
+<p>After uninstalling the OpenManage VIB, the plugin works again. According
+to DELL, ESXi 6.7 U2 is&nbsp;<a class="reference external" href="https://www.dell.com/support/article/ch/de/chdhs1/sln311238/openmanage-integration-for-vmware-vcenter?lang=en">not yet officially
+supported</a>&nbsp;(as
+of July 2019) by OpenManage:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">OpenManage Integration for VMware vCenter v4.3.1 (Initial 4.3 Download)
+(4.3.1 Release Notes) (4.3 Manuals)Does not add official 6.7 U2 support
+(support for 6.7 U2 will come in the fall with the next major release)</p>
+</div>
+<p>See also official&nbsp;<a class="reference external" href="https://kb.vmware.com/s/article/74696">VMware KB
+74696</a>&nbsp;entry for this.</p>
+<p>Update October 15th 2019: OMSA 9.3.1 fixes this issue.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Check Command: check_esxi_hardware</a><ul>
+<li><a class="reference internal" href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Included Check Commands</a><ul>
+      <li>Previous: <a href="../accessories/dhtsensors.html" title="previous chapter">DHT Sensors</a></li>
+      <li>Next: <a href="check_http.html" title="next chapter">Check Command: check_http</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/check_commands/check_esxi_hardware.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/check_commands/check_esxi_hardware.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

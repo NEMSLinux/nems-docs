@@ -1,0 +1,91 @@
+NEMS Linux 1.2 Changelog
+========================
+
+NEMS Linux 1.2 was released May 6, 2017. NEMS Linux 1.2.1 was released May 22, 2017 to fix bugs with the migrator and improve the overall release following significant user feedback. NEMS 1.2.x was discontinued November 7, 2017. This version of NEMS was downloaded 14,765 times during its 6 month life cycle.
+
+.. note:: A great emphasis was placed on documentation during the 1.2 Release Cycle. I launched `the Community Forum <https://forum.nemslinux.com/>`__ to offset the massive onslaught of user comments on the NEMS page of my blog, and `NEMS Documentation <https://docs.nemslinux.com/>`__.
+
+NEMS Linux 1.2.1 Changelog
+--------------------------
+
+Here is a list of the changes I recorded during development.
+
+* NEMS Linux now requires you to run nems-init when you first deploy. This tool takes care of some of those “first boot” prerequisites like setting passwords and expanding your filesystem.
+* Underlying OS upgraded to Raspbian Stretch.
+* Kernel upgraded to 4.9.28.
+* PHP upgraded to 7.0.19.
+* `Reworking of nConf <https://github.com/Cat5TV/nconf/>`__ to make compatible with modern software (ie. PHP7.0, mySQLi).
+* Maintenance and info scripts moved to /home/pi/nems-scripts.
+* NEMS Linux MOTD upon login now shows local IP address. Also improved how it determines some of the info (see `info.sh in nems-scripts <https://github.com/Cat5TV/nems-scripts/blob/master/info.sh>`__) and fixes a few bugs. Also set it up to rollover to wlan0 if no response on eth0, in case the user is on wifi.
+* Temporary files and Monitorix image cache moved to RAM.
+* Added `RPi-Monitor <http://elinux.org/RPi-Monitor`__ as per `Hesh’s comment <http://www.baldnerd.com/nems/comment-page-1/#comment-102086>`__. Reworked the Memory and CPU Frequency modules to correct the accuracy.
+* Added `nagios-api <https://github.com/zorkian/nagios-api>`__ (JSON on Port 8090) as per `Timothy Seibert’s request <http://www.baldnerd.com/nems/#comment-118462>`__. `License <https://github.com/zorkian/nagios-api/blob/master/LICENCE>`__
+* Added Webmin as per `Hesh’s comment <http://www.baldnerd.com/nems/comment-page-1/#comment-104813>`__. Login as pi user with the password you created when initializing NEMS Linux with the nems-init program.
+* Added support for agentless Windows checks using WMI (big thanks to `Ryan Siegel <http://everyday-tech.com/>`__ who originally authored NagiosPi and pitched in for NEMS Linux 1.2 release).
+* Changed Apache log rotation to weekly (was previously daily).
+* Upgraded nagvis to 1.9b16.
+* Fixed sendemail paths in nConf to ease out-of-the-box email notifications (as they should just work now). Thanks so much to `Jim for pointing this typo out <http://www.baldnerd.com/nems/comment-page-3/#comment-115806>`__!
+* Enabled CPU governing (package cpufrequtils). On NEMS Linux 1.0-1.1, NEMS Linux was locked to 600MHz, but now it will automatically go up to 1200 MHz as needed.
+* force resolver to generate new DNS resolv.conf at first boot (to ensure the detected DNS servers will be used rather than our development DNS servers which may not work for you).
+* NEMS Linux Migrator upgraded to allow direct migration from nagiospi to NEMS Linux.
+* Added Monitorix 3.9.0.
+* Removed MySQL, replaced with MariaDB 10.1.22.
+* Improve quality of Monitorix graphs used on NEMS Linux Dashboard slideshow.
+* Minor improvements to Monitorix page based on priority of service and image quality.
+* Removed some old (obsolete) kernel modules, InnoDB logs and other bloat to reduce size of stock image.
+* Added /var/www/nconf/temp to tmpfs. This way if someone breaks their nCONF (eg., pressing “Back” while generating config) they can just reboot to fix it 😀
+* nems-init and nems-migrator restore significantly reworked to correct initialization bugs from NEMS Linux 1.2. Now, both initialization of a new NEMS Linux deployment and an import from an old one should work without a hitch.
+* nConf and NEMS Linux-Migrator backups now require your password (as set with nems-init).
+* NEMS Linux-Migrator no longer replaces the MySQL database with backup. Instead, it now clears the database completely, reconciles your backup with the current set of available commands and services and then imports everything together into the fresh database and activates the hosts. This way, if you restore your NEMS Linux 1.1 settings to NEMS Linux 1.2.1, you don’t miss out on all the WMIC features (which your 1.1 backup would overwrite), for example.
+* Documentation updated to reflect changes in commands and versioning.
+* I built a quick but lovely interface for Monitorix to make it mobile responsive and a little more dynamic in its functionality.
+* Distribution now available via BitTorrent (thanks to our partnership with `The Category5 TV Network <https://category5.tv/>`__.
+
+Bug fixes
+---------
+
+* number of online users count on MOTD fixed.
+* undefined constant in apache error log every 5 minutes leading to a bloated error log.
+* added missing icons in check_mk.
+* NEMS Linux Migrator mail settings fixed when importing backup.nems from NEMS Linux 1.0/nagiospi.
+* Fixed MySQL Initialization Bug - was causing NEMS Linux to lose configuration and no longer work.
+* Wifi (wlan0) restored after it broken in 1.2 (due to Debian Stretch upgrade and incompatible firmwares for the Pi).
+* Fixed nems-init user creation. In NEMS Linux 1.2 it was not adding the new user to the “admin” group correctly in NEMS Linux nCONF, so upon config generation, user would lose access to Nagios Core and other features requiring admin user.
+* many miscellaneous bug fixes.
+
+Rolling Updates - NEMS Linux 1.2.2 Changelog
+--------------------------------------------
+
+* Created rolling fixes system to automatically patch NEMS Linux systems as needed.
+* Monitorix cronjob now detects which network connection is being used (ie., eth0/wlan0) and begins monitoring the correct one if it changes. Requires NEMS Linux 1.2.1 or higher.
+* NEMS Linux Migrator updated to fix bug in host presets. Was causing these two errors: “[ERROR] Failed to get host-alive check for host ‘NEMS Linux’. Make sure the host is linked with a host-preset. Aborting.” and “Error: Cannot open main configuration file ‘/var/www/html/nconf/temp/test/Default_collector.cfg’ for reading!” - Thanks to Rick for giving me access to his affected system so I could fix this. Requires NEMS Linux 1.2.1 or higher.
+* NEMS Linux web interface has been updated to git repository so I can fix issues with it on the fly without forcing users to reinstall. Requires NEMS Linux 1.2.2 or higher.
+* Monitorix graphs clear when rebooting the Pi. This is by design. However, they were meant to regenerate upon boot. `Hesh found a bug <http://www.baldnerd.com/nems/#comment-120711>`__ that was causing the graphs not to generate since the service was not yet loaded. I rewrote the back-end to wait for a network connection, and for the service to respond, before moving on. Requires NEMS Linux 1.2.1 or higher.
+* MOTD was displaying the disk usage as what was being used in the home folder. I realized this was absolutely pointless information, so rewrote this section to instead tell you the current % usage of your entire SD card (/dev/root). Requires NEMS Linux 1.2.2 or higher.
+* NEMS Linux-Init bug fixed: new user is not authorized_for_system_information, authorized_for_all_hosts, authorized_for_configuration_information, authorized_for_system_commands … and so-on. `Wrote this into nems-init <https://github.com/Cat5TV/nems-scripts/commit/84e99546b02de3a76fbc4ae044f695f9fb9306a5>`__. Had caused users to not have access to all screens in Nagios Core. Also `added the config to the NEMS Linux Migrator backup <https://github.com/Cat5TV/nems-migrator/commit/428e0ae4726c3aa3df309f5ed9c9fa2bca1f6529>`__. I also `added the patch to fixes.sh <https://github.com/Cat5TV/nems-scripts/commit/493519676236aafffa87536cc9163973503be6a1>`__ so users don’t have to re-initialize to get the fix. It will retroactively fix the file, automatically. Requires NEMS Linux 1.2.1 or higher.
+* Check_MK Multisite reports “user not found” on some screens. Similar issue to what was happening with Nagios Core: nems-init user was not being migrated correctly to Check_MK as pointed out by Rick. This has been fixed `and a retroactive patch added <https://github.com/Cat5TV/nems-scripts/commit/dcd010e9c9085dcbb206a02a06a5946a310bf338>`__ to correct existing deployments. Requires NEMS Linux 1.2.1 or higher.
+* Updated nems-migrator to support NEMS Linux 1.2.2. Built nems-upgrade, which will roll NEMS Linux 1.2.1 up to NEMS Linux 1.2.2 without needing to reinstall. You can do this (backup first please) by typing: sudo nems-upgrade
+* Email notification service changed to automatically detect TLS. Changes will take effect immediately for new deployments, but if yours is already deployed (before June 9, 2017) please add the following to your service definitions in NEMS Linux-nConf for notify-host-by-email and notify-service-by-email: -o tls=auto - add it immediately after /usr/bin/sendemail so it looks like this: /usr/bin/sendemail -o tls=auto -s $USER7$ ….
+* Created `nems-benchmark` and `nems-mailtest`.
+* Disabled swapfile.
+* Add keyboard locale setting to nems-init. `As per Steve <https://www.baldnerd.com/nems/#comment-121269>`__.
+* Force more secure bcrypt encryption on htpasswd generation. `As per Steve <https://www.baldnerd.com/nems/#comment-121269>`__.
+
+Rolling Updates - NEMS Linux 1.2.3 Changelog
+--------------------------------------------
+
+* Removed dead “help” links in Nagios Core `as per kd4pyr <http://forum.category5.tv/thread-63.html>`__.
+* Secure Connectivity `as per Steve <https://www.baldnerd.com/nems/#comment-121269>`__:
+  * nems-init now creates self-signed server, client and CA certificates during initialization of NEMS Linux.
+  * SSL (https) access now available on most NEMS Linux features, using your new custom certs.
+* Add anonymous stats logging retroactively to NEMS Linux 1.2.1+.
+* Create log file at /var/log/nems/package-versions.log which shows specific package version information for some of the essential services in NEMS Linux. This log will be recreated every Sunday morning.
+* Add `nems-info` command.
+* Early introduction of PHP connector for Monitorix data, which will be utilized both by `nems-www` and `nems-info`.
+* Added command-line option `temperature` to `nems-info`.
+* Added average temperature to NEMS Anonymous Stats.
+* WiFi patched against KRACK exploit for users connecting NEMS to the network using WPA2. To see if yours has been patched type `cat /var/log/nems/wpasupplicant` - it will either say *Patched*, or give an error. This patch is retroactive to all NEMS 1.2.x devices, and higher.
+* Moved NEMS symlinks to /usr/local/bin to avoid loss after a dist-upgrade. Does not affect functionality: this is only an internal change in preparation for NEMS 1.3 which is transparent to the end user since both are in the path (you type `nems-init` not `/usr/local/bin/nems-init` for example).
+* Move nems.conf to /usr/local/share/nems/ in preparation for the deprecation of the *pi* user.
+* NEMS 1.3 released. NEMS 1.2.x is now Old Stable. I'll continue to support it until I see its usage numbers drop in the `anonymous stats <https://nemslinux.com/stats/>`__.
+* Patched NEMS 1.2.x to support the new file locations of NEMS 1.3. This fixes "file not found" issues in nems-update and Anonymous Stats as `reported by Digithead <https://forum.category5.tv/thread-101.html>`__.

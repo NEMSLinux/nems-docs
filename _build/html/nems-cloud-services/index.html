@@ -1,0 +1,187 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NEMS Cloud Services &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NEMS Migrator Off-Site Backup" href="nems-migrator.html" />
+    <link rel="prev" title="Monit Service Monitor" href="../apps/monitservicemonitor.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nems-cloud-services">
+<h1>NEMS Cloud Services<a class="headerlink" href="#nems-cloud-services" title="Permalink to this headline">¶</a></h1>
+<p>Quick points</p>
+<ul class="simple">
+<li><em>nems-info cloudauth</em>&nbsp;will show if your NEMS Cloud Services account
+is active or not.</li>
+<li>When active, NEMS Cloud Services will receive the updated status of
+all your NEMS servers every 60 seconds.</li>
+</ul>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>In order to use NEMS Cloud Services, you must be running NEMS Linux 1.5
+or higher. You must also be a Patron of&nbsp;<a class="reference external" href="https://patreon.com/nems/">NEMS Linux on
+Patreon</a>&nbsp;at a tier that includes NEMS
+Cloud Services.</p>
+</div>
+<div class="section" id="included-services">
+<h2>Included Services<a class="headerlink" href="#included-services" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nems-migrator.html">NEMS Migrator Off-Site Backup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="checkin.html">NEMS CheckIn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">NEMS Cloud Services API</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="nems-cloud-services-dashboard">
+<h2>NEMS Cloud Services Dashboard<a class="headerlink" href="#nems-cloud-services-dashboard" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="features">
+<h3>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>View your NEMS Linux state information from anywhere.</li>
+<li>Open NEMS TV Dashboard for any of your NEMS Servers from anywhere.</li>
+<li>Connect multiple NEMS Servers to a single dashboard to be able to see
+the state of multiple distributed NEMS Servers on one screen.</li>
+<li>Extend NEMS Warning Light and NEMS GPIO Extender to support multiple
+NEMS Servers and be geographically located anywhere in the world.</li>
+</ul>
+</div>
+<div class="section" id="security-points">
+<h3>Security Points<a class="headerlink" href="#security-points" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Cloud Dashboard password is set in NEMS SST</li>
+<li>Password is salted with a 256-byte key before the data from nems is
+encrypted</li>
+<li>data includes state information only (same info that appears on nems
+tv dashboard)</li>
+<li>multiple NEMS servers may be linked together to a single cloud
+dashboard</li>
+<li>since nobody knows your custom password, only you can see your data
+(it cannot be decrypted without your password)</li>
+<li>leaving dashboard open continually extends cookie, so it is suitable
+for server room (don’t need to continually login)</li>
+</ul>
+</div>
+<div class="section" id="frequently-asked-questions">
+<h3>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Why do I have to enter my NEMS HWID, NEMS Cloud Services Key and
+Decryption Password to login? Can’t you make it so I can create a
+username and password and login that way?</strong></p>
+<p>Your NEMS HWID and NEMS Cloud Services Key authenticates your session.
+Your Decryption Password on the other hand allows NEMS Cloud Services to
+decrypt your NEMS State information. For your safety, your decryption
+password is never stored on the server, and only you know it. I will not
+create a mechanism for your private decryption password to be associated
+with your account. You must enter it every time you login, since it is
+never stored within NEMS Cloud Services.</p>
+<p><strong>Since I have to enter my decryption password only once per session,
+how can you say it is not stored?</strong></p>
+<p>When you enter your encryption password, it is transmitted over your
+browser’s SSL connection to the NEMS Cloud Services server. There, it is
+not stored in the session. Rather, your password is salted and hashed,
+and this hash is what is stored in the session. Once your session has
+expired, your hash is discarded.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NEMS Cloud Services</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#included-services">Included Services</a></li>
+<li><a class="reference internal" href="#nems-cloud-services-dashboard">NEMS Cloud Services Dashboard</a><ul>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#security-points">Security Points</a></li>
+<li><a class="reference internal" href="#frequently-asked-questions">Frequently Asked Questions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../apps/monitservicemonitor.html" title="previous chapter">Monit Service Monitor</a></li>
+      <li>Next: <a href="nems-migrator.html" title="next chapter">NEMS Migrator Off-Site Backup</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/nems-cloud-services/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/nems-cloud-services/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

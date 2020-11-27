@@ -1,0 +1,225 @@
+NEMS Linux 1.6 Changelogs
+=========================
+
+The NEMS 1.6 release cycle will focus on hardware porting and
+peripherals.
+
+**Key Development Features and Goals:**
+
+-  Python moved to v3 stack due to 2.7 EOL.
+-  Public release of `NEMS Warning Light`_.
+-  check_mk livestatus upgraded to 1.5 (requires C++17).
+-  Supported single board computer list to be reduced to focus on most
+   used, with option for users to request ports if they do not exist.
+-  Port NEMS Linux to Docker platform. Development funding provided by
+   Patrons (THANK YOU).
+-  **Firewall** - NEMS Linux to include `ConfigServer Security &
+   Firewall (csf) with Login Failure Daemon (lfd)`_. Internal LAN IP
+   addresses are whitelisted by default, but if a user tries to access
+   your NEMS server from outside the LAN (ie., if you have your NEMS
+   server accessible on the Internet) they will get locked out if they
+   try an incorrect password too many times.
+-  Add IPMI (freeipmi) if not added already.
+-  Begin work on smart home assistant integration: NEMS Skill for Alexa
+   and Google Assistant.
+-  Consistent networking configuration across platform (for setting
+   static IPs, for example).
+
+**Release Dates:**
+
+NEMS Linux 1.6 is planned for release Q4 2020.
+
+**Development Changelogs Since 1.5:**
+
+December 2019
+
+-  Merged `PR 4`_, adding escalations for hosts /
+   services / advanced services and fixing various bugs.
+-  Upgrade NEMS NConf jquery code to 3.3.1.
+-  Tap NEMS NConf into user's wallpaper settings.
+-  Output the final line from syntax check to screen
+   when deploying config in NEMS NConf.
+-  Changed "Generate Nagios config" to clearer
+   "Deploy Config to NEMS" in NEMS NConf.
+-  Moved all the legal stuff off the landing page of
+   NEMS NConf and moved to new "Legal Disclaimer" section.
+-  Prepare Migrator for 1.6 and integrate new NConf
+   configs.
+-  Upgrade Nagios Core to 4.4.5.
+-  Integrated `NagiosTV`_ as per BastyJuice.
+
+January-February 2020
+
+-  Upgrade Monit to 5.26.0.
+-  Move build tmpdir out of /tmp/ and into /usr/src/
+-  NEMS NConf 1.6 tooltip font color fixed.
+-  NEMS NConf 1.6 removal of JQuery Accordion from
+   Generate page, replaced with terminal output.
+-  New Deploy button for NEMS NConf Generate Config
+   page.
+-  Change notify-service-by-telegram to point to the
+   modern script, rather than the old path (which is a symlink these
+   days). mydogboris noted that when using the symlink, his Telegram
+   notifications were wonky.
+-  Added the NEMS MOTD to Docker.
+-  General filesystem cleanup: remove some old cruft.
+-  NagiosTV theme customized to match user theme
+   settings (such as background image).
+-  Added humidity sensor to check_temper.
+-  NRPE upgraded to 4.0.0.
+-  Fixed NRPE installer script if run on non-NEMS
+   system, as per `Issue 2`_ by Xelo.
+-  Revert NRPE to 3.2.1 temporarily, until I can
+   figure out how to make it talk to older installs (upgrading to 4.0.0
+   breaks all existing 3.2.1 installs).
+-  check_speedtest_cli.sh now records a log file in
+   /var/log/nems/speedtest.log. This log is now parsed by NEMS TV
+   Dashboard and displayed at all times. Further improvements will be
+   added before public release. As requested by ITManLT.
+-  Replace words "Down" and "Up" in NEMS TV
+   Dashboard speedtest stats with font-awesome icons.
+
+March-April 2020
+
+-  Move 1.6 base to Debian 11 (bullseye).
+-  Upgrade Monitorix to 3.12.0.
+-  Added *mod_wsgi* to 1.6, which is no longer
+   auto-installed with Apache2 in bullseye.
+-  Initial user files now placed correctly in /etc/skel
+   for user creation.
+-  Change default body background color of *NEMS NConf*
+   to dark grey (almost black) to prevent the appearance of the screen
+   flashing white during page transition.
+-  Moved old *python-pip*, *python-django* and
+   *python-paramiko* to modern *python3-pip*, python3-django and
+   python3-paramiko packages respectively.
+-  Upgrade Adagios to 1.6.6.
+-  Migrate to several experimental branches of Adagios
+   components to begin testing support under Python 3.8. Current stable
+   only supports Python 2.7 which is EOL this year.
+
+May-June 2020
+
+-  NEMS Linux 1.6 development merged (some would say
+   "downgraded") with NEMS Linux 1.5.2 as I wait for Adagios support for
+   Python 3.7+. NEMS Linux 1.6 will be buster-based and use Python 2.7.
+-  Change ownership of /var/log/nems to nagios user and
+   group to allow check commands to write to logs. This enables the
+   speedtest log, which in turn shows speedtest data on NEMS TV
+   Dashboard.
+-  `TEMPer`_ calibration added to NEMS SST and integrated
+   into all TEMPer output. Now, for the sake of accuracy, users may
+   adjust the thermal and humidity sensor offset by simply dragging a
+   slider.
+-  Hide TEMPer calibration option if TEMPer device is not
+   present.
+-  Add Argon ONE scripts for Raspberry Pi 4.
+-  `Argon ONE`_ support complete.
+-  Added *repos* feature to `nems-info`_.
+-  Added new check_mrtgtraf_nems check command in
+   preparation for a very sleek MRTG integration.
+-  Set Argon ONE to log to /var/log/nems/argonone.log if
+   system is rebooted or shutdown safely using the power button (with
+   timestamp).
+-  Move rpimonitor off the repository and instead
+   manually install. The source repository
+   (http://giteduberger.fr/rpimonitor/) became unstable during the 1.5
+   release cycle (up and down) and since rpimonitor appears to be a dead
+   project (hasn't been updated in > 4 years) I've instead removed the
+   repository requirement and installed it manually. Also, fixed the
+   distribution name on the template.
+   
+July-August 2020
+
+-  Change logrotate for NEMS logs to rotate logs based on
+   log size, not date. Delayed compression added.
+-  *check_mrtgtraf_nems* now rounds the floats of the
+   traffic results to two decimal places.
+-  Added `check_apc`_ to check the state of an APC
+   UPS. As `requested by Neptunum`_.
+-  Python version default will now be hard set at 995
+   during build process. This is in preparation for python3 down the
+   road (pending Adagios compatibility).
+-  I noticed logrotate rotating some NEMS logs that
+   really shouldn't be rotated, such as *cloudauth.log*. Modified
+   *logrotate.d* conf to omit logs that should not be rotated.
+-  Change permissions of */var/log/nagios/nagios.log*
+   to allow group write. Required to remove root user requirement on
+   *nems-mailtest*, which will be needed to integrate it into NEMS
+   Dashboard.
+-  `nems-mailtest`_ is now integrated into NEMS SST.
+   `See Video`_
+-  `nems-mailtest`_ in NEMS SST now runs
+   *nems-mailtest* using the information entered in the form, not saved
+   to the config. This way, a user may test their SMTP config *before*
+   saving the changes.
+-  Reverted MySQL database to previous push of 1.6
+   branch as I had accidentally pushed the 1.5 database to the 1.6
+   branch when I added *check_apc*. I've corrected it, and re-added
+   *check_apc*. No users impacted by this since 1.6 hasn't yet been
+   released.
+-  Added *nems-info [dht11|dht22]* which outputs json
+   response from either the DHT11 or DHT22 sensors.
+-  Add user to gpio group during initialization. This will allow access to the GPIO pins without root access.
+
+September-October 2020
+
+-  Minor improvements to output of DHTxx check command for Humidity values.
+-  Add nemsadmin user to gpio group, just to ensure the demo check commands work out of the box, before initialization takes place.
+-  Upgrade check_mk Livestatus to 1.6.0p17. This gets the sock working on the NEMS Linux 1.6 AWS development system, which is required for Adagios and NEMS TV Dashboard.
+-  Added phpmyadmin, disabled by default and interface access protected behind NEMS user login/password when enabled.
+-  Change check_local_disk to support unit selection (KB, MB, GB, TB) and set default for NEMS Local disk check sample to GB.
+-  New Feature: NEMS PHP Server Agent can now be configured and downloaded in NEMS System Settings Tool.
+-  New documentation launched, with the help of Bill Marshall plus
+   submissions from Don Jenkins.
+
+.. _TEMPer: https://docs.nemslinux.com/en/latest/accessories/temper.html
+.. _Argon ONE: https://docs.nemslinux.com/en/latest/accessories/argon1case.html
+.. _nems-info: https://docs.nemslinux.com/en/latest/commands/nems-info.html
+.. _check_apc: https://docs.nemslinux.com/en/latest/basic/checkapc.html
+.. _requested by Neptunum: https://discord.com/channels/501816361706717184/654697565937205278/687329215456346257
+.. _nems-mailtest: https://docs.nemslinux.com/en/latest/commands/nems-mailtest.html
+.. _See Video: https://youtu.be/bWj3m6pB8RA
+.. _Issue 2: https://github.com/Cat5TV/nems-admin/issues/2
+.. _NEMS Warning Light: /features/nems-tools/warninglight
+.. _ConfigServer Security & Firewall (csf) with Login Failure Daemon (lfd): https://www.configserver.com/cp/csf.html
+.. _PR 4: https://github.com/Cat5TV/nconf/pull/4
+.. _NagiosTV: https://github.com/chriscareycode/nagiostv-react
+
+November-December 2020
+
+-  NEMS Tools now automatically detects the IP address of the running
+   NEMS Server on the same subnet and creates its configuration file.
+-  NEMS Tools GPIO Extender client now uses the config file to determine
+   NEMS Server IP address.
+-  Omzlo Warning Light pHAT now transmits and receives via NEMS GPIO
+   Extender, allowing you to plug the pHAT into your NEMS Tools GPIO
+   Extender Receiver.
+-  Fixed a typo in Warning Light that incorrectly determined all platforms
+   to be a Raspberry Pi.
+-  Update nems-tools GPIO Extender to detect NEMS Servers via gpioe-server
+   on port 9595 rather than looking for a host reply from nems-api.
+-  Moved nems-tools.conf to /boot, making it extremely easy to modify the
+   conf on nems-tools Extender OS.
+-  NEMS SST will no longer warn of requirement to add a password for
+   the PHP Agent if a password already exists in the config.
+-  NEMS PHP Agent 1.1 released. Now the keyphrase is encrypted (rather than
+   base_64 encoded). Also added "." current folder disk space check and
+   fixed several bugs with `disk` and `var` checks.
+-  Fixed the directions on NEMS SST which directed a user to add their
+   encypription/decryption passphrase to the "General" tab, since that
+   feature was moved to the NEMS Migrator tab long ago. Pointed out by
+   UltimateBugHunter-NitPicker.
+-  NEMS Extender OS will now illuminate all lights if the NEMS Server goes
+   offline or cannot be contacted.
+-  Improve output in nems-init if user tries to initialize with same name
+   as already running user.
+-  Added qemu-guest-agent to improve integration with Proxmox VE
+   `as per UltimateBugHunter-NitPicker <https://discord.com/channels/501816361706717184/654697565937205278/779743783851130880>`__.
+-  Delay for a random amount of time (up to 2 hours) when running offsite backup
+   tasks to prevent 1,000+ NEMS Servers clobbering the API all in the same moment.
+   Issue pointed out by UltimateBugHunter-NitPicker who was seeing errors with his daily backup.
+-  NEMS Migrator Off Site Backup will now log if the Internet was down when the backup
+   ran. Also added a 'now' cli option that will force it to run without delaying.
+-  Changed Migrator patches failsafe to determine if Quickfix / fixes was running for more
+   than 120 minutes (previous setting was 90) before killing.

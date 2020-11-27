@@ -1,0 +1,150 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Check Command: check_internet_speed &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Check Command: check_mikrotik" href="check_mikrotik.html" />
+    <link rel="prev" title="Check Command: check_http" href="check_http.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="check-command-check-internet-speed">
+<h1>Check Command: check_internet_speed<a class="headerlink" href="#check-command-check-internet-speed" title="Permalink to this headline">¶</a></h1>
+<p>Tests the speed of your Internet connection.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Requires NEMS Linux 1.5+.</p>
+</div>
+<div class="section" id="demo-data">
+<h2>Demo Data<a class="headerlink" href="#demo-data" title="Permalink to this headline">¶</a></h2>
+<p>Out of the box, NEMS Linux will check the Internet connectivity speed
+using an automatically selected nearby test server. Warning
+notifications will be generated if your upload or download speed falls
+below 10 Mb/s and Critical warnings if either falls below 7 Mb/s. These
+are just sample thresholds which can (and should) be modified to suit
+your connection speed by modifying the service in NEMS NConf.</p>
+</div>
+<div class="section" id="data-usage-warning">
+<h2>Data Usage Warning<a class="headerlink" href="#data-usage-warning" title="Permalink to this headline">¶</a></h2>
+<p><strong>Every time the speedtest runs, anywhere from 100-400 MB&nbsp;of data is
+transferred</strong>&nbsp;(depending on your connection speed). Since the sample
+service is set to check every 30 minutes while in a good state, that
+could be nearly 5GB&nbsp;of data per day. If your Internet is slow, the sample
+service will check (retry) every 5 minutes, increasing the bandwidth
+usage significantly.</p>
+<p>While in most cases this is fine, you&nbsp;<em>must</em>&nbsp;modify your thresholds to
+suit your connection, and modify your service schedule if you have
+limited or pay-per-use bandwidth.</p>
+</div>
+<div class="section" id="dynamic-server-detection">
+<h2>Dynamic Server Detection<a class="headerlink" href="#dynamic-server-detection" title="Permalink to this headline">¶</a></h2>
+<p>NEMS Linux automatically chooses the best speedtest server for your test
+(generally, the one nearest to you geographically). This may change now
+and again as servers become unresponsive or otherwise go offline. Since
+it is dynamic, the server selection is done behind the scenes by your
+NEMS Server, so you never have to think about it.</p>
+</div>
+<div class="section" id="logging">
+<h2>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h2>
+<p>A cache log is saved at /var/log/nems/speedtest.log whenever the script
+is run. In NEMS Linux 1.6+, this cache is used by NEMS TV Dashboard to
+display current Internet speed.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Check Command: check_internet_speed</a><ul>
+<li><a class="reference internal" href="#demo-data">Demo Data</a></li>
+<li><a class="reference internal" href="#data-usage-warning">Data Usage Warning</a></li>
+<li><a class="reference internal" href="#dynamic-server-detection">Dynamic Server Detection</a></li>
+<li><a class="reference internal" href="#logging">Logging</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Included Check Commands</a><ul>
+      <li>Previous: <a href="check_http.html" title="previous chapter">Check Command: check_http</a></li>
+      <li>Next: <a href="check_mikrotik.html" title="next chapter">Check Command: check_mikrotik</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/check_commands/check_internet_speed.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/check_commands/check_internet_speed.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

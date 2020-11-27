@@ -1,0 +1,123 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Notifications Using Pushover &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Push Notifications Using Telegram" href="telegram.html" />
+    <link rel="prev" title="NEMS Linux Notifications" href="index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="notifications-using-pushover">
+<h1>Notifications Using Pushover<a class="headerlink" href="#notifications-using-pushover" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../_images/pushover_notifications.jpg"><img alt="Pushover Image" src="../_images/pushover_notifications.jpg" style="width: 300px;" /></a>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last"><strong>notify-service-by-pushover</strong>&nbsp;and&nbsp;<strong>notify-host-by-pushover</strong>&nbsp;require NEMS 1.4+</p>
+</div>
+<ol class="arabic simple">
+<li>Install the&nbsp;<a class="reference external" href="https://pushover.net/">Pushover</a>&nbsp;app on
+your&nbsp;<a class="reference external" href="https://pushover.net/clients/ios">iOS</a>&nbsp;or&nbsp;<a class="reference external" href="https://pushover.net/clients/android">Android</a>&nbsp;Device.</li>
+<li><a class="reference external" href="https://pushover.net/login">Sign up for an account</a>, which is
+free to try (perfect for setting up and testing) but when you decide
+to use it indefinitely, there is an in-app purchase of around $5 to
+get the full license.</li>
+<li>Login to their web site on your computer and&nbsp;<a class="reference external" href="https://pushover.net/apps/build">create an
+app</a>. This will give you the&nbsp;&nbsp;Key
+you need to add to NEMS SST, along with your USER ID (also provided
+when you login to the web site).</li>
+<li>Copy and paste your&nbsp;&nbsp;key and User key into NEMS SST and click “Save”.</li>
+<li>In NEMS NConf,
+add&nbsp;<strong>notify-service-by-pushover</strong>&nbsp;and&nbsp;<strong>notify-host-by-pushover</strong>&nbsp;to
+your contact(s).</li>
+<li>Done!</li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">NEMS Linux Notifications</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">NEMS Linux Notifications</a></li>
+      <li>Next: <a href="telegram.html" title="next chapter">Push Notifications Using Telegram</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/notifications/pushover.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/notifications/pushover.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

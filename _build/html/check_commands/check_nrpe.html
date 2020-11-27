@@ -1,0 +1,196 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Check Command: check_nrpe &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Check Command: check_ping" href="check_ping.html" />
+    <link rel="prev" title="Check Command: check_minecraft" href="check_minecraft.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="check-command-check-nrpe">
+<h1>Check Command: check_nrpe<a class="headerlink" href="#check-command-check-nrpe" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="firewall-ports">
+<h3>Firewall Ports<a class="headerlink" href="#firewall-ports" title="Permalink to this headline">¶</a></h3>
+<p>If you have a firewall between your NEMS Server and your host, you must
+open incoming TCP connections on ports&nbsp;<em>5666</em>&nbsp;and&nbsp;<em>12489</em>&nbsp;on your host
+side.</p>
+<p>Since check_nrpe can pose a security risk, please&nbsp;<strong>do not</strong>&nbsp;open these
+ports to the world. Rather, ensure your NEMS Server is the only outside
+IP allowed to connect to these ports.</p>
+</div>
+<div class="section" id="host-side-service">
+<h3>Host-Side Service<a class="headerlink" href="#host-side-service" title="Permalink to this headline">¶</a></h3>
+<p>The NRPE service must be installed before check_nrpe can be used to
+monitor the host.</p>
+<p>See:</p>
+<ul class="simple">
+<li><a class="reference external" href="../usage/nrpe_on_linux.html">NRPE For Linux</a></li>
+<li><a class="reference external" href="../basic/monitorMsWindowsHosts.html#monitor-windows-machines-with-nrpe">NRPE For Windows
+Clients</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="important-note-for-users-of-nems-1-5-and-under">
+<h2>Important Note for Users of NEMS 1.5 and Under<a class="headerlink" href="#important-note-for-users-of-nems-1-5-and-under" title="Permalink to this headline">¶</a></h2>
+<p>In NEMS Linux 1.5 and lower, an older version of NRPE was used. This can
+be upgraded by running&nbsp;<em>sudo nems-upgrade</em>&nbsp;however you must also make a
+few minor changes in NEMS NConf as follows:</p>
+<ul class="simple">
+<li>Edit&nbsp;<em>check_nrpe</em>&nbsp;in&nbsp;<em>checkcommands</em>, changing the command line
+to:&nbsp;<em>$USER1$/check_nrpe -H $HOSTADDRESS$ -c $ARG1$</em>&nbsp;(essentially,
+just removing the quotation marks).</li>
+<li>Edit&nbsp;<em>/ Disk Space</em>&nbsp;and&nbsp;<em>/var Disk Space</em>&nbsp;in&nbsp;<em>Advanced Services</em>,
+changing the ARGS to:&nbsp;<em>check_disk -a ‘-w 80 -c 90 -p / -u
+GB’</em>&nbsp;and&nbsp;<em>check_disk -a ‘-w 80 -c 90 -p /var -u GB’</em>&nbsp;respectively.</li>
+</ul>
+</div>
+<div class="section" id="sample-args-for-check-nrpe">
+<h2>Sample Args for check_nrpe<a class="headerlink" href="#sample-args-for-check-nrpe" title="Permalink to this headline">¶</a></h2>
+<p>In order to use these commands, NRPE must be installed on the client
+system using the NEMS Linux installation procedure found here:&nbsp;<a class="reference external" href="../usage/nrpe_on_linux.html">NRPE For
+Linux</a></p>
+<p>I suggest you always put NRPE in the service titles you create in order
+to prevent accidentally assigning a local service to a host who uses
+NRPE. So instead of calling the advanced service “Check Disk Space /”
+I’d call it “Check Disk Space / via NRPE”.</p>
+<div class="section" id="check-cpu-temperature-of-remote-system">
+<h3>Check CPU Temperature of Remote System<a class="headerlink" href="#check-cpu-temperature-of-remote-system" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Description:</strong>&nbsp;Detect temperature of remote system CPU.</li>
+<li><strong>Client Requirements:</strong>&nbsp;Must have&nbsp;<em>lm-sensors</em>&nbsp;installed and
+working.</li>
+<li><strong>$ARG1$ Syntax:</strong>&nbsp;check_cpu_temp -a “WARN CRIT”</li>
+</ul>
+<p><strong>$ARG1$ Examples:</strong></p>
+<p>Warn if CPU is hotter than 40°C and Critical if over 50°C:</p>
+<p><em>check_cpu_temp -a “40 50”</em></p>
+<p>Warn if CPU is hotter than 35°C and Critical if over 47°C:</p>
+<p><em>check_cpu_temp -a “35 47”</em></p>
+</div>
+<div class="section" id="check-disk-usage-of-remote-system">
+<h3>Check Disk Usage of Remote System<a class="headerlink" href="#check-disk-usage-of-remote-system" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Description:</strong>&nbsp;Determine disk usage by percentage.</li>
+<li><strong>Client Requirements:</strong>&nbsp;None.</li>
+<li><strong>$ARG1$ Syntax:</strong>&nbsp;check_disk -a “-w WARN -c CRIT -p PATH”</li>
+</ul>
+<p><strong>$ARG1$ Examples:</strong></p>
+<p>Warn if the disk at / is 80% full and Critical if over 90% full and
+report in gigabytes:</p>
+<p><em>check_disk -a ‘-w 80 -c 90 -p / -u GB’</em></p>
+<p>Warn if the disk mounted on /var is 80% full and Critical if over 90%
+full and report in gigabytes:</p>
+<p><em>check_disk -a ‘-w 80 -c 90 -p /var -u GB’</em></p>
+<p>Warn if the disk mounted on /mnt/backup is 50% full and Critical if over
+70% full and report in gigabytes:</p>
+<p><em>check_disk -a ‘-w 50 -c 70 -p /mnt/backup -u GB’</em></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Check Command: check_nrpe</a><ul>
+<li><a class="reference internal" href="#configuration">Configuration</a><ul>
+<li><a class="reference internal" href="#firewall-ports">Firewall Ports</a></li>
+<li><a class="reference internal" href="#host-side-service">Host-Side Service</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#important-note-for-users-of-nems-1-5-and-under">Important Note for Users of NEMS 1.5 and Under</a></li>
+<li><a class="reference internal" href="#sample-args-for-check-nrpe">Sample Args for check_nrpe</a><ul>
+<li><a class="reference internal" href="#check-cpu-temperature-of-remote-system">Check CPU Temperature of Remote System</a></li>
+<li><a class="reference internal" href="#check-disk-usage-of-remote-system">Check Disk Usage of Remote System</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Included Check Commands</a><ul>
+      <li>Previous: <a href="check_minecraft.html" title="previous chapter">Check Command: check_minecraft</a></li>
+      <li>Next: <a href="check_ping.html" title="next chapter">Check Command: check_ping</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/check_commands/check_nrpe.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/check_commands/check_nrpe.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

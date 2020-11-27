@@ -1,0 +1,118 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>nems-tools: GPIO Extender &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="nems-tools: Warning Light" href="warninglight.html" />
+    <link rel="prev" title="NEMS Migrator Local Backup" href="../apps/nems-migrator.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nems-tools-gpio-extender">
+<h1>nems-tools:&nbsp;GPIO&nbsp;Extender<a class="headerlink" href="#nems-tools-gpio-extender" title="Permalink to this headline">¶</a></h1>
+<p>If your NEMS Linux server is not powered by a Raspberry Pi, or if it is
+not located where you’d like your NEMS Warning Light, plugging a NEMS
+Warning Light device into the&nbsp;GPIO&nbsp;isn’t possible. That’s where the NEMS
+Tools&nbsp;GPIO&nbsp;Extender comes in.</p>
+<p>To use the NEMS Tools&nbsp;GPIO&nbsp;Extender, you’ll need any Raspberry Pi to act
+as the receiver, but your NEMS Linux server can be any supported
+platform, including Virtual Appliance. A Pi Zero WH would do very nicely
+for the task. Since the&nbsp;GPIO&nbsp;Extender receiver is separate from your
+NEMS Linux server, you can add Raspberry Pi’s&nbsp;GPIO&nbsp;to your ODROID-N2
+NEMS Server, for example. Or install your NEMS Warning Light on a
+ceiling-mounted unit closer to the area where your technicians work,
+connected to the&nbsp;GPIO&nbsp;Extender server (your NEMS Linux server) over
+wifi. Or install your NEMS Warning Light on the other side of the world:
+Since the NEMS Tools&nbsp;GPIO&nbsp;Extender is IP-based, it can be anywhere as
+long as it has network access to your NEMS Linux server (TCP port 9595).</p>
+<p>To top it off, you can use an&nbsp;<em>unlimited</em>&nbsp;number of NEMS
+Tools&nbsp;GPIO&nbsp;Extender receivers with a single NEMS Linux Server.</p>
+<p>NEMS Linux 1.5+ has the NEMS Tools&nbsp;GPIO&nbsp;Extender server running on
+port 9595.</p>
+<p>To connect to the NEMS Linux GPIO Extender, simply boot up a separate
+device running <a class="reference external" href="extender_os.html">NEMS Extender OS</a>.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../apps/nems-migrator.html" title="previous chapter">NEMS Migrator Local Backup</a></li>
+      <li>Next: <a href="warninglight.html" title="next chapter">nems-tools: Warning Light</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/nems-tools/gpioextender.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/nems-tools/gpioextender.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

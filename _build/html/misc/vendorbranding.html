@@ -1,0 +1,162 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NEMS Linux Vendor Branding &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Documentation Contributors" href="../credits.html" />
+    <link rel="prev" title="NEMS Linux Release MD5 Checksums" href="md5checksums.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nems-linux-vendor-branding">
+<h1>NEMS Linux Vendor Branding<a class="headerlink" href="#nems-linux-vendor-branding" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/ssvendorbranding.png"><img alt="Vendor Branding Image" src="../_images/ssvendorbranding.png" style="width: 600px;" /></a>
+</div>
+<p>Whether you’re a vendor, distributor or IT professional, it’s
+nice to include your own branding if you install a NEMS Server at a
+client site, or if you’re building and selling NEMS Linux appliances.</p>
+<p>Currently the NEMS Linux Vendor Branding feature supports:</p>
+<ol class="arabic simple">
+<li>Vendor Logo</li>
+<li>Vendor&nbsp;URL&nbsp;(optional)</li>
+<li>Vendor License (optional)</li>
+</ol>
+<p>When you add your vendor logo, it will be scaled to a maximum height of
+60 pixels and placed on the NEMS Dashboard above sponsor logos, and the
+sponsor logos will be shrunk to a smaller size. If you include a&nbsp;URL, the
+logo will be clickable and will open a new tab to your URL&nbsp;when clicked.</p>
+<div class="section" id="add-your-vendor-branding">
+<h2>Add Your Vendor Branding<a class="headerlink" href="#add-your-vendor-branding" title="Permalink to this headline">¶</a></h2>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">When creating your vendor image master, do not boot the image. Instead, add your vendor files using a card reader on a computer, and then create an img of the card containing your vendor files. If you boot the system from your card, the filesystem will be resized to fill the card, so your resulting img will be huge. You may then have trouble re-imaging it to new cards since the capacity from card to card may vary by a byte or two.</p>
+</div>
+<ol class="arabic simple">
+<li>Mount your NEMS Linux drive (Eg., SD card) on your computer.</li>
+<li>Place your logo in the&nbsp;<em>vendor</em>&nbsp;folder on the&nbsp;<em>boot</em>&nbsp;partition. It
+must be named&nbsp;<strong>logo.png</strong></li>
+<li>If you would like your logo to be clickable (eg., link to your
+company web site), create a file in that same folder
+called&nbsp;<strong>url.txt</strong>&nbsp;and paste your full&nbsp;URL&nbsp;into the file.</li>
+<li>A Vendor License may be purchased, if desired. If a valid Vendor
+License is included, all users who share this build will be able to
+utilize your NEMS Cloud Services account. This means you will be able
+to monitor every server that is distributed under your account. This
+feature is intended for IT administrators who need to monitor
+widespread networks.</li>
+</ol>
+</div>
+<div class="section" id="logo-tips">
+<h2>Logo Tips<a class="headerlink" href="#logo-tips" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Your logo should have a transparent background.</li>
+<li>Your logo should scale nicely and be recognizable when it is scaled
+to 60 pixels high.</li>
+<li>You should assume the logo will always be presented on a dark
+background. If your logo is dark, consider adding a light border to
+your logo.png file.</li>
+<li>URLs need to be complete. For example,&nbsp;<strong>nemslinux.com</strong>&nbsp;is
+incorrect, whereas&nbsp;<strong>https://nemslinux.com/</strong>&nbsp;is correct.</li>
+<li>Be mindful that you are placing your logo file within
+the&nbsp;<em>boot</em>&nbsp;partition, which is generally quite small. Ensure your
+file is of reasonable size, especially considering it will be scaled
+down to a height of 60 pixels. So a massive high-res logo.png is
+really unnecessary. If you run out of space on&nbsp;<em>boot</em>&nbsp;you could
+experience problems.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NEMS Linux Vendor Branding</a><ul>
+<li><a class="reference internal" href="#add-your-vendor-branding">Add Your Vendor Branding</a></li>
+<li><a class="reference internal" href="#logo-tips">Logo Tips</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="md5checksums.html" title="previous chapter">NEMS Linux Release MD5 Checksums</a></li>
+      <li>Next: <a href="../credits.html" title="next chapter">Documentation Contributors</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/misc/vendorbranding.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/misc/vendorbranding.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

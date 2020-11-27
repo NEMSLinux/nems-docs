@@ -1,0 +1,464 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Available Platforms &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NEMS Administrator User" href="default_password.html" />
+    <link rel="prev" title="Monitor A Non-Standard Port with check_tcp" href="../gettingstarted/exercises/check_tcp.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="available-platforms">
+<h1>Available Platforms<a class="headerlink" href="#available-platforms" title="Permalink to this headline">¶</a></h1>
+<p>NEMS Linux is available on many platforms, such as Single Board Computer,
+Virtual Appliance, Cloud Deployment or Docker.</p>
+<p>Visit&nbsp;<a class="reference external" href="https://nemslinux.com/">the NEMS Linux web site</a>&nbsp;for a
+complete list of supported platforms.</p>
+<div class="section" id="nems-linux-on-single-board-computers">
+<h2>NEMS Linux on Single Board Computers<a class="headerlink" href="#nems-linux-on-single-board-computers" title="Permalink to this headline">¶</a></h2>
+<p>When choosing your hardware, general SBC comparisons are not necessarily
+relevant since you will be deploying a NEMS Linux server specifically.
+As an example, an ODROID-C2 vs Raspberry Pi 3 comparison will say
+Raspberry Pi 3 has better support for video drivers. Well, that won’t
+matter to you; you’re using NEMS Linux and we’ve pre-built the distro
+for you, and nothing about it requires good video driver support.
+So because of this, it is helpful to review&nbsp;<a class="reference external" href="https://nemslinux.com/stats/">the NEMS Linux
+Stats page</a>, and&nbsp;even <a class="reference external" href="https://discord.gg/e9xT9mh">discuss it on our
+Discord Server</a>&nbsp;to make an educated
+decision.</p>
+<p>Here are some general guidelines.</p>
+<ol class="arabic simple">
+<li>eMMC storage is better than an SD Card. This is a universal truth. SD
+Cards have a high failure rate whereas eMMC tends to operate with
+perceptively similar reliability and performance to a traditional SSD.
+NEMS Linux performs
+a lot of read/write operations, as you can imagine, so the more
+reliable your storage medium, the more reliable your NEMS Server.</li>
+<li>More RAM means better performance. The minimum recommended RAM is 1GB,
+though 2GB&nbsp;or higher will greatly improve performance and reliability
+of your NEMS Server.</li>
+</ol>
+<div class="section" id="raspberry-pi">
+<h3>Raspberry Pi<a class="headerlink" href="#raspberry-pi" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/raspberry_pi_3_b_plus.png"><img alt="Raspberry Pi 3 B Plus" src="../_images/raspberry_pi_3_b_plus.png" style="width: 500px;" /></a>
+</div>
+<p><a class="reference external" href="https://cat5.tv/pi/">BUY NOW</a></p>
+</div>
+<div class="section" id="pine64">
+<h3>Pine64<a class="headerlink" href="#pine64" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/pinea64-plus.png"><img alt="Pine64 A64 Plus" src="../_images/pinea64-plus.png" style="width: 500px;" /></a>
+</div>
+</div>
+<div class="section" id="hardkernel-odroid-xu4">
+<h3>Hardkernel ODROID XU4<a class="headerlink" href="#hardkernel-odroid-xu4" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/odroid-xu4q.png"><img alt="Odroid XU4Q" src="../_images/odroid-xu4q.png" style="width: 500px;" /></a>
+</div>
+</div>
+<div class="section" id="friendlyelec">
+<h3>FriendlyElec<a class="headerlink" href="#friendlyelec" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/nanopc-t4.png"><img alt="NanoPC T4" src="../_images/nanopc-t4.png" style="width: 400px;" /></a>
+</div>
+</div>
+<div class="section" id="orange-pi">
+<h3>Orange Pi<a class="headerlink" href="#orange-pi" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/orange-pi-3.png"><img alt="Orange Pi 3" src="../_images/orange-pi-3.png" style="width: 500px;" /></a>
+</div>
+</div>
+<div class="section" id="asus-tinker-board-s">
+<h3>ASUS Tinker Board / S<a class="headerlink" href="#asus-tinker-board-s" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/asus_tinker_board_s.png"><img alt="Asus Tinkerboard S" src="../_images/asus_tinker_board_s.png" style="width: 500px;" /></a>
+</div>
+<p>ASUS Tinker Board S must be switched to Maskrom boot mode in order to
+boot from SD card. The built-in eMMC is not big enough to run NEMS Linux
+from.</p>
+</div>
+<div class="section" id="khadas-vim3">
+<h3>Khadas VIM3<a class="headerlink" href="#khadas-vim3" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/khadas_vim3_basic.png"><img alt="Khadas VIM 3" src="../_images/khadas_vim3_basic.png" style="width: 400px;" /></a>
+</div>
+<p>You can boot from SD or USB, then install NEMS Linux to the integrated
+eMMC storage by typing;</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">sudo nems-install</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="nems-linux-appliance">
+<h2>NEMS Linux Appliance<a class="headerlink" href="#nems-linux-appliance" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/nems-fitlet2.png"><img alt="Fitlet 2" src="../_images/nems-fitlet2.png" style="width: 500px;" /></a>
+</div>
+</div>
+<div class="section" id="nems-linux-virtual-appliance">
+<h2>NEMS Linux Virtual Appliance<a class="headerlink" href="#nems-linux-virtual-appliance" title="Permalink to this headline">¶</a></h2>
+<p>The NEMS Linux Virtual Appliance is only available
+to&nbsp;<a class="reference external" href="https://patreon.com/nems">Patrons</a>.</p>
+<p>The NEMS Linux virtual appliance has 3 available releases:</p>
+<ul class="simple">
+<li><strong>NEMS OVA</strong>&nbsp;(Open Virtual Appliance) can be easily deployed on
+virtualization hypervisors such as VMware ESXi, vSphere, Player or
+Workstation or Oracle VirtualBox. The OVA package contains the entire
+virtual appliance and is ready to import and boot.</li>
+<li><strong>NEMS VHD</strong>&nbsp;(Virtual Hard Disk) can be used to deploy NEMS Linux on
+Microsoft Hyper-V.</li>
+<li><strong>NEMS QCOW2</strong>&nbsp;(QEMU Copy-On-Write) can be used to deploy NEMS Linux
+on QEMU, KVM, Proxmox VE, and other hypervisors that support the
+QCOW2 format.</li>
+</ul>
+<p>The underlying software in each release is identical. The individual
+releases are created in order to ease deployment across a variety of the
+most popular virtualization hypervisors.</p>
+<div class="section" id="host-requirements">
+<h3>Host Requirements<a class="headerlink" href="#host-requirements" title="Permalink to this headline">¶</a></h3>
+<p><em>All Hypervisors</em></p>
+<ul class="simple">
+<li>VT-x/AMD-V capable CPU with feature enabled in BIOS/UEFI</li>
+<li>Minimum 6 GB&nbsp;free RAM</li>
+<li>100 GB&nbsp;hard disk space</li>
+</ul>
+<p><em>VMware ESXi Only</em></p>
+<ul class="simple">
+<li>Version 5.5 or higher. NEMS Linux uses Virtual Hardware Version 10.</li>
+</ul>
+</div>
+<div class="section" id="guest-specifications">
+<h3>Guest Specifications<a class="headerlink" href="#guest-specifications" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>64-Bit</li>
+<li>80&nbsp;GB&nbsp;Virtual Hard Disk (Dynamic / Thin Provisioning where supported)</li>
+<li>4&nbsp;GB&nbsp;RAM</li>
+</ul>
+</div>
+<div class="section" id="deployment-notes">
+<h3>Deployment Notes<a class="headerlink" href="#deployment-notes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Network Bridge</strong> - Before booting, you must configure your virtual
+Network Interface to use your actual&nbsp;LAN&nbsp;in Bridged mode.</li>
+<li><strong>Unique MAC Address</strong> - While configuring your virtual Network
+Interface, you must generate a
+new MAC address for the virtual NIC. If your hypervisor does not
+offer a feature to automatically generate a MAC address you can
+visit&nbsp;<a class="reference external" href="https://nemslinux.com/api/mac">nemslinux.com/api/mac</a>&nbsp;to
+generate one. Do not simply enter random numbers.&nbsp;<strong>Record your
+virtual MAC address somewhere safe.</strong>&nbsp;Do not change your MAC address
+after initializing NEMS. Doing so would result in your HWID changing,
+which will disassociate your Virtual Appliance with NEMS Cloud
+Services.</li>
+<li><strong>CPU Virtualization Features</strong> - x86 Virtualization must be available
+and enabled on your physical CPU
+in order to boot the Virtual Appliance. This is found in your host
+machine’s BIOS/UEFI settings and will be called VT-x (Intel) or AMD-V
+(AMD), or something similar such as “Virtualization Extensions”.</li>
+<li><strong>Static RAM Mode</strong> - Ensure RAM is <span class="underline">not</span> assigned as
+“dynamic” RAM. ESXi, for example, may
+remove all RAM from the appliance if set to dynamic, which will
+result in NEMS Linux not functioning correctly. RAM should be static.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="nems-linux-amazon-machine-image-ami">
+<h2>NEMS Linux Amazon Machine Image (AMI)<a class="headerlink" href="#nems-linux-amazon-machine-image-ami" title="Permalink to this headline">¶</a></h2>
+<p>The NEMS Linux Amazon Machine Image is available in the Amazon EC2
+Community AMIs marketplace. Simply search for&nbsp;<em>NEMS Linux</em>&nbsp;when
+launching your instance.</p>
+<div class="section" id="important-note">
+<h3>Important Note<a class="headerlink" href="#important-note" title="Permalink to this headline">¶</a></h3>
+<p>Your being here means you are an early adopter of NEMS Linux on Amazon
+Web Services. During this early testing phase, it is available through
+the community marketplace. However, once NEMS has been tried-and-true,
+it will be moving into the Amazon Marketplace. This means it will
+inevitably fall under Amazon’s fee structure. For now, it’s as free as
+Amazon allows me to make it.</p>
+</div>
+<div class="section" id="ami-ids">
+<h3>AMI IDs<a class="headerlink" href="#ami-ids" title="Permalink to this headline">¶</a></h3>
+<p>The NEMS Linux AMI is found under&nbsp;<em>Community AMIs</em>&nbsp;on <strong>us-east-1 (N.
+Virginia)</strong>. If you wish to deploy on a different AWS Service Endpoint and
+are a current Patron supporting the project on Patreon, please let me
+know and I will copy the AMI to your preferred region. Since this costs
+me extra money to do, I only do it by request, and only for those who
+contribute to the project.</p>
+<ul class="simple">
+<li>NEMS 1.5 AMI Build 1 - ami-03480e018178d1c75</li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
+<p>The NEMS Linux AMI leverages Amazon’s T2 instance types, dramatically
+reducing the cost of running a NEMS Server in the Cloud by bursting to
+full core performance only when required. T2 instances are also
+available to use in the AWS Free Tier, which includes 750 hours of
+t2.micro instances each month for one year for new AWS customers.</p>
+<p>The NEMS Linux AMI is an amd64 build.</p>
+</div>
+<div class="section" id="aws-requirements">
+<h3>AWS Requirements<a class="headerlink" href="#aws-requirements" title="Permalink to this headline">¶</a></h3>
+<p>The NEMS Linux AMI requires the following:</p>
+<ul class="simple">
+<li>If monitoring 1-20 hosts: t2.micro or higher EC2 instance</li>
+<li>If monitoring more than 20 hosts: t2.medium or higher EC2 instance</li>
+<li>An elastic IP address</li>
+<li>Volume is 16 GB by default and may need to be increased in time</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3>Deployment Notes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Important:</strong>&nbsp;Before booting, you must configure an elastic IP
+address for your NEMS Linux instance. Failure to do this will break
+several key features, including NEMS Cloud Services, NEMS CheckIn,
+and your daily backup.</li>
+<li>To access NEMS Linux remotely, you will need to configure your
+Security Group for the NEMS Linux instance to allow incoming
+connections on the NEMS Linux ports
+(See&nbsp;<a class="reference external" href="../config/networking.html">Networking</a>&nbsp;for more
+info). It is recommended to make these accessible <span class="underline">only</span>
+from your trusted IP address(es).</li>
+<li>NEMS Linux allows you to use either
+<a class="reference external" href="default_password.html">username/password combinations</a> or
+username/key pair combinations to login via SSH. As this could pose a
+security issue, please ensure only your own IP address has access to
+NEMS Linux ports (in your EC2 Security Group configuration for the
+instance).</li>
+</ul>
+</div>
+<div class="section" id="re-initializing">
+<h3>Re-Initializing<a class="headerlink" href="#re-initializing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>If you run <a class="reference external" href="../gettingstarted/initialization.html">nems-init</a>&nbsp;on a
+NEMS Server that has already been initialized, the server’s public key
+and all trust relationships will be transferred to the new user prior
+to the old user being purged.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="nems-linux-docker-container">
+<h2>NEMS Linux Docker Container<a class="headerlink" href="#nems-linux-docker-container" title="Permalink to this headline">¶</a></h2>
+<p><strong>The NEMS Linux Docker Container is coming soon.</strong></p>
+<p>NEMS Linux for Docker <strong>IS NOT YET AVAILBLE</strong>.</p>
+<div class="section" id="install-nems-linux-for-docker">
+<h3>Install NEMS Linux for Docker<a class="headerlink" href="#install-nems-linux-for-docker" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="basic-installation">
+<h4>Basic Installation<a class="headerlink" href="#basic-installation" title="Permalink to this headline">¶</a></h4>
+<p>This command will launch a new Docker container called&nbsp;<em>nemslinux</em>&nbsp;using
+default settings:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">docker run --hostname nems --mount</span>
+<span class="go">type=tmpfs,destination=/tmp,tmpfs-mode=1777 --mount</span>
+<span class="go">type=tmpfs,destination=/var/www/html/backup/snapshot,tmpfs-mode=1770</span>
+<span class="go">--restart=unless-stopped --stop-timeout 120 --name nemslinux -d</span>
+<span class="go">baldnerd/nemslinux:1.6_build1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-nems-linux-docker-container-on-a-physical-network">
+<h4>Install NEMS Linux Docker Container on a Physical Network<a class="headerlink" href="#install-nems-linux-docker-container-on-a-physical-network" title="Permalink to this headline">¶</a></h4>
+<p>Docker is unlike a standard deployment since by default (with a basic
+install) only the host computer will have access to it. That of course
+is not ideal for a NEMS Linux server if you wish to be able to
+administer it from multiple systems, view dashboards, or use a NEMS
+Warning Light.</p>
+<p>While NEMS Linux will function fine on a Docker network (eg.,
+172.17.0.2), if you wish to have full access to your NEMS Server just as
+you would with a physical appliance, you will need to connect it to your
+physical network.</p>
+<p>The two most common options for specifying a network is to use either
+DHCP or a Static IP Address:</p>
+<div class="section" id="using-dhcp">
+<h5>Using DHCP<a class="headerlink" href="#using-dhcp" title="Permalink to this headline">¶</a></h5>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">docker run --network=multi-host-network --hostname nems --mount</span>
+<span class="go">type=tmpfs,destination=/tmp,tmpfs-mode=1777 --mount</span>
+<span class="go">type=tmpfs,destination=/var/www/html/backup/snapshot,tmpfs-mode=1770</span>
+<span class="go">--restart=unless-stopped --stop-timeout 120 --name nemslinux -d</span>
+<span class="go">baldnerd/nemslinux:1.6_build1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-static-ip">
+<h5>Using Static IP<a class="headerlink" href="#using-static-ip" title="Permalink to this headline">¶</a></h5>
+<p>Change the sample 10.0.0.105 IP address to suit your needs.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">docker network connect --ip 10.0.0.105 multi-host-network run --hostname</span>
+<span class="go">nems --mount type=tmpfs,destination=/tmp,tmpfs-mode=1777 --mount</span>
+<span class="go">type=tmpfs,destination=/var/www/html/backup/snapshot,tmpfs-mode=1770</span>
+<span class="go">--restart=unless-stopped --stop-timeout 120 --name nemslinux -d</span>
+<span class="go">baldnerd/nemslinux:1.6_build1</span>
+</pre></div>
+</div>
+<p>Please see&nbsp;<a class="reference external" href="https://docs.docker.com/engine/reference/commandline/network_connect/">Docker’s Network Connections
+documentation</a>&nbsp;for
+more help.</p>
+</div>
+</div>
+<div class="section" id="with-usb-support">
+<h4>With USB Support<a class="headerlink" href="#with-usb-support" title="Permalink to this headline">¶</a></h4>
+<p>To connect a USB device such
+as&nbsp;<a class="reference external" href="../accessories/temper.html">temper</a>&nbsp;to your
+Docker-based NEMS Server, first determine its /dev assignment on your
+host, and then run NEMS as follows, replacing ttyUSB0 with your actual
+USB device:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">docker run --device=/dev/ttyUSB0 --hostname nems --mount</span>
+<span class="go">type=tmpfs,destination=/tmp,tmpfs-mode=1777 --mount</span>
+<span class="go">type=tmpfs,destination=/var/www/html/backup/snapshot,tmpfs-mode=1770</span>
+<span class="go">--restart=unless-stopped --stop-timeout 120 --name nemslinux -d</span>
+<span class="go">baldnerd/nemslinux:1.6_build1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="initialize-your-docker-based-nems-server">
+<h3>Initialize Your Docker-Based NEMS Server<a class="headerlink" href="#initialize-your-docker-based-nems-server" title="Permalink to this headline">¶</a></h3>
+<p>Initializing a NEMS Server within a Docker Container is different than
+all other platforms.</p>
+<p>On the Docker host, simply run:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">docker exec -it nemslinux nems-init</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="access-nems-linux-cli">
+<h3>Access NEMS Linux CLI<a class="headerlink" href="#access-nems-linux-cli" title="Permalink to this headline">¶</a></h3>
+<p>Should you have need to access the NEMS Linux CLI, you may do so by
+launching&nbsp;<em>bash</em>&nbsp;in your container.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">docker exec -it nemslinux bash</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Available Platforms</a><ul>
+<li><a class="reference internal" href="#nems-linux-on-single-board-computers">NEMS Linux on Single Board Computers</a><ul>
+<li><a class="reference internal" href="#raspberry-pi">Raspberry Pi</a></li>
+<li><a class="reference internal" href="#pine64">Pine64</a></li>
+<li><a class="reference internal" href="#hardkernel-odroid-xu4">Hardkernel ODROID XU4</a></li>
+<li><a class="reference internal" href="#friendlyelec">FriendlyElec</a></li>
+<li><a class="reference internal" href="#orange-pi">Orange Pi</a></li>
+<li><a class="reference internal" href="#asus-tinker-board-s">ASUS Tinker Board / S</a></li>
+<li><a class="reference internal" href="#khadas-vim3">Khadas VIM3</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nems-linux-appliance">NEMS Linux Appliance</a></li>
+<li><a class="reference internal" href="#nems-linux-virtual-appliance">NEMS Linux Virtual Appliance</a><ul>
+<li><a class="reference internal" href="#host-requirements">Host Requirements</a></li>
+<li><a class="reference internal" href="#guest-specifications">Guest Specifications</a></li>
+<li><a class="reference internal" href="#deployment-notes">Deployment Notes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nems-linux-amazon-machine-image-ami">NEMS Linux Amazon Machine Image (AMI)</a><ul>
+<li><a class="reference internal" href="#important-note">Important Note</a></li>
+<li><a class="reference internal" href="#ami-ids">AMI IDs</a></li>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#aws-requirements">AWS Requirements</a></li>
+<li><a class="reference internal" href="#id1">Deployment Notes</a></li>
+<li><a class="reference internal" href="#re-initializing">Re-Initializing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nems-linux-docker-container">NEMS Linux Docker Container</a><ul>
+<li><a class="reference internal" href="#install-nems-linux-for-docker">Install NEMS Linux for Docker</a><ul>
+<li><a class="reference internal" href="#basic-installation">Basic Installation</a></li>
+<li><a class="reference internal" href="#install-nems-linux-docker-container-on-a-physical-network">Install NEMS Linux Docker Container on a Physical Network</a><ul>
+<li><a class="reference internal" href="#using-dhcp">Using DHCP</a></li>
+<li><a class="reference internal" href="#using-static-ip">Using Static IP</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#with-usb-support">With USB Support</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#initialize-your-docker-based-nems-server">Initialize Your Docker-Based NEMS Server</a></li>
+<li><a class="reference internal" href="#access-nems-linux-cli">Access NEMS Linux CLI</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../gettingstarted/exercises/check_tcp.html" title="previous chapter">Monitor A Non-Standard Port with check_tcp</a></li>
+      <li>Next: <a href="default_password.html" title="next chapter">NEMS Administrator User</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/basic/platforms.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/basic/platforms.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

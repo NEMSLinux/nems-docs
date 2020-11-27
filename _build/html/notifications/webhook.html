@@ -1,0 +1,147 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Notifications by Webhook &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NEMS Commands and Special Features" href="../commands/index.html" />
+    <link rel="prev" title="Notifications By SMS" href="sms.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="notifications-by-webhook">
+<h1>Notifications by Webhook<a class="headerlink" href="#notifications-by-webhook" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../_images/discord-nems-webhook.png"><img alt="Webhook Notification" src="../_images/discord-nems-webhook.png" style="width: 300px;" /></a>
+</div>
+<p>Send notifications directly to your webhook. For example, have
+your NEMS Linux server post alerts directly to your company Discord
+channel.</p>
+<p>To use NEMS Warning Light’s webhook feature, simply add your
+webhook&nbsp;&nbsp;to&nbsp;<a class="reference external" href="../apps/nems-sst.html">NEMS SST</a>.</p>
+<p>Webhook functionality requires NEMS Linux 1.5+. NEMS only sends
+webhooks. It does not receive them.</p>
+<div class="section" id="currently-supported-webhooks">
+<h2>Currently Supported Webhooks:<a class="headerlink" href="#currently-supported-webhooks" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Discord</li>
+<li>Slack</li>
+<li>Microsoft Office 365 / Teams</li>
+</ul>
+<p>If you would like support added for another webhook, please simply put
+it in as a feature request in the Community Forum.</p>
+</div>
+<div class="section" id="configuring-webhooks">
+<h2>Configuring Webhooks<a class="headerlink" href="#configuring-webhooks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="microsoft-office-365-teams">
+<h3>Microsoft Office 365 / Teams<a class="headerlink" href="#microsoft-office-365-teams" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Sign in to&nbsp;<a class="reference external" href="https://teams.microsoft.com/">Microsoft Teams</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="test-your-webhook">
+<h2>Test Your Webhook<a class="headerlink" href="#test-your-webhook" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">sudo nems-webhooktest</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Notifications by Webhook</a><ul>
+<li><a class="reference internal" href="#currently-supported-webhooks">Currently Supported Webhooks:</a></li>
+<li><a class="reference internal" href="#configuring-webhooks">Configuring Webhooks</a><ul>
+<li><a class="reference internal" href="#microsoft-office-365-teams">Microsoft Office 365 / Teams</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#test-your-webhook">Test Your Webhook</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">NEMS Linux Notifications</a><ul>
+      <li>Previous: <a href="sms.html" title="previous chapter">Notifications By SMS</a></li>
+      <li>Next: <a href="../commands/index.html" title="next chapter">NEMS Commands and Special Features</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/notifications/webhook.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/notifications/webhook.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

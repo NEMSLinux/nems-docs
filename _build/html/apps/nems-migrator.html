@@ -1,0 +1,159 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NEMS Migrator Local Backup &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="nems-tools: GPIO Extender" href="../nems-tools/gpioextender.html" />
+    <link rel="prev" title="Frequently Asked Questions" href="../basic/faq.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nems-migrator-local-backup">
+<h1>NEMS Migrator Local Backup<a class="headerlink" href="#nems-migrator-local-backup" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>SD cards are prone to failure, and NEMS Linux has protections in place
+to ensure the longevity of your storage media. However, what happens if
+your card does fail?</p>
+<p>NEMS Migrator provides a constant backup of your NEMS Server’s
+configuration, which can be backed up locally or
+<a class="reference external" href="../nems-cloud-services/nems-migrator.html">in NEMS Cloud Services</a>
+(or both). Restoring your NEMS Migrator backup gets your configuration
+back online within minutes.</p>
+<p>Combined with&nbsp;<a class="reference external" href="../nems-cloud-services/checkin.html">NEMS
+CheckIn</a>&nbsp;to notify you
+in event of failure, NEMS Migrator is an excellent way to ensure your
+NEMS Server is protected against failure.</p>
+</div>
+<div class="section" id="local-backups">
+<h2>Local Backups<a class="headerlink" href="#local-backups" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="backup">
+<h3>Backup<a class="headerlink" href="#backup" title="Permalink to this headline">¶</a></h3>
+<p>Your NEMS Linux server automatically generates a backup of your
+configuration ready for you to download at any time.</p>
+<p>Your NEMS Migrator backup (filename:&nbsp;<em>backup.nems</em>) contains your NEMS
+server configuration, allowing you to quickly re-deply on a new NEMS
+server or re-flashed device without having to re-create your Nagios
+configuration manually.</p>
+<p>A NEMS Migrator backup is proprietary to NEMS. It is not intended for
+user consumption, but rather can be used to restore NEMS Linux to a
+previous configuration, or quickly rebuild after an SD card failure (for
+example).</p>
+<p>NEMS Migrator will check your backup status every few minutes. If the
+backup is older than 30 minutes, it will replace your backup.nems file
+with a current snapshot. Therefore you know that if you make a copy of
+your backup.nems file, it is no older than 30 minutes. If however you
+make changes to your configuration, those changes may not appear in your
+backup for up to 30 minutes.</p>
+<p>To use NEMS Migrator to upgrade from an earlier version of NEMS Linux
+(or even NagiosPi), please read&nbsp;<a class="reference external" href="../advanced/nemsupgrade.html">Upgrade NEMS Linux to Newer
+Version</a>.</p>
+<p>To automate your NEMS Migrator backup, please see&nbsp;<a class="reference external" href="../basic/backupnems.html">Backup Your NEMS
+Configuration
+Automatically</a>&nbsp;for
+helpful resources and tips.</p>
+</div>
+<div class="section" id="restore">
+<h3>Restore<a class="headerlink" href="#restore" title="Permalink to this headline">¶</a></h3>
+<p>Please
+see&nbsp;<a class="reference external" href="../commands/nems-restore.html">nems-restore</a>.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NEMS Migrator Local Backup</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#local-backups">Local Backups</a><ul>
+<li><a class="reference internal" href="#backup">Backup</a></li>
+<li><a class="reference internal" href="#restore">Restore</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../basic/faq.html" title="previous chapter">Frequently Asked Questions</a></li>
+      <li>Next: <a href="../nems-tools/gpioextender.html" title="next chapter">nems-tools:&nbsp;GPIO&nbsp;Extender</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/apps/nems-migrator.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/apps/nems-migrator.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

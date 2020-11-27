@@ -1,0 +1,19 @@
+/* Do not add bottom margin to multi-line bullet points */
+.rst-content .line-block {
+  margin-bottom: 0 !important;
+}
+
+.bolditalic {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+cite {
+  color: #333;
+  font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+  font-size: 0.9em;
+}

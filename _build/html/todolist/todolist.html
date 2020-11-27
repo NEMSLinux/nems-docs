@@ -1,0 +1,355 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NEMS Linux To Do List &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How To Report Issues" href="reportissues.html" />
+    <link rel="prev" title="NEMS Mesh: The Self-Hosted NEMS Cloud" href="../advanced/nems-mesh.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nems-linux-to-do-list">
+<h1>NEMS Linux To Do List<a class="headerlink" href="#nems-linux-to-do-list" title="Permalink to this headline">¶</a></h1>
+<p>This list details&nbsp;features which are planned for future releases of NEMS
+Linux. NEMS Linux is released on a semi-annual basis, with a major
+release usually falling in or around May and November. Thanks to the
+NEMS Linux Migrator, upgrading is a cinch, and thanks to NEMS Linux’
+rolling release system, many fixes, patches and upgrades can find their
+way into existing installations.</p>
+<div class="section" id="approved-feature-requests">
+<h2>Approved Feature Requests<a class="headerlink" href="#approved-feature-requests" title="Permalink to this headline">¶</a></h2>
+<p>You can submit a feature request either via Discord (in
+#feature-requests) or the Community Forum (in Feature Requests).</p>
+<ul class="simple">
+<li><a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=10&amp;t=733&amp;p=3265#p3265">Custom icons as per
+Amheus</a></li>
+</ul>
+</div>
+<div class="section" id="known-issues">
+<h2>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>As
+per&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=10&amp;t=707">Ricks</a>&nbsp;add
+ability for NEMS to auto-discover hosts and perhaps even compatible
+services. This has been added as a Patreon goal.</li>
+<li>As pointed out by tripled, check_nconf treats ARG1 as command (-c) in
+its entirety. So we receive “NRPE: Command ‘check_disk -w 80 -c 90 -p
+/media/pi” as the full line is treated as command. It should be
+sending -c “check_disk” -a “-w 80 -c 90 -p /media/pi” - will likely
+need to fix the check_command which may break it for those who hacked
+it up by changing the arg to, for example, check_disk“ -a ”-w 80 -c
+90 -p /media/pi</li>
+<li>Bland-X3 reports: “Have a bug/issue. Check_snmp has issues with
+creating files when using the –rate switch (-C CommunityGoesHere -P
+2c -o .1.3.6.1.2.1.2.2.1.10.1 -w 80000 -c 102400 –rate) results in
+Status Information: Cannot create directory: /usr/var/111 … Can run
+command in CLI using sudo and does record the rate information which
+indicates simple permission problem or can modify the check_snmp
+command to save it somewhere else with permission maybe.” - Quick
+guess is maybe the command was run as root user from CLI which has
+now locked the nagios user from being able to access the folders.
+Will need to test. Also,
+see&nbsp;<a class="reference external" href="https://support.nagios.com/forum/viewtopic.php?f=7&amp;t=45864">https://support.nagios.com/forum/viewtopic.php?f=7&amp;t=45864</a></li>
+<li>Static IP doesn’t persist after reboot in Virtual Appliance. Reported
+by dr_patso and confirmed by 🇨🇷 Benedetti -Ale Morera-.</li>
+<li>🇨🇷 Benedetti -Ale Morera- reported NEMS SST breaking TLS settings if
+enable background Blur and save. I have not been able to replicate
+this.</li>
+<li><em>check_wmi_plus</em>&nbsp;has never contained the functionality for the
+documented&nbsp;<em>checkdns</em>&nbsp;feature. This has lead to some users saying the
+feature (which is an available check command in NEMS based on their
+docs) doesn’t work. Need to remove this check command, and add a new
+one – perhaps&nbsp;<em>check_dns $HOSTNAME$ $HOSTADDRESS$</em>&nbsp;which will ensure
+the&nbsp;&nbsp;of the host matches.</li>
+</ul>
+</div>
+<div class="section" id="during-the-1-6-release-cycle-not-at-launch">
+<h2>During the 1.6 Release Cycle (Not At Launch)<a class="headerlink" href="#during-the-1-6-release-cycle-not-at-launch" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Add Elgato StreamDeck controller support
+via&nbsp;<a class="reference external" href="https://github.com/abcminiuser/python-elgato-streamdeck">https://github.com/abcminiuser/python-elgato-streamdeck</a></li>
+<li>Add multi-tenant support as requested by Kevin Quiambao. Ability to
+add extra users who have access to certain features, such as Adagios
+/ Nagios reporting. ULA if possible.</li>
+<li>Integrate notification tests for Telegram and Pushover.</li>
+<li>Move notification tests to NEMS Dashboard (rather than Linux
+terminal).</li>
+<li>Explore integration of ULA for staff.</li>
+<li>Add sound effects to NEMS TV Dashboard on state change as per
+BastyJuice. See&nbsp;<a class="reference external" href="http://www.storiesinflight.com/html5/audio.html">http://www.storiesinflight.com/html5/audio.html</a></li>
+<li>NanoPi M4 Ethernet MAC address changes every reboot. Thanks to
+UltimateBugHunter for reporting.</li>
+<li>The TV output on ODROID-C1+ Build 1 doesn’t work. Fix this.</li>
+<li>Add&nbsp;<a class="reference external" href="https://www.nagios.org/ncpa/?__hstc=189745844.6f4567e25069d3a733d5058a22c1187e.1566995089857.1566995089857.1567168833486.2&amp;__hssc=189745844.2.1567168833486&amp;__hsfp=4019080588#downloads">NCPA</a>&nbsp;support.</li>
+<li>RPi-Monitor giving error on Pi 3 B+ “Can not get information
+(dynamic.json) from rpi-monitor server”. Reported by Ron Taylor.</li>
+<li>If NEMS is unable to communicate with github, a nems-upgrade will
+erroneously upgrade NEMS’ version number even though the upgrade
+itself will have failed, as&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=9&amp;t=93">reported by
+baggins</a>.</li>
+<li>Documentation at the checkcommands level improved, along with other
+step-by-step guides added to the documentation.</li>
+<li>Add an audible alarm to NEMS TV Dashboard as
+per&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=10&amp;t=406">ronjohntaylor</a>.</li>
+<li>NEMS NConf interface revamped to match NEMS’ overall look and feel.
+Branding improved. (Is a Patreon goal. Please consider supporting.)</li>
+<li>Evaluate&nbsp;<a class="reference external" href="https://github.com/Cat5TV/nconf/pull/4">nconf PR #
+4</a>&nbsp;for merge.</li>
+<li>Create NEMS Linux Docker container. (Is a Patreon goal. Please
+consider supporting.)</li>
+<li>Adagios interface customized to remove features not part of NEMS
+Linux.</li>
+<li>Make it so NEMS Off Site Backup sends the server the file size before
+the file, which will allow me to log an error if the user’s file size
+exceeds the limit (rather than just silently failing).</li>
+<li>Take a look at&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=38&amp;t=405">this
+report</a>&nbsp;and make sure
+it is not affecting users in 1.5.</li>
+</ul>
+</div>
+<div class="section" id="user-requests-to-review-during-release-cycle">
+<h2>User Requests to Review During Release Cycle<a class="headerlink" href="#user-requests-to-review-during-release-cycle" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ITManLT would like to see a NEMS SST option to enable speedtest
+results be displayed in NEMS TV Dashboard. I think if I cache results
+in the check_speedtest script, then if the cache exists and is
+current (ie., user has the check enabled in NEMS NConf), use it. If
+cache doesn’t exist or is old, re-create on cron. This way the TV
+Dashboard will update numbers even if the user doesn’t have
+check_speedtest enabled.</li>
+<li>Review this plugin and see if it’s something that I can squeeze
+in:&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=10&amp;t=398">https://forum.nemslinux.com/viewtopic.php?f=10&amp;t=398</a> Not liking the fact
+that it is a Windows program.</li>
+<li>Check ssl&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=10&amp;t=425">as per
+Zerant</a>&nbsp;(thought not
+particularly needed since check_http supports this already).</li>
+<li>Add check_pfsense&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=10&amp;t=412&amp;p=2391&amp;hilit=pfsense#p2391">as per
+mydogboris</a>.</li>
+<li>Veeam checks&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=10&amp;t=398&amp;p=3336&amp;hilit=veeam#p3336">as per
+Premium</a>.</li>
+<li>APC UPS check as per LordOfLevels🔊.&nbsp;<a class="reference external" href="https://exchange.nagios.org/directory/Plugins/Hardware/UPS/APC">See the
+Exchange</a>.</li>
+<li>Web interface to upload a backup.nems file for restoration as per
+LordOfLevels🔊. Perhaps user can run&nbsp;<em>nems-restore webupload</em>&nbsp;and a
+code will be provided which can be entered into the form to confirm
+legitimate usage, and the restore will wait, checking a tmpdir for a
+file upload. Progress and status displayed within the bash window and
+restore prompts “Are you sure” as soon as the upload is complete.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="known-issues-1">
+<span id="id1"></span><h1>Known Issues<a class="headerlink" href="#known-issues-1" title="Permalink to this headline">¶</a></h1>
+<p>These issues will be fixed in due time.</p>
+<ul class="simple">
+<li>Number of services per page selection not working in Nagios Core&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=38&amp;t=95&amp;p=745&amp;hilit=results#p745">as
+per baggins</a>.</li>
+<li>Improve error handling on “Migrator” page. If Cloud auth failed, will
+just die with black screen. Was reported by mydogboris, but I have
+not been able to replicate. Tried changing to an invalid key, tried
+removing the json, but page still loads fine. Perhaps was already
+patched and mydogboris didn’t have the patch.</li>
+<li>Webmin administration of Network settings don’t stick,&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=9&amp;t=69&amp;p=608&amp;hilit=webmin#p608">as per
+kevinds</a>. At
+the release of 1.5 this is still an issue being actively worked on,
+and it is believed that a coming update to Webmin will fix it
+upstream.
+See&nbsp;<a class="reference external" href="https://github.com/webmin/webmin/issues/930#issuecomment-445114922">https://github.com/webmin/webmin/issues/930#issuecomment-445114922</a></li>
+<li>Special chars (eg., !) in NEMS SST domain credentials cause error&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=9&amp;t=337&amp;p=2290&amp;hilit=wmi+scripts#p2290">as
+per
+readyit</a>.
+Have been unable to replicate this issue since Nagios’ resource.cfg
+(which NEMS SST saves to) support illegal characters as per the first
+paragraph of&nbsp;<a class="reference external" href="https://assets.nagios.com/downloads/nagiosxi/docs/Understanding-User-Macros.pdf?_ga=2.174107234.1367194829.1546285277-1305860468.1511033783">this
+document</a>.</li>
+</ul>
+<div class="section" id="ideas-for-future">
+<h2>Ideas for Future<a class="headerlink" href="#ideas-for-future" title="Permalink to this headline">¶</a></h2>
+<p>There is not necessarily a planned timeline for each of these items, but
+here is a list of some of the things I do hope to do in an upcoming
+release. This list covers&nbsp;<em>potential</em>&nbsp;features for future releases of
+NEMS Linux. None of these are set in stone, and should only be
+considered ideas.</p>
+<ul class="simple">
+<li>Add&nbsp;<a class="reference external" href="https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/int-snmptrap.html">SNMP Trap
+support</a>&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=10&amp;t=92&amp;p=2842&amp;hilit=intrusion#p2842">as
+per mpacey</a>?</li>
+<li>Write a language sub-system for the NEMS UI, allowing users to offer
+translation corrections via&nbsp;. Attempt to migrate the language system
+to all interfaces, including NConf, Adagios, and even nems-info and
+nems-init.</li>
+<li>Configure Adagios and NEMS to support multiple NEMS servers.
+See&nbsp;<a class="reference external" href="https://github.com/opinkerfi/adagios/wiki/Users-guide">this
+manpage</a>.
+(It is possible NEMS Cloud will do away with this need).</li>
+<li>Implement IsItDown service with&nbsp;&nbsp;for distributed testing of web site
+uptime (eg., so a user can monitor web site uptime from other NEMS
+Linux users geographic coordinates, not just their own, to rule out
+local issue).</li>
+<li>Evaluate&nbsp;<a class="reference external" href="https://github.com/it-novum/openITCOCKPIT">openITCockpit</a>&nbsp;as
+a possible front-end.</li>
+<li>Add feature to nems-migrator’s off site backup that allows a user to
+request an email if their backup fails (can get the email info from
+NEMS SST and send email accordingly, separate of Nagios). Perhaps add
+a service check on the NEMS server instead? - Planning to add this
+feature to NEMS Cloud during the 1.5-1.6 release cycle.</li>
+<li>Add auto-discovery
+functionality.&nbsp;<a class="reference external" href="https://vanheusden.com/java/ScanToNag/">this</a>&nbsp;and&nbsp;<a class="reference external" href="https://exchange.nagios.org/directory/Addons/Configuration/Auto-2DDiscovery">this</a>?</li>
+<li>Make it so first boot automatically takes user into nems-init, with
+the option of instead running it through SSH.</li>
+<li>Must improve logrotate. Some of the logs are getting quite large on
+some systems that have been up for a long time.</li>
+<li>Move all commands from commands.cfg to checkcommands.cfg (or
+whichever is more appropriate) within NEMS Migrator.</li>
+<li>Add check command-specific documentation.</li>
+<li>Add some generic true/false data to NEMS Anonymous Stats. In
+particular, discover if any users are using features like Telegram.
+By knowing this, I can decide if a feature should be removed from
+future releases.</li>
+<li><strong>Ability to use external storage for all active data.</strong>&nbsp;Ideal for
+reducing read/writes on SD cards. Add interface to allow all active
+data to saved to an external hard drive or network share as suggested
+by meveric.</li>
+<li>Provide pre-built NEMS Linux hardware appliances (anyone
+interested?).</li>
+<li>Create an OVA of NEMS Linux for deployment on existing virtual
+infrastructures.</li>
+<li>Build a graphical interface for nems-init.</li>
+<li>Build a graphical interface for NEMS Linux-Migrator’s “Restore”
+feature.</li>
+<li>Add intrusion detection such as Snort or Bro IDS,&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=10&amp;t=92&amp;p=715&amp;hilit=snort#p715">as per
+mpacey</a>.</li>
+<li>I’m open to suggestions! Please post your feature requests in&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewforum.php?f=8">the
+Community Forum</a>.</li>
+</ul>
+</div>
+<div class="section" id="nems-linux-roadmap">
+<h2>NEMS Linux Roadmap<a class="headerlink" href="#nems-linux-roadmap" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>1.0 - COMPLETE - Initial release. Bring easy deployment of Nagios to
+Raspberry Pi 3.</li>
+<li>1.1 - COMPLETE - Creation of upgrade process, nems-migrator and
+optimize performance.</li>
+<li>1.2 - COMPLETE - Creation of nems-init process to setup initial
+system. Create documentation.</li>
+<li>1.3 - COMPLETE - Focus on feature set, add off site backup. Being
+laying the groundwork for upcoming 1.4 (in particular, non-Pi
+architectures).</li>
+<li>1.4 - COMPLETE - New build of NEMS Linux featuring support for
+multiple SBC options and Nagios 4.</li>
+<li>1.5 - Focused on integrating user-requested options (mostly check
+commands) and optimizing the defaults/samples. Begin multi-server
+environment back-end, starting with ability to nickname NEMS servers
+via NEMS-SST. Introduction of more SBCs and possibly a virtual
+appliance (if funding allows).</li>
+<li>1.6 - New peripheral options such as NEMS Warning Light.</li>
+<li>1.7 - Begin focusing on UX and feature consolidation. Remove unneeded
+features from NEMS Adagios. Create new interface for NConf that
+matches the NEMS Dashboard interface. Add a safe reboot button to
+NEMS SST. Migrate as many options away from the terminal as possible,
+including nems-init. Write nems-mailtest into nems-sst&nbsp;<a class="reference external" href="https://forum.nemslinux.com/viewtopic.php?f=10&amp;t=372&amp;p=2178&amp;hilit=nems+mailtest#p2178">as per
+mydogboris</a>.</li>
+<li>1.8+ We’ll see!</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NEMS Linux To Do List</a><ul>
+<li><a class="reference internal" href="#approved-feature-requests">Approved Feature Requests</a></li>
+<li><a class="reference internal" href="#known-issues">Known Issues</a></li>
+<li><a class="reference internal" href="#during-the-1-6-release-cycle-not-at-launch">During the 1.6 Release Cycle (Not At Launch)</a></li>
+<li><a class="reference internal" href="#user-requests-to-review-during-release-cycle">User Requests to Review During Release Cycle</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#known-issues-1">Known Issues</a><ul>
+<li><a class="reference internal" href="#ideas-for-future">Ideas for Future</a></li>
+<li><a class="reference internal" href="#nems-linux-roadmap">NEMS Linux Roadmap</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../advanced/nems-mesh.html" title="previous chapter">NEMS Mesh: The Self-Hosted NEMS Cloud</a></li>
+      <li>Next: <a href="reportissues.html" title="next chapter">How To Report Issues</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/todolist/todolist.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/todolist/todolist.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

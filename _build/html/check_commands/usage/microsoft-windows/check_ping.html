@@ -1,0 +1,157 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Monitor Windows Machines with Ping &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Monitor Windows Machines with Windows Management Instrumentation (WMI)" href="check_wmi.html" />
+    <link rel="prev" title="Monitoring Microsoft Windows Hosts with NEMS Linux" href="index.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="monitor-windows-machines-with-ping">
+<h1>Monitor Windows Machines with Ping<a class="headerlink" href="#monitor-windows-machines-with-ping" title="Permalink to this headline">¶</a></h1>
+<p>The simplest type of check in NEMS Linux is to ping a host. The reply is
+binary: Host is up when ping replies, host is down when ping does not
+reply.</p>
+<p><strong>Using a ping check is an excellent starting point for new NEMS Linux
+users to become familiar with an easy-to-administer check command.</strong></p>
+<p>To begin pinging a Windows host, simply add it to the windows-servers
+group. The host check alive command will use check_ping to verify it as
+online or offline.</p>
+<p>Most software firewalls, including the Windows [Defender] Firewall,
+block ping (ICMP) requests by default. So NEMS will think your host is
+down unless you create a rule to allow ICMP echo requests and replies
+through your Windows firewall.</p>
+<div class="section" id="windows-defender-firewall">
+<h2>Windows Defender Firewall<a class="headerlink" href="#windows-defender-firewall" title="Permalink to this headline">¶</a></h2>
+<p>To enable ICMP response when using Windows Defender Firewall, simply run
+the Command Prompt as Administrator and type the following:</p>
+<p>IPv4 Networks:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">netsh advfirewall firewall add rule name=&quot;ICMP Allow incoming V4 echo</span>
+<span class="go">request&quot; protocol=icmpv4:8,any **dir**\ =in action=allow</span>
+</pre></div>
+</div>
+<p>IPv6 Networks:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">netsh advfirewall firewall add rule name=&quot;ICMP Allow incoming V6 echo</span>
+<span class="go">request&quot; protocol=icmpv6:8,any **dir**\ =in action=allow</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="third-party-firewall">
+<h2>Third Party Firewall<a class="headerlink" href="#third-party-firewall" title="Permalink to this headline">¶</a></h2>
+<p>If you are using a different firewall (eg., ESET Endpoint Security) you
+will need to consult that software’s documentation to allow ICMP echo
+responses.</p>
+<p>Here are some things to look for:</p>
+<ul class="simple">
+<li>Many firewalls can exempt certain IP addresses or ranges from being
+blocked. This is often called a Trusted Zone, or whitelisted IP. You
+could add your NEMS Server as a trusted device. If you do this, make
+absolutely certain your NEMS Server is not accessible from the world
+(ie., do not port forward anything to NEMS Linux), and your NEMS user
+password is a strong one that only you know.</li>
+<li>Most firewalls allow exemption of certain protocols or services. In
+those cases, you can simply enable/allow ping replies. It may be
+called “ping”, “incoming ping”, “ICMP Echo Reply”, or similar.</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last"><strong>DO NOT SIMPLY DISABLE YOUR FIREWALL.</strong>&nbsp;Correctly establish a firewall rule within your firewall application.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Monitor Windows Machines with Ping</a><ul>
+<li><a class="reference internal" href="#windows-defender-firewall">Windows Defender Firewall</a></li>
+<li><a class="reference internal" href="#third-party-firewall">Third Party Firewall</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Monitoring Microsoft Windows Hosts with NEMS Linux</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Monitoring Microsoft Windows Hosts with NEMS Linux</a></li>
+      <li>Next: <a href="check_wmi.html" title="next chapter">Monitor Windows Machines with Windows Management Instrumentation (WMI)</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/check_commands/usage/microsoft-windows/check_ping.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../../../_sources/check_commands/usage/microsoft-windows/check_ping.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

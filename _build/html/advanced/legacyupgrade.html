@@ -1,0 +1,158 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NEMS Migrator: Upgrade NEMS 1.0 or nagiospi to latest NEMS &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SNMP" href="snmp.html" />
+    <link rel="prev" title="Upgrade NEMS Linux to Newer Version" href="nemsupgrade.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nems-migrator-upgrade-nems-1-0-or-nagiospi-to-latest-nems">
+<h1>NEMS Migrator: Upgrade NEMS 1.0 or nagiospi to latest NEMS<a class="headerlink" href="#nems-migrator-upgrade-nems-1-0-or-nagiospi-to-latest-nems" title="Permalink to this headline">¶</a></h1>
+<p>Thanks for being an early-adopter! Whether you’re coming from NEMS 1.0
+or its predecessor, nagiospi, I want to make it as easy as possible for
+you to get the latest and greatest, without having to reconfigure
+everything. It’s been exciting to see the NEMS&nbsp;project really catching
+on, and I endeavor to make it the best it can be. Your suggestions along
+the way have helped me focus on some great features for as NEMS
+continues to evolve.</p>
+<p>NEMS 1.1+ has a nifty backup and export tool called NEMS Migrator.&nbsp;While
+it comes pre-packaged in 1.1+, I designed it specifically to run on
+legacy builds&nbsp;as well (NEMS 1.0 or nagiospi), giving you the opportunity
+to export your old&nbsp;configuration, deploy the latest version of NEMS, and
+then restore the configuration to NEMS. Easy peasy!</p>
+<p>Here’s what you need to do:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These instructions are for NEMS 1.0 or nagiospi&nbsp;only. <strong>Do not</strong> do this on NEMS 1.1+ as the tool is already built-in.</p>
+</div>
+<ol class="arabic simple">
+<li>SSH into your legacy NEMS/nagiospi server.</li>
+<li>Become root:</li>
+</ol>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">sudo su</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>Update repository data.</li>
+</ol>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">apt-get update</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li>Install Git.</li>
+</ol>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">apt-get install git</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li>Install NEMS-Migrator in /tmp.</li>
+</ol>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd /tmp &amp;&amp; git clone https://github.com/Cat5TV/nems-migrator</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li>Create&nbsp;the backup config on your NEMS/nagiospi system.</li>
+</ol>
+<p>If on NEMS 1.0:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd /tmp/nems-migrator &amp;&amp; ./backup.sh</span>
+</pre></div>
+</div>
+<p>If on nagiospi:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd /tmp/nems-migrator &amp;&amp; ./nagiospi2nems.sh</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li>Download the backup to your computer by opening it in your web
+browser. In your favorite web browser, simply add /backup/ to the end
+of your NEMS/nagiospi server address. E.G.,&nbsp;<em>http://10.0.0.5/backup/</em></li>
+<li>Now that you have your backup.nems file, follow&nbsp;<a class="reference external" href="../commands/nems-restore.html">the instructions to
+restore&nbsp;your configuration to a new version of
+NEMS</a>.</li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="nemsupgrade.html" title="previous chapter">Upgrade NEMS Linux to Newer Version</a></li>
+      <li>Next: <a href="snmp.html" title="next chapter">SNMP</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/advanced/legacyupgrade.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/advanced/legacyupgrade.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

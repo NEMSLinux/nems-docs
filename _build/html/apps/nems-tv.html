@@ -1,0 +1,171 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NEMS TV Dashboard &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NEMS Tactical Overview" href="tactical_overview.html" />
+    <link rel="prev" title="NEMS Mobile UI" href="mobile.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nems-tv-dashboard">
+<h1>NEMS TV Dashboard<a class="headerlink" href="#nems-tv-dashboard" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>NEMS TV Dashboard provides a tactical display specifically designed for
+single-screen TV display where a keyboard/mouse are not used. Ideal
+as a status monitor in your server room, NEMS
+TV Dashboard will report all unacknowledged host and service alerts as
+they occur.</p>
+<div class="section" id="screenshot">
+<h3>Screenshot<a class="headerlink" href="#screenshot" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/tv_dashboard_1.4.1.png"><img alt="Nems Dashboard Screenshot circa NEMS Linux 1.4.1" src="../_images/tv_dashboard_1.4.1.png" style="width: 600px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>To use NEMS TV Dashboard, simply connect a computer (E.G., Raspberry Pi
+Zero) to your TV display and open <code class="docutils literal"><span class="pre">https://nems.local/tv</span></code>&nbsp;in the
+browser.</p>
+</div>
+<div class="section" id="fullscreen-mode">
+<h2>Fullscreen Mode<a class="headerlink" href="#fullscreen-mode" title="Permalink to this headline">¶</a></h2>
+<p>Ideally, make NEMS TV Dashboard fullscreen by pressing F11. Press it
+again to restore the window.</p>
+</div>
+<div class="section" id="security">
+<h2>Security<a class="headerlink" href="#security" title="Permalink to this headline">¶</a></h2>
+<p>For convenience and usability, NEMS TV Dashboard does not prompt for
+your NEMS username and password by default. If you prefer to keep the
+Dashboard private, please open&nbsp;<a class="reference external" href="./nems-sst.html#tv-dashboard">NEMS
+SST</a>&nbsp;and turn off “Allow
+TV Dashboard Without Password” - but make sure you have a keyboard
+connected to the computer connected to your TV (or something like VNC
+access) to login.</p>
+</div>
+<div class="section" id="under-the-hood">
+<h2>Under The Hood<a class="headerlink" href="#under-the-hood" title="Permalink to this headline">¶</a></h2>
+<p>NEMS TV Dashboard uses the Check_MK Livestatus socket in the back-end,
+making it fast, efficient, and lightweight.</p>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>NEMS Linux 1.4.1+</li>
+<li>A display of some sort, connected to a computer/SBC with Web Browser
+and network connection with access to NEMS server.</li>
+<li>NEMS TV Dashboard requires a modern web browser to operate. If you
+experience issues, please test in a different browser.</li>
+<li>NEMS Linux 1.6+ to include Internet speedtest at all times.</li>
+</ul>
+</div>
+<div class="section" id="source-code">
+<h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/cat5tv/nems-tv">nems-tv on Github</a> is based on
+<em>merlin-dashboard</em> by fnordpojk. Licensed under
+<a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL v3</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NEMS TV Dashboard</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li><a class="reference internal" href="#screenshot">Screenshot</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#fullscreen-mode">Fullscreen Mode</a></li>
+<li><a class="reference internal" href="#security">Security</a></li>
+<li><a class="reference internal" href="#under-the-hood">Under The Hood</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#source-code">Source Code</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="mobile.html" title="previous chapter">NEMS Mobile UI</a></li>
+      <li>Next: <a href="tactical_overview.html" title="next chapter">NEMS Tactical Overview</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/apps/nems-tv.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/apps/nems-tv.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

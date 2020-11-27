@@ -1,0 +1,159 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Included Check Commands &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Check Command: check_apc" href="check_apc.html" />
+    <link rel="prev" title="NEMS Administrator User" href="../basic/default_password.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="included-check-commands">
+<h1>Included Check Commands<a class="headerlink" href="#included-check-commands" title="Permalink to this headline">¶</a></h1>
+<p>While not a comprehensive list of the available check commands in NEMS Linux,
+here are some of the available check commands:</p>
+<ul class="simple">
+<li><a class="reference external" href="check_apc.html">check_apc</a>&nbsp;-
+Check APC UPS.</li>
+<li><a class="reference external" href="../accessories/dhtsensors.html">check_dhtxx</a>&nbsp;-
+Use a DHTxx (DHT11 / DHT22 / AM2302) Arduino sensor to report on the
+room temperature and humidity.</li>
+<li><a class="reference external" href="check_esxi_hardware.html">check_esxi_hardware</a> -
+Monitor the hardware of ESX and ESXi servers.</li>
+<li><a class="reference external" href="check_http.html">check_http</a>&nbsp;-
+Check the status of an HTTP/HTTPS server on a remote host.</li>
+<li><a class="reference external" href="check_internet_speed.html">check_internet_speed</a> -
+Check the speed of your internet connection.</li>
+<li><a class="reference external" href="check_mikrotik.html">check_mikrotik_switch</a>&nbsp;-
+monitor stats for some MikroTik routers, including thermal sensors,
+packet loss, uptime, and so-on.</li>
+<li><a class="reference external" href="check_minecraft.html">check_minecraft</a>&nbsp;-
+monitor Minecraft server uptime, see how many players are connected
+and analyse the response time. enable-query and enable-rcon do not
+need to be enabled on the Minecraft server, so you should be able to
+monitor any Minecraft server.</li>
+<li><a class="reference external" href="check_nrpe.html">check_nrpe</a>&nbsp;-
+Monitor your hosts at a deeper level. Things like CPU usage, free
+disk space, free RAM, and so-on.</li>
+<li><a class="reference external" href="check_ping.html">check_ping</a>&nbsp;-
+Ping by hostname or IP address with warn/crit thresholds for response
+time and packet loss.</li>
+<li><a class="reference external" href="../accessories/temper.html">check_temper</a>&nbsp;- Use a
+TEMPer USB temperature sensor to detect and report the room
+temperature.</li>
+<li><a class="reference external" href="check_sbc_temperature.html">check_sbc_temperature</a>&nbsp;-
+Check your NEMS SBC temperature with perfdata and warn/crit
+thresholds.</li>
+<li><a class="reference external" href="check_tcp.html">check_tcp</a>&nbsp;-
+Check response of a specific TCP connection.</li>
+<li><a class="reference external" href="check_win_users.html">check_win_users</a>&nbsp;- Check the count of users on a Windows server based on a query.</li>
+<li>check_wmi_plus
+(See&nbsp;<a class="reference external" href="https://github.com/speartail/checkwmiplus/blob/master/check_wmi_plus.README.txt">this</a>&nbsp;and&nbsp;<a class="reference external" href="https://github.com/shinken-monitoring/pack-windows/blob/master/libexec/check_wmi_plus.d/check_wmi_plus.ini">that</a>)</li>
+<li><a class="reference external" href="custom_check_mem.html">custom_check_mem</a>&nbsp;-
+Monitor the percentage of RAM free on either the local NEMS server or
+a remote system via NRPE.</li>
+</ul>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Check Command List</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="check_apc.html">Check Command: check_apc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accessories/dhtsensors.html">DHT Sensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="check_esxi_hardware.html">Check Command: check_esxi_hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="check_http.html">Check Command: check_http</a></li>
+<li class="toctree-l1"><a class="reference internal" href="check_internet_speed.html">Check Command: check_internet_speed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="check_mikrotik.html">Check Command: check_mikrotik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="check_minecraft.html">Check Command: check_minecraft</a></li>
+<li class="toctree-l1"><a class="reference internal" href="check_nrpe.html">Check Command: check_nrpe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="check_ping.html">Check Command: check_ping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../accessories/temper.html">TEMPer Thermal Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="check_sbc_temperature.html">Check Command: check_sbc_temperature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="check_tcp.html">Check Command: check_tcp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="check_win_users.html">Check Command: check_win_users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_check_mem.html">Check Command: custom_check_mem</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../basic/default_password.html" title="previous chapter">NEMS Administrator User</a></li>
+      <li>Next: <a href="check_apc.html" title="next chapter">Check Command: check_apc</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/check_commands/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/check_commands/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

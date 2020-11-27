@@ -1,0 +1,152 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Introduction to NEMS Linux &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Install NEMS Linux" href="install.html" />
+    <link rel="prev" title="NEMS Linux Getting Started Guide" href="index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="introduction-to-nems-linux">
+<h1>Introduction to NEMS Linux<a class="headerlink" href="#introduction-to-nems-linux" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="how-nems-linux-began">
+<h2>How NEMS Linux Began<a class="headerlink" href="#how-nems-linux-began" title="Permalink to this headline">¶</a></h2>
+<p>Nagios® Core™–which I’ll simply refer to as “Nagios” throughout this article–is a free, open source server application which monitors hosts and services that you specify, alerting you when things go bad and when they get better. I’ve been using Nagios for many years. If I had to hazard a guess as to when I started using it, I’d say it was around 2006.</p>
+<p>My wife and I ran a small computer service company out of our home in those days, and in order to keep track of my customer sites and be as proactive as I could be, I had a beast of a computer in the garage keeping check on my customers’ hard drive space, backup state, CPU load, and antivirus definition updates, as well as various other services.</p>
+<p>I remember setting up that old Nagios server. The process was onerous, and all the configuration was done through the Linux terminal by opening config files in vi. One malformed syntax and Nagios would fail to start. I made it work, and if anyone has ever doubted my nerdiness, they are clearly mistaken. Ah, who am I kidding? Nobody has ever doubted my nerdiness. As the years went on and my support business customer base continued to grow, I began repurposing old hardware, installing an independent Nagios server at each client site. This worked very well.</p>
+<p>I received my first Raspberry Pi in 2014. After it sat on the shelf for a year, I began to consider possible ways I could put it to use. I realized that the power consumption, rack space, and noise of these old Nagios servers was an incredible waste of resources. I was convinced that a single-board computer could make an excellent Nagios server, and began tinkering.</p>
+<p>Why reinvent the wheel? Ryan Siegel’s NagiosPi image was out-of-the-box ready and gaining popularity. I started using it, but quickly became dismayed by the state of the distro, which appeared to be aging and was not being updated at a pace suitable for business use. It was a wonderful starting point, but felt in some important ways like an incomplete product. I began working on my own rebuild of NagiosPi, calling it NEMS; short for “Nagios Enterprise Monitoring Server”.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/first_nems_server.jpg"><img alt="Picture of the first NEMS Server atop the old Nagios server it replaced" src="../_images/first_nems_server.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">This customer Nagios server was replaced with the first ever NEMS server in 2016.</span></p>
+</div>
+<p>I’m a coder in my professional life. I develop server-side applications, mainly for web. Beyond building on a more current software base, the first thing I’d set out to do was build a responsive browser-based UI for NEMS, bringing all the components of NagiosPi together into a single interface. This later became the NEMS Dashboard, also known by its GitHub repository name, “nems-www.”</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/NEMS-1.4.1-Dashboard.png"><img alt="Screenshot of NEMS Linux Dashboard in version 1.4.1" src="../_images/NEMS-1.4.1-Dashboard.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">An early screenshot of NEMS Linux’s Dashboard, circa September 2018.</span></p>
+</div>
+<p>Upon releasing NEMS to the public through my blog, Siegel himself said, “I’d love to upgrade NagiosPi, but i don’t have [the] ability to make a GUI that can beat that of NEMS. I strongly feel that it has always been a necessary addition to NagiosPi and NEMS was able to deliver what is essentially an updated and improved version of NagiosPi. No reason not to start using NEMS for the time being. Nice work Robbie!” I didn’t stop there, and in the wonderful spirit of community, Siegel even pitched in during the development of NEMS 1.2 in early 2017, bringing many additional Windows checks to NEMS.</p>
+<p>With a new major release of NEMS every six months and rolling updates in between, NEMS is currently based on Debian Stretch with Nagios Core 4.3.4 at its heart. Having upgraded and maintained NEMS with a current software base, this also means things like PHP 7, current SSL certs, and a suite of customized software optimized to work on a modern server. For example, NConf (a very useful tool for configuring Nagios) stopped development years ago, so it only worked on PHP 5.3 or less. Therefore, I forked it and reworked the code to support PHP 7.0+. Of course, I made some other improvements along the way.</p>
+<p>NEMS Linux, as it is now called (I had to find a dot-com, after all) takes the most modern network asset monitoring and does away with the old Nagios scripting requirement. The scripts are still there, it’s just that you (the user) don’t ever have to see them or touch them. The whole thing is controlled, configured, and monitored through your web browser, with email, Telegram, or Pushover notifications all operational out of the box. It also has a JSON API, a TV display for your server room, and more.</p>
+<p>NEMS Linux has evolved to be what I feel is the best out-of-the-box Nagios experience available. As a Nagios user myself, this is the Nagios server I have longed for. As NEMS has continued to grow, I set out to find a more powerful platform than the Raspberry Pi. That’s when I found the ODROID-XU4. Just over a year ago (September 13, 2017 to be exact) I began my quest to port NEMS Linux to the ODROID-XU4. After nearly a year of development, I am extremely proud and excited to share: NEMS Linux is now available for ODROID boards.</p>
+</div>
+<div class="section" id="nems-features">
+<h2>NEMS Features<a class="headerlink" href="#nems-features" title="Permalink to this headline">¶</a></h2>
+<p>I’ve already touched on the obvious interface and UX improvements that NEMS Linux brings to the Nagios experience. Those are perhaps the key points as to what makes NEMS stand out, but it’s important to understand that NEMS Linux is far more than just Debian with Nagios installed. Let’s look at a small selection of additional features.</p>
+</div>
+<div class="section" id="nems-migrator">
+<h2>NEMS Migrator<a class="headerlink" href="#nems-migrator" title="Permalink to this headline">¶</a></h2>
+<p>When focusing on building a distro for single board computers (SBC), I took very seriously the fact that SD cards can and likely will fail, and data can be lost. I wanted to create a way for users to be able to easily backup and restore their configuration. Out of that desire, Migrator was born.</p>
+<p>Migrator allows you to backup your entire NEMS configuration (hosts, services, checks, system settings, etc.) via a samba share, https download, or even an optional offsite backup service. The backups can be encrypted, and only you know the decryption key. Should your device fail, you can write the image to a new SD card, restore your Migrator backup, and be up and running in under five minutes with all your settings intact. Migrator also makes it easy to transition from one platform to another. For example, having setup a NEMS Linux server on a Raspberry Pi 3, you can easily move to an ODROID-XU4 for an enormous performance boost.</p>
+<p>Another advantage that Migrator brings to the table is an absolutely simple upgrade path: as new major releases of NEMS Linux are introduced, you can easily write the new NEMS image, import your backup, and be on the latest version of NEMS in just minutes.</p>
+</div>
+<div class="section" id="ui-based-configuration-with-nems-configurator">
+<h2>UI-Based Configuration with NEMS Configurator<a class="headerlink" href="#ui-based-configuration-with-nems-configurator" title="Permalink to this headline">¶</a></h2>
+<p>NEMS Configurator (NConf) is what makes browser-based Nagios configuration possible. This customized version of the old NConf configuration tool brings a sophisticated front-end to the modern architecture of NEMS. Your entire Nagios configuration is done through this interface: from adding hosts to configuring your service checks. It’s all done through an intuitive browser-based system.</p>
+<p>Now, I’ll admit NConf is not the most aesthetically beautiful feature of NEMS at the moment, but it works brilliantly. And a redesign of the UI is on schedule for a future release. When that happens, the interface will be automatically updated on all existing deployments through NEMS’ automatic update system. With NEMS NConf, you will never have to look at a Nagios cfg file again!</p>
+</div>
+<div class="section" id="nems-system-settings-tool-sst">
+<h2>NEMS System Settings Tool (SST)<a class="headerlink" href="#nems-system-settings-tool-sst" title="Permalink to this headline">¶</a></h2>
+<p>Speaking of doing away with Nagios config files, several Nagios configuration options have been moved to a tool called NEMS System Settings Tool, also referred to as NEMS SST. Items such as your SMTP server settings, domain user credentials, and other defaults are part of this interface.</p>
+<p>So now that you know a little about what NEMS is and how it came about, let’s dive in!</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introduction to NEMS Linux</a><ul>
+<li><a class="reference internal" href="#how-nems-linux-began">How NEMS Linux Began</a></li>
+<li><a class="reference internal" href="#nems-features">NEMS Features</a></li>
+<li><a class="reference internal" href="#nems-migrator">NEMS Migrator</a></li>
+<li><a class="reference internal" href="#ui-based-configuration-with-nems-configurator">UI-Based Configuration with NEMS Configurator</a></li>
+<li><a class="reference internal" href="#nems-system-settings-tool-sst">NEMS System Settings Tool (SST)</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">NEMS Linux Getting Started Guide</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">NEMS Linux Getting Started Guide</a></li>
+      <li>Next: <a href="install.html" title="next chapter">Install NEMS Linux</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/gettingstarted/introduction.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/gettingstarted/introduction.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

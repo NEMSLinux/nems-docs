@@ -1,0 +1,1293 @@
+NEMS Linux 1.5 Changelogs
+=========================
+
+The NEMS 1.5 release cycle will focus on an enhanced user experience and
+documentation.
+
+On September 22, 2019, NEMS Linux 1.5.1 was released.
+
+NEMS Linux 1.5.2 was released June 1, 2020, introducing support for the
+Raspberry Pi 4B 8GB SBC.
+
+**Key Development Features and Goals:**
+
+-  Nagios upgraded to latest current core.
+-  HTML email notifications.
+-  Admin contacted if NEMS is offline (via API check-in).
+-  New plugins and check_commands integrated based on community
+   requests.
+-  Documentation at the checkcommands level improved, along with other
+   step-by-step guides added to the documentation.
+-  Bring support for industrial PCs such as the CL100 and FitLet2.
+-  Create a Virtual Appliance.
+-  Upgrade base to Debian Buster.
+-  Upgrade PHP to 7.3.
+
+**Supported Platforms**
+
+-  `ODROID`_
+
+   -  XU4
+
+      -  **Release Date:** February 12, 2019 (Patrons: February 7, 2019)
+      -  Runs at a reduced frequency of 1.3 GHz. This provides the best
+         balance of high performance, low temperature and ongoing
+         stability.
+      -  NEMS Linux 1.5 for ODROID XU4 supports SD or eMMC deployment.
+         eMMC must have a current U-Boot.
+      -  The ODROID XU4 image will run on XU3, XU4, HC1, HC2 and MC1
+         hardware. However, it has only been officially tested on the
+         XU4.
+
+   -  C2
+
+      -  **Release Date:** April 15, 2019 (Patrons: April 13, 2019)
+
+   -  C0/C1/C1+
+
+      -  **Release Date:** September 1, 2019
+
+   -  N2
+
+      -  **Release Date:** April 15, 2019 (Patrons: March 31, 2019)
+
+   -  ODROID-H2
+
+      -  **Release Date:** TBD (waiting on development unit)
+
+-  `Raspberry Pi`_
+
+   -  All Boards (except Compute Module)
+
+      -  **Release Date:** February 26, 2019 (Patrons: February 9, 2019)
+
+-  `PINE64`_
+
+   -  A64 / A64+
+
+      -  **Release Date:** March 26, 2019 (Patrons: March 23, 2019)
+
+   -  Rock64
+
+      -  **Release Date:** March 26, 2019 (Patrons: March 25, 2019)
+
+   -  A64-LTS
+
+      -  **Release Date:** April 2, 2019 (Patrons: March 29, 2019)
+
+   -  RockPro64
+
+      -  **Release Date:** April 18, 2019 (Patrons: March 30, 2019)
+
+   -  H64 Model B
+
+      -  **Release Date:** TBD (waiting on development unit)
+
+   -  CLUSTERBOARD
+
+      -  **Release Date:** TBD, though should already work with SOPine
+         release. Testing soon as I have received a test unit.
+
+-  `Khadas`_
+
+   -  VIM3
+
+      -  **Release Date:** July 3, 2019 (Patrons: July 1, 2019)
+
+-  `FriendlyElec`_
+
+   -  NanoPi M4
+
+      -  **Release Date:** April 30, 2019 (Patrons: April 2, 2019)
+
+   -  NanoPi NEO Plus2
+
+      -  **Release Date:** May 14, 2019 (Patrons: May 1, 2019)
+
+   -  NanoPi Fire3-LTS
+
+      -  **Release Date:** TBD, Q4 2019
+
+   -  NanoPC-T4
+
+      -  **Release Date:** TBD (need to purchase development unit)
+
+-  `Virtual Appliance`_
+
+   -  OVA / VHD / QCOW2
+
+      -  **Release Date:** March 1, 2019 (Patrons Only)
+
+-  `Amazon Web Services`_
+
+   -  Community AMI
+
+      -  **Release Date:** August 24, 2019
+
+-  Docker
+
+   -  **Release Date:** TBD, waiting for Docker support to activate
+      account and patronage to hit the target goal. Please consider
+      becoming a Patron or increasing your pledge to help make this
+      happen.
+
+-  `ASUS`_
+
+   -  Tinker Board, 2 GB / S
+
+      -  **Release Date:** May 8, 2019 (Patrons: April 12, 2019)
+      -  Runs at a reduced frequency of 1.2 GHz. This provides the best
+         balance of high performance, low temperature and ongoing
+         stability. I was also quite concerned with how hot the SD card
+         would get at the default frequency of 1.8 GHz.
+
+-  Orange Pi
+
+   -  Orange Pi Zero
+
+      -  **Release Date:** April 30, 2019
+
+   -  Orange Pi PC Plus
+
+      -  **Release Date:** TBD, Q4 2019
+
+-  Atomic Pi
+
+   -  **Release Date:** TBD, Q4 2019
+
+-  Logic Supply
+
+   -  CL100
+
+      -  **Release Date:** TBD, Q4 2019
+
+-  FitPC
+
+   -  Fitlet2
+
+      -  **Release Date:** TBD, Q4 2019
+
+**NEMS 1.5 Corporate Sponsors**
+
+.. |RNIT| image:: ../img/sponsor_logos/RNIT_Logo_Full_Dark.png
+    :width: 200px
+    :alt: Royal Network IT Solutions
+    :target: https://www.rnitsolutions.com/
+
++---------+
+| |RNIT|  |
++---------+
+
+**NEMS 1.5 Patrons**
+
+I'd like to thank *all* of our Patrons for your `continued support`_ of
+NEMS Linux development.
+
+Here is a list of those Patrons who kicked in that little bit extra to
+have their name included in the changlogs:
+
+-  Patrick Kersten
+-  Marc Dörseln
+-  Dave Harman
+-  Bill Marshall
+-  Aaron Tringle
+-  Steve Hudnall
+-  IT Cyber Solutions
+-  Natacha Norman
+-  David Klindt
+-  Wolfgang Friedl
+-  Jeff Conaway
+-  Don Jenkins
+-  Marco Antonini
+-  Jessica K. Litwin
+-  Matthew Mattox
+-  Premium \| Fischer-ICT
+-  Steve Thompson
+-  Jiffy
+-  Larry Getz
+-  Coquille Indian Tribe
+-  Jarrod Andrews
+-  Dennis Bailey
+-  Brian Darnell
+-  SystemOfADL
+-  Tony Browne
+-  Steven Beukes
+
+Want your name on this list? `Become a Patron`_
+
+Big thanks also to Heini Holm Andersen for granting me special
+permission to use, customize and distribute `Nagios Responsive HTML
+Email Notifications Templates`_ as part of NEMS 1.5+.
+
+Also, thanks to `Björn Ricks`_ from `Greenbone Networks`_ for kindly
+providing a much more current version of WMI after OpenVAS stopped
+supporting it. This new version has become `nems-wmic`_ and is
+integrated into NEMS Linux 1.5.
+
+**Known Issues**
+
+-  While I had wanted to include a pre-configured CSF/LFD firewall with
+   the release of NEMS Linux 1.5, unfortunately it didn't make it in on
+   time: CSF/LFD is not yet compatible with Debian Buster, and so has
+   been moved to NEMS Linux 1.6.
+-  IMPI check commands will not function yet due to `a bug in
+   FreeIPMI`_. The check commands are already in place, so I will push
+   this out as an update as soon as it is fixed upstream. Until this
+   time, FreeIMPI and its components have been removed from NEMS Linux.
+
+**NEMS 1.5 Changelog**
+
+.. Tip:: This changelog is a list of the major
+  revisions culminated during this NEMS release cycle. To see the full
+  list of Git commits, please also check out `the web site`_.
+
+**Initial Release**
+
+**Software Upgrades**
+
+-  Nagios Core has been upgraded to 4.4.3.
+-  Adagios upgraded to 1.6.3-2, bringing it closer to a complete and
+   stable modern replacement for Nagios Core's reporting interface.
+-  Check_MK livestatus socket upgraded from 1.4.0p31 to 1.4.0p37.
+-  PHP upgraded from 7.0 to 7.3, introducing the Sodium cryptography
+   library for the NEMS 1.5 Cloud Dashboard.
+-  Innumerable system updates of various packages.
+-  WMIC has been forked and upgraded to 4.0.0.
+-  Check WMI Plus upgraded to v1.64.
+-  nagios-plugins 2.2.1 has been removed and replaced with the current
+   git build of monitoring-plugins.
+
+**New Check Commands**
+
+-  Cisco SNMP monitoring as `requested by mydogboris`_:
+   check_cisco_interface and check_cisco_switch.
+-  IPMI Sensor Monitoring Plugin `as per thegreatadmin`_:
+   check_ipmi_sensor_driver_slot, check_ipmi_sensor_fan,
+   check_ipmi_sensor_memory, check_ipmi_sensor_power_supply,
+   check_ipmi_sensor_power_unit
+-  `check_esxi_hardware`_ `as per readyit`_.
+-  check_qnap `as per Toxic`_.
+-  `check_internet_speed`_ `as per infocon`_.
+-  check_procurve_loop `as per lee3521`_.
+-  MSSQL check as per `itsubs@sagroup.co.uk`_.
+-  check_docker and check_docker_swarm from
+   https://github.com/timdaman/check_docker `as per Zerant`_.
+
+**New Features**
+
+-  **NEMS Cloud Services** - NEMS 1.5 introduces NEMS Cloud Services. By
+   activating this optional service, your NEMS Linux server will benefit
+   from off-site backups and notifications should your device stop
+   responding (See NEMS CheckIn below). Plus, later this year I will be
+   introducing a web-based tactical view that is accessible from
+   anywhere, and amalgamates the tactical information of multiple NEMS
+   servers on your account allowing sysadmins a method of monitoring
+   multiple sites from one cloud-based dashboard.
+-  **NEMS CheckIn** - NEMS 1.5 introduces `NEMS CheckIn`_. CheckIn will
+   notify you by email if your NEMS Linux server becomes unresponsive.
+   Disabled by default, NEMS CheckIn can be configured within NEMS SST.
+   This service requires a NEMS Cloud Services account.
+-  **Optional TLS** - TLS Secure Authentication can be disabled in NEMS
+   SST for SMTP email `as requested by luckyworlock`_.
+-  **Graphing** - nagiosgraphs now comes preinstalled `as requested by
+   Erast Fondorin`_. It is configured and functional in Nagios Core, but
+   can also be accessed from the NEMS Dashboard *Reporting* menu.
+-  **Webhook Notifications** - NEMS Linux now supports notifications via
+   webhook as requested by `Jon Backhaus`_. This feature was added to
+   `nems-tools: Warning Light`_.
+-  **Custom Appearance** - NEMS SST now features the ability to change
+   the background on some NEMS screens.
+
+   -  Background Selection, allows you to select from the following:
+
+      -  *Daily Image (Default)* option loads a new image every day.
+      -  *NEMS Legacy* shows the classic server room image from NEMS
+         Linux 1.4.
+      -  *Custom Color* allows you to choose a base color to use for the
+         background.
+      -  *Upload Image* allows you to upload your own preferred
+         wallpaper image.
+
+   -  Blur Background Selection, allows you to add a blur effect to
+      background images:
+
+      -  *Slight Blur* will add a subtle Gaussian blur to the background
+         image.
+      -  *Medium Blur* will add a more pronounced blur to the background
+         image.
+      -  *Heavy Blur* will blur the background image so heavily that
+         only the color scheme of the image is recognizable.
+
+**Bug Fixes**
+
+-  WiFi now works on Raspberry Pi devices out of the box `as reported by
+   the community`_.
+-  `check_sbc_temperature`_ (previously called *check_rpi_temperature*)
+   prompts for Warning and Critical temperatures as pointed out by
+   `mgl1976`_.
+-  Fixed Nagios Core *Trends* and *Alert Histogram* giving 404 errors as
+   per `damo`_.
+-  Fixed *Host Detail* and *Service detail* giving 404 error as per
+   `ronjtaylor`_.
+-  There was a `known issue with Monit 5.20`_ (included in NEMS 1.4.1)
+   which results in an error "Forbidden: Invalid CSRF Token". For
+   Monit's web interface to work, you must open it in an Incognito
+   window (the bug is related to cookies). A fix was rolled into NEMS
+   Linux upstream (as of October 2018). 5.25 is out in source, but not
+   in Debian repositories. As this bug was fixed, I'm no longer
+   concerned about the issue, though it will be nice to see 5.25 make
+   its way into the repos.
+-  DST problem in Nagvis `as per ronjohntaylor`_ fixed by system-wide
+   timezone variables now being set in *nems-init*.
+-  `check_nrpe`_ is now installed to the correct folder. The upstream
+   installer places it in the folder for Nagios 3, not Nagios 4.
+
+**Improved Features**
+
+-  Email notifications are now responsive HTML emails. Please see the
+   "thanks" section above.
+-  NEMS SST now allows you to disable rolling updates. By doing so, your
+   deployment will remain as is, allowing you to better control when/if
+   your NEMS server is updated. As suggested by Dave Harman. Also
+   supports putting off updates to run once per month, once per week, or
+   once every two weeks as requested by John Naab.
+-  All check_wmi_plus check commands have been redone to correct the
+   argument counts and also to provide better descriptions for each arg.
+   Was suggested by mydogboris.
+
+**Miscellaneous**
+
+-  samba shares have been improved to support long filenames.
+-  MOTD has been improved. The generally not useful info has been
+   removed making it a little cleaner looking, and a new ASCII logo has
+   been integrated.
+
+-  Removed the old default checks from NEMS host and created new
+   templates specifically for NEMS that are more appropriate for
+   low-powered SBCs (super high CPU load thresholds, for example). Some
+   users were running the sample checks as if they were intended for
+   production use rather than as a guide, so this should help those
+   users by not setting off irrelevant alerts such as CPU load or swap
+   usage on the NEMS server (particularly problematic on low powered
+   devices like Raspberry Pi, since the default samples are more suited
+   for monitoring full-powered Linux servers). `Reported by
+   experimenter`_, MarshMan, and others.
+-  NEMS SST now warns you if you try to navigate away before saving
+   changes.
+-  WMIC is no longer being distributed by OpenVAS, so I have forked the
+   most current git repo their parent company provided, and am now using
+   that (after some modifications). New active repository is located at
+   https://github.com/Cat5TV/wmic and *wmic* version has been upgraded
+   from 1.3.14 to 4.0.0.
+-  *vim* is now included by default `as requested by Zerant`_.
+-  *webmin* has been removed from NEMS Linux. The networking feature
+   `has been broken for quite some time`_, and waiting for the patches
+   to arrive upstream has been much too long. Also, Webmin tends to
+   confuse novice users into thinking their NEMS server is out of date
+   (due to pending OS updates), and in some rare cases has resulted in
+   users breaking their configuration. There are no reasons to keep
+   Webmin, but many to remove it.
+
+**Rolling Updates 1.5**
+
+February 2019
+
+-  Moved bootscreen to TTY7 and disabled kernel log
+   output. TTY1 (the previous default) was also receiving syslog
+   messages, which led to a messy screen. As noted by Bill Marshall.
+-  Raspberry Pi 2/3 Build 1 private Patron release.
+-  ODROID XU4 Build 2 private Patron release. Fixes
+   WMIC compile issue. Updated versions of PHP, Apache2, and a few other
+   packages that were updated upstream.
+-  Fixed ownership of *nems-www*, which was causing
+   users to be unable to upload custom backgrounds. Reported by Haaku.
+   Thanks to m9Networks and UltimateBugHunter for assisting.
+-  Fixed environment variables for local libraries
+   to ensure *wmic* can find *libopenvas_wmiclient.so.1*. Also improved
+   the *nems-wmic* installation procedure to ensure all files are saved
+   and persistent. This to mydogboris for testing.
+-  Removed NEMS Linux version number from header of
+   NEMS Dashboard. As it is already included in the footer, it is
+   redundant.
+-  Removed Facebook link from NEMS Dashboard (I have
+   been using it less and less) and changed the YouTube and Twitter
+   links to point to the new NEMS Linux profiles, rather than my
+   personal profiles. NEMS has its own now!
+-  ODROID XU4 Build 3 private Patron release. Merges
+   all rolling updates. Fixes *wmic*.
+-  Network Manager was using its default setting to
+   automatically spoof a new MAC address every time wifi connected. On a
+   Raspberry Pi using WiFi, this would cause a new IP address in the
+   DHCP pool, and users trying to establish static reservations would
+   not be able to do so. I over-wrote the default and now the actual
+   physical MAC address will be used. The patch will future-ready all
+   other NEMS builds for devices that support WiFi.
+-  Raspberry Pi devices now resize the filesystem on
+   boot, rather than on init.
+-  Raspberry Pi 2/3 Build 2 private Patron release.
+   Merges all rolling updates. Re-compiled *wmic* and applied WiFi
+   patch. Added US locale out of the box.
+-  Moved Raspberry Pi to stable kernel rather than
+   latest kernel.
+-  ODROID XU4 Build 3 Public release.
+-  Opened ports 548,5353,5354 in CSF/LFD Firewall to
+   allow AVAHI / mDNS to function normally, as per issue reported by Jon
+   Backhaus. Will have no effect on NEMS Linux 1.5 since CSF/LFD are not
+   yet compatible.
+-  Raspberry Pi 3 Model A+ added. Raspberry Pi Model
+   B/B+ have been split so the correct board will be reported (B or B+,
+   not B/B+).
+-  *nems-update* output improved. Formatting
+   improved, and now includes the before and after git commit IDs.
+-  Fixed NEMS 1.5 using NEMS 1.4 database out of the
+   box before initialization.
+-  Set default timezone to America/Toronto.
+-  Ensure packages are not upgraded from Sury's PHP
+   repository on Raspberry Pi Zero/1 (breaks these builds if otherwise).
+-  Added *piwatcher* switch to `nems-info`_.
+   `piWatcher`_ support is now fully integrated and will automatically
+   power cycle a Raspberry Pi-based NEMS Linux server if it becomes
+   unresponsive.
+-  NEMS Linux 1.5 base upgraded to Debian Buster.
+   This resolves many backport issues on the Raspberry Pi Zero/1 build,
+   and further upgrades many of the underlying core OS components.
+-  PHP upgraded to 7.3.
+-  CSF/LFD firewall not yet compatible with Debian
+   Buster. Removed until such time as it is.
+-  Move JavaScript and CSS assets from CDNJS to
+   *nems-www*. Users with certain DNS filters were missing components
+   such as jQuery due to CDNJS being blocked by their DNS provider.
+-  Released Build 3 for Raspberry Pi to Patrons.
+   This test release merges all Raspberry Pi boards into a single build
+   and is for testing only (not for production use).
+-  Write a new installer for *raspi-config* on
+   Raspberry Pi build. Build 3 failed to install it, so automated
+   filesystem resize failed on first boot and WiFi settings could not be
+   configured.
+-  Build 4 for Raspberry Pi released to Patrons.
+   This is a test build that resizes correctly on first boot and
+   supports WiFi. However it does not have the check_commands compiled
+   so is not ready for production use.
+-  Removed *nagios-plugins* which appears to be a
+   dead project (still no 2.2.2 after all these years, doesn't compile
+   correctly on buster) and moved to *monitoring-plugins* which is still
+   active and compiles nicely.
+-  Added Daily Color option to NEMS SST for
+   background. Each day's color is extracted automatically from the
+   color pallet of that day's daily image.
+-  Activated I2C on Raspberry Pi build to allow
+   piWatcher compatibility. Added final timers to piWatcher script.
+-  NEMS Linux 1.5 for Raspberry Pi released to
+   public (Build 6).
+-  *nems-info ip* will now output 127.0.0.1 instead
+   of NULL if no IP address is found on a network controller. Fixes MOTD
+   on local logins where a network connection is non-existent.
+-  Patched PHP 7.3 and PHP 7.2 configs to allow
+   larger background image uploads in NEMS SST.
+
+March 2019
+
+-  NEMS Linux 1.5 Virtual Appliance OVA and VHD Build 1
+   released to Patrons for early testing.
+-  Connected TV screen improved to include NEMS state
+   information. Colors softened for normal state, and will turn red in
+   event of CRITICAL state.
+-  When uploading a custom background image, the default
+   color is then selected from the upload and applied to the browser
+   theme. This gives a nice consistency between uploaded image and theme
+   colors. Note: If then changing to Custom Color, the color will be
+   selected by default.
+-  Leaving SMTP username blank in NEMS SST now disables
+   SMTP authentication, as requested by dr_patso on Discord (to
+   accommodate Office 365 relay).
+-  Treat thermals as floating point instead of string in
+   thermal logger `as per nix-7`_.
+-  Forked *monitoring-plugins* and created new
+   installer in *nems-admin* to fix some of the issues with the check
+   commands.
+-  Rollout a newly compiled version of NEMS WMIC to
+   systems who are missing it. This update takes a long time and so will
+   lead to a new build for all platforms.
+-  Added support for MS Teams webhooks `as per
+   stealth81`_.
+-  Added support for Slack webhooks.
+-  Install PostgreSQL development libraries for
+   check_psql and OpenSSL, and recompile all Nagios plugins. Fixes
+   errors in NEMS check commands. PATCH-000001 - requires running *sudo
+   nems-upgrade*
+-  Bumped check_speedtest-cli.sh to v1.3 and disabled
+   pre-allocation of memory. This fixes "MemoryError" on lesser boards
+   such as the Raspberry Pi Zero. New version will get installed along
+   with PATCH-000001.
+-  Added Running/Idle status of NEMS Update and NEMS
+   Fixes to connected TV screen.
+-  Make NEMS branding persistent in Cockpit after an
+   update.
+-  Cleaned up some bloat in NEMS Migrator's data for
+   NEMS 1.5 (backup copies of the MySQL database).
+-  Connected TV display now reports if the filesystem
+   is still being resized on first boot. NEMS Quickfix now waits 90
+   seconds from boot to begin (in case filesystem is being resized).
+   PATCH-000002
+-  Added *glances* to NEMS 1.5 `as per RSABear`_.
+-  Switch network interface management to
+   NetworkManager, enabling static IP configuration within the Cockpit
+   interface. PATCH-000003
+-  Raspberry Pi Build 7 released. This introduces the
+   new networking system to Raspberry Pi users, as well as the improved
+   check commands and better performance on lesser boards.
+-  Added CPU temperature to connected TV display. Also
+   fixed a math error which fixes the connected TV's ability to show if
+   a new version of NEMS is available.
+-  PINE64 A64/A64+ Build 1 released to Patrons. In
+   addition to everything that NEMS Linux 1.5 is, this build introduces
+   a new kernel which addresses a known issue exists that was previously
+   affecting <em>some</em> A64+ boards. If affected, the system clock
+   would jump 99 years into the future—which subsequently impacted many
+   of the NEMS services.
+-  PINE64 Rock64 Build 1 released to Patrons.
+-  If sysbench is not available, do not try to run
+   benchmarks.
+-  Notate PATCH-000002 on Rock64 boards retroactively
+   since the Build 1 version of the file resize script does not log the
+   success.
+-  Added *rootdev* and *rootpart* to `nems-info`_.
+-  New img build workflow created, including new `Base
+   Images`_. Theoretically img files should be a bit smaller here
+   forward (due to zerofill) and should be more consistent (less chance
+   for corrupt build img files).
+-  After `reporting`_ *sysbench* missing Buster
+   binaries to the developer, it was added. Integrated the Buster
+   installation into NEMS Benchmark since the Debian repositories are
+   thus far also missing the package. System will check upstream first,
+   and if not available, will install from developer repository.
+-  PINE64 A64/A64+ Build 1 released to public.
+-  PINE64 Rock64 Build 2 released to patrons and
+   public. Fixes bad image creation of Build 1 causing it not to boot.
+   Also integrates PATCH-000002.
+-  *nems-quickfix* (and therefore a reboot) now removes
+   NEMS NConf generator lock file if it exists. It can get left behind
+   in certain circumstances, which would cause NConf to say "Someone
+   else is already generating the configuration."
+-  PATCH-000002 now gets automatically logged to all
+   boards if the main partition is sized greater than 9 GB. This ensures
+   platforms such as the virtual appliance and the Rock64 transition to
+   a ready state if the patch is not logged already but the partition is
+   indeed resized.
+-  If sysbench is not found in the developer's
+   repository, remove the repository and update apt before cancelling
+   the benchmark. See `Issue 298`_.
+-  Added *speedtest* to `nems-info`_.
+-  NEMS will now automatically detect the nearest
+   Internet speedtest server and use it by default. May be overridden by
+   ARG if option changed in NEMS SST.
+-  Added *rootfulldev* to `nems-info`_.
+-  Improved thermal detection for cross-device
+   compatibility. Also updated *nems-info temperature* to output
+   realtime thermal data rather than 15 minutes log.
+-  Added *fileage* to `nems-info`_.
+-  Improved connected TV screen to now show how long
+   updates/fixes have been running.
+-  `nems-info`_ *hosts* & *services* were showing one
+   more than actual true count. This was due to a previous update to the
+   livestatus socket which results in it outputting a header line, which
+   was being counted as a result. Simply subtracted 1 to counteract. As
+   reported by UltimateBugHunter.
+-  PINE64 A64-LTS/SOPine Build 1 patron pre-release.
+-  Retroactively enable rc.local service on boards
+   where it is not enabled by default (eg., Rock64). Thanks to
+   UltimateBugHunter for putting me onto the problem, having noticed the
+   connected TV was going to sleep after 10 minutes (even though
+   rc.local was set to disable TV sleeping).
+-  Fixed issue with temperature output on connected TV
+   which would cause math errors when converting from Celsius to
+   Fahrenheit.
+-  ODROID-N2 Build 1 released to patrons.
+
+April 2019
+
+-  NanoPi M4 Build 1 released to patrons.
+-  PINE64 A64-LTS Build 1 released to public.
+-  Change the warning message if NEMS can't connect to
+   github, as pointed out by ITManLT.
+-  ODROID-XU4 Build 4 released. Keeping in mind the XU4
+   platform was the first public release of NEMS 1.5, this is a
+   significant upgrade. This moves XU4 from Stretch to Buster and adds
+   all the new check command scripts, as well as all updates that have
+   been released since the first NEMS Linux 1.5 release.
+-  Virtual Appliance Build 2 (OVA, VHD, QCOW2) released
+   to Patrons. This build was developed on an ESXi development laptop
+   donated by bhammy187. Build 2 should be much easier to import into
+   any hypervisor, making it significantly more portable than Build 1.
+-  Added error handling to thermal sensor check to
+   report UNKNOWN if the sensor doesn't exist, as would be the case with
+   a Virtual Appliance.
+-  New universal filesystem resizer automatically
+   detects the root partition and resizes it. Will continue to adapt to
+   eventually deprecate the separate resizer scripts for each platform.
+-  Add error handling to nems_sendmail_host and
+   nems_sendmail_service to accommodate inability to write to Nagios log
+   if user runs *nems-mailtest* as a non-root user. As reported by
+   ITManLT.
+-  Fix issue where disabling SMTP TLS in NEMS SST would
+   always revert to enabled. Reported by ITManLT and confirmed by
+   UltimateBugHunter-NitPicker.
+-  ASUS Tinker Board / S Build 1 released to Patrons.
+-  ODROID-C2 Build 1 released to patrons.
+-  ODROID-N2 Build 1 and ODROID-C2 Build 1 released to
+   public.
+-  RockPro64 Build 1 released to public.
+-  Minor verbiage adjustment re. Speedtest Server in
+   NEMS SST.
+-  Compile sysbench if not exist, improve compatibility
+   with various versions (ie., detect which switches are accepted for
+   cli variables).
+-  Fix spelling of Orange Pi (DietPi had spelled it
+   OrangePi).
+-  NEMS Linux 1.5 Build 1 for NanoPi M4 and Orange Pi
+   Zero released to public.
+-  Update weekly benchmark to save transient data in a
+   secure tmp folder.
+-  Re-order events in weekly benchmark to ensure the
+   compiler runs even if a benchmark is not scheduled (so the needed
+   software is ready to go).
+-  Lay groundwork to add 7zip benchmarks to weekly
+   benchmark.
+
+May 2019
+
+-  NEMS Linux 1.5 Build 1 for NanoPi NEO Plus2 released to
+   Patrons.
+-  Add distinction between 512 MB and 1 GB version of the
+   NanoPi NEO Plus2.
+-  Added 7zip benchmark to weekly benchmarks.
+-  Fixed glitch in NanoPi NEO Plus2 hardware ID generator
+   and blocked null HWID's after detecting that one Virtual Appliance
+   user had booted a VM with no MAC address.
+-  Make weekly benchmark data readable by all, but only
+   writable by root.
+-  Add *benchmark 7z* option to *nems-info*.
+-  Change *nems-info online* to use wget instead of ping.
+   As pointed out by ITManLT, some networks block ping, causing NEMS to
+   think it has no Internet connectivity (and therefore updates do not
+   run).
+-  Monitorix now loads all graphs dynamically, and
+   displays all available graphs (not just the ones I manually selected
+   back in NEMS 1.2).
+-  Fix PHP notice for undefined variable when manually
+   running a *nems-benchmark*.
+-  Finish moving *nems-benchmark* over to 7-Zip benchmarks
+   rather than sysbench, and completely remove sysbench from the normal
+   benchmark process. It will be re-added later as a supplement, but
+   will not be used for NEMS scoring.
+-  If any of the sysbench benchmarks don't exist, output a
+   0 instead of a error in *nems-info*.
+-  Roll out a patch that removes some of the residual
+   Armbian settings from early base images. /var/log was being loaded
+   into zram instead of stored on disk, resulting in /var/log becoming
+   full. This patch fixes that and ensures log files are stored on disk.
+   Only affects early releases (such as Build 1 for TinkerBoard and
+   NanoPi M4). Pointed out `by Marshman`_.
+-  NEMS Linux 1.5 Build 2 for Tinker Board / S released to
+   public.
+-  NEMS Linux 1.5 Build 2 for ODROID-N2 released,
+   integrating `Meverics' patch`_ which resolves the networking /
+   slowness / inability to boot issues found on some ODROID-N2 boards.
+   Big thanks to UltimateBugHunter-NitPicker for initially reporting
+   this issue.
+-  NEMS Linux 1.5 Virtual Appliance (OVA) Build 3
+   released. This build reduces the ESXi Virtual Hardware Version from
+   14 to 7, meaning NEMS Linux may now be deployed on older versions of
+   ESXi. No need to re-release VMDK or QCOW2 for Build 3 since the
+   update only affects OVA.
+   
+June 2019
+
+-  Removed unneeded virtual hardware from OVA appliance.
+-  Restructure the Virtual Appliance OVA for
+   compatibility with ESXi 5.5+.
+-  NEMS Linux 1.5 Virtual Appliance (OVA) Build 4
+   released. This build resolves the error "The OVF package is invalid
+   and cannot be deployed" on older versions of ESXi. The cause of the
+   issue was because older versions do not support the SHA256 hashing
+   algorithm. Build 4 is identical to Build 3 in every way except the
+   Cryptographic Hash Algorithm has been switched from SHA256 to SHA1,
+   making it compatible with older ESXi servers.
+-  Upgraded speedtest from 1.0.6 to 2.1.1.
+-  Added initial Raspberry Pi 4 support.
+-  Change the way various Raspberry Pi models are
+   displayed. Eg., *Raspberry Pi 3* now, instead of previous *Raspberry
+   Pi 3 Model B*. *Raspberry Pi 3 B+* now instead of previous *Raspberry
+   Pi 3 Model B+*.
+-  Raspberry Pi Build 8 released. Introduces
+   out-of-the-box support for Raspberry Pi 4 and includes all patches
+   that were issued since Build 7 was released 3 months ago.
+-  Raspberry Pi boards were previously reported as 'RPi'
+   by the hardware description script. I didn't like this, so I changed
+   it. Where a board previously listed itself as 'RPi 3 B+' it will now
+   say 'Raspberry Pi 3 B+', for example.
+-  Moved *monit* to custom build rather than pulling
+   from apt repository. Package is missing from some Debian Buster
+   builds. This also ensures we have the latest version at time of
+   build.
+   
+July 2019
+
+-  Added new command *nems-install* which will install
+   NEMS Linux on eMMC on the Khadas VIM3. In future versions, it may be
+   expanded to support other boards if required.
+-  Khadas VIM3 Build 1 released to Patrons.
+-  Buster is now stable. Update releaseinfo, and do this
+   automatically in future.
+-  Remove check_speedtest's reliance on a server ID.
+   Latest version supports automatic detection on launch, and will
+   automatically roll to next available server in line if server fails
+   to respond. Much better than single point of failure, which has been
+   causing false notifications the past few days. Thanks to mydogboris
+   for reporting this.
+-  A patch to enable disabled rc.local that was
+   previously released had been broken due to a renamed build script.
+   Fixed.
+-  NEMS SST now features a tab "TV Dashboard". Password
+   setting for NEMS TV Dashboard has been moved to this tab (was
+   previously under *Optional Services*), and two new features have been
+   added: 24 hour clock formatting, ability to display faults
+   immediately rather than waiting for the service to enter a
+   notification state. Some users were confused by the default, so this
+   allows them to change when they are notified.
+-  In NEMS SST, move NEMS Migrator to the NEMS Cloud
+   Services tab.
+-  Begin encrypting NEMS State data with personal
+   encryption/decryption password for NEMS Cloud Services users in
+   preparation for the coming NEMS Cloud Services Dashboard.
+-  NEMS Cloud Services master NEMS Server login
+   complete.
+-  NEMS Cloud Services now receives NEMS GPIO Extender
+   data from subscribed devices. This will allow NEMS Warning Light or
+   GPIO Extender Clients to be placed anywhere in the world, and will
+   also allow a single NEMS Warning Light to display the state of
+   multiple NEMS Servers.
+-  NEMS Cloud Services Dashboard now displays the master
+   NEMS Server alias, CheckIn setting and Host/Service state.
+-  NEMS Cloud Services Dashboard now updates the state
+   data automatically. This was a bit more complex than a standard ajax
+   call due to the encrypted state of the data.
+-  Added tooltips to Host/Service icon on NEMS Cloud
+   Services Dashboard which shows the count of each state.
+-  Added *nems-info*\ **cloudauthcache** option which
+   loads the current NEMS Cloud Services authorization status from cache
+   rather than a live connection (significantly faster for quick
+   checks).
+-  NEMS Cloud Services Dashboard has been added to the
+   "Reporting" menu on all NEMS servers which are connected to the
+   service.
+-  Added NEMS Platform and Version to NEMS Cloud
+   Services Dashboard.
+-  Added credential error handling to NEMS Cloud
+   Services parent server login. Now, an easy to understand error
+   message will be given if you enter invalid credentials, rather than
+   just receiving a blank page.
+-  Moved NEMS TV Dashboards' livestatus connector to a
+   new folder "connectors" to pave the way for new dashboard connectors.
+-  NEMS TV Dashboard has been removed from *nems-www*
+   and is now its own repository called *nems-tv*. This is to allow me
+   to add NEMS TV Dashboard to NEMS Cloud Services without needing to
+   build a second (redundant) version. It also means NEMS Cloud
+   Services' version will exactly mirror the features of the local copy.
+-  Add *livestatus* to `nems-info`_.
+-  Add check to ensure *nems-tv* is enabled, and if not,
+   enable it. Thanks to ITmanLT for pointing out the issue.
+-  NEMS TV Dashboard added to `NEMS Cloud Services`_.
+-  Improve the output of the clock on NEMS TV Dashboard.
+-  Sync NEMS TV Dashboard's local clock setting to NEMS
+   Cloud Services. Now the clock output format will match your local
+   settings (ie., 12/24h format, whether to show am/pm).
+-  NEMS TV Dashboard in NEMS Cloud Services now shows
+   the alias of the reporting NEMS Server. This is in preparation for
+   the coming reconciliation of multiple connected NEMS Servers on a
+   single NCS TV Dashboard.
+-  Added support for `TEMPer`_ hardware.
+-  Added exit codes to check_temper.
+
+August 2019
+
+-  Added UNKNOWN state to check_temper. If TEMPer
+   device is disconnected, will now report UNKNOWN instead of 0°.
+-  *check_temper* now detects automatically whether the
+   user is entering their ARG temperatures in C or F and acts
+   accordingly.
+-  Major rework of NRPE. NEMS Linux no longer uses the
+   package maintainer's version of NRPE. A new installer has also been
+   provided for Debian hosts to ease the deployment process. Please see
+   `Check Commands: check_nrpe`_ which details what is required.
+-  Added `custom_check_mem`_ checkcommand and
+   corresponding NRPE advanced service, called *Check Memory NRPE*.
+-  `Telegram notification configuration`_ has been
+   made more clear in `NEMS SST`_, and the documentation has been
+   rewritten to match.
+-  `Telegram notification script`_ reworked to remove
+   the 'g' from Chat ID automatically, making it a bit easier to
+   understand input.
+-  Fixed error on NEMS Cloud Services Dashboard where
+   the tooltip() function was not loaded before it was called.
+-  Begin building a means of NEMS Cloud Services' TV
+   Dashboard to detect and display if the NEMS Server is not online (via
+   NEMS CheckIn). Also, the server list will now highlight down NEMS
+   Servers red.
+-  NEMS Migrator Restore now breaks apart the
+   checkcommands file from the NEMS backup and attempts to import each
+   command individually. This has the effect of skipping (Aborting)
+   import of checkcommands that already exist in the default NEMS NConf
+   database while allowing the user-created checkcommands to be
+   imported. Thanks to Jon Backhaus for pointing out the issue.
+-  NEMS TV Dashboard has a setting in NEMS SST that
+   allows you to change the notifications to immediately display, rather
+   than honoring the notifications settings in NEMS NConf. This setting
+   now also impacts the results of *nems-info*\ **state** and NEMS Cloud
+   Services' TV Dashboard.
+-  Added *nems-info*\ **state all** Output the state
+   information of all NEMS hosts and services to JSON format, regardless
+   of state.
+-  NEMS Server State Report added to NEMS Cloud
+   Services. Now you can see the state of all your hosts/services
+   directly from the NEMS Cloud Services Dashboard.
+-  NEMS Linux 1.5 AMI Build 1 for Amazon Web Services
+   released.
+   
+September 2019
+
+-  The development version of NEMS Linux for the
+   ODROID-C1+ was losing its heartbeat following filesystem resize, so I
+   got looking deeper at the ODROID resize stage scripts. In doing so, I
+   found a typo in the \*start\* variable creation of stage1 which
+   resulted in the first partition starting at the first sector of the
+   disk rather than the needed sector 8192 on the ODROID-C1+. This bug
+   has been fixed, and the ODROID-C1+ development build is working.
+-  NEMS Linux 1.5 for ODROID-C0/C1/C1+ Build 1
+   released.
+-  Added *nems-info*\ **frequency** to display the
+   *current* CPU operating frequency.
+-  In *nems-init* the *mysqld* daemon is forcibly
+   killed if stopping fails (as it tends to do on Docker). This in turn
+   causes an error on platforms where systemd is able to stop the
+   process: can't kill a task that isn't running. Add a check to see if
+   *mysqld* is running before attempting to kill it.
+-  `Push Notifications Using Telegram`_ now includes
+   an emoji to help distinguish the state.
+-  Improve *nems-fs-resize* to support drives that
+   are not mmcblk0 type. Now, the script can be used to resize the
+   Virtual Appliance disk, for example.
+-  Re-order the output of Telegram notifications to
+   make them easier to see critical information at a glance. Now, the
+   NEMS Server's alias and the timestamp are listed first, followed by
+   the notification information.
+-  Check for the existence of rc.local before
+   patching it in nems-update fixes. This is in particular for Docker
+   (which doesn't use rc.local) to prevent [harmless] errors during
+   update.
+-  Add SCSI dev assignment detection to
+   *nems-info*\ **rootfulldev**\ */*\ **rootpart**\ */*\ **rootdev**.
+   This fixes the feature on non-MMC storage platforms, such as the
+   Virtual Appliance.
+-  Fixed a previously unnoticed bug in Telegram
+   *service* notifications where the Service output was displaying the
+   datestamp rather than the output.
+-  Added rich-text markdown to Telegram host and
+   service notifications. Now, the layout looks really good (not just
+   plain text).
+-  Added `NEMS Linux Vendor Branding`_. Now, you can
+   add your own logo to the NEMS Dashboard.
+-  Added the vendor logo (if applicable) to the init
+   screen.
+-  Remove Raspberry Pi logo from boot screen.
+-  NEMS Linux 1.5 Build 2 for ODROID-C2 released.
+-  Updated migrator databases include the
+   recommended settings for `check_temper`_ and `custom_check_mem`_, no
+   longer requiring users to manually add them on new deployments.
+-  Version increased to 1.5.1. No further builds of
+   1.5 will be created.
+-  Add *nems-info*\ **perfdata_cutoff** which shows
+   the cutoff (in days) for perfdata retention.
+-  NEMS SST now has a "Maintenance" section
+   featuring a perfdata cleanup schedule. This allows users to select to
+   remove old perfdata to avoid a bloated perfdata.log file. As
+   requested by rkadmin, whose file had reached 15GB in size. By
+   default, this feature is disabled and perfdata is kept indefinitely
+   if enabled in NEMS NConf.
+-  NEMS Cloud Services will now re-route you to the
+   Dashboard if you have an active session. Active sessions will remain
+   active for 24 hours. As `requested by Premium`_.
+-  Removed the perfdata tweaks as they only bandaid
+   the more crucial problem: a misconfigured Nagios conf. Will later add
+   a feature to tweak nagios.cfg settings, but for now those who choose
+   to hack their cfg files directly will probably break things.
+-  NEMS Linux 1.5.1 Build 1 for Raspberry Pi went
+   into private testing.
+-  NEMS Cloud Services sessions now remain active
+   for 7 days, allowing you to open NEMS Cloud Services features in your
+   browser without needing to login (until you click Logout).
+-  *nems-info*\ **frequency** now reports the
+   average frequency across all cores, rather than the frequency of the
+   first core. Thanks to Bo from ameriDroid for pointing out this
+   inconsistency.
+-  The build process now clears bash history
+   correctly so on first boot, users don't have the development history.
+-  NEMS Linux 1.5.1 Build 1 for ODROID-C2 went into
+   private testing.
+-  NEMS Migrator Off Site Backup calendar data had
+   no error handling, so if the server didn't respond during the daily
+   check-in, the data would still be overwritten, but with invalid JSON
+   data. Added a JSON parser to detect if the server's response is valid
+   JSON before clobbering the data file.
+-  Fix the name of ODROID-C2.
+-  NEMS Linux 1.5.1 for Raspberry Pi and ODROID-C2
+   released.
+-  NEMS Linux 1.5.1 for ODROID-XU4 released.
+
+October 2019
+
+-  *nems-info*\ **nic** and *nems-info*\ **online**
+   now use nemslinux.com instead of google.com for their tests. Also,
+   results are cached for one minute, reducing the number of requests
+   while still remaining accurate to the minute. As requested by Joerg
+   Hoffmann.
+   
+November 2019
+
+-  Removed smooth scrolling from *nems-www* as it
+   causes jerky behavior in modern versions of Chrome, resulting in
+   console error, "Unable to preventDefault inside passive event
+   listener due to target being treated as passive."
+-  Account for the fact that some users may have
+   passwords in their password when restoring from a NEMS Migrator
+   backup set. Before now, a password in the password would result in a
+   null password.
+   
+December 2019
+
+-  The current NEMS version is now platform
+   independent, meaning an ODROID-XU4 won't report a new version just
+   because a new version was released for Raspberry Pi (for example). As
+   per `Issue 1`_ on NEMS Migrator.
+-  Define the platform distinction in NEMS Server
+   Overview with regards to currently available version. Reduce calls to
+   api by 1/3 (performance improvement) for Platform Name.
+-  If user is already a Patron, remove the "Become a
+   Patron" button.
+
+January 2020
+
+-  PixelSlayer Bob pointed out that 9590 was missing
+   from monit on NEMS 1.5.1. Investigated and it turns out the monit
+   service installers were patched into NEMS Linux during 1.4, but never
+   moved to the 1.5 branch. Fixed.
+-  If a user has the "NEMS is not initialized" page
+   open in their browser and completes a nems-init process, the browser
+   will now automatically redirect to the NEMS Dashboard.
+
+February 2020
+
+-  Upgraded 1.5 branch to check_temper from 1.6
+   branch and improved thresholds for detection of C vs F temperatures.
+   This brings in a few of the important check_temper fixes and
+   improvements from NEMS 1.6 to users of NEMS Linux 1.5. Thanks to
+   *tripled* for pointing out the issue with certain temperature
+   thresholds.
+-  Fix footer on NEMS TV Dashboard so it doesn't
+   jump up after 60 seconds due to the speedtest update that was added
+   for 1.6. Reported by ITManLT.
+
+April 2020
+
+-  Add *www-data* to the forbidden usernames list. Fix
+   nems-info so www-data user doesn't attempt to create a NEMS cache
+   folder.
+-  *nems-init* now asks if you'd like to proceed if it
+   detects your NEMS Server is already initialized.
+-  Improve the verbosity of error messages when
+   restoring a NEMS Migrator Off Site Backup.
+
+May 2020
+
+-  Significant overhaul of the NRPE installer to improve
+   compatibility with client systems (especially Ubuntu / Linux Mint).
+   Deals with `Issue 3`_ plus other undocumented issues.
+-  Migrated Nagios misc data folder to 1.6 branch in
+   nems-migrator.
+-  Create and enable (and document) check_cpu_temp in
+   `Check Commands: check_nrpe`_ which allows monitoring remote system
+   CPU temperatures using lm-sensors on the remote host. A feature
+   request by *tripled*.
+-  Add Sysfs thermal data to *check_cpu_temp* if
+   available, and fallback on it if *lm-sensors* isn't installed. Add
+   unknown state if thermal data cannot be obtained by either of these
+   two methods.
+-  Fixed the apt update which occurred during a NEMS
+   Update task: On Raspberry Pi it requires --allow-releaseinfo-change,
+   but this was breaking the update on some other platforms. So only use
+   this argument on RPi-based NEMS Servers.
+-  Add the apt key signature for the sury repository,
+   which hosts PHP for some earlier builds of NEMS Linux.
+-  Released NagiosTV (called NEMS Tactical Overview on
+   NEMS Linux) in advance to NEMS Linux 1.5 users. It was originally
+   slated to wait until the NEMS Linux 1.6 release, but that is being
+   held up by Adagios at the moment, so I thought it would be nice to
+   push out a little gift to the users as thanks for their patience.
+-  Upgraded NagiosTV to 0.5.3. Adapt CSS overrides to
+   allow use of NEMS wallpaper and other stylistic enhancements.
+-  Security improvement: Moved several nems-scripts
+   temporary shell scripts out of /tmp.
+-  Ensure check commands are replaced should NRPE upgrade
+   be run on a NEMS Server.
+-  Create Credit Roll Easter Egg.
+-  Improve the audio timing and add layout of Credit Roll
+   Easter Egg.
+-  Add IP Address to all screens of bootscreen.
+-  Several NEMS NConf improvements / fixes (not
+   retroactive on already initialized NEMS Servers). Examples: Add
+   *check_temper_temp* and *check_temper_hum* temperature and humidity
+   checks, fix *custom_check_mem*.
+-  Change sample SBC CPU temperature service check to
+   recent NRPE version and move to Advanced Services to improve
+   understanding for users and make it easier to apply the service to
+   other hosts.
+-  Add *Room Temperature* and *Room Humidity* sample
+   services to NEMS Server. If user has a `TEMPer`_ device connected,
+   results will be provided.
+-  Create udisks2 modules directory to prevent deceptive
+   "error" in Cockpit logs. As reported by UltimateBugHunter-NitPicker
+   and listed in `Cockpit Issue 12412`_.
+
+June 2020
+
+-  NEMS Linux 1.5.2 released for Raspberry Pi. Brings
+   together all updates and patches since 1.5.1, and adds support for
+   the new 8GB Raspberry Pi 4 Model B. Thanks to
+   UltimateBugHunter-NitPicker for beta testing the initial build for me
+   as my 8GB Raspberry Pi has still not arrived here in Canada.
+-  NEMS Linux for Docker moved to 1.5.2 branch to
+   expedite release.
+-  Grant non-root access to TEMPer devices on USB after a
+   reboot, and periodically.
+-  Make text darker in NEMS SST.
+-  Add error handling in case either the thermal or
+   humidity sensor are not detected on a TEMPer device (as is the case
+   with a unit which only has one or the other, for example). As
+   reported by JonBackhaus.
+-  Upgrade NagVis to 1.9.20, which resolves an issue with
+   user creation as pointed out by jnrhome. Pushed out through daily
+   patches to all NEMS Servers.
+-  Pipe error output from temper.py to null so it doesn't
+   interfere with the response of the script when TEMPer is not getting
+   enough power.
+-  Fix incorrect NConf fk_id_item assignment for NEMS
+   host in `NEMS Migrator Restore`_. This was causing the host-preset's
+   check-alive to be assigned incorrectly. Now, generating the Nagios
+   config will work fine after *nems-restore*. Big thanks to
+   UltimateBugHunter-NitPicker not only for bringing the issue to my
+   attention, but for granting me remote access to his NEMS Server to
+   allow me to replicate and ultimately fix this.
+-  Install WMIC and the insert script for NagiosGraph
+   which were missing in 1.5.2 and any systems which ran the recent NRPE
+   upgrade. As pointed out by UltimateBugHunter-NitPicker.
+-  Add watchdog daemon and safe shutdown on smart UPS
+   battery depleted for `PiVoyager`_ pHat.
+-  Add Multi Router Traffic Grapher (MRTG) `as requested
+   by mydogboris`_.
+-  Add logging to *nems-quickfix* in case it appears
+   hung. Log can be tailed at /var/log/nems/nems-quickfix.log
+-  Added logrotate `as per baggins`_.
+-  Improve handling of database initialization.
+-  Do not attempt to configure non-existent SSH service
+   on Docker when initializing.
+-  Change *nems-update* to only attempt installation of
+   SURY GPG key if it is missing (was expired on some older NEMS Servers
+   as it appears they're only valid for 2 years). Current key expires
+   March 2021.
+-  PiVoyager now active on all NEMS Servers (will not do
+   anything if hardware doesn't exist).
+-  Abort benchmark if watchdog (PiVoyager or PiWatcher)
+   are connected. The high load of the benchmark can cause the system to
+   appear unresponsive for some time, resulting in the watchdog
+   believing the board to be hung, which would cause the watchdog to
+   power-cycle the NEMS Server.
+-  mrtg.sh will now detect the [first] default gateway of
+   the current connection and offer it as the IP to use for MRTG. If
+   incorrect, user may still enter the router IP manually.
+-  If no SNMP data is found on the router, mrtg.sh will
+   provide a proper error rather than a "file not found" error.
+-  Add DEB/RPM detection when installing NRPE on Linux
+   host system. Rudimentary setup of RPM installation in place. Many
+   things still don't work on RPM-based hosts, but it's a great start,
+   and `047-nrpe`_ will not attempt to run apt-get on CentOS anymore.
+-  If, when user runs mrtg.sh, the MRTG Apache
+   configuration is not enabled, enable it automatically.
+-  Added *mrtgsetup* command (a symlink to mrtg.sh).
+-  Added custom trap community support to mrtgsetup.
+-  Added MRTG index to https://nems.local/mrtg
+-  Improved NEMS Migrator admin component to separate
+   1.5 and 1.6 databases in preparation for 1.5.2 compatibility and
+   inevitable move to 1.6.
+-  Remove git postBuffer (created by nems-admin during
+   nems-push procedure) upon nems-update.
+-  Stash a change in NEMS Migrator which halted updates
+   to Migrator on 1.5.2 (fixes several issues related to this, including
+   TEMPer, and ability to update NEMS Migrator). Automatically patches
+   all 1.5.2 systems.
+-  Add cronjob to automatically set USB permission every
+   minute if device connected. This makes it so users no longer have to
+   reboot after plugging in a TEMPer sensor. Now, it will work
+   automatically after no more than 60 seconds.
+
+July 2020
+
+-  NEMS Migrator has been moved to its own tab in NEMS
+   SST. It was previously included on the NEMS Cloud Services page,
+   which is inappropriate since it can be run locally.
+-  NEMS CheckIn Notifications now tell you how long the
+   server was down for upon recovery.
+-  Fixed *nems-www*'s wallpaper.php to only try to load
+   NEMS-specific functions if running on a NEMS Server. Was causing log
+   flood on NEMS' public web site.
+-  Corrected redundant verbiage on NEMS CheckIn emails.
+   "Has been down for 15 minutes *minutes*." Not sure how that never got
+   noticed before. 😊
+-  New command: *nems-passwd* allows changing the NEMS
+   Server admin account password without having to re-initialize NEMS
+   Linux. As requested by geek-dom and JJ Dubya J.
+-  If TEMPer is connected but lacks a dev assignment,
+   abort loop. This can occur if the pass-through on a Virtual Machine
+   is botched. Removing the virtual device and re-connecting it should
+   fix, but until that time, we don't want the script to hang.
+
+August 2020
+
+-  NEMS Linux now stores a file *NEMS_SERVER.txt* in
+   the Windows-readable section of your NEMS storage medium (eg., SD
+   card) which contains some information about your NEMS Server (NEMS
+   Version, Platform, HWID, Alias). This will make it easier for users
+   to determine which board a SD card came out of should they need to,
+   `as per Marshman`_, by simply plugging the card into their computer.
+-  Added JSON output switch to `nems-mailtest`_ and
+   *nems_sendmail_service* in preparation for integration with NEMS SST.
+-  NEMS Linux 1.5.2 for PINE64 A64/A64+ released as
+   per `this thread`_.
+-  Migrate all system emails (ie., NEMS CheckIn, Forum
+   Notifications, etc.) to Amazon SES and enable DKIM. Maximize
+   reliability of notification emails from NEMS Cloud Services and
+   reduce being falsely identified as spam.
+-  Add color to the warning label when user tries to
+   initialize a NEMS Server that has already been initialized (to make
+   it stand out better).
+
+September 2020
+
+-  Make 500-temper not log to cur file, which was
+   causing uninitialized NEMS Servers to say 'compiling' rather than
+   'not initialized'.
+-  Sync all files from user's home folder when
+   initializing or re-initializing. While this obviously prevents any
+   accidental data loss, this is particularly to ensure SSH key trust
+   relationships are not lost if a user re-initializes a NEMS Server on
+   AWS.
+-  Yay community! We surpassed 100 YouTube
+   subscribers on the NEMS Linux channel, so that means we qualify for a
+   vanity URL. I updated *nems-www* footer link to reflect this change.
+-  Adjust webhook notifications to recognize
+   Discord's change in URL for webhooks. Old URLs contained
+   discordapp.com as the domain. New ones are at discord.com, so NEMS
+   was rejecting them for an invalid domain name. Thanks to `Amheus for
+   bringing this to my attention`_.
+-  Omzlo Warninglights pHAT support enabled.
+-  Enabled the watchdog feature of the Omzlo
+   Warninglights pHAT.
+
+October 2020
+
+-  Add external sensor support to TEMPer checks, and
+   set as default. If an external sensor exists, it will be used. If
+   not, the internal sensor will be used. Also added output
+   *temp_location* and *hum_location* to *nems-info temper* to show
+   which sensor is being used. As `pointed out by Toasteh\_`_.
+
+.. _pointed out by Toasteh\_: https://discord.com/channels/501816361706717184/501816361706717186/763075014035505214
+.. _as per Marshman: https://forum.nemslinux.com/viewtopic.php?f=10&t=566
+.. _nems-mailtest: /usage/nems-mailtest
+.. _this thread: https://forum.nemslinux.com/viewtopic.php?f=38&t=743
+.. _Amheus for bringing this to my attention: https://discord.com/channels/501816361706717184/501816361706717186/752976026241466530
+.. _047-nrpe: https://github.com/Cat5TV/nems-admin/blob/master/build/047-nrpe
+.. _NEMS Migrator Restore: /commands/nems-restore
+.. _PiVoyager: /hardware/pivoyager
+.. _as requested by mydogboris: https://forum.nemslinux.com/viewtopic.php?f=10&t=408&p=2373
+.. _as per baggins: https://forum.nemslinux.com/viewtopic.php?f=38&t=719
+.. _TEMPer: /hardware/temper
+.. _Cockpit Issue 12412: https://github.com/cockpit-project/cockpit/issues/12412
+.. _Issue 3: https://github.com/Cat5TV/nems-admin/issues/3
+.. _`Check Commands: check_nrpe`: /check_commands/check_nrpe
+.. _Issue 1: https://github.com/Cat5TV/nems-migrator/issues/1
+.. _NEMS Linux Vendor Branding: /usage/vendor_branding
+.. _check_temper: /hardware/temper
+.. _custom_check_mem: /check_commands/custom_check_mem
+.. _requested by Premium: https://twitter.com/premium3722/status/1171308803960266752
+.. _Push Notifications Using Telegram: /usage/notify-host-by-telegram
+.. _nems-info: /commands/nems-info
+.. _NEMS Cloud Services: /features/nems-cloud
+.. _TEMPer: /hardware/temper
+.. _`Check Commands: check_nrpe`: /check_commands/check_nrpe
+.. _custom_check_mem: /check_commands/custom_check_mem
+.. _Telegram notification configuration: /usage/notify-host-by-telegram
+.. _NEMS SST: /config/nems_sst
+.. _Telegram notification script: /usage/notify-host-by-telegram
+.. _by Marshman: http://forum.category5.tv/thread-508-post-2779.html
+.. _Meverics' patch: https://forum.odroid.com/viewtopic.php?f=179&t=33865#p253001
+.. _nems-info: /commands/nems-info
+.. _Base Images: https://baldnerd.com/sbc-build-base/
+.. _reporting: https://github.com/akopytov/sysbench/issues/297
+.. _Issue 298: https://github.com/akopytov/sysbench/issues/298
+.. _as per nix-7: http://forum.category5.tv/thread-455.html
+.. _as per stealth81: http://forum.category5.tv/thread-460.html
+.. _as per RSABear: https://forum.category5.tv/thread-358.html
+.. _nems-info: /commands/nems-info
+.. _piWatcher: https://cat5.tv/piwatcher
+.. _Reported by experimenter: http://forum.category5.tv/thread-178-post-2048.html#pid2048
+.. _as requested by Zerant: http://forum.category5.tv/thread-423.html
+.. _has been broken for quite some time: https://github.com/webmin/webmin/issues/930#issuecomment-445114922
+.. _as reported by the community: http://forum.category5.tv/thread-280.html
+.. _check_sbc_temperature: ../check_commands/check_sbc_temperature.html
+.. _mgl1976: http://forum.category5.tv/thread-113-post-920.html
+.. _damo: http://forum.category5.tv/thread-265.html
+.. _ronjtaylor: http://forum.category5.tv/thread-253-post-1523.html#pid1523
+.. _known issue with Monit 5.20: https://bitbucket.org/tildeslash/monit/issues/535/invalid-csrf-token
+.. _as per ronjohntaylor: http://forum.category5.tv/thread-371-post-2175.html
+.. _check_nrpe: /check_commands/check_nrpe
+.. _NEMS CheckIn: ../nems-cloud-services/checkin.html
+.. _as requested by luckyworlock: http://forum.category5.tv/thread-128.html
+.. _as requested by Erast Fondorin: https://forum.category5.tv/thread-236-post-1827.html
+.. _Jon Backhaus: https://twitter.com/JonBackhaus/status/1075373761543720960
+.. _`nems-tools: Warning Light`: /features/nems-tools/warninglight
+.. _a bug in FreeIPMI: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=922404
+.. _the web site: https://nemslinux.com/changelog/
+.. _requested by mydogboris: https://forum.category5.tv/thread-341.html
+.. _as per thegreatadmin: http://forum.category5.tv/thread-366.html
+.. _check_esxi_hardware: ../check_commands/check_esxi_hardware.html
+.. _as per readyit: http://forum.category5.tv/thread-337-post-2005.html#pid2005
+.. _as per Toxic: http://forum.category5.tv/thread-334.html
+.. _check_internet_speed: ../check_commands/check_internet_speed.html
+.. _as per infocon: http://forum.category5.tv/thread-374.html
+.. _as per lee3521: http://forum.category5.tv/thread-303.html
+.. _itsubs@sagroup.co.uk: http://forum.category5.tv/thread-312.html
+.. _as per Zerant: https://forum.category5.tv/thread-409-post-2378.html
+.. _continued support: https://www.patreon.com/nems
+.. _Become a Patron: https://www.patreon.com/bePatron?c=1348071&rid=2163023
+.. _Nagios Responsive HTML Email Notifications Templates: https://github.com/heiniha/Nagios-Responsive-HTML-Email-Notifications
+.. _Björn Ricks: https://twitter.com/BjoernRicks
+.. _Greenbone Networks: https://www.greenbone.net/en/
+.. _nems-wmic: https://github.com/Cat5TV/nems-wmic
+.. _Virtual Appliance: https://nemslinux.com/download/nagios-virtual-appliance.php
+.. _Amazon Web Services: https://nemslinux.com/download/nagios-for-amazon-web-services.php
+.. _ASUS: https://nemslinux.com/download/nagios-for-tinker-board.php
+.. _ODROID: https://nemslinux.com/download/nagios-for-odroid.php
+.. _Raspberry Pi: https://nemslinux.com/download/nagios-for-raspberry-pi-3.php
+.. _PINE64: https://nemslinux.com/download/nagios-for-pine64.php
+.. _Khadas: https://khadas.com/
+.. _FriendlyElec: https://nemslinux.com/download/nagios-for-friendlyelec.php

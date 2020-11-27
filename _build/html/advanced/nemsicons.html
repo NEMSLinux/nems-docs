@@ -1,0 +1,144 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Copying OS Icons to NEMS &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NEMS PHP Server Agent" href="nems_php_agent.html" />
+    <link rel="prev" title="Multi Router Traffic Grapher (MRTG)" href="mrtg.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="copying-os-icons-to-nems">
+<h1>Copying OS Icons to NEMS<a class="headerlink" href="#copying-os-icons-to-nems" title="Permalink to this headline">¶</a></h1>
+<p>To add additional or custom OS icons to NEMS, perform the following:</p>
+<p>From a file browser window, open the Home share on the NEMS server (i.e. \nems_ip\Home) and log in with your NEMS credentials.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/icons_02.PNG"><img alt="../_images/icons_02.PNG" src="../_images/icons_02.PNG" style="width: 600px;" /></a>
+</div>
+<p>Create a folder.  In this example, it is “icons”</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/icons_03.PNG"><img alt="../_images/icons_03.PNG" src="../_images/icons_03.PNG" style="width: 600px;" /></a>
+</div>
+<p>Start an SSH session to the NEMS server and login.  The “icons” folder is displayed when ls is run.
+Copy the icon images into this new folder.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/icons_05.PNG"><img alt="../_images/icons_05.PNG" src="../_images/icons_05.PNG" style="width: 600px;" /></a>
+</div>
+<p>“cd” into the “icons” folder and run ls to verify the icon files are there.
+Copy the icon images into this new folder.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/icons_06.PNG"><img alt="../_images/icons_06.PNG" src="../_images/icons_06.PNG" style="width: 600px;" /></a>
+</div>
+<p>The icon file can be copied or moved into the /var/www/nconf/img/logos/base folder.</p>
+<p>To copy <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">cp</span> <span class="pre">*.*</span> <span class="pre">/var/www/nconf/img/logos/bas</span></code></p>
+<p>To move <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">mv</span> <span class="pre">*.*</span> <span class="pre">/var/www/nconf/img/logos/bas</span></code></p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/icons_07.PNG"><img alt="../_images/icons_07.PNG" src="../_images/icons_07.PNG" style="width: 600px;" /></a>
+</div>
+<p>Login to nconf for NEMS.
+In this example, the icon for “switch” will be changed.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/icons_09.PNG"><img alt="../_images/icons_09.PNG" src="../_images/icons_09.PNG" style="width: 600px;" /></a>
+</div>
+<p>Click on Show for OS, then click on edit (pencil icon) for the OS to be modified.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/icons_10.PNG"><img alt="../_images/icons_10.PNG" src="../_images/icons_10.PNG" style="width: 600px;" /></a>
+</div>
+<p>Edit the gif name to the new icon name and click Submit.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/icons_11.PNG"><img alt="../_images/icons_11.PNG" src="../_images/icons_11.PNG" style="width: 600px;" /></a>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/icons_12.PNG"><img alt="../_images/icons_12.PNG" src="../_images/icons_12.PNG" style="width: 600px;" /></a>
+</div>
+<p>Go back to Hosts and verify the icon has changed.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/icons_13.PNG"><img alt="../_images/icons_13.PNG" src="../_images/icons_13.PNG" style="width: 600px;" /></a>
+</div>
+<p>Nagios icon packs
+<a class="reference external" href="https://exchange.nagios.org/directory/Graphics-and-Logos/Images-and-Logos">https://exchange.nagios.org/directory/Graphics-and-Logos/Images-and-Logos</a></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="mrtg.html" title="previous chapter">Multi Router Traffic Grapher (MRTG)</a></li>
+      <li>Next: <a href="nems_php_agent.html" title="next chapter">NEMS PHP Server Agent</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/advanced/nemsicons.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/advanced/nemsicons.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

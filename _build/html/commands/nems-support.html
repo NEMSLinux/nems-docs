@@ -1,0 +1,138 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NEMS Command: nems-support &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nems-command-nems-support">
+<h1>NEMS Command: nems-support<a class="headerlink" href="#nems-command-nems-support" title="Permalink to this headline">¶</a></h1>
+<p><em>nems-support</em>&nbsp;automatically creates an encrypted backup file
+called&nbsp;<strong>support.nems</strong>&nbsp;which contains all information about your
+running NEMS server. This information is intended to be used during
+support sessions in event that you are experiencing issues and require
+assistance from NEMS Linux support.</p>
+<p>Currently, NEMS Linux is a community project driven by one
+individual:&nbsp;<strong>Robbie Ferguson</strong>. You should be wary of sending your
+support.nems file to anyone but Robbie, as it contains confidential
+information (eg., your email settings from NEMS SST). The file is
+encrypted, but can easily be decrypted using your NEMS Hardware ID if
+that information is available.</p>
+<p>Robbie accepts support requests via the Community Forum and by Private
+Message on Patreon. The email address for you to send your support.nems
+file to will always be on either &#64;category5.tv or &#64;nemslinux.com
+domains. If anyone ever asks you to send it somewhere else, be cautious.</p>
+<p><strong>To create a support.nems file, run:</strong></p>
+<p>sudo nems-support</p>
+<p>You will then be advised where to send your support.nems file, along
+with a 6-digit string you must send with the file. This string is simply
+the first 6 digits of your HWID, to prevent sending the full key. Robbie
+will use this string to look up your full HWID for decryption.</p>
+<p>If your support request has to do with a Community Forum thread, please
+also include the&nbsp;&nbsp;to the thread within the body of your email.</p>
+<p>Once created, you can access the support.nems file from your computer by
+navigating
+to&nbsp;<a class="reference external" href="https://nems.local/backup/support.nems">https://NEMS.local/backup/support.nems</a>&nbsp;-or-
+find the file on the SMB share at \NEMS.localbackup</p>
+<div class="section" id="report">
+<h2>Report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h2>
+<p>The command line option&nbsp;<em>report</em>&nbsp;forgoes the backup portion
+of&nbsp;<em>nems-support</em>&nbsp;and only generates a small textual report to assist in
+diagnosing problems.</p>
+<p><strong>To generate this report, run:</strong></p>
+<p>sudo nems-support report</p>
+<p>The support.nems and support-report.txt files self-destruct after 15
+minutes.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NEMS Command: nems-support</a><ul>
+<li><a class="reference internal" href="#report">Report</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/commands/nems-support.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/commands/nems-support.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

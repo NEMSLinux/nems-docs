@@ -1,0 +1,221 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>nems-tools: Warning Light &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="nems-tools: NEMS Extender OS" href="extender_os.html" />
+    <link rel="prev" title="nems-tools: GPIO Extender" href="gpioextender.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nems-tools-warning-light">
+<h1>nems-tools: Warning Light<a class="headerlink" href="#nems-tools-warning-light" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="../_images/warninglight.jpg"><img alt="../_images/warninglight.jpg" src="../_images/warninglight.jpg" style="width: 400px;" /></a>
+</div>
+<p><em>Warning Light</em> is a lightweight daemon running on NEMS Linux
+(1.4.1+). It is a different type of notification system exclusive to NEMS
+Linux.</p>
+<div class="section" id="nems-warning-light-diy-hardware">
+<h2>NEMS Warning Light: DIY Hardware<a class="headerlink" href="#nems-warning-light-diy-hardware" title="Permalink to this headline">¶</a></h2>
+<p>If the state of your monitored hosts should change, <em>Warning Light</em>
+could be used to trigger a visual response by way of a tower signal lamp
+via GPIO, for example.</p>
+<ol class="arabic simple">
+<li>OK: Solid green light</li>
+<li>WARNING: Solid orange light</li>
+<li>UNKNOWN: Flashing orange light</li>
+<li>CRITICAL: Short siren every 15 minutes, solid red light.</li>
+</ol>
+<p><em>Warning Light</em> uses <a class="reference external" href="../advanced/nems-api.html">nems-api</a> to monitor the status of your NEMS
+Linux server.</p>
+<p><em>Warning Light</em> can be connected directly to a supported NEMS Linux
+server, or to a supplemental device
+running the <a class="reference external" href="../nems-tools/extender_os.html">NEMS Extender OS</a> with network access, even through the
+Internet.</p>
+</div>
+<div class="section" id="nems-warning-light-pre-built-hardware">
+<h2>NEMS Warning Light: Pre-Built Hardware<a class="headerlink" href="#nems-warning-light-pre-built-hardware" title="Permalink to this headline">¶</a></h2>
+<p>Omzlo (the makers of the PiVoyager and PiWatcher pHATs) have created
+an i2c pHAT that integrates with NEMS Warning Light. Learn more on
+<a class="reference external" href="../accessories/omzlo-warninglight-phat.html">the Omzlo NEMS Warning Light page</a>.</p>
+</div>
+<div class="section" id="system-requirements">
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
+<p><em>Warning Light</em> can be connected directly to the GPIO of your Raspberry
+Pi-based NEMS Linux server. If your NEMS server is a different platform
+or GPIO to the server is not convenient, you can connect your <em>Warning
+Light</em> to a supported device (such as a Raspberry Pi Zero) and install
+NEMS Extender OS, which will allow you to add an
+unlimited number of GPIO receivers to your NEMS server, regardless of
+platform.</p>
+</div>
+<div class="section" id="technical-info-for-makers">
+<h2>Technical Info for Makers<a class="headerlink" href="#technical-info-for-makers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="gpio-pin-assignments">
+<h3>GPIO Pin Assignments<a class="headerlink" href="#gpio-pin-assignments" title="Permalink to this headline">¶</a></h3>
+<p>On any Raspberry Pi NEMS Linux server or NEMS Tools GPIO Extender
+receiver, the pinout is as follows:</p>
+<ul class="simple">
+<li>OK state -&gt; Pin 24</li>
+<li>UNKNOWN or WARN state -&gt; Pin 23</li>
+<li>CRIT state -&gt; Pin 18</li>
+</ul>
+<p>See also, <a class="reference external" href="../accessories/rpi_pinout.html">NEMS Linux: Raspberry Pi GPIO Pinout</a>.</p>
+<p><strong>Please Note:</strong> When the final version is released, it will most likely
+use the I2C protocol (unless I decide to create a USB version instead of
+GPIO-based). However, these GPIO pins will remain functional in order to
+provide an alternate means of connecting for tinkerers.</p>
+<p>Pins are LOW (0) by default, and will turn HIGH (1) appropriately in
+event of a state change. For example, if your NEMS Linux server is in OK
+state, Pin 24 will be HIGH while pins 23 and 18 will be LOW.</p>
+<p>The pinout should remain the same, though I may expand it to support a
+siren signal or passive alarm buzzer. I’d suggest using these pins to
+trip a 5V relay, powering a higher-voltage indicator such as a signal
+lamp.</p>
+<p>Please share what you create. I’d love to see your designs to make NEMS
+Warning Light work in your environment.</p>
+</div>
+</div>
+<div class="section" id="nems-tools-gpio-extender">
+<h2>NEMS Tools GPIO Extender<a class="headerlink" href="#nems-tools-gpio-extender" title="Permalink to this headline">¶</a></h2>
+<p>If your NEMS Linux server is not powered by a Raspberry Pi, or if it is
+not located where you’d like your NEMS Warning Light, plugging a NEMS
+Warning Light device into the GPIO isn’t possible. That’s where the NEMS
+Tools GPIO Extender comes in.</p>
+<p>To use the NEMS Tools GPIO Extender, you’ll need any Raspberry Pi to act
+as the receiver, but your NEMS Linux server can be any supported
+platform, including Virtual Appliance. A Pi Zero WH would do very nicely
+for the task. Since the GPIO Extender receiver is separate from your
+NEMS Linux server, you can add Raspberry Pi’s GPIO to your ODROID-N2
+NEMS Server, for example. Or install your NEMS Warning Light on a
+ceiling-mounted unit closer to the area where your technicians work,
+connected to the GPIO Extender server (your NEMS Linux server) over
+wifi. Or install your NEMS Warning Light on the other side of the world:
+Since the NEMS Tools GPIO Extender is IP-based, it can be anywhere as
+long as it has network access to your NEMS Linux server (TCP port 9595).</p>
+<p>To top it off, you can use an <em>unlimited</em> number of NEMS Tools GPIO
+Extender receivers with a single NEMS Linux Server.</p>
+<p>Your NEMS Linux server (1.5+) is already running the NEMS Tools GPIO
+Extender server on port 9595.</p>
+<p>NEMS Tools GPIO Extender Receiver OS allows you to convert any Raspberry
+Pi device into a NEMS Tools GPIO Extender.</p>
+</div>
+<div class="section" id="nems-warning-light-webhook">
+<h2>NEMS Warning Light: Webhook<a class="headerlink" href="#nems-warning-light-webhook" title="Permalink to this headline">¶</a></h2>
+<p>NEMS Warning Light also provides the ability to notify by webhook. See <a class="reference external" href="../notifications/webhook.html">notify-by-webhook</a> for details.</p>
+</div>
+<div class="section" id="nems-warning-light-log-files">
+<h2>NEMS Warning Light: Log Files<a class="headerlink" href="#nems-warning-light-log-files" title="Permalink to this headline">¶</a></h2>
+<p>You can monitor what is happening with <em>Warning Light</em> by tailing the
+log file.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">nems</span><span class="o">/</span><span class="n">nems</span><span class="o">-</span><span class="n">tools</span><span class="o">/</span><span class="n">warninglight</span>
+</pre></div>
+</div>
+<p>You can view the current state of NEMS Warning Light:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">nems</span><span class="o">/</span><span class="n">nems</span><span class="o">-</span><span class="n">tools</span><span class="o">/</span><span class="n">currentstate</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">nems-tools: Warning Light</a><ul>
+<li><a class="reference internal" href="#nems-warning-light-diy-hardware">NEMS Warning Light: DIY Hardware</a></li>
+<li><a class="reference internal" href="#nems-warning-light-pre-built-hardware">NEMS Warning Light: Pre-Built Hardware</a></li>
+<li><a class="reference internal" href="#system-requirements">System Requirements</a></li>
+<li><a class="reference internal" href="#technical-info-for-makers">Technical Info for Makers</a><ul>
+<li><a class="reference internal" href="#gpio-pin-assignments">GPIO Pin Assignments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nems-tools-gpio-extender">NEMS Tools GPIO Extender</a></li>
+<li><a class="reference internal" href="#nems-warning-light-webhook">NEMS Warning Light: Webhook</a></li>
+<li><a class="reference internal" href="#nems-warning-light-log-files">NEMS Warning Light: Log Files</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="gpioextender.html" title="previous chapter">nems-tools:&nbsp;GPIO&nbsp;Extender</a></li>
+      <li>Next: <a href="extender_os.html" title="next chapter">nems-tools: NEMS Extender OS</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/nems-tools/warninglight.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/nems-tools/warninglight.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

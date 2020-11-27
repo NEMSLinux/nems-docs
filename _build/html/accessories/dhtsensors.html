@@ -1,0 +1,223 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DHT Sensors &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Check Command: check_esxi_hardware" href="../check_commands/check_esxi_hardware.html" />
+    <link rel="prev" title="Check Command: check_apc" href="../check_commands/check_apc.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="dht-sensors">
+<h1>DHT Sensors<a class="headerlink" href="#dht-sensors" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>DHT sensors are an ultra-affordable Arduino sensor, compatible with
+various single board computers such as the Raspberry Pi. DHT sensors
+contain a capacitive humidity sensor and a thermistor, plus a basic chip
+to convert the analog data to digital and provide a digital signal with
+the temperature and humidity to any compatible NEMS Linux server, such
+as Raspberry Pi, ODROID or Pine64 NEMS Servers.</p>
+<p>DHTxx support requires NEMS Linux 1.6+.</p>
+</div>
+<div class="section" id="compatible-dht-sensors">
+<h2>Compatible DHT Sensors<a class="headerlink" href="#compatible-dht-sensors" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dht11">
+<h3>DHT11<a class="headerlink" href="#dht11" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://amzn.to/31RIjsf">Buy on Amazon.com</a></p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../_images/dht11.jpg"><img alt="DHT11 Sensor" src="../_images/dht11.jpg" style="width: 130px;" /></a>
+</div>
+<p>The DHT11 sensor is reasonably accurate, but has a fairly narrow range,
+making it only suitable for indoor use where it is known the room
+temperature and humidity will not fall outside the available thresholds.</p>
+<ul class="simple">
+<li>20-80% humidity readings with 5% accuracy</li>
+<li>0-50°C temperature readings ±2°C accuracy</li>
+</ul>
+</div>
+<div class="section" id="dht22-am2302">
+<h3>DHT22/AM2302<a class="headerlink" href="#dht22-am2302" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://amzn.to/3alpeCE">Buy on Amazon.com</a></p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../_images/dht22.jpg"><img alt="DHT22 Sensor" src="../_images/dht22.jpg" style="width: 130px;" /></a>
+</div>
+<p>The DHT22 (or AM2302 for the wired version) is more accurate, and has a
+significantly wider range, making it suitable for measuring more extreme
+temperatures and humidity. This can be useful if you wish to use NEMS
+Linux to alert you should your pipes be at risk of freezing, or your
+freezer compressor failing.</p>
+<ul class="simple">
+<li>0-100% humidity readings with 2-5% accuracy</li>
+<li>-40 to 80°C temperature readings ±0.5°C accuracy</li>
+</ul>
+</div>
+</div>
+<div class="section" id="connection">
+<h2>Connection<a class="headerlink" href="#connection" title="Permalink to this headline">¶</a></h2>
+<p>The pinout for the DHT11, DHT22 and AM2302 are the same, so no matter
+which DHT sensor you choose, it is an identical process to making it
+work with your NEMS Server.</p>
+<div class="figure align-left">
+<a class="reference internal image-reference" href="../_images/dht11_dht22_pinout.png"><img alt="DHT11 DHT22 Pinout" src="../_images/dht11_dht22_pinout.png" style="width: 150px;" /></a>
+</div>
+<p>Place a 10k resistor between Pin 1 and Pin 2, which will ensure reliable
+data output from the sensor when it switches from input to output. If
+you don’t have a resistor handy, don’t worry about it. It’ll improve
+reliability to have it, but won’t hurt anything if you don’t.</p>
+<div class="section" id="raspberry-pi">
+<h3>Raspberry Pi<a class="headerlink" href="#raspberry-pi" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Raspberry Pi Pin 1 (3.3V) to DHTxx Pin 1.</li>
+<li>Raspberry Pi Pin 7 (GPIO4, GPCLK0, T-Cobbler P04) to DHTxx Pin 2.</li>
+<li>DHTxx Pin 3 does not get connected.</li>
+<li>Raspberry Pi GND to DHTxx Pin 4.</li>
+</ul>
+</div>
+<div class="section" id="odroid-xu4">
+<h3>ODROID-XU4<a class="headerlink" href="#odroid-xu4" title="Permalink to this headline">¶</a></h3>
+<p>Note that the ODROID-XU4 provides 1.8V or 5V. As there is no 3.3V and
+the minimum voltage for this sensor is 3V, you will need to use the 5V
+pin.</p>
+</div>
+</div>
+<div class="section" id="json-output">
+<h2>JSON Output<a class="headerlink" href="#json-output" title="Permalink to this headline">¶</a></h2>
+<p>NEMS Linux can output JSON temperature and humidity data from the DHT11
+and DHT22/AM2302 device.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">nems-info [dht11|dht22]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="check-commands">
+<h2>Check Commands<a class="headerlink" href="#check-commands" title="Permalink to this headline">¶</a></h2>
+<p>NEMS Linux includes Robbie Ferguson’s&nbsp;<em>check_dhtxx</em>&nbsp;to monitor the
+temperature and humidity data provided by a DHT Sensor. You can specify
+both minimum and maximum values for the check command.</p>
+<p><em>check_dhtxx</em>&nbsp;automatically detects the version of DHTxx sensor you are
+using.</p>
+<p>Both the temperature and humidity sensors are supported, and check
+commands are included in NEMS NConf.</p>
+<ul class="simple">
+<li>check_dhtxx_temp</li>
+<li>check_dhtxx_hum</li>
+</ul>
+<p>Both a low and high threshold is set in NEMS NConf, allowing the DHT
+sensor to enter a warning or critical state whether the
+temperature/humidity are either too high or too low.</p>
+<div class="section" id="calibration">
+<h3>Calibration<a class="headerlink" href="#calibration" title="Permalink to this headline">¶</a></h3>
+<p>As of NEMS Linux 1.6, both the thermal sensor and humidity sensor can be
+calibrated within NEMS SST to ensure the highest level of accuracy.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">DHT Sensors</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#compatible-dht-sensors">Compatible DHT Sensors</a><ul>
+<li><a class="reference internal" href="#dht11">DHT11</a></li>
+<li><a class="reference internal" href="#dht22-am2302">DHT22/AM2302</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#connection">Connection</a><ul>
+<li><a class="reference internal" href="#raspberry-pi">Raspberry Pi</a></li>
+<li><a class="reference internal" href="#odroid-xu4">ODROID-XU4</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#json-output">JSON Output</a></li>
+<li><a class="reference internal" href="#check-commands">Check Commands</a><ul>
+<li><a class="reference internal" href="#calibration">Calibration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../check_commands/index.html">Included Check Commands</a><ul>
+      <li>Previous: <a href="../check_commands/check_apc.html" title="previous chapter">Check Command: check_apc</a></li>
+      <li>Next: <a href="../check_commands/check_esxi_hardware.html" title="next chapter">Check Command: check_esxi_hardware</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/accessories/dhtsensors.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/accessories/dhtsensors.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

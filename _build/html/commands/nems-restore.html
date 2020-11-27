@@ -1,0 +1,235 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NEMS Linux Command: nems-restore &#8212; NEMS Linux Documentation 1.6 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nems-linux-command-nems-restore">
+<h1>NEMS Linux Command: nems-restore<a class="headerlink" href="#nems-linux-command-nems-restore" title="Permalink to this headline">¶</a></h1>
+<p>The&nbsp;NEMS Migrator tool allows you to export/backup your NEMS
+configuration (<em>backup.nems</em>) as well as import a previous backup
+(through the Restore option).</p>
+<p>The NEMS Migrator backup and restore options are great for keeping a
+safe backup without having to shutdown your NEMS server. Just download
+the file once in a while, or&nbsp;<a class="reference external" href="../basic/backupnems.html">back it up automatically with your daily
+backup
+script</a>.</p>
+<p>NEMS Migrator is also helpful when upgrading from previous versions of
+NEMS, or when moving from one platform to another, saving you having to
+reconfigure your NEMS deployment just to get the latest features or
+upgraded hardware.</p>
+<div class="section" id="important-note">
+<h2>Important Note<a class="headerlink" href="#important-note" title="Permalink to this headline">¶</a></h2>
+<p>I am a firm believer in redundancy, and protecting your data. What I’d
+like you to do is, export your migration file, then install NEMS on
+a&nbsp;<strong>new</strong>&nbsp;MicroSD card. Then boot from that and restore your NEMS Migrator
+backup. Once you’ve confirmed everything worked well, you can deprecate
+the old one safely. However, if something went wrong, you can contact me
+to fix it for you, and continue running from the old SD card in the
+interim.</p>
+</div>
+<div class="section" id="how-to-restore-a-nems-migrator-backup">
+<h2>How to Restore a NEMS Migrator Backup<a class="headerlink" href="#how-to-restore-a-nems-migrator-backup" title="Permalink to this headline">¶</a></h2>
+<p>While you can use NEMS Migrator to&nbsp;<em>backup</em>&nbsp;any version of NEMS Linux
+(and even NagiosPi) the restore feature requires NEMS Linux 1.2+</p>
+<div class="section" id="first-step">
+<h3>First Step<a class="headerlink" href="#first-step" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Deploy the version of NEMS you wish to restore the backup to. Please
+heed my Important Note above.</li>
+<li>Boot the new NEMS Linux deployment and mount the USB flash drive.</li>
+</ol>
+</div>
+<div class="section" id="restore-a-local-backup">
+<h3>Restore a Local Backup<a class="headerlink" href="#restore-a-local-backup" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>From any computer on your network, obtain a copy of
+your&nbsp;<em>backup.nems</em>&nbsp;file from a running NEMS server, you can download
+it directly in your web browser at&nbsp;<em>https://nems.local/backup/</em>&nbsp;or
+click the Migrator menu item on your NEMS Dashboard.</li>
+<li>Get your&nbsp;<em>backup.nems</em>&nbsp;file to your NEMS Server via one of the
+following methods:<ul>
+<li>Place your&nbsp;<em>backup.nems</em>&nbsp;file on a USB flash drive and mount that
+flash drive on your NEMS Server.</li>
+<li>Copy your&nbsp;<em>backup.nems</em>&nbsp;file to your NEMS Server over Samba
+at&nbsp;<em>\nems.localhome</em>&nbsp;which will place it in the home folder of
+your NEMS user, which will be accessible on NEMS Linux
+at&nbsp;<em>/home/&lt;username&gt;/backup.nems</em></li>
+<li>Copy your&nbsp;<em>backup.nems</em>&nbsp;file to your NEMS Server via SCP:</li>
+</ul>
+</li>
+</ol>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">scp &lt;path to backup.nems&gt; &lt;username&gt;@&lt;nemsIP&gt;:/home/&lt;username&gt;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>Determine the location of&nbsp;<em>backup.nems</em>&nbsp;on your NEMS Server. For
+example, if you mounted the USB flash drive on&nbsp;<em>/mnt/flash</em>&nbsp;you may
+determine the location to be&nbsp;<em>/mnt/flash/backup.nems</em>, or if you
+copied it to the home folder, your file will be located
+at&nbsp;<em>/home/&lt;username&gt;/backup.nems</em></li>
+<li>Armed with that information, run the following command (use the&nbsp;<em>full
+path</em>&nbsp;to your backup.nems file):</li>
+</ol>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">sudo nems-restore /mnt/flash/backup.nems</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">sudo nems-restore /home/&lt;username&gt;/backup.nems</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="restore-an-off-site-backup">
+<h1>Restore an Off-Site Backup<a class="headerlink" href="#restore-an-off-site-backup" title="Permalink to this headline">¶</a></h1>
+<p>This requires an active NEMS Migrator Off-Site Backup (NEMS-OSB)
+account.</p>
+<ol class="arabic simple">
+<li>Run the command and choose the date you’d like to restore to:</li>
+</ol>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">sudo nems-restore osb</span>
+</pre></div>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oREK_PUhkAE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><div class="section" id="restore-off-site-backup-from-other-device">
+<h2>Restore Off-Site Backup from Other Device<a class="headerlink" href="#restore-off-site-backup-from-other-device" title="Permalink to this headline">¶</a></h2>
+<p>By default NEMS-OSB will assume you are restoring to the same device
+that was used when the Off-Site Backup was created. However this may not
+always be the case (ie., perhaps your device failed and you need to
+restore to a new device).</p>
+<ol class="arabic simple">
+<li>In NEMS System Settings Tool’s “NEMS Cloud Services” tab, enter the
+NEMS Cloud Services Key from your old device. It will fail to
+authenticate since it is for a different HWID, but this is required
+in order to authenticate your account.</li>
+<li>You will also need to enter your Personal Encryption/Decryption
+Password so NEMS can read the OSB data from your old device.</li>
+<li>Run the command and choose the date you’d like to restore to:</li>
+</ol>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">sudo nems-restore osb OLD_HWID</span>
+
+<span class="go">(where OLD_HWID is the HWID from your old device)</span>
+</pre></div>
+</div>
+<p>Every Off-Site Backup is hard-tied to its originating HWID. You must
+restore your backup to the new device before closing the old NEMS-OSB
+account. Once a NEMS-OSB account is closed or moved to another HWID, the
+old backups are no longer recoverable (for security reasons). You do not
+need a NEMS-OSB account on your new device to restore, as long as you
+know the originating HWID and NEMS Cloud Services key.</p>
+<div class="section" id="final-step">
+<h3>Final Step<a class="headerlink" href="#final-step" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Follow the prompts on screen to restore your configuration to the new
+NEMS Linux deployment. If it fails for any reason, you can safely
+shut down and replace the SD card with your original deployment.</li>
+</ol>
+<p>If you have any problems (or praise) please post in&nbsp;<a class="reference external" href="https://forum.nemslinux.com/">the NEMS Linux
+community forum</a>.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NEMS Linux Command: nems-restore</a><ul>
+<li><a class="reference internal" href="#important-note">Important Note</a></li>
+<li><a class="reference internal" href="#how-to-restore-a-nems-migrator-backup">How to Restore a NEMS Migrator Backup</a><ul>
+<li><a class="reference internal" href="#first-step">First Step</a></li>
+<li><a class="reference internal" href="#restore-a-local-backup">Restore a Local Backup</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#restore-an-off-site-backup">Restore an Off-Site Backup</a><ul>
+<li><a class="reference internal" href="#restore-off-site-backup-from-other-device">Restore Off-Site Backup from Other Device</a><ul>
+<li><a class="reference internal" href="#final-step">Final Step</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/commands/nems-restore.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Category5 TV Network.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/commands/nems-restore.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
