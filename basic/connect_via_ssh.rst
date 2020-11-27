@@ -2,7 +2,7 @@ Connect to NEMS Server Over SSH
 -------------------------------
 
 The first time you connect to your NEMS server you will use the
-`nemsadmin <../gettingstarted/nemsadminpassword.html#default-username-and-password>`__ account.
+`nemsadmin <../basic/default_password.html>`__ account.
 
 After you have successfully `initialized NEMS <../gettingstarted/initialization.html>`__,
 you will instead use the account you create during that process.

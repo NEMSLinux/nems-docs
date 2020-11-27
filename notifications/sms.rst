@@ -1,5 +1,5 @@
-Notifications By SMS
-====================
+Notifications via SMS
+=====================
 
 Many mobile service providers offer the ability to receive SMS messages
 via an SMS Gateway. This means by sending an email to a special email

@@ -22,9 +22,6 @@ info about your NEMS Linux server.
 `nems-init <nems-init.html>`__ -
 Initialize your NEMS Linux server.
 
-`nems-mailtest <nems-mailtest.html>`__ -
-Test the email notification settings of your NEMS Linux server.
-
 `nems-quickfix <nems-quickfix.html>`__ -
 Quickly run all rolling updates and bring in new patches and fixes with
 one quick command.

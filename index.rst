@@ -37,9 +37,7 @@ Table of Contents
     basic/default_password
     check_commands/index
     basic/backupnems
-    basic/commandlinetest
     basic/nav
-    basic/resolvednshostnamesonlan
     basic/9590
     basic/connect_via_ssh
     basic/faq
@@ -54,7 +52,7 @@ Table of Contents
     nems-tools/extender_os
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :caption: Notifications
 
     notifications/index
@@ -156,6 +154,12 @@ Table of Contents
     misc/linuxsourcecode
     misc/md5checksums
     misc/vendorbranding
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Troubleshooting
+
+    troubleshooting/multicast_name_resolution
      
 .. toctree::
     :maxdepth: 1

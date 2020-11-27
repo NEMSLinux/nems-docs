@@ -1,5 +1,5 @@
-Notifications Using Pushover
-============================
+Configuring Pushover for NEMS Notifications
+===========================================
 
 .. figure:: ../img/pushover_notifications.jpg
   :width: 300

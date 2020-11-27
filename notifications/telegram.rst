@@ -1,9 +1,7 @@
-.. Load the global roles (bolditalic, for example):
-
 .. include:: ../global.rst
 
-Push Notifications Using Telegram
-=================================
+Configuring Telegram for NEMS Notifications
+===========================================
 
 Telegram is a free chat service with an  supporting Push notifications
 on Android and iOS.

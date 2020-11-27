@@ -55,14 +55,14 @@ freezer compressor failing.
 Connection
 ----------
 
+.. figure:: ../img/dht11_dht22_pinout.png
+  :width: 150
+  :align: right
+  :alt: DHT11 DHT22 Pinout
+
 The pinout for the DHT11, DHT22 and AM2302 are the same, so no matter
 which DHT sensor you choose, it is an identical process to making it
 work with your NEMS Server.
-
-.. figure:: ../img/dht11_dht22_pinout.png
-  :width: 150
-  :align: left
-  :alt: DHT11 DHT22 Pinout
 
 Place a 10k resistor between Pin 1 and Pin 2, which will ensure reliable
 data output from the sensor when it switches from input to output. If

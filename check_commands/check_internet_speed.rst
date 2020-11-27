@@ -3,14 +3,10 @@ Check Command: check_internet_speed
 
 Tests the speed of your Internet connection.
 
-.. note::
-
-   Requires NEMS Linux 1.5+.
-
 Demo Data
 ---------
 
-Out of the box, NEMS Linux will check the Internet connectivity speed
+Out of the box, NEMS Linux 1.5+ will check the Internet connectivity speed
 using an automatically selected nearby test server. Warning
 notifications will be generated if your upload or download speed falls
 below 10 Mb/s and Critical warnings if either falls below 7 Mb/s. These

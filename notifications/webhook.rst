@@ -1,5 +1,5 @@
-Notifications by Webhook
-========================
+Receiving Notifications via Webhook
+===================================
 
 .. figure:: ../img/discord-nems-webhook.png
   :width: 300
