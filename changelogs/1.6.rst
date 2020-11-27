@@ -48,7 +48,7 @@ December 2019
 -  Upgrade Nagios Core to 4.4.5.
 -  Integrated `NagiosTV`_ as per BastyJuice.
 
-January 2020
+January-February 2020
 
 -  Upgrade Monit to 5.26.0.
 -  Move build tmpdir out of /tmp/ and into /usr/src/
@@ -69,9 +69,6 @@ January 2020
 -  NRPE upgraded to 4.0.0.
 -  Fixed NRPE installer script if run on non-NEMS
    system, as per `Issue 2`_ by Xelo.
-   
-February 2020
-
 -  Revert NRPE to 3.2.1 temporarily, until I can
    figure out how to make it talk to older installs (upgrading to 4.0.0
    breaks all existing 3.2.1 installs).
