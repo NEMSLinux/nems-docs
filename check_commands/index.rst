@@ -18,11 +18,6 @@ here are some of the available check commands:
 -  `check_mikrotik_switch <check_mikrotik.html>`__ -
    monitor stats for some MikroTik routers, including thermal sensors,
    packet loss, uptime, and so-on.
--  `check_minecraft <check_minecraft.html>`__ -
-   monitor Minecraft server uptime, see how many players are connected
-   and analyse the response time. enable-query and enable-rcon do not
-   need to be enabled on the Minecraft server, so you should be able to
-   monitor any Minecraft server.
 -  `check_nrpe <check_nrpe.html>`__ -
    Monitor your hosts at a deeper level. Things like CPU usage, free
    disk space, free RAM, and so-on.
@@ -54,7 +49,6 @@ here are some of the available check commands:
     check_http
     check_internet_speed
     check_mikrotik
-    check_minecraft
     check_nrpe
     check_ping
     ../accessories/temper
