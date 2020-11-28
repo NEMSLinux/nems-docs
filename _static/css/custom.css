@@ -1,5 +1,5 @@
 /* Do not add bottom margin to multi-line bullet points */
-.rst-content .line-block {
+.rst-content .line-block, .rst-content li {
   margin-bottom: 0 !important;
 }
 
