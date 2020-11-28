@@ -33,10 +33,20 @@ The NEMS PHP Server Agent is designed specifically to collect system data from a
 Check Command Arguments
 ~~~~~~~~~~~~~~~~~~~~~~~
 
--  **URL** - The URL to your *nems-agent.php* on the remote server.
--  **Check** - Percent Memory Usage [mem], Percent Disk Usage (Running Folder) [.], Percent Disk Usage (/) [disk], Percent Disk Usage (/var) [var], Network Usage Mb/s [net], Network Usage Mb/s Download Only [netrx], Network Usage Mb/s Upload Only [nettx], 15 Minute System Load Average [load].
--  **Warn Up / Warn Down / Critical Up / Critical Down** - Set your
+-  **Warn Threshold / Critical Threshold** - Set your
    thresholds. Can be a positive floating point number or integer.
+-  **URL** - The full URL to your *nems-agent.php* on the remote
+   | server. File can be renamed as desired, but provided URL must
+   | resolve to the agent on the remote server.
+-  **Check**
+  - ``mem`` Percent Memory Usage
+  - ``.`` Percent Disk Usage (Running Folder)
+  - ``disk`` Percent Disk Usage (/)
+  - ``var`` Percent Disk Usage (/var)
+  - ``net`` Network Usage Mb/s
+  - ``netrx`` Network Usage Mb/s Download Only
+  - ``nettx`` Network Usage Mb/s Upload Only
+  - ``load`` 15 Minute System Load Average
 
 CLI Examples
 ~~~~~~~~~~~~
