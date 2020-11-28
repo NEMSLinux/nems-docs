@@ -18,6 +18,9 @@ here are some of the available check commands:
 -  `check_mikrotik_switch <check_mikrotik.html>`__ -
    monitor stats for some MikroTik routers, including thermal sensors,
    packet loss, uptime, and so-on.
+-  `check_ncpa <check_ncpa.html>`__ - Monitor Windows, Mac and Linux
+   hosts. NCPA is written in Python and is able to run on almost any
+   Operating System. 
 -  `check_nrpe <check_nrpe.html>`__ -
    Monitor your hosts at a deeper level. Things like CPU usage, free
    disk space, free RAM, and so-on.
@@ -49,6 +52,7 @@ here are some of the available check commands:
     check_http
     check_internet_speed
     check_mikrotik
+    check_ncpa
     check_nrpe
     check_ping
     ../accessories/temper
