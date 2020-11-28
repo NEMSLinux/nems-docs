@@ -223,3 +223,6 @@ November-December 2020
    ran. Also added a 'now' cli option that will force it to run without delaying.
 -  Changed Migrator patches failsafe to determine if Quickfix / fixes was running for more
    than 120 minutes (previous setting was 90) before killing.
+-  Adjusted NEMS Off Site Backup to trigger at midnight but delay for a random amount of time
+   up to 4 hours before running the backup. This will further reduce strain on the NEMS Cloud
+   Services servers as NEMS' userbase continues to grow.
