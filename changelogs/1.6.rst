@@ -231,3 +231,5 @@ November-December 2020
 -  All *check_mikrotik_switch* check commands renamed from the old *check_mt_* and now are
    *check_mikrotik_*. Also fixed argument count and improved descriptions in NEMS NConf for
    each of the MikroTik checks.
+-  Removed check_minecraft. It hasn't been kept up to date by its developer, and unless there is
+   a demand for it, I don't want to have to take over maintenance on such a niche plugin.
