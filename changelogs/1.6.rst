@@ -228,3 +228,6 @@ November-December 2020
    Services servers as NEMS' userbase continues to grow.
 -  Added missing Set::IntSpan package, required by check_mikrotik_switch. Modify the check
    script to provide better (cleaner) output if CLI type not provided.
+-  All *check_mikrotik_switch* check commands renamed from the old *check_mt_* and now are
+   *check_mikrotik_*. Also fixed argument count and improved descriptions in NEMS NConf for
+   each of the MikroTik checks.
