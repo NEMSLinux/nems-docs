@@ -50,4 +50,40 @@ Critical Temperature
 **check_mikrotik_port_info**
 Same as check_mikrotik_port_sum but output info without any thresholds.
 
+Sample Services
+---------------
+
+**Check Voltage**
+
+This will check each host that is listed in the MikroTik Switches group. It will issue a warning if the voltage is below 23V or above 26V and a critical error if it is below 22V or above 27V
+
+define service {
+        use                     generic-service
+        hostgroup_name          MikroTik Switches
+        service_description     MikroTik Voltage
+        check_command           check_mt_voltage!23:26!22:27
+}
+
+**Check TX Errors**
+
+This test adds up all tx-errors on ports 1-25 (all ports on a CRS125-24G-1S).
+
+define service {
+        use                     generic-service
+        hostgroup_name          MikroTik Switches
+        service_description     MikroTik TX Errors
+        check_command           check_mt_port_sum!portTxErrors!1-25!10!50
+}
+
+**Port Names**
+
+This test returns the port names of ports 1, 3, 4, 5 and 25
+
+define service {
+        use                     generic-service
+        hostgroup_name          MikroTik Switches
+        service_description     MikroTik Port Names
+        check_command           check_mt_port_info!portName!1,3-5,25
+}
+
 Source: https://github.com/bemworld/check_mikrotik_switch
