@@ -226,3 +226,5 @@ November-December 2020
 -  Adjusted NEMS Off Site Backup to trigger at midnight but delay for a random amount of time
    up to 4 hours before running the backup. This will further reduce strain on the NEMS Cloud
    Services servers as NEMS' userbase continues to grow.
+-  Added missing Set::IntSpan package, required by check_mikrotik_switch. Modify the check
+   script to provide better (cleaner) output if CLI type not provided.
