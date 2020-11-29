@@ -56,6 +56,7 @@ here are some of the available check commands:
     check_ncpa
     check_nrpe
     check_ping
+    check_snmp_synology
     ../accessories/temper
     check_sbc_temperature
     check_tcp
