@@ -241,4 +241,4 @@ November-December 2020
 -  Removed NEMS host from HTTP Advanced Service. It was included as a sample, but since the interface
    can run quite slow on some low-powered SBC's, it causes timeout notifications which tend to confuse
    users into thinking there's actually a problem.
--  Added *check_snmp_synology* `as per AlbertPauw <https://forum.nemslinux.com/viewtopic.php?f=10&t=761>`__.
+-  Added *check_synology* `as per AlbertPauw <https://forum.nemslinux.com/viewtopic.php?f=10&t=761>`__. Added several Advanced Services samples to Synology host group.
