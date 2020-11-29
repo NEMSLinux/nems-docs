@@ -12,6 +12,6 @@ Assign Synology NAS host to Synology Host Group adds the following sample Advanc
 - Synology UPS
 - Synology Version
 
-By default, the Admins contact group will be notified.
+By default, the *admins* contact group will be notified.
 
 As per https://github.com/corben2/check_snmp_synology
