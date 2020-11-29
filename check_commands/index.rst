@@ -27,7 +27,7 @@ here are some of the available check commands:
 -  `check_ping <check_ping.html>`__ -
    Ping by hostname or IP address with warn/crit thresholds for response
    time and packet loss.
--  `check_snmp_synology` - Monitor various sensors on a Synology NAS.
+-  `check_synology` - Monitor various sensors on a Synology NAS.
 -  `check_temper <../accessories/temper.html>`__ - Use a
    TEMPer USB temperature sensor to detect and report the room
    temperature.
@@ -56,7 +56,7 @@ here are some of the available check commands:
     check_ncpa
     check_nrpe
     check_ping
-    check_snmp_synology
+    check_synology
     ../accessories/temper
     check_sbc_temperature
     check_tcp
