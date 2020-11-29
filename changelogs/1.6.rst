@@ -233,3 +233,4 @@ November-December 2020
    each of the MikroTik checks.
 -  Removed check_minecraft. It hasn't been kept up to date by its developer, and unless there is
    a demand for it, I don't want to have to take over maintenance on such a niche plugin.
+-  Added *check_ncpa* along with two sample checks: check_ncpa_processes and check_ncpa_mem.
