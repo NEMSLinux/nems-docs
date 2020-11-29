@@ -234,3 +234,10 @@ November-December 2020
 -  Removed check_minecraft. It hasn't been kept up to date by its developer, and unless there is
    a demand for it, I don't want to have to take over maintenance on such a niche plugin.
 -  Added *check_ncpa* along with two sample checks: check_ncpa_processes and check_ncpa_mem.
+-  Fix bug in PiVoyager daemon that falsely detected PiVoyager hardware on some setups where it
+   didn't actually exist.
+-  Several small web interface fixes in *nems-www*.
+-  Fix running user detection in nems-info to prevent www-data from attempting to use user cache.
+-  Removed NEMS host from HTTP Advanced Service. It was included as a sample, but since the interface
+   can run quite slow on some low-powered SBC's, it causes timeout notifications which tend to confuse
+   users into thinking there's actually a problem.
