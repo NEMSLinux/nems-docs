@@ -244,3 +244,4 @@ November-December 2020
 -  Added *check_synology* `as per AlbertPauw <https://forum.nemslinux.com/viewtopic.php?f=10&t=761>`__. Added several Advanced Services samples to Synology host group.
 -  Improved Warning Light's detection of Omzlo Warning Light pHAT to prevent log bloat.
 -  Improve NEMS Extender OS's browser-based output to include an iteration, which will help in event of a hung service: If the iteration (counter) no longer increases, it becomes more apparent that something has gone awry.
+-  Disable the TEMPer thermal and humidity checks by default to prevent new users seeing a warning that they are missing the sensor. Leave the demo checks in NEMS NConf for easy re-activation.
