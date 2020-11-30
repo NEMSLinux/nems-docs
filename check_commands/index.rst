@@ -16,7 +16,7 @@ here are some of the available check commands:
 -  `check_internet_speed <check_internet_speed.html>`__ -
    Check the speed of your internet connection.
 -  `check_mikrotik_switch <check_mikrotik.html>`__ -
-   monitor stats for some MikroTik routers, including thermal sensors,
+   Monitor stats for some MikroTik routers, including thermal sensors,
    packet loss, uptime, and so-on.
 -  `check_ncpa <check_ncpa.html>`__ - Monitor Windows, Mac and Linux
    hosts. NCPA is written in Python and is able to run on almost any
