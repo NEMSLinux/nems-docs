@@ -14,7 +14,7 @@ Welcome to NEMS Linux
   :target: https://docs.nemslinux.com/en/latest/?badge=latest
   :alt: Documentation Status
 
-Introduction
+Preface
 ------------
 
 The NEMS Linux documentation is a work in progress, and we are actively
@@ -25,14 +25,65 @@ request on GitHub, file an issue on GitHub, or contact us on Discord.
 
 Need the old docs? https://olddocs.nemslinux.com
 
+NEMS Linux Getting Started Guide
+--------------------------------
+
+Introduction
+^^^^^^^^^^^^
+
+The NEMS Linux Getting Started Guide is an introductory course in
+understanding and using NEMS Linux. From the principles that drive
+the project, to understanding how the various components work together.
+
+By following this easy to understand guide, you will gain the
+fundamental knowledge and skills required to use NEMS Linux effectively.
+
+This guide is a primer and not comprehensive or even overly technical.
+It is intended as an introduction to NEMS Linux for new users, or
+those who wish to better understand how to use NEMS Linux at an
+entry level.
+
 Table of Contents
------------------
+^^^^^^^^^^^^^^^^^
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Getting Started Guide
+
+    gettingstarted/introduction
+    gettingstarted/install
+    gettingstarted/initialization
+    gettingstarted/connect
+    gettingstarted/smtp
+    gettingstarted/add_first_host
+    gettingstarted/generate_config
+    gettingstarted/monitor_assets
+    gettingstarted/notification_definitions
+    gettingstarted/exercises
+
+Conclusion
+^^^^^^^^^^
+
+Having gone through each page of the Getting Started Guide, you now have
+a good foundation and are ready to use NEMS Linux in a production environment.
+
+What's Next
+^^^^^^^^^^^
+
+- `Become a Patron <https://patreon.com/nems>`__ for additional perks and to support this project
+- `Join the Discord <https://discord.gg/e9xT9mh>`__ to chat with other NEMS Linux users
+- Keep reading the documentation below to learn more about how this feature rich appliance works
+- `Visit the Community Forum <https://forum.nemslinux.com/>`__ to bounce ideas around
+- Tell everyone you know about NEMS Linux, blog about it, screencast on your YouTube channel, talk about it on your podcast. Spread the word.
+
+
+Documentation
+-------------
 
 .. toctree::
     :maxdepth: 1
     :caption: The Basics
 
-    gettingstarted/index
     basic/platforms
     basic/default_password
     check_commands/index
