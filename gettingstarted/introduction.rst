@@ -48,16 +48,21 @@ NEMS Migrator
 
 When focusing on building a distro for single board computers (SBC), I took very seriously the fact that SD cards can and likely will fail, and data can be lost. I wanted to create a way for users to be able to easily backup and restore their configuration. Out of that desire, Migrator was born.
 
-Migrator allows you to backup your entire NEMS configuration (hosts, services, checks, system settings, etc.) via a samba share, https download, or even an optional offsite backup service. The backups can be encrypted, and only you know the decryption key. Should your device fail, you can write the image to a new SD card, restore your Migrator backup, and be up and running in under five minutes with all your settings intact. Migrator also makes it easy to transition from one platform to another. For example, having setup a NEMS Linux server on a Raspberry Pi 3, you can easily move to an ODROID-XU4 for an enormous performance boost.
+Migrator allows you to backup your entire NEMS configuration (hosts, services, checks, system settings, etc.) via a samba share, https download, or even an optional offsite backup service. The backups can be encrypted, and only you know the decryption key. Should your device fail, you can write the image to a new SD card, restore your Migrator backup, and be up and running in under five minutes with all your settings intact. Migrator also makes it easy to transition from one platform to another. For example, having setup a NEMS Linux server on a Raspberry Pi 3, you can easily move to an ODROID-XU4 or even a Virtual Machine.
 
-Another advantage that Migrator brings to the table is an absolutely simple upgrade path: as new major releases of NEMS Linux are introduced, you can easily write the new NEMS image, import your backup, and be on the latest version of NEMS in just minutes.
+Another advantage that Migrator brings to the table is a simpler upgrade path: as new major releases of NEMS Linux are introduced, you can easily write the new NEMS image, import your backup, and be on the latest version of NEMS in just minutes with your configuration intact.
+
+Check-In Notifications
+----------------------
+
+That's all fine and good, but what happens if your NEMS Server does fail? How would you know? With these concerns in mind, early adopters of NEMS Linux were apt to setting up multiple NEMS Servers: NEMS Servers to monitor NEMS Servers. I wanted to alleviate that need, so I created NEMS Check-In. This optional service (disabled by default) will check in with the NEMS Cloud Services server every few minutes. Should your NEMS Server fail to check in, you'll get an email warning you that your NEMS Server stopped responding.
 
 UI-Based Configuration with NEMS Configurator
 ---------------------------------------------
 
 NEMS Configurator (NConf) is what makes browser-based Nagios configuration possible. This customized version of the old NConf configuration tool brings a sophisticated front-end to the modern architecture of NEMS. Your entire Nagios configuration is done through this interface: from adding hosts to configuring your service checks. It’s all done through an intuitive browser-based system.
 
-Now, I’ll admit NConf is not the most aesthetically beautiful feature of NEMS at the moment, but it works brilliantly. And a redesign of the UI is on schedule for a future release. When that happens, the interface will be automatically updated on all existing deployments through NEMS’ automatic update system. With NEMS NConf, you will never have to look at a Nagios cfg file again!
+With NEMS NConf, you will never have to look at a Nagios cfg file again!
 
 NEMS System Settings Tool (SST)
 -------------------------------
