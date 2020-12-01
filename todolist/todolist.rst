@@ -16,6 +16,7 @@ You can submit a feature request either via Discord (in
 
 -  `Custom icons as per
    Amheus <https://forum.nemslinux.com/viewtopic.php?f=10&t=733&p=3265#p3265>`__
+-  Update boot for USB boot on Raspberry Pi `as per Kevin Shumaker <https://www.youtube.com/watch?v=5SlgWl7u1Fw&lc=Ugyi8p9iDQ67vPe5ohp4AaABAg>`__
 
 Known Issues
 ------------
