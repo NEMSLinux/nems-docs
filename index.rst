@@ -100,7 +100,7 @@ Documentation
 
     nems-tools/gpioextender
     nems-tools/warninglight
-    nems-tools/extender_os
+    nems-tools/nemseos
 
 .. toctree::
     :maxdepth: 2
@@ -177,6 +177,8 @@ Documentation
     changelogs/1.2
     changelogs/1.1
     changelogs/1.0
+
+    changelogs/nemseos_0
 
 .. toctree::
     :maxdepth: 1
