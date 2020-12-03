@@ -177,13 +177,7 @@ Documentation
     :maxdepth: 1
     :caption: Changelogs
     
-    changelogs/1.6
-    changelogs/1.5
-    changelogs/1.2
-    changelogs/1.1
-    changelogs/1.0
-
-    changelogs/nemseos_0
+    changelogs/index
 
 .. toctree::
     :maxdepth: 1
