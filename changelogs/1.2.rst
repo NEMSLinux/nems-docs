@@ -1,5 +1,5 @@
-NEMS Linux 1.2 Changelog
-========================
+NEMS Linux 1.2 Changelogs
+=========================
 
 NEMS Linux 1.2 was released May 6, 2017. NEMS Linux 1.2.1 was released May 22, 2017 to fix bugs with the migrator and improve the overall release following significant user feedback. NEMS 1.2.x was discontinued November 7, 2017. This version of NEMS was downloaded 14,765 times during its 6 month life cycle.
 

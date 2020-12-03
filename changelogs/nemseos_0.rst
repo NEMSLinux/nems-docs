@@ -1,5 +1,5 @@
-NEMSeOS 0 Changelog
-===================
+NEMSeOS 0 Changelogs
+====================
 
 **December 1, 2020** - NEMSeOS 0.1 alpha Build 1.
 

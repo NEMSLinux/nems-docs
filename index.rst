@@ -174,10 +174,11 @@ Documentation
     accessories/index
   
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :caption: Changelogs
     
-    changelogs/index
+    changelogs/index-nems
+    changelogs/index-nemseos
 
 .. toctree::
     :maxdepth: 1
