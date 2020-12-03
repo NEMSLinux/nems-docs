@@ -84,7 +84,6 @@ Documentation
     :maxdepth: 1
     :caption: The Basics
 
-    basic/platforms
     basic/default_password
     check_commands/index
     basic/backupnems
@@ -93,6 +92,12 @@ Documentation
     basic/connect_via_ssh
     basic/faq
     apps/nems-migrator
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Platforms
+
+    platforms/index
 
 .. toctree::
     :maxdepth: 1
