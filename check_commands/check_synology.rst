@@ -1,6 +1,8 @@
 Check Commands: check_synology
 ==============================
 
+This feature is coming to NEMS Linux 1.6 (Q1 2021) and the documentation will be improved at that time.
+
 Use SNMP to check Synology NAS.
 
 Assign Synology NAS host to Synology Host Group adds the following sample Advanced Services:
