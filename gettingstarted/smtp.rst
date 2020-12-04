@@ -22,6 +22,8 @@ One of the nice things about NEMS Linux is that I really don’t have to go into
 Test Email Notification Settings
 --------------------------------
 
+.. note:: If you're using NEMS Linux 1.5.x or lower, the button does not exist in NEMS SST. Instead, opena a terminal on your NEMS Server and type: ``sudo nems-mailtest <recipient_email>``
+
 NEMS Linux features an easy-to-use tool which will load your SMTP
 settings as entered in NEMS SST and send you a test email. It will
 also show you the results of the attempt, which may be helpful if you
