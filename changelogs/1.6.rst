@@ -245,3 +245,8 @@ November-December 2020
 -  Improved Warning Light's detection of Omzlo Warning Light pHAT to prevent log bloat.
 -  Improve NEMS Extender OS's browser-based output to include an iteration, which will help in event of a hung service: If the iteration (counter) no longer increases, it becomes more apparent that something has gone awry.
 -  Disable the TEMPer thermal and humidity checks by default to prevent new users seeing a warning that they are missing the sensor. Leave the demo checks in NEMS NConf for easy re-activation.
+-  Fixed permission issue on NIC cache if root is automatically detecting NIC while user is
+   simultaneously logging in as non-root user. This bug was seen in Novaspirit Tech's video
+   introduction to NEMS Linux 1.5.2 `when signing in via SSH </img/bug-nic-cache.png>`__.
+   The MOTD did not display, and in pausing the video I see it is in fact the nemsadmin
+   user momentarily not having access to the NIC cache. So I fixed it.

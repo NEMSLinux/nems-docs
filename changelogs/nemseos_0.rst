@@ -30,3 +30,7 @@ Features:
     | run fully as an appliance. Cockpit can be used for now to
     | login to the device's terminal, or safely shut down the NEMSeOS
     | device.
+
+Changelogs since Build 1
+
+-  Add i2c support to enable access to Omzlo Warning Light pHAT.
