@@ -250,3 +250,6 @@ November-December 2020
    introduction to NEMS Linux 1.5.2 `when signing in via SSH </img/bug-nic-cache.png>`__.
    The MOTD did not display, and in pausing the video I see it is in fact the nemsadmin
    user momentarily not having access to the NIC cache. So I fixed it.
+-  Rearranged NEMS Warning Light daemon to ensure the Omzlo Warning Light pHAT over
+   a NEMS GPIO Extender is synchronized to the GPIO pin output (I.E., don't delay for
+   an iteration: instantly change states).
