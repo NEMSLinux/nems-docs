@@ -253,3 +253,6 @@ November-December 2020
 -  Rearranged NEMS Warning Light daemon to ensure the Omzlo Warning Light pHAT over
    a NEMS GPIO Extender is synchronized to the GPIO pin output (I.E., don't delay for
    an iteration: instantly change states).
+-  Improved the output of all disk checks in NEMS PHP Agent. Now the mountpoint will
+   be listed in brackets after the percentage, making it easier to see the actual
+   state.
