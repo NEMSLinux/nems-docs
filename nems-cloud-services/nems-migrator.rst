@@ -71,3 +71,12 @@ the following data will also be logged:
    backup
 -  **7** - How many daily backups are currently retained for your
    account
+
+Backup Maintenance Schedule
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Your NEMS Off-Site Backup is maintained automatically by the NEMS Cloud Services system. The backup schedule is as follows:
+
+- **Past Month:** Every successful backup will be retained and available to you.
+- **Past Year:** All backups beyond the past month will have the first successful backup per week retained and available to you. Additional backups will be purged. For example, if you had a successful backup every day, Monday's backup will be retained and available to you, but Tuesday-Sunday will be purged.
+- **Beyond One Year:** Backups of this age are automatically purged and no longer available. If you require older backups, please ensure you keep a local copy of your ``backup.nems``.
