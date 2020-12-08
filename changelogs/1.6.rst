@@ -256,3 +256,4 @@ November-December 2020
 -  Improved the output of all disk checks in NEMS PHP Agent. Now the mountpoint will
    be listed in brackets after the percentage, making it easier to see the actual
    state.
+-  NEMS Migrator Off-Site Backup schedule maintenance automatically keeps backups tidy now. Current schedule is that you have access to every daily backup for the past month, and a weekly backup for the past year.
