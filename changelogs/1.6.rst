@@ -257,3 +257,4 @@ November-December 2020
    be listed in brackets after the percentage, making it easier to see the actual
    state.
 -  NEMS Migrator Off-Site Backup schedule maintenance automatically keeps backups tidy now. Current schedule is that you have access to every daily backup for the past month, and a weekly backup for the past year.
+-  Added new check command ``check_nems_osb`` which will notify if a NEMS Migrator Off-Site Backup fails.
