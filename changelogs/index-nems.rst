@@ -3,6 +3,7 @@ NEMS Linux Changelogs
 
 .. toctree::
     :maxdepth: 1
+    :caption: NEMS Linux Changelogs
     
     1.6
     1.5
