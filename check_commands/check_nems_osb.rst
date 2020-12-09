@@ -1,5 +1,5 @@
-Check Commands: check_nems_osb
-==============================
+Check Command: check_nems_osb
+=============================
 
 A simple command which provides the status of your NEMS
 Migrator Off-Site Backup. If your backup fails, this
