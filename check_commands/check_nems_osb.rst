@@ -10,7 +10,7 @@ check will notify you.
   :align: center
   :alt: check_nems_osb output in NEMS Adagios
 
-  check_nems_osb output in NEMS Adagios (Circa NEMS 1.6)
+  check_nems_osb output in NEMS Adagios (circa NEMS Linux 1.6)
   
 If you do not have a NEMS Cloud Services account, ``check_nems_osb``
 will return an *UNKNOWN* state. The included sample will not notify
