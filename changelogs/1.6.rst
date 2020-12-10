@@ -258,3 +258,8 @@ November-December 2020
    state.
 -  NEMS Migrator Off-Site Backup schedule maintenance automatically keeps backups tidy now. Current schedule is that you have access to every daily backup for the past month, and a weekly backup for the past year.
 -  Added new check command ``check_nems_osb`` which will notify if a NEMS Migrator Off-Site Backup fails.
+-  NEMS PHP Agent 1.2 released with the following improvements: Network usage now uses
+   ``ifstat`` and generates a more accurate average usage number based on all network interfaces
+   on the server with a 5 second average. New agent will only run the equations and tests for
+   the requested check. For example, don't run a 5 second network bandwidth test when the
+   requested check is for the load average. Fixed bug where nettx was in fact reporting netrx.
