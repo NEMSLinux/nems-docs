@@ -27,7 +27,7 @@ documentation <../config/networking.html#wireless-network-interface>`__.
 How do I set a static IP address?
 ---------------------------------
 
-See the IP Address/ Settings section of the `Networking
+See the IP Address/DNS Settings section of the `Networking
 documentation <../config/networking.html#static-ip-address>`__.
 
 Why does Cockpit have greyed-out features? I can't change anything!
@@ -43,16 +43,16 @@ greyed out.
 Why does NEMS Linux "call home" so much?
 ----------------------------------------
 
-If you're running a custom  server or monitoring lookups, you'll see a
+If you're running a custom DNS server or monitoring DNS lookups, you'll see a
 lot of requests for nemslinux.com. If you've enabled NEMS Check-In, NEMS
-will do a lookup for nemslinux.com every 5 minutes. That's 288 requests
+will do a DNS lookup for nemslinux.com every 5 minutes. That's 288 requests
 per day. Then, there is the *nems-info online* command, which pings
 nemslinux.com to simply determine if you have an Internet connection.
 This is required every time NEMS Linux runs a command that requires
 Internet connectivity. It checks for that connection first, and if
 successful, it resumes. Else, it does not go through with the command
 since no Internet connection is detected. This is probably where you're
-seeing the most lookups. Then, there's  requests, such as when it checks
+seeing the most lookups. Then, there are API requests, such as when it checks
 to see if you are authenticated with the NEMS Cloud Services server,
 which will occur at various times depending on what checks are occurring
 and what you are doing (E.G., if you open NEMS SST, it will immediately
