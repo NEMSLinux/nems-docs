@@ -31,6 +31,7 @@ here are some of the available check commands:
 -  `check_ping <check_ping.html>`__ -
    Ping by hostname or IP address with warn/crit thresholds for response
    time and packet loss.
+-  `check_qnap <check_qnap.html>`__ - Monitor various sensors on a QNAP NAS.
 -  `check_synology <check_synology.html>`__ - Monitor various sensors on a Synology NAS.
 -  `check_temper <../accessories/temper.html>`__ - Use a
    TEMPer USB temperature sensor to detect and report the room
@@ -62,6 +63,7 @@ here are some of the available check commands:
     check_nems_php_agent
     check_nrpe
     check_ping
+    check_qnap
     check_synology
     ../accessories/temper
     check_sbc_temperature
