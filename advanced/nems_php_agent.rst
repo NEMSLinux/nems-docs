@@ -48,6 +48,8 @@ Check Command Arguments
   - ``nettx`` Network Usage Mb/s Upload Only
   - ``load`` 15 Minute System Load Average
 
+.. note:: All network checks require ``ifstat`` be installed on the remote server. This can easily be installed with apt or yum, depending on your distro.
+
 CLI Examples
 ~~~~~~~~~~~~
 
