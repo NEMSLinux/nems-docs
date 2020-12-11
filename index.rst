@@ -164,7 +164,6 @@ Documentation
     advanced/snmp
     advanced/mrtg
     advanced/nemsicons
-    advanced/nems_php_agent
     advanced/nems-api
 
 .. toctree::
