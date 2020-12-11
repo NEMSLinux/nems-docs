@@ -263,3 +263,4 @@ November-December 2020
    on the server with a 5 second average. New agent will only run the equations and tests for
    the requested check. For example, don't run a 5 second network bandwidth test when the
    requested check is for the load average. Fixed bug where nettx was in fact reporting netrx.
+-  Updates to NConf to improve output. Add AJAX spinner during generation, remove horizontal scroller, etc.
