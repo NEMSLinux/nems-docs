@@ -55,13 +55,7 @@ above systems will deny remote access to the registry.
   :align: center
   :alt: Windows Management Instrumentation
 
-**Grant minimal WMI permissions to the remote user**
-
-This limits users other than those configured from remotely accessing
-WMI.
-
-**The best practice is to use a Local account on the monitored host as
-the agent  user.**
+.. note:: **The best practice is to use a Local account on the monitored host as the agent  user.**
 
 **Where this is not possible, use these procedures to grant permissions
 for a remote user.**
@@ -73,6 +67,13 @@ for a remote user.**
    connections.
 -  Local security policies must be enabled for “Classic - local users
    authenticate as themselves
+
+**Grant minimal WMI permissions to the remote user**
+
+This limits users other than those configured from remotely accessing
+WMI.
+
+.. note:: In the following example, replace "remoteuser" with the username of the user created on your Windows hosts.
 
 On the monitored host machine, right-click on *My Computer*, and
 navigate to Manage \| Services and Applications \| WMI Control.
