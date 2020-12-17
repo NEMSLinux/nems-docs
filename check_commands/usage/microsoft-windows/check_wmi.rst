@@ -164,7 +164,7 @@ WMI.
    column.
 
 .. figure:: ../../../img/wmi_windows_12.png
-  :width: 400
+  :width: 500
   :align: center
   :alt: Permissions
 
