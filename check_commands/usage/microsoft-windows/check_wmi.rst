@@ -146,30 +146,29 @@ WMI.
   :alt: Enable Distributed COM
 
 1. In the My Computer Properties dialog box, click the COM Security tab.
-2. Under Access Permissions, click Edit Limits. Give your chosen user
-   Remote Access permission. (If user is not in the list of names follow
-   steps above to add the user).
-3. In the Launch and Activation Permissions area, click Edit Limits.
-4. NOTE: In some cases, you also need to click the Edit Default and
-   perform the succeeding steps.
-5. In the Launch Permission dialog box, add the user or group name
+2. Under Access Permissions, click Edit Limits. 
+3. In the Access Permission dialog box, add the user or group name
    necessary for the remote user.
+4. Ensure Local Access and Remote Access are checked and click OK
 
 .. figure:: ../../../img/wmi_windows_11.png
   :width: 500
   :align: center
   :alt: COM Security
 
-Grant the remote user all the permissions available in the Permissions
-for Administrators area by enabling all of the check boxes in the Allow
-column.
+5. In the Launch and Activation Permissions area, click Edit Limits.
+6. In the Launch and Activation Permission dialog box, add the user or group name
+   necessary for the remote user.
+7. Grant the remote user all the permissions available in the Permissions
+   for Administrators area by enabling all of the check boxes in the Allow
+   column.
 
 .. figure:: ../../../img/wmi_windows_12.png
   :width: 400
   :align: center
   :alt: Permissions
 
-Click **OK** and/or **Yes** to close the dialog boxes.
+8. Click **OK** and/or **Yes** to close the dialog boxes.
 
 **Enable Classic Security policies for Windows Systems that are not part
 of a domain.**
