@@ -11,6 +11,8 @@ hosts.
 Disabled by default, WMI requires some configuration before NEMS Linux
 can monitor the Windows host.
 
+.. Warning:: Windows 10 version 2004 and newer has broken WMI from Linux. This setup will **NOT** work for Windows 10 versions newer than v1909. Will update if/when fix becomes available.
+
 Setting up WMI
 --------------
 
