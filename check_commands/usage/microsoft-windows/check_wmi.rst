@@ -11,7 +11,7 @@ hosts.
 Disabled by default, WMI requires some configuration before NEMS Linux
 can monitor the Windows host.
 
-.. Warning:: Microsoft is making changes that will make agentless monitoring of Windows hosts impossible. Windows 10 version 2004 and newer has already broken WMI from Linux, and Windows Server is next. Sign the petition and support the developers with a donation at https://edcint.co.nz/checkwmiplus/expression-of-interest-redevelopment-of-wmic-client/
+.. Warning:: Microsoft is making changes that will make agentless monitoring of Windows hosts impossible. Windows 10 version 2004 and newer has already broken WMI from Linux, and Windows Server is next. I am working hard to ensure WMIC is updated to accommodate these changes. Please watch for updates.
 
 Setting up WMI
 --------------
