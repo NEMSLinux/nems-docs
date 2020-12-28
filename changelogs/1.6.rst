@@ -264,3 +264,4 @@ November-December 2020
    the requested check. For example, don't run a 5 second network bandwidth test when the
    requested check is for the load average. Fixed bug where nettx was in fact reporting netrx.
 -  Updates to NConf to improve output. Add AJAX spinner during generation, remove horizontal scroller, etc.
+-  Block error output when detecting NIC to prevent MOTD being broken during first login.
