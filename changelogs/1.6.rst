@@ -266,3 +266,4 @@ November-December 2020
    requested check is for the load average. Fixed bug where nettx was in fact reporting netrx.
 -  Updates to NConf to improve output. Add AJAX spinner during generation, remove horizontal scroller, etc.
 -  Block error output when detecting NIC to prevent MOTD being broken during first login.
+-  Determine the fk_id of the NEMS Host and adapt `nems-restore` to use this (NEMS 1.6 branch only). Keep 1.5 branch separate and improve compatibility with 1.6.
