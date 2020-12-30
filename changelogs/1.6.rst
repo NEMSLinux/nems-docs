@@ -268,3 +268,4 @@ November-December 2020
 -  Block error output when detecting NIC to prevent MOTD being broken during first login.
 -  Determine the fk_id of the NEMS Host and adapt `nems-restore` to use this (NEMS 1.6 branch only). Keep 1.5 branch separate and improve compatibility with 1.6.
 -  When a Patron opens the NEMS Dashboard (I.E., they have a valid NEMS Cloud Services account) a link is now available to visit the latest Patron-exclusive posts.
+-  NEMS Hardware ID is now blurred by default and hidden from display in NEMS Server Overview. I saw a YouTuber who opened NEMS Server Overview willy-nilly on his video and did not blur this information in post production, so I've enforced it by default. The HWID can be revealed by double-clicking the blurred area.
