@@ -4,6 +4,9 @@ Frequently Asked Questions
 My browser warns, "Your connection is not secure". Why?
 -------------------------------------------------------
 
+.. raw:: html
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/6x2wlyVZ9gM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   
 NEMS Linux uses SSL (aka *https*) connections to secure your connection
 and the data you transmit and receive to and from your NEMS server. This
 is accomplished using what is called a *self-signed certificate*. By
@@ -17,6 +20,8 @@ immediately stop what you're doing and not proceed. However, in the case
 of NEMS Linux, which is a local server on your network (not a “dot com”
 on the web), you can safely trust the self-signed certificates and add
 an exception to your browser.
+
+See `this documentation </en/latest/misc/self-signed-certificates.html>`__ for more details.
 
 How do I configure WiFi?
 ------------------------
