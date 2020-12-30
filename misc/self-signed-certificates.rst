@@ -80,6 +80,8 @@ that is completely unnecessary. The only advantage a CA gives you is
 trust, but you already trust your NEMS server as you are accessing it on
 a local IP.
 
+.. Note:: This may soon change based on `this feature request <https://discord.com/channels/501816361706717184/654697565937205278/791760428186861590>`__.
+
 It's still not working.
 -----------------------
 
