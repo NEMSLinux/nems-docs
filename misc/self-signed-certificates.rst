@@ -1,12 +1,12 @@
 NEMS SSL and Self-Signed Certificates
 =====================================
 
+My browser warns, "Your connection is not secure". Why?
+-------------------------------------------------------
+
 .. raw:: html
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/6x2wlyVZ9gM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-My browser warns, "Your connection is not secure". Why?
--------------------------------------------------------
 
 NEMS Linux uses SSL (aka https) connections to secure your connection
 and the data you transmit and receive to and from your NEMS server.
