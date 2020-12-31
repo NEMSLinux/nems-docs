@@ -26,6 +26,10 @@ examples:
 
 **Let's Begin:**
 
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/8zHruceYgRU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 To initialize NEMS Linux, simply `connect to your NEMS Linux server over
 SSH <../basic/connect_via_ssh.html>`__ or use the
 in-browser terminal feature
