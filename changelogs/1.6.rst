@@ -273,3 +273,4 @@ November-December 2020
 January-February 2021
 
 -  Migrator tab now has more intuitive output when a new NEMS Cloud Services account is activated (I.E., Notice re. waiting 24 hours for first OSB).
+-  NEMS Tactical Overview (NagiosTV) now running 0.6.5 and now uses Chris Carey's implementation of the Livestatus connector rather than the previous Nagios CGI method. In lay speak, this means when you open NEMS Tactical Overview, you'll no longer have to supply a password within five seconds to login to Nagios Core. Huge thanks to Chris for making this change for us!
