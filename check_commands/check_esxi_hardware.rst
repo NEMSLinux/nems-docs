@@ -308,7 +308,8 @@ response bytes read; <SSL…..
   :width: 600
   :align: center
   :alt: General System Error
-—
+
+-
 
 **Q:** I have several ESXi hosts behind the same IP (NAT). How can I use
 the check_esxi_hardware?
@@ -330,7 +331,8 @@ Refer to https://kb.vmware.com/s/article/2148910.
   :width: 600
   :align: center
   :alt: CIM Server Service
-—
+
+-
 
 **Q:** I can't execute the plugin and get the following error message.
 Permissions are correct however (e.g. 755).

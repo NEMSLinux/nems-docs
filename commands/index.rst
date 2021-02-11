@@ -7,7 +7,7 @@ NEMS Commands
 The following commands are available in the NEMS Linux terminal, which
 may be accessed either by a connected keyboard/monitor, or over SSH.
 
-`nems-backup <nems-backup.html>`__ - NEMS
+`nems-backup <../basic/backupnems.html>`__ - NEMS
 Migrator's backup component.
 
 `nems-benchmark <nems-benchmark.html>`__ -

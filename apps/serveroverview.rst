@@ -1,6 +1,5 @@
-#######################
 NEMS Server Overview
-#######################
+====================
 
 NEMS Server Overview, found in the Configuration menu of NEMS Dashboard,
 is an at-a-glance overview of some important information about your NEMS

@@ -1,4 +1,6 @@
-Command: nems-quickfix
+:orphan:
+
+ommand: nems-quickfix
 ======================
 
 Update all components to the latest rolling release and apply all

@@ -51,7 +51,7 @@ ever goes offline.
 8.  Leave *Service Templates* as is, none selected.
 9.  Under *Contact Groups* highlight the 'admins' group and press the
     arrow pointed right to move it to *Selected Items*.
-10. Leave *Notes*, *Notes * and *Action * blank.
+10. Leave *Notes*, *Notes* and *Action* blank.
 11. Set *Max Check Attempts* to: 5
 12. Set *Check Interval* to: 30
 13. Set *Retry Interval* to: 5
