@@ -25,8 +25,8 @@ Now that you've done that, **or if you are not a G Suite user**, you'll
 need to enable the setting for *“less secure
 apps”* here: https://myaccount.google.com/lesssecureapps
 
-Please note that if you are using Google's two-factor authenticaion,
-then you will NOT be able to enable the "less secure apps" setting. 
+Please note that if you are using Google's two-factor authentication,
+then you will **not** be able to enable the "less secure apps" setting. 
 Instead, you will need to create an "app specific password". For more 
 information and details on how to configure app specific passwords, 
-please visit https://support.google.com/accounts/answer/185833?hl=en.
+please visit https://support.google.com/accounts/answer/185833?hl=en
