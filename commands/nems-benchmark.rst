@@ -1,3 +1,5 @@
+:orphan:
+
 NEMS Linux Command: nems-benchmark
 ==================================
 

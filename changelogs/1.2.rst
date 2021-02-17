@@ -18,7 +18,7 @@ Here is a list of the changes I recorded during development.
 * Maintenance and info scripts moved to /home/pi/nems-scripts.
 * NEMS Linux MOTD upon login now shows local IP address. Also improved how it determines some of the info (see `info.sh in nems-scripts <https://github.com/Cat5TV/nems-scripts/blob/master/info.sh>`__) and fixes a few bugs. Also set it up to rollover to wlan0 if no response on eth0, in case the user is on wifi.
 * Temporary files and Monitorix image cache moved to RAM.
-* Added `RPi-Monitor <http://elinux.org/RPi-Monitor`__ as per `Hesh’s comment <http://www.baldnerd.com/nems/comment-page-1/#comment-102086>`__. Reworked the Memory and CPU Frequency modules to correct the accuracy.
+* Added `RPi-Monitor <http://elinux.org/RPi-Monitor>`__ as per `Hesh’s comment <http://www.baldnerd.com/nems/comment-page-1/#comment-102086>`__. Reworked the Memory and CPU Frequency modules to correct the accuracy.
 * Added `nagios-api <https://github.com/zorkian/nagios-api>`__ (JSON on Port 8090) as per `Timothy Seibert’s request <http://www.baldnerd.com/nems/#comment-118462>`__. `License <https://github.com/zorkian/nagios-api/blob/master/LICENCE>`__
 * Added Webmin as per `Hesh’s comment <http://www.baldnerd.com/nems/comment-page-1/#comment-104813>`__. Login as pi user with the password you created when initializing NEMS Linux with the nems-init program.
 * Added support for agentless Windows checks using WMI (big thanks to `Ryan Siegel <http://everyday-tech.com/>`__ who originally authored NagiosPi and pitched in for NEMS Linux 1.2 release).

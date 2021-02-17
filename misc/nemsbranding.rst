@@ -20,47 +20,47 @@ Logo Options
   :align: center
   :alt: NEMS Full Colour Small
 
--  `nems-fullcolour.png <../img/branding/nems-fullcolour.png>`__
--  `nems-01.eps <../img/branding/nems-01.eps>`__
+-  `nems-fullcolour.png <../_static/branding/nems-fullcolour.png>`__
+-  `nems-01.eps <../_static/branding/nems-01.eps>`__
 
 .. figure:: ../img/nems-greyscale_sm.png
   :align: center
   :alt: NEMS Greyscale Small
 
--  `nems-greyscale.png <../img/branding/nems-greyscale.png>`__
--  `nems-03.eps <../img/branding/nems-03.eps>`__
+-  `nems-greyscale.png <../_static/branding/nems-greyscale.png>`__
+-  `nems-03.eps <../_static/branding/nems-03.eps>`__
 
 .. figure:: ../img/nems-secondary-fullcolour_sm.png
   :width: 150
   :align: center
   :alt: NEMS Secondary Full Colour Small
 
--  `nems-secondary-fullcolour.png <../img/branding/nems-secondary-fullcolour.png>`__
--  `nems-02.eps <../img/branding/nems-02.eps>`__
+-  `nems-secondary-fullcolour.png <../_static/branding/nems-secondary-fullcolour.png>`__
+-  `nems-02.eps <../_static/branding/nems-02.eps>`__
 
 .. figure:: ../img/nems-secondary-greyscale_sm.png
   :width: 150
   :align: center
   :alt: NEMS Secondary Greyscale Small
 
--  `nems-secondary-greyscale.png <../img/branding/nems-secondary-greyscale.png>`__
--  `nems-04.eps <../img/branding/nems-04.eps>`__
+-  `nems-secondary-greyscale.png <../_static/branding/nems-secondary-greyscale.png>`__
+-  `nems-04.eps <../_static/branding/nems-04.eps>`__
 
 .. figure:: ../img/nems-secondary-white_sm.png
   :width: 150
   :align: center
   :alt: NEMS Secondary White Small
 
--  `nems-secondary-white.png <../img/branding/nems-secondary-white.png>`__
--  `nems-06.eps <../img/branding/nems-06.eps>`__
+-  `nems-secondary-white.png <../_static/branding/nems-secondary-white.png>`__
+-  `nems-06.eps <../_static/branding/nems-06.eps>`__
 
 .. figure:: ../img/nems-white_sm.png
   :width: 150
   :align: center
   :alt: NEMS White Small
 
--  `nems-white.png <../img/branding/nems-white.png>`__
--  `nems-05.eps <../img/branding/nems-05.eps>`__
+-  `nems-white.png <../_static/branding/nems-white.png>`__
+-  `nems-05.eps <../_static/branding/nems-05.eps>`__
 
 NEMS Configurator
 -----------------
@@ -74,7 +74,7 @@ was created by Robbie Ferguson.
   :alt: NEMS Configurator
 
 -  `nconf_logo.png <../img/brannding/nconf_logo.png>`__
--  `nconf_logo.xcf <../img/branding/nconf_logo.xcf>`__
+-  `nconf_logo.xcf <../_static/branding/nconf_logo.xcf>`__
 
 NEMS TV Dashboard
 -----------------
@@ -89,7 +89,7 @@ was darkened to make it stand out.
   :align: center
   :alt: TV Icon
 
--  `tv-icon.png <../img/branding/tv-icon.png>`__
+-  `tv-icon.png <../_static/branding/tv-icon.png>`__
 
 NEMS Cloud Services
 -------------------
@@ -102,4 +102,4 @@ AnjaliOldLipi font in #699bdf (light blue, representing the sky).
   :align: center
   :alt: NEMS Cloud Services
 
--  `ncs.png <../img/branding/ncs.png>`__
+-  `ncs.png <../_static/branding/ncs.png>`__

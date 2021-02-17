@@ -1,3 +1,5 @@
+:orphan:
+
 NEMS Linux Commands: nems-info
 ==============================
 

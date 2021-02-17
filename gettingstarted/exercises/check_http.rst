@@ -22,6 +22,7 @@ Steps
 -----
 
 1. The *check-host-alive* command, found in *misccommands* in NConf, is used to check hosts to determine if they are up or down. My web site, nemslinux.com, will only respond on IPv4. However, the default *check-host-alive* command will attempt to use IPv6. Rather than editing the sample command, let’s add a new one based upon it, but this one will only use IPv4. That way, we can still use the old command when we need IPv6 for a different host.
+  
   #. Show the misccommands list.
   #. Edit *check-host-alive*
   #. Highlight and copy the entire command line to your clipboard.
@@ -37,7 +38,9 @@ Steps
     :alt: Create IPv4 Check Command
 
     Create New misccommand to check-host-alive Using IPv4
+
 2. Our commands are ready for us, so now it’s time to setup our Host Preset. We want to create one for IPv4 Web Sites. That way, we can reuse the preset for every IPv4-based web site we want to monitor with NEMS Linux.
+  
   #. Add a new host preset.
   #. Name your preset Web Site IPv4
   #. Set the host alive check to the new command you created in Step 2: *check-host-alive-ipv4*
@@ -49,7 +52,9 @@ Steps
     :alt: Create IPv4 Host Preset
 
     New Host Preset for IPv4 Web Sites
+
 3. So far, everything we’ve done can be reused for any web site whose hostname resolves to an IPv4 address. From here forward however, we’ll be setting up our host group specifically for a secure (SSL) web site.
+  
   #. Add a new hostgroup.
   #. Call this web_site_ssl
   #. Leave everything else as is and save your new hostgroup.
@@ -60,25 +65,28 @@ Steps
     :alt: Create SSL Host
 
     New hostgroup for web_site_ssl
+
 4. Why would we create a new hostgroup if it has no settings beyond a name? Well, this is where the magic happens. We now have a check command, a check host alive command, a host preset and a hostgroup. Now, we can link them all together, starting with an Advanced Service. Remember, the idea here is that everything we do can be assigned to as many hosts as we like. No having to redo all this for the next web site.
-  1. Click Add next to Advanced Services.
-  2. Name your service: *Web Site (SSL)*
-  3. Give it an alias: *Uptime of SSL Web Site*
-  4. Set the check period and notification period to 24x7
-  5. In *assign advanced-service to hostgroup*, highlight the hostgroup we created (web_site_ssl) and press the green arrow to add it to the selected items list.
-  6. Under *contact groups* be sure to add *admins* as well. Otherwise, you won’t receive notifications.
-  7. Set your notifications as follows:
+  
+  #. Click Add next to Advanced Services.
+  #. Name your service: *Web Site (SSL)*
+  #. Give it an alias: *Uptime of SSL Web Site*
+  #. Set the check period and notification period to 24x7
+  #. In *assign advanced-service to hostgroup*, highlight the hostgroup we created (web_site_ssl) and press the green arrow to add it to the selected items list.
+  #. Under *contact groups* be sure to add *admins* as well. Otherwise, you won’t receive notifications.
+  #. Set your notifications as follows:
+
     - max check attempts: 10
     - check interval: 1
     - retry interval: 5
     - first notification delay: 10
     - notification interval: 30
     - notification options: w,u,c,r,f
-  8. Finally, set your service parameters to: `-S -\\-sni`
-  9. Save your advanced service.
+
+  #. Finally, set your service parameters to: `-S -\\-sni`
+  #. Save your advanced service.
   
   .. Tip:: The -S tells check_http that this site is using SSL, and the -\\-sni enables SNI (Server Name Indication) since I use CloudFlare for SSL on nemslinux.com, and therefore my resolving IP address is associated with more than one domain name. For your site, if you have any trouble, try removing SNI by simply omitting -\\-sni. For the full documentation surrounding the check_http command, visit `the check_http documentation <../../check_commands/check_http.html>`__.
-.
   
   .. figure:: ../../img/Creating-an-Advanced-Service-to-Check-SSL-Web-Sites.png
     :width: 600
@@ -86,9 +94,12 @@ Steps
     :alt: Create SSL Advanced Service
 
     Creating an Advanced Service to Check SSL Web Sites
+
 5. Finally, let’s add our web site host. From now on, this is the only step you have to take to add more sites to your NEMS Linux server.
-  1. Add a new host.
-  2. Set the following:
+  
+  #. Add a new host.
+  #. Set the following:
+
     - hostname: ``https://nemslinux.com``
     - alias: *NEMS Web Site*
     - address: *nemslinux.com*
@@ -113,7 +124,8 @@ Steps
 
     Creating a Host to Monitor IPv4 SSL Web Site
 
-  3. Save the host. 
+  #. Save the host. 
+  
 6. Generate your config.
 
 Conclusion
