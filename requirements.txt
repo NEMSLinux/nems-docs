@@ -1,0 +1,1 @@
+sphinx-notfound-page==0.6
