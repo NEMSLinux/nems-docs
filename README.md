@@ -17,6 +17,17 @@ I'm actually new to Restructured Text, though I see similarities to some of the 
 
 As I would like the documentation to have a consistent look throughout, please follow these guidelines for your edits. You are also welcome to add to these guidelines if you have a suggestion for certain layouts.
 
+### Compiling on ReadTheDocs
+
+When creating your own PR for testing, you can create a readthedocs.org accounta and have it pull from your repository. This is very helpful when testing layout and overall consistency, since directly compiling on Sphinx will likely turn up slightly different results.
+
+When setting up the project on readthedocs.org, the requirements file *must* be set in order for the project to compile.
+
+- After creating the project, open it within readthedocs.org
+- Click Admin > Advanced Settings
+- Scroll down to the section "Requirements File"
+- Set this to `requirements.txt`
+
 ### Layout
 
 #### Images
