@@ -162,14 +162,14 @@ following command:
 
 .. code-block:: console
 
-   nmcli device wifi connect [SSID] password [password]
+   sudo nmcli device wifi connect [SSID] password [password]
 
 Eg., if your network SSID is MyWiFi and your WiFi password is MyPass123,
 the command would look like this:
 
 .. code-block:: console
 
-   nmcli device wifi connect MyWiFi password MyPass123
+   sudo nmcli device wifi connect MyWiFi password MyPass123
 
 Now, you can enable or disable your wireless connection within
 Cockpit→Networking.
