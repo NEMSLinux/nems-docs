@@ -292,6 +292,7 @@ Here is a list of those Patrons who kicked in that little bit extra to have thei
 * Steven Beukes
 * Rob Thomas
 * Heiko Gerstung
+* Jerold Von Hemel
 
 Want your name on this list? `Become a Patron <https://patreon.com/nems>`__.
 
