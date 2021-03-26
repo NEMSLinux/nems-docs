@@ -293,6 +293,7 @@ Here is a list of those Patrons who kicked in that little bit extra to have thei
 * Rob Thomas
 * Heiko Gerstung
 * Jerold Von Hemel
+* Nato Riley
 
 Want your name on this list? `Become a Patron <https://patreon.com/nems>`__.
 
