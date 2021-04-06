@@ -274,3 +274,9 @@ January-February 2021
 
 -  Migrator tab now has more intuitive output when a new NEMS Cloud Services account is activated (I.E., Notice re. waiting 24 hours for first OSB).
 -  NEMS Tactical Overview (NagiosTV) now running 0.6.5 and now uses Chris Carey's implementation of the Livestatus connector rather than the previous Nagios CGI method. In lay speak, this means when you open NEMS Tactical Overview, you'll no longer have to supply a password within five seconds to login to Nagios Core. Huge thanks to Chris for making this change for us!
+- Pause general development to work through major issue with WMIC following changes to Microsoft Windows starting with Windows 10 Version 2004.
+
+March-April 2021
+
+- The WMIC issue has been fixed. Final stages of development for NEMS Linux 1.6 can resume.
+- Many updates to NagiosTV bringing it up to 0.7.3, which improves error handling on connection loss and much provides overall performance improvements. These updates are with thanks to Chris Carey, who we are pleased to have welcomed to our Beta Team earlier this year.
