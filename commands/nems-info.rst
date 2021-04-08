@@ -116,13 +116,6 @@ Available Command Options
    without the partition number.
 -  ``nems-info rootpart`` Output the partition number of the root
    filesystem without the block device name.
--  ``nems-info speedtest`` Output current automatically-selected
-   speedtest server.
--  ``nems-info speedtest best`` Output the best server.
--  ``nems-info speedtest which`` Output 0 if using
-   automatically-selected speedtest server (automatically updates itself
-   each day based on which server is best). Output 1 if using the server
-   number provided in the ARGS on the check_command in NEMS NConf.
 -  ``nems-info fileage [file]`` Output the age of any file on the
    NEMS server. Particularly helpful in determining how long a process
    has been running. Eg., *nems-info fileage /var/run/nems-quickfix.pid*

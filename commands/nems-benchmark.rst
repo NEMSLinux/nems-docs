@@ -17,7 +17,7 @@ the log file located at */var/log/nems/benchmark.log*
 -  Memory Read/Write Speed
 -  Free Space on All Media
 -  Free Memory
--  Internet Send/Receive Speed (Provided By https://speedtest.net/)
+-  Internet Send/Receive Speed
 
 By observing the results of the weekly benchmark test, you may be able
 to spot a failing SD card or other system problem.

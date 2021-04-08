@@ -280,3 +280,4 @@ March-April 2021
 
 - The WMIC issue has been fixed. Final stages of development for NEMS Linux 1.6 can resume.
 - Many updates to NagiosTV bringing it up to 0.7.3, which improves error handling on connection loss and much provides overall performance improvements. These updates are with thanks to Chris Carey, who we are pleased to have welcomed to our Beta Team earlier this year.
+- Remove the usage of Ookla's speedtest service and replace it seamlessly with Netflix's fast.com. This is due to changes in Ookla's licensing agreement, but also means the check commands have been rewritten with better error handling.

@@ -101,7 +101,8 @@ During the 1.6 Release Cycle (Not At Launch)
 User Requests to Review During Release Cycle
 --------------------------------------------
 
--  ITManLT would like to see a NEMS SST option to enable speedtest
+-  This was added to NEMS Linux 1.6:
+   ITManLT would like to see a NEMS SST option to enable speedtest
    results be displayed in NEMS TV Dashboard. I think if I cache results
    in the check_speedtest script, then if the cache exists and is
    current (ie., user has the check enabled in NEMS NConf), use it. If
