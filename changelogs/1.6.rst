@@ -284,3 +284,4 @@ March-April 2021
 - Set service timeout to 120 seconds rather than the previous 60 seconds. The short timeout was causing timeouts with speedtest since that takes extra time to execute on some connections.
 - Created a new ``--reset`` option for ``nems-quickfix`` which allows resetting a previously-applied patch. This can be useful should the patch fail for whatever reason.
 - Made the new speedtest script load a cache file if it is already running. In an event where the user had initiated multiple simultaneous speedtests, many processes could spawn resulting in crippling bandwidth usage. Noted by UltimateBugHunter-NitPicker.
+- Backported the speedtest update to NEMS Linux 1.5.
