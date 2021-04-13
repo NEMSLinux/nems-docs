@@ -285,3 +285,6 @@ March-April 2021
 - Created a new ``--reset`` option for ``nems-quickfix`` which allows resetting a previously-applied patch. This can be useful should the patch fail for whatever reason.
 - Made the new speedtest script load a cache file if it is already running. In an event where the user had initiated multiple simultaneous speedtests, many processes could spawn resulting in crippling bandwidth usage. Noted by UltimateBugHunter-NitPicker.
 - Backported the speedtest update to NEMS Linux 1.5.
+- `nems-quickfix` now resets the log but appends both runs to it each time it runs. This will give me the ability to investigate QuickFix issues more easily.
+- `nems-quickfix` now ensures all previous package installations are complete before running patches. Was an issue if user had previously rebooted their NEMS Server during an update leaving some packages broken.
+- Several compatibility fixes added to the nems-speedtest patch (000015) to ensure backward compatibility with as many NEMS Servers as possible.
