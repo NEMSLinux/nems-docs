@@ -1,6 +1,9 @@
 Monitor Linux Hosts with NRPE
 =============================
 
+.. Warning:: These instructions are for your Linux *client*. **NEVER**
+  run these commands on your NEMS Server.
+
 The Nagios Remote Plugin Executor (NRPE) allows your Nagios Enterprise
 Monitoring Server to communicate with the Linux machines on your server
 to determine things like free disk space, CPU load, and detect possible
