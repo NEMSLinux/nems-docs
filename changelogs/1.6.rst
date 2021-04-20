@@ -288,3 +288,5 @@ March-April 2021
 - `nems-quickfix` now resets the log but appends both runs to it each time it runs. This will give me the ability to investigate QuickFix issues more easily.
 - `nems-quickfix` now ensures all previous package installations are complete before running patches. Was an issue if user had previously rebooted their NEMS Server during an update leaving some packages broken.
 - Several compatibility fixes added to the nems-speedtest patch (000015) to ensure backward compatibility with as many NEMS Servers as possible.
+- Continued work on WMIC, which has posed challenges in porting across platform.
+- Launched new NEMS Linux repository for 1.6. By doing so, I plan to compile WMIC on each architecture and then be able to install via apt, rather than going through so much trouble compiling from scratch on every single board. Inevitably this will also mean moving all NEMS packages off github (as far as how NEMS Servers obtain the code) and instead maintain a single apt repository. This could mean much easier cross-platform support from my perspective, and faster adoption of updates across all boards.
