@@ -1210,6 +1210,14 @@ October 2020
    *temp_location* and *hum_location* to *nems-info temper* to show
    which sensor is being used. As `pointed out by Toasteh\_`_.
 
+April 2021
+
+-  While development has entirely shifted to NEMS Linux 1.6, a recent
+   Windows update broke `wmic` causing NEMS to no longer be able to
+   authenticate to those updated machines. As this is fixed in NEMS
+   Linux 1.6, I also backported the patch to NEMS Linux 1.5.x on all
+   platforms. Patch # 000016. To obtain the patch, run `sudo nems-upgrade`
+
 .. _pointed out by Toasteh\_: https://discord.com/channels/501816361706717184/501816361706717186/763075014035505214
 .. _as per Marshman: https://forum.nemslinux.com/viewtopic.php?f=10&t=566
 .. _nems-mailtest: /usage/nems-mailtest
