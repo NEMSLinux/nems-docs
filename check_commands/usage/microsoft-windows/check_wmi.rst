@@ -98,14 +98,14 @@ On the monitored host machine
   :align: center
   :alt: CIMV2
 
-Select the user in the **Group or user names** box. If not listed select **Add**.
+-  Select the user in the **Group or user names** box. If not listed select **Add**.
 
 .. figure:: ../../../img/wmi_windows_06.png
   :width: 350
   :align: center
   :alt: Add User to CIMV2
 
-Type in the user name and click **Check Names**
+-  Type in the user name and click **Check Names**
 
 .. figure:: ../../../img/wmi_windows_07.png
   :width: 350
@@ -169,8 +169,8 @@ While still in Computer Management
 -   On the monitored host machine, at the Windows Run prompt,
     type *DCOMCNFG* and press Enter.
 -   In the Component Services dialog box that opens, navigate to
-    *Component Services* → *Computers* → *This PC*.
--   Right-click **This PC** and click **Properties**.
+    *Component Services* → *Computers* → *My Computer*.
+-   Right-click **My Computer** and click **Properties**.
 -   Select the **Default Properties** tab.
 -   To enable DCOM, select the **Enable Distributed COM on this
     computer** checkbox.
@@ -181,7 +181,7 @@ While still in Computer Management
   :align: center
   :alt: Enable Distributed COM
 
--   In the *This PC* Properties dialog box, click the **COM Security** tab.
+-   In the *My Computer* Properties dialog box, click the **COM Security** tab.
 -   Under Access Permissions, click **Edit Limits**. 
 -   In the Access Permission dialog box, add the user or group name
     necessary for the remote user.
