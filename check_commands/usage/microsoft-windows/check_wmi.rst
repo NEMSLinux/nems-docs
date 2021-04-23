@@ -162,8 +162,6 @@ While still in Computer Management
 
 **To grant DCOM permissions to a remote user**
 
-This limits users other than those configured from remotely accessing
-WMI.
 
 1. On the monitored host machine, at the Windows Run prompt,
    type *DCOMCNFG* and press Enter.
