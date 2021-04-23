@@ -166,8 +166,8 @@ While still in Computer Management
 -   On the monitored host machine, at the Windows Run prompt,
     type *DCOMCNFG* and press Enter.
 -   In the Component Services dialog box that opens, navigate to
-    Component Services → Computers → My Computer.
--   Right-click **My Computer** and click **Properties**.
+    Component Services → Computers → This PC.
+-   Right-click **This PC** and click **Properties**.
 -   Select the **Default Properties** tab.
 -   To enable DCOM, select the *Enable Distributed COM on this
     computer* checkbox.
@@ -178,7 +178,7 @@ While still in Computer Management
   :align: center
   :alt: Enable Distributed COM
 
--   In the My Computer Properties dialog box, click the COM Security tab.
+-   In the *This PC* Properties dialog box, click the COM Security tab.
 -   Under Access Permissions, click Edit Limits. 
 -   In the Access Permission dialog box, add the user or group name
     necessary for the remote user.
