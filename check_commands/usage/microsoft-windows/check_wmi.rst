@@ -81,7 +81,7 @@ On the monitored host machine, right-click on *My Computer*, and
 navigate to Manage \| Services and Applications \| WMI Control.
 
 .. figure:: ../../../img/wmi_windows_04.png
-  :width: 400
+  :width: 250
   :align: center
   :alt: WMI Control
 
@@ -90,7 +90,7 @@ navigate to Manage \| Services and Applications \| WMI Control.
 3. Expand the Root node and select CIMV2, then click Security.
 
 .. figure:: ../../../img/wmi_windows_05.png
-  :width: 400
+  :width: 350
   :align: center
   :alt: CIMV2
 
@@ -98,14 +98,14 @@ Select the user in the *Group or user names* box. If not listed
 select **Add**.
 
 .. figure:: ../../../img/wmi_windows_06.png
-  :width: 400
+  :width: 350
   :align: center
   :alt: Add User to CIMV2
 
 Type in the user name and click **Check Names**.
 
 .. figure:: ../../../img/wmi_windows_07.png
-  :width: 400
+  :width: 350
   :align: center
   :alt: Check Names
 
@@ -118,12 +118,12 @@ following check boxes in the Allow column:
 4. Read Security
 
 .. figure:: ../../../img/wmi_windows_08.png
-  :width: 400
+  :width: 350
   :align: center
   :alt: Execute Methods and Enable Account
 
 .. figure:: ../../../img/wmi_windows_09.png
-  :width: 400
+  :width: 350
   :align: center
   :alt: Remote Enable and Read Security
 
@@ -175,7 +175,7 @@ WMI.
 6. Click **Apply**.
 
 .. figure:: ../../../img/wmi_windows_10.png
-  :width: 400
+  :width: 350
   :align: center
   :alt: Enable Distributed COM
 
@@ -234,7 +234,7 @@ Enter the username and password of the user created on the Windows
 devices who was granted access to the WMI data.
 
 .. figure:: ../../../img/nems_sst_windows_domain_credentials.png
-  :width: 500
+  :width: 450
   :align: center
   :alt: SST Domain Credentials
 
