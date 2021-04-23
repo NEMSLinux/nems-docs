@@ -39,7 +39,7 @@ Instrumentation services are running.
 
 
 By default even if the Remote Registry service is started Windows 7 and
-above systems will deny remote access to the registry.
+later systems will deny remote access to the registry.
 
 -  Scroll down to the *Server* service. Verify that the service is
    started and set to **Automatic**.
@@ -77,8 +77,9 @@ WMI.
 
 .. note:: In the following example, replace "remoteuser" with the username of the user created on your Windows hosts.
 
-On the monitored host machine, right-click on *My Computer*, and
-navigate to Manage \| Services and Applications \| WMI Control.
+-  Right-click on **This PC**
+-  Click **Manage**
+-  Navigate to  Services and Applications,  →  WMI Control.
 
 .. figure:: ../../../img/wmi_windows_04.png
   :width: 250
@@ -167,7 +168,7 @@ WMI.
 1. On the monitored host machine, at the Windows Run prompt,
    type *DCOMCNFG* and press Enter.
 2. In the Component Services dialog box that opens, navigate to
-   Component Services \| Computers \| My Computer.
+   Component Services → Computers →| My Computer.
 3. Right-click **My Computer** and click **Properties**.
 4. Select the **Default Properties** tab.
 5. To enable DCOM, select the *Enable Distributed COM on this
