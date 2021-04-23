@@ -67,8 +67,8 @@ for a remote user.**
 -  Local user account on the target computer must have explicit DCOM and
    WMI namespace access rights granted specifically for remote
    connections.
--  Local security policies must be enabled for “Classic - local users
-   authenticate as themselves
+-  Local security policies must be enabled for *Classic - local users
+   authenticate as themselves*
 
 **Grant minimal WMI permissions to the remote user**
 
@@ -79,16 +79,16 @@ WMI.
 
 -  Right-click on **This PC**
 -  Click **Manage**
--  Navigate to  Services and Applications,  →  WMI Control.
+-  Navigate to  *Services and Applications*  →  *WMI Control*
 
 .. figure:: ../../../img/wmi_windows_04.png
   :width: 250
   :align: center
   :alt: WMI Control
 
--   Right-click WMI Control and click Properties.
--   In the WMI Control Properties dialog box, click the Security tab.
--   Expand the Root node and select CIMV2, then click Security.
+-   Right-click **WMI Control** and click **Properties**
+-   In the WMI Control Properties dialog box, click the **Security** tab.
+-   Expand the Root node and select **CIMV2**, then click **Security**
 
 .. figure:: ../../../img/wmi_windows_05.png
   :width: 350
@@ -109,7 +109,7 @@ Type in the user name and click **Check Names**
   :align: center
   :alt: Check Names
 
- -  Click **OK** 
+-  Click **OK** 
 
 -  Grant the required permissions to the remote user by enabling the following check boxes in the Allow column:
 
@@ -166,11 +166,11 @@ While still in Computer Management
 -   On the monitored host machine, at the Windows Run prompt,
     type *DCOMCNFG* and press Enter.
 -   In the Component Services dialog box that opens, navigate to
-    Component Services → Computers → This PC.
+    *Component Services* → *Computers* → *This PC*.
 -   Right-click **This PC** and click **Properties**.
 -   Select the **Default Properties** tab.
--   To enable DCOM, select the *Enable Distributed COM on this
-    computer* checkbox.
+-   To enable DCOM, select the **Enable Distributed COM on this
+    computer** checkbox.
 -   Click **Apply**.
 
 .. figure:: ../../../img/wmi_windows_10.png
@@ -178,18 +178,18 @@ While still in Computer Management
   :align: center
   :alt: Enable Distributed COM
 
--   In the *This PC* Properties dialog box, click the COM Security tab.
--   Under Access Permissions, click Edit Limits. 
+-   In the *This PC* Properties dialog box, click the **COM Security** tab.
+-   Under Access Permissions, click **Edit Limits**. 
 -   In the Access Permission dialog box, add the user or group name
     necessary for the remote user.
--   Ensure Local Access and Remote Access are checked and click OK
+-   Ensure Local Access and Remote Access are checked and click **OK**
 
 .. figure:: ../../../img/wmi_windows_11.png
   :width: 500
   :align: center
   :alt: COM Security
 
--   In the Launch and Activation Permissions area, click Edit Limits.
+-   In the Launch and Activation Permissions area, click **Edit Limits**.
 -   In the Launch and Activation Permission dialog box, add the user or group name
     necessary for the remote user.
 -   Grant the remote user all the permissions available in the Permissions
@@ -204,7 +204,7 @@ While still in Computer Management
 -   Click **OK** and/or **Yes** to close the dialog boxes.
 
 **Enable Classic Security policies for Windows Systems that are not part
-of a domain.**
+   of a domain.**
 
 -   Open the Control panel, and go to *Administrative Tools* → *Local
     Security Policy*.
