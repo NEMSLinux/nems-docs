@@ -127,6 +127,38 @@ following check boxes in the Allow column:
   :align: center
   :alt: Remote Enable and Read Security
 
+While still in Computer Management
+
+-  Expand **System Tools**
+-  Expand **Local Users and Groups**
+-  Click **Groups**
+-  Right click **Performance Log Users**
+-  Click **Add to Group**
+
+.. figure:: ../../../img/PerfLogUsers.png
+  :width: 550
+  :align: center
+  :alt: Performance Log Users Add to Group
+
+-  Click **Add**
+
+.. figure:: ../../../img/PerfLogUsersAdd.png
+  :width: 350
+  :align: center
+  :alt: Click Add
+
+-  Type in the username and click **Check Names**
+
+.. figure:: ../../../img/PerfLogUsersCheck.png
+  :width: 400
+  :align: center
+  :alt: Check Names
+
+- Click **OK**
+-  Click **Apply**
+-  Click **OK** to close dialog box
+-  Close **Computer Management** window  
+
 **To grant DCOM permissions to a remote user**
 
 This limits users other than those configured from remotely accessing
