@@ -98,14 +98,14 @@ On the monitored host machine
   :align: center
   :alt: CIMV2
 
-Select the user in the **Group or user names** box. If not listed select **Add**.
+-  Select the user in the **Group or user names** box. If not listed select **Add**.
 
 .. figure:: ../../../img/wmi_windows_06.png
   :width: 350
   :align: center
   :alt: Add User to CIMV2
 
-Type in the user name and click **Check Names**
+-  Type in the user name and click **Check Names**
 
 .. figure:: ../../../img/wmi_windows_07.png
   :width: 350
