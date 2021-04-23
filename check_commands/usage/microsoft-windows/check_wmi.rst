@@ -95,23 +95,23 @@ WMI.
   :align: center
   :alt: CIMV2
 
-Select the user in the *Group or user names* box. If not listed
-select **Add**.
+Select the user in the **Group or user names** box. If not listed select **Add**.
 
 .. figure:: ../../../img/wmi_windows_06.png
   :width: 350
   :align: center
   :alt: Add User to CIMV2
 
-Type in the user name and click **Check Names**.
+Type in the user name and click **Check Names**
 
 .. figure:: ../../../img/wmi_windows_07.png
   :width: 350
   :align: center
   :alt: Check Names
 
-Grant the required permissions to the remote user by enabling the
-following check boxes in the Allow column:
+ -  Click **OK** 
+
+-  Grant the required permissions to the remote user by enabling the following check boxes in the Allow column:
 
 1. Execute Methods
 2. Enable Account
