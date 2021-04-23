@@ -67,6 +67,7 @@ for a remote user.**
 -  Local user account on the target computer must have explicit DCOM and
    WMI namespace access rights granted specifically for remote
    connections.
+-  User must also be a member of the *Performance Log Users* group   
 -  Local security policies must be enabled for *Classic - local users
    authenticate as themselves*
 
@@ -76,6 +77,8 @@ This limits users other than those configured from remotely accessing
 WMI.
 
 .. note:: In the following example, replace "remoteuser" with the username of the user created on your Windows hosts.
+
+On the monitored host machine
 
 -  Right-click on **This PC**
 -  Click **Manage**
@@ -155,7 +158,7 @@ While still in Computer Management
   :align: center
   :alt: Check Names
 
-- Click **OK**
+-  Click **OK**
 -  Click **Apply**
 -  Click **OK** to close dialog box
 -  Close **Computer Management** window  
@@ -204,7 +207,7 @@ While still in Computer Management
 -   Click **OK** and/or **Yes** to close the dialog boxes.
 
 **Enable Classic Security policies for Windows Systems that are not part
-   of a domain.**
+of a domain.**
 
 -   Open the Control panel, and go to *Administrative Tools* → *Local
     Security Policy*.
