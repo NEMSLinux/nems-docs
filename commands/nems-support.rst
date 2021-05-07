@@ -35,7 +35,7 @@ also include the  to the thread within the body of your email.
 Once created, you can access the support.nems file from your computer by
 navigating
 to `https://NEMS.local/backup/support.nems <https://nems.local/backup/support.nems>`__ -or-
-find the file on the SMB share at \\\NEMS.local\backup
+find the file on the SMB share at \\\\NEMS.local\\backup
 
 Report
 ------
