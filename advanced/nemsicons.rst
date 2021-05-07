@@ -30,9 +30,9 @@ Copy the icon images into this new folder.
 
 The icon file can be copied or moved into the /var/www/nconf/img/logos/base folder.
 
-To copy ``sudo cp *.* /var/www/nconf/img/logos/bas``
+To copy ``sudo cp *.* /var/www/nconf/img/logos/base``
 
-To move ``sudo mv *.* /var/www/nconf/img/logos/bas``
+To move ``sudo mv *.* /var/www/nconf/img/logos/base``
 
 .. figure:: ../img/icons_07.PNG
   :width: 600
