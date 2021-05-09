@@ -300,3 +300,4 @@ May-July 2021
 - Upgrade Nagios to 4.4.6.
 - Move Nagios configuration base to 1.6.
 - Remove deprecated Speedtest Server output from NEMS Server Overview.
+- Use the new hw-detect (32-bit or 64-bit) system rather than hw_model (32-bit only) in preparation for future 64-bit release (1.7).
