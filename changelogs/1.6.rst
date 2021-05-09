@@ -297,3 +297,6 @@ May-July 2021
 
 - Clean up a lot of the old build scripts and nems-upgrade packages to accommodate the changes in NEMS Linux 1.6.
 - Deprecation of Samba wmic complete: NEMS Linux 1.6 now entirely moved to new custom Python replacement.
+- Upgrade Nagios to 4.4.6.
+- Move Nagios configuration base to 1.6.
+- Remove deprecated Speedtest Server output from NEMS Server Overview.
