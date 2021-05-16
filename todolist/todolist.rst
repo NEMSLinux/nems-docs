@@ -8,15 +8,31 @@ NEMS Linux Migrator, upgrading is a cinch, and thanks to NEMS Linux'
 rolling release system, many fixes, patches and upgrades can find their
 way into existing installations.
 
-Approved Feature Requests
--------------------------
+Feature Requests
+----------------
+
+This is a curation of various feature requests which have been approved for
+further assessment and possible implementation for the next major release of
+NEMS Linux.
 
 You can submit a feature request either via Discord (in
 #feature-requests) or the Community Forum (in Feature Requests).
 
 -  `Custom icons as per
-   Amheus <https://forum.nemslinux.com/viewtopic.php?f=10&t=733&p=3265#p3265>`__
+   Amheus <https://forum.nemslinux.com/viewtopic.php?f=10&t=733&p=3265#p3265>`__ Possible duplicate of `their Discord message <https://discord.com/channels/501816361706717184/654697565937205278/721028392602042410>`__
+-  Backup custom icons, should they exist, `as per Baldnerd's note <https://discord.com/channels/501816361706717184/654697565937205278/743125075267682494>`__.
 -  Update boot for USB boot on Raspberry Pi `as per Kevin Shumaker <https://www.youtube.com/watch?v=5SlgWl7u1Fw&lc=Ugyi8p9iDQ67vPe5ohp4AaABAg>`__
+-  Add arg to select Fahrenheit instead of Celsius in temperature monitors `as per tripled <https://discord.com/channels/501816361706717184/654697565937205278/714953695783026840>`__
+-  Attempt to port check_juniper to modern code `per Baldnerd's comment <https://discord.com/channels/501816361706717184/654697565937205278/743479405908852758>`__ in response to `Neptunum's request <https://discord.com/channels/501816361706717184/654697565937205278/687335872370049044>`__.
+-  Add NCPA `as per joeluzzi <https://discord.com/channels/501816361706717184/654697565937205278/779073216051150868>`__
+-  Add 1-Wire Temperature Check `as per jtoland <https://discord.com/channels/501816361706717184/654697565937205278/785477192892940338>`__
+-  Log a tabular speedtest report `as per Professor Eric <https://discord.com/channels/501816361706717184/654697565937205278/785579865713803324>`__
+-  Explore `RobPickering's notes about Let's Encrypt no longer requiring servers be publicly accessible <https://discord.com/channels/501816361706717184/654697565937205278/791760428186861590>`__. Something to integrate?
+-  Add Nagios for IBM i and check_as400 `as per chris_hird <https://discord.com/channels/501816361706717184/654697565937205278/798658298512932955>`__.
+-  PagerDuty integration `as per ElvisNuno <https://discord.com/channels/501816361706717184/654697565937205278/807482477027000411>`__.
+-  SONOFF / Tasmota IoT device monitoring `as per AndroBuilder <https://discord.com/channels/501816361706717184/654697565937205278/810547542076424232>`__.
+-  Add custom Nagios theme support `as per Sly <https://discord.com/channels/501816361706717184/654697565937205278/840230232959090748>`__.
+
 
 Known Issues
 ------------
