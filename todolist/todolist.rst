@@ -32,7 +32,7 @@ You can submit a feature request either via Discord (in
 -  PagerDuty integration `as per ElvisNuno <https://discord.com/channels/501816361706717184/654697565937205278/807482477027000411>`__.
 -  SONOFF / Tasmota IoT device monitoring `as per AndroBuilder <https://discord.com/channels/501816361706717184/654697565937205278/810547542076424232>`__.
 -  Add custom Nagios theme support `as per Sly <https://discord.com/channels/501816361706717184/654697565937205278/840230232959090748>`__.
-
+-  While PoE fan should work fine in 1.6 due to upstream fixes from Raspberry Pi, test and make sure before release `as per jaffascout <https://forum.nemslinux.com/viewtopic.php?p=3545>`__.
 
 Known Issues
 ------------
