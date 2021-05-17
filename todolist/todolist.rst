@@ -8,6 +8,11 @@ NEMS Linux Migrator, upgrading is a cinch, and thanks to NEMS Linux'
 rolling release system, many fixes, patches and upgrades can find their
 way into existing installations.
 
+Required Fixes Prior to Launch 1.6
+----------------------------------
+
+-  Fix missing checkboxes on NEMS NConf 1.6.
+
 Feature Requests
 ----------------
 
