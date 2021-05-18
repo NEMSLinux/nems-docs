@@ -303,3 +303,8 @@ May-July 2021
 - Use the new hw-detect (32-bit or 64-bit) system rather than hw_model (32-bit only) in preparation for future 64-bit release (1.7).
 - Added `check_by_ssh` check command to sample database as `requested by AlphaPiAlpha <https://discord.com/channels/501816361706717184/544881728460816385/840160182452748288>`__.
 - Small fix to prevent changelog duplication in the nemsadmin home folder.
+- Checkboxes have been missing from NEMS NConf for quite some time, since upgrading JQuery to a more current version. This has been fixed by adapting the code to changes in the JQuery-UI widget callbacks.
+- Moved 9590, hw-detect, nems-migrator, nems-scripts, nems-www and wmic to dpkg repository.
+- Adapted nems-update to upgrade all possible apps via apt-get rather than git.
+- Stripped out a lot of legacy code from NEMS Migrator and NEMS Scripts.
+- Reworked NEMS Migrator's MySQL base settings. Now take significantly less space.
