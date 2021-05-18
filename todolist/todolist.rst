@@ -8,11 +8,6 @@ NEMS Linux Migrator, upgrading is a cinch, and thanks to NEMS Linux'
 rolling release system, many fixes, patches and upgrades can find their
 way into existing installations.
 
-Required Fixes Prior to Launch 1.6
-----------------------------------
-
--  Fix missing checkboxes on NEMS NConf 1.6.
-
 Feature Requests
 ----------------
 
@@ -122,14 +117,6 @@ During the 1.6 Release Cycle (Not At Launch)
 User Requests to Review During Release Cycle
 --------------------------------------------
 
--  This was added to NEMS Linux 1.6:
-   ITManLT would like to see a NEMS SST option to enable speedtest
-   results be displayed in NEMS TV Dashboard. I think if I cache results
-   in the check_speedtest script, then if the cache exists and is
-   current (ie., user has the check enabled in NEMS NConf), use it. If
-   cache doesn't exist or is old, re-create on cron. This way the TV
-   Dashboard will update numbers even if the user doesn't have
-   check_speedtest enabled.
 -  Review this plugin and see if it's something that I can squeeze
    in: https://forum.nemslinux.com/viewtopic.php?f=10&t=398 Not liking the fact
    that it is a Windows program.
@@ -140,8 +127,6 @@ User Requests to Review During Release Cycle
    mydogboris <https://forum.nemslinux.com/viewtopic.php?f=10&t=412&p=2391&hilit=pfsense#p2391>`__.
 -  Veeam checks `as per
    Premium <https://forum.nemslinux.com/viewtopic.php?f=10&t=398&p=3336&hilit=veeam#p3336>`__.
--  APC UPS check as per LordOfLevels🔊. `See the
-   Exchange <https://exchange.nagios.org/directory/Plugins/Hardware/UPS/APC>`__.
 -  Web interface to upload a backup.nems file for restoration as per
    LordOfLevels🔊. Perhaps user can run *nems-restore webupload* and a
    code will be provided which can be entered into the form to confirm
