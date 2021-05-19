@@ -21,18 +21,17 @@ You can submit a feature request either via Discord (in
 -  `Custom icons as per
    Amheus <https://forum.nemslinux.com/viewtopic.php?f=10&t=733&p=3265#p3265>`__ Possible duplicate of `their Discord message <https://discord.com/channels/501816361706717184/654697565937205278/721028392602042410>`__
 -  Backup custom icons, should they exist, `as per Baldnerd's note <https://discord.com/channels/501816361706717184/654697565937205278/743125075267682494>`__.
--  Update boot for USB boot on Raspberry Pi `as per Kevin Shumaker <https://www.youtube.com/watch?v=5SlgWl7u1Fw&lc=Ugyi8p9iDQ67vPe5ohp4AaABAg>`__
--  Add arg to select Fahrenheit instead of Celsius in temperature monitors `as per tripled <https://discord.com/channels/501816361706717184/654697565937205278/714953695783026840>`__
 -  Attempt to port check_juniper to modern code `per Baldnerd's comment <https://discord.com/channels/501816361706717184/654697565937205278/743479405908852758>`__ in response to `Neptunum's request <https://discord.com/channels/501816361706717184/654697565937205278/687335872370049044>`__.
--  Add NCPA `as per joeluzzi <https://discord.com/channels/501816361706717184/654697565937205278/779073216051150868>`__
--  Add 1-Wire Temperature Check `as per jtoland <https://discord.com/channels/501816361706717184/654697565937205278/785477192892940338>`__
 -  Log a tabular speedtest report `as per Professor Eric <https://discord.com/channels/501816361706717184/654697565937205278/785579865713803324>`__
 -  Explore `RobPickering's notes about Let's Encrypt no longer requiring servers be publicly accessible <https://discord.com/channels/501816361706717184/654697565937205278/791760428186861590>`__. Something to integrate?
 -  Add Nagios for IBM i and check_as400 `as per chris_hird <https://discord.com/channels/501816361706717184/654697565937205278/798658298512932955>`__.
--  PagerDuty integration `as per ElvisNuno <https://discord.com/channels/501816361706717184/654697565937205278/807482477027000411>`__.
--  SONOFF / Tasmota IoT device monitoring `as per AndroBuilder <https://discord.com/channels/501816361706717184/654697565937205278/810547542076424232>`__.
 -  Add custom Nagios theme support `as per Sly <https://discord.com/channels/501816361706717184/654697565937205278/840230232959090748>`__.
 -  While PoE fan should work fine in 1.6 due to upstream fixes from Raspberry Pi, test and make sure before release `as per jaffascout <https://forum.nemslinux.com/viewtopic.php?p=3545>`__.
+
+Features That I Like, But Can't Implement Yet
+---------------------------------------------
+
+-  PagerDuty integration `as per ElvisNuno <https://discord.com/channels/501816361706717184/654697565937205278/807482477027000411>`__.
 
 Known Issues
 ------------
@@ -88,9 +87,7 @@ During the 1.6 Release Cycle (Not At Launch)
 -  NanoPi M4 Ethernet MAC address changes every reboot. Thanks to
    UltimateBugHunter for reporting.
 -  The TV output on ODROID-C1+ Build 1 doesn't work. Fix this.
--  Add `NCPA <https://www.nagios.org/ncpa/?__hstc=189745844.6f4567e25069d3a733d5058a22c1187e.1566995089857.1566995089857.1567168833486.2&__hssc=189745844.2.1567168833486&__hsfp=4019080588#downloads>`__ support.
--  RPi-Monitor giving error on Pi 3 B+ “Can not get information
-   (dynamic.json) from rpi-monitor server”. Reported by Ron Taylor.
+-  DONE in 1.6 - Add `NCPA <https://www.nagios.org/ncpa/?__hstc=189745844.6f4567e25069d3a733d5058a22c1187e.1566995089857.1566995089857.1567168833486.2&__hssc=189745844.2.1567168833486&__hsfp=4019080588#downloads>`__ support.
 -  If NEMS is unable to communicate with github, a nems-upgrade will
    erroneously upgrade NEMS' version number even though the upgrade
    itself will have failed, as `reported by
