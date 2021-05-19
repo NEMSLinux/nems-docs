@@ -47,6 +47,8 @@ here are some of the available check commands:
 -  `custom_check_mem <custom_check_mem.html>`__ -
    Monitor the percentage of RAM free on either the local NEMS server or
    a remote system via NRPE.
+- `check_1wire_temp <check_1wire_temp.html>`__
+   Monitor temperature using a 1-wire device such as the DS18S20.
 
 .. toctree::
     :maxdepth: 1
@@ -70,3 +72,4 @@ here are some of the available check commands:
     check_tcp
     check_win_users
     custom_check_mem
+    check_1wire_temp
