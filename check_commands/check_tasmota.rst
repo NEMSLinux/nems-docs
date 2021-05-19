@@ -18,6 +18,15 @@ binary threshold: `0` or `1`.
 - `check_tasmota_sensor` - Check the state of any compatible sensor. Must specify the device (E.G.,
 ENERGY or AM2301) and the sensor (E.G., Humidity, Temperature, Voltage, Current, Total, Today, Yesterday).
 
+Included Hostgroups
+~~~~~~~~~~~~~~~~~~~
+
+Within each of the hostgroups included in NEMS Linux, the device will be pinged.
+
+- `tasmota-ENERGY` - Tasmota WifiPlugs with ENERGY
+- `tasmota-AM2301` - Tasmota WifiPlugs with AM2301
+- `tasmota-switch` - Tasmota WifiPlugs with Switch
+
 Requirements
 ~~~~~~~~~~~~
 
