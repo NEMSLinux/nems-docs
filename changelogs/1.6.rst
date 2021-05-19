@@ -308,3 +308,4 @@ May-July 2021
 - Adapted nems-update to upgrade all possible apps via apt-get rather than git.
 - Stripped out a lot of legacy code from NEMS Migrator and NEMS Scripts.
 - Reworked NEMS Migrator's MySQL base settings. Now take significantly less space.
+- Moved NEMS Merch store to https://shop.nemslinux.com/
