@@ -21,11 +21,11 @@ ENERGY or AM2301) and the sensor (E.G., Humidity, Temperature, Voltage, Current,
 Included Hostgroups
 ~~~~~~~~~~~~~~~~~~~
 
-Within each of the hostgroups included in NEMS Linux, the device will be pinged.
+NEMS Linux includes hostgroups for three styles of IoT devices which use the Tasmoto firmware:
 
-- `tasmota-ENERGY` - Tasmota WifiPlugs with ENERGY
-- `tasmota-AM2301` - Tasmota WifiPlugs with AM2301
-- `tasmota-switch` - Tasmota WifiPlugs with Switch
+- Tasmota **ENERGY** WifiPlugs - Assign to the `tasmota-ENERGY` hostgroup to check the following: Ping, Power State, Voltage, Current, Total Consumption (All Time), Total Consumption (Today Only), Total Consumption (Yesterday Only).
+- Tasmota **AM2301** WifiPlugs - Assign to the `tasmota-AM2301` hostgroup to check the following: Ping, Humidity, Temperature
+- Tasmota **Switch** WifiPlugs - Assign to the `tasmota-switch` hostgroup to check the following: Ping, Power State
 
 Requirements
 ~~~~~~~~~~~~
