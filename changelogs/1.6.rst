@@ -309,3 +309,12 @@ May-July 2021
 - Stripped out a lot of legacy code from NEMS Migrator and NEMS Scripts.
 - Reworked NEMS Migrator's MySQL base settings. Now take significantly less space.
 - Moved NEMS Merch store to https://shop.nemslinux.com/
+- Upgraded NRPE to 4.0.3.
+- The file `check_rpi_temperature` has been renamed to match its check command, `check_sbc_temperature` since it was upgraded to support more than just RPi a while ago.
+- Include Fahrenheit instead of just Celsius in check_sbc_temperature / NRPE CPU temperature check `as per tripled <https://discord.com/channels/501816361706717184/654697565937205278/714953695783026840>`__
+- Moved all included Nagios check command plugins to nems-plugins package on the DPKG Repository to ease the update process should fixes or new features be implemented down the road.
+- Upgrade check_ncpa.py to 1.2.4.
+- Add NCPA sample check_commands to NEMS NConf `as per joeluzzi <https://discord.com/channels/501816361706717184/654697565937205278/779073216051150868>`__: check_ncpa_mem (Memory Usage) and check_ncpa_processes (Running Processes).
+- Update boot for USB boot on Raspberry Pi `as per Kevin Shumaker <https://www.youtube.com/watch?v=5SlgWl7u1Fw&lc=Ugyi8p9iDQ67vPe5ohp4AaABAg>`__.
+- Add 1-Wire Temperature Check `as per jtoland <https://discord.com/channels/501816361706717184/654697565937205278/785477192892940338>`__.
+- Add SONOFF / Tasmota IoT device monitoring `as per AndroBuilder <https://discord.com/channels/501816361706717184/654697565937205278/810547542076424232>`__.
