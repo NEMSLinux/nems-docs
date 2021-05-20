@@ -24,7 +24,6 @@ You can submit a feature request either via Discord (in
 -  Attempt to port check_juniper to modern code `per Baldnerd's comment <https://discord.com/channels/501816361706717184/654697565937205278/743479405908852758>`__ in response to `Neptunum's request <https://discord.com/channels/501816361706717184/654697565937205278/687335872370049044>`__.
 -  Log a tabular speedtest report `as per Professor Eric <https://discord.com/channels/501816361706717184/654697565937205278/785579865713803324>`__
 -  Explore `RobPickering's notes about Let's Encrypt no longer requiring servers be publicly accessible <https://discord.com/channels/501816361706717184/654697565937205278/791760428186861590>`__. Something to integrate?
--  Add Nagios for IBM i and check_as400 `as per chris_hird <https://discord.com/channels/501816361706717184/654697565937205278/798658298512932955>`__.
 -  Add custom Nagios theme support `as per Sly <https://discord.com/channels/501816361706717184/654697565937205278/840230232959090748>`__.
 -  While PoE fan should work fine in 1.6 due to upstream fixes from Raspberry Pi, test and make sure before release `as per jaffascout <https://forum.nemslinux.com/viewtopic.php?p=3545>`__.
 
