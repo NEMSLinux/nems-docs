@@ -33,42 +33,6 @@ Features That I Like, But Can't Implement Yet
 
 -  PagerDuty integration `as per ElvisNuno <https://discord.com/channels/501816361706717184/654697565937205278/807482477027000411>`__.
 
-Known Issues
-------------
-
--  As
-   per `Ricks <https://forum.nemslinux.com/viewtopic.php?f=10&t=707>`__ add
-   ability for NEMS to auto-discover hosts and perhaps even compatible
-   services. This has been added as a Patreon goal.
--  As pointed out by tripled, check_nconf treats ARG1 as command (-c) in
-   its entirety. So we receive “NRPE: Command 'check_disk -w 80 -c 90 -p
-   /media/pi” as the full line is treated as command. It should be
-   sending -c “check_disk” -a “-w 80 -c 90 -p /media/pi” - will likely
-   need to fix the check_command which may break it for those who hacked
-   it up by changing the arg to, for example, check_disk“ -a ”-w 80 -c
-   90 -p /media/pi
--  Bland-X3 reports: “Have a bug/issue. Check_snmp has issues with
-   creating files when using the –rate switch (-C CommunityGoesHere -P
-   2c -o .1.3.6.1.2.1.2.2.1.10.1 -w 80000 -c 102400 –rate) results in
-   Status Information: Cannot create directory: /usr/var/111 … Can run
-   command in CLI using sudo and does record the rate information which
-   indicates simple permission problem or can modify the check_snmp
-   command to save it somewhere else with permission maybe.” - Quick
-   guess is maybe the command was run as root user from CLI which has
-   now locked the nagios user from being able to access the folders.
-   Will need to test. Also,
-   see https://support.nagios.com/forum/viewtopic.php?f=7&t=45864
--  Static IP doesn't persist after reboot in Virtual Appliance. Reported
-   by dr_patso and confirmed by 🇨🇷 Benedetti -Ale Morera-.
--  🇨🇷 Benedetti -Ale Morera- reported NEMS SST breaking TLS settings if
-   enable background Blur and save. I have not been able to replicate
-   this.
--  *check_wmi_plus* has never contained the functionality for the
-   documented *checkdns* feature. This has lead to some users saying the
-   feature (which is an available check command in NEMS based on their
-   docs) doesn't work. Need to remove this check command, and add a new
-   one – perhaps *check_dns $HOSTNAME$ $HOSTADDRESS$* which will ensure
-   the  of the host matches.
 
 During the 1.6 Release Cycle (Not At Launch)
 --------------------------------------------
@@ -140,25 +104,39 @@ These issues will be fixed in due time.
 
 -  Number of services per page selection not working in Nagios Core `as
    per baggins <https://forum.nemslinux.com/viewtopic.php?f=38&t=95&p=745&hilit=results#p745>`__.
--  Improve error handling on “Migrator” page. If Cloud auth failed, will
-   just die with black screen. Was reported by mydogboris, but I have
-   not been able to replicate. Tried changing to an invalid key, tried
-   removing the json, but page still loads fine. Perhaps was already
-   patched and mydogboris didn't have the patch.
--  Webmin administration of Network settings don’t stick, `as per
-   kevinds <https://forum.nemslinux.com/viewtopic.php?f=9&t=69&p=608&hilit=webmin#p608>`__. At
-   the release of 1.5 this is still an issue being actively worked on,
-   and it is believed that a coming update to Webmin will fix it
-   upstream.
-   See https://github.com/webmin/webmin/issues/930#issuecomment-445114922
--  Special chars (eg., !) in NEMS SST domain credentials cause error `as
-   per
-   readyit <https://forum.nemslinux.com/viewtopic.php?f=9&t=337&p=2290&hilit=wmi+scripts#p2290>`__.
-   Have been unable to replicate this issue since Nagios' resource.cfg
-   (which NEMS SST saves to) support illegal characters as per the first
-   paragraph of `this
-   document <https://assets.nagios.com/downloads/nagiosxi/docs/Understanding-User-Macros.pdf?_ga=2.174107234.1367194829.1546285277-1305860468.1511033783>`__.
-
+-  As per `Ricks <https://forum.nemslinux.com/viewtopic.php?f=10&t=707>`__ add
+   ability for NEMS to auto-discover hosts and perhaps even compatible
+   services. This has been added as a Patreon goal.
+-  As pointed out by tripled, check_nconf treats ARG1 as command (-c) in
+   its entirety. So we receive “NRPE: Command 'check_disk -w 80 -c 90 -p
+   /media/pi” as the full line is treated as command. It should be
+   sending -c “check_disk” -a “-w 80 -c 90 -p /media/pi” - will likely
+   need to fix the check_command which may break it for those who hacked
+   it up by changing the arg to, for example, check_disk“ -a ”-w 80 -c
+   90 -p /media/pi
+-  Bland-X3 reports: “Have a bug/issue. Check_snmp has issues with
+   creating files when using the –rate switch (-C CommunityGoesHere -P
+   2c -o .1.3.6.1.2.1.2.2.1.10.1 -w 80000 -c 102400 –rate) results in
+   Status Information: Cannot create directory: /usr/var/111 … Can run
+   command in CLI using sudo and does record the rate information which
+   indicates simple permission problem or can modify the check_snmp
+   command to save it somewhere else with permission maybe.” - Quick
+   guess is maybe the command was run as root user from CLI which has
+   now locked the nagios user from being able to access the folders.
+   Will need to test. Also,
+   see https://support.nagios.com/forum/viewtopic.php?f=7&t=45864
+-  Static IP doesn't persist after reboot in Virtual Appliance. Reported
+   by dr_patso and confirmed by 🇨🇷 Benedetti -Ale Morera-.
+-  🇨🇷 Benedetti -Ale Morera- reported NEMS SST breaking TLS settings if
+   enable background Blur and save. I have not been able to replicate
+   this.
+-  *check_wmi_plus* has never contained the functionality for the
+   documented *checkdns* feature. This has lead to some users saying the
+   feature (which is an available check command in NEMS based on their
+   docs) doesn't work. Need to remove this check command, and add a new
+   one – perhaps *check_dns $HOSTNAME$ $HOSTADDRESS$* which will ensure
+   the  of the host matches.
+   
 Ideas for Future
 ----------------
 
@@ -179,10 +157,6 @@ considered ideas.
    See `this
    manpage <https://github.com/opinkerfi/adagios/wiki/Users-guide>`__.
    (It is possible NEMS Cloud will do away with this need).
--  Implement IsItDown service with  for distributed testing of web site
-   uptime (eg., so a user can monitor web site uptime from other NEMS
-   Linux users geographic coordinates, not just their own, to rule out
-   local issue).
 -  Evaluate `openITCockpit <https://github.com/it-novum/openITCOCKPIT>`__ as
    a possible front-end.
 -  Add feature to nems-migrator's off site backup that allows a user to
@@ -194,30 +168,21 @@ considered ideas.
    functionality. `this <https://vanheusden.com/java/ScanToNag/>`__ and `this <https://exchange.nagios.org/directory/Addons/Configuration/Auto-2DDiscovery>`__?
 -  Make it so first boot automatically takes user into nems-init, with
    the option of instead running it through SSH.
--  Must improve logrotate. Some of the logs are getting quite large on
-   some systems that have been up for a long time.
 -  Move all commands from commands.cfg to checkcommands.cfg (or
    whichever is more appropriate) within NEMS Migrator.
--  Add check command-specific documentation.
 -  Add some generic true/false data to NEMS Anonymous Stats. In
    particular, discover if any users are using features like Telegram.
    By knowing this, I can decide if a feature should be removed from
    future releases.
 -  **Ability to use external storage for all active data.** Ideal for
    reducing read/writes on SD cards. Add interface to allow all active
-   data to saved to an external hard drive or network share as suggested
+   data to be saved to an external hard drive or network share as suggested
    by meveric.
--  Provide pre-built NEMS Linux hardware appliances (anyone
-   interested?).
--  Create an OVA of NEMS Linux for deployment on existing virtual
-   infrastructures.
 -  Build a graphical interface for nems-init.
--  Build a graphical interface for NEMS Linux-Migrator's “Restore”
+-  Build a graphical interface for NEMS Migrator's “Restore”
    feature.
 -  Add intrusion detection such as Snort or Bro IDS, `as per
    mpacey <https://forum.nemslinux.com/viewtopic.php?f=10&t=92&p=715&hilit=snort#p715>`__.
--  I'm open to suggestions! Please post your feature requests in `the
-   Community Forum <https://forum.nemslinux.com/viewforum.php?f=8>`__.
 
 NEMS Linux Roadmap
 ------------------
@@ -233,16 +198,17 @@ NEMS Linux Roadmap
    architectures).
 -  1.4 - COMPLETE - New build of NEMS Linux featuring support for
    multiple SBC options and Nagios 4.
--  1.5 - Focused on integrating user-requested options (mostly check
+-  1.5 - COMPLETE - Focused on integrating user-requested options (mostly check
    commands) and optimizing the defaults/samples. Begin multi-server
    environment back-end, starting with ability to nickname NEMS servers
-   via NEMS-SST. Introduction of more SBCs and possibly a virtual
-   appliance (if funding allows).
--  1.6 - New peripheral options such as NEMS Warning Light.
--  1.7 - Begin focusing on UX and feature consolidation. Remove unneeded
+   via NEMS-SST. Introduction of more SBCs and virtual appliances.
+-  1.6 - UX and feature updates. Refine the list of supported devices, removing any
+   that are not being used. New peripheral options such as NEMS Warning Light.
+-  1.7 - Deprecation of git as an update backend. Now, fully using dpkg repository.
+   Complete deprecation of Python 2.7. NEMS Linux to be moved entirely to 64-bit image.
+-  1.8 - Begin focusing on UX and feature consolidation. Remove unneeded
    features from NEMS Adagios. Create new interface for NConf that
    matches the NEMS Dashboard interface. Add a safe reboot button to
    NEMS SST. Migrate as many options away from the terminal as possible,
    including nems-init. Write nems-mailtest into nems-sst `as per
    mydogboris <https://forum.nemslinux.com/viewtopic.php?f=10&t=372&p=2178&hilit=nems+mailtest#p2178>`__.
--  1.8+ We'll see!
