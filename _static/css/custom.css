@@ -18,7 +18,7 @@ cite {
   font-size: 0.9em;
 }
 
-/* override table no-wrap */
-.wy-table-responsive table td, .wy-table-responsive table th {
+/* Wrap table cell contents rather than adding a horizontal scroll */
+table td, table th {
     white-space: normal;
 }
