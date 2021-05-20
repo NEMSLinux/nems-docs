@@ -7,7 +7,12 @@ Check Commands
 `check_ibmi_cpu` - Check the CPU utilization of the IBM i host.
 `check_ibmi_jobs` - Check the number of active jobs.
 `check_ibmi_disk_config` - Report the disk configuration of the host.
-
+`check_ibmi_disk_usage` - Disk usage.
+`check_ibmi_asp_usage` - ASP disk usage.
+`check_ibmi_disk` - Disk utilization.
+`check_ibmi_message` - Check IBM i messages. **I do not know what the 'ty' argument represents. If you know, please message me or create a PR.**
+`check_ibmi_page_faults` - Check for page faults.
+`check_ibmi_subjobs` - Number of subsystem jobs.
 
 Configuration
 ~~~~~~~~~~~~~
