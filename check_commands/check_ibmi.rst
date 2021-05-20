@@ -12,11 +12,16 @@ Check Commands
      - Description
    * - check_ibmi_cpu
      - Check the CPU utilization of the entire IBM i host.
+   * - check_ibmi_job_cpu
+     - Check the CPU usage of a specific job.
+   * - check_ibmi_overload_jobs
+     - Retrieve the number of jobs that exceeds the expected CPU usage.
+   * - check_ibmi_temp_jobs
+     - Retrieve top jobs that have the most temp storage usage. Number of jobs is user configurable.
+   * - check_ibmi_jobs
+     - Check the number of active jobs.
      
--  `check_ibmi_job_cpu` - Check the CPU usage of a specific job.
--  `check_ibmi_overload_jobs` - Retrieve the number of jobs that exceeds the expected CPU usage.
--  `check_ibmi_temp_jobs` - Retrieve top jobs that have the most temp storage usage. Number of jobs is user configurable.
--  `check_ibmi_jobs` - Check the number of active jobs.
+     
 -  `check_ibmi_disk_config` - Report the disk configuration of the host.
 -  `check_ibmi_disk_usage` - Disk usage.
 -  `check_ibmi_asp_usage` - Retrieve the ASP usage percentage of the entire system.
