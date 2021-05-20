@@ -6,6 +6,8 @@ Check Commands
 
 `check_ibmi_cpu` - Check the CPU utilization of the IBM i host.
 `check_ibmi_jobs` - Check the number of active jobs.
+`check_ibmi_disk_config` - Report the disk configuration of the host.
+
 
 Configuration
 ~~~~~~~~~~~~~
