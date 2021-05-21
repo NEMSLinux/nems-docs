@@ -321,3 +321,6 @@ May-July 2021
 - All speedtest commands have now been re-written (again). The fast.com fix from the end of 1.5.x to replace Ookla was heavy (required a headless Chromium task), sometimes unreliable and didn't work on all platforms. So I've re-written the system entirely, now using `Cloudflare's Speedtest <https://speed.cloudflare.com/>`__ to test the Internet connection speed. The results are cached for 2 minutes, so if a user accidentally runs multiple instances, it will not bottleneck nor give incorrect results due to high bandwidth usage.
 - Nagios i fully integrated, along with check commands for IBM i platform `as requested by chris_hird <https://discord.com/channels/501816361706717184/654697565937205278/798658298512932955>`__.
 - IBM i integration may now be enabled in NEMS SST under optional services. It is disabled by default since it requires an additional daemon be running.
+- Add option to NEMS SST for "disabled by default" optional services that must be enabled manually.
+- Adapt NRPE configuration to support newly named check_sbc_temperature script.
+- Direct NEMS Linux to pull the NRPE config file from NEMS Migrator package rather than downloading from Github (as would be the case when installing on a non-NEMS system).
