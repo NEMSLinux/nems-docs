@@ -6,6 +6,7 @@ with a move to 64-bit and Python 3.
 
 **Key Development Features and Goals:**
 
+-  ARMhf support to be deprecated in favor of AArch64.
 -  Python moved to v3 stack due to 2.7 EOL.
 -  **Firewall** - NEMS Linux to include `ConfigServer Security &
    Firewall (csf) with Login Failure Daemon (lfd)`_. Internal LAN IP
