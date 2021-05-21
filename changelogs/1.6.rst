@@ -6,7 +6,7 @@ peripherals.
 
 **Key Development Features and Goals:**
 
--  Public release of `NEMS Warning Light`_.
+-  Public release of `NEMS Warning Light </en/latest/nems-tools/warninglight.html>`__.
 -  Updated packages.
 -  Supported single board computer list to be reduced to focus on most
    used, with option for users to request ports if they do not exist.
