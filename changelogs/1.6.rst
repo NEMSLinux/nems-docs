@@ -315,3 +315,5 @@ May-July 2021
 - Add option to NEMS SST for "disabled by default" optional services that must be enabled manually.
 - Adapt NRPE configuration to support newly named check_sbc_temperature script.
 - Direct NEMS Linux to pull the NRPE config file from NEMS Migrator package rather than downloading from Github (as would be the case when installing on a non-NEMS system).
+- **NEMS Linux 1.6 Beta Build 1 released to Patrons.**
+- **NEMSeOS 0.1 Alpha Build 2 released to Patrons.**
