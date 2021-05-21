@@ -317,3 +317,4 @@ May-July 2021
 - Direct NEMS Linux to pull the NRPE config file from NEMS Migrator package rather than downloading from Github (as would be the case when installing on a non-NEMS system).
 - **NEMS Linux 1.6 Beta Build 1 released to Patrons.**
 - **NEMSeOS 0.1 Alpha Build 2 released to Patrons.**
+- Update fk_id for NEMS Migrator restore, and temporarily disable nems-restore feature until more testing can be done.
