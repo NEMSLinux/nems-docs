@@ -6,22 +6,12 @@ peripherals.
 
 **Key Development Features and Goals:**
 
--  Python moved to v3 stack due to 2.7 EOL.
 -  Public release of `NEMS Warning Light`_.
--  check_mk livestatus upgraded to 1.5 (requires C++17).
+-  Updated packages.
 -  Supported single board computer list to be reduced to focus on most
    used, with option for users to request ports if they do not exist.
 -  Port NEMS Linux to Docker platform. Development funding provided by
    Patrons (THANK YOU).
--  **Firewall** - NEMS Linux to include `ConfigServer Security &
-   Firewall (csf) with Login Failure Daemon (lfd)`_. Internal LAN IP
-   addresses are whitelisted by default, but if a user tries to access
-   your NEMS server from outside the LAN (ie., if you have your NEMS
-   server accessible on the Internet) they will get locked out if they
-   try an incorrect password too many times.
--  Add IPMI (freeipmi) if not added already.
--  Begin work on smart home assistant integration: NEMS Skill for Alexa
-   and Google Assistant.
 -  Consistent networking configuration across platform (for setting
    static IPs, for example).
 
