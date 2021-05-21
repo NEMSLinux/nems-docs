@@ -4,6 +4,12 @@ NEMS Linux 1.6 Changelogs
 The NEMS 1.6 release cycle will focus on hardware porting and
 peripherals.
 
+**Release Dates:**
+
+- NEMS Linux 1.6 Alpha was released to the beta team December 2020.
+- NEMS Linux 1.6 Beta and NEMSeOS 0.1 Alpha Build 2 were released to Patrons May 21, 2021.
+- NEMS Linux 1.6 Public Release to be announced, likely mid-late July/early August 2021.
+
 **Key Development Features and Goals:**
 
 -  Public release of `NEMS Warning Light </en/latest/nems-tools/warninglight.html>`__.
@@ -14,12 +20,6 @@ peripherals.
    Patrons (THANK YOU).
 -  Consistent networking configuration across platform (for setting
    static IPs, for example).
-
-**Release Dates:**
-
-- NEMS Linux 1.6 Alpha was released to the beta team December 2020.
-- NEMS Linux 1.6 Beta and NEMSeOS 0.1 Alpha Build 2 were released to Patrons May 21, 2021.
-- NEMS Linux 1.6 Public Release to be announced.
 
 **Development Changelogs Since 1.5:**
 
