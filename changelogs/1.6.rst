@@ -27,8 +27,9 @@ peripherals.
 
 **Release Dates:**
 
-NEMS Linux 1.6 Alpha was released December 2020.
-Beta release is planned for January 2021 with the public release to follow in Q1 2021.
+- NEMS Linux 1.6 Alpha was released to the beta team December 2020.
+- NEMS Linux 1.6 Beta was released to Patrons May 21, 2021.
+- NEMS Linux 1.6 Public Release to be announced.
 
 **Development Changelogs Since 1.5:**
 
