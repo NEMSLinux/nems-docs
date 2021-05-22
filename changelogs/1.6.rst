@@ -13,6 +13,7 @@ peripherals.
 **Key Development Features and Goals:**
 
 -  Public release of `NEMS Warning Light </en/latest/nems-tools/warninglight.html>`__.
+-  Public release of NEMS Extender OS.
 -  Updated packages.
 -  Supported single board computer list to be reduced to focus on most
    used, with option for users to request ports if they do not exist.
@@ -320,3 +321,4 @@ May-July 2021
 - Update fk_id for NEMS Migrator restore, and temporarily disable nems-restore feature until more testing can be done.
 - Remove state text (UNKNOWN, WARN, CRITICAL, OK) from check_nems_osb - let the output be based on the exit codes. Also change date output to show full day, not 3-character short-form.
 - Add nems-plugins to nems-update procedure.
+- Remove NEMS Hardware ID from RPi-Monitor. Thanks to UltimateBugHunter-NitPicker for pointing this out. NEMS Server Overview is the correct place to get this now.
