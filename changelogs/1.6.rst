@@ -322,3 +322,4 @@ May-July 2021
 - Remove state text (UNKNOWN, WARN, CRITICAL, OK) from check_nems_osb - let the output be based on the exit codes. Also change date output to show full day, not 3-character short-form.
 - Add nems-plugins to nems-update procedure.
 - Remove NEMS Hardware ID from RPi-Monitor. Thanks to UltimateBugHunter-NitPicker for pointing this out. NEMS Server Overview is the correct place to get this now.
+- Add NEMS Server's platform name to RPi-Monitor.
