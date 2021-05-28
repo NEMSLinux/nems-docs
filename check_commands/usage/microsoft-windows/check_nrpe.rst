@@ -30,7 +30,7 @@ the directions below, otherwise use the provided WMIC-based check commands.
       NEMSIP is the IP address of your NEMS server)
    -  Clear the Password field for ease of deployment. NEMS sample
       scripts are setup to use NRPE without a password because I’m
-      making the assumption that this is being deployed in a trusted .
+      making the assumption that this is being deployed in a trusted LAN.
       If you do not blank the password here, you will have to edit all
       the scripts before NEMS will be able to communicate with this
       computer.
