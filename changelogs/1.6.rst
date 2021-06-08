@@ -324,3 +324,4 @@ May-July 2021
 - Remove NEMS Hardware ID from RPi-Monitor. Thanks to UltimateBugHunter-NitPicker for pointing this out. NEMS Server Overview is the correct place to get this now.
 - Add NEMS Server's platform name to RPi-Monitor.
 - Temporarily reverted NRPE host installer to 1.5.x compatibility since 1.6 uses a newer version of NRPE. Thanks to smccloud for `pointing this out <https://discord.com/channels/501816361706717184/501816361706717186/850014385896423426>`__.
+- Added `libnumber-format-perl` as a dependency for wmic package.
