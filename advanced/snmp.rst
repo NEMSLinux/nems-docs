@@ -70,7 +70,7 @@ In this example, uptime will be test using both the OID and Object name using th
 
 .. code-block:: console
 
-  *./checksnmp -H remote ip -c SNMP community -o OID or Object*
+  *./checksnmp -H remote ip -C SNMP community -o OID or Object*
 
 In this example, System Uptime is check using both the OID and the Object name.  Note, the .0 is put on the end of sysUpTime, this denotes to collect child information and is required.
 
