@@ -8,6 +8,12 @@ NEMS Linux Migrator, upgrading is a cinch, and thanks to NEMS Linux'
 rolling release system, many fixes, patches and upgrades can find their
 way into existing installations.
 
+Urgent Issues
+-------------
+
+- Backport the new NEMS Linux 1.6 speedtest to 1.5.x
+
+
 Feature Requests
 ----------------
 
