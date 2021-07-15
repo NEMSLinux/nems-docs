@@ -66,4 +66,6 @@ Deployment Notes
    “dynamic” RAM. ESXi, for example, may
    remove all RAM from the appliance if set to dynamic, which will
    result in NEMS Linux not functioning correctly. RAM should be static.
+-  **Hyper-V** - Choose Generation 1 under Specify Generation when creating VM.   
+
 
