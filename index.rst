@@ -295,6 +295,7 @@ Here is a list of those Patrons who kicked in that little bit extra to have thei
 * Jerold Von Hemel
 * Nato Riley
 * Joe Luzzi
+* Xander Brennan
 
 Want your name on this list? `Become a Patron <https://patreon.com/nems>`__.
 
