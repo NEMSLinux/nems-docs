@@ -285,7 +285,7 @@ March-April 2021
 - Modified the speedtest script to wait 100 seconds for the task to finish and then forcibly kill it. If this happens, NEMS will report "0 Error" instead of a speed result. By doing this, I prevent slower connections from having the speedtest check killed by Nagios (service timeout) leaving a compounding number of Chromium tasks running, eventually leading to high load and slow operation.
 - Upgrade CheckMK to 1.6.0p23 and move source to Github (rather than a zip from their site, which became deadlink after a recent redesign).
 
-May-July 2021
+May-August 2021
 
 - Clean up a lot of the old build scripts and nems-upgrade packages to accommodate the changes in NEMS Linux 1.6.
 - Deprecation of Samba wmic complete: NEMS Linux 1.6 now entirely moved to new custom Python replacement.
@@ -326,3 +326,7 @@ May-July 2021
 - Temporarily reverted NRPE host installer to 1.5.x compatibility since 1.6 uses a newer version of NRPE. Thanks to smccloud for `pointing this out <https://discord.com/channels/501816361706717184/501816361706717186/850014385896423426>`__.
 - Added `libnumber-format-perl` as a dependency for wmic package.
 - Improved the error output of `check_mrtgtraf_nems` after `PixelSlayer Bob reported <https://discord.com/channels/501816361706717184/501816361706717186/852112905562488832>`__ messy error output.
+
+September-November, 2021
+
+- Upgraded NagVis to 1.9.27.
