@@ -49,6 +49,7 @@ here are some of the available check commands:
    a remote system via NRPE.
 -  `check_1wire_temp <check_1wire_temp.html>`__ - Monitor temperature using a 1-wire device such as the DS18S20.
 -  `check_tasmota <check_tasmota.html>`__ - SONOFF / Tasmota IoT device monitoring.
+-  `check_truepool <check_truepool.html>`__ - Check the status of your Chia farm on the Truepool.io pool.
 -  `check_ibmi* <check_ibmi.html>`__ - IBM i monitoring using Nagios i.
 
 .. toctree::
@@ -75,4 +76,5 @@ here are some of the available check commands:
     custom_check_mem
     check_1wire_temp
     check_tasmota
+    check_truepool
     check_ibmi
