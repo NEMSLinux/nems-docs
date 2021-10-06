@@ -1,7 +1,9 @@
 Check Command: check_truepool
 =============================
 
-Check Truepool.io to ensure your Chia farm is online and farming to the pool.
+TruePool.io is a trusted Chia cryptocurrency farming (mining) pool. This NEMS
+check command allows you to check your TruePool.io farmer status to ensure
+your Chia farm is online and actively farming to the pool.
 
 *check_truepool* expects just one parameter (your Launcher ID) and responds
 accordingly.
@@ -44,3 +46,5 @@ Obtain your Chia launcher ID. See `this truepool.io knowledgebase article
 - Set first notification delay: 30
 - Set notification interval: 120
 - Set notification options: w,u,c,r
+- Set your Launcher ID as ARG1
+- Save, and generate your NEMS Config
