@@ -14,7 +14,7 @@ Expected Responses
 ------------------
 
 .. |check_truepool| image:: ../img/check_truepool.png
-    :width: 395px
+    :width: 540px
     :alt: check_truepool output in NEMS Adagios
 
 +-------------------+
