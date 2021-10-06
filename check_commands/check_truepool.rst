@@ -11,7 +11,7 @@ This check command requires NEMS Linux 1.6+.
 Expected Responses
 ------------------
 
-.. |check_truepool| image:: img/check_truepool.png
+.. |check_truepool| image:: ../img/check_truepool.png
     :width: 395px
     :alt: check_truepool output in NEMS Adagios
 
