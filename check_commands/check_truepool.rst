@@ -1,9 +1,13 @@
 Check Command: check_truepool
 =============================
 
-`TruePool.io <https://truepool.io/>`__ is a trusted Chia cryptocurrency farming (mining) pool. This NEMS
-check command allows you to check your TruePool.io farmer status to ensure
-your Chia farm is online and actively farming to the pool.
+`TruePool.io <https://truepool.io/>`__ is a trusted Chia cryptocurrency farming
+(mining) pool. This NEMS check command allows you to check your TruePool.io
+farmer status to ensure your Chia farm is online and actively farming to the
+pool.
+
+Learn more about what makes TruePool.io unique in
+`this video <https://www.youtube.com/watch?v=RFRGwBRAt7s>`__.
 
 *check_truepool* expects just one parameter (your Launcher ID) and responds
 accordingly.
