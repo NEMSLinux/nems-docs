@@ -24,6 +24,7 @@ NEMS Linux.
 You can submit a feature request either via Discord (in
 #feature-requests) or the Community Forum (in Feature Requests).
 
+-  Add `TrueNAS check command <https://github.com/StewLG/check_truenas_extended_play>`__
 -  `Custom icons as per
    Amheus <https://forum.nemslinux.com/viewtopic.php?f=10&t=733&p=3265#p3265>`__ Possible duplicate of `their Discord message <https://discord.com/channels/501816361706717184/654697565937205278/721028392602042410>`__
 -  Backup custom icons, should they exist, `as per Baldnerd's note <https://discord.com/channels/501816361706717184/654697565937205278/743125075267682494>`__.
