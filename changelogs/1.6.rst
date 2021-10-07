@@ -332,3 +332,4 @@ September-November, 2021
 - Upgraded NagVis to 1.9.27.
 - Create new `check_truepool` check command.
 - Added pool share percentage to output of `check_truepool` and formatted output.
+- Further improved output of `check_truepool` and added a cache and some error handling to ensure accuracy.
