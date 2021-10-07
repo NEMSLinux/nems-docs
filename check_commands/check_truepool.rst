@@ -29,9 +29,9 @@ Expected Responses
 
 - ``OK`` - Farm is online and actively gaining points on Truepool.io
 - ``CRITICAL`` - Either "Not found" (you provided an invalid Launcher ID) or
-  "Farm Offline" (your farm has gained 0 points since the last win)
+  "Farm Offline" (your farm has gained 0 points since the last check)
 
-`OK - Points: 830 (24 hrs), 243 (this block) / Share: 0.0810% / Diff: 1`
+**Sample Output:** `OK - Points: 830 (24 hrs), 243 (this block) / Share: 0.0810% / Diff: 1`
 
 .. admonition:: [Cache]
   :class: note
