@@ -1,6 +1,14 @@
 Check Command: check_truepool
 =============================
 
+.. |check_truepool| image:: ../img/logo_truepool.png
+    :width: 300px
+    :alt: TruePool.io Logo
+
++-------------------+
+| |check_truepool|  |
++-------------------+
+
 `TruePool.io <https://truepool.io/>`__ is a trusted Chia cryptocurrency farming
 (mining) pool. This NEMS check command allows you to check your TruePool.io
 farmer status to ensure your Chia farm is online and actively farming to the
@@ -14,18 +22,17 @@ accordingly. You can create multiple *check_truepool* advanced services to
 check any number of Launcher IDs. For example, monitor your own and your
 family member's farm status.
 
+.. figure:: ../img/check_truepool.png
+  :width: 540
+  :align: center
+  :alt: NEMS Adagios output of check_truepool command
+
+  NEMS Adagios output of check_truepool command
+  
 This check command requires NEMS Linux 1.6+.
 
 Expected Responses
 ------------------
-
-.. |check_truepool| image:: ../img/check_truepool.png
-    :width: 540px
-    :alt: check_truepool output in NEMS Adagios
-
-+-------------------+
-| |check_truepool|  |
-+-------------------+
 
 - ``OK`` - Farm is online and actively gaining points on Truepool.io
 - ``CRITICAL`` - Either "Not found" (you provided an invalid Launcher ID) or
