@@ -10,7 +10,9 @@ Learn more about what makes TruePool.io unique in
 `this video <https://www.youtube.com/watch?v=RFRGwBRAt7s>`__.
 
 *check_truepool* expects just one parameter (your Launcher ID) and responds
-accordingly.
+accordingly. You can create multiple *check_truepool* advanced services to
+check any number of Launcher IDs. For example, monitor your own and your
+family member's farm status.
 
 This check command requires NEMS Linux 1.6+.
 
