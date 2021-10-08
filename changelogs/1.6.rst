@@ -332,4 +332,8 @@ September-November, 2021
 - Upgraded NagVis to 1.9.27.
 - Create new `check_truepool` check command.
 - Added pool share percentage to output of `check_truepool` and formatted output.
-- Further improved output of `check_truepool` and added a cache and some error handling to ensure accuracy.
+- Further improved output of `check_truepool` and added a cache and some error
+  handling to ensure accuracy.
+- `check_speedtest_cli` updated to 2.1. NEMS Linux requirement removed so it can
+  be used on non-NEMS systems. Set paths dynamically and prepare for backport to
+  NEMS Linux 1.5.x.
