@@ -62,14 +62,14 @@ Obtain your Chia launcher ID. See `this truepool.io knowledgebase article
 - Add a new Advanced Service
 - Give the service a name such as "TruePool (Robbie)"
 - Give the service a description such as "Chia Farm - Robbie" - I identify my farmer since I monitor multiple farmers
-- Set Check Period to 24/7
+- Set Check Period to `24/7`
 - Set Notification Period to Work Hours (I don't need to be awoken if my farm goes down)
-- Assign the advanced service to host	"NEMS"
-- Set max check attempts: 5
-- Set check interval: 10
-- Set retry interval: 10
-- Set first notification delay: 30
-- Set notification interval: 120
-- Set notification options: w,u,c,r
-- Set your Launcher ID as ARG1
+- Assign the advanced service to host `NEMS`
+- Set max check attempts: `5`
+- Set check interval: `10`
+- Set retry interval: `10`
+- Set first notification delay: `30`
+- Set notification interval: `120`
+- Set notification options: `w,u,c,r`
+- Add your Launcher ID to the appropriate field
 - Save, and generate your NEMS Config
