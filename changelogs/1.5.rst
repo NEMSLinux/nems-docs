@@ -1220,6 +1220,8 @@ issues have been addressed in 2021:
    Linux 1.6, I also backported the patch to NEMS Linux 1.5.x on all
    platforms. Patch # 000016. To obtain the patch, run `sudo nems-upgrade`
 -  Backport speedtest from NEMS Linux 1.6 after Ookla changed licensing.
+-  NEMS Update will now allow a repository update even after Debian moves
+   the old repository.
 
 .. _pointed out by Toasteh\_: https://discord.com/channels/501816361706717184/501816361706717186/763075014035505214
 .. _as per Marshman: https://forum.nemslinux.com/viewtopic.php?f=10&t=566
