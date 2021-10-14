@@ -339,3 +339,5 @@ September-November, 2021
   NEMS Linux 1.5.x.
 - If speedtest is missing any of the required components, they will now be installed
   rather than just providing an UNKNOWN state.
+- Pipe speedtest logs differently to avoid errors if the check is run by a user
+  other than nagios.
