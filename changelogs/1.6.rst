@@ -337,3 +337,5 @@ September-November, 2021
 - `check_speedtest_cli` updated to 2.1. NEMS Linux requirement removed so it can
   be used on non-NEMS systems. Set paths dynamically and prepare for backport to
   NEMS Linux 1.5.x.
+- If speedtest is missing any of the required components, they will now be installed
+  rather than just providing an UNKNOWN state.
