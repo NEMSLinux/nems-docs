@@ -342,3 +342,7 @@ September-November, 2021
 - Pipe speedtest logs differently to avoid errors if the check is run by a user
   other than nagios.
 - Fixed array associations with `speedtest` output.
+- Made it so if someone scheduled/ran the speedtest task more than once per 2 minutes,
+  it will pull the response from cache rather than running multiple speedtests
+  simultaneously (which would skew the results).
+- Speedtest updates backported to NEMS Linux 1.5.x.
