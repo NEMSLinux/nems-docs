@@ -341,3 +341,4 @@ September-November, 2021
   rather than just providing an UNKNOWN state.
 - Pipe speedtest logs differently to avoid errors if the check is run by a user
   other than nagios.
+- Fixed array associations with `speedtest` output.
