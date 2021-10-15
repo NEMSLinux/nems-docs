@@ -100,31 +100,31 @@ Steps
   
   #. Add a new host.
   #. Set the following:
-
-    - hostname: ``https://nemslinux.com``
-    - alias: *NEMS Web Site*
-    - address: *nemslinux.com*
-    - OS: *Linux*
-    - host preset: *Web Site IPv4* (See what we did there?)
-    - monitored by: *Default Nagios*
-    - host is collector: *no*
-    - check period: *24x7*
-    - notification period: *24x7*
-    - max check attempts: *10*
-    - check interval: *1*
-    - retry interval: *5*
-    - first notification delay: *10*
-    - notification interval: *30*
-    - notification options: *d,u,r,f*
-    - assign host to hostgroup (are you ready for this?): *web_site_ssl*
-
-  .. figure:: ../../img/Creating-a-Host-to-Monitor-IPv4-SSL-Web-Site.png
-    :width: 600
-    :align: center
-    :alt: Create Host for IPv4 SSL web site
-
-    Creating a Host to Monitor IPv4 SSL Web Site
-
+     
+     - hostname: ``https://nemslinux.com``
+     - alias: *NEMS Web Site*
+     - address: *nemslinux.com*
+     - OS: *Linux*
+     - host preset: *Web Site IPv4* (See what we did there?)
+     - monitored by: *Default Nagios*
+     - host is collector: *no*
+     - check period: *24x7*
+     - notification period: *24x7*
+     - max check attempts: *10*
+     - check interval: *1*
+     - retry interval: *5*
+     - first notification delay: *10*
+     - notification interval: *30*
+     - notification options: *d,u,r,f*
+     - assign host to hostgroup (are you ready for this?): *web_site_ssl*
+     
+     .. figure:: ../../img/Creating-a-Host-to-Monitor-IPv4-SSL-Web-Site.png
+       :width: 600
+       :align: center
+       :alt: Create Host for IPv4 SSL web site
+    
+     Creating a Host to Monitor IPv4 SSL Web Site
+     
   #. Save the host. 
   
 6. Generate your config.
