@@ -1222,6 +1222,9 @@ issues have been addressed in 2021:
 -  Backport speedtest from NEMS Linux 1.6 after Ookla changed licensing.
 -  NEMS Update will now allow a repository update even after Debian moves
    the old repository.
+-  Cockpit branding broke in 1.6 after assets moved in NEMS-Migrator. Fixed.
+-  Backport of NagiosTV broken in 1.5.x after config moved in NEMS Migrator
+   for 1.6. Fixed.
 
 .. _pointed out by Toasteh\_: https://discord.com/channels/501816361706717184/501816361706717186/763075014035505214
 .. _as per Marshman: https://forum.nemslinux.com/viewtopic.php?f=10&t=566
