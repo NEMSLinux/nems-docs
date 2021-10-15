@@ -71,20 +71,21 @@ Steps
   #. Click Add next to Advanced Services.
   #. Name your service: *Web Site (SSL)*
   #. Give it an alias: *Uptime of SSL Web Site*
-  #. Set the check period and notification period to 24x7
+  #. Set the check command to *check_http*
+  #. Set the check period and notification period to *24x7*
   #. In *assign advanced-service to hostgroup*, highlight the hostgroup we created (web_site_ssl) and press the green arrow to add it to the selected items list.
   #. Under *contact groups* be sure to add *admins* as well. Otherwise, you won’t receive notifications.
   #. Set your notifications as follows:
-
+  
     - max check attempts: 10
     - check interval: 1
     - retry interval: 5
     - first notification delay: 10
     - notification interval: 30
     - notification options: w,u,c,r,f
-
-  #. Finally, set your service parameters to: `-S -\\-sni`
-  #. Save your advanced service.
+    
+  9. Finally, set your service parameters to: `-S -\\-sni`
+  10. Save your advanced service.
   
   .. Tip:: The -S tells check_http that this site is using SSL, and the -\\-sni enables SNI (Server Name Indication) since I use CloudFlare for SSL on nemslinux.com, and therefore my resolving IP address is associated with more than one domain name. For your site, if you have any trouble, try removing SNI by simply omitting -\\-sni. For the full documentation surrounding the check_http command, visit `the check_http documentation <../../check_commands/check_http.html>`__.
   
