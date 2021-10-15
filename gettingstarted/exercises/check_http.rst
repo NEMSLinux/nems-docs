@@ -78,7 +78,7 @@ Steps
   #. Set your notifications as follows:
      
      - max check attempts: 10
-     - check interval: 
+     - check interval: 1
      - retry interval: 5
      - first notification delay: 10
      - notification interval: 30
