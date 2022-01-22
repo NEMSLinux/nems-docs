@@ -20,14 +20,17 @@ Amazon allows me to make it.
 AMI IDs
 -------
 
-The NEMS Linux AMI is found under *Community AMIs* on **us-east-1 (N.
-Virginia)**. If you wish to deploy on a different AWS Service Endpoint and
-are a current Patron supporting the project on Patreon, please let me
-know and I will copy the AMI to your preferred region. Since this costs
-me extra money to do, I only do it by request, and only for those who
-contribute to the project.
+The NEMS Linux AMI is found under *Community AMIs* on the following AWS
+Service Endpoints. If you wish to deploy on a different AWS Service
+Endpoint and are a current Patron supporting the project on Patreon,
+please let me know and I will copy the AMI to your preferred region.
+Since this costs me extra money to do, I only do it by request, and only
+for those who contribute to the project.
 
--  NEMS 1.5 AMI Build 1 - ami-03480e018178d1c75
+NEMS 1.5 AMI Build 1
+- N. Virginia (us-east-1) ami-03480e018178d1c75
+- Ireland (eu-west-1) ami-07d0a43c2844ae01c
+
 
 Introduction
 ------------
