@@ -327,7 +327,7 @@ May-August 2021
 - Added `libnumber-format-perl` as a dependency for wmic package.
 - Improved the error output of `check_mrtgtraf_nems` after `PixelSlayer Bob reported <https://discord.com/channels/501816361706717184/501816361706717186/852112905562488832>`__ messy error output.
 
-September-November, 2021
+September-December 2021
 
 - Upgraded NagVis to 1.9.27.
 - Create new `check_truepool` check command.
@@ -346,3 +346,9 @@ September-November, 2021
   it will pull the response from cache rather than running multiple speedtests
   simultaneously (which would skew the results).
 - Speedtest updates backported to NEMS Linux 1.5.x.
+
+January 2021
+
+- Add TEMPer sensor support for TEMPerGold_V3.3
+- Update speedtest to automatically kill the process if it has been running > 10 minutes.
+- Fix speedtest to load the log data first, ensuring correct output even if the task is already running.
