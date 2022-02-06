@@ -298,6 +298,7 @@ Here is a list of those Patrons who kicked in that little bit extra to have thei
 * Xander Brennan
 * Sam Lakhani
 * James Rawls
+* Bronson Trevor
 
 Want your name on this list? `Become a Patron <https://patreon.com/nems>`__.
 
