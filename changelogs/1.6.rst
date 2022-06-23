@@ -347,8 +347,10 @@ September-December 2021
   simultaneously (which would skew the results).
 - Speedtest updates backported to NEMS Linux 1.5.x.
 
-January 2021
+January-July 2022
 
 - Add TEMPer sensor support for TEMPerGold_V3.3
 - Update speedtest to automatically kill the process if it has been running > 10 minutes.
 - Fix speedtest to load the log data first, ensuring correct output even if the task is already running.
+- Set livestatus version to 1.5.0p13.
+- Update moment.js to 2.29.3 to patch against directory traversal bug and backport this patch to 1.5.x.
