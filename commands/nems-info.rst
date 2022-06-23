@@ -141,3 +141,5 @@ Available Command Options
 -  ``nems-info [dht11|dht22]`` Output JSON
    response from a connected `DHT
    Sensor <../accessories/dhtsensors.html>`__.
+-  ``nems-info undervoltage`` Output text response about Raspberry Pi
+   undervoltage state.
