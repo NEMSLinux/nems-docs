@@ -360,3 +360,4 @@ January-July 2022
 - Add `undervoltage` check to `nems-info` to detect power state of Raspberry Pi.
 - Upgraded NagiosTV to 0.8.5.
 - Adagios moved to 2.0.1, deprecating its dependency on Python 2.7 and moving to Python 3.9 in a venv.
+- Add some extra fonts that are required by Monitorix to fix broken fonts.
