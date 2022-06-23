@@ -359,3 +359,4 @@ January-July 2022
 - Added detection of other Pi models with Model IDs between 150 and 199 (the new Raspberry Pi 4 Rev. 1.5, for example) so these will be recognized by NEMS Linux as Raspberry Pi. Previously the detection looked for Model IDs between 0 and 9.
 - Add `undervoltage` check to `nems-info` to detect power state of Raspberry Pi.
 - Upgraded NagiosTV to 0.8.5.
+- Adagios moved to 2.0.1, deprecating its dependency on Python 2.7 and moving to Python 3.9 in a venv.
