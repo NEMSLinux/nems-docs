@@ -70,7 +70,7 @@ In this example, uptime will be test using both the OID and Object name using th
 
 .. code-block:: console
 
-  *./checksnmp -H remote ip -c SNMP community -o OID or Object*
+  *./checksnmp -H remote ip -C SNMP community -o OID or Object*
 
 In this example, System Uptime is check using both the OID and the Object name.  Note, the .0 is put on the end of sysUpTime, this denotes to collect child information and is required.
 
@@ -89,7 +89,7 @@ Follow these steps to configure a basic SNMP check.
 - Click on Add for Advanced Services
 - Enter most fields according to environment standards (i.e. name, description, check/notifications periods, etc)
 - Select check_snmp in the check command field
-- For ARG1 at the bottom of the screen, at the minimum, enter the community and object to check. *-c public -o iso.3.6.1.2.1.1.3.0*  You can add warnings *-w* and criticals *-c* if the appropriate
+- For ARG1 at the bottom of the screen, at the minimum, enter the community and object to check. *-C public -o iso.3.6.1.2.1.1.3.0*  You can add warnings *-w* and criticals *-c* if the appropriate
 - Add new check to host
 - Generate and deploy Nagios config
 
