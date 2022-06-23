@@ -355,3 +355,5 @@ January-July 2022
 - Set livestatus version to 1.5.0p13.
 - Update moment.js to 2.29.3 to patch against directory traversal bug and backport this patch to 1.5.x.
 - Update WSGI to Python 3 version.
+- Add libraspberrypi-bin (particularly for vcgencmd so I can add a check for under-voltage).
+- Added detection of other Pi models with Model IDs between 150 and 199 (the new Raspberry Pi 4 Rev. 1.5, for example) so these will be recognized by NEMS Linux as Raspberry Pi. Previously the detection looked for Model IDs between 0 and 9.
