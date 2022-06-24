@@ -368,3 +368,4 @@ January-July 2022
 - Add `int` option to `nems-info undervoltage` to send an integer response rather than plain text.
 - Remove extraneous output from `nems-info undervoltage` - we only want to know if it's under voltage, or not.
 - Adapt ``wmic`` to Python 3 code rather than the old Python 2 version.
+- ``nems-tv`` moved to Debian repository.
