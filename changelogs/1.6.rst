@@ -364,3 +364,6 @@ January-July 2022
 - pnp4nagios has been missing for a long time since development stopped and it was pulled from repositories. Write a new compiler to re-add pnp4nagios to NEMS Linux.
 - Several packages whose names were changed have been replaced in NEMS Linux with their modern counterparts. NetworkManager, PyWBEM and ModSecurity to name a few examples.
 - Ensure all Adagios code is compiled within a Python Virtual Environment.
+- Allow authorized users (members of the *nagios* group) to execute nems-info commands that require root access without needing a password.
+- Add `int` option to `nems-info undervoltage` to send an integer response rather than plain text.
+- Remove extraneous output from `nems-info undervoltage` - we only want to know if it's under voltage, or not.
