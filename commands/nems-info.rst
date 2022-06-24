@@ -142,6 +142,6 @@ Available Command Options
    response from a connected `DHT
    Sensor <../accessories/dhtsensors.html>`__.
 -  ``nems-info undervoltage`` Output text response about Raspberry Pi
-   undervoltage state. Option: Add `int` to the command to output an
-   integer rather than plain text. (1) Power is bad, (2) Power is
+   undervoltage state. Option: Add ``int`` to the command to output an
+   integer rather than plain text: (1) Power is bad, (2) Power is
    flapping, (3) Power is good.
