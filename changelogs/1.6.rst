@@ -361,3 +361,6 @@ January-July 2022
 - Upgraded NagiosTV to 0.8.5.
 - Adagios moved to 2.0.1, deprecating its dependency on Python 2.7 and moving to Python 3.9 in a venv.
 - Add some extra fonts that are required by Monitorix to fix broken fonts.
+- pnp4nagios has been missing for a long time since development stopped and it was pulled from repositories. Write a new compiler to re-add pnp4nagios to NEMS Linux.
+- Several packages whose names were changed have been replaced in NEMS Linux with their modern counterparts. NetworkManager, PyWBEM and ModSecurity to name a few examples.
+- Ensure all Adagios code is compiled within a Python Virtual Environment.
