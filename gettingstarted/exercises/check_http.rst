@@ -70,7 +70,7 @@ Steps
   
   #. Click Add next to Advanced Services.
   #. Name your service: *Web Site (SSL)*
-  #. Give it an alias: *Uptime of SSL Web Site*
+  #. Give it a description: *Uptime of SSL Web Site*
   #. Set the check command to *check_http*
   #. Set the check period and notification period to *24x7*
   #. In *assign advanced-service to hostgroup*, highlight the hostgroup we created (web_site_ssl) and press the green arrow to add it to the selected items list.
