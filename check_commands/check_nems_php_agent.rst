@@ -41,9 +41,7 @@ Check Command Arguments
 -  **Check**
 
   - ``mem`` Percent Memory Usage
-  - ``.`` Percent Disk Usage (Running Folder)
-  - ``disk`` Percent Disk Usage (/)
-  - ``var`` Percent Disk Usage (/var)
+  - ``disk /path`` Percent Disk Usage of `/path` default `/`
   - ``net`` Network Usage Mb/s
   - ``netrx`` Network Usage Mb/s Download Only
   - ``nettx`` Network Usage Mb/s Upload Only
@@ -60,11 +58,11 @@ WARN if 15 minute system load average exceeds 3, CRIT if over 9:
 
   ./check_nems_php_agent 3 9 https://example.com/nems-agent.php load
 
-WARN if / disk usage is over 80%, CRIT if over 90%.
+WARN if /var disk usage is over 80%, CRIT if over 90%.
 
 .. code-block:: console
 
-  ./check_nems_php_agent 80 90 https://example.com/nems-agent.php disk
+  ./check_nems_php_agent 80 90 https://example.com/nems-agent.php disk /var
 
 WARN if either up or down network usage exceed 1 Mb/s, CRIT if over 2 Mb/s:
 
