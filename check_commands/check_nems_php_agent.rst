@@ -41,7 +41,7 @@ Check Command Arguments
 -  **Check**
 
   - ``mem`` Percent Memory Usage
-  - ``disk [/path]`` Percent Disk Usage of `/path`. `/path` is optional. Defaults to `/`
+  - ``disk /path`` Percent Disk Usage of `/path`. `/path` is optional. Defaults to `/`
   - ``net`` Network Usage Mb/s
   - ``netrx`` Network Usage Mb/s Download Only
   - ``nettx`` Network Usage Mb/s Upload Only
