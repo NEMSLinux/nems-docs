@@ -6,7 +6,7 @@ Monitor your Linux-based PHP-enabled web server with the NEMS PHP Server Agent.
 Requirements
 ------------
 
-A Linux-based public web server with PHP 5.2+.
+A Linux-based web server with PHP 5.2+ which can be reached by your NEMS Linux server (public web-based, or LAN).
 
 I have tested successfully on Debian 10+ with PHP 7.3+ as well as Debian 7 with PHP 5.2. I have not tested on any non-Debian system, so if you do, please let me know if it works or not and I will add it here.
 
