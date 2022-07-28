@@ -370,3 +370,4 @@ January-July 2022
 - Adapt ``wmic`` to Python 3 code rather than the old Python 2 version.
 - ``nems-tv`` moved to Debian repository.
 - ``nems_sendmail_host`` and ``nems_sendmail_service`` now save state to ``/tmp/email_failure.tmp`` if the email failed to send, and upon a successful mail send will follow up by sending that log. This means if Internet goes down, notifications that occurred during that time will later be sent (for example). Previously, if the notification couldn't send, it would just not go out.
+- ``nems-plugins`` - Added ``check_snmp_apc_env`` for APC NetBotz environmental sensors.
