@@ -40,9 +40,7 @@ Check Command Arguments
 
 -  **Warn Threshold / Critical Threshold** - Set your
    thresholds. Can be a positive floating point number or integer.
--  **URL** - The full URL to your *nems-agent.php* on the remote
-   | server. File can be renamed as desired, but provided URL must
-   | resolve to the agent on the remote server.
+-  **URL** - The full URL to your *nems-agent.php* on the remote server. File can be renamed as desired, but provided URL must resolve to the agent on the remote server.
 -  **Check**
 
   - ``mem`` Percent Memory Usage
