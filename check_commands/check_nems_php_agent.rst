@@ -3,6 +3,11 @@ NEMS PHP Server Agent
 
 Monitor your Linux-based PHP-enabled web server with the NEMS PHP Server Agent.
 
+Why Use the NEMS PHP Server Agent
+---------------------------------
+
+The NEMS PHP Server Agent is designed specifically to collect system data from a PHP server. Disk space and usage, memory size and usage, system load, etc. Unlike NRPE, the agent reports very specific data rather than running remote commands on your server. This makes it easier to use on a public server where firewall rules might be too complex for novice sysadmins to make NRPE a safe option. The NEMS PHP Server Agent is designed to be safe out of the box, and incredibly easy to deploy: Just upload it to a public folder on your web server and point your check commands on your NEMS Server to the URL.
+
 Requirements
 ------------
 
@@ -16,19 +21,19 @@ Usage
 Obtaining your PHP Agent
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-In NEMS SST, download your custom nems-agent.php file. Upload this file to your web server and add the NEMS PHP Agent check command in NEMS NConf.
+In NEMS SST, download your custom nems-agent.php file. Upload this file to a web-accessible folder on your web server and add the NEMS PHP Agent check command in NEMS NConf for any checks you would like to perform.
 
-.. Tip:: You'll notice in the check commands below, the actual script filename is entered. This is intentional, and allows you to add obscurity if desired by naming your NEMS PHP Server Agent anything you like (as long as it has a .php extension).
+.. Tip:: You'll notice in the check commands below, the actual agent filename is entered within the URL. This is intentional, and allows you to add obscurity if desired by naming your NEMS PHP Server Agent anything you like (as long as it has a .php extension and can be seen by your NEMS Server).
+
+Local and Remote Monitoring
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Set the ``URL`` parameter to a web-accessible URL (such as ``https://example.com/nems-agent.php``) or use a LAN server URL (such as ``http://192.168.0.55/nems-agent.php``).
 
 Check Command
--------------
+~~~~~~~~~~~~~
 
-*check_nems_php_agent* is part of NEMS Linux 1.6.
-
-Why Use the NEMS PHP Server Agent
----------------------------------
-
-The NEMS PHP Server Agent is designed specifically to collect system data from a PHP server. Disk space and usage, memory size and usage, system load, etc. Unlike NRPE, the agent reports very specific data rather than running remote commands on your server. This makes it easier to use on a public server where firewall rules might be too complex for novice sysadmins to make NRPE a safe option. The NEMS PHP Server Agent is designed to be safe out of the box, and incredibly easy to deploy: Just upload it to a public folder on your web server and point your check commands on your NEMS Server to the URL.
+*check_nems_php_agent* is part of NEMS Linux 1.6+.
 
 Check Command Arguments
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,7 +46,7 @@ Check Command Arguments
 -  **Check**
 
   - ``mem`` Percent Memory Usage
-  - ``disk /path`` Percent Disk Usage of ``/path``. ``/path`` is optional. Defaults to ``/``. Can be ``.`` for execution folder (helpful when basedir restrictions are in effect).
+  - ``disk /path`` Percent Disk Usage of ``/path``. ``/path`` is optional. Defaults to ``/``. If target is not mounted, will trigger CRITICAL state, so be sure ``/path`` is your mountpoint. This way, you can have one check for ``/`` and another for ``/mnt/backup`` and if the backup drive dismounts, it will turn CRITICAL.
   - ``net`` Network Usage Mb/s
   - ``netrx`` Network Usage Mb/s Download Only
   - ``nettx`` Network Usage Mb/s Upload Only
@@ -58,11 +63,11 @@ WARN if 15 minute system load average exceeds 3, CRIT if over 9:
 
   ./check_nems_php_agent 3 9 https://example.com/nems-agent.php load
 
-WARN if /var disk usage is over 80%, CRIT if over 90%.
+WARN if /mnt/backup disk usage is over 80%, CRIT if over 90%. Will also be CRIT if the disk is unmounted from /mnt/backup on the destination server.
 
 .. code-block:: console
 
-  ./check_nems_php_agent 80 90 https://example.com/nems-agent.php disk /var
+  ./check_nems_php_agent 80 90 https://example.com/nems-agent.php disk /mnt/backup
 
 WARN if either up or down network usage exceed 1 Mb/s, CRIT if over 2 Mb/s:
 
@@ -73,20 +78,20 @@ WARN if either up or down network usage exceed 1 Mb/s, CRIT if over 2 Mb/s:
 Data Security
 -------------
 
-All data is encrypted server-side using AES-128-ECB using an encryption/decryption key you provide in NEMS System Settings Tool.
+All data is AES-128-ECB encrypted server-side using an encryption/decryption key you provide in NEMS System Settings Tool.
 
 Under The Hood
 --------------
 
-The agent outputs the following JSON string (Sample data):
+The agent outputs the following JSON string (Sample data from early release):
 
 .. code-block:: JSON
 
   {"ver":{"nems":"1.6","nemsagent":"1.1"},"data":"pICGwq5UL3O8yNEYdPrQh\/8PGCjsXQUx9mh9VIQloFJ\/K8BsB5AT9L2ixwlsiDAJGjWR1RnhsrCFHVnKD9p3cmRxhQf\/knW6F+EkDS3CnkrlXWLSPJ6p+gfZjIq16NSREvfaaPJZEY93mBrgSFArs+C8advgKL+0jz2a55ItGk0BY6AKvOMuFXfxzwd3i7485tusJaP9X8K9dL5msEvHfPLKdORyTUm7iNt6ssFARMzg4oXoVnebT4okZ6eyG3tjQIBPOFebmNAO78agymi6UEm44u\/wfPmUtkEtU841FVmcfGLxcEIoogzG9vjH8q7urs2RetcBVpVhj5Z+T+v8qa9oQ7Pi1tbf2\/IhF+eLE9cSkmMlmbFbJ70hJqaY2gssiwb9tZ6g0dX+WA8+ujTzmCzBdNJ09HabaLVzXTqR4cGyFM3mXYQl+SdDSdmeZ\/vw\/sG4oSFxxKzhxmOpCM5qBw==","auth":"312433c28349f63c4f387953ff337046e794bea0f9b9ebfcb08e90046ded9c76"}
 
-That is what a user would see if they were to open the agent in their browser, and is what is downloaded to your NEMS Server when the check commands run.
+That is essentially what a user would see if they were to open the agent in their browser, and is what is downloaded to your NEMS Server when the check commands run.
 
-Your NEMS Server knows your decryption key used by the agent to encrypt the data. When decrypted by your NEMS Server, the data looks like this:
+Your NEMS Server knows your decryption key used by the agent to encrypt the data. When decrypted by your NEMS Server, the data looks something like this:
 
 .. code-block:: php
 
