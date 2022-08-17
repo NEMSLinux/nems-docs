@@ -376,3 +376,4 @@ January-July 2022
 August-December 2022
 
 - Upgraded NEMS PHP Agent to 1.5. Now will report CRITICAL state if a `disk` mountpoint is specified but not mounted. This will ensure an alert is received if a mounted drive fails or otherwise disconnects.
+- Upgrade Nagios to 4.4.7.
