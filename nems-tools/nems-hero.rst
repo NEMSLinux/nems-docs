@@ -3,7 +3,7 @@ nems-tools: NEMS Hero
 
 In the event of a catastrophic issue, such as a corrupt NEMS user or
 forgotten password, NEMS Linux technical support may use NEMS Hero to
-recover your NEMS Server, or to provide technical support.
+recover your NEMS Server, or to provide technical assistance.
 
 NEMS Hero grants temporary root access to a NEMS Server which has been
 freshly rebooted, and only if the NEMS Server is accessible (via a LAN
