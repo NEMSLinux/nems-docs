@@ -378,3 +378,4 @@ August-December 2022
 - Upgraded NEMS PHP Agent to 1.5. Now will report CRITICAL state if a `disk` mountpoint is specified but not mounted. This will ensure an alert is received if a mounted drive fails or otherwise disconnects.
 - Upgrade Nagios to 4.4.7.
 - Disabled check_for_updates in Nagios config per https://github.com/NagiosEnterprises/nagioscore/issues/861 due to Nagios instability when enabled.
+- Created `NEMS Hero </en/latest/nems-tools/nems-hero.html>`__, which allows NEMS Linux tech support to access a NEMS Server in event of a support request. This access is subject to firewall rules and only allowed if the connection is made within 15 minutes of a reboot. This is in preparation for upcoming NEMS SAAS, as well as a means of restoring a user in event of a lost / forgotten password.
