@@ -30,8 +30,8 @@ Server,
 .. Tip:: If desired, this functionality can be disabled on a
          self-hosted NEMS Server by creating a file ``/boot/no-hero``
          on your NEMS Server. Because the ``/boot`` partition can be
-         viewed by plugging your NEMS Server's storage into a Windows,
-         macOS or Linux computer, you can easily delete that file later
-         and reboot your NEMS Server to re-enable NEMS Hero.
+         viewed and modified by plugging your NEMS Server's storage into
+         a Windows, macOS or Linux computer, you can easily delete that
+         file later and reboot your NEMS Server to re-enable NEMS Hero.
 
 NEMS Hero is a feature of NEMS Linux 1.6+.
