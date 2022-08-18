@@ -104,8 +104,9 @@ Documentation
     :caption: nems-tools Components
 
     nems-tools/gpioextender
-    nems-tools/warninglight
     nems-tools/nemseos
+    nems-tools/nems-hero
+    nems-tools/warninglight
 
 .. toctree::
     :maxdepth: 2
