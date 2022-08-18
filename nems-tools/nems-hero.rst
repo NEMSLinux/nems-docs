@@ -9,6 +9,9 @@ NEMS Hero grants temporary root access to a NEMS Server which has been
 freshly rebooted, and only if the NEMS Server is accessible (via a LAN
 or WAN connection).
 
+NEMS Hero Security
+~~~~~~~~~~~~~~~~~~
+
 NEMS Hero uses an RSA key pair to establish an SSH trust relationship
 between a NEMS Server and the NEMS Linux technical support team. This
 trust relationship self destructs once a NEMS Server has been running
@@ -34,4 +37,7 @@ must be met:
          a Windows, macOS or Linux computer, you can easily delete that
          file later and reboot your NEMS Server to re-enable NEMS Hero.
 
-NEMS Hero is a feature of NEMS Linux 1.6+.
+System Requirements
+~~~~~~~~~~~~~~~~~~~
+
+NEMS Hero requires NEMS Linux 1.6 or higher.
