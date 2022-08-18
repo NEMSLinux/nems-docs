@@ -12,10 +12,20 @@ or WAN connection).
 NEMS Hero uses an RSA key pair to establish an SSH trust relationship
 between a NEMS Server and the NEMS Linux technical support team. This
 trust relationship self destructs once a NEMS Server has been running
-for more than 15 minutes. In order for a connection to be established,
-port forwarding must be setup on the network of the NEMS Server to
+for more than 15 minutes.
+
+In order for a connection to be established, the following conditions
+must be met:
+
+- port forwarding must be setup on the network of the NEMS Server to
 allow a support technician remote SSH access to port 22 on the NEMS
-Server.
+Server,
+- the NEMS Server must have been rebooted within the past 15 minutes,
+- the NEMS Server must not have a ``/boot/no-hero`` file in place,
+- the NEMS Linux technical support representative must have our
+  private RSA key,
+- the NEMS Linux technical support representative must know our
+  strong password to access the private RSA key.
 
 .. Tip:: If desired, this functionality can be disabled on a
          self-hosted NEMS Server by creating a file ``/boot/no-hero``
