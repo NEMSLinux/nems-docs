@@ -56,7 +56,8 @@ Steps
 3. So far, everything we’ve done can be reused for any web site whose hostname resolves to an IPv4 address. From here forward however, we’ll be setting up our host group specifically for a secure (SSL) web site.
   
   #. Add a new hostgroup.
-  #. Call this web_site_ssl
+  #. Call this ``web_site_ssl``
+  #. For the alias, enter ``Web Site (SSL)``
   #. Leave everything else as is and save your new hostgroup.
 
   .. figure:: ../../img/New-hostgroup-for-web_site_ssl.png
