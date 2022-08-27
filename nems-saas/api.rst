@@ -12,7 +12,7 @@ Obtain the JSON output of your NEMS SaaS endpoint trends for a duration of time.
 
 ``ver``:
 
-- ``0`` = The current state of your NEMS SaaS endpoints
+- ``0`` = [Default] The current state of your NEMS SaaS endpoints
 - ``1`` = The last hour's trends for your NEMS SaaS endpoints
 - ``2`` = The past 6 hours trends
 - ``3`` = The past 12 hours trends
