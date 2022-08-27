@@ -220,6 +220,13 @@ Documentation
 
     credits
     
+.. toctree::
+    :maxdepth: 1
+    :caption: NEMS SaaS
+
+    nems-saas/index
+    
+    
 Important Links
 ---------------
 
