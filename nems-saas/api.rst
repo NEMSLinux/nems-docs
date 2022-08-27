@@ -26,3 +26,5 @@ Obtain the JSON output of your NEMS SaaS endpoint trends for a duration of time.
 Sample JSON Output:
 
 ``{"results":[{"ok":4,"warn":0,"crit":0,"statechange":"2022-08-27 07:51:40"}]}``
+
+Results are presented most recent to oldest. Timezone of statechange matches the user's defined timezone.
