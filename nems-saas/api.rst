@@ -22,3 +22,7 @@ Obtain the JSON output of your NEMS SaaS endpoint trends for a duration of time.
 - ``7`` = Last 10 state changes
 - ``8`` = Last 25 state changes
 - ``9`` = Last 50 state changes
+
+Sample JSON Output:
+
+``{"results":[{"ok":4,"warn":0,"crit":0,"statechange":"2022-08-27 07:51:40"}]}``
