@@ -19,3 +19,6 @@ Obtain the JSON output of your NEMS SaaS endpoint trends for a duration of time.
 - ``4`` = 24 hour trend for your NEMS SaaS endpoints
 - ``5`` = 7 days worth of trends
 - ``6`` = 1 month trend
+- ``7`` = Last 10 state changes
+- ``8`` = Last 25 state changes
+- ``9`` = Last 50 state changes
