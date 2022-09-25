@@ -34,5 +34,7 @@ Step 3. Install nems-saas-config
 Step 4. Install nems-saas-probe
 -------------------------------
 
+``sudo wget -O /usr/local/bin/nems-saas-probe https://github.com/NEMSLinux/nems-saas-probe/raw/main/linux/amd64/nems-saas-probe && sudo chmod +x /usr/local/bin/nems-saas-probe``
+
 Step 5. Enable auto-load at boot.
 ---------------------------------
