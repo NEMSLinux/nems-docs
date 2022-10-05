@@ -17,28 +17,33 @@ Security
 
 NEMS SaaS Probe sends your data packet to the NEMS SaaS servers via an encrypted connection, which is authenticated to your account with your NEMS SaaS Key.
 
-The NEMS SaaS Key built-in JSON web server provides JSON responses only when the correct NEMS SaaS Key is provided as POST data. Please consider opening port 6367 only to the IP addresses you will be running your application on.
+The NEMS SaaS Key built-in JSON web server provides JSON responses only when the correct NEMS SaaS Key is provided as POST data. Please consider opening port ``6367`` only to the IP addresses you will be running your application on.
 
 Built-In Web Server
 ^^^^^^^^^^^^^^^^^^^
 
-As of version 1.0.050, the NEMS SaaS Probe is able to serve JSON resonses containing the data packet.
+As of version 1.0.050, the NEMS SaaS Probe is able to serve JSON responses containing the data packet. The server is running by default on port ``6367``.
 
-This is provided as a bonus feature for developers, but is not usually used. You do not need to configure your firewall to use this server if you are not a developer tapping into the JSON data.
+This is provided as a helpful feature to developers and power users, but is a requirement of using NEMS SaaS. You do not need to configure your firewall to use this server if you are not a developer tapping into the JSON data, and an in-house NEMS Server (on the same LAN) can use this data to monitor your endpoints in-house.
 
-As a developer, you may parse this data in your own app, or create a NEMS Linux check command to query this data.
+You may optionally parse this data in your own app, or create a NEMS Linux check command to query this data.
 
 In addition to the standard data packet, there are two other defined keys:
 
 packet
-======
+------
 
 Packet will be 0 or 1. 0 means the packet has not succeeded in sending to NEMS SaaS. 1 means the packet was successfully sent to NEMS SaaS. For more details on why a packet has not been sent, check your nems-saas.log on the system running the NEMS SaaS Probe.
 
 timer
-=====
+-----
 
 Timer is the value, in seconds, of how long the NEMS SaaS Probe is waiting before it sends the next packet to the NEMS SaaS servers. This number is dynamic and changes with each packet. It can be used to set a sleep timer on your own queries to the probe. There is no point in quering the probe again sooner since the probe will not have any new information to report (the packet will be the same).
+
+Disable
+-------
+
+Turn off the built-in web server with the ``--noserver`` command line argument.
 
 Query Example
 -------------
