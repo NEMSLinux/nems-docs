@@ -17,7 +17,7 @@ Security
 
 NEMS SaaS Probe sends your data packet to the NEMS SaaS servers via an encrypted connection, which is authenticated to your account with your NEMS SaaS Key.
 
-The NEMS SaaS Key built-in JSON web server provides JSON responses only when the correct NEMS SaaS Key is provided as POST data. Please consider opening port ``6367`` only to the IP addresses you will be running your application on.
+The NEMS SaaS built-in JSON web server provides JSON responses only when the correct NEMS SaaS Key is provided as POST data. This server is intended for LAN or VPN use. If (and only if) absolutely necessary, please consider opening port ``6367`` only to the IP addresses you will be running your application on. While unlikely, it should be noted that a MITM attack could steal your NEMS SaaS Key if you connect to port 6367 successfully from an Internet location (as opposed to LAN or VPN). Do not open port 6367 to the world.
 
 Built-In Web Server
 ^^^^^^^^^^^^^^^^^^^
