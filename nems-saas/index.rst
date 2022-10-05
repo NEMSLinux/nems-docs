@@ -6,5 +6,5 @@ NEMS SaaS
     :caption: NEMS SaaS
     
     api
-    probes/nems-saas-probe
+    nems-saas-probe
     probes/qnap
