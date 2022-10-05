@@ -32,7 +32,7 @@ In addition to the standard data packet, there are two other defined keys:
 
 **packet**
 
-Packet will be 0 or 1. 0 means the packet has not succeeded in sending to NEMS SaaS. 1 means the packet was successfully sent to NEMS SaaS. For more details on why a packet has not been sent, check your nems-saas.log on the system running the NEMS SaaS Probe.
+Packet will be ``0`` or ``1``. 0 means the packet has not succeeded in sending to NEMS SaaS. 1 means the packet was successfully sent to NEMS SaaS. For more details on why a packet has not been sent, check your nems-saas.log on the system running the NEMS SaaS Probe.
 
 **timer**
 
@@ -52,4 +52,4 @@ Your query must contain a POST containing only your account's NEMS SaaS Key (fou
 
 Replace ``00000000-0000-0000-0000-00000000`` with your actual NEMS SaaS Key.
 
-Replace 192.168.0.5 with the actual IP of the system running the probe.
+Replace ``192.168.0.5`` with the actual IP of the system running the probe.
