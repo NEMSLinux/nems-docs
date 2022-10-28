@@ -1,19 +1,19 @@
 Check Command: check_qnap
 =========================
 
--  ``cpuload`` system CPU load in percent
--  ``cputemp`` system CPU Temperature
--  ``systemp`` system Temperature
--  ``hdtemp`` Harddive Temperature
--  ``diskused`` diskusage in perent
--  ``mem`` memory usage in perent
--  ``volstatus`` Volume status
--  ``fan`` Fan Speed
--  ``hdstatus`` Harddive status
--  ``cachediskstatus`` Cachedisk status
--  ``lunstatus`` LUN status
--  ``raidstatus`` RAID status
+-  ``status`` checks if QNAP is online
+-  ``diskused`` disk usage in percentage
+-  ``cpu`` system CPU load in percent
+-  ``cputemp`` system CPU temperature in C
+-  ``freeram`` free RAM
+-  ``temp`` system temperature in C
+-  ``hdtemp`` Harddrive temperature in C (all hard drives)
+-  ``hdNtemp`` Nth harddrive temperature in C (ex. hd1temp)
+-  ``volstatus`` Status of all volumes
+-  ``volNstatus`` Nth volume status
 -  ``powerstatus`` Power status
--  ``sysinfo`` Output information about the QNAP device
+-  ``fans`` Fans speed (RPM)
+-  ``systemuptime`` System uptime
+-  ``sysinfo`` System info display (model, number of hard drives, volumes, name and firmware)
 
-Thanks to ChrisD for `contributing to the documentation <https://forum.nemslinux.com/viewtopic.php?f=44&t=764>`__ for this check command.
+Source: `check_qnap3.sh` file (https://github.com/cloudcentral/nagios-plugins-check_qnap/blob/master/check_qnap3.sh)
