@@ -1,7 +1,7 @@
-Check Command: check_iperf3
-===========================
+Check Command:  check_iperf / check_iperf3
+==========================================
 
-Monitor the speed between network links using the Linux `iperf3` command.
+Monitor the speed between network links using the Linux `iperf` or `iperf3` command respectively.
 
 Arguments
 ---------
@@ -13,4 +13,5 @@ Arguments
 Source
 ------
 
-https://exchange.nagios.org/directory/Plugins/Network-Connections,-Stats-and-Bandwidth/check_iperf3/details
+- https://exchange.nagios.org/directory/Plugins/Network-Connections%2C-Stats-and-Bandwidth/check_iperf/details
+- https://exchange.nagios.org/directory/Plugins/Network-Connections,-Stats-and-Bandwidth/check_iperf3/details
