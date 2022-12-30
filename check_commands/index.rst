@@ -13,6 +13,9 @@ here are some of the available check commands:
    Monitor the hardware of ESX and ESXi servers.
 -  `check_http <check_http.html>`__ -
    Check the status of an HTTP/HTTPS server on a remote host.
+-  `check_ilo2_health <check_ilo2_health.html>`__ -
+   Check hardware health of HP Proliant Servers by querying the iLO2/3/4/5
+   Management Controller.
 -  `check_internet_speed <check_internet_speed.html>`__ -
    Check the speed of your internet connection.
 -  `check_iperf <check_iperf3.html>`__ -
