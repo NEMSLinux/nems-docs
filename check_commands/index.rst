@@ -15,7 +15,7 @@ here are some of the available check commands:
    Check the status of an HTTP/HTTPS server on a remote host.
 -  `check_internet_speed <check_internet_speed.html>`__ -
    Check the speed of your internet connection.
--  `check_iperf <check_iperf.html>`__ -
+-  `check_iperf <check_iperf3.html>`__ -
    Monitor the speed between network links using the `iperf` command.
 -  `check_iperf3 <check_iperf3.html>`__ -
    Monitor the speed between network links using the `iperf3` command.
