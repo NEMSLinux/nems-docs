@@ -253,18 +253,6 @@ Credits
 Please see the
 `NEMS Linux Credits page <https://nemslinux.com/credits/>`__.
 
-Sponsors
---------
-
-.. |RNIT| image:: img/sponsor_logos/RNIT_Logo_Full_Dark.png
-    :width: 200px
-    :alt: Royal Network IT Solutions
-    :target: https://www.rnitsolutions.com/
-
-+---------+
-| |RNIT|  |
-+---------+
-
 Patrons
 -------
 
@@ -272,43 +260,9 @@ I'd like to thank all of our Patrons for your continued support of NEMS Linux de
 
 Here is a list of those Patrons who kicked in that little bit extra to have their name included in the changlogs:
 
-* Patrick Kersten
-* Marc Dörseln
-* Dave Harman
-* Bill Marshall
-* Aaron Tringle
-* Steve Hudnall
-* IT Cyber Solutions
-* Natacha Norman
-* David Klindt
-* Wolfgang Friedl
-* Jeff Conaway
-* Don Jenkins
-* Marco Antonini
-* Jessica K. Litwin
-* Matthew Mattox
-* Premium | Fischer-ICT
-* Steve Thompson
-* Jiffy
-* Larry Getz
-* Coquille Indian Tribe
-* Jarrod Andrews
-* Dennis Bailey
-* Brian Darnell
-* SystemOfADL
-* Tony Browne
-* Steven Beukes
-* Rob Thomas
-* Heiko Gerstung
-* Jerold Von Hemel
-* Nato Riley
-* Joe Luzzi
-* Xander Brennan
-* Sam Lakhani
-* James Rawls
-* Bronson Trevor
-* Tim Banks
-
+.. include:: https://raw.githubusercontent.com/NEMSLinux/nems-www/main/debpack/var/www/html/credits/credits.txt
+   :literal:
+   
 Want your name on this list? `Become a Patron <https://patreon.com/nems>`__.
 
 **A Product Of**
