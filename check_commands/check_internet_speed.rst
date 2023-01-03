@@ -53,4 +53,7 @@ If you are receiving a service check timeout and are certain you do indeed have
 Internet connectivity, the most likely culprit is that your NEMS Server is unable
 to process the speedtest within 120 seconds. A Raspberry Pi 4 with a reasonably
 fast MicroSD card should be able to perform a speedtest in under 40 seconds. Please
-upgrade your NEMS Server to an officially-supported platform.
+upgrade your NEMS Server to an officially-supported platform. Power users may increase
+the value of `service_check_timeout` in `/usr/local/nagios/etc/nagios.cfg` however
+this may result in cascading checks, which will bring a low-powered SBC to its knees.
+You are much safer to upgrade to a board that meets your requirements.
