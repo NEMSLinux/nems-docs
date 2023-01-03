@@ -7,11 +7,11 @@ Demo Data
 ---------
 
 Out of the box, NEMS Linux 1.5+ will check the Internet connectivity speed
-using Netflix's fast.com speedtest service. By default, warning
-notifications will be generated if your upload or download speed falls
-below 10 Mb/s and Critical warnings if either falls below 7 Mb/s. These
-are just sample thresholds which can (and should) be modified to suit
-your connection speed by modifying the service in NEMS NConf.
+using `Cloudflare's Speed Test<https://speed.cloudflare.com/>`__ service.
+By default, warning notifications will be generated if your upload or
+download speed falls below 10 Mb/s and Critical warnings if either falls
+below 7 Mb/s. These are just sample thresholds which can (and should) be
+modified to suit your connection speed by modifying the service in NEMS NConf.
 
 Data Usage Warning
 ------------------
@@ -43,3 +43,14 @@ The format of this multi-line cache file is as follows:
   | Download speed measurement
   | Upload speed
   | Upload speed measurement
+
+Troubleshooting
+---------------
+
+**Service check timed out after [number] seconds**
+
+If you are receiving a service check timeout and are certain you do indeed have
+Internet connectivity, the most likely culprit is that your NEMS Server is unable
+to process the speedtest within 120 seconds. A Raspberry Pi 4 with a reasonably
+fast MicroSD card should be able to perform a speedtest in under 40 seconds. Please
+upgrade your NEMS Server to an officially-supported platform.
