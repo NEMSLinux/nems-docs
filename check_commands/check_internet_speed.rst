@@ -7,7 +7,7 @@ Demo Data
 ---------
 
 Out of the box, NEMS Linux 1.5+ will check the Internet connectivity speed
-using `Cloudflare's Speed Test<https://speed.cloudflare.com/>`__ service.
+using `Cloudflare's Speed Test <https://speed.cloudflare.com/>`__ service.
 By default, warning notifications will be generated if your upload or
 download speed falls below 10 Mb/s and Critical warnings if either falls
 below 7 Mb/s. These are just sample thresholds which can (and should) be
