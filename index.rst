@@ -260,8 +260,7 @@ I'd like to thank all of our Patrons for your continued support of NEMS Linux de
 
 Here is a list of those Patrons who kicked in that little bit extra to have their name included in the changlogs:
 
-.. include:: https://raw.githubusercontent.com/NEMSLinux/nems-www/main/debpack/var/www/html/credits/credits.txt
-   :literal:
+https://raw.githubusercontent.com/NEMSLinux/nems-www/main/debpack/var/www/html/credits/credits.txt
    
 Want your name on this list? `Become a Patron <https://patreon.com/nems>`__.
 
