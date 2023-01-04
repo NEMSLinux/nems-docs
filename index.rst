@@ -1,7 +1,7 @@
 Welcome to NEMS Linux
 =====================
 
-.. |Screenshot| image:: img/20181230-Dashboard.jpg
+.. |Screenshot| image:: img/20230104-Dashboard.jpg
     :width: 600px
     :alt: NEMS Linux Screenshot
 
