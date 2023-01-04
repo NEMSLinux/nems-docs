@@ -41,6 +41,11 @@ A total of up to 5 notifications will be sent should your NEMS server fail to ch
 
   A sample NEMS CheckIn notification
 
+Anti-Spam
+---------
+
+All NEMS CheckIn notifications will come from `noreply@nemslinux.com` and will match our DKIM. However, aggressive anti-spam may move these important messages to your junk folder. Please be sure to proactively whitelist `noreply@nemslinux.com` so you always see your NEMS CheckIn notifications.
+
 System Requirements
 -------------------
 
