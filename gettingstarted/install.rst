@@ -1,16 +1,40 @@
-Install NEMS Linux
-==================
+Install NEMS Linux on a Raspberry Pi
+====================================
+
+What You Need
+-------------
+
+* Raspberry Pi 3B or higher model RPi
+* 16 GB or higher fast MicroSD card
+* A reliable, high-quality power supply for your RPi, preferably connected to a UPS
+* An Ethernet cable
+
+Video Demonstration
+-------------------
 
 .. raw:: html
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/yqK9XiSYjwU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-All that is required in order to deploy NEMS Linux is a compatible device and media, such as a microSD card or eMMC, depending on the platform. Please check the NEMS website to see which boards are supported.
+Instructions
+------------
 
-Download the latest version of NEMS Linux from https://nemslinux.com and “burn” it using your favorite tool. I’ve really come to prefer `BalenaEtcher <https://balena.io/etcher/>`_ but you can use whatever tool you like best. If you're using a microSD card, please use a UHS-I or better card. I recommend 16GB or more, but you could get away with 8GB if that’s all you have handy. You can always use NEMS Migrator to move to a bigger card down the road.
+Install NEMS Linux to MicroSD
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Upon booting your NEMS Linux server, your filesystem will be automatically resized to the capacity of your storage. You can confirm NEMS is up and running by visiting https://nems.local/ in your web browser. If name resolution doesn’t work, try the IP address of your NEMS device instead, which you can find in your router’s DHCP leases table, or on a TV connected to your NEMS Server's HDMI port.
+* Download the latest version of NEMS Linux from https://nemslinux.com/
+* Install the Raspberry Pi Imager from https://www.raspberrypi.com/software/
+* Click "Choose OS"
+* Click "Choose Custom" at the bottom of the list
+* Browse to your downloaded copy of NEMS Linux
+* Click "Choose Storage"
+* Insert your MicroSD Card
+* Carefully select your MicroSD card
+* Click "Write"
 
+Once complete, boot your NEMS Server. Give it 5 minutes to perform firstboot operations. The filesystem will be automatically resized to the capacity of your storage.
+
+Visiting https://nems.local/ in your web browser. If name resolution doesn’t work, try the IP address of your NEMS device instead, which you can find in your router’s DHCP leases table, or on a TV connected to your NEMS Server's HDMI port.
 
 .. figure:: ../img/NEMS-details-displayed-on-a-connected-TV.png
   :width: 600
