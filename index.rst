@@ -199,7 +199,6 @@ Documentation
     misc/nemszram
     misc/nemslicensing
     misc/nemsbranding
-    misc/filefolderlocation
     misc/anonymousstats
     misc/linuxsourcecode
     misc/md5checksums
