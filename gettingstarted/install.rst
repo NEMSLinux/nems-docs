@@ -1,6 +1,10 @@
 Install NEMS Linux
 ==================
 
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/yqK9XiSYjwU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 All that is required in order to deploy NEMS Linux is a compatible device and media, such as a microSD card or eMMC, depending on the platform. Please check the NEMS website to see which boards are supported.
 
 Download the latest version of NEMS Linux from https://nemslinux.com and “burn” it using your favorite tool. I’ve really come to prefer `BalenaEtcher <https://balena.io/etcher/>`_ but you can use whatever tool you like best. If you're using a microSD card, please use a UHS-I or better card. I recommend 16GB or more, but you could get away with 8GB if that’s all you have handy. You can always use NEMS Migrator to move to a bigger card down the road.
