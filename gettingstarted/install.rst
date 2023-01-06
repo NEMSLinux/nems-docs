@@ -4,7 +4,7 @@ Install NEMS Linux on a Raspberry Pi
 What You Need
 -------------
 
-* Raspberry Pi 3B or higher model RPi
+* Raspberry Pi 3 Model B or higher model RPi
 * 16 GB or higher fast MicroSD card or USB Flash Drive
 * A reliable, high-quality power supply for your RPi, preferably connected to a UPS
 * An Ethernet cable
@@ -28,14 +28,14 @@ Install NEMS Linux to MicroSD
 * Click "Choose Custom" at the bottom of the list
 * Browse to your downloaded copy of NEMS Linux
 * Click "Choose Storage"
-* Insert your MicroSD Card or USB Flash Drive
-* Carefully select your MicroSD Card or USB Flash Drive
+* Insert your MicroSD card or USB Flash Drive
+* Carefully select your MicroSD card or USB Flash Drive
 * Click "Write"
 
 First Boot
 ~~~~~~~~~~
 
-* Connect the MicroSD Card or USB Flash Drive containing NEMS Linux to your Raspberry Pi
+* Connect the MicroSD card or USB Flash Drive containing NEMS Linux to your Raspberry Pi
 * Connect the gigabit Ethernet port of the Raspberry Pi to your network using an Ethernet cable
 * Power on the Raspberry Pi to boot your NEMS Server
 * Wait approximately 5 minutes to perform first-boot operations
