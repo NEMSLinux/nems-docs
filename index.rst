@@ -296,6 +296,11 @@ nems-scripts
 - Issue Tracker: https://github.com/NEMSLinux/nems-scripts/issues/
 - Source Code: https://github.com/NEMSLinux/nems-scripts/
 
+nems-plugins
+
+- Issue Tracker: https://github.com/NEMSLinux/nems-plugins/issues/
+- Source Code: https://github.com/NEMSLinux/nems-plugins/
+
 nems-tools
 
 - Issue Tracker: https://github.com/NEMSLinux/nems-tools/issues/
