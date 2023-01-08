@@ -126,3 +126,31 @@ WMIC
 
 - Issue Tracker: https://github.com/NEMSLinux/wmic/issues/
 - Source Code: https://github.com/NEMSLinux/wmic/
+
+Hardware Detection
+~~~~~~~~~~~~~~~~~~
+
+`hw-detect` allows NEMS Linux to detect and update the running NEMS
+Server's hardware profile.
+
+- Issue Tracker: https://github.com/NEMSLinux/hw-detect/issues/
+- Source Code: https://github.com/NEMSLinux/hw-detect/
+
+9590
+~~~~
+
+`9590` provides a simple tool to respond on port 9590 for testing TCP
+port up/down status. Part of the `NEMS Linux Getting Started Guide <https://docs.nemslinux.com/>`__.
+
+- Issue Tracker: https://github.com/NEMSLinux/wmic/issues/
+- Source Code: https://github.com/NEMSLinux/wmic/
+
+NEMS Documentation
+~~~~~~~~~~~~~~~~~~
+
+`nems-docs` is the Restructured Text source code for the NEMS Linux
+documentation found at https://docs.nemslinux.com/ - if you contribute
+via a PR, please ensure you add your name to the credits.
+
+- Issue Tracker: https://github.com/NEMSLinux/nems-docs/issues/
+- Source Code: https://github.com/NEMSLinux/nems-docs/
