@@ -15,6 +15,18 @@ to make NEMS a complete, well-rounded enterprise-ready distribution.
 You can explore these custom scripts `on GitHub
 <https://github.com/NEMSLinux?tab=repositories>`__.
 
+Debpack
+-------
+
+Debpack is a custom front-end developed and used by NEMS Linux for compiling
+Debian packages for distribution via the NEMS Linux Debian repositories
+located at https://repos.nemslinux.com/
+
+When browsing our source code, you will often see a folder called `debpack`
+in the root folder of the repository. Entering this folder will provide you
+with the root tree of the application. E.g., `/debpack/usr/local/bin/nems-info`
+will place a file on the NEMS Server at `/usr/local/bin/nems-info`
+
 Official Repositories
 ---------------------
 
