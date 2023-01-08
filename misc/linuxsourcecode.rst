@@ -15,13 +15,65 @@ requested.
 You can explore these custom scripts `on my Github
 page <https://github.com/Cat5TV?utf8=✓&tab=repositories&q=nems&type=&language=>`__.
 
-Files Of Interest
------------------
+Git
+---
+
+nems-admin
+~~~~~~~~~~
+
+- Issue Tracker: https://github.com/NEMSLinux/nems-admin/issues/
+- Source Code: https://github.com/NEMSLinux/nems-admin/
+
+nems-migrator
+~~~~~~~~~~~~~
+
+- Issue Tracker: https://github.com/NEMSLinux/nems-migrator/issues/
+- Source Code: https://github.com/NEMSLinux/nems-migrator/
+
+nems-migrator-data
+~~~~~~~~~~~~~~~~~~
+
+- Issue Tracker: https://github.com/NEMSLinux/nems-migrator-data/issues/
+- Source Code: https://github.com/NEMSLinux/nems-migrator-data/
 
 nems-scripts
 ~~~~~~~~~~~~
 
--  `fixes.sh <https://github.com/Cat5TV/nems-scripts/blob/master/fixes.sh>`__ -
-   This script allows me to fix bugs and issues in existing NEMS
-   deployments. It also allows me to add minor features not worthy of a
-   point release. This runs automatically every day and at reboot.
+- Issue Tracker: https://github.com/NEMSLinux/nems-scripts/issues/
+- Source Code: https://github.com/NEMSLinux/nems-scripts/
+
+nems-plugins
+~~~~~~~~~~~~
+
+- Issue Tracker: https://github.com/NEMSLinux/nems-plugins/issues/
+- Source Code: https://github.com/NEMSLinux/nems-plugins/
+
+nems-tools
+~~~~~~~~~~
+
+- Issue Tracker: https://github.com/NEMSLinux/nems-tools/issues/
+- Source Code: https://github.com/NEMSLinux/nems-tools/
+
+nems-www
+~~~~~~~~
+
+- Issue Tracker: https://github.com/NEMSLinux/nems-www/issues/
+- Source Code: https://github.com/NEMSLinux/nems-www/
+
+nems-tv
+~~~~~~~
+
+- Issue Tracker: https://github.com/NEMSLinux/nems-tv/issues/
+- Source Code: https://github.com/NEMSLinux/nems-tv/
+
+nconf
+~~~~~
+
+- Issue Tracker: https://github.com/NEMSLinux/nconf/issues/
+- Source Code: https://github.com/NEMSLinux/nconf/
+
+nems-wmic
+~~~~~~~~~
+
+- Issue Tracker: https://github.com/NEMSLinux/wmic/issues/
+- Source Code: https://github.com/NEMSLinux/wmic/
