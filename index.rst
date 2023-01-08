@@ -200,7 +200,7 @@ Documentation
     misc/nemslicensing
     misc/nemsbranding
     misc/anonymousstats
-    misc/linuxsourcecode
+    misc/nemslinux-sourcecode
     misc/md5checksums
     misc/vendorbranding
 
