@@ -2,21 +2,21 @@ NEMS Linux Source Code
 ======================
 
 Are you a coder or want to explore some of the things NEMS does under
-the hood?
+the hood? Perhaps you'd like to add some features or fix a bug. Or
+maybe you just found an issue that you'd like to report. This is all
+done through our GitHub repositories and the associated Issue trackers.
 
-NEMS itself is a Linux distro built from pre-compiling several tools
-onto a customized Debian base. The day-to-day operation of NEMS is
-provided by a combination of those tools (Eg., Nagios, Monitorix,
-Webmin, Check_MK) but a fair bit of the magic happens thanks to custom
-bash and PHP scripts I've developed (or modified in some cases) to make
-NEMS do the things I wanted it to do, and the things users have
-requested.
+NEMS Linux itself is a Linux distro built by pre-compiling several tools
+into a customized Debian server base. The features of NEMS is
+fascilitated by combining these tools (Eg., Nagios, Monitorix,
+Webmin, Check_MK) plus integration of a wide variety of custom applications
+to make NEMS a complete, well-rounded enterprise-ready distribution.
 
-You can explore these custom scripts `on my Github
-page <https://github.com/Cat5TV?utf8=✓&tab=repositories&q=nems&type=&language=>`__.
+You can explore these custom scripts `on GitHub
+<https://github.com/NEMSLinux?tab=repositories>`__.
 
-Git
----
+Official Repositories
+---------------------
 
 nems-admin
 ~~~~~~~~~~
