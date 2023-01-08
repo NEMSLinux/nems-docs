@@ -273,58 +273,6 @@ Want your name on this list? `Become a Patron <https://patreon.com/nems>`__.
 
 NEMS Linux is developed by Robbie Ferguson for `The Category5 TV Network <https://category5.tv>`__.
 
-Source Code
------------
-
-nems-admin
-
-- Issue Tracker: https://github.com/NEMSLinux/nems-admin/issues/
-- Source Code: https://github.com/NEMSLinux/nems-admin/
-
-nems-migrator
-
-- Issue Tracker: https://github.com/NEMSLinux/nems-migrator/issues/
-- Source Code: https://github.com/NEMSLinux/nems-migrator/
-
-nems-migrator-data
-
-- Issue Tracker: https://github.com/NEMSLinux/nems-migrator-data/issues/
-- Source Code: https://github.com/NEMSLinux/nems-migrator-data/
-
-nems-scripts
-
-- Issue Tracker: https://github.com/NEMSLinux/nems-scripts/issues/
-- Source Code: https://github.com/NEMSLinux/nems-scripts/
-
-nems-plugins
-
-- Issue Tracker: https://github.com/NEMSLinux/nems-plugins/issues/
-- Source Code: https://github.com/NEMSLinux/nems-plugins/
-
-nems-tools
-
-- Issue Tracker: https://github.com/NEMSLinux/nems-tools/issues/
-- Source Code: https://github.com/NEMSLinux/nems-tools/
-
-nems-www
-
-- Issue Tracker: https://github.com/NEMSLinux/nems-www/issues/
-- Source Code: https://github.com/NEMSLinux/nems-www/
-
-nems-tv
-
-- Issue Tracker: https://github.com/NEMSLinux/nems-tv/issues/
-- Source Code: https://github.com/NEMSLinux/nems-tv/
-
-nconf
-
-- Issue Tracker: https://github.com/NEMSLinux/nconf/issues/
-- Source Code: https://github.com/NEMSLinux/nconf/
-
-nems-wmic
-
-- Issue Tracker: https://github.com/NEMSLinux/wmic/issues/
-- Source Code: https://github.com/NEMSLinux/wmic/
 
 License
 -------
