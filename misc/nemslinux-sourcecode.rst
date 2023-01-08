@@ -142,8 +142,8 @@ Server's hardware profile.
 `9590` provides a simple tool to respond on port 9590 for testing TCP
 port up/down status. Part of the `NEMS Linux Getting Started Guide <https://docs.nemslinux.com/>`__.
 
-- Issue Tracker: https://github.com/NEMSLinux/wmic/issues/
-- Source Code: https://github.com/NEMSLinux/wmic/
+- Issue Tracker: https://github.com/NEMSLinux/9590/issues/
+- Source Code: https://github.com/NEMSLinux/9590/
 
 NEMS Documentation
 ~~~~~~~~~~~~~~~~~~
