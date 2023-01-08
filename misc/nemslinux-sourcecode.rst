@@ -18,38 +18,77 @@ You can explore these custom scripts `on GitHub
 Official Repositories
 ---------------------
 
-nems-admin
+NEMS Admin
 ~~~~~~~~~~
+
+`nems-admin` is where the scripts live that build the NEMS Linux distributable
+image. Generally users will never need this repository since it's only used by
+our development team to create new images, but if you are having a problem
+specifically with one of our distros (E.g., not booting on a new model Raspberry
+Pi) this would be the appropriate repository to post your issue. Think: if it
+has to do with the image itself (not the software contained therein), this is
+the place.
 
 - Issue Tracker: https://github.com/NEMSLinux/nems-admin/issues/
 - Source Code: https://github.com/NEMSLinux/nems-admin/
 
-nems-migrator
+NEMS Migrator
 ~~~~~~~~~~~~~
+
+`nems-migrator` is the suite of tools that provides an automated backup
+(both onsite and offsite) to NEMS Servers, and also provides the utilities
+to restore a backup to a new NEMS Server. If restoring your `backup.nems`
+file shows issues, this is where to report it.
 
 - Issue Tracker: https://github.com/NEMSLinux/nems-migrator/issues/
 - Source Code: https://github.com/NEMSLinux/nems-migrator/
 
-nems-migrator-data
+NEMS Migrator Data
 ~~~~~~~~~~~~~~~~~~
+
+`nems-migrator-data` is where the sample data resides for NEMS Migrator.
+Generally this is not a place for end users. We separated the data from
+the main `nems-migrator` application to reduce the time to perform a
+`nems-update` when `nems-migrator` is updated (as the sample data is
+unlikely to change). NEMS Migrator uses the sample data not only for
+restoration of backups, but this data is also tapped into by tools such
+as `nems-init`, which is included in the `nems-scripts` repository. If you
+are having issues with NEMS Migrator, this is not the correct repository:
+You'd be looking for `nems-migrator` above.
 
 - Issue Tracker: https://github.com/NEMSLinux/nems-migrator-data/issues/
 - Source Code: https://github.com/NEMSLinux/nems-migrator-data/
 
-nems-scripts
+NEMS Scripts
 ~~~~~~~~~~~~
+
+`nems-scripts` contains custom scripts to perform a variety of NEMS Linux
+tasks. Examples would be the `nems-init` command and `nems-quickfix`.
+NEMS Scripts also contains the underlying code to provision the operation of
+checks such as `temper` and `speedtest`. If you are having an issue with a
+check command, it's more likely you're looking for `nems-plugins` below.
+NEMS Scripts is generally not user-serviceable and simply fascilitates
+features our developers tap into in order to provide functionality to other
+tools within NEMS Linux.
 
 - Issue Tracker: https://github.com/NEMSLinux/nems-scripts/issues/
 - Source Code: https://github.com/NEMSLinux/nems-scripts/
 
-nems-plugins
+NEMS Plugins
 ~~~~~~~~~~~~
+
+`nems-plugins` are the check commands included in NEMS NConf. If you're
+having an issue with a particular check command, this is most likely the
+place to post an issue.
 
 - Issue Tracker: https://github.com/NEMSLinux/nems-plugins/issues/
 - Source Code: https://github.com/NEMSLinux/nems-plugins/
 
-nems-tools
+NEMS Tools
 ~~~~~~~~~~
+
+`nems-tools` provides some "behind the scenes" functionality to NEMS Linux,
+such as NEMS GPIO Extender and NEMS Warning Light.
 
 - Issue Tracker: https://github.com/NEMSLinux/nems-tools/issues/
 - Source Code: https://github.com/NEMSLinux/nems-tools/
@@ -57,23 +96,33 @@ nems-tools
 nems-www
 ~~~~~~~~
 
+`nems-www` provides the web site interface and navigation of NEMS Dashboard.
+
 - Issue Tracker: https://github.com/NEMSLinux/nems-www/issues/
 - Source Code: https://github.com/NEMSLinux/nems-www/
 
-nems-tv
-~~~~~~~
+NEMS TV Dashboard
+~~~~~~~~~~~~~~~~~
+
+`nems-tv` provides NEMS TV Dashboard.
 
 - Issue Tracker: https://github.com/NEMSLinux/nems-tv/issues/
 - Source Code: https://github.com/NEMSLinux/nems-tv/
 
-nconf
-~~~~~
+NEMS NConf
+~~~~~~~~~~
+
+`nconf` provides the PHP side of NEMS NConf. This system utilizes a MySQL
+database which exists within `nems-migrator-data`.
 
 - Issue Tracker: https://github.com/NEMSLinux/nconf/issues/
 - Source Code: https://github.com/NEMSLinux/nconf/
 
-nems-wmic
-~~~~~~~~~
+WMIC
+~~~~
+
+`wmic` provides Microsoft Windows' WMI compatibility for NEMS Linux
+(Windows Management Instrumentation).
 
 - Issue Tracker: https://github.com/NEMSLinux/wmic/issues/
 - Source Code: https://github.com/NEMSLinux/wmic/
