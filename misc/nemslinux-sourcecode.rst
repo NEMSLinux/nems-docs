@@ -18,9 +18,10 @@ You can explore these custom scripts `on GitHub
 Debpack
 -------
 
-Debpack is a custom front-end developed and used by NEMS Linux's provision
-infrastructure, which compiles Debian packages for distribution via the
-NEMS Linux Debian repositories located at https://repos.nemslinux.com/
+Debpack is a custom front-end developed by NEMS Linux's develoeprs and used
+by NEMS Linux's provision infrastructure, which compiles Debian packages
+for distribution via the NEMS Linux Debian repositories located at
+https://repos.nemslinux.com/
 
 When browsing our source code, you will often see a folder called `debpack`
 in the root folder of the repository. Entering this folder will provide you
