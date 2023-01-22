@@ -8,7 +8,8 @@ peripherals.
 
 - NEMS Linux 1.6 Alpha was released to the beta team December 2020.
 - NEMS Linux 1.6 Beta and NEMSeOS 0.1 Alpha Build 2 were released to Patrons May 21, 2021.
-- NEMS Linux 1.6 RC released to Patrons January 8, 2023.
+- NEMS Linux 1.6 for Raspberry Pi released to Patrons January 8, 2023.
+- NEMS Linux 1.6 Virtual Appliance (OVA/VHD/QCOW2) released to Patrons January 21, 2023.
 - NEMS Linux 1.6 Public Release scheduled for January 28, 2023.
 
 **Key Development Features and Goals:**
