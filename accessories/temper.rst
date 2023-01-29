@@ -37,6 +37,25 @@ Support is provided via `temper <https://github.com/urwen/temper>`__.
 
 NEMS Linux includes support for TEMPer temperature and humidity sensor data. This table also shows which have internal or external sensors. NEMS Linux will always opt for external sensor data, if present.
 
+.. list-table:: Title
+   :header-rows: 1
+
+   * - Product
+     - ID
+     - Firware
+     - Temp
+     - Hum
+     - Int
+     - Ext
+   * - TEMPer
+     - 0c45:7401
+     - TEMPerF1.4
+     - ✔
+     - ✘
+     - ✔
+     - ✘
+   
+   
 +-------------+-----------+------------------+-----+-----+-----+-----+
 | Product     | Id        | Firmware         | Temp | Hum | Int | Ext |
 +=============+===========+==================+=====+=====+=====+=====+
