@@ -33,7 +33,7 @@ Buy TEMPer Thermal Sensor
 Supported Devices
 -----------------
 
-Support was originally created by `urwen <https://github.com/urwen/temper>`__ and in NEMS 1.6 moved to the more recently maintained `pypi <https://pypi.org/project/temper-py/>`__ (adds several of the newer TEMPer devices).
+Support was originally provided by `urwen <https://github.com/urwen/temper>`__. In NEMS Linux 1.6, support was moved to the more up-to-date repository from `ccwienk <https://github.com/ccwienk/temper>`__ (adds several of the newer TEMPer devices).
 
 NEMS Linux includes support for TEMPer temperature and humidity sensor data. This table also shows which have internal or external sensors. NEMS Linux will always opt for external sensor data, if present.
 
