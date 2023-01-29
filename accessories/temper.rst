@@ -182,6 +182,13 @@ Calibration
 
 As of NEMS Linux 1.6, both the thermal sensor and humidity sensor can be calibrated within NEMS SST to ensure the highest level of accuracy.
 
+.. figure:: ../img/temper-calibration-in-nems-sst.png
+  :width: 600
+  :align: center
+  :alt: TEMPer Sensor Calibration in NEMS SST
+
+  TEMPer Sensor Calibration in NEMS SST
+  
 External vs. Internal Sensors
 -----------------------------
 
