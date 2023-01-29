@@ -132,6 +132,8 @@ NEMS Linux includes support for TEMPer temperature and humidity sensor data. Thi
      - ✘
      - ✔
 
+**Temp:** Device contains thermal sensor. **Hum:** Device contains humidity sensor. **Int:** Device uses an internal sensor built into the device. **Ext:** Device supports use of an external sensor probe.
+
 Terminal Output
 ---------------
 
