@@ -114,8 +114,14 @@ RockPro64
 ODROID Builds
 -------------
 
-ODROID-XU4
-~~~~~~~~~~
+ODROID XU3/XU4/HC1/HC2/MC1
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.6
+^^^
+
+- 8a2d3165b2a9f79224f295076bd6642a  NEMS_v1.6-ODROID-XU4-Build1.zip
+- 8a2d3165b2a9f79224f295076bd6642a  NEMS_v1.6-ODROID-XU4-Build1.zip
 
 1.5.1
 ^^^^^
