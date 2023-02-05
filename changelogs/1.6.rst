@@ -11,6 +11,7 @@ peripherals.
 - NEMS Linux 1.6 for Raspberry Pi released to Patrons January 8, 2023.
 - NEMS Linux 1.6 Virtual Appliance (OVA/VHD/QCOW2) released to Patrons January 21, 2023.
 - NEMS Linux 1.6 for Raspberry Pi and Cloud Instance released to public January 28, 2023.
+- NEMS Linux 1.6 for ODROID XU3/XU4/HC1/HC2/MC1 released to public February 5, 2023.
 
 **Key Development Features and Goals:**
 
