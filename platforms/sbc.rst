@@ -95,3 +95,8 @@ eMMC storage by typing;
 
     sudo nems-install
 
+.. toctree::
+    :maxdepth: 1
+    :caption: Single Board Computers
+
+    sbc/khadas
