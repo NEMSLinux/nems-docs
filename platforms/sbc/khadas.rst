@@ -6,7 +6,7 @@ NEMS Linux for Khadas Single Board Computers
 Khadas VIM3
 -----------
 
-.. figure:: ../img/khadas_vim3_basic.png
+.. figure:: ../../img/khadas_vim3_basic.png
   :width: 400
   :align: center
   :alt: Khadas VIM 3
