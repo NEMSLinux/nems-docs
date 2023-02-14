@@ -11,6 +11,8 @@ Khadas VIM3
   :align: center
   :alt: Khadas VIM 3
 
+If you are unable to boot NEMS Linux from your microSD card or USB flash drive on a Khadas VIM3 board, please be sure to use the Krescue tool first to perform a full erase of your eMMC. https://dl.khadas.com/Firmware/Krescue/dump/VIM3.krescue.sd.img.gz
+
 You can boot from SD or USB, then install NEMS Linux to the integrated
 eMMC storage by typing;
 
