@@ -238,8 +238,8 @@ Khadas VIM3
 1.6
 ^^^
 
-- e364ff207e1a93787333d229fd9bf810  NEMS_v1.6-Khadas_VIM3-Build1.img
-- 7baf128cc4a70b36f9fac91014a45f53  NEMS_v1.6-Khadas_VIM3-Build1.zip
+- edfc21bc6dfc43563550c430d964c194  NEMS_v1.6-Khadas_VIM3-Build1.img
+- c51463a103200ecbef5a64d4076769cb  NEMS_v1.6-Khadas_VIM3-Build1.zip
 
 1.5
 ^^^
