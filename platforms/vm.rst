@@ -42,8 +42,8 @@ Guest Specifications
 -  80 GB Virtual Hard Disk (Dynamic / Thin Provisioning where supported)
 -  4 GB RAM
 
-Deployment Notes
-----------------
+Global Deployment Notes
+-----------------------
 
 -  **Network Bridge** - Before booting, you must configure your virtual
    Network Interface to use your actual LAN in Bridged mode.
@@ -69,3 +69,17 @@ Deployment Notes
 -  **Hyper-V** - Choose Generation 1 under Specify Generation when creating VM.   
 
 
+Installation Procedures
+-----------------------
+
+VirtualBox
+^^^^^^^^^^
+
+Minimum VirtualBox Version: 7.0
+
+When importing the NEMS Linux OVA, you must choose "Generate new MAC address for all network adapters".
+
+.. figure:: ../img/vm-virtualbox-001.png
+  :width: 500
+  :align: center
+  :alt: NEMS Linux OVA installation on VirtualBox
