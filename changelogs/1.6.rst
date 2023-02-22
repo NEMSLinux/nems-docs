@@ -384,3 +384,5 @@ August-December 2022
 - Created `NEMS Hero </en/latest/nems-tools/nems-hero.html>`__, which allows NEMS Linux tech support to access a NEMS Server in event of a support request. This access is subject to firewall rules and only allowed if the connection is made within 15 minutes of a reboot. This is in preparation for upcoming NEMS SAAS, as well as a means of restoring a user in event of a lost / forgotten password.
 
 January 8, 2023 - NEMS Linux 1.6 RC for Raspberry Pi released.
+
+February 22, 2023 - Fixed issue with new NEMS Servers not being imported to system, resulting in failed CheckIn account setup.
