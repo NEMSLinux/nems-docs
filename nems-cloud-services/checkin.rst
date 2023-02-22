@@ -56,3 +56,10 @@ NEMS CheckIn requires the following:
 * A working recipient email account to send notifications to.
 
 NEMS CheckIn does not require that you have a sending email service.
+
+Troubleshooting
+---------------
+
+**State shows "Enabled [Not Functional]"**
+
+In order to use NEMS Cloud Services, you must have a valid account linked to your NEMS Server. Please sign in using the NEMS Cloud Services Key in order to use NEMS CheckIn.
