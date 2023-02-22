@@ -77,7 +77,7 @@ VirtualBox
 
 Minimum VirtualBox Version: 7.0
 
-When importing the NEMS Linux OVA, you must set the MAC address policy to "Generate new MAC address for all network adapters".
+When importing the NEMS Linux OVA, you must set the MAC Address Policy to "Generate new MAC address for all network adapters".
 
 .. figure:: ../img/vm-virtualbox-001.png
   :align: center
