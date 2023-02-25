@@ -70,7 +70,7 @@ At this point, you may click **Generate NEMS Config** to activate your new Synol
   :align: center
   :alt: Synology checks displayed in NEMS Adagios
 
-  Congratulations! NEMS Linux is now proactively monitoring your Synology NAS device.
+Congratulations! NEMS Linux is now proactively monitoring your Synology NAS device.
   
 
 Compatibility
