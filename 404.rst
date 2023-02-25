@@ -1,7 +1,6 @@
 404 Not Found
 -------------
 
-Sorry, that page doesn't exist. **The NEMS Linux documentation was upgraded on November 5, 2020.** While old links may not work, you can use the search feature at the new `docs.nemslinux.com <https://docs.nemslinux.com/>`__ to find the page you're looking for. Chances are it still exists, but the URL has changed.
+Sorry, that page doesn't exist. You can use the search feature at `docs.nemslinux.com <https://docs.nemslinux.com/>`__ to find the page you're looking for.
 
 If you're stuck, reach out to anyone on the Beta team on `our Discord server <https://discord.gg/e9xT9mh>`__.
-
