@@ -4,6 +4,7 @@ Check Commands: check_synology
 Synology NAS monitoring is included in `NEMS Linux <https://nemslinux.com/>`__ 1.6 or later.
 
 .. figure:: ../img/synology-nas-800.png
+  :width: 600px
   :align: center
   :alt: Synology NAS Devices
 
