@@ -22,6 +22,27 @@ By default, the *admins* contact group will be notified.
 
 The sample Advanced Services provided in NEMS Linux assume the community name to use is `public`.
 
+Basic Usage
+-----------
+
+In Synology DSM
+^^^^^^^^^^^^^^^
+
+- Visit Control Panel -> Terminal & SNMP -> SNMP
+- Check *Enable SNMP Service*
+- Check *SNMPv1, SNMPv2c service*
+- Ensure your Community name is set to *public*
+- Check *SNMPv3 service*
+- Enter your username (case sensitive)
+- Select **MD5** as your password hashing method (called "Protocol in DSM")
+- Enter your plain text password (case sensitive)
+- Press **Apply**
+
+In NEMS Configurator
+^^^^^^^^^^^^^^^^^^^^
+
+Coming soon
+
 Compatibility
 -------------
 
