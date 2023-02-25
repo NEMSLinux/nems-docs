@@ -25,7 +25,7 @@ The sample Advanced Services provided in NEMS Linux assume the community name to
 Basic Usage
 -----------
 
-.. figure:: ../../img/synology-dsm-snmp-setup.png
+.. figure:: ../img/synology-dsm-snmp-setup.png
   :width: 33%
   :align: right
   :alt: Synology DSM SNMP Settings
