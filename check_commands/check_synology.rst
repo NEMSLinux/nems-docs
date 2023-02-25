@@ -1,7 +1,7 @@
 Check Commands: check_synology
 ==============================
 
-Requires NEMS Linux 1.6.
+Synology NAS monitoring is available in `NEMS Linux <https://nemslinux.com/>`__ 1.6 or later.
 
 
 Description
