@@ -37,7 +37,7 @@ In Synology DSM
 - You do not need to enable *SNMPv3 service* nor *SNMP Privacy* since we are using the *public* community.
 - Press **Apply**
 
-.. figure:: ../img/synology-dsm-snmp-setup.png
+.. figure:: ../img/synology-dsm-snmp-setup.png?v2
   :align: center
   :alt: Synology DSM SNMP Settings
 
