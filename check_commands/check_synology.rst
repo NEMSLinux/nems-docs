@@ -66,6 +66,8 @@ At this point, you may click **Generate NEMS Config** to activate your new Synol
 .. figure:: ../img/synology-adagios-checks.png
   :align: center
   :alt: Synology checks displayed in NEMS Adagios
+  
+  NEMS Adagios displaying an overview of all Synology Advanced Services in the OK state.
 
 Congratulations! NEMS Linux is now proactively monitoring your Synology NAS device.
   
