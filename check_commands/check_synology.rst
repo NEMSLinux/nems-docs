@@ -30,7 +30,7 @@ Tested with the following versions of Synology DiskStation Manager:
 - DSM 6.2.2-24922 Update 4
 - DSM 7.0-41890
 
-It can be assumed that the Synology checks built-in to NEMS Linux will also work with other point releases of DSM.
+This isn't to say you must run one of these versions. Rather, these are simply the versions we have tested with successfully. It can be assumed that the Synology checks built-in to NEMS Linux will also work with other point releases of DSM.
 
 Source
 ------
