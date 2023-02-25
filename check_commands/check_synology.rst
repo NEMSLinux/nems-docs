@@ -34,10 +34,7 @@ In Synology DSM
 - Check *Enable SNMP Service*
 - Check *SNMPv1, SNMPv2c service*
 - Ensure your Community name is set to *public*
-- Check *SNMPv3 service*
-- Enter your username (case sensitive)
-- Select **MD5** as your password hashing method (called "Protocol in DSM")
-- Enter your plain text password (case sensitive)
+- You do not need to enable *SNMPv3 service* nor *SNMP Privacy* since we are using the *public* community.
 - Press **Apply**
 
 .. figure:: ../img/synology-dsm-snmp-setup.png
