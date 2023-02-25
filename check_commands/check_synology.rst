@@ -72,7 +72,7 @@ Reporting
   
   NEMS Adagios displaying an overview of all Synology Advanced Services in the OK state.
 
-Congratulations! NEMS Linux is now proactively monitoring your Synology NAS device. You will see any problems displayed on your NEMS Tactical Overview, NEMS Mobile UI, NEMS TV Dashboard, NEMS Adagios, or whichever tool you prefer for monitoring your network state with NEMS Linux. Your `NEMS Warning Light </en/latest/nems-tools/warninglight.html>`__ will even turn red if there is a problem with your Synology NAS.
+Congratulations! NEMS Linux is now proactively monitoring your Synology NAS device. You will see any problems displayed on your NEMS Tactical Overview, NEMS Mobile UI, NEMS TV Dashboard, NEMS Adagios, or whichever tool you prefer for monitoring your network state with NEMS Linux. You'll receive an email, SMS, Telegram, Webhook or other notification (whichever you have configured on your NEMS Server) if a drive fails. Your `NEMS Warning Light </en/latest/nems-tools/warninglight.html>`__ will even turn red if there is a problem with your Synology NAS.
   
 
 Compatibility
