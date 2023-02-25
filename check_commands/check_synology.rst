@@ -8,7 +8,7 @@ Description
 
 Use SNMP to check Synology NAS.
 
-Assigning your Synology NAS host to the `Synology` Host Group in NEMS Configurator adds the following sample Advanced Services:
+Assigning your Synology NAS host to the ``Synology`` Host Group in NEMS Configurator adds the following sample Advanced Services:
 
 - Synology Disks
 - Synology Fans
