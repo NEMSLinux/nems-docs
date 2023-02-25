@@ -26,11 +26,6 @@ The sample Advanced Services provided in NEMS Linux assume the community name to
 
 Basic Usage
 -----------
-
-.. figure:: ../img/synology-dsm-snmp-setup.png
-  :width: 33%
-  :align: right
-  :alt: Synology DSM SNMP Settings
   
 In Synology DSM
 ^^^^^^^^^^^^^^^
@@ -45,6 +40,9 @@ In Synology DSM
 - Enter your plain text password (case sensitive)
 - Press **Apply**
 
+.. figure:: ../img/synology-dsm-snmp-setup.png
+  :align: center
+  :alt: Synology DSM SNMP Settings
 
 In NEMS Configurator
 ^^^^^^^^^^^^^^^^^^^^
@@ -68,6 +66,12 @@ This next step is currently required the first time you setup your Synology NAS.
 
 At this point, you may click **Generate NEMS Config** to activate your new Synology checks.
 
+.. figure:: ../img/synology-adagios-checks.png
+  :align: center
+  :alt: Synology checks displayed in NEMS Adagios
+
+  Congratulations! NEMS Linux is now proactively monitoring your Synology NAS device.
+  
 
 Compatibility
 -------------
