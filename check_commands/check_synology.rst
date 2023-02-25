@@ -25,6 +25,11 @@ The sample Advanced Services provided in NEMS Linux assume the community name to
 Basic Usage
 -----------
 
+.. figure:: ../../img/synology-dsm-snmp-setup.png
+  :width: 33%
+  :align: right
+  :alt: Synology DSM SNMP Settings
+  
 In Synology DSM
 ^^^^^^^^^^^^^^^
 
@@ -37,6 +42,7 @@ In Synology DSM
 - Select **MD5** as your password hashing method (called "Protocol in DSM")
 - Enter your plain text password (case sensitive)
 - Press **Apply**
+
 
 In NEMS Configurator
 ^^^^^^^^^^^^^^^^^^^^
