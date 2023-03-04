@@ -33,7 +33,7 @@ Buy TEMPer Thermal Sensor
 Supported Devices
 -----------------
 
-Support was originally provided by `urwen <https://github.com/urwen/temper>`__. In NEMS Linux 1.6, support was initially moved to the more up-to-date repository from `ccwienk <https://github.com/ccwienk/temper>`__ (adds several of the newer TEMPer devices) but then forked to `nemslinux <https://github.com/NEMSLinux/temper>`__ to add missing firmware.
+Support was originally provided by `urwen <https://github.com/urwen/temper>`__. In NEMS Linux 1.6, support was initially moved to the more up-to-date repository from `ccwienk <https://github.com/ccwienk/temper>`__ (adds several of the newer TEMPer devices) but then forked to `NEMSLinux <https://github.com/NEMSLinux/temper>`__ to add support for TEMPerGold_V3.3 firmware (and others in the future).
 
 NEMS Linux includes support for TEMPer temperature and humidity sensor data. This table also shows which have internal or external sensors. NEMS Linux will always opt for external sensor data, if present.
 
