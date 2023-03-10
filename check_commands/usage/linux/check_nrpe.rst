@@ -1,6 +1,9 @@
 Monitor Linux Hosts with NRPE
 =============================
 
+.. Warning:: NRPE is deprecated. Please use the more modern options
+  provided within NEMS Linux (such as `NCPA </en/latest/check_commands/check_ncpa.html?highlight=ncpa>`__).
+  
 .. Warning:: These instructions are for your Linux *client*. **NEVER**
   run these commands on your NEMS Server.
 
