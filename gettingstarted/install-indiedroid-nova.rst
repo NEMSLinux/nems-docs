@@ -53,10 +53,10 @@ After the first-boot operations have completed, visit https://nems.local/ in you
 
   NEMS Server details as shown on a connected TV circa September 2018.
   
-  Install to eMMC
-  ~~~~~~~~~~~~~~~
+Install to eMMC
+~~~~~~~~~~~~~~~
   
-  Now that you are booted into your NEMS Server via the MicroSD card, you may choose to utilize the Indiedroid Nova's built-in eMMC storage (more reliable, faster).
+Now that you are booted into your NEMS Server via the MicroSD card, you may choose to utilize the Indiedroid Nova's built-in eMMC storage (more reliable, faster).
   
-  * Open the browser-based terminal in Cockpit or SSH to your NEMS Server.
-  * Type `sudo nems-install` and follow the prompts.
+* Open the browser-based terminal in Cockpit or SSH to your NEMS Server.
+* Type `sudo nems-install` and follow the prompts.
