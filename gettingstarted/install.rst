@@ -1,8 +1,8 @@
 Install NEMS Linux
 ==================
 
-SOHO / Hobbyist
----------------
+NEMS Linux for SOHO/Hobbyist
+----------------------------
 
 .. toctree::
     :maxdepth: 1
