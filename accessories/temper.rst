@@ -42,7 +42,7 @@ NEMS Linux includes support for TEMPer temperature and humidity sensor data. Thi
 
    * - Product
      - ID
-     - Firware
+     - Firmware
      - Temp
      - Hum
      - Int
