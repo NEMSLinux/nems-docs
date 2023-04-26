@@ -48,6 +48,20 @@ Raspberry Pi Builds
 
 -  9899069a83f4671d66bf1bf7eecc33b8 NEMS_v1.2.1.img
 
+Indiedroid Builds
+-----------------
+
+Indiedroid Nova
+~~~~~~~~~~~~~~~
+
+1.6
+^^^
+
+- 29bbcc0860358d2ed18967fff0b92544  NEMS_v1.6-Indiedroid_Nova-Build2.img
+- bf2e51e3a0771f27909ca11b13e64a34  NEMS_v1.6-Indiedroid_Nova-Build2.zip
+- 0236f197fc15b6f91ab8d3934763c1ed  NEMS_v1.6-Indiedroid_Nova-Build1.img
+- 7f83810262db0c48d7df097c546a3378  NEMS_v1.6-Indiedroid_Nova-Build1.zip
+
 Pine64 Builds
 -------------
 
