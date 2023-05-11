@@ -57,6 +57,8 @@ Indiedroid Nova
 1.6
 ^^^
 
+- b56c2371d8f3c7c111067a12a54a6aeb  NEMS_v1.6-Indiedroid_Nova-Build3.img
+- 787473a7f854d2213604666182a16e44  NEMS_v1.6-Indiedroid_Nova-Build3.zip
 - 29bbcc0860358d2ed18967fff0b92544  NEMS_v1.6-Indiedroid_Nova-Build2.img
 - bf2e51e3a0771f27909ca11b13e64a34  NEMS_v1.6-Indiedroid_Nova-Build2.zip
 - 0236f197fc15b6f91ab8d3934763c1ed  NEMS_v1.6-Indiedroid_Nova-Build1.img
