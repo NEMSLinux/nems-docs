@@ -8,10 +8,11 @@ NEMS Linux Migrator, upgrading is a cinch, and thanks to NEMS Linux'
 rolling release system, many fixes, patches and upgrades can find their
 way into existing installations.
 
-Urgent Issues
--------------
+High-Priority Issues
+--------------------
 
 - Backport the new NEMS Linux 1.6 speedtest to 1.5.x
+- `memory_limit` in php.ini is default 128M. Increase to 512M to ensure NEMS Tactical Overview can load following an outage that increased the number of events to beyond 128M.
 
 
 Feature Requests
