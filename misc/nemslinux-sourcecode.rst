@@ -2,12 +2,12 @@ NEMS Linux Source Code
 ======================
 
 Are you a coder or want to explore some of the things NEMS does under
-the hood? Perhaps you'd like to *add some features* or *fix a bug*. Or
-maybe you're not a coder but would still like to *report a bug or issue*
-you've found. This is all done through our GitHub repositories and the
-associated Issue trackers. *Feature Requests* may also be submitted via
-the appropriate issue tracker. If unsure, please ask the community on
-our Discord server.
+the hood? Perhaps you'd like to **add some features** or **fix a bug** and
+then submit your own **pull request**. Or maybe you're not a coder but
+would still like to contribute by **reporting a bug or issue** you've found.
+This is all done through our GitHub repositories and the associated Issue
+trackers. **Feature Requests** may also be submitted via the appropriate
+issue tracker. If unsure, please ask the community on our Discord server.
 
 NEMS Linux itself is a Linux distro built by pre-compiling several tools
 into a customized Debian server base. The features of NEMS is
