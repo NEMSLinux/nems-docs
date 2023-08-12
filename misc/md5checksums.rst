@@ -221,17 +221,19 @@ ASUS Builds
 Tinker Board / Tinker Board S
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+1.6
+^^^
+
+- 1b217e682a818b8597de8a7c9d45724b  NEMS_v1.6-ASUS_Tinker_Board-Build1.zip
+- 7cb75b033e1b681befb8139c72227a5a  NEMS_v1.6-ASUS_Tinker_Board-Build1.img
+
 1.5
 ^^^
 
--  e8864fbd50ed9bd3bcb7314b25875d01
-   NEMS_v1.5-ASUS_TinkerBoard-Build2.zip
--  68730d3155f82dc38db9f9e1da9dd934
-   NEMS_v1.5-ASUS_TinkerBoard-Build2.img
--  8ab85bc568025aca73bd1fe1cbd10748
-   NEMS_v1.5-ASUS-Tinker-Board-Build1.zip
--  a19f781b73269d893c8a70f38f81e203
-   NEMS_v1.5-ASUS-Tinker-Board-Build1.img
+-  e8864fbd50ed9bd3bcb7314b25875d01 NEMS_v1.5-ASUS_TinkerBoard-Build2.zip
+-  68730d3155f82dc38db9f9e1da9dd934 NEMS_v1.5-ASUS_TinkerBoard-Build2.img
+-  8ab85bc568025aca73bd1fe1cbd10748 NEMS_v1.5-ASUS-Tinker-Board-Build1.zip
+-  a19f781b73269d893c8a70f38f81e203 NEMS_v1.5-ASUS-Tinker-Board-Build1.img
 
 Orange Pi Builds
 ----------------
