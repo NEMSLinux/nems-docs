@@ -57,3 +57,15 @@ Logo Tips
    down to a height of 60 pixels. So a massive high-res logo.png is
    really unnecessary. If you run out of space on *boot* you could
    experience problems.
+
+Whitelabel Branding
+-------------------
+
+Whitelabel branding of NEMS Linux is available on a subscription basis
+for enterprise users looking to fully brand NEMS Linux to their company.
+Whitelabel service includes VIP support, custom feature production, and
+is always confidential. NEMS Linux is in use within government, healthcare,
+telecommunications and travel (both on earth and beyond).
+
+To enquire about Whitelabel Branding, please contact nems@category5.tv (serious
+enquiries only).
