@@ -90,6 +90,17 @@ Note that the ODROID-XU4 provides 1.8V or 5V. As there is no 3.3V and
 the minimum voltage for this sensor is 3V, you will need to use the 5V
 pin.
 
+CLI Usage
+---------
+
+`./dhtxx [VERSION] [GPIO PIN]`
+
+Valid Versions: 11 - DHT11
+                22 - DHT22/AM2302
+
+Valid Pins:  4 - Older sensors, usually without PCB, Default
+            18 - Newer sensors, often with PCB
+
 JSON Output
 -----------
 
@@ -98,13 +109,8 @@ and DHT22/AM2302 device.
 
 .. code-block:: console
 
-    Usage: ./dhtxx [VERSION] [GPIO PIN]
-    
-    Valid Versions: 11 - DHT11
-                    22 - DHT22/AM2302
-    
-    Valid Pins:  4 - Older sensors, usually without PCB, Default
-                18 - Newer sensors, often with PCB
+    root@nems:/# /usr/local/share/nems/nems-scripts/dhtxx 11 18
+    {"dht": "11", "c": 28, "f": 82.4, "h": 43}
 
 Check Commands
 --------------
