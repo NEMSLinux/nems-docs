@@ -91,8 +91,10 @@ KY-015 (DHT11 Sensor on 3-Pin PCB)
 **Check your pin labels first.**
 
 If you see **S** on one side and **-** on the other, your
-board is a KY-015. If, however, your board shows **+ OUT -**, it is
-not a KY-015, but is a DHT11 PCB. Wiring this way will likely fry your sensor.
+board is a KY-015. If, your board shows **+ OUT -**, it is
+not a KY-015, but is a DHT11 PCB. If that's the case, wiring this
+way will likely fry your sensor, so please make sure you are indeed
+using a KY-015.
 
 .. figure:: ../img/dia_KY-015_DHT_RPi_GPIO.png
   :width: 500
@@ -117,11 +119,15 @@ CLI Usage
 
 `./dhtxx [VERSION] [GPIO PIN]`
 
-Valid Versions: 11 - DHT11
-                22 - DHT22/AM2302
+**Valid Versions:**
 
-Valid Pins:  4 - Older sensors, usually without PCB, Default
-            18 - Newer sensors, often with PCB
+- 11 - DHT11
+- 22 - DHT22/AM2302
+
+**Valid Pins**
+
+- 4 - Older sensors, usually without PCB, Default
+- 18 - Newer sensors (expecially KY-015), often with PCB
 
 JSON Output
 -----------
