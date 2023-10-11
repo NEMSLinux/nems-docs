@@ -34,8 +34,3 @@ Command Line
 ------------
 
 `./check_minecraft -H [host_address] -P [game_port]`
-
-Source Code
------------
-
-https://github.com/NEMSLinux/nems-plugins/blob/main/debpack/usr/lib/nagios/plugins/check_minecraft
