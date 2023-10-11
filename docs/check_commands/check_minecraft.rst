@@ -35,4 +35,7 @@ Command Line
 
 `./check_minecraft -H [host_address] -P [game_port]`
 
-Based on https://github.com/jmarler/check_minecraft
+Source Code
+-----------
+
+https://github.com/NEMSLinux/nems-plugins/blob/main/debpack/usr/lib/nagios/plugins/check_minecraft
