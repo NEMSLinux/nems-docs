@@ -64,6 +64,11 @@ The pinout for the DHT11, DHT22 and AM2302 are the same, so no matter
 which DHT sensor you choose, it is an identical process to making it
 work with your NEMS Server.
 
+.. figure:: ../img/dia_DHT11.png
+  :width: 500
+  :align: right
+  :alt: GPIO Connection for DHT Sensor
+
 Place a 10k resistor between Pin 1 and Pin 2, which will ensure reliable
 data output from the sensor when it switches from input to output. If
 you don't have a resistor handy, don't worry about it. It'll improve
