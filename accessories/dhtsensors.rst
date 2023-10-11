@@ -72,16 +72,37 @@ reliability to have it, but won't hurt anything if you don't.
 Raspberry Pi
 ~~~~~~~~~~~~
 
+DHT11/DHT22/AM2302
+------------------
+
 .. figure:: ../img/dia_DHT11_RPi_GPIO.png
   :width: 500
   :align: left
-  :alt: Raspberry Pi GPIO Connection for DHT Sensor
+  :alt: Raspberry Pi GPIO Connection for DHT11/DHT22/AM2302 Sensor
 
 -  Raspberry Pi Pin 1 (3.3V) to DHTxx Pin 1.
 -  Raspberry Pi Pin 7 (GPIO4, GPCLK0, T-Cobbler P04) to DHTxx Pin 2.
 -  DHTxx Pin 3 does not get connected.
 -  Raspberry Pi GND to DHTxx Pin 4.
 -  10kΩ resistor from Pin 1 to Pin 2 of the DHTxx sensor.
+
+KY-015 (DHT11 Sensor on 3-Pin PCB)
+----------------------------------
+
+**Check your pin labels first.**
+
+If you see **S** on one side and **-** on the other, your
+board is a KY-015. If, however, your board shows **+ OUT -**, it is
+not a KY-015, but is a DHT11 PCB. Wiring this way will likely fry your sensor.
+
+.. figure:: ../img/dia_KY-015_DHT_RPi_GPIO.png
+  :width: 500
+  :align: left
+  :alt: Raspberry Pi GPIO Connection for KY-015 Sensor
+
+-  GPIO Pin 18 to Sensor Pin S.
+-  GPIO 3.3V to Sensor Middle Pin.
+-  GPIO GND to Sensor Pin -.
 
 ODROID-XU4
 ~~~~~~~~~~
