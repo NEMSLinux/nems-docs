@@ -25,6 +25,8 @@ here are some of the available check commands:
 -  `check_mikrotik_switch <check_mikrotik.html>`__ -
    Monitor stats for some MikroTik routers, including thermal sensors,
    packet loss, uptime, and so-on.
+-  `check_minecraft <check_minecraft.html>`__ - Monitor Minecraft server
+   state.
 -  `check_ncpa <check_ncpa.html>`__ - Monitor Windows, Mac and Linux
    hosts. NCPA is written in Python and is able to run on almost any
    Operating System. 
