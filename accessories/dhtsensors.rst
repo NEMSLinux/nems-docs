@@ -72,7 +72,7 @@ reliability to have it, but won't hurt anything if you don't.
 Raspberry Pi
 ~~~~~~~~~~~~
 
-.. figure:: ../img/dia_DHT11.png
+.. figure:: ../img/dia_DHT11_RPi_GPIO.png
   :width: 500
   :align: left
   :alt: Raspberry Pi GPIO Connection for DHT Sensor
