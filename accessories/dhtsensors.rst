@@ -64,7 +64,7 @@ The pinout for the DHT11, DHT22 and AM2302 are the same, so no matter
 which DHT sensor you choose, it is an identical process to making it
 work with your NEMS Server.
 
-Place a 10k resistor between Pin 1 and Pin 2, which will ensure reliable
+Place a 10kΩ resistor between Pin 1 and Pin 2, which will ensure reliable
 data output from the sensor when it switches from input to output. **If
 you don't have a resistor handy, don't worry about it.** It'll improve
 reliability to have it, but won't hurt anything if you don't.
@@ -81,7 +81,7 @@ Raspberry Pi
 -  Raspberry Pi Pin 7 (GPIO4, GPCLK0, T-Cobbler P04) to DHTxx Pin 2.
 -  DHTxx Pin 3 does not get connected.
 -  Raspberry Pi GND to DHTxx Pin 4.
--  10k resistor from Pin 1 to Pin 2 of the DHTxx sensor.
+-  10kΩ resistor from Pin 1 to Pin 2 of the DHTxx sensor.
 
 ODROID-XU4
 ~~~~~~~~~~
