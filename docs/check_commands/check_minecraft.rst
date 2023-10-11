@@ -30,6 +30,10 @@ Get Your Own Minecraft Server
 Need a Minecraft server? Create one for free and host it on a Raspberry Pi!
 Download `Pinecraft Installer <https://github.com/Cat5TV/pinecraft/>`__ today!
 
+`check_minecraft` is compatible with all versions of Pinecraft Installer-powered
+Minecraft servers (as well as most other Minecraft, Paper, Spigot, Forge, etc.
+servers).
+
 Command Line
 ------------
 
