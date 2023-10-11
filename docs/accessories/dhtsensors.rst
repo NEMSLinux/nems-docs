@@ -102,6 +102,9 @@ not a KY-015, but is a DHT11 PCB. Wiring this way will likely fry your sensor.
 -  GPIO 3.3V to Sensor Middle Pin.
 -  GPIO GND to Sensor Pin -.
 
+Since the KY-015 contains a built-in 1kΩ resistor, adding one to your circuit
+is not necessary.
+
 ODROID-XU4
 ~~~~~~~~~~
 
