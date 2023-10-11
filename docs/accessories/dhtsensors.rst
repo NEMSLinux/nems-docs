@@ -77,7 +77,6 @@ DHT11/DHT22/AM2302
 
 .. figure:: ../img/dia_DHT11_RPi_GPIO.png
   :width: 500
-  :align: left
   :alt: Raspberry Pi GPIO Connection for DHT11/DHT22/AM2302 Sensor
 
 -  Raspberry Pi Pin 1 (3.3V) to DHTxx Pin 1.
@@ -97,7 +96,6 @@ not a KY-015, but is a DHT11 PCB. Wiring this way will likely fry your sensor.
 
 .. figure:: ../img/dia_KY-015_DHT_RPi_GPIO.png
   :width: 500
-  :align: left
   :alt: Raspberry Pi GPIO Connection for KY-015 Sensor
 
 -  GPIO Pin 18 to Sensor Pin S.
