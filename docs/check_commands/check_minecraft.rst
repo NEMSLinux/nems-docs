@@ -1,9 +1,6 @@
 Check Command: check_minecraft
 ==============================
 
-Check Minecraft server status, including whether up, down or full.
-Also reports the server response time in milliseconds.
-
 `check_minecraft` provides the current state of the Minecraft server (Online,
 Down or Full), and also provides the following performance data:
 
@@ -20,6 +17,15 @@ Down or Full), and also provides the following performance data:
   :width: 600
   :alt: check_minecraft Service in NEMS Adagios
 
+`check_minecraft` will first try to connect to your Minecraft server using
+a modern (>= 1.7) connection. If it fails to connect, it will then try using
+a legacy (<= 1.6) connection. If it fails then, the server is considered
+offline. This method allows NEMS Linux to check any version of Minecraft
+without your having to specify the version manually and remembering to update
+your check command every time you upgrade Minecraft.
+
+Get Your Own Minecraft Server
+-----------------------------
 
 Need a Minecraft server? Create one for free and host it on a Raspberry Pi!
 Download `Pinecraft Installer <https://github.com/Cat5TV/pinecraft/>`__ today!
