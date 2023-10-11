@@ -93,7 +93,7 @@ KY-015 (DHT11 Sensor on 3-Pin PCB)
 If you see **S** on one side and **-** on the other, your
 board is a KY-015. If, your board shows **+ OUT -**, it is
 not a KY-015, but is a DHT11 PCB. If that's the case, wiring this
-way will likely fry your sensor, so please make sure you are indeed
+way may damage your sensor, so please make sure you are indeed
 using a KY-015.
 
 .. figure:: ../img/dia_KY-015_DHT_RPi_GPIO.png
