@@ -12,6 +12,10 @@ peripherals.
 - NEMS Linux 1.6 Virtual Appliance (OVA/VHD/QCOW2) released to Patrons January 21, 2023.
 - NEMS Linux 1.6 for Raspberry Pi and Cloud Instance released to public January 28, 2023.
 - NEMS Linux 1.6 for ODROID XU3/XU4/HC1/HC2/MC1 released to public February 5, 2023.
+- NEMS Linux 1.6 for Indiedroid Nova released to public May 11, 2023.
+- NEMS Linux 1.6 for the ASUS Tinker Board released to public August 12, 2023.
+- NEMS Linux 1.6 for ODROID N2/N2+ released to public August 16, 2023.
+- NEMS Linux 1.6 for Amazon Web Services released to public October 18, 2023.
 
 **Key Development Features and Goals:**
 
