@@ -27,6 +27,11 @@ please let me know and I will copy the AMI to your preferred region.
 Since this costs me extra money to do, I only do it by request, and only
 for those who contribute to the project.
 
+NEMS 1.6 AMI Build 1
+^^^^^^^^^^^^^^^^^^^^
+
+- North Virginia (us-east-1) ami-07dd8fcee3d3e8b33
+
 NEMS 1.5 AMI Build 1
 ^^^^^^^^^^^^^^^^^^^^
 
