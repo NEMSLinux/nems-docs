@@ -30,7 +30,7 @@ for those who contribute to the project.
 NEMS 1.6 AMI Build 1
 ^^^^^^^^^^^^^^^^^^^^
 
-- North Virginia (us-east-1) ami-07dd8fcee3d3e8b33
+- North Virginia (us-east-1) ami-0e5001643e1929a55
 
 NEMS 1.5 AMI Build 1
 ^^^^^^^^^^^^^^^^^^^^
