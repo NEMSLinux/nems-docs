@@ -35,6 +35,8 @@ NEMS 1.6 AMI Build 1
 NEMS 1.5 AMI Build 1
 ^^^^^^^^^^^^^^^^^^^^
 
+This is a legacy version and should not be used.
+
 - North Virginia (us-east-1) ami-03480e018178d1c75
 - Ireland (eu-west-1) ami-07d0a43c2844ae01c
 
