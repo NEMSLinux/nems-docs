@@ -7,8 +7,8 @@ Raspberry Pi Builds
 1.6
 ~~~
 
-- 76b87a6a50e0d87a0d2c5c5f6a11a047  NEMS_v1.6-RPi-Build2.img
-- 313e9d00baf18822bdd117c88c1afb91  NEMS_v1.6-RPi-Build2.zip
+- c40f97aaccc9d5f6568c3c48d8b6336e  NEMS_v1.6-RPi-Build2.img
+- fbac40419f2f94437b8e610bb809c0b8  NEMS_v1.6-RPi-Build2.zip
 - e47961fccf8743d86fa8d2caa0fec09f  NEMS_v1.6-RPi-Build1.img
 - 5b10dd3d924d6e4964b984de3375f23b  NEMS_v1.6-RPi-Build1.zip
 
