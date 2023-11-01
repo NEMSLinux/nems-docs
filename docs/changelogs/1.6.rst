@@ -16,7 +16,7 @@ peripherals.
 - NEMS Linux 1.6 for the ASUS Tinker Board released to public August 12, 2023.
 - NEMS Linux 1.6 for ODROID N2/N2+ released to public August 16, 2023.
 - NEMS Linux 1.6 for Amazon Web Services released to public October 23, 2023.
-- NEMS Linux 1.6 Build 2 for Raspberry Pi released to October 31, 2023 (Support for Raspberry Pi 5).
+- NEMS Linux 1.6 Build 2 for Raspberry Pi released to October 31, 2023 (adds support for Raspberry Pi 5).
 
 **Key Development Features and Goals:**
 
