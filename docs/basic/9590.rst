@@ -22,7 +22,7 @@ To disable 9590 permanently, first stop it with Monit (otherwise Monit
 will re-run the service once it detects it is not running). Then, open
 an SSH connection to your NEMS server and type:
 
-sudo /usr/sbin/update-rc.d 9590 disable
+sudo systemctl disable 9590
 
 To see how 9590 works, simply review `the source
 code <https://github.com/Cat5TV/nems-scripts/blob/master/9590.sh>`__.
