@@ -402,4 +402,4 @@ January 2023
 - OS upgraded from Bullseye to Bookworm. Raspberry Pi 5 support requires moving the NEMS Linux base to Bookworm.
 - `Nagios Core` upgraded from 4.4.7 to 4.5.0.
 - `Python` upgraded from 3.9 to 3.11.
-- `mk-livestatus` upgraded from 1.5.0p23 to 2.1.0p37 which is the most current version compatible with Bookworm (which includes gcc++-12 - gcc++-13 won't be available upstream until Trixie).
+- `mk-livestatus` upgraded from 1.5.0p23 to 2.1.0p37 which is the most current version compatible with Bookworm (which includes gcc++-12 - gcc++-13 won't be available upstream until Trixie). Implemented Sven Nierlein's patched Store.cc (and corresponding logger.c and logger.h) to fix SEGFAULT on modern Nagios.
