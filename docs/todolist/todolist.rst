@@ -109,6 +109,8 @@ Known Issues
 
 These issues will be fixed in due time.
 
+-  Including a hard brace ([ or ]) in your host / service names will make it so Adagios
+   cannot open the status page or history for that item. For now, avoid these.
 -  Number of services per page selection not working in Nagios Core `as
    per baggins <https://forum.nemslinux.com/viewtopic.php?f=38&t=95&p=745&hilit=results#p745>`__.
 -  As per `Ricks <https://forum.nemslinux.com/viewtopic.php?f=10&t=707>`__ add
