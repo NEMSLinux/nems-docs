@@ -1,6 +1,11 @@
 Introduction to NEMS Linux
 ==========================
 
+NEMS Linux
+----------
+
+NEMS /nɛmz/ stands for "Nagios Enterprise Monitoring Server" and is a Linux distribution built as an appliance. It simplifies initial deployment and configuration of an enterprise monitoring server powered by Nagios Core and adds many complex features, integrating several open source projects to create a well rounded, fully functional appliance that is scalable for any sized network. NEMS is not just a "pre-installed Nagios Core distro," but rather is an entire Linux distribution built around providing a powerful and feature-rich Nagios-based appliance.
+
 How NEMS Linux Began
 --------------------
 
