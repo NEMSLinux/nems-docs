@@ -15,4 +15,13 @@ Login to Cockpit
 
 You'll find Cockpit in the System menu on NEMS Dashboard. To login, enter your NEMS Linux username and password.
 
-.. tip:: **Seeing Disabled Features in Cockpit?** If you wish to be able to perform elevated system actions (such as rebooting your NEMS Server or modifying your NEMS Server's network connection), make sure you also check the box “use my password for privileged tasks” while logging in. Otherwise your level of access will match the non-elevated user and all features which require root access will be greyed out.
+**Seeing Disabled Features in Cockpit?**
+
+When you first login to Cockpit, you will be running in Limited access mode. Simply click the button at the top of the Cockpit window to enable Administrative access:
+
+.. figure:: ../img/cockpit-limited-access.png
+  :width: 200
+  :align: left
+  :alt: Cockpit Limited Access
+
+Otherwise your level of access will match the non-elevated user and all features which require root access will be greyed out.
