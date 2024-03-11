@@ -18,3 +18,4 @@ with a move to 64-bit and Python 3 and venv.
 -  Upgrade CheckMK livestatus socket to 2.0+.
 
 -  Iperf3 running as daemon.
+-  Serial login enabled.
