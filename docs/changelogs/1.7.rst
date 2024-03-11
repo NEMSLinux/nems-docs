@@ -2,12 +2,12 @@ NEMS Linux 1.7 Changelogs
 =========================
 
 The NEMS 1.7 release cycle will focus on modernizing the codebase, complete
-with a move to 64-bit and Python 3.
+with a move to 64-bit and Python 3 and venv.
 
 **Key Development Features and Goals:**
 
 -  ARMhf support to be deprecated in favor of AArch64.
--  Python moved to v3 stack due to 2.7 EOL.
+-  Python moved to v3 stack due to 2.7 EOL, venv utilized.
 -  **Firewall** - NEMS Linux to include `ConfigServer Security &
    Firewall (csf) with Login Failure Daemon (lfd)`_. Internal LAN IP
    addresses are whitelisted by default, but if a user tries to access
@@ -15,8 +15,6 @@ with a move to 64-bit and Python 3.
    server accessible on the Internet) they will get locked out if they
    try an incorrect password too many times.
 -  Add IPMI (freeipmi) if not added already.
--  Begin work on smart home assistant integration: NEMS Skill for Alexa
-   and Google Assistant.
--  Consistent networking configuration across platform (for setting
-   static IPs, for example).
 -  Upgrade CheckMK livestatus socket to 2.0+.
+
+-  Iperf3 running as daemon.
