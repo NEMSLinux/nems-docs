@@ -19,3 +19,5 @@ with a move to 64-bit and Python 3 and venv.
 
 -  Iperf3 running as daemon.
 -  Serial login enabled.
+-  livestatus upgraded to 2.1.0p37 (cannot go to 2.2 until Trixie due to GCC+-13 dependency).
+-  Nagios Core upgraded and held back to 4.4.14 to ensure optimum stability (4.5.x currently has issues with livestatus segfault).
