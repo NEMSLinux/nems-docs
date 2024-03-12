@@ -7,13 +7,7 @@ with a move to 64-bit and Python 3 and venv.
 **Key Development Features and Goals:**
 
 -  ARMhf support to be deprecated in favor of AArch64.
--  Python moved to v3 stack due to 2.7 EOL, venv utilized.
--  **Firewall** - NEMS Linux to include `ConfigServer Security &
-   Firewall (csf) with Login Failure Daemon (lfd)`_. Internal LAN IP
-   addresses are whitelisted by default, but if a user tries to access
-   your NEMS server from outside the LAN (ie., if you have your NEMS
-   server accessible on the Internet) they will get locked out if they
-   try an incorrect password too many times.
+-  Python moved to v3 stack due to 2.7 EOL, venv utilized. 3.11 is default with 3.9.2 also configured in update-alternatives.
 -  Add IPMI (freeipmi) if not added already.
 -  Upgrade CheckMK livestatus socket to 2.0+.
 
@@ -22,4 +16,6 @@ with a move to 64-bit and Python 3 and venv.
 -  livestatus upgraded to 2.1.0p37 (cannot go to 2.2 until Trixie due to GCC+-13 dependency).
 -  Nagios Core upgraded and held back to 4.4.14 to ensure optimum stability (4.5.x currently has issues with livestatus segfault).
 -  Nagios Mobile UI upgraded to 1.0.3 and then modified to support PHP 8.
--  NEMS API upgraded to support PHP 8.
+-  NEMS API and NEMS Livestatus Full upgraded to support PHP 8.2.
+-  Adagios built into a Python 3.9.2 Virtual Environment.
+
