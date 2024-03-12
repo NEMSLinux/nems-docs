@@ -6,6 +6,7 @@ with a move to 64-bit and Python 3 and venv.
 
 **Key Development Features and Goals:**
 
+-  Base upgraded to Bookworm.
 -  ARMhf support to be deprecated in favor of AArch64.
 -  Python moved to v3 stack due to 2.7 EOL, venv utilized. 3.11 is default with 3.9.2 also configured in update-alternatives.
 -  Add IPMI (freeipmi) if not added already.
