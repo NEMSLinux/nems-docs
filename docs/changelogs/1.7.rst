@@ -17,6 +17,8 @@ with a move to 64-bit and Python 3 and venv.
 -  livestatus upgraded to 2.1.0p37 (cannot go to 2.2 until Trixie due to GCC+-13 dependency).
 -  Nagios Core upgraded and held back to 4.4.14 to ensure optimum stability (4.5.x currently has issues with livestatus segfault).
 -  Nagios Mobile UI upgraded to 1.0.3 and then modified to support PHP 8.
--  NEMS API and NEMS Livestatus Full upgraded to support PHP 8.2.
+-  NEMS API upgraded to support PHP 8.
+-  NEMS Livestatus Full upgraded to support PHP 8.
+-  NagiosTV upgraded to support PHP 8.
 -  Adagios built into a Python 3.9.2 Virtual Environment.
 
