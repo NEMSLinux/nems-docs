@@ -4,6 +4,9 @@ NEMS Linux 1.7 Changelogs
 The NEMS 1.7 release cycle will focus on modernizing the codebase, complete
 with a move to 64-bit and Python 3 and venv.
 
+**NEMS Linux 1.7 is currently under Developer Lockdown.**
+For more information: https://www.patreon.com/nems/posts?filters%5Btag%5D=Lockdown+2024
+
 **Key Development Features and Goals:**
 
 -  Base upgraded to Bookworm.
