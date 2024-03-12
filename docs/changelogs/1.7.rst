@@ -21,4 +21,4 @@ with a move to 64-bit and Python 3 and venv.
 -  NEMS Livestatus Full upgraded to support PHP 8.
 -  NagiosTV upgraded to support PHP 8.
 -  Adagios built into a Python 3.9.2 Virtual Environment.
-
+-  NEMS NConf updated to support PHP 8. Several bug fixes.
