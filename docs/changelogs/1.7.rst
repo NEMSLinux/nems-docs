@@ -25,3 +25,4 @@ For more information: https://www.patreon.com/nems/posts?filters%5Btag%5D=Lockdo
 -  NagiosTV upgraded to support PHP 8.
 -  Adagios built into a Python 3.9.2 Virtual Environment.
 -  NEMS NConf updated to support PHP 8. Several bug fixes.
+-  Upgraded NagVis to 1.9.40, which includes PHP 8.2 support as well as other fixes since the previous 1.9.27 from NEMS 1.6.
