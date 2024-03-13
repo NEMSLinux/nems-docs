@@ -34,3 +34,4 @@ For more information: https://www.patreon.com/nems/posts?filters%5Btag%5D=Lockdo
 -  Feature Improvement: NEMS Migrator output is more consistent and hides confidential information such as passwords during reconciliation.
 -  NEMS documentation has been fixed to point to the current repository (was still pointing to Cat5TV which redirects, but ReadTheDocs stopped following the redirect, so content was beginning to fall stale).
 -  Raspberry Pi filesystem resizing on first boot is now done with NEMS Universal Filesystem Restore tool.
+-  Fixed nems-commits, which shows changelogs on the official NEMS Linux web site, but was lacking a few important submodules (nems-migrator, nconf).
