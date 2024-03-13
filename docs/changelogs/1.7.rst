@@ -32,3 +32,4 @@ For more information: https://www.patreon.com/nems/posts?filters%5Btag%5D=Lockdo
 -  Feature Improvement: NEMS Migrator now reconciles the NEMS SST configuration against the current running server, and imports your settings from backup appropriately.
 -  Bug Fix: NEMS Migrator resource.cfg reconciliation now functions as expected (so settings such as SMTP are reflected in your restored configuration).
 -  Feature Improvement: NEMS Migrator output is more consistent and hides confidential information such as passwords during reconciliation.
+-  NEMS documentation has been fixed to point to the current repository (was still pointing to Cat5TV which redirects, but ReadTheDocs stopped following the redirect, so content was beginning to fall stale).
