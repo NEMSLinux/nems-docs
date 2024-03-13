@@ -29,3 +29,5 @@ For more information: https://www.patreon.com/nems/posts?filters%5Btag%5D=Lockdo
 -  Created `nems-configs` package, which will include base configurations, starting with monit.
 -  Added Adagios to monit.
 -  New Feature: NEMS Power Controller. Now you can safely reboot or shutdown your NEMS Server directly within NEMS Dashboard.
+-  Improved Feature: NEMS Migrator now reconciles the NEMS SST configuration against the current running server, and imports your settings from backup appropriately.
+-  Bug Fix: NEMS Migrator resource.cfg reconciliation now functions as expected (so settings such as SMTP are reflected in your restored configuration).
