@@ -28,3 +28,4 @@ For more information: https://www.patreon.com/nems/posts?filters%5Btag%5D=Lockdo
 -  Upgraded NagVis to 1.9.40, which includes PHP 8.2 support as well as other fixes since the previous 1.9.27 from NEMS 1.6.
 -  Created `nems-configs` package, which will include base configurations, starting with monit.
 -  Added Adagios to monit.
+-  New Feature: NEMS Power Controller. Now you can safely reboot or shutdown your NEMS Server directly within NEMS Dashboard.
