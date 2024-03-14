@@ -77,6 +77,7 @@ here are some of the available check commands:
     check_nems_php_agent
     check_nrpe
     check_ping
+    check_pve
     check_qnap
     check_synology
     ../accessories/temper
