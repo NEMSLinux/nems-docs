@@ -5,8 +5,8 @@ Monitor your Proxmox VE nodes with individual service checks for hypervisor CPU 
 filesystem usage on the PVE node, Proxmox VE version, memory usage and swap usage).
 
 .. figure:: ../img/check_pve-version.png
-:width: 600
-:alt: check_pve version Service in NEMS Adagios
+  :width: 600
+  :alt: check_pve version Service in NEMS Adagios
 
 Usage
 -----
