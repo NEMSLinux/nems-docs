@@ -1,13 +1,26 @@
 Check Fortinet FortiGate Appliances (check_fortigate)
 #####################################################
 
-Checks Fortinet appliances via SNMP v1/v2c/v3, with perf data.
+Checks Fortinet FortiGate devices via SNMP, with perf data.
 
 *check_fortigate* requires NEMS Linux 1.7 or higher.
 
 .. admonition:: Veriage Disclaimer
 
    Please note that Fortinet's use of the terms "master" and "slave" to distinguish between primary and secondary devices is an industry-standard terminology in the context of networking hardware. While NEMS Linux respects the terminology used by Fortinet for its products, it's essential to recognize that these terms can carry historical connotations and may not reflect the values of equity and inclusivity that we strive for in modern society. NEMS Linux is committed to supporting equity, diversity, and inclusion in all aspects of its development and operation.
+
+
+Configuring Fortigate
+*********************
+
+From the Fortigate web interface:
+
+1. Select Network -> Interface -> Local interface
+2. Administrative Access: Enable SNMP
+3. Select Config -> SNMP
+4. Enable SNMP, fill your details
+5. SNMP v1/v2c: Create new
+6. Configure for your needs, Traps are not required for this plugin!
 
 
 Available checkcommands
@@ -125,8 +138,8 @@ Check the status of FortiAPs (WTPs) on a Fortigate device, ensuring that they ar
 
 
 
-Usage
------
+CLI Usage
+---------
 
 .. code-block:: bash
 
@@ -211,8 +224,10 @@ SNMP v3 only:
 
     Returns full help text.
 
-Requires
---------
+Dependencies
+------------
+
+These dependencies are preinstalled on NEMS Linux:
 
 - Net::SNMP
 - List::Compare
@@ -220,56 +235,9 @@ Requires
 - Pod::Usage
 - Switch
 
-Description
------------
 
-This plugin checks Fortinet FortiGate devices via SNMP.
-
-From Web:
-
-1. Select Network -> Interface -> Local interface
-2. Administrative Access: Enable SNMP
-3. Select Config -> SNMP
-4. Enable SNMP, fill your details
-5. SNMP v1/v2c: Create new
-6. Configure for your needs, Traps are not required for this plugin!
-
-From CLI:
-
-.. code-block:: bash
-
-    config system interface
-    edit "internal"
-    set allowaccess ping https ssh snmp fgfm
-    next
-    end
-
-    config system snmp sysinfo
-    set description "DMZ1 FortiGate 300C"
-    set location "Room 404"
-    set conctact-info "BOFH"
-    set status enable
-    end
-
-    config system snmp community
-    edit 1
-    set events cpu-high mem-low fm-if-change
-    config hosts
-    edit 1
-    set interface "internal"
-    set ip %SNMP Client IP%
-    next
-    end
-    set name "public"
-    set trap-v1-status disable
-    set trap-v2c-status disable
-    next
-    end
-
-Thats it!
-
-Samples
--------
+CLI Examples
+------------
 
 To use SNMPv3 just replace ``-C public`` with ``-v 3 -U username -A this_is_auth_string -a sha -x aes128 -X this_is_priv_string``.
 
