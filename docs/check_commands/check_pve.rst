@@ -35,11 +35,13 @@ Check Command Arguments
 Configuration
 ~~~~~~~~~~~~~
 
-#. On Proxmox VE, create a new user for NEMS Linux to use for the API. Give that user **PVEAudit** permissions.
-#. In NEMS NConf
-  #. create a host entry for your Proxmox VE server.
-  #. Add the `check_pve` service to that host, setting the arguments appropriately for your environment.
-  #. Generate your NEMS config.
+- On Proxmox VE
+  - Create a new user for NEMS Linux to use for the API.
+  - Assign this new user **PVEAudit** permissions.
+- In NEMS NConf:
+  - Create a host entry for your Proxmox VE server.
+  - Add the `check_pve` service to that host, setting the arguments appropriately for your environment.
+  - Generate your NEMS config.
 
 .. Warning:: Never use your Proxmox VE root user or any user with more than **PVEAudit** permissions for monitoring.
 
