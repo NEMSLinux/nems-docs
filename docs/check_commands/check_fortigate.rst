@@ -194,3 +194,8 @@ Memory-Slave:
     $ check_fortigate.pl -H 192.168.123.100 -C public -T mem
 
     OK: Fortinet 300C (Master: FGSERIALMASTER) slave_M
+
+Source
+------
+
+From https://github.com/riskersen/Monitoring/tree/master/fortigate
