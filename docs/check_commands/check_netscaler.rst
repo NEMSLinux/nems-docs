@@ -1,7 +1,7 @@
 Check NetScaler ADC (check_netscaler)
 #####################################
 
-NEMS Linux monitors NetScaler Application Delivery Controllers.
+NEMS Linux monitors Citrix NetScaler Application Delivery Controllers.
   
 .. note:: *check_netscaler* requires NEMS Linux 1.7 or higher.
 
