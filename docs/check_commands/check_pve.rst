@@ -11,7 +11,7 @@ filesystem usage on the PVE node, Proxmox VE version, memory usage and swap usag
 Usage
 -----
 
-.. note:: *check_pve* is part of NEMS Linux 1.7+.
+.. note:: *check_pve* requires NEMS Linux 1.7 or higher.
 
 Check Command Arguments
 ~~~~~~~~~~~~~~~~~~~~~~~
