@@ -3,6 +3,10 @@ Check Fortinet FortiGate Appliances (check_fortigate)
 
 Checks Fortinet appliances via SNMP v1/v2c/v3, with perf data.
 
+.. admonition:: Veriage Disclaimer
+
+   Please note that Fortinet's use of the terms "master" and "slave" to distinguish between primary and secondary devices is an industry-standard terminology in the context of networking hardware. While NEMS Linux respects the terminology used by Fortinet for its products, it's essential to recognize that these terms can carry historical connotations and may not reflect the values of equity and inclusivity that we strive for in modern society. NEMS Linux is committed to supporting equity, diversity, and inclusion in all aspects of its development and operation.
+
 Usage
 -----
 
