@@ -1,7 +1,7 @@
 Check Fortinet FortiGate Appliances (check_fortigate)
 #####################################################
 
-Checks Fortinet FortiGate devices via SNMP, with perf data.
+NEMS Linux makes it easy and affordable to monitor your Fortinet Fortigate devices and clusters via SNMP, complete with perf data.
 
 *check_fortigate* requires NEMS Linux 1.7 or higher.
 
