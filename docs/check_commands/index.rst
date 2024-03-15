@@ -29,6 +29,7 @@ documentation:
    packet loss, uptime, and so-on.
 -  `check_minecraft <check_minecraft.html>`__ - Monitor Minecraft server
    state.
+-  `check_mssql_mem <check_mssql_mem.html>`__ - Monitor MS SQL Server memory usage.
 -  `check_ncpa <check_ncpa.html>`__ - Monitor Windows, Mac and Linux
    hosts. NCPA is written in Python and is able to run on almost any
    Operating System. 
@@ -78,6 +79,7 @@ documentation:
     check_iperf3
     check_mikrotik
     check_minecraft
+    check_mssql_mem
     check_ncpa
     check_nems_osb
     check_nems_php_agent
