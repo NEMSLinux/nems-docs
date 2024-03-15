@@ -20,42 +20,20 @@ NEMS NConf Parameters
 Commands
 --------
 
-+-------------------+-----------------------------------------------------------------+
-| command           | description                                                     |
-+-------------------+-----------------------------------------------------------------+
-| **state**         | check the current service state of vservers (e.g. lb, vpn,     |
-|                   | gslb), services and service groups and servers                  |
-+-------------------+-----------------------------------------------------------------+
-| **matches,       | check if a string matches the the api response or not           |
-| matches_not**     |                                                                 |
-+-------------------+-----------------------------------------------------------------+
-| **above, below**  | check if a value is above/below a threshold (e.g. traffic      |
-|                   | limits, concurrent connections)                                 |
-+-------------------+-----------------------------------------------------------------+
-| **sslcert**       | check the lifetime for installed ssl certificates               |
-+-------------------+-----------------------------------------------------------------+
-| **nsconfig**      | check for configuration changes which are not saved to disk     |
-+-------------------+-----------------------------------------------------------------+
-| **license**       | check the expiry date of a local installed license file         |
-+-------------------+-----------------------------------------------------------------+
-| **hastatus**      | check the high availability status of a appliance               |
-+-------------------+-----------------------------------------------------------------+
-| **staserver**     | check if configured STA (secure ticket authority) servers are   |
-|                   | available                                                       |
-+-------------------+-----------------------------------------------------------------+
-| **servicegroup**  | check the state of a servicegroup and its members               |
-+-------------------+-----------------------------------------------------------------+
-| **hwinfo**        | just print information about the Netscaler itself               |
-+-------------------+-----------------------------------------------------------------+
-| **interfaces**    | check state of all interfaces and add performance data for each |
-|                   | interface                                                       |
-+-------------------+-----------------------------------------------------------------+
-| **perfdata**      | gather performancedata from all sorts of API endpoints          |
-+-------------------+-----------------------------------------------------------------+
-| **ntp**           | check the ntp synchronization status                            |
-+-------------------+-----------------------------------------------------------------+
-| **debug**         | debug command, print all data for a endpoint                    |
-+-------------------+-----------------------------------------------------------------+
+- `state` - check the current service state of vservers (e.g. lb, vpn, gslb), services, and service groups and servers
+- `matches`, `matches_not` - check if a string matches the API response or not
+- `above`, `below` - check if a value is above/below a threshold (e.g. traffic limits, concurrent connections)
+- `sslcert` - check the lifetime for installed SSL certificates
+- `nsconfig` - check for configuration changes which are not saved to disk
+- `license` - check the expiry date of a locally installed license file
+- `hastatus` - check the high availability status of an appliance
+- `staserver` - check if configured STA (secure ticket authority) servers are available
+- `servicegroup` - check the state of a service group and its members
+- `hwinfo` - just print information about the Netscaler itself
+- `interfaces` - check the state of all interfaces and add performance data for each interface
+- `perfdata` - gather performance data from all sorts of API endpoints
+- `ntp` - check the NTP synchronization status
+- `debug` - debug command, print all data for an endpoint
 
 
 Source
