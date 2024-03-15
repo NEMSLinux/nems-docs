@@ -14,7 +14,7 @@ Usage
 Check Command
 ~~~~~~~~~~~~~
 
-*check_pve* is part of NEMS Linux 1.7+.
+.. note:: *check_pve* is part of NEMS Linux 1.7+.
 
 Usage
 ~~~~~
