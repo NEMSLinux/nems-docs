@@ -9,6 +9,9 @@ Check Command: check_truepool
 | |check_truepool|  |
 +-------------------+
 
+**Regrettably, TruePool shut down in 2022. However, leaving this here for now since
+this check command can be adapted and used with other Chia pool servers.**
+
 `TruePool.io <https://truepool.io/>`__ is a trusted Chia cryptocurrency farming
 (mining) pool. This NEMS check command allows you to check your TruePool.io
 farmer status to ensure your Chia farm is online and actively farming to the
