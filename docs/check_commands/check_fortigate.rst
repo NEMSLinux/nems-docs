@@ -73,60 +73,54 @@ Monitors the CPU usage of a slave unit in a Fortigate cluster, ensuring that it 
 **Parameters:** Community Name (default: public)
 
 
-Check Fortigate Slave RAM (check_fortigate_slave_mem)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Check Fortigate Slave RAM
+=========================
 
 Monitor the RAM usage of a slave unit in a Fortigate cluster, ensuring that it remains within acceptable thresholds to prevent performance degradation.
 
-Available Parameters
-^^^^^^^^^^^^^^^^^^^^
+**Check Command:** `check_fortigate_slave_mem`
 
-- Community Name (default: public)
+**Parameters:** Community Name (default: public)
 
-Check Fortigate Slave Network (check_fortigate_slave_net)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Check Fortigate Slave Network
+=============================
 
 Monitor the network traffic on a slave unit in a Fortigate cluster, ensuring that it remains within acceptable thresholds to prevent congestion and bottlenecks.
 
-Available Parameters
-^^^^^^^^^^^^^^^^^^^^
+**Check Command:** `check_fortigate_slave_net`
 
-- Community Name (default: public)
-- Warning Bytes (default: 500000)
-- Critical Bytes (default: 1000000)
+**Parameters:** Community Name (default: public), Warning Bytes (default: 500000), Critical Bytes (default: 1000000)
 
-Check Fortigate Slave Sessions (check_fortigate_slave_ses)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Check Fortigate Slave Sessions
+==============================
 
 This command monitors the session count on a slave unit in a Fortigate cluster, ensuring that it remains within acceptable levels to prevent resource exhaustion.
 
-Available Parameters
-^^^^^^^^^^^^^^^^^^^^^
+**Check Command:** `check_fortigate_slave_ses`
 
-- Community Name (default: public)
-- Warning Sessions (default: 4500)
-- Critical Sessions (default: 6000)
+**Parameters:** Community Name (default: public), Warning Sessions (default: 4500), Critical Sessions (default: 6000)
 
-Check Fortigate VPN (check_fortigate_vpn)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Check Fortigate VPN
+===================
 
 Monitor the status of VPN connections on a Fortigate device, ensuring that they are operational and secure. This check supports both IPSec and SSL/OpenVPN connections.
 
-Available Parameters
-^^^^^^^^^^^^^^^^^^^^
+**Check Command:** `check_fortigate_vpn`
 
-- Community Name (default: public)
-- VPN Mode: ipsec, ssl, both (default: both)
+**Parameters:** Community Name (default: public), VPN Mode: ipsec, ssl, both (default: both)
 
-Check Fortigate Access Points (check_fortigate_wtp)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Check Fortigate Access Points
+=============================
 
 Check the status of FortiAPs (WTPs) on a Fortigate device, ensuring that they are operational and properly configured.
 
-Available Parameters
-^^^^^^^^^^^^^^^^^^^^
+**Check Command:** `check_fortigate_wtp`
 
-- Community Name (default: public)
+**Parameters:** Community Name (default: public)
 
 
 
