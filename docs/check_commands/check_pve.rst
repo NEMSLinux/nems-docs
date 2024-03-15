@@ -11,13 +11,7 @@ filesystem usage on the PVE node, Proxmox VE version, memory usage and swap usag
 Usage
 -----
 
-Check Command
-~~~~~~~~~~~~~
-
 .. note:: *check_pve* is part of NEMS Linux 1.7+.
-
-Usage
-~~~~~
 
 Check Command Arguments
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,3 +45,13 @@ CLI Example
 .. code-block:: console
 
   ./check_pve ip=10.0.0.5 port=8006 node=myserver username=auditor password=Str0ngP4ssw0rd realm=pve check=load warn=80 crit=95
+
+Cache
+-----
+
+`check_pve` connects to your Proxmox VE server to generate a ticket to access the API with. This ticket is cached on your NEMS Server and
+re-used for the lifetime of the ticket. Tickets are automatically invalidated by PVE every 2 hours, so NEMS will automatically refresh
+your cached ticket every 90 minutes.
+
+We also cache the Proxmox version API JSON response to your NEMS Server for 6 hours, ensuring your server always knows the latest version, but
+without overtaxing the API.
