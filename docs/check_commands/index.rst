@@ -13,6 +13,8 @@ documentation:
    room temperature and humidity.
 -  `check_esxi_hardware <check_esxi_hardware.html>`__ -
    Monitor the hardware of ESX and ESXi servers.
+-  `check_fortigate <check_fortigate.html>`__ -
+   Check Fortinet FortiGate appliances.
 -  `check_http <check_http.html>`__ -
    Check the status of an HTTP/HTTPS server on a remote host.
 -  `check_ilo2_health <check_ilo2_health.html>`__ -
@@ -69,6 +71,7 @@ documentation:
     check_apc
     ../accessories/dhtsensors
     check_esxi_hardware
+    check_fortigate
     check_http
     check_ilo2_health
     check_internet_speed
