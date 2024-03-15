@@ -9,31 +9,35 @@ Checks Fortinet appliances via SNMP v1/v2c/v3, with perf data.
 
    Please note that Fortinet's use of the terms "master" and "slave" to distinguish between primary and secondary devices is an industry-standard terminology in the context of networking hardware. While NEMS Linux respects the terminology used by Fortinet for its products, it's essential to recognize that these terms can carry historical connotations and may not reflect the values of equity and inclusivity that we strive for in modern society. NEMS Linux is committed to supporting equity, diversity, and inclusion in all aspects of its development and operation.
 
+
 Available checkcommands
 ***********************
 
 Check Fortigate Cluster
 =======================
 
-**Check Command:** check_fortigate_cluster
+Check the status of a Fortigate cluster, providing information about the active/passive state and any warnings or critical alerts.
 
-**Description:** Check the status of a Fortigate cluster, providing information about the active/passive state and any warnings or critical alerts.
+**Check Command:** `check_fortigate_cluster`
 
-Available Parameters
---------------------
+Parameters
+----------
 
 - Community Name (default: public)
+
 
 Check Fortigate CPU
 ===================
 
-check_fortigate_cpu
+**Check Command:** `check_fortigate_cpu`
+
 Monitor the CPU usage of a Fortigate device, ensuring that it remains within acceptable thresholds to maintain optimal network performance.
 
-Available Parameters
-^^^^^^^^^^^^^^^^^^^^
+Parameters
+----------
 
 - Community Name (default: public)
+
 
 Check Fortigate RAM (check_fortigate_mem)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
