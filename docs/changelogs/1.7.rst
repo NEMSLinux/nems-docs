@@ -39,3 +39,4 @@ For more information: https://www.patreon.com/nems/posts?filters%5Btag%5D=Lockdo
 -  **New Feature:** Check command `check_mssql_mem` - Check memory usage on a MS SQL 2008, 2012 or 2019 server (SQL memory, not system).
 -  **New Feature:** Check command `check_fortigate` - Check Fortinet FortiGate devices with a number of useful checks.
 -  **New Feature:** Check command `check_netscaler` - Check Citrix Netscaler Application Delivery Controllers / load balancers.
+-  **Bug Fix:** ``nems-init`` and ``nems-passwd`` now allow special characters, such as * in passwords.
