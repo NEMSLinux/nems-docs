@@ -3,7 +3,7 @@ Check NetScaler ADC (check_netscaler)
 
 NEMS Linux monitors NetScaler Application Delivery Controllers.
   
-*check_netscaler* requires NEMS Linux 1.7 or higher.
+..note: *check_netscaler* requires NEMS Linux 1.7 or higher.
 
 
 NEMS NConf Parameters
