@@ -82,6 +82,7 @@ Documentation
     :caption: The Basics
 
     basic/default_password
+    basic/power_controller
     check_commands/index
     basic/backupnems
     basic/nav
