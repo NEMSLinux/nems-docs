@@ -10,6 +10,8 @@ Checks Fortinet appliances via SNMP v1/v2c/v3, with perf data.
 Fortigate Check Commands in NEMS Linux
 --------------------------------------
 
+.. note:: *check_fortigate* requires NEMS Linux 1.7 or higher.
+
 Check Fortigate Cluster (check_fortigate_cluster)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
