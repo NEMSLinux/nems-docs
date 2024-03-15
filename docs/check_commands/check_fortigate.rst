@@ -20,32 +20,28 @@ Check the status of a Fortigate cluster, providing information about the active/
 
 **Check Command:** `check_fortigate_cluster`
 
-**Parameters**
-
-- Community Name (default: public)
+**Parameters:** Community Name (default: public)
 
 
 Check Fortigate CPU
 ===================
 
-**Check Command:** `check_fortigate_cpu`
-
 Monitor the CPU usage of a Fortigate device, ensuring that it remains within acceptable thresholds to maintain optimal network performance.
 
-**Parameters:**
+**Check Command:** `check_fortigate_cpu`
 
-- Community Name (default: public)
+**Parameters:** Community Name (default: public)
 
 
-Check Fortigate RAM (check_fortigate_mem)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Check Fortigate RAM
+===================
 
 Monitor the RAM usage of a Fortigate device, ensuring that it remains within acceptable thresholds to prevent network performance degradation.
 
-Available Parameters
-^^^^^^^^^^^^^^^^^^^^
+**Check Command:** `check_fortigate_mem`
 
-- Community Name (default: public)
+**Parameters:** Community Name (default: public)
+
 
 Check Fortigate Network (check_fortigate_net)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
