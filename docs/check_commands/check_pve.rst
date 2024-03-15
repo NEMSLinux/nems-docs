@@ -55,3 +55,7 @@ your cached ticket every 90 minutes.
 
 We also cache the Proxmox version API JSON response to your NEMS Server for 6 hours, ensuring your server always knows the latest version, but
 without overtaxing the API.
+
+Caches are stored in `/tmp/pve_*.cache` which means if a miscreant obtained physical access to your NEMS Server they have up to 2 hours before your
+PVE API ticket expires. It is therefore imperative that you never use your `root` user or any user who has more than PVEAudit permissions to monitor
+a PVE server.
