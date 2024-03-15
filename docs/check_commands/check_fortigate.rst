@@ -20,8 +20,7 @@ Check the status of a Fortigate cluster, providing information about the active/
 
 **Check Command:** `check_fortigate_cluster`
 
-Parameters
-----------
+**Parameters**
 
 - Community Name (default: public)
 
@@ -33,8 +32,7 @@ Check Fortigate CPU
 
 Monitor the CPU usage of a Fortigate device, ensuring that it remains within acceptable thresholds to maintain optimal network performance.
 
-Parameters
-----------
+**Parameters:**
 
 - Community Name (default: public)
 
