@@ -18,8 +18,6 @@ Check Command
 
 Usage
 ~~~~~
-  
-./check_pve variable=value
 
 Check Command Arguments
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -33,6 +31,17 @@ Check Command Arguments
 - ``check``: Specify the check to perform (load, rootfs, version, memory, swap) [Required]
 - ``warn``: Warning threshold [int] percentage (default: 80)
 - ``crit``: Critical threshold [int] percentage (default: 95)
+
+Configuration
+~~~~~~~~~~~~~
+
+#. On Proxmox VE, create a new user for NEMS Linux to use for the API. Give that user **PVEAudit** permissions.
+#. In NEMS NConf
+  #. create a host entry for your Proxmox VE server.
+  #. Add the `check_pve` service to that host, setting the arguments appropriately for your environment.
+  #. Generate your NEMS config.
+
+.. Warning:: Never use your Proxmox VE root user or any user with more than **PVEAudit** permissions for monitoring.
 
 CLI Example
 ~~~~~~~~~~~
