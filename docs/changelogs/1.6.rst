@@ -392,14 +392,4 @@ January 8, 2023 - NEMS Linux 1.6 RC for Raspberry Pi released.
 
 February 22, 2023 - Fixed issue with new NEMS Servers not being imported to system, resulting in failed CheckIn account setup.
 
-[See official logs on GitHub for gap]
-
-1.6.1 DEVELOPMENT
-^^^^^^^^^^^^^^^^^
-
-January 2023
-
-- OS upgraded from Bullseye to Bookworm. Raspberry Pi 5 support requires moving the NEMS Linux base to Bookworm.
-- `Nagios Core` upgraded from 4.4.7 to 4.5.0.
-- `Python` upgraded from 3.9 to 3.11.
-- `mk-livestatus` upgraded from 1.5.0p23 to 2.2.0p17, which is typically unable to compile on Bookworm (gcc++-13 won't be available upstream until Trixie). Since previous versions of mk-livestatus SEGFAULT Nagios Core on modern implementations, I patched the source to compile with gcc++-12.
+Visit the official NEMS Linux `Git Changelog <https://nemslinux.com/changelog/>`__ for more.
