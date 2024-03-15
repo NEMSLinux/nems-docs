@@ -43,39 +43,35 @@ Monitor the RAM usage of a Fortigate device, ensuring that it remains within acc
 **Parameters:** Community Name (default: public)
 
 
-Check Fortigate Network (check_fortigate_net)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Check Fortigate Network
+=======================
 
 Monitor the network traffic on a Fortigate device, ensuring that it remains within acceptable thresholds to prevent congestion and bottlenecks.
 
-Available Parameters
-^^^^^^^^^^^^^^^^^^^^
+**Check Command:** `check_fortigate_net`
 
-- Community Name (default: public)
-- Warning Bytes (default: 500000)
-- Critical Bytes (default: 1000000)
+**Parameters:** Community Name (default: public), Warning Bytes (default: 500000), Critical Bytes (default: 1000000)
 
-Check Fortigate Sessions (check_fortigate_ses)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Check Fortigate Sessions
+========================
 
 Monitor the session count on a Fortigate device, ensuring that it remains within acceptable thresholds to prevent resource exhaustion.
 
-Available Parameters
-^^^^^^^^^^^^^^^^^^^^
+**Check Command:** `check_fortigate_ses`
 
-- Community Name (default: public)
-- Warning Sessions (default: 4500)
-- Critical Sessions (default: 6000)
+**Parameters:** Community Name (default: public), Warning Sessions (default: 4500), Critical Sessions (default: 6000)
 
-Check Fortigate Slave CPU (check_fortigate_slave_cpu)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Check Fortigate Slave CPU
+=========================
 
 Monitors the CPU usage of a slave unit in a Fortigate cluster, ensuring that it remains within acceptable thresholds for optimal performance.
 
-Available Parameters
-^^^^^^^^^^^^^^^^^^^^
+**Check Command:** `check_fortigate_slave_cpu`
 
-- Community Name (default: public)
+**Parameters:** Community Name (default: public)
+
 
 Check Fortigate Slave RAM (check_fortigate_slave_mem)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
