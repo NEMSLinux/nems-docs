@@ -6,7 +6,8 @@ NEMS Linux monitors NetScaler Application Delivery Controllers.
 *check_netscaler* requires NEMS Linux 1.7 or higher.
 
 
-**Parameters:**
+NEMS NConf Parameters
+---------------------
 
 - `Check Name` - See the table below for the available commands.
 - `Object Name` - The object name to check.
