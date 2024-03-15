@@ -35,8 +35,9 @@ documentation:
    Operating System. 
 -  `check_nems_osb <check_nems_osb.html>`__
    Determine whether NEMS Migrator Offsite Backup was successful.
--  `check_nems_php_agent <check_nems_php_agent.html>`__
+-  `check_nems_php_agent <check_nems_php_agent.html>`__ -
    Monitor a Linux web server that has PHP using your custom NEMS PHP Agent.
+-  `check_netscaler <check_netscaler.html>`__ - Monitor your Netscaler ADC device or cluster.
 -  `check_nrpe <check_nrpe.html>`__ -
    Monitor your hosts at a deeper level. Things like CPU usage, free
    disk space, free RAM, and so-on.
@@ -83,6 +84,7 @@ documentation:
     check_ncpa
     check_nems_osb
     check_nems_php_agent
+    check_netscaler
     check_nrpe
     check_ping
     check_pve
