@@ -1,11 +1,8 @@
 Reboot or Power Off NEMS Server
 ###############################
 
-NEMS Linux 1.7 or Newer
-***********************
-
 NEMS Power Controller
-=====================
+*********************
 
 NEMS Linux (since version 1.7) includes NEMS Power Controller.
 From within NEMS Power Controller, you can safely reboot or power
@@ -18,11 +15,9 @@ down.
 
 You'll find NEMS Power Controller on the "System" menu.
 
-Legacy Versions of NEMS Linux
-*****************************
 
 Cockpit
-=======
+*******
 
 On legacy NEMS Servers, login to Cockpit with Administrator access enabled
 and look for the power options in the top right.
