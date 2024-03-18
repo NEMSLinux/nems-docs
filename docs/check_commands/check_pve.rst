@@ -60,7 +60,8 @@ The following check provide additional Performance Data:
 
 ``load``
 
-- CPU load in percentage
+- Current CPU load in percentage
+- The low and high CPU load in percentage over the last 15 minutes
 - Number of available threads
 - Load average (1m, 5m, 15m)
 
