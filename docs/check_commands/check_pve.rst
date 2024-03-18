@@ -46,12 +46,43 @@ CLI Example
 
   ./check_pve ip=10.0.0.5 port=8006 node=myserver username=auditor password=Str0ngP4ssw0rd realm=pve check=load warn=80 crit=95
 
+Output
+------
+
+Performance Data
+~~~~~~~~~~~~~~~~
+
+``check_pve`` outputs PerfData for further inspection, historical record or aggregation.
+
+All ``check_pve`` checks log their regular response (E.g., rootfs provides PerfData for the percentage of root filesystem usage).
+
+The following check provide additional Performance Data:
+
+``load``
+
+- CPU load in percentage
+- Number of available threads
+- Load average (1m, 5m, 15m)
+
+``version``
+
+- Currently running version of Proxmox
+- Latest version of Proxmox available
+
+``swap``
+
+- Swap usage in percentage
+- Swap space available
+- Swap space usage
+
 Cache
 -----
 
 `check_pve` connects to your Proxmox VE server to generate a ticket to access the API with. This ticket is cached on your NEMS Server and
 re-used for the lifetime of the ticket. Tickets are automatically invalidated by PVE every 2 hours, so NEMS will automatically refresh
-your cached ticket every 90 minutes.
+your cached ticket every 90 minutes. Make sure you are careful to input the correct PVEAuditor username and password on every instance of
+`check_pve` in your environment, otherwise you may experience odd authentication issues when the cache is recreated by an incorrectly-entered
+username/password combination.
 
 We also cache the Proxmox version API JSON response to your NEMS Server for 6 hours, ensuring your server always knows the latest version, but
 without overtaxing the API.
