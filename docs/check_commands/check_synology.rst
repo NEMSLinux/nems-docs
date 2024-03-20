@@ -51,19 +51,19 @@ In NEMS Configurator
 ^^^^^^^^^^^^^^^^^^^^
 
 - On the left menu, click **Add** next to **Hosts**
-- Enter a hostname for you recognize the device. *Synology* or *Synology NAS* are good examples.
-- Under **Address** enter the local IP address of your Synology device.
-- Leave **OS** set to Linux.
-- Set *monitored by* to **Default Nagios**
-- Set **max check attempts** to a reasonable number of attempts, such as 10.
-- Set *assign host to hostgroup* to **Synology** (Highlight it and press the single green arrow to add it to the right column).
+- Enter a friendly ``hostname`` for you to recognize the device. *Synology* or *Synology NAS* are good examples.
+- Under ``Address`` enter the local IP address of your Synology device.
+- Leave ``OS`` set to Linux.
+- Set ``monitored by`` to **Default Nagios**
+- Set ``max check attempts`` to a reasonable number of attempts, such as 10.
+- Set ``assign host to hostgroup`` to **Synology** (Highlight it and press the single green arrow to add it to the right column).
 - Click **submit**.
 
 This next step is currently required the first time you setup your Synology NAS. In a future release of NEMS Linux, we will include new defaults to remove this requirement, but for now, you must set your defaults:
 
 - Click **Show** next to **Advanced Services**.
 - Click the edit pencil icon next to **Synology Disks**.
-- Set **max check attempts** to a reasonable number of attempts, such as 10.
+- Set ``max check attempts`` to a reasonable number of attempts, such as 10.
 - Press **Submit**.
 - Repeat these steps for each of the Synology Advanced Services until all have a default **max check attempts** 
 
