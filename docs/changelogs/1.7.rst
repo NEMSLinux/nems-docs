@@ -68,3 +68,24 @@ Additional Notes
 -  Iperf3 running as daemon.
 -  Serial login enabled.
 -  ARMhf support to be deprecated in favor of AArch64.
+
+Known Issues at Release
+^^^^^^^^^^^^^^^^^^^^^^^
+
+The following issues exist at the time of release and will be fixed via ``nems-update``.
+
+**NEMS Migrator's ``nems-restore`` will import hosts and assign them the Linux OS even if they are not Linux.**
+
+You may use the bulk edit feature in NEMS NConf to change the OS of your hosts in a few clicks. A future upgrade to NEMS Migrator will store this NConf data in a SQLite3 database for later reconciliation. Since it does not exist in the Nagios Config files, the association is lost upon import.
+
+**NEMS Migrator's ``nems-restore`` will remove all example hostgroups from NEMS NConf.**
+
+This, too, is due to ``nems-restore`` attempting to reconcile Nagios Config files to our NConf database. Since the Nagios Config files only contain hostgroups that are in use, the import gives the appearance of all others being deleted. In fact, it is that the only hostgroups it can import are the ones that are currently in the Nagios Config from the backup. This data will also be included in a future upgrade of NEMS Migrator where hidden data will be stored in a separate database to allow enhanced reconciliation during a ``nems-restore`` operation.
+
+**Cockpit will show the Argon ONE service as failed when a user does not have a Argon ONE device.**
+
+The Argon ONE service will be added to the Optional Services tab of NEMS SST and pushed out via a ``nems-update``.
+
+**NEMS email notification failure recovery is unable to send missed messages due to a missing initialization of the $mail object.**
+
+This will be fixed and pushed out in a ``nems-update``.
