@@ -20,3 +20,5 @@ NEMS 1.8 is a future release.
    your NEMS server from outside the LAN (ie., if you have your NEMS
    server accessible on the Internet) they will get locked out if they
    try an incorrect password too many times.
+
+-  Add IPMI (freeipmi) if not added already.
