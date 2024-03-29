@@ -1,42 +1,70 @@
 NEMS Linux 1.7 Changelogs
 =========================
 
-The NEMS 1.7 release cycle will focus on modernizing the codebase, complete
-with a move to 64-bit and Python 3 and venv.
+The NEMS 1.7 release cycle focusses on modernizing the codebase, complete
+with a move to 64-bit, Python 3.11 and venv.
 
-**NEMS Linux 1.7 is currently under Developer Lockdown.**
-For more information: https://www.patreon.com/nems/posts?filters%5Btag%5D=Lockdown+2024
+NEMS Linux 1.7 introduced our first-ever Developer Lockdown. For more information: https://www.patreon.com/nems/posts?filters%5Btag%5D=Lockdown+2024
 
-**Key Development Features and Goals:**
+Release Dates
+-------------
+
+March 26, 2024 - NEMS Linux 1.7 for Raspberry Pi released to Patrons.
+March 29, 2024 - NEMS Linux 1.7 for Raspberry Pi released to the public.
+
+Release Notes
+-------------
+
+New Features
+^^^^^^^^^^^^
+
+-  Raspberry Pi 5 support, including boot from USB, has been implemented in NEMS Linux 1.7.
+-  NEMS Power Controller. Now you can safely reboot or shutdown your NEMS Server directly within NEMS Dashboard.
+-  Created ``nems-configs`` package, which will include base configurations, starting with monit.
+-  New check command ``check_pve`` - Check Proxmox Node.
+-  New check command ``check_mssql_mem`` - Check memory usage on a MS SQL 2008, 2012 or 2019 server (SQL memory, not system).
+-  New check command ``check_fortigate`` - Check Fortinet FortiGate devices with a number of useful checks.
+-  New check command ``check_netscaler`` - Check Citrix Netscaler Application Delivery Controllers / load balancers.
+
+Upgraded Features
+^^^^^^^^^^^^^^^^^
 
 -  Base upgraded to Bookworm.
--  ARMhf support to be deprecated in favor of AArch64.
+-  PHP upgraded to 8.2.
 -  Python moved to v3 stack due to 2.7 EOL, venv utilized. 3.11 is default with 3.9.2 also configured in update-alternatives.
--  Add IPMI (freeipmi) if not added already.
--  Upgrade CheckMK livestatus socket to 2.0+.
-
--  Iperf3 running as daemon.
--  Serial login enabled.
 -  livestatus upgraded to 2.1.0p37 (cannot go to 2.2 until Trixie due to GCC+-13 dependency).
 -  Nagios Core upgraded and held back to 4.4.14 to ensure optimum stability (4.5.x currently has issues with livestatus segfault).
 -  Nagios Mobile UI upgraded to 1.0.3 and then modified to support PHP 8.
 -  NEMS API upgraded to support PHP 8.
--  NEMS Livestatus Full upgraded to support PHP 8.
 -  NagiosTV upgraded to support PHP 8.
 -  Adagios built into a Python 3.9.2 Virtual Environment.
--  NEMS NConf updated to support PHP 8. Several bug fixes.
 -  Upgraded NagVis to 1.9.40, which includes PHP 8.2 support as well as other fixes since the previous 1.9.27 from NEMS 1.6.
--  Created `nems-configs` package, which will include base configurations, starting with monit.
--  Added Adagios to monit.
--  **New Feature:** NEMS Power Controller. Now you can safely reboot or shutdown your NEMS Server directly within NEMS Dashboard.
--  **Feature Improvement:** NEMS Migrator now reconciles the NEMS SST configuration against the current running server, and imports your settings from backup appropriately.
--  **Bug Fix:** NEMS Migrator resource.cfg reconciliation now functions as expected (so settings such as SMTP are reflected in your restored configuration).
--  **Feature Improvement:** NEMS Migrator output is more consistent and hides confidential information such as passwords during reconciliation.
--  **Bug Fix:** NEMS documentation has been fixed to point to the current repository (was still pointing to Cat5TV which redirects, but ReadTheDocs stopped following the redirect, so content was beginning to fall stale).
--  Raspberry Pi filesystem resizing on first boot is now done with NEMS Universal Filesystem Restore tool.
--  **Bug Fix:** Fixed nems-commits, which shows changelogs on the official NEMS Linux web site, but was lacking a few important submodules (nems-migrator, nconf).
--  **New Feature:** Check command `check_pve` - Check Proxmox Node.
--  **New Feature:** Check command `check_mssql_mem` - Check memory usage on a MS SQL 2008, 2012 or 2019 server (SQL memory, not system).
--  **New Feature:** Check command `check_fortigate` - Check Fortinet FortiGate devices with a number of useful checks.
--  **New Feature:** Check command `check_netscaler` - Check Citrix Netscaler Application Delivery Controllers / load balancers.
--  **Bug Fix:** ``nems-init`` and ``nems-passwd`` now allow special characters, such as * in passwords.
+-  NEMS NConf updated to support PHP 8. Several bug fixes.
+-  NEMS Livestatus Full upgraded to support PHP 8.
+
+Feature Improvements
+^^^^^^^^^^^^^^^^^^^^
+
+-  monit now watches the state of Adagios and restarts the service if it fails.
+-  NEMS Migrator now reconciles the NEMS SST configuration against the current running server, and imports your settings from backup appropriately.
+-  NEMS Migrator output is more consistent and hides confidential information such as passwords during reconciliation.
+-  NEMS Migrator's ``nems-restore`` now imports additional credentials, including Windows Active Directory.
+-  Raspberry Pi filesystem resizing on first boot is now done with NEMS Universal Filesystem Restore tool. This has been upgraded to support USB drives.
+-  TEMPer device check commands enhanced to include perfdata and nicer output.
+
+Bug Fixes
+^^^^^^^^^
+
+-  Fixed ``nems-commits`` which shows changelogs on the official NEMS Linux web site, but was lacking a few important submodules (nems-migrator, nconf).
+-  NEMS Migrator resource.cfg reconciliation now functions as expected (so settings such as SMTP are reflected in your restored configuration).
+-  ``nems-init`` and ``nems-passwd`` now allow special characters, such as * in passwords.
+-  ``nems-info`` cache file location check improved to store system user caches in /tmp/.nems_cache rather than attempting to save to a home folder, which was causing STDERR output in the logs since the folder didn't exist.
+-  Errors in NEMS NConf when saving hosts have been fixed. This bug affected 1.6 users.
+-  NEMS documentation has been fixed to point to the current repository (was still pointing to Cat5TV which redirects, but ReadTheDocs stopped following the redirect, so content was beginning to fall stale).
+
+Additional Notes
+^^^^^^^^^^^^^^^^
+
+-  Iperf3 running as daemon.
+-  Serial login enabled.
+-  ARMhf support to be deprecated in favor of AArch64.
