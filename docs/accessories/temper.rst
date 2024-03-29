@@ -184,6 +184,13 @@ As of NEMS Linux 1.5.2, both the temperature and humidity sensors are supported,
 * check_temper_temp
 * check_temper_hum
 
+Output
+------
+
+Temperature and relative humidity data are checked against both low and high thresholds. If the temperature or relative humidity are either too low or too high, the state of the check command will be affected. The checks are only in an OK state when the current sensor reading is neither too low, nor too high.
+
+NEMS Linux includes perfdata output for both checks: ``Temperature[low]``, ``Temperature[high]``, ``Humidity[low]``, ``Humidity[high]``. Since perfdata aggregation tools do not generally employ a direct means of understanding that a low threshold exists in addition to a high threshold, please be mindful that extra care may be required when designing your perfdata assimilation. E.g., a low warning temperature of 15°C will show critical if the room temperature is 20°C since perfdata does not usually work in the negative direction. NEMS Linux itself is not impacted by this as the state of the check command is correctly reported, however third-party tools which aggregate the perfdata will need extra care.
+
 Calibration
 -----------
 
