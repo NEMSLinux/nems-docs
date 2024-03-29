@@ -4,6 +4,11 @@ NEMS Linux Release MD5 Checksums
 Raspberry Pi Builds
 -------------------
 
+1.7
+~~~
+
+- 6c3d15f251846fbd077d52c50f103301  NEMS_v1.7-RPi-Build1.zip
+
 1.6
 ~~~
 
