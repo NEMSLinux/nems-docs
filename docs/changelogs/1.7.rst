@@ -4,7 +4,7 @@ NEMS Linux 1.7 Changelogs
 The NEMS 1.7 release cycle focusses on modernizing the codebase, complete
 with a move to 64-bit, Python 3.11 and venv.
 
-NEMS Linux 1.7 introduced our first-ever Developer Lockdown. For more information: https://www.patreon.com/nems/posts?filters%5Btag%5D=Lockdown+2024
+During the NEMS Linux 1.7 development push, we introduced our first-ever Developer Lockdown, which ended with a live Google Meet call between our lead developer and users. It was a huge success, and made it possible for NEMS Linux 1.7 to be released. Thank you to everyone who supported Developer Lockdown! For more information: https://www.patreon.com/nems/posts?filters%5Btag%5D=Lockdown+2024
 
 Release Dates
 -------------
