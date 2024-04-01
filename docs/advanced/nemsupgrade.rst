@@ -9,21 +9,29 @@ mean anything within the 1.2 rolling release cycle. This means 1.2
 (which can also be considered 1.2.0 if desired), 1.2.1, 1.2.2, and
 so-on.
 
-Legacy Distro Support
----------------------
+Major Release Upgrade Instructions
+----------------------------------
 
-`Upgrade NagiosPi or NEMS 1.0 to the Latest Version of
-NEMS <advanced/legacyupgrade.html>`__
+These steps may be followed to upgrade from one major point release to
+the next major point release. For example, this process will take you
+from NEMS Linux 1.1 to NEMS Linux 1.2, or NEMS Linux 1.2.x to NEMS Linux
+1.3, or even NEMS Linux 1.3 to 1.7, and so-on.
+
+1. Connect to your existing NEMS Linux dashboard from your computer and
+   press Migrator→Backup. That will give you your `backup.nems` file.
+2. Deploy the latest version of NEMS Linux on a **new** card (please use
+   a new card so you can always revert back to your existing NEMS Linux
+   if you have a problem).
+3. Boot your NEMS Server with the new NEMS Linux card and initialize it as normal
+   (instructions are provided via your web browser when you connect).
+4. Once you get to the dashboard simply go through the NEMS Migrator
+   `nems-restore <https://docs.nemslinux.com/en/latest/commands/nems-restore.html#how-to-restore-a-nems-migrator-backup>`__
+   process to restore your settings from your backup.nems file.
+
+.. Tip:: To save your backup.nems file to the new installation, you can browse to your home folder using samba (or \\nems.local\home in Windows).
 
 Rolling Release Upgrade Instructions
 ------------------------------------
-
-**Important Exception:** Due to the sudden and unexpected release of the
-Raspberry Pi 4 Model B 8 , NEMS Linux 1.5.2, while a point release, is
-in fact a major upgrade. Therefore, you will need to follow the Major
-Release Upgrade Instructions if you choose to deploy NEMS Linux 1.5.2.
-This is because the bootloader on the new board has changed from
-previous versions, so a rolling upgrade is not possible.
 
 A rolling release is a second decimal point release, and rolling
 upgrades are available within each major release as made available.
@@ -44,27 +52,8 @@ the `Initialization
 Instructions <../gettingstarted/initialization.html>`__ if that is the
 case.
 
-Major Release Upgrade Instructions
-----------------------------------
+Legacy Distro Support
+---------------------
 
-These steps may be followed to upgrade from one major point release to
-the next major point release. For example, this process will take you
-from NEMS Linux 1.1 to NEMS Linux 1.2, or NEMS Linux 1.2.x to NEMS Linux
-1.3, or ultimately, NEMS Linux 1.3 to 2.0, and so-on.
-
-1. Connect to your existing NEMS Linux dashboard from your computer and
-   press Migrator→Backup. That will give you your `backup.nems` file.
-2. Deploy the latest version of NEMS Linux on a **new** card (please use
-   a new card so you can always revert back to your existing NEMS Linux
-   if you have a problem).
-3. Boot your NEMS Server with the new NEMS Linux card and initialize it as normal
-   (instructions are provided via your web browser when you connect).
-4. Once you get to the dashboard simply go through the NEMS Migrator
-   `nems-restore <https://docs.nemslinux.com/en/latest/commands/nems-restore.html#how-to-restore-a-nems-migrator-backup>`__
-   process to restore your settings from your backup.nems file.
-
-Upgrade from NEMS Linux 1.0 or nagiospi
----------------------------------------
-
-See legacy upgrade documentation
-here: http://www.baldnerd.com/nems-migrator-legacy-upgrade/
+`Upgrade NagiosPi or NEMS 1.0 to the Latest Version of
+NEMS <advanced/legacyupgrade.html>`__
