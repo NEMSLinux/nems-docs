@@ -4,10 +4,27 @@ Upgrade NEMS Linux to Newer Version
 Definition of Version Terms
 ---------------------------
 
+Major Release
+^^^^^^^^^^^^^
+
+The whole number and first decimal place of any NEMS Linux version
+represents the major release. 1.7 is a major release. A major release
+requires reinstallation of NEMS Linux. The steps to migrate all your
+settings is found below.
+
+Point Release
+^^^^^^^^^^^^^
+
 When we designate a version with an 'x', such as NEMS Linux 1.2.x, we
 mean anything within the 1.2 rolling release cycle. This means 1.2
 (which can also be considered 1.2.0 if desired), 1.2.1, 1.2.2, and
-so-on.
+so-on. Point releases within the currently-running major release can be
+obtained with the ``sudo nems-upgrade`` command.
+
+Summary
+^^^^^^^
+
+1.7 is a major release. 1.2.1 is the first point release of NEMS Linux 1.2.
 
 Major Release Upgrade Instructions
 ----------------------------------
@@ -41,7 +58,7 @@ features. An example of a rolling release would be going from NEMS Linux
 available, it is recommended to perform a major release upgrade to
 ensure you have the latest and greatest NEMS Linux has to offer.
 
-1. Login to NEMS Linux via SSH as the *pi* user.
+1. Login to NEMS Linux via SSH.
 2. Type: ``sudo nems-upgrade``
 3. Reboot.
 
