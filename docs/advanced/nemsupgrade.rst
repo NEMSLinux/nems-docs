@@ -73,4 +73,4 @@ Legacy Distro Support
 ---------------------
 
 `Upgrade NagiosPi or NEMS 1.0 to the Latest Version of
-NEMS <advanced/legacyupgrade.html>`__
+NEMS </advanced/legacyupgrade.html>`__
