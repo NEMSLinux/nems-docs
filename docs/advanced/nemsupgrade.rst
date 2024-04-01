@@ -45,7 +45,7 @@ from NEMS Linux 1.1 to NEMS Linux 1.2, or NEMS Linux 1.2.x to NEMS Linux
    `nems-restore <https://docs.nemslinux.com/en/latest/commands/nems-restore.html#how-to-restore-a-nems-migrator-backup>`__
    process to restore your settings from your backup.nems file.
 
-.. Tip:: To save your backup.nems file to the new installation, you can browse to your home folder using samba (or \\nems.local\home in Windows).
+.. Tip:: To save your backup.nems file to the new installation, you can browse to your home folder using samba (or \\\\nems.local\\home in Windows).
 
 Rolling Release Upgrade Instructions
 ------------------------------------
