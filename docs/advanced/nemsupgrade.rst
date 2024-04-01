@@ -24,7 +24,8 @@ obtained with the ``sudo nems-upgrade`` command.
 Summary
 ^^^^^^^
 
-1.7 is a major release. 1.2.1 is the first point release of NEMS Linux 1.2.
+1.7 is a major release. 1.2.1 is the first point release of NEMS Linux's
+major release 1.2.
 
 Major Release Upgrade Instructions
 ----------------------------------
