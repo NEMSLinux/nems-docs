@@ -19,6 +19,7 @@ New Features
 ^^^^^^^^^^^^
 
 -  Raspberry Pi 5 support, including boot from USB, has been implemented in NEMS Linux 1.7.
+-  AArch64 (ARM64) hypervisor support for Enterprise Edition Virtual Appliance.
 -  NEMS Power Controller. Now you can safely reboot or shutdown your NEMS Server directly within NEMS Dashboard.
 -  Created ``nems-configs`` package, which will include base configurations, starting with monit.
 -  New check command ``check_pve`` - Check Proxmox Node.
