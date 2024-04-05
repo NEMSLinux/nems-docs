@@ -14,5 +14,5 @@ NEMS Linux 1.0 was released May 8, 2016 and discontinued November 13, 2016. This
 * Manually installed NConf 1.3.0-0 “Final”, an Enterprise Nagios configuration tool. This tool was broken on NagiosPi’s instructions due to a missing symlink at /var/www/nconf, so I fixed that in my version. Access NConf via the “Configure Nagios” link on the main menu.
 * Includes `NagVis 1.7 <https://sourceforge.net/projects/nagvis/?source=navbar>`__ - want to do 1.9 but not until out of beta.
 * Built and integrated the first version of our menu system, which includes the first version of a custom Nagios skin to begin integrating a more modern interface. Menu accessible at http://nems/ (or http://IPADDRESS if that doesn’t work for you)
-* Added `a nice little MOTD <http://www.mewbies.com/how_to_customize_your_console_login_message_tutorial.htm|a nice little MOTD>`__.
+* Added `a nice little MOTD <http://mewbies.com/how_to_customize_your_console_login_message_tutorial.htm|a nice little MOTD>`__.
 * Added a simple cronjob to check our web site for the currently available version and warn you if yours is out of date.
