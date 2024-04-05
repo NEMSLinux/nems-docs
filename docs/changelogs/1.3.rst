@@ -1,4 +1,4 @@
-NEMS Linux 1.2 Changelogs (2017-2018)
+NEMS Linux 1.3 Changelogs (2017-2018)
 =====================================
 
 https://web.archive.org/web/20200921052539/https://docs.nemslinux.com/changelogs/nems_1.3
