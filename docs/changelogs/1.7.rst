@@ -1,5 +1,5 @@
-NEMS Linux 1.7 Changelogs
-=========================
+NEMS Linux 1.7 Changelogs (2024-Present)
+========================================
 
 The NEMS 1.7 release cycle focusses on modernizing the codebase, complete
 with a move to 64-bit, Python 3.11 and venv, as well as an effort to further enhance the Enterprise user experience by including features that are geared specifically toward larger organizations.
