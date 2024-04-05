@@ -1,5 +1,5 @@
-NEMS Linux 1.6 Changelogs
-=========================
+NEMS Linux 1.6 Changelogs (2023-2024)
+=====================================
 
 The NEMS 1.6 release cycle will focus on hardware porting and
 peripherals.
