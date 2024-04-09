@@ -35,6 +35,8 @@ Host Requirements
 
 -  Version 5.5 or higher. NEMS Linux uses Virtual Hardware Version 10.
 
+Conversion of VMDK may be required for vcentre. See: https://kb.vmware.com/s/article/1028943
+
 Guest Specifications
 --------------------
 
