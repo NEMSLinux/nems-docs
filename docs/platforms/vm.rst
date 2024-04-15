@@ -25,17 +25,19 @@ most popular virtualization hypervisors.
 Host Requirements
 -----------------
 
-*All Hypervisors*
+All Hypervisors
+^^^^^^^^^^^^^^^
 
 -  VT-x/AMD-V capable CPU with feature enabled in BIOS/UEFI
 -  Minimum 6 GB free RAM
 -  100 GB hard disk space
 
-*VMware ESXi Only*
+VMware ESXi
+^^^^^^^^^^^
 
--  Version 5.5 or higher. NEMS Linux uses Virtual Hardware Version 10.
+-  Version 7.0 or higher. NEMS Linux uses Virtual Hardware Version 14.
 
-Conversion of VMDK may be required for vcentre. See: https://kb.vmware.com/s/article/1028943
+To run NEMS Linux on a legacy version of ESXi, such as ESXi 6.7, you will need to extract the VMDK from the OVA file (rename the file ``.tar`` and open it with a tool such as tar or 7-zip) and use ``vmkfstools`` to expand the disk to thick provisioned. Please consider upgrading your hypervisor for official support. See: https://kb.vmware.com/s/article/1028943
 
 Guest Specifications
 --------------------
