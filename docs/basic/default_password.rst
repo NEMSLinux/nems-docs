@@ -9,9 +9,9 @@ This is used to sign-in to your NEMS Server (over SSH or keyboard connected
 to your NEMS Server) only until you
 run `nems-init <../commands/nems-init.html>`__.
 
-**Username:** *nemsadmin*
+**Username:** ``nemsadmin``
 
-**Password:** *nemsadmin*
+**Password:** ``nemsadmin``
 
 Post-Initialization
 -------------------
@@ -38,3 +38,12 @@ one of your staff access to your NEMS Server, you would need to give them
 your NEMS Administrator credentials. This will change as NEMS Linux evolves.
 Please consider supporting the project `on Patreon <https://patreon.com/nems>`__
 to help fund the development of NEMS Linux.
+
+Browser Reports Compromized Password
+------------------------------------
+
+The default ``nemsadmin`` password is a generic, single-use password that allows you
+to initialize your NEMS Administrator account / set your own password out-of-the-box.
+It is not left enabled on your NEMS Server, nor is your NEMS Server ever available to
+the outside world (unless you specifically do so, which is _not_ recommended). Use
+best practices, and never setup your NEMS Server to be publicly accessible.
