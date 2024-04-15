@@ -70,7 +70,12 @@ Global Deployment Notes
    “dynamic” RAM. ESXi, for example, may
    remove all RAM from the appliance if set to dynamic, which will
    result in NEMS Linux not functioning correctly. RAM should be static.
--  **Hyper-V** - Choose Generation 1 under Specify Generation when creating VM.   
+-  **Hyper-V** - Choose Generation 1 under Specify Generation when creating VM.
+-  Following initialization, you'll see a ``CPU Temperature`` check that reports an
+   unknown state since your hypervisor doesn't report CPU Temperature data for
+   virtual machines. You can remove this check in NEMS Configurator by going to
+   `Advanced Services` [Show], Edit `CPU Temperature`, and remove `NEMS` from your
+   assigned hosts. Save the change and generate your config.
 
 
 Installation Procedures
