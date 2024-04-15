@@ -4,7 +4,7 @@ NEMS Administrator User
 Default Username and Password
 -----------------------------
 
-The default username on a fresh installation of NEMS Linux is *nemsadmin*.
+The default username on a fresh installation of NEMS Linux is ``nemsadmin``.
 This is used to sign-in to your NEMS Server (over SSH or keyboard connected
 to your NEMS Server) only until you
 run `nems-init <../commands/nems-init.html>`__.
