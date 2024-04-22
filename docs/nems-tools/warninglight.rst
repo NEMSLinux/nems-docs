@@ -115,7 +115,8 @@ Pi device into a NEMS Tools GPIO Extender.
 NEMS Warning Light: Webhook
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-NEMS Warning Light also provides the ability to notify by webhook. See `notify-by-webhook <../notifications/webhook.html>`__ for details.
+NEMS Warning Light's webhook integration has been replaced.
+See `notify-by-webhook <../notifications/webhook.html>`__ for details.
 
 
 NEMS Warning Light: Log Files
