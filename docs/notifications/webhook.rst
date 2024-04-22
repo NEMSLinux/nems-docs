@@ -10,10 +10,14 @@ Send notifications directly to your webhook. For example, have
 your NEMS Linux server post alerts directly to your company Discord
 channel.
 
-To use NEMS Warning Light's webhook feature, simply add your
-webhook to `NEMS SST <../apps/nems-sst.html>`__.
+To have your NEMS Server notify you via webhook, simply add your
+webhook to `NEMS SST <../apps/nems-sst.html>`__ and then add
+notify-by-webhook to both the Host and Service notifications for your
+contact in NEMS Configurator.
 
-Webhook functionality requires NEMS Linux 1.5+. NEMS only sends
+Webhook functionality was first introduced in NEMS Linux 1.5, but that
+version was deprecated in favor of notify-by-webhook. Therefore, webhook
+notifications require NEMS Linux 1.7+. NEMS only sends
 webhooks. It does not receive them.
 
 Currently Supported Webhooks:
@@ -21,18 +25,10 @@ Currently Supported Webhooks:
 
 -  Discord
 -  Slack
--  Microsoft Office 365 / Teams
+-  Microsoft Teams
 
 If you would like support added for another webhook, please simply put
 it in as a feature request in the Community Forum.
-
-Configuring Webhooks
---------------------
-
-Microsoft Office 365 / Teams
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  Sign in to `Microsoft Teams <https://teams.microsoft.com/>`__
 
 Test Your Webhook
 -----------------
