@@ -11,6 +11,7 @@ Release Dates
 
 -  March 26, 2024 - NEMS Linux 1.7 for Raspberry Pi released to Patrons.
 -  March 29, 2024 - NEMS Linux 1.7 for Raspberry Pi released to the public.
+-  April 29, 2024 - NEMS Linux 1.7 Virtual Appliance released to Patrons.
 
 Release Notes
 -------------
