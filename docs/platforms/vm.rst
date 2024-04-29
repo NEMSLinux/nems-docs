@@ -3,8 +3,7 @@
 NEMS Linux Virtual Appliance
 ============================
 
-The NEMS Linux Virtual Appliance is only available
-to `Patrons <https://patreon.com/nems>`__.
+The NEMS Linux Virtual Appliance however is a commercial build for business datacentres, and is only available on a subscription basis, or as a perk to those who `support NEMS Linux on Patreon <https://patreon.com/nems>`__. An active subscription is required in order to operate the Nagios Enterprise Monitoring Server Virtual Appliance. Your ongoing support helps fund the development of NEMS Linux. If you are looking to obtain NEMS Linux for free, please check out one of the popular releases for Single Board Computers instead.
 
 The NEMS Linux virtual appliance has 3 available releases:
 
@@ -32,12 +31,14 @@ All Hypervisors
 -  Minimum 6 GB free RAM
 -  100 GB hard disk space
 
+NEMS Linux uses Virtual Hardware Version 10 to ensure backward compatibility with legacy hypervisors.
+
 VMware ESXi
 ^^^^^^^^^^^
 
--  Version 7.0 or higher. NEMS Linux uses Virtual Hardware Version 14.
+NEMS Linux OVA has been built to work on ESXi version 5.5 or higher. 7.0+ recommended.
 
-To run NEMS Linux on a legacy version of ESXi, such as ESXi 6.7, you will need to extract the VMDK from the OVA file (rename the file ``.tar`` and open it with a tool such as tar or 7-zip) and use ``vmkfstools`` to expand the disk to thick provisioned. Please consider upgrading your hypervisor for official support. See: https://kb.vmware.com/s/article/1028943
+If deploying NEMS Linux on a legacy version of ESXi (such as ESXi 6.7) fails due to the virtual hard disk being thin-provisioned, you may extract the VMDK from the OVA file (rename the file ``.tar`` and open it with a tool such as ``tar`` or 7-zip) and use ``vmkfstools`` to expand the disk to thick provisioned. Please consider upgrading your hypervisor for official support. See: https://kb.vmware.com/s/article/1028943
 
 Guest Specifications
 --------------------
@@ -67,7 +68,7 @@ Global Deployment Notes
    machine's BIOS/UEFI settings and will be called VT-x (Intel) or AMD-V
    (AMD), or something similar such as “Virtualization Extensions”.
 -  **Static RAM Mode** - Ensure RAM is :underline:`not` assigned as
-   “dynamic” RAM. ESXi, for example, may
+   "dynamic" RAM. ESXi, for example, may
    remove all RAM from the appliance if set to dynamic, which will
    result in NEMS Linux not functioning correctly. RAM should be static.
 -  **Hyper-V** - Choose Generation 1 under Specify Generation when creating VM.
