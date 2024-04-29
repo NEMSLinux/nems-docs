@@ -21,6 +21,8 @@ The underlying software in each release is identical. The individual
 releases are created in order to ease deployment across a variety of the
 most popular virtualization hypervisors.
 
+.. Note:: All NEMS Virtual Appliance images are downloaded via BitTorrent. There is no other way to download the enterprise edition of NEMS Linux.
+
 Host Requirements
 -----------------
 
