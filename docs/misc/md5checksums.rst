@@ -278,6 +278,11 @@ Virtual Appliances
 OVA
 ~~~
 
+1.7
+^^^
+
+- 2ab49bec570ede7d7cb56dad3206a296  NEMS_v1.7-VM_x64-Build1.ova
+
 1.6
 ^^^
 
@@ -292,6 +297,11 @@ OVA
 QCOW2
 ~~~~~
 
+1.7
+^^^
+
+- ffe1612c428f7443a12cd70b94e7a9d9  NEMS_v1.7-VM_x64-Build1-QCOW2.zip
+
 1.6
 ^^^
 
@@ -305,6 +315,11 @@ QCOW2
 
 VHD
 ~~~
+
+1.7
+^^^
+
+- 4aa69bbfd8c0136bd8e844815e9b637d  NEMS_v1.7-VM_x64-Build1-VHD.zip
 
 1.6
 ^^^
