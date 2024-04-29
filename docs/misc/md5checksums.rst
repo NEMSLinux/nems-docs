@@ -319,6 +319,7 @@ VHD
 1.7
 ^^^
 
+- 66e5a8f21c69e0407e35d8a9d24e7f0e  NEMS_v1.7-VM_x64-Build1.vhd
 - 4aa69bbfd8c0136bd8e844815e9b637d  NEMS_v1.7-VM_x64-Build1-VHD.zip
 
 1.6
