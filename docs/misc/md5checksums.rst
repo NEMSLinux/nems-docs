@@ -300,6 +300,7 @@ QCOW2
 1.7
 ^^^
 
+- 07ab023de8712e05ef9a8779a06586db  NEMS_v1.7-VM_x64-Build1.qcow2
 - ffe1612c428f7443a12cd70b94e7a9d9  NEMS_v1.7-VM_x64-Build1-QCOW2.zip
 
 1.6
