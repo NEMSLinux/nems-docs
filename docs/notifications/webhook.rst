@@ -12,7 +12,7 @@ channel.
 
 To have your NEMS Server notify you via webhook, simply add your
 webhook to `NEMS SST <../apps/nems-sst.html>`__ and then add
-notify-by-webhook to both the Host and Service notifications for your
+``notify-by-webhook`` to both the Host and Service notifications for your
 contact in NEMS Configurator.
 
 Webhook functionality was first introduced in NEMS Linux 1.5, but that
