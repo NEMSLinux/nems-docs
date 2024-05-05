@@ -73,7 +73,7 @@ was created by Robbie Ferguson.
   :align: center
   :alt: NEMS Configurator
 
--  `nconf_logo.png <../img/brannding/nconf_logo.png>`__
+-  `nconf_logo.png <../img/branding/nconf_logo.png>`__
 -  `nconf_logo.xcf <../_static/branding/nconf_logo.xcf>`__
 
 NEMS TV Dashboard
@@ -103,3 +103,15 @@ AnjaliOldLipi font in #699bdf (light blue, representing the sky).
   :alt: NEMS Cloud Services
 
 -  `ncs.png <../_static/branding/ncs.png>`__
+
+NEMS Generic Icons
+------------------
+
+A 1:1 icon, perfect for webhooks or app icons.
+
+.. figure:: ../img/NEMS_Application_Icon_sm.png
+  :width: 150
+  :align: center
+  :alt: NEMS Application Icon
+
+-  `NEMS_Application_Icon.png <../_static/branding/NEMS_Application_Icon.png>`__
