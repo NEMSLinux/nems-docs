@@ -23,15 +23,16 @@ webhook URL to `NEMS SST <../apps/nems-sst.html>`__ (under *Notifications*)
 and then add ``notify-by-webhook`` to both the Host and Service notifications
 for your contact in NEMS Configurator.
 
-Currently Supported Webhooks
-----------------------------
+Supported Webhooks
+------------------
 
+-  Microsoft Teams
 -  Discord
 -  Slack
--  Microsoft Teams
 
-If you would like support added for another webhook, please simply put
-it in as a feature request in the Community Forum.
+If you would like support added for another application, please post a
+feature request in the
+`nems-plugins Issue Tracker <https://github.com/NEMSLinux/nems-plugins/issues>`__.
 
 Test Your Webhook
 -----------------
