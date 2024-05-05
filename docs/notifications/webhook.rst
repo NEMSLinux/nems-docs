@@ -6,9 +6,12 @@ Receiving Notifications via Webhook
   :align: right
   :alt: Webhook Notification
 
-Send notifications directly to your webhook. For example, have
-your NEMS Linux server post alerts directly to your company Discord
-channel.
+Webhooks provide a means of publishing notifications to applications in real-time.
+
+NEMS Linux can use webhooks to send alerts about server downtime or performance issues
+directly to a designated Microsoft Teams or Slack channel, or Discord server. This allows
+you and your team to stay informed in real-time without having to continuously monitor
+your NEMS Server or email.
 
 Webhook functionality was first introduced in NEMS Linux 1.5, but that
 version was deprecated in favor of notify-by-webhook. Therefore, webhook
