@@ -92,3 +92,8 @@ The Argon ONE service will be added to the Optional Services tab of NEMS SST and
 **NEMS email notification failure recovery is unable to send missed messages due to a missing initialization of the $mail object.**
 
 This will be fixed and pushed out in a ``nems-update``.
+
+July 2024
+^^^^^^^^^
+
+- [nems-configs] Increased PHP memory limit for apache to 512M. As the default was 128M, this would cause occasional interface issues, such as NEMS Tactical Overview failing to load correctly after a heavy event day.
