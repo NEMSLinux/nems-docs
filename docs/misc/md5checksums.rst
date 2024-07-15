@@ -7,6 +7,7 @@ Raspberry Pi Builds
 1.7
 ~~~
 
+- 93c74a4b65e83f06c159352f6f9c719e  NEMS_v1.7-RPi-Build2.zip
 - 6c3d15f251846fbd077d52c50f103301  NEMS_v1.7-RPi-Build1.zip
 
 1.6
@@ -281,6 +282,7 @@ OVA
 1.7
 ^^^
 
+- 2543f16a618ed8c02ee49a6689385cb9  NEMS_v1.7-VM_x64-Build2.ova
 - 2ab49bec570ede7d7cb56dad3206a296  NEMS_v1.7-VM_x64-Build1.ova
 
 1.6
@@ -300,6 +302,8 @@ QCOW2
 1.7
 ^^^
 
+- 22700f39342083e748ac5d479871b4e7  NEMS_v1.7-VM_x64-Build2.qcow2
+- cee49e6f89b718bf63e1f6e508ca720d  NEMS_v1.7-VM_x64-Build2-QCOW2.zip
 - 07ab023de8712e05ef9a8779a06586db  NEMS_v1.7-VM_x64-Build1.qcow2
 - ffe1612c428f7443a12cd70b94e7a9d9  NEMS_v1.7-VM_x64-Build1-QCOW2.zip
 
@@ -320,6 +324,8 @@ VHD
 1.7
 ^^^
 
+- d79cfe31b307fef5d7d7c45ef8b39cbe  NEMS_v1.7-VM_x64-Build2.vhd
+- 4228aa18dde4d5e4e4af958f5015be2f  NEMS_v1.7-VM_x64-Build2-VHD.zip
 - 66e5a8f21c69e0407e35d8a9d24e7f0e  NEMS_v1.7-VM_x64-Build1.vhd
 - 4aa69bbfd8c0136bd8e844815e9b637d  NEMS_v1.7-VM_x64-Build1-VHD.zip
 
