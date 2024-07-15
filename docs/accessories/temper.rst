@@ -89,6 +89,13 @@ NEMS Linux includes support for TEMPer temperature and humidity sensor data. Thi
      - ✔
      - ✔
      - ✘
+   * - TEMPerHUM
+     - 3553:a001
+     - TEMPerHUM_V4.1
+     - ✔
+     - ✔
+     - ✔
+     - ✘
    * - TEMPer2
      - 413d:2107
      - TEMPerX_V3.3
