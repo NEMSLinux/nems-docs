@@ -21,6 +21,8 @@ Available Command Options
    version of NEMS Linux, excluding rolling update subversion.
 -  ``nems-info nemsveravail`` - Output the latest available
    version of NEMS Linux.
+-  ``nems-info nemsverglobavail`` - Output the global highest
+   version of NEMS Linux regardless of the current platform.
 -  nems-info  users`` - Output the number of users connected to
    your NEMS Linux server (ie., through SSH or direct console).
 -  ``nems-info diskusage`` - Output how much disk usage you are
