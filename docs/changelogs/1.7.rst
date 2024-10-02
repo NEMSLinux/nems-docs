@@ -94,6 +94,10 @@ The Argon ONE service will be added to the Optional Services tab of NEMS SST and
 
 This will be fixed and pushed out in a ``nems-update``.
 
+October 2024
+^^^^^^^^^^^^
+- [nems-plugins] Added ``pywbem`` which fixes check_esxi_hardware.
+
 July 2024
 ^^^^^^^^^
 
