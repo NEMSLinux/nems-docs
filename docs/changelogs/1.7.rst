@@ -96,7 +96,7 @@ This will be fixed and pushed out in a ``nems-update``.
 
 October 2024
 ^^^^^^^^^^^^
-- [nems-plugins] Added ``pywbem`` which fixes [check_esxi_hardware issue](https://github.com/NEMSLinux/nems-plugins/issues/3).
+- [nems-plugins] Added ``pywbem`` which fixes `check_esxi_hardware issue <https://github.com/NEMSLinux/nems-plugins/issues/3>`_.
 
 July 2024
 ^^^^^^^^^
