@@ -129,6 +129,8 @@ CLI Usage
 - 4 - Older sensors, usually without PCB, Default
 - 18 - Newer sensors (expecially KY-015), often with PCB
 
+**Note:** Specifying the GPIO Pin is optional since the check will attempt to automatically detect the sensor on either pin 4 or 18.
+
 JSON Output
 -----------
 
