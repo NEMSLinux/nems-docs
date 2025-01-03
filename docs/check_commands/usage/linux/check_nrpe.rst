@@ -24,7 +24,7 @@ Debian-based Linux operating systems (as root):
 
 .. code:: bash
 
-   wget -O - https://raw.githubusercontent.com/Cat5TV/nems-admin/master/build/047-nrpe | bash
+   wget -O - https://raw.githubusercontent.com/NEMSLinux/nems-admin/refs/heads/master/build/047-nrpe | bash
 
 **Please note:** Rudimentary support for RPM-based distros is included,
 but may not work. Please consider RPM support as experimental, and
