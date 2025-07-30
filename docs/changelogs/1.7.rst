@@ -104,4 +104,11 @@ July 2024
 - [nems-configs] Increased PHP memory limit for apache to 512M. As the default was 128M, this would cause occasional interface issues, such as NEMS Tactical Overview failing to load correctly after a heavy event day.
 - [nems-scripts] Added TEMPerHUM_V4.1 3553:a001 support for temper.py (used by check_temper_*).
 - Issued and committed new GPG Key for NEMS Linux apt repositories.
+
+
+July 2025
+^^^^^^^^^
+
+- [nems-scripts] Automate obtaining GPG key for NEMS' apt repository.
+- [nems-admin] Fix issue with upstream MariaDB update breaking MySQL on Raspberry Pi.
 - [nems-scripts] Added ``nems-info nemsverglobavail`` which reveals the newest version of NEMS Linux available across all platforms (not just the currently running platform).
