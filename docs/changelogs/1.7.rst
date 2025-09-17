@@ -106,3 +106,4 @@ This will be fixed and pushed out in a ``nems-update``.
 - [Repositories] Issued and committed new GPG Key for NEMS Linux apt repositories. Automated this process for future. If you can't apt-update, run: `wget -O - https://repos.nemslinux.com/nemslinux.gpg.key | sudo gpg --batch --yes --dearmor -o /etc/apt/trusted.gpg.d/trusted.gpg`
 - [nems-scripts] Automate obtaining GPG key for NEMS' apt repository.
 - [nems-admin] Fix issue with upstream MariaDB update breaking MySQL on Raspberry Pi.
+- [nems-migrator-data] Database has been upgraded to 10.11.6-MariaDB and sample database contains the now required InnoDB `ib_logfile0`.
