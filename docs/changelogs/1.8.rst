@@ -22,3 +22,8 @@ NEMS 1.8 is a future release.
    try an incorrect password too many times.
 
 -  Add IPMI (freeipmi) if not added already.
+
+Changelogs
+^^^^^^^^^^
+
+- [Security] nemsadmin user no longer supports passwordless login. See https://github.com/NEMSLinux/nems-scripts/issues/6
