@@ -27,3 +27,4 @@ Changelogs
 ^^^^^^^^^^
 
 - [Security] nemsadmin user no longer supports passwordless login. See https://github.com/NEMSLinux/nems-scripts/issues/6
+- [New Feature] check_rpi_watchdog - Monitor state of Raspberry Pi's built-in watchdog. See https://github.com/NEMSLinux/nems-admin/issues/19
