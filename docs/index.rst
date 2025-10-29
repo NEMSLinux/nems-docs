@@ -244,6 +244,7 @@ Credits
 NEMS Linux includes contributions from many open source projects and individuals.
 
 **See:**
+
 - :doc:`Documentation Contributors <credits>`
 - `Credit Roll <https://nemslinux.com/credits/>`__
 
