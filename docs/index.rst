@@ -213,12 +213,6 @@ Documentation
      
 .. toctree::
     :maxdepth: 1
-    :caption: Credits
-
-    credits
-    
-.. toctree::
-    :maxdepth: 1
     :caption: NEMS SaaS
 
     nems-saas/index
@@ -247,8 +241,11 @@ As NEMS Linux continues to grow, our support options are also evolving. At prese
 Credits
 -------
 
-Please see the
-`NEMS Linux Credits page <https://nemslinux.com/credits/>`__.
+NEMS Linux includes contributions from many open source projects and individuals.
+
+**See:**
+- :doc:`Documentation Contributors <credits>`
+- `Credit Roll <https://nemslinux.com/credits/>`__
 
 Patrons
 -------
