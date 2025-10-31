@@ -23,8 +23,11 @@ Available Command Options
    version of NEMS Linux.
 -  ``nems-info nemsverglobavail`` - Output the global highest
    version of NEMS Linux regardless of the current platform.
--  ``nems-info users`` - Output the number of users connected to
-   your NEMS Linux server (ie., through SSH or direct console).
+-  ``nems-info users plain`` - Output the number of user
+   connections to your NEMS Linux server (ie., through SSH or
+   direct console). Optional ``plain`` variable ensures only a
+   number is output. Omitting this optional variable will instead
+   output human-readable format.
 -  ``nems-info diskusage`` - Output how much disk usage you are
    currently using on your NEMS Linux server, in percentage.
 -  ``nems-info memusage`` - Output a memory usage breakdown of
