@@ -28,3 +28,5 @@ Changelogs
 
 - [Security] nemsadmin user no longer supports passwordless login. See https://github.com/NEMSLinux/nems-scripts/issues/6
 - [New Feature] check_rpi_watchdog - Monitor state of Raspberry Pi's built-in watchdog. See https://github.com/NEMSLinux/nems-admin/issues/19
+- [Bug Fix] ``nems-info username`` now correctly obtains the nemsuser value from config.
+- [Improvement] ``nems-info username`` fallback to htpasswd now restricts result to first username since NEMS Linux 1.8 introduces multi-user support. The first user in the htpasswd will be the nemsuser from ``nems-init`` since it was added at file creation time.
