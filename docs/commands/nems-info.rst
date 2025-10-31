@@ -23,16 +23,16 @@ Available Command Options
    version of NEMS Linux.
 -  ``nems-info nemsverglobavail`` - Output the global highest
    version of NEMS Linux regardless of the current platform.
--  nems-info  users`` - Output the number of users connected to
+-  ``nems-info users`` - Output the number of users connected to
    your NEMS Linux server (ie., through SSH or direct console).
 -  ``nems-info diskusage`` - Output how much disk usage you are
    currently using on your NEMS Linux server, in percentage.
--  ``nems-info  memusage`` - Output a memory usage breakdown of
+-  ``nems-info memusage`` - Output a memory usage breakdown of
    your NEMS Linux server.
--  ``nems-info  country`` - Output the country code of your NEMS
+-  ``nems-info country`` - Output the country code of your NEMS
    Linux server, based on the timezone settings you configured
    during `nems-init <nems-init.html>`__.
--  ``nems-info  hwver`` - Output the revision of your NEMS Linux
+-  ``nems-info hwver`` - Output the revision of your NEMS Linux
    server hardware.
 -  ``nems-info hwid`` - Output your NEMS Linux server's unique
    NEMS Hardware ID.
