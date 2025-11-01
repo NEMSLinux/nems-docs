@@ -31,3 +31,4 @@ Changelogs
 - [Bug Fix] ``nems-info username`` now correctly obtains the nemsuser value from config.
 - [Improvement] ``nems-info username`` fallback to htpasswd now restricts result to first username since NEMS Linux 1.8 introduces multi-user support. The first user in the htpasswd will be the nemsuser from ``nems-init`` since it was added at file creation time.
 - [Improvement] ``nems-info users`` now offers an optional variable ``plain`` which strips the human-readable text, resulting in only a number being output.
+- [Bug Fix] Livestatus join typo fixed in ``nems-api`` within ``nems-www``. See https://github.com/NEMSLinux/nems-www/issues/1
