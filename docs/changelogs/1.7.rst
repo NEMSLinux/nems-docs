@@ -94,6 +94,10 @@ The Argon ONE service will be added to the Optional Services tab of NEMS SST and
 
 This will be fixed and pushed out in a ``nems-update``.
 
+2026
+^^^^
+- [nems-plugins] An upstream bug in ``speed-cloudflare-cli`` was causing speedtest to fail. After waiting for upstream fix to occur, finally gave in and patched the code myself and made it part of ``nems-plugins`` instead of pulling from the seemingly dead project.
+
 2024
 ^^^^
 - [nems-plugins] Added ``pywbem`` which fixes `check_esxi_hardware issue <https://github.com/NEMSLinux/nems-plugins/issues/3>`_.
