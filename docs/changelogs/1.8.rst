@@ -36,3 +36,4 @@ Changelogs
 - [Infrastructure] ``Repos`` server upgraded.
 - [Infrastructure] ``Repos`` GPG key renewed and deployed.
 - [Upgrade] ``Debian`` Linux base system upgraded from Bookwork to Trixie.
+- [Upgrade] ``nems-prep`` updated to modern standards.
