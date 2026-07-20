@@ -37,3 +37,4 @@ Changelogs
 - [Infrastructure] ``Repos`` GPG key renewed and deployed.
 - [Upgrade] ``Debian`` Linux base system upgraded from Bookwork to Trixie.
 - [Upgrade] ``nems-prep`` updated to modern standards.
+- [Upgrade] ``ntp`` to ``ntpsec`` - a secure, hardened, and streamlined open-source implementation of the Network Time Protocol (NTP).
