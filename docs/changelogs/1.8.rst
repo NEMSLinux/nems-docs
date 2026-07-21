@@ -36,3 +36,4 @@ Changelogs
 - [Bug Fix] ``nems-plugins`` check_snmp now creates user scratch folder for state information. See https://github.com/NEMSLinux/nems-plugins/issues/5
 - [Improvement] ``nems-scripts`` dhtxx 2.1 fixes JSON output on retries (was outputting notices to output rather than STDERR). Improved dynamic GPIO pin detection. Readied script for updates to check_dhtxx.
 - [Upgrade] ``nems-plugins`` OpenJDK upgraded to version 25.
+- [Improvement] ``nems-plugins`` check_dhtxx 1.1 Added optional GPIO pin parameter ($ARG6$) and improved PHP 8 json_decode handling.
