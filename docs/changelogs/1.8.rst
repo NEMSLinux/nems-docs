@@ -33,3 +33,5 @@ Changelogs
 - [Upgrade] ``ntp`` to ``ntpsec`` - a secure, hardened, and streamlined open-source implementation of the Network Time Protocol (NTP).
 - [Upgrade] ``libgpiod2`` upgraded to ``libgpiod3`` to make ``nems-scripts`` installable on NEMS Linux 1.8 (based on Debian Trixie).
 - [Upgrade] ``nrpe`` upgraded to 4.1.3 (final).
+- [Bug Fix] ``check_snmp`` now creates user scratch folder for state information. See https://github.com/NEMSLinux/nems-plugins/issues/5
+- [Improvement] ``dhtxx`` 2.1 fixes JSON output on retries (was outputting notices to output rather than STDERR). Improved dynamic GPIO pin detection. Readied script for updates to check_dhtxx.
