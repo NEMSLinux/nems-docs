@@ -42,3 +42,4 @@ Changelogs
 - [Improvement] ``nems-plugins`` automatically replace obsolete plugins from monitoring-plugins-basic if we have a custom version.
 - [Improvement] ``apt-listchanges`` has been removed. Due to changes in the Trixie python stack, it causes errors, and is not required (or even desired).
 - [Upgrade] ``NagiosTV`` to 0.9.11 (NEMS Tactical Overview).
+- [Upgrade] ``Python`` now 3.13.5 but 3.9 is still installed for Adagios in an isolated folder.
