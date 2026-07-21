@@ -43,3 +43,4 @@ Changelogs
 - [Improvement] ``apt-listchanges`` has been removed. Due to changes in the Trixie python stack, it causes errors, and is not required (or even desired).
 - [Upgrade] ``NagiosTV`` to 0.9.11 (NEMS Tactical Overview).
 - [Upgrade] ``Python`` now 3.13.5 but 3.9 is still installed for Adagios in an isolated folder.
+- [New Feature] ``nems-ai`` is a proof-of-concept, *entirely optional* (you have to install it) application that allows chat-style queries against NEMS documentation and general knowledge via a locally-running AI engine, with no external servers utilized. Private, compliant, and potentially useful in time.
