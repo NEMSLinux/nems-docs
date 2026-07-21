@@ -1,4 +1,4 @@
-NEMS Linux 1.7 Changelogs (2024-Present)
+NEMS Linux 1.7 Changelogs (2024-2026)
 ========================================
 
 The NEMS 1.7 release cycle focusses on modernizing the codebase, complete
@@ -14,6 +14,8 @@ Release Dates
 -  March 29, 2024 - NEMS Linux 1.7 for Raspberry Pi released to the public.
 -  April 29, 2024 - NEMS Linux 1.7 Virtual Appliance released to Patrons.
 -  May 5, 2024 - NEMS Linux Enterprise Subscription launched. Now, business users may purchase annual licenses which include support incidents and upgrades.
+
+After an incredible 2 year cycle, NEMS Linux 1.7 reached end of development July 21, 2026 to be superseded by NEMS Linux 1.8.
 
 Release Notes
 -------------
