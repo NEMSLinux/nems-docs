@@ -47,3 +47,4 @@ Changelogs
 - [New Feature] ``nems-ai`` is a proof-of-concept, *entirely optional* (you have to install it) application that allows chat-style queries against NEMS documentation and general knowledge via a locally-running AI engine, with no external servers utilized. Private, compliant, and potentially useful in time.
 - [Bug Fix] ``nems-plugins`` now creates a venv at /opt/nems-venv for pywbem and check_esxi_* since pywbem was conflicting with deb package causing build to fail at 052.
 - [Upgrade] ``check_mk`` Livestatus required compatibility with Trixie. Create makefile from Debian 12 and now compiles successfully.
+- [Upgrade] ``LuaJIT`` no longer offers tarbal packages. Upgrade from 2.1.0-beta3 to current build (2.1.1784580905 at time of development). Now achieving build level 161.
