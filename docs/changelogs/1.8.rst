@@ -46,3 +46,4 @@ Changelogs
 - [Improvement] ``nems-docs`` now has a ``nems-docs-debpack`` which makes nems-docs installable via apt. This is important as the new nems-ai application uses the NEMS documentation as its source of truth for NEMS information.
 - [New Feature] ``nems-ai`` is a proof-of-concept, *entirely optional* (you have to install it) application that allows chat-style queries against NEMS documentation and general knowledge via a locally-running AI engine, with no external servers utilized. Private, compliant, and potentially useful in time.
 - [Bug Fix] ``nems-plugins`` now creates a venv at /opt/nems-venv for pywbem and check_esxi_* since pywbem was conflicting with deb package causing build to fail at 052.
+- [Upgrade] ``check_mk`` Livestatus required compatibility with Trixie. Create makefile from Debian 12 and now compiles successfully.
