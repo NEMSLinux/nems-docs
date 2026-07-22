@@ -50,3 +50,4 @@ Changelogs
 - [Upgrade] ``LuaJIT`` no longer offers tarbal packages. Upgrade from 2.1.0-beta3 to current build (2.1.1784580905 at time of development). Now achieving build level 161.
 - [Upgrade] ``Adagios`` refactored to use the new nems-venv Python 3.9 environment.
 - [Upgrade] With Nagios Core being upgraded to 4.5.13, combined with the lack of a Debian 13 makefile in the last working version, mk-livestatus could no longer be compiled against NEMS Linux 1.8. So I wrote a patch into the installer for both Nagios (052) to store the source and headers in a persistent location, and the check_mk build script (055) to use those headers to patch the source before compiling. Now, Checkmk Livestatus is compatible with modern Nagios, now and in future.
+- [Bug Fix] ``Python`` (038) hold back buildpackages to version 82 due to removal of pkg_resources, which is still required by Adagios. Rework the Adagios build script (180) to install needed packages.
