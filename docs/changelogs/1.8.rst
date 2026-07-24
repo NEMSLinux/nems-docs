@@ -55,3 +55,4 @@ Changelogs
 - [Improvement] ``NagiosTV`` has been held back to 0.9.3 to correct a host compatibility issue with NEMS Linux 1.8. Will work with the developer to correct in later issues. Also added status section to show current status at a glance on NEMS Tactical Overview.
 - [Bug Fix] ``Livestatus`` requires libboost to compile. Ensure it is installed prior to building from source. This gets us past Build Level 055 on a vanilla build.
 - [New Feature] ``nems-init`` now also initializes the superadmin user in NEMS Linux 1.8's multi-user environment.
+- [Improvement] ``Power Controller`` now uses the new NEMS multi-user environment login system.
