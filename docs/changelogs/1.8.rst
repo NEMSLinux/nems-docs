@@ -56,3 +56,4 @@ Changelogs
 - [Bug Fix] ``Livestatus`` requires libboost to compile. Ensure it is installed prior to building from source. This gets us past Build Level 055 on a vanilla build.
 - [New Feature] ``nems-init`` now also initializes the superadmin user in NEMS Linux 1.8's multi-user environment.
 - [Improvement] ``Power Controller`` now uses the new NEMS multi-user environment login system.
+- [Improvement] ``nems-www`` NEMS Server Overview, NEMS System Settings Tool, NEMS Migrator updated to use new Multi-User login system and ULA.
