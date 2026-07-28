@@ -58,3 +58,4 @@ Changelogs
 - [Improvement] ``Power Controller`` now uses the new NEMS multi-user environment login system.
 - [Improvement] ``nems-www`` NEMS Server Overview, NEMS System Settings Tool, NEMS Migrator updated to use new Multi-User login system and ULA.
 - [Bug Fix] ``nems-plugins`` nems_sendmail_host and nems_sendmail_service reworked for PHP 8 compatibility, improve declarations to prevent notices, and a typo that caused the temp file to never be deleted.
+- [Improvement] ``NEMS User Manager`` styles fixed, role list sorted from least to most powerful role (Viewer ... Superadmin).
