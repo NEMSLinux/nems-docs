@@ -66,3 +66,4 @@ Changelogs
 - [Upgrade] ``NagVis`` upgraded to 1.10.6.
 - [Improvement] ``NagVis`` now integrated into NEMS ULA SSO.
 - [Upgrade] ``Monit`` upgraded to 6.0.0.
+- [Improvement] ``Monit`` is now integrated into NEMS ULA SSO. No longer accessible on port, but passes through local proxy for authentication. ``nems-www`` navigation updated to the new path.
