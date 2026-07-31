@@ -70,3 +70,4 @@ Changelogs
 - [Improvement] ``NEMS ULA SSO`` will redirect the user to a friendly error message if they are logged in but have insufficient access to open the page requested.
 - [Bug Fix] ``NEMS ULA SSO`` fixed bug in how I was detecting the user role. Now, detection is correct for non-admin roles.
 - [Improvement] ``NEMS Dashboard`` Donate link no longer offers a default value, making it more clear that the user can set the value. Moved away from old Category5 donation URL and integrate into nemslinux.com
+- [Bug Fix] ``glancesweb`` was not loading in NEMS Linux 1.8. Moved to venv (/opt/nems-venv), removed deprecated hddtemp and activated modern sensors.
