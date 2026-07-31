@@ -71,3 +71,4 @@ Changelogs
 - [Bug Fix] ``NEMS ULA SSO`` fixed bug in how I was detecting the user role. Now, detection is correct for non-admin roles.
 - [Improvement] ``NEMS Dashboard`` Donate link no longer offers a default value, making it more clear that the user can set the value. Moved away from old Category5 donation URL and integrate into nemslinux.com
 - [Bug Fix] ``glancesweb`` was not loading in NEMS Linux 1.8. Moved to venv (/opt/nems-venv), removed deprecated hddtemp and activated modern sensors.
+- [Improvement] ``nems-init`` now uses Whiptail for all prompts, providing a more polished overall experience. Laid the CLI groundwork for a headless mode initialization which will tie in to a web-based nems-init process in a future update. Updated to conform with compliance standards set by the new NEMS ULA system, including minimum password length, and a dialogue promoting the use of a role account.
