@@ -74,3 +74,4 @@ Changelogs
 - [Improvement] ``nems-init`` now uses Whiptail for all prompts, providing a more polished overall experience. Laid the CLI groundwork for a headless mode initialization which will tie in to a new web-based nems-init process. Updated to conform with compliance standards set by the new NEMS ULA system, including minimum password length, and a dialogue promoting the use of a role account.
 - [Improvement] ``Cockpit`` has been placed behind the local proxy and is passing through NEMS ULA. While Cockpit still requires the user login, only users who are already signed in to NEMS Linux as an admin+ user can open it.
 - [Improvement] ``nems-www`` NEMS Web Init is fully functional and tied to NEMS ULA. This was required in order to harden Cockpit, so the timing was right to create such a system. Now, users never need to enter the terminal.
+- [Improvement] ``raspi-config`` set WiFi country to US to correctly remove MOTDD warning message about WiFi being disabled.
