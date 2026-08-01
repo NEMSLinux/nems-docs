@@ -77,3 +77,5 @@ Changelogs
 - [Improvement] ``raspi-config`` set WiFi country to US to correctly remove MOTDD warning message about WiFi being disabled.
 - [Improvement] ``nems-migrator-data`` modified the MOTD (which is shown when connecting to NEMS Server via SSH) to support NEMS Linux 1.8. Added modernizations (memory and disk usage bar) to freshen it up for 1.8.
 - [Bug Fix] ``nems-plugins`` was storing plugins owned by the nemsadmin user, who only exists at build time. Corrected to root user.
+- [Improvement] ``nems-www`` multiple modifications to navigation to ensure apps displayed on menu match the apps available to user based on their role in ULA.
+- [Improvement] ``Nagios Core`` is now connected to NEMS ULA SSO and displays the correct user, no longer prompting for htpasswd.
