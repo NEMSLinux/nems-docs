@@ -75,3 +75,4 @@ Changelogs
 - [Improvement] ``Cockpit`` has been placed behind the local proxy and is passing through NEMS ULA. While Cockpit still requires the user login, only users who are already signed in to NEMS Linux as an admin+ user can open it.
 - [Improvement] ``nems-www`` NEMS Web Init is fully functional and tied to NEMS ULA. This was required in order to harden Cockpit, so the timing was right to create such a system. Now, users never need to enter the terminal.
 - [Improvement] ``raspi-config`` set WiFi country to US to correctly remove MOTDD warning message about WiFi being disabled.
+- [Improvement] ``nems-migrator-data`` modified the MOTD (which is shown when connecting to NEMS Server via SSH) to support NEMS Linux 1.8. Added modernizations (memory and disk usage bar) to freshen it up for 1.8.
