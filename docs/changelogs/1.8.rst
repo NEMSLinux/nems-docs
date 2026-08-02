@@ -79,3 +79,4 @@ Changelogs
 - [Bug Fix] ``nems-plugins`` was storing plugins owned by the nemsadmin user, who only exists at build time. Corrected to root user.
 - [Improvement] ``nems-www`` multiple modifications to navigation to ensure apps displayed on menu match the apps available to user based on their role in ULA.
 - [Improvement] ``Nagios Core`` is now connected to NEMS ULA SSO and displays the correct user, no longer prompting for htpasswd.
+- [Improvement] ``nems-migrator-data`` MOTD first displayed the Linux PAM module's "Last Login" date and time, which has terrible formatting and looks awful on close inspection. Thanks to MarshMan for pointing this out during Developer Lockdown v3! I disabled the PAM Last Login print line, and replaced it with a custom Last Login output directly from the motd.tcl file.
