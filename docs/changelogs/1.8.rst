@@ -83,3 +83,4 @@ Changelogs
 - [New Feature] ``check_arp_ping`` now added as Check Command and new check-host-alive-arp added, as per https://github.com/NEMSLinux/nems-plugins/issues/21
 - [Bug Fix] ``NEMS Merch Store`` Spring severed the subdomain connection without warning so the NEMS Merch Store link was pointing to some random dude's store. I created a redirect at the DNS level to point NEMS Merch Store visitors to the Spring store URL.
 - [Improvement] ``NEMS Configurator`` now defaults check_ping and check-host-alive to IPv4.
+- [Improvement] ``MOTD`` the custom Last Login was just too finicky. I decided to pull it; it's more trouble than it's worth. Now, the MOTD looks perfect.
