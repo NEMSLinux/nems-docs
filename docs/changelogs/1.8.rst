@@ -86,3 +86,4 @@ Changelogs
 - [Improvement] ``MOTD`` the custom Last Login was just too finicky. I decided to pull it; it's more trouble than it's worth. Now, the MOTD looks perfect.
 - [New Feature] ``check_ssl_cert`` now checks the state of a SSL certificate deployed on a server as per https://github.com/NEMSLinux/nems-plugins/issues/17
 - [Bug Fix] ``pnp4nagios`` was abandoned by the original creator, and the old version does not work in NEMS Linux 1.8. Rebased to new maintainers and rewrote the installer to compile this tool correctly (to fix NagiosGraph).
+- [Improvement] ``pnp4nagios`` file processing of perfdata configured in NEMS Nconf and pushed upstream. Nagios configuration updated to run perfdata every 15 minutes.
