@@ -82,3 +82,4 @@ Changelogs
 - [Improvement] ``nems-migrator-data`` MOTD first displayed the Linux PAM module's "Last Login" date and time, which has terrible formatting and looks awful on close inspection. Thanks to MarshMan for pointing this out during Developer Lockdown v3! I disabled the PAM Last Login print line, and replaced it with a custom Last Login output directly from the motd.tcl file.
 - [New Feature] ``check_arp_ping`` now added as Check Command and new check-host-alive-arp added, as per https://github.com/NEMSLinux/nems-plugins/issues/21
 - [Bug Fix] ``NEMS Merch Store`` Spring severed the subdomain connection without warning so the NEMS Merch Store link was pointing to some random dude's store. I created a redirect at the DNS level to point NEMS Merch Store visitors to the Spring store URL.
+- [Improvement] ``NEMS Configurator`` now defaults check_ping and check-host-alive to IPv4.
