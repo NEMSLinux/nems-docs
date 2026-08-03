@@ -88,3 +88,5 @@ Changelogs
 - [Bug Fix] ``pnp4nagios`` was abandoned by the original creator, and the old version does not work in NEMS Linux 1.8. Rebased to new maintainers and rewrote the installer to compile this tool correctly (to fix NagiosGraph).
 - [Improvement] ``pnp4nagios`` file processing of perfdata configured in NEMS Nconf and pushed upstream. Nagios configuration updated to run perfdata every 15 minutes.
 - [Deprecation] ``nagiosgraph`` has been dead since 2014. Decided to remove it from NEMS Linux, replaced with pnp4nagios, which was also abandoned but has been picked up by another developer and is back in active development.
+
+- [Bug Fix] ``Cockpit`` added sscg to silence a certificate helper error in systemd.
