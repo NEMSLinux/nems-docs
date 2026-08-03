@@ -92,3 +92,4 @@ Changelogs
 - [Bug Fix] ``Cockpit`` added sscg to silence a certificate helper error in systemd.
 - [Bug Fix] ``Cockpit`` adjusted the proxy configuration to allow connection to /cockpit/ regardless of the IP address of the NEMS Server. Fixed websocket passthru via proxy and error in rewrite.
 - [Bug Fix] ``Glances`` rewrote the systemd service to ensure glancesweb waits until the network is ready before attempting to load.
+- [Improvement] ``smartmontools`` will be disabled out of the box on Raspberry Pi since it's very likely the drive in use is not SMART compatible. User can still activate the service if a compatible drive is connected.
