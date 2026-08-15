@@ -103,3 +103,5 @@ Changelogs
 - [Improvement] ``nems-www`` no longer generates new snakeoil certificate on update, resulting in user having to accept new self-signed cert every time the package is updated.
 - [Improvement] ``nems-update`` update suppresses ``pip`` error on NEMS Linux 1.8 (pip is now installed and maintained via repository). Ensure packages are only upgraded (not installed if removed). If NEMS AI is installed, make sure it's up-to-date; if not, skip it.
 - [Bug Fix] ``nems-init`` restarts the ``rpimonitor`` daemon after changing the username. Previously, the daemon would continue running as the nemsadmin user until the next reboot, which made it impossible to fully purge the temporary nemsadmin user until after a reboot (not a security risk; the account was disabled just not deleted).
+- [Bug Fix] ``nems-cert`` would not detect newer Raspberry Pi models correctly so would not restart the rpimonitor daemon after installing the new certificate.
+- [Improvement] ``nems-cert`` added the --no-restart option to allow preventing the restart of services following new certificate creation (would hang first-run cert creation).
