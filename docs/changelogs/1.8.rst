@@ -101,3 +101,4 @@ Changelogs
 - [Improvement] ``nems-www`` NEMS SST custom wallpaper upload size limit raised to 20M. Was previously pointing to the wrong php.ini so will have been PHP's default.
 - [Improvement] ``nems-www`` now hides the Reporting -> Modern / Legacy header for any ULA role level that doesn't have access to the legacy tools. Also NEMS Mobile UI is now hidden from users who are not at least an Operator.
 - [Improvement] ``nems-www`` no longer generates new snakeoil certificate on update, resulting in user having to accept new self-signed cert every time the package is updated.
+- [Improvement] ``nems-update`` update suppresses ``pip`` error on NEMS Linux 1.8 (pip is now installed and maintained via repository). Ensure packages are only upgraded (not installed if removed). If NEMS AI is installed, make sure it's up-to-date; if not, skip it.
