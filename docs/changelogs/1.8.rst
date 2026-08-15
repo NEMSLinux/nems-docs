@@ -100,3 +100,4 @@ Changelogs
 - [Improvement] ``PHP`` memory limit defaults to 128 MB, which can result in problems for NEMS Tactical Overview when displaying status history on a particularly active NEMS Server. Increased this limit to 512 MB.
 - [Improvement] ``nems-www`` NEMS SST custom wallpaper upload size limit raised to 20M. Was previously pointing to the wrong php.ini so will have been PHP's default.
 - [Improvement] ``nems-www`` now hides the Reporting -> Legacy header for any ULA role level that doesn't have access to the legacy tools.
+- [Improvement] ``nems-www`` no longer generates new snakeoil certificate on update, resulting in user having to accept new self-signed cert every time the package is updated.
