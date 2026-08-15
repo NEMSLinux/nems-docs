@@ -98,3 +98,4 @@ Changelogs
 - [Improvement] ``nems-cert`` (which generates SSL and SSH certificates) now runs at first boot rather than during ``nems-init`` process. This ensures all NEMS Servers have a unique certificate, but doesn't break the browser's trust relationship during browser-based Initialization.
 - [Bug Fix] ``NEMS SSO`` now breaks out of frames. If a session timed out while within a frame-based app (such as Cockpit), the login form would load inside the frame rather than closing the app. This fixes that behavior.
 - [Improvement] ``PHP`` memory limit defaults to 128 MB, which can result in problems for NEMS Tactical Overview when displaying status history on a particularly active NEMS Server. Increased this limit to 512 MB.
+- [Improvement] ``nems-www`` NEMS SST custom wallpaper upload size limit raised to 20M. Was previously pointing to the wrong php.ini so will have been PHP's default.
