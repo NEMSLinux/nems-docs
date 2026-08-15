@@ -105,3 +105,4 @@ Changelogs
 - [Bug Fix] ``nems-init`` restarts the ``rpimonitor`` daemon after changing the username. Previously, the daemon would continue running as the nemsadmin user until the next reboot, which made it impossible to fully purge the temporary nemsadmin user until after a reboot (not a security risk; the account was disabled just not deleted).
 - [Bug Fix] ``nems-cert`` would not detect newer Raspberry Pi models correctly so would not restart the rpimonitor daemon after installing the new certificate.
 - [Improvement] ``nems-cert`` added the --no-restart option to allow preventing the restart of services following new certificate creation (would hang first-run cert creation).
+- [Improvement] ``nems-scripts`` console screen will no longer suggest connecting via SSH to initialize NEMS Linux since this is now done through the browser.
