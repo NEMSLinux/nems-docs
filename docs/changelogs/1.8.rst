@@ -99,3 +99,4 @@ Changelogs
 - [Bug Fix] ``NEMS SSO`` now breaks out of frames. If a session timed out while within a frame-based app (such as Cockpit), the login form would load inside the frame rather than closing the app. This fixes that behavior.
 - [Improvement] ``PHP`` memory limit defaults to 128 MB, which can result in problems for NEMS Tactical Overview when displaying status history on a particularly active NEMS Server. Increased this limit to 512 MB.
 - [Improvement] ``nems-www`` NEMS SST custom wallpaper upload size limit raised to 20M. Was previously pointing to the wrong php.ini so will have been PHP's default.
+- [Improvement] ``nems-www`` now hides the Reporting -> Legacy header for any ULA role level that doesn't have access to the legacy tools.
