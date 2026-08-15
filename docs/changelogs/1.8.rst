@@ -106,3 +106,4 @@ Changelogs
 - [Bug Fix] ``nems-cert`` would not detect newer Raspberry Pi models correctly so would not restart the rpimonitor daemon after installing the new certificate.
 - [Improvement] ``nems-cert`` added the --no-restart option to allow preventing the restart of services following new certificate creation (would hang first-run cert creation).
 - [Improvement] ``nems-scripts`` console screen will no longer suggest connecting via SSH to initialize NEMS Linux since this is now done through the browser.
+- [Improvement] ``nems-update`` ensure nconf can be updated despite the folder not being owned by the root user.
