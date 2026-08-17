@@ -1,22 +1,22 @@
 NEMS Linux 1.8 Changelogs (2026-Present)
 ========================================
 
-NEMS 1.8 is a future release currently under heavy development.
+NEMS Linux 1.8 is the currently-supported version, introducing significant enterprise-focused features. NEMS Linux 1.8 is built to be the most cohesive Nagios Core appliance yet, with an improved UX and industry compliant focus.
 
-**Key Development Features and Goals:**
+Key Development Features
+^^^^^^^^^^^^^^^^^^^^^^^^
 
--  **Firewall** - NEMS Linux was originally set to include `ConfigServer Security &
-   Firewall (csf) with Login Failure Daemon (lfd)`_. However, that project
-   has been abandoned. A different firewall may be implemented. Internal LAN IP
-   addresses are whitelisted by default, but if a user tries to access
-   your NEMS server from outside the LAN (ie., if you have your NEMS
-   server accessible on the Internet) they will get locked out if they
-   try an incorrect password too many times.
--  Add IPMI (freeipmi) if not added already.
--  Begin work on smart home assistant integration: NEMS Skill for Alexa
-   and Google Assistant.
+- **Web-Based *nems-init*:** Initialization has been modernized into a clean web interface. No more need to enter the CLI.
+- **Comprehensive Single Sign-On (SSO) with User-Level Access (ULA):** Full SSO integration across Nagios Core, Adagios, Monit and more, all powered by a brand new NEMS ULA system. Adagios now recognizes your actual username through the SSO account instead of defaulting to an anonymous user.
+- **NEMS User Manager:** Includes integrated role access (e.g., Operator+ access for Adagios, Admin-only access for Cockpit). This is huge for industry compliance, and the cohesiveness it provides between multiple applications provides a refined user experience.
+- **Backend Modernization:** Revived and fixed the Glances web frontend, activated PNP4Nagios, integrated new checks (like *check_ssl_cert*), and patched core components for PHP 8.4 compatibility.
+- **Fine-Tuned Details:** Modernized MOTD, optimized log rotations, and fine-tuned system permissions across the entire system.
 
-July 20-25, 2026 - NEMS Linux 1.8 is the primary focus of the 3rd annual NEMS Developer Lockdown.
+Important Dates
+^^^^^^^^^^^^^^^
+
+- July 20 - August 3, 2026 - NEMS Linux 1.8 was the primary focus of the 3rd annual NEMS Developer Lockdown. The normally 1-week-long event was extended for a second week to ensure the release of NEMS Linux 1.8.
+- August 16, 2026 - NEMS Linux 1.8 for Raspberry Pi released to paying Patrons.
 
 Changelogs
 ^^^^^^^^^^
