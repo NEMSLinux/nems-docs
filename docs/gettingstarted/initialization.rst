@@ -1,30 +1,17 @@
 Initialization
 ==============
 
-.. raw:: html
+The NEMS Initialization screen greets you the first time you point your browser at your new NEMS Server.
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/8zHruceYgRU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Generally speaking, the only time you’ll really have to touch the Linux terminal on a NEMS server is during `the initialization procedure <../commands/nems-init.html>`__. This task works magic in automatically configuring your entire server in just a few seconds. It generates self-signed certificates so every NEMS Linux user has a unique certificate, allows you to configure your timezone, creates your Nagios admin user, your Linux account, and so on. To initialize your NEMS Linux server, connect to your server over SSH on the default Port 22 using the following credentials:
-
-.. code-block:: console
-
-    Username: nemsadmin
-    Password: nemsadmin
-    
-Once connected, type:
-
-.. code-block:: console
-
-    sudo nems-init
-
-You’ll be asked to enter the password again. Follow the prompts. All the complicated stuff is made easy.
-
-.. figure:: ../img/NEMS-Initialization.png
-  :width: 600
+.. figure:: ../img/nems-init-1_8.jpg
+  :width: 800
   :align: center
   :alt: NEMS Initialization screen
 
   NEMS Initilization screen.
-  
-Congratulations! Your NEMS Linux server is now online and ready to monitor your network assets.
+
+This task works magic under the hood in automatically configuring your entire server in just a few seconds. It creates and configures your superadmin account, enables all services and takes you to the NEMS Dashboard.
+
+To access your NEMS Server, visit https://nems.local/ on the same network. Alternatively you can visit the Server's IP address, which you can obtain from your DHCP pool or from the console output of your appliance.
+
+Once your NEMS Server is initialized, login as your superadmin user and then visit Configuration -> User Manager to assign a normal Admin user for day-to-day use.
