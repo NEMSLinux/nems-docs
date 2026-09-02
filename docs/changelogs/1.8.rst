@@ -12,11 +12,12 @@ Key Development Features
 - **Backend Modernization:** Revived and fixed the Glances web frontend, activated PNP4Nagios, integrated new checks (like *check_ssl_cert*), and patched core components for PHP 8.4 compatibility.
 - **Fine-Tuned Details:** Modernized MOTD, optimized log rotations, and fine-tuned system permissions across the entire system.
 
-Important Dates
-^^^^^^^^^^^^^^^
+Key Dates
+^^^^^^^^^
 
-- July 20 - August 3, 2026 - NEMS Linux 1.8 was the primary focus of the 3rd annual NEMS Developer Lockdown. The normally 1-week-long event was extended for a second week to ensure the release of NEMS Linux 1.8.
-- August 16, 2026 - NEMS Linux 1.8 for Raspberry Pi released to paying Patrons.
+- **July 20 - August 3, 2026** - NEMS Linux 1.8 was the primary focus of the 3rd annual NEMS Developer Lockdown. The normally 1-week-long event was extended for a second week to ensure the successful release of NEMS Linux 1.8.
+- **August 16, 2026** - NEMS Linux 1.8 SOHO for Raspberry Pi released to Patrons.
+- **September 1, 2026** - NEMS Linux 1.8 SOHO for Raspberry Pi released to public. NEMS Linux 1.8 Enterprise released (OVA, VHD, QCOW2).
 
 Changelogs
 ^^^^^^^^^^
