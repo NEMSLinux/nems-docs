@@ -110,3 +110,5 @@ Changelogs
 - [Improvement] ``nems-update`` ensure nconf can be updated despite the folder not being owned by the root user.
 
 - [Bug Fix] ``nems-admin`` patched the font subsystem for RRD since bitmaps are deprecated in modern systems like NEMS Linux 1.8. This fixes the tofu boxes in RRD-based apps such as Monitorix and PNP4Nagios in NEMS Linux Enterprise Edition.
+
+- [Improvement] ``nems-www`` now enforces https. This improves the user experience when logging in, ensuring the logged-in user session is always associated with the secure browser session.
