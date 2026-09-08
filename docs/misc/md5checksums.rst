@@ -16,6 +16,10 @@ Raspberry Pi Builds
      - 1
      - ``NEMS_v1.8-RPi-Build1.img.xz``
      - ``a1d97787fc33a3c6be6299748e6a0c49``
+   * - 1.8
+     - 1
+     - ``NEMS_v1.8-RPi-Build1.img``
+     - ``7b8434e443a74b2042fd8454f29de1c6``
    * - 1.7
      - 2
      - ``NEMS_v1.7-RPi-Build2.zip``
