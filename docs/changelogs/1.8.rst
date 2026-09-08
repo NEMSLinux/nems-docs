@@ -114,3 +114,4 @@ Changelogs
 - [Improvement] ``nems-www`` now enforces https. This improves the user experience when logging in, ensuring the logged-in user session is always associated with the secure browser session.
 - [Improvement] ``nems-www`` Monitorix now displays output even if the graphs are not yet finished generating: It will show the ones that are ready first rather than holding up the entire lot for 1 year graphs.
 - [Improvement] ``nems-www`` now loads the user's set timezone as configured during NEMS Initialization. This localizes the timestamps for Monitorix and any other items within NEMS Dashboard that call datestamps (such as NEMS Migrator).
+- [Improvement] ``nems-hwdetect`` now recognizes ODROID-N2 4GB reliably.
