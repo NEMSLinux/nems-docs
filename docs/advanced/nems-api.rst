@@ -12,8 +12,8 @@ boolean indicator (``true`` or ``false``).
 Amalgamation with nagios-api
 ---------------------------
 
-*nems-api* has absorbed the full feature set and endpoints of the legacy
-Python-based *nagios-api* (formerly ``zorkian/nagios-api``).
+With the release of NEMS Linux 1.8 *nems-api* has absorbed the full feature set
+and endpoints of the legacy *nagios-api* (formerly ``zorkian/nagios-api``).
 
 - **Legacy Daemon Retirement:** The separate Python service on port ``6315`` is
   deprecated and replaced by *nems-api*.
