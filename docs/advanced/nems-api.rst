@@ -1,52 +1,76 @@
 nems-api
 ========
 
-*nems-api* is a web-based api interface that outputs json data related
-to your NEMS server. It is lightweight, fast, and offers a connection
-for both internal NEMS features and third-party devices.
+*nems-api* is a lightweight, web-based RESTful API interface that outputs JSON
+data and accepts control commands for your NEMS Linux server. It processes
+requests in real time by connecting directly to Nagios via the MK Livestatus
+UNIX socket (``live.sock``).
 
-*nems-api* will always return either *success: true* or *success: false*
-to tell you whether a query was successful or not.
+All requests return a standard JSON object containing a top-level ``success``
+boolean indicator (``true`` or ``false``).
+
+Amalgamation with nagios-api
+---------------------------
+
+*nems-api* has absorbed the full feature set and endpoints of the legacy
+Python-based *nagios-api* (formerly ``zorkian/nagios-api``).
+
+- **Legacy Daemon Retirement:** The separate Python service on port ``6315`` is
+  deprecated and replaced by *nems-api*.
+- **Absorbed Endpoints:** The ``/state`` query endpoint and ``/schedule_check``
+  command endpoint have been fully integrated into the REST API route table.
+- **Performance Improvement:** Rather than reading realtime Nagios data from disk,
+  all state and command queries now interface directly with memory yielding
+  microsecond response times and eliminating background service overhead.
+- **Unified Security:** Legacy *nagios-api* requests now inherit *nems-api*'s
+  subnet filtering and access rules.
 
 IP Restrictions
 ---------------
 
-By default, access to *nems-api* is limited to the following IP
-addresses:
+By default, access to *nems-api* is strictly restricted to local loopback and
+standard private IPv4 subnets (RFC 1918):
 
--  127.0.0.1
--  10.0.0.0 - 10.255.255.255
--  172.16.0.0 - 172.31.255.255
--  192.168.0.0 - 192.168.255.255
+- 127.0.0.1 (Loopback)
+- 10.0.0.0 - 10.255.255.255 (Class A Private)
+- 172.16.0.0 - 172.31.255.255 (Class B Private)
+- 192.168.0.0 - 192.168.255.255 (Class C Private)
 
-If you need to add an outside IP address, please put in a feature
-request in the Community Forum to add this feature to NEMS-SST. If there
-is demand for it, it will be added.
+Requests originating outside these address ranges will receive an HTTP ``403
+Forbidden`` response.
 
-Secure Certificate
-------------------
+If you need to add an outside IP address, please put in a feature request in
+the nems-www Issue Tracker requesting this feature be added to NEMS-SST.
 
-NEMS Linux uses self-signed certificates. In order to pull *nems-api*
-data over ssl (ie., https), you must ignore the certificates via your
-application.
+Secure Certificate & HTTPS Requirement
+---------------------------------------
 
-Command Examples
-----------------
+*nems-api* strictly uses HTTPS. Any unencrypted HTTP requests sent to *nems-api*
+will automatically receive an HTTP 301/302 redirect to the secure HTTPS URL.
 
-All examples in this document assume that the API is available at
+Because NEMS Linux utilizes self-signed SSL/TLS certificates by default, all API
+requests sent via ``curl`` or external applications must ignore certificate 
+validation errors by passing the ``-k`` (or ``--insecure``) flag.
 
-::
+Quick Testing Links (Click to Test)
+-----------------------------------
 
-   http://nems.local/nems-api/
+If you are on the same local network as your NEMS Server, click any of the links
+below to view live sample JSON output directly in your web browser. 
 
--  http://nems.local/nems-api/hosts - output all configured hosts
--  http://nems.local/nems-api/services - output all configured services
--  http://nems.local/nems-api/downtimes - output all scheduled downtimes
--  http://nems.local/nems-api/hosts?Columns=name,state - output all host
-   names along with their current state
+*(Note: If ``nems.local`` does not resolve on your network, replace ``nems.local``
+in your browser address bar with your NEMS Server's local IP address).*
+
+- `Full System State Tree <https://nems.local/nems-api/state>`_
+- `All Configured Hosts <https://nems.local/nems-api/hosts>`_
+- `All Configured Services <https://nems.local/nems-api/services>`_
+- `Host Names, States & Addresses <https://nems.local/nems-api/hosts?Columns=name,state,address>`_
+- `Active & Scheduled Downtimes <https://nems.local/nems-api/downtimes>`_
+- `General System Status & Performance <https://nems.local/nems-api/status>`_
+- `Livestatus Schema & Column Descriptions <https://nems.local/nems-api/columns>`_
 
 Response Format
-~~~~~~~~~~~~~~~
+---------------
 
 All responses are in JSON and have the following format:
 
@@ -54,242 +78,257 @@ All responses are in JSON and have the following format:
 
    {"success": <bool>, "content": <object>}
 
-If "success" is true, "content" will contain the requested data. If
-false, it will contain
+If ``success`` is true, ``content`` will contain the requested data. If false,
+it will contain error details:
 
 ::
 
-   {"code": <int>, "message": <string>}
+   {"success": false, "content": {"code": <int>, "message": <string>}}
 
-where "code" is the mk-livestatus error code and "message" is a
+where ``code`` is the HTTP or MK Livestatus error code and ``message`` is a
 human-readable explanation of the error.
 
-Query interface
-~~~~~~~~~~~~~~~
+Query Interface
+---------------
 
-The query interface returns a list of objects in JSON. The available
-endpoints are the same as the tables available from mk-livestatus
-itself:
-
--  hosts
--  services - Nagios services, joined with all data from hosts
--  hostgroups
--  servicegroups
--  contactgroups
--  servicesbygroup - all services grouped by service groups
--  servicesbyhostgroup - all services grouped by host groups
--  hostsbygroup - all hosts grouped by host groups
--  contacts
--  commands - your defined Nagios commands
--  timeperiods - time period definitions (currently only name and alias)
--  downtimes - all scheduled host and service downtimes, joined with
-   data from hosts and services.
--  comments - all host and service comments
--  log - a transparent access to the nagios logfiles
--  status - general performance and status information. This table
-   contains exactly one dataset.
--  columns - a complete list of all tables and columns available via
-   Livestatus, including descriptions!
--  statehist - sla statistics for hosts and services, joined with data
-   from hosts, services and log.
-
-To retrieve all records from a table, send a GET request to
+All query endpoints expect HTTP GET requests over HTTPS. Command examples assume
+the API is available at:
 
 ::
 
-   http://nems.local/nems-api/{tablename}
+   https://nems.local/nems-api/
 
-For example, to get all host records from the server, GET
-
-::
-
-   http://nems.local/nems-api/hosts
-
-Columns
--------
-
-To limit the returned data to a subset of the available fields, pass a
-Columns query parameter containing a comma-separated list of column
-names. To fetch the name and services list for all hosts:
-
-::
-
-   http://nems.local/nems-api/hosts?Columns=name,services
-
-Filters
--------
-
-To filter the result set to records meeting some criteria, pass one or
-more Filter[] params. Each Filter is a urlencoded LQL filter (see the
-[mk-livestatus
-documentation](http://mathias-kettner.com/checkmk_livestatus.html#H1:LQL
-- The Livestatus Query Language) for detailed LQL filter syntax). If
-more than one filter is specified, they are ANDed together. To get all
-hosts starting with "api" in state OK (0):
-
-::
-
-   http://nems.local/nems-api/hosts?Filter[]=name - ^api&Filter[]=state = 0
-
-Stats
------
-
-Stats queries allow you to get a count of objects matching a criteria.
-Stats queries return a list of counts and never take a Columns
-parameter. You can request several Stats with a single API call. You can
-also restrict the objects counted by adding Filters to your query. To
-count the number of hosts starting with "api" in state OK:
-
-::
-
-   http://nems.local/nems-api/hosts?&Stats[]=name - ^api&Filter[]=state = 0
-
-Command Interface
-~~~~~~~~~~~~~~~~~
-
-All calls to ``nems-api`` to execute Nagios commands **must be HTTP POST
-requests**.
-
-Acknowledgements
-----------------
-
-Acknowledgements for host and service alerts can be sent via the
-``acknowledge_problem`` endpoint.
-
-Acknowledge Host Alerts
+Absorbed State Endpoint
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+To fetch the full host and service state tree in a single request (absorbed
+from *nagios-api*):
 
-   curl -is -XPOST https://nems.local/nems-api/acknowledge_problem -d '{"host": "host.example.com", "author": "rfrantz", "comment": "acked from livestatus"}'
-
-Acknowledge Service Alerts
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Acknowledging service alerts is similar to host alerts, with the
-addition of the ``service`` parameter:
+- Click: `state <https://nems.local/nems-api/state>`_
+- CLI Example:
 
 ::
 
-   curl -is -XPOST https://nems.local/nems-api/acknowledge_problem -d '{"host": "host.example.com", "service": "Apache", "author": "rfrantz", "comment": "acked from livestatus"}'
+   curl -sk https://nems.local/nems-api/state
 
-Downtime
---------
-
-cancel_downtime
-~~~~~~~~~~~~~~~
-
-Existing scheduled downtimes for a host can be canceled.
-``cancel_downtime`` expects the ``downtime_id`` parameter. Downtime IDs
-can be found by querying a host and extracting the ``downtimes`` array:
-
-::
-
-   curl -s https://nems.local/nems-api/hosts?Filter=name = my_host | jq '.' | grep 'downtimes"' -A 2
-
-   "downtimes": [
-       12345
-   ],
-
-The subsequent request to cancel the host's downtime is:
-
-::
-
-   curl -s -XPOST 'https://nems.local/nems-api/cancel_downtime' -d '{"downtime_id": "12345"}'
-
-To cancel the downtime for a service, pass the name of the service along
-with the downtime_id:
-
-::
-
-   curl -s -XPOST 'https://nems.local/nems-api/cancel_downtime' -d '{"downtime_id": "12345", "service": "CPU"}'
-
-schedule_downtime
+Livestatus Tables
 ~~~~~~~~~~~~~~~~~
 
-Schedule downtime for a host as follows:
+The query interface returns a list of objects in JSON. You can query any MK
+Livestatus table directly by clicking its hyperlinked table name or using it as the URL endpoint:
+
+- `hosts <https://nems.local/nems-api/hosts>`_ - all configured hosts
+- `services <https://nems.local/nems-api/services>`_ - Nagios services, joined with all data from hosts
+- `hostgroups <https://nems.local/nems-api/hostgroups>`_ - host group definitions
+- `servicegroups <https://nems.local/nems-api/servicegroups>`_ - service group definitions
+- `contactgroups <https://nems.local/nems-api/contactgroups>`_ - contact group definitions
+- `servicesbygroup <https://nems.local/nems-api/servicesbygroup>`_ - all services grouped by service groups
+- `servicesbyhostgroup <https://nems.local/nems-api/servicesbyhostgroup>`_ - all services grouped by host groups
+- `hostsbygroup <https://nems.local/nems-api/hostsbygroup>`_ - all hosts grouped by host groups
+- `contacts <https://nems.local/nems-api/contacts>`_ - configured contacts
+- `commands <https://nems.local/nems-api/commands>`_ - your defined Nagios commands
+- `timeperiods <https://nems.local/nems-api/timeperiods>`_ - time period definitions (currently name and alias)
+- `downtimes <https://nems.local/nems-api/downtimes>`_ - all scheduled host and service downtimes, joined with data from hosts and services
+- `comments <https://nems.local/nems-api/comments>`_ - all host and service comments
+- `log <https://nems.local/nems-api/log>`_ - transparent access to Nagios log files
+- `status <https://nems.local/nems-api/status>`_ - general performance and status information (contains exactly one dataset)
+- `columns <https://nems.local/nems-api/columns>`_ - complete list of all tables and columns available via Livestatus, including descriptions
+- `statehist <https://nems.local/nems-api/statehist>`_ - SLA statistics for hosts and services, joined with data from hosts, services, and log
+
+To retrieve all records from a table, send a GET request to:
 
 ::
 
-   curl -s -XPOST 'https://nems.local/nems-api/schedule_downtime' -d '{"host": "host.example.com", "duration": "7200", "author": "rfrantz", "comment": "Downtimed via livestatus"}'
+   https://nems.local/nems-api/{tablename}
 
-**NOTE**: The ``duration`` field expects a value whose unit is in
-seconds.
-
-Downtimes can be scheduled for a particular service by adding a
-``"service"`` parameter:
+For example, to get all host records from the server:
 
 ::
 
-   curl -s -XPOST 'https://nems.local/nems-api/schedule_downtime' -d '{"host": "host.example.com", "service": "CPU", duration": "7200", "author": "rfrantz", "comment": "Downtimed via livestatus"}'
+   curl -sk https://nems.local/nems-api/hosts
+
+Columns
+~~~~~~~
+
+To limit the returned data to a subset of available fields, pass a ``Columns``
+query parameter containing a comma-separated list of column names:
+
+- Click: `hosts?Columns=name,state,address <https://nems.local/nems-api/hosts?Columns=name,state,address>`_
+- CLI Example:
+
+::
+
+   curl -sk "https://nems.local/nems-api/hosts?Columns=name,state,address"
+
+Filters
+~~~~~~~
+
+To filter the result set, pass one or more ``Filter[]`` parameters. Each Filter
+is a URL-encoded LQL filter. If more than one filter is specified, they are
+ANDed together:
+
+- Click: `hosts?Filter[]=state%20=%200 <https://nems.local/nems-api/hosts?Filter[]=state%20=%200>`_
+- CLI Example:
+
+::
+
+   curl -sk "https://nems.local/nems-api/hosts?Filter[]=name%20~%20^api&Filter[]=state%20=%200"
+
+Stats
+~~~~~
+
+Stats queries return a list of counts matching specified criteria:
+
+- Click: `hosts?Stats[]=state%20=%200 <https://nems.local/nems-api/hosts?Stats[]=state%20=%200>`_
+- CLI Example:
+
+::
+
+   curl -sk "https://nems.local/nems-api/hosts?Stats[]=state%20=%200"
+
+Command Interface
+-----------------
+
+All calls to *nems-api* to execute Nagios commands **must be HTTP POST requests**
+over HTTPS containing a JSON payload.
+
+Forced Re-checks
+~~~~~~~~~~~~~~~~
+
+schedule_check
+^^^^^^^^^^^^^^
+
+Force an immediate host or service check execution (absorbed from *nagios-api*).
+
+**Force Host Check:**
+
+::
+
+   curl -sk -X POST https://nems.local/nems-api/schedule_check \
+     -d '{"host": "host.example.com"}'
+
+**Force Service Check:**
+
+::
+
+   curl -sk -X POST https://nems.local/nems-api/schedule_check \
+     -d '{"host": "host.example.com", "service": "PING"}'
+
+Acknowledgements
+~~~~~~~~~~~~~~~~
+
+acknowledge_problem
+^^^^^^^^^^^^^^^^^^^
+
+Acknowledge active alerts for hosts or services.
+
+**Acknowledge Host Alert:**
+
+::
+
+   curl -sk -X POST https://nems.local/nems-api/acknowledge_problem \
+     -d '{"host": "host.example.com", "author": "nems-admin", "comment": "Investigating outage"}'
+
+**Acknowledge Service Alert:**
+
+::
+
+   curl -sk -X POST https://nems.local/nems-api/acknowledge_problem \
+     -d '{"host": "host.example.com", "service": "Apache", "author": "nems-admin", "comment": "Fix in progress"}'
+
+Downtime Management
+~~~~~~~~~~~~~~~~~~~
+
+schedule_downtime
+^^^^^^^^^^^^^^^^^
+
+Schedule downtime for a host or service. Note that the ``duration`` field expects
+a value in seconds.
+
+**Schedule Host Downtime:**
+
+::
+
+   curl -sk -X POST https://nems.local/nems-api/schedule_downtime \
+     -d '{"host": "host.example.com", "duration": "7200", "author": "nems-admin", "comment": "OS Patching"}'
+
+**Schedule Service Downtime:**
+
+::
+
+   curl -sk -X POST https://nems.local/nems-api/schedule_downtime \
+     -d '{"host": "host.example.com", "service": "CPU", "duration": "3600", "author": "nems-admin", "comment": "Database maintenance"}'
+
+cancel_downtime
+^^^^^^^^^^^^^^^
+
+Existing scheduled downtimes can be canceled using the ``downtime_id`` parameter.
+
+**Cancel Host Downtime:**
+
+::
+
+   curl -sk -X POST https://nems.local/nems-api/cancel_downtime \
+     -d '{"downtime_id": "12345"}'
+
+**Cancel Service Downtime:**
+
+::
+
+   curl -sk -X POST https://nems.local/nems-api/cancel_downtime \
+     -d '{"downtime_id": "12345", "service": "CPU"}'
 
 Notifications
--------------
+~~~~~~~~~~~~~
 
 disable_notifications
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
-Notifications for a host, a host's service, or all of the host's
-services can be disabled via the ``disable_notifications`` endpoint.
+Disable notifications for a host, a specific service, or all host services.
 
-Disable Host Notifications
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Send a request that includes a valid 'host' value:
+**Disable Host Notifications:**
 
 ::
 
-   curl -s -XPOST 'https://nems.local/nems-api/disable_notifications' -d '{"host": "host.example.com"}'
+   curl -sk -X POST https://nems.local/nems-api/disable_notifications \
+     -d '{"host": "host.example.com"}'
 
-Disable Notifications for a Host's Service
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Send a request that includes valid 'host' and 'service' values:
+**Disable Notifications for a Host's Service:**
 
 ::
 
-   curl -s -XPOST 'https://nems.local/nems-api/disable_notifications' -d '{"host": "host.example.com", "service": "httpd"}'
+   curl -sk -X POST https://nems.local/nems-api/disable_notifications \
+     -d '{"host": "host.example.com", "service": "httpd"}'
 
-Disable Notifications for All of a Host's Services
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Send a request that includes a valid 'host' value and set 'scope' to
-'all':
+**Disable Notifications for All Host Services:**
 
 ::
 
-   curl -s -XPOST 'https://nems.local/nems-api/disable_notifications' -d '{"host": "host.example.com", "scope": "all"}'
+   curl -sk -X POST https://nems.local/nems-api/disable_notifications \
+     -d '{"host": "host.example.com", "scope": "all"}'
 
 enable_notifications
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
-Notifications for a host, a host's service, or all of the host's
-services can be enabled via the ``enable_notifications`` endpoint.
+Enable notifications for a host, a specific service, or all host services.
 
-Enable Host Notifications
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Send a request that includes a valid 'host' value:
+**Enable Host Notifications:**
 
 ::
 
-   curl -s -XPOST 'https://nems.local/nems-api/enable_notifications' -d '{"host": "host.example.com"}'
+   curl -sk -X POST https://nems.local/nems-api/enable_notifications \
+     -d '{"host": "host.example.com"}'
 
-Enable Notifications for a Host's Service
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Send a request that includes valid 'host' and 'service' values:
+**Enable Notifications for a Host's Service:**
 
 ::
 
-   curl -s -XPOST 'https://nems.local/nems-api/enable_notifications' -d '{"host": "host.example.com", "service": "httpd"}'
+   curl -sk -X POST https://nems.local/nems-api/enable_notifications \
+     -d '{"host": "host.example.com", "service": "httpd"}'
 
-Enable Notifications for All of a Host's Services
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Send a request that includes a valid 'host' value and set 'scope' to
-'all':
+**Enable Notifications for All Host Services:**
 
 ::
 
-   curl -s -XPOST 'https://nems.local/nems-api/enable_notifications' -d '{"host": "host.example.com", "scope": "all"}'
+   curl -sk -X POST https://nems.local/nems-api/enable_notifications \
+     -d '{"host": "host.example.com", "scope": "all"}'
