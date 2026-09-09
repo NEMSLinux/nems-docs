@@ -118,3 +118,5 @@ Changelogs
 - [Improvement] ``nems-admin`` Updated system identification files (os-release, issue, issue.net) to NEMS Linux branding.
 - [Improvement] ``nems-init`` now notifies user of new web interface if executed via the CLI.
 - [Improvement] ``glances`` service hs been disabled in favor of ``glancesweb`` on future builds. Impacts glances functionality on ODROID-N2.
+
+- [Improvement] ``nems-api`` (a component of ``nems-www``) has been enhanced to amalgamate ``nems-api`` and the legacy ``nagios-api`` into a single, unified and modern RESTful API service.
