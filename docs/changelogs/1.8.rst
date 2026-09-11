@@ -120,3 +120,5 @@ Changelogs
 - [Improvement] ``glances`` service hs been disabled in favor of ``glancesweb`` on future builds. Impacts glances functionality on ODROID-N2.
 
 - [Improvement] ``nems-api`` (a component of ``nems-www``) has been enhanced to amalgamate ``nems-api`` and the legacy ``nagios-api`` into a single, unified and modern RESTful API service.
+
+- [Improvement] ``055-check_mk`` fixed build on modern Debian on some ARM platforms by adding multiarch Boost path detection and libboost-thread-dev package dynamically, with fallback for other systems.
