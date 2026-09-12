@@ -332,3 +332,101 @@ Enable notifications for a host, a specific service, or all host services.
 
    curl -sk -X POST https://nems.local/nems-api/enable_notifications \
      -d '{"host": "host.example.com", "scope": "all"}'
+
+## NEMS AI Endpoint (Optional Add-On)
+
+.. note::
+
+**Optional Add-On / Privacy Notice:** The `nems-ai` API endpoint is **not** included, enabled, or installed out-of-the-box. Standard NEMS Linux contains zero AI features, zero LLM models, and no background AI services or telemetry.
+
+This endpoint is only functional if you explicitly choose to install the optional `nems-ai` package. If `nems-ai` is not installed, requests to this route will not process AI requests.
+
+POST /nems-api/nems-ai
+
+```
+
+Submits monitoring check telemetry to the optional local LLM engine to synthesize concise, natural-language voice and display notifications.
+
+* **Request Method:** ``POST``
+* **Content-Type:** ``application/json``
+
+Request Parameters
+^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 20 15 65
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Description
+   * - ``event_type``
+     - string
+     - Event classification. Accepted values: ``incident``, ``recovery``, ``batch_incidents``, or ``batch_recoveries``.
+   * - ``baseline_text``
+     - string
+     - Default fallback notification text used if the AI engine is disabled or timed out.
+   * - ``timestamp``
+     - integer
+     - Epoch timestamp of the event generation.
+   * - ``check_data``
+     - object
+     - Object containing check details (*required for single events*): ``host_name``, ``host_alias``, ``service_description``, ``state``, and ``plugin_output``.
+   * - ``incidents`` / ``recoveries``
+     - array
+     - List of check objects (*required for batch events*).
+
+Example Request
+^^^^^^^^^^^^^^^
+
+.. code-block:: json
+
+   {
+     "event_type": "incident",
+     "baseline_text": "Service Internet Speed Test on Nagios Server is reporting CRITICAL.",
+     "timestamp": 1773335200,
+     "check_data": {
+       "host_name": "nems.local",
+       "host_alias": "Nagios Enterprise Monitoring Server",
+       "service_description": "Internet Speed Test",
+       "state": 2,
+       "plugin_output": "CRITICAL - Download = 445.49 Mbps, Upload = 159.70 Mbps"
+     }
+   }
+
+Example Response
+^^^^^^^^^^^^^^^^
+
+.. code-block:: json
+
+   {
+     "success": true,
+     "ai_active": true,
+     "speech_text": "Internet Speed Test on Nagios Enterprise Monitoring Server is critical with 445.49 megabits per second download and 159.70 megabits per second upload.",
+     "display_text": "Internet Speed Test on Nagios Enterprise Monitoring Server is critical with 445.49 megabits per second download and 159.70 megabits per second upload."
+   }
+
+Response Fields
+^^^^^^^^^^^^^^^
+
+.. list-table::
+   :widths: 20 15 65
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Description
+   * - ``success``
+     - boolean
+     - Indicates whether the API request executed without system errors.
+   * - ``ai_active``
+     - boolean
+     - ``true`` if synthesized by the local LLM; ``false`` if returning the fallback baseline text.
+   * - ``speech_text``
+     - string
+     - Text string formatted and sanitized for text-to-speech (TTS) playback engines.
+   * - ``display_text``
+     - string
+     - Text string formatted for UI log feeds and status display screens.
+
+```
