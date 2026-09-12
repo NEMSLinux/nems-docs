@@ -333,7 +333,8 @@ Enable notifications for a host, a specific service, or all host services.
    curl -sk -X POST https://nems.local/nems-api/enable_notifications \
      -d '{"host": "host.example.com", "scope": "all"}'
 
-## NEMS AI Endpoint (Optional Add-On)
+NEMS AI Endpoint (Optional Add-On)
+----------------------------------
 
 .. note::
 
@@ -342,8 +343,7 @@ Enable notifications for a host, a specific service, or all host services.
 This endpoint is only functional if you explicitly choose to install the optional `nems-ai` package. If `nems-ai` is not installed, requests to this route will not process AI requests.
 
 POST /nems-api/nems-ai
-
-```
+^^^^^^^^^^^^^^^^^^^^^^
 
 Submits monitoring check telemetry to the optional local LLM engine to synthesize concise, natural-language voice and display notifications.
 
@@ -428,5 +428,3 @@ Response Fields
    * - ``display_text``
      - string
      - Text string formatted for UI log feeds and status display screens.
-
-```
