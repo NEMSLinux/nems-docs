@@ -270,19 +270,4 @@ Want your name on this list? `Become a Patron <https://patreon.com/nems>`__.
 | |CAT5TV| |
 +----------+
 
-NEMS Linux is developed by Robbie Ferguson for `The Category5 TV Network <https://category5.tv>`__.
-
-
-License
--------
-
-NEMS Linux and the code written specifically for it are
-licensed under GNU AGPLv3:
-https://www.gnu.org/licenses/agpl-3.0.en.html
-
-Third-party products or features included within NEMS Linux
-may have their own license. Please review their
-project pages for more information.
-
-Background wallpaper contained in NEMS Linux are
-licensed under CC0.
+NEMS Linux is developed by Robbie Ferguson for `Category5 TV Network <https://category5.tv>`__.
