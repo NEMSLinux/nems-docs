@@ -122,3 +122,7 @@ Changelogs
 - [Improvement] ``nems-api`` (a component of ``nems-www``) has been enhanced to amalgamate ``nems-api`` and the legacy ``nagios-api`` into a single, unified and modern RESTful API service.
 
 - [Improvement] ``055-check_mk`` fixed build on modern Debian on some ARM platforms by adding multiarch Boost path detection and libboost-thread-dev package dynamically, with fallback for other systems.
+
+- [New Feature] ``nems-kiosk`` allows you to enable graphical HDMI output on console / HDMI directly from your NEMS Server. Feature is found in NEMS SST under TV Display.
+
+- [New Feature] ``NEMS Central Command`` is a brand new, modern, NOC Display in NEMS Linux 1.8+. This new display takes what was learned through 1.4's NEMS TV Dashboard and 1.6's NEMS Tactical Overview, bringing the ultimate TV display to your datacenter. NEMS Central Command is the first feature to integrate the **optional** ``nems-ai`` system. If you choose to install nems-ai, the spoken audio and System Notifications will be enhanced by the local LLM. If you do not install nems-ai, NEMS Central Command will use traditional Nagios notifications.
