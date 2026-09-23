@@ -128,3 +128,5 @@ Changelogs
 - [New Feature] ``nems-ncc`` **NEMS Central Command Tactical Display** is a brand new, modern, NOC Display in NEMS Linux 1.8+. This new display takes what was learned through 1.4's NEMS TV Dashboard and 1.6's NEMS Tactical Overview, bringing the ultimate TV display to your datacenter. NEMS Central Command is the first feature to integrate the **optional** ``nems-ai`` system. If you choose to install nems-ai, the spoken audio and System Notifications will be enhanced by the local LLM. If you do not install nems-ai, NEMS Central Command will use traditional Nagios notifications.
 
 - [New Feature] ``nems-ncc`` **NEMS Central Command Executive Digest** provides a monthly Executive report detailing enterprise SLA and issue history audit. Reports are provided in printable PDF format.
+
+- [Bug Fix] ``nems-userctl`` ``wal`` output was redirected in ``nems-init`` via a redirect of output, which caused ``nems-init`` to appear to freeze. Fixed by changing how ``wal`` output was handled in ``nems-userctl``
