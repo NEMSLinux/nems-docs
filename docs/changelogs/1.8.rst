@@ -130,3 +130,7 @@ Changelogs
 - [New Feature] ``nems-ncc`` **NEMS Central Command Executive Digest** provides a monthly Executive report detailing enterprise SLA and issue history audit. Reports are provided in printable PDF format.
 
 - [Bug Fix] ``nems-userctl`` ``wal`` output was redirected in ``nems-init`` via a redirect of output, which caused ``nems-init`` to appear to freeze. Fixed by changing how ``wal`` output was handled in ``nems-userctl``
+
+- [Improvement] ``nems-info ip`` now caches the detected IP address for 15 minutes. This reduces the amount of time it takes for the IP address to be output in some scenarios.
+
+- [Improvement] ``nems-api`` now whitelists the NEMS Server itself, so if the NEMS Server happens to be on a public IP address, it can still load its own API for tools such as NEMS Central Command Tactical Display.
