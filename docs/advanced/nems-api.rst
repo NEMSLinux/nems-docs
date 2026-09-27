@@ -31,16 +31,25 @@ IP Restrictions
 By default, access to *nems-api* is strictly restricted to local loopback and
 standard private IPv4 subnets (RFC 1918):
 
-- 127.0.0.1 (Loopback)
-- 10.0.0.0 - 10.255.255.255 (Class A Private)
-- 172.16.0.0 - 172.31.255.255 (Class B Private)
-- 192.168.0.0 - 192.168.255.255 (Class C Private)
+- The LAN IP of the NEMS Server itself
+- 127.0.0.0/8 (IPv4 Loopback)
+- 10.0.0.0 - 10.255.255.255 (IPv4 Class A Private)
+- 172.16.0.0 - 172.31.255.255 (IPv4 Class B Private)
+- 192.168.0.0 - 192.168.255.255 (IPv4 Class C Private)
+- 169.254.0.0 - 169.254.255.255 (IPv4 Link-Local / APIPA)
+- ::1 (IPv6 Loopback)
+- ::ffff:127.0.0.1 (IPv4-Mapped IPv6 Loopback)
+- fc00::/7 (IPv6 Unique Local Addresses / ULA)
+- fe80::/10 (IPv6 Link-Local)
 
 Requests originating outside these address ranges will receive an HTTP ``403
 Forbidden`` response.
 
-If you need to add an outside IP address, please put in a feature request in
-the nems-www Issue Tracker requesting this feature be added to NEMS-SST.
+If you need to add an outside IP address or block of addresses, visit the API
+tab in NEMS SST to configure custom allowed subnets. There, you can add entire
+networks (E.g., 192.168.0.0/24) or single IP addresses (E.g., 192.168.0.5/32)
+and may allow multiple custom entries by separating them with a comma. This is
+required if connecting an external server to your NEMS API as well.
 
 Secure Certificate & HTTPS Requirement
 ---------------------------------------
