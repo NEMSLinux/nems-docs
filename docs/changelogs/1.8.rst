@@ -136,3 +136,5 @@ Changelogs
 - [Improvement] ``nems-api`` now whitelists the NEMS Server itself, so if the NEMS Server happens to be on a public IP address, it can still load its own API for tools such as NEMS Central Command Tactical Display.
 
 - [Improvement] ``nems-api`` custom subnets for trusted connectivity can now be configured in NEMS SST.
+
+- [Improvement] ``monit`` now monitors the Glances web service and restarts it if it fails.
