@@ -138,3 +138,4 @@ Changelogs
 - [Improvement] ``nems-api`` custom subnets for trusted connectivity can now be configured in NEMS SST.
 
 - [Improvement] ``monit`` now monitors the Glances web service and restarts it if it fails.
+- [Bug Fix] ``monit`` service file was being replaced upstream by ``unattended-upgrades`` with a default version that does not meet NEMS' standards (the service was not set to auto-restart on fail, so who watches the watchdog?). This has been fixed so the upstream change does not clobber the NEMS version of the ``monit`` service file. Effectively, now if ``monit`` fails, ``systemd`` will automatically restart it.
