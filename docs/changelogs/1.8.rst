@@ -144,3 +144,4 @@ Changelogs
 - [Improvement] ``nems-ncc`` no longer loads chart.js from a 3rd party cdn. Instead, the code is minified and included locally.
 
 - [Bug Fix] ``check_nems_osb`` in ``nems-scripts`` datestamp format fixed: Due to change in RFC output on NEMS Linux 1.8, the Migrator date was null, resulting in a report of last backup January 1, 1970. This was fixed by first converting the logged date to be PHP-compatible via a $datestamp variable.
+- [Improvement] ``NEMS Central Command Tactical Display`` recognizes when NEMS Update is running. This way, if the connection is lost, it can inform the users that the update is running and is probably why the connection was temporarily lost.
