@@ -149,3 +149,5 @@ Changelogs
 - [Bug Fix] ``NEMS CheckIn`` server upgrade had resulted in the locale timezone switching to UTC. As the services were programmed to run in Eastern timezone (local developer timezone), it resulted in some notifications not going out, and those that did were off by 4 hours. This has been corrected and NEMS CheckIn is working properly.
 
 - [Improvement] ``NEMS Central Command Tactical Display`` now supports the user's selection for background image configuration, as well as the NEMS Daily Image system.
+
+- [Improvement] ``NEMS ZRAM`` memory compression. Deprecated the legacy, late-boot rc.local per-core zram script and replaced it with an adaptive early-boot systemd service. On every startup, it dynamically detects total RAM and CPU cores to scale a unified /dev/zram0 device, select optimal compression algorithms (lz4 vs. zstd), and apply low-memory kernel sysctl tunings before heavy monitoring services launch.
