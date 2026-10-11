@@ -151,3 +151,6 @@ Changelogs
 - [Improvement] ``NEMS Central Command Tactical Display`` now supports the user's selection for background image configuration, as well as the NEMS Daily Image system.
 
 - [Improvement] ``NEMS ZRAM`` memory compression. Deprecated the legacy, late-boot rc.local per-core zram script and replaced it with an adaptive early-boot systemd service. On every startup, it dynamically detects total RAM and CPU cores to scale a unified /dev/zram0 device, select optimal compression algorithms (lz4 vs. zstd), and apply low-memory kernel sysctl tunings before heavy monitoring services launch.
+
+
+- [Improvement] ``nems-api`` has been moved to the ``nems-api`` package (was formerly integrated directly into ``nems-www``) and has been moved to /api/ (old links will still work). This is to accommodate the inevitable growth of the RESTful API as NEMS Linux 2.0 approaches.
