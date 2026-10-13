@@ -154,3 +154,6 @@ Changelogs
 
 
 - [Improvement] ``nems-api`` has been moved to the ``nems-api`` package (was formerly integrated directly into ``nems-www``) and has been moved to /api/ (old links will still work). This is to accommodate the inevitable growth of the RESTful API as NEMS Linux 2.0 approaches.
+
+- [Bug Fix] ``nems-kiosk`` Fixed NEMS Kiosk crash on Raspberry Pi 5. Without a full desktop environment installed, Xorg autodetection fails to map the Pi 5 display outputs properly. It then falls back to legacy framebuffer mode, gets confused by the dual micro-HDMI interfaces, and crashes on startup. Resolved by explicitly directing Xorg to bind the Raspberry Pi vc4 display driver to the modesetting driver.
+- [Improvement] ``nems-ncc`` Central Command Tactical Display: Hardened the daily 4:00 AM reload routine with pre-flight network and system update verification to prevent blank timeout screens during morning outages, and introduced dynamic background polling to apply user wallpaper changes without refreshing the entire dashboard.
